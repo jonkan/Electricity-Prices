@@ -50,14 +50,15 @@
 		260787DB28D88FFC00FF2C33 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 260787C828D88A3900FF2C33 /* Localizable.strings */; };
 		260787DC28D88FFC00FF2C33 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 260787C528D88A3900FF2C33 /* InfoPlist.strings */; };
 		260787DD28D88FFC00FF2C33 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 260787C828D88A3900FF2C33 /* Localizable.strings */; };
-		261E7D0D28DB09BA0018CB4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 261E7D0C28DB09BA0018CB4A /* Assets.xcassets */; };
 		261E7D3B28DB0F470018CB4A /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 261E7D3A28DB0F470018CB4A /* XMLCoder */; };
-		261E7D3C28DB0FEE0018CB4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 261E7D0A28DB09570018CB4A /* Assets.xcassets */; };
 		261FC1A028B77720007B4A4E /* EPWatchKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC19F28B77720007B4A4E /* EPWatchKitApp.swift */; };
 		261FC1A228B77720007B4A4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC1A128B77720007B4A4E /* ContentView.swift */; };
 		261FC1A428B77720007B4A4E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC1A328B77720007B4A4E /* NotificationController.swift */; };
 		261FC1A628B77720007B4A4E /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC1A528B77720007B4A4E /* NotificationView.swift */; };
 		263A126128D906CD00A11816 /* day-ahead-prices-2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 263A126028D906CD00A11816 /* day-ahead-prices-2.xml */; };
+		264E989528DB2BA600E02F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2696881A28D477EE002142BF /* Assets.xcassets */; };
+		264E989628DB2BA600E02F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2696881A28D477EE002142BF /* Assets.xcassets */; };
+		264E989728DB2BA600E02F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2696881A28D477EE002142BF /* Assets.xcassets */; };
 		2674BC6428D0572D00E31A20 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2674BC6328D0572D00E31A20 /* WidgetKit.framework */; };
 		2674BC6628D0572D00E31A20 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2674BC6528D0572D00E31A20 /* SwiftUI.framework */; };
 		2674BC6928D0572D00E31A20 /* EPWatchKitAppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BC6828D0572D00E31A20 /* EPWatchKitAppExtension.swift */; };
@@ -210,8 +211,6 @@
 		260787C628D88A3900FF2C33 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		260787C928D88A3900FF2C33 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		260787E028D8922C00FF2C33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		261E7D0A28DB09570018CB4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		261E7D0C28DB09BA0018CB4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		261FC18F28B7771F007B4A4E /* EPWatchKitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EPWatchKitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		261FC19F28B77720007B4A4E /* EPWatchKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPWatchKitApp.swift; sourceTree = "<group>"; };
 		261FC1A128B77720007B4A4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -532,7 +531,6 @@
 		269687AA28D46FD7002142BF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				261E7D0A28DB09570018CB4A /* Assets.xcassets */,
 				2696879B28D3A126002142BF /* EPWatchKitApp.entitlements */,
 				2696880C28D47422002142BF /* Info.plist */,
 			);
@@ -542,7 +540,6 @@
 		269687AB28D46FF3002142BF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				261E7D0C28DB09BA0018CB4A /* Assets.xcassets */,
 				2696879C28D3A164002142BF /* EPWatchKitAppExtension.entitlements */,
 				2674BC6C28D0572E00E31A20 /* Info.plist */,
 			);
@@ -573,7 +570,6 @@
 		2696882328D47864002142BF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2696881A28D477EE002142BF /* Assets.xcassets */,
 				2696882428D47888002142BF /* EPWatch.entitlements */,
 				2696882228D4784A002142BF /* Info.plist */,
 			);
@@ -593,6 +589,7 @@
 		26EC4A1528D9C54E004DD8EB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2696881A28D477EE002142BF /* Assets.xcassets */,
 				260787D728D88F5100FF2C33 /* Localization */,
 			);
 			path = Resources;
@@ -794,6 +791,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				260787D928D88FFB00FF2C33 /* Localizable.strings in Resources */,
+				264E989528DB2BA600E02F65 /* Assets.xcassets in Resources */,
 				260787D828D88FFB00FF2C33 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -803,7 +801,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				260787DB28D88FFC00FF2C33 /* Localizable.strings in Resources */,
-				261E7D3C28DB0FEE0018CB4A /* Assets.xcassets in Resources */,
+				264E989628DB2BA600E02F65 /* Assets.xcassets in Resources */,
 				260787DA28D88FFC00FF2C33 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -813,7 +811,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				260787DD28D88FFC00FF2C33 /* Localizable.strings in Resources */,
-				261E7D0D28DB09BA0018CB4A /* Assets.xcassets in Resources */,
+				264E989728DB2BA600E02F65 /* Assets.xcassets in Resources */,
 				260787DC28D88FFC00FF2C33 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
