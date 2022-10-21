@@ -43,6 +43,11 @@
 		2674BCB428D0872800E31A20 /* FormattingStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BCB328D0872800E31A20 /* FormattingStyle.swift */; };
 		2674BCB628D08AA000E31A20 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BCB528D08AA000E31A20 /* Entry.swift */; };
 		2674BCB728D0928500E31A20 /* day-ahead-prices-1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 26C71B1728C1468500C2DC59 /* day-ahead-prices-1.xml */; };
+		2696879028D10112002142BF /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696878F28D10112002142BF /* PriceView.swift */; };
+		2696879228D1CD91002142BF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879128D1CD91002142BF /* SettingsView.swift */; };
+		2696879528D2021C002142BF /* Regions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879428D2021C002142BF /* Regions.swift */; };
+		2696879728D26A3D002142BF /* PriceSpan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879628D26A3D002142BF /* PriceSpan.swift */; };
+		2696879A28D26CD0002142BF /* PriceAreaSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879928D26CD0002142BF /* PriceAreaSettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +159,11 @@
 		2674BCB028D0870300E31A20 /* DateIntervalFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateIntervalFormatter.swift; sourceTree = "<group>"; };
 		2674BCB328D0872800E31A20 /* FormattingStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattingStyle.swift; sourceTree = "<group>"; };
 		2674BCB528D08AA000E31A20 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		2696878F28D10112002142BF /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
+		2696879128D1CD91002142BF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		2696879428D2021C002142BF /* Regions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regions.swift; sourceTree = "<group>"; };
+		2696879628D26A3D002142BF /* PriceSpan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceSpan.swift; sourceTree = "<group>"; };
+		2696879928D26CD0002142BF /* PriceAreaSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceAreaSettingsView.swift; sourceTree = "<group>"; };
 		26C71B1728C1468500C2DC59 /* day-ahead-prices-1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "day-ahead-prices-1.xml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -230,6 +240,8 @@
 				2674BC0228CF5C6600E31A20 /* Info.plist */,
 				2674BC4428CF7CF900E31A20 /* Notifications */,
 				261FC1AB28B77721007B4A4E /* Preview Content */,
+				2696878F28D10112002142BF /* PriceView.swift */,
+				2696879828D26CBE002142BF /* Settings */,
 			);
 			path = EPWatchWatchKitApp;
 			sourceTree = "<group>";
@@ -285,6 +297,7 @@
 		2674BC7A28D0596500E31A20 /* EPWatchCore */ = {
 			isa = PBXGroup;
 			children = (
+				2696879328D2020E002142BF /* Regions */,
 				2674BCB228D0871800E31A20 /* Formatting */,
 				26624AF628C93DEA000F7E2E /* API */,
 				2674BC9E28D0651F00E31A20 /* Utils */,
@@ -292,6 +305,7 @@
 				26624AEF28C92D3C000F7E2E /* PricePoint.swift */,
 				2674BC7B28D0596500E31A20 /* EPWatchCore.h */,
 				2674BC7C28D0596500E31A20 /* EPWatchCore.docc */,
+				2696879628D26A3D002142BF /* PriceSpan.swift */,
 			);
 			path = EPWatchCore;
 			sourceTree = "<group>";
@@ -323,6 +337,23 @@
 				2674BCB328D0872800E31A20 /* FormattingStyle.swift */,
 			);
 			path = Formatting;
+			sourceTree = "<group>";
+		};
+		2696879328D2020E002142BF /* Regions */ = {
+			isa = PBXGroup;
+			children = (
+				2696879428D2021C002142BF /* Regions.swift */,
+			);
+			path = Regions;
+			sourceTree = "<group>";
+		};
+		2696879828D26CBE002142BF /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2696879128D1CD91002142BF /* SettingsView.swift */,
+				2696879928D26CD0002142BF /* PriceAreaSettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		26C71B1928C1469D00C2DC59 /* Frameworks */ = {
@@ -555,7 +586,10 @@
 				261FC1A428B77720007B4A4E /* NotificationController.swift in Sources */,
 				261FC1A228B77720007B4A4E /* ContentView.swift in Sources */,
 				261FC1A028B77720007B4A4E /* EPWatchApp.swift in Sources */,
+				2696879228D1CD91002142BF /* SettingsView.swift in Sources */,
 				261FC1A628B77720007B4A4E /* NotificationView.swift in Sources */,
+				2696879028D10112002142BF /* PriceView.swift in Sources */,
+				2696879A28D26CD0002142BF /* PriceAreaSettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,8 +616,10 @@
 				2674BCA028D0654A00E31A20 /* DayAheadPrices.swift in Sources */,
 				2674BCB128D0870300E31A20 /* DateIntervalFormatter.swift in Sources */,
 				2674BCA128D0654A00E31A20 /* PricesAPI.swift in Sources */,
+				2696879728D26A3D002142BF /* PriceSpan.swift in Sources */,
 				2674BCA328D0657B00E31A20 /* Log.swift in Sources */,
 				2674BCA428D0657B00E31A20 /* Error.swift in Sources */,
+				2696879528D2021C002142BF /* Regions.swift in Sources */,
 				2674BC9F28D0654300E31A20 /* ForexAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

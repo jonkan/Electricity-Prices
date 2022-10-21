@@ -15,7 +15,7 @@ class PricesAPI {
 
     private init() {}
 
-    func downloadDayAheadPrices() async throws -> DayAheadPrices {
+    func downloadDayAheadPrices(for priceArea: PriceArea) async throws -> DayAheadPrices {
         let startOfDay = Date()
             .in(region: .current)
             .dateAtStartOf(.day)
@@ -28,8 +28,8 @@ class PricesAPI {
         var components = URLComponents(string: "https://transparency.entsoe.eu/api")!
         components.queryItems = [
             URLQueryItem(name: "documentType", value: "A44"),
-            URLQueryItem(name: "in_Domain", value: "10Y1001A1001A46L"),
-            URLQueryItem(name: "out_Domain", value: "10Y1001A1001A46L"),
+            URLQueryItem(name: "in_Domain", value: priceArea.domain),
+            URLQueryItem(name: "out_Domain", value: priceArea.domain),
             URLQueryItem(name: "periodStart", value: startOfDayStr),
             URLQueryItem(name: "periodEnd", value: endOfDayStr),
             URLQueryItem(name: "securityToken", value: "<redacted>")

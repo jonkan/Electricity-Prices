@@ -31,24 +31,18 @@ public struct PricePoint: Codable, Equatable {
     }
 }
 
-public struct PriceSpan {
-    public var date: Date
-    public var min: Double
-    public var max: Double
-
-    public init(date: Date, min: Double, max: Double) {
-        self.date = date
-        self.min = min
-        self.max = max
-    }
-
-    public func formattedMin(style: FormattingStyle) -> String {
-        return PriceFormatter.formatted(min, style: style)
-    }
-
-    public func formattedMax(style: FormattingStyle) -> String {
-        return PriceFormatter.formatted(max, style: style)
-    }
+extension PricePoint {
+    public static let mockPrices: [PricePoint] = {
+        var prices: [PricePoint] = []
+        let date = DateInRegion().dateAtStartOf(.day)
+        for i in 0..<24 {
+            let d = (date + i.hours).date
+            prices.append(
+                PricePoint(date: d, price: sin(Double.pi/6*Double(i)))
+            )
+        }
+        return prices
+    }()
 }
 
 public extension Array where Element == PricePoint {
@@ -63,29 +57,8 @@ public extension Array where Element == PricePoint {
         })
     }
 
-    func priceSpans() -> [PriceSpan] {
-        let groupedByDay = Dictionary(
-            grouping: self,
-            by: { $0.date.dateAtStartOf(.day) }
-        )
-        let spans = groupedByDay.map { (key, prices) in
-            let max = prices.map({ $0.price }).max() ?? 0
-            let min = prices.map({$0.price }).min() ?? 0
-            return PriceSpan(date: key, min: min, max: max)
-        }
-        return spans
+    func filterInSameDayAs(_ pricePoint: PricePoint, using calendar: Calendar = .current) -> [PricePoint] {
+        filter({ calendar.isDate($0.date, inSameDayAs: pricePoint.date) })
     }
 
-    func priceSpan(forDayOf date: Date) -> PriceSpan? {
-        let prices = filter({
-            Calendar.current.isDate($0.date, inSameDayAs: date)
-        })
-        let max = prices.map({ $0.price }).max() ?? 0
-        let min = prices.map({$0.price }).min() ?? 0
-        return PriceSpan(
-            date: date.dateAtStartOf(.day),
-            min: min,
-            max: max
-        )
-    }
 }

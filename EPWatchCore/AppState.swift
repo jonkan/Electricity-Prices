@@ -16,13 +16,22 @@ public class AppState: ObservableObject {
 
     public static let shared: AppState = AppState()
     @Published public var currentPrice: PricePoint?
-    @Published public var todaysPriceSpan: PriceSpan?
 
     @AppStorageCodable("prices")
     public var prices: [PricePoint]?
 
-    public var todaysPrices: [PricePoint] {
-        prices?.filter({ $0.date.isToday }) ?? []
+    @AppStorageCodable2("Region")
+    public var region: Region = .sweden
+
+    @AppStorageCodable2("PriceArea")
+    public var priceArea: PriceArea = Region.sweden.priceAreas[2] {
+        didSet {
+            guard oldValue != priceArea else { return }
+            Log("Price area did change: \(priceArea.title)")
+            objectWillChange.send()
+            prices = []
+            updatePricesIfNeeded()
+        }
     }
 
     @AppStorageCodable("CurrencyConversion")
@@ -74,7 +83,6 @@ public class AppState: ObservableObject {
         if let price = prices?.price(for: Date()) {
             if price != currentPrice {
                 currentPrice = price
-                todaysPriceSpan = prices?.priceSpan(forDayOf: Date())
             }
             Log("Update not needed")
             return
@@ -84,13 +92,11 @@ public class AppState: ObservableObject {
             do {
                 prices = try await getTodaysPrices()
                 currentPrice = prices?.price(for: Date())
-                todaysPriceSpan = prices?.priceSpan(forDayOf: Date())
                 Log("Update current price success")
                 NotificationCenter.default.post(name: Self.didUpdateDayAheadPrices, object: self)
             } catch {
                 LogError(error)
                 currentPrice = nil
-                todaysPriceSpan = nil
             }
         }
         _ = await updateTask?.result
@@ -98,7 +104,7 @@ public class AppState: ObservableObject {
 
     private func getTodaysPrices() async throws -> [PricePoint] {
         Log("Downloading day ahead prices")
-        let dayAheadPrices = try await PricesAPI.shared.downloadDayAheadPrices()
+        let dayAheadPrices = try await PricesAPI.shared.downloadDayAheadPrices(for: priceArea)
         let forex = try await currentForex()
         let rate = try forex.rate(from: "EUR", to: "SEK")
         let prices = dayAheadPrices.prices(using: rate)
@@ -115,4 +121,13 @@ public class AppState: ObservableObject {
         return res
     }
 
+}
+
+extension AppState {
+    public static let mocked: AppState = {
+        let s = AppState()
+        s.currentPrice = .mockPrices[10]
+        s.prices = PricePoint.mockPrices
+        return s
+    }()
 }
