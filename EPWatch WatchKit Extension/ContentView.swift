@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @ObservedObject var state: AppState = .shared
+
     var body: some View {
-        Text("Hello, World!")
+        Text("Current price: \(state.currentPrice ?? -1)")
             .padding()
     }
 }

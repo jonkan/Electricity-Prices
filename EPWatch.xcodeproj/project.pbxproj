@@ -17,6 +17,16 @@
 		261FC1A828B77720007B4A4E /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC1A728B77720007B4A4E /* ComplicationController.swift */; };
 		261FC1AA28B77721007B4A4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 261FC1A928B77721007B4A4E /* Assets.xcassets */; };
 		261FC1AD28B77721007B4A4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 261FC1AC28B77721007B4A4E /* Preview Assets.xcassets */; };
+		26624ADF28C7DB2E000F7E2E /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624ADE28C7DB2E000F7E2E /* AppState.swift */; };
+		26624AE128C7DB6D000F7E2E /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AE028C7DB6D000F7E2E /* Parser.swift */; };
+		26624AE328C7DBC1000F7E2E /* DayAheadPrices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AE228C7DBC1000F7E2E /* DayAheadPrices.swift */; };
+		26624AE528C7DCDD000F7E2E /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 26624AE428C7DCDD000F7E2E /* XMLCoder */; };
+		26624AE728C883C9000F7E2E /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AE628C883C9000F7E2E /* Log.swift */; };
+		26624AEA28C8EFFB000F7E2E /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AE928C8EFFB000F7E2E /* Error.swift */; };
+		26624AEE28C8F1A1000F7E2E /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 26624AED28C8F1A1000F7E2E /* SwiftDate */; };
+		26C71B1128C1461500C2DC59 /* EPWatch_WatchKit_ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C71B1028C1461500C2DC59 /* EPWatch_WatchKit_ExtensionTests.swift */; };
+		26C71B1828C1468500C2DC59 /* day-ahead-prices-1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 26C71B1728C1468500C2DC59 /* day-ahead-prices-1.xml */; };
+		26F8C22A28C7DA01006C9DBC /* DateFormatter+RFC3339.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F8C22928C7DA01006C9DBC /* DateFormatter+RFC3339.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +38,13 @@
 			remoteInfo = "EPWatch WatchKit App";
 		};
 		261FC19C28B77720007B4A4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 261FC18528B7771F007B4A4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 261FC19928B77720007B4A4E;
+			remoteInfo = "EPWatch WatchKit Extension";
+		};
+		26C71B1228C1461500C2DC59 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 261FC18528B7771F007B4A4E /* Project object */;
 			proxyType = 1;
@@ -75,10 +92,28 @@
 		261FC1AC28B77721007B4A4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		261FC1AE28B77721007B4A4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		261FC1AF28B77721007B4A4E /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		26624ADE28C7DB2E000F7E2E /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		26624AE028C7DB6D000F7E2E /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		26624AE228C7DBC1000F7E2E /* DayAheadPrices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayAheadPrices.swift; sourceTree = "<group>"; };
+		26624AE628C883C9000F7E2E /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		26624AE928C8EFFB000F7E2E /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		26C71B0E28C1461500C2DC59 /* EPWatch WatchKit ExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EPWatch WatchKit ExtensionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		26C71B1028C1461500C2DC59 /* EPWatch_WatchKit_ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPWatch_WatchKit_ExtensionTests.swift; sourceTree = "<group>"; };
+		26C71B1728C1468500C2DC59 /* day-ahead-prices-1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "day-ahead-prices-1.xml"; sourceTree = "<group>"; };
+		26F8C22928C7DA01006C9DBC /* DateFormatter+RFC3339.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+RFC3339.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		261FC19728B77720007B4A4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26624AEE28C8F1A1000F7E2E /* SwiftDate in Frameworks */,
+				26624AE528C7DCDD000F7E2E /* XMLCoder in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26C71B0B28C1461500C2DC59 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -93,7 +128,9 @@
 			children = (
 				261FC19328B7771F007B4A4E /* EPWatch WatchKit App */,
 				261FC19E28B77720007B4A4E /* EPWatch WatchKit Extension */,
+				26C71B0F28C1461500C2DC59 /* EPWatch WatchKit ExtensionTests */,
 				261FC18C28B7771F007B4A4E /* Products */,
+				26C71B1928C1469D00C2DC59 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +140,7 @@
 				261FC18B28B7771F007B4A4E /* EPWatch.app */,
 				261FC18F28B7771F007B4A4E /* EPWatch WatchKit App.app */,
 				261FC19A28B77720007B4A4E /* EPWatch WatchKit Extension.appex */,
+				26C71B0E28C1461500C2DC59 /* EPWatch WatchKit ExtensionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,15 +156,19 @@
 		261FC19E28B77720007B4A4E /* EPWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				261FC19F28B77720007B4A4E /* EPWatchApp.swift */,
+				26624ADE28C7DB2E000F7E2E /* AppState.swift */,
+				261FC1A928B77721007B4A4E /* Assets.xcassets */,
+				261FC1A728B77720007B4A4E /* ComplicationController.swift */,
 				261FC1A128B77720007B4A4E /* ContentView.swift */,
+				26624AE828C88C4E000F7E2E /* Utils */,
+				26624AE228C7DBC1000F7E2E /* DayAheadPrices.swift */,
+				261FC19F28B77720007B4A4E /* EPWatchApp.swift */,
+				261FC1AE28B77721007B4A4E /* Info.plist */,
 				261FC1A328B77720007B4A4E /* NotificationController.swift */,
 				261FC1A528B77720007B4A4E /* NotificationView.swift */,
-				261FC1A728B77720007B4A4E /* ComplicationController.swift */,
-				261FC1A928B77721007B4A4E /* Assets.xcassets */,
-				261FC1AE28B77721007B4A4E /* Info.plist */,
-				261FC1AF28B77721007B4A4E /* PushNotificationPayload.apns */,
+				26624AE028C7DB6D000F7E2E /* Parser.swift */,
 				261FC1AB28B77721007B4A4E /* Preview Content */,
+				261FC1AF28B77721007B4A4E /* PushNotificationPayload.apns */,
 			);
 			path = "EPWatch WatchKit Extension";
 			sourceTree = "<group>";
@@ -137,6 +179,32 @@
 				261FC1AC28B77721007B4A4E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		26624AE828C88C4E000F7E2E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				26624AE928C8EFFB000F7E2E /* Error.swift */,
+				26F8C22928C7DA01006C9DBC /* DateFormatter+RFC3339.swift */,
+				26624AE628C883C9000F7E2E /* Log.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		26C71B0F28C1461500C2DC59 /* EPWatch WatchKit ExtensionTests */ = {
+			isa = PBXGroup;
+			children = (
+				26C71B1728C1468500C2DC59 /* day-ahead-prices-1.xml */,
+				26C71B1028C1461500C2DC59 /* EPWatch_WatchKit_ExtensionTests.swift */,
+			);
+			path = "EPWatch WatchKit ExtensionTests";
+			sourceTree = "<group>";
+		};
+		26C71B1928C1469D00C2DC59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +223,10 @@
 				261FC19228B7771F007B4A4E /* PBXTargetDependency */,
 			);
 			name = EPWatch;
+			packageProductDependencies = (
+				26C71B0928C145EA00C2DC59 /* XMLCoder */,
+				26624AEC28C8F18C000F7E2E /* SwiftDate */,
+			);
 			productName = EPWatch;
 			productReference = 261FC18B28B7771F007B4A4E /* EPWatch.app */;
 			productType = "com.apple.product-type.application.watchapp2-container";
@@ -189,9 +261,33 @@
 			dependencies = (
 			);
 			name = "EPWatch WatchKit Extension";
+			packageProductDependencies = (
+				26624AE428C7DCDD000F7E2E /* XMLCoder */,
+				26624AED28C8F1A1000F7E2E /* SwiftDate */,
+			);
 			productName = "EPWatch WatchKit Extension";
 			productReference = 261FC19A28B77720007B4A4E /* EPWatch WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		26C71B0D28C1461500C2DC59 /* EPWatch WatchKit ExtensionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26C71B1428C1461500C2DC59 /* Build configuration list for PBXNativeTarget "EPWatch WatchKit ExtensionTests" */;
+			buildPhases = (
+				26C71B0A28C1461500C2DC59 /* Sources */,
+				26C71B0B28C1461500C2DC59 /* Frameworks */,
+				26C71B0C28C1461500C2DC59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26C71B1328C1461500C2DC59 /* PBXTargetDependency */,
+			);
+			name = "EPWatch WatchKit ExtensionTests";
+			packageProductDependencies = (
+			);
+			productName = "EPWatch WatchKit ExtensionTests";
+			productReference = 26C71B0E28C1461500C2DC59 /* EPWatch WatchKit ExtensionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -212,6 +308,10 @@
 					261FC19928B77720007B4A4E = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
+					26C71B0D28C1461500C2DC59 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 261FC19928B77720007B4A4E;
+					};
 				};
 			};
 			buildConfigurationList = 261FC18828B7771F007B4A4E /* Build configuration list for PBXProject "EPWatch" */;
@@ -223,6 +323,10 @@
 				Base,
 			);
 			mainGroup = 261FC18428B7771F007B4A4E;
+			packageReferences = (
+				26C71B0828C145EA00C2DC59 /* XCRemoteSwiftPackageReference "XMLCoder" */,
+				26624AEB28C8F18C000F7E2E /* XCRemoteSwiftPackageReference "SwiftDate" */,
+			);
 			productRefGroup = 261FC18C28B7771F007B4A4E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -230,6 +334,7 @@
 				261FC18A28B7771F007B4A4E /* EPWatch */,
 				261FC18E28B7771F007B4A4E /* EPWatch WatchKit App */,
 				261FC19928B77720007B4A4E /* EPWatch WatchKit Extension */,
+				26C71B0D28C1461500C2DC59 /* EPWatch WatchKit ExtensionTests */,
 			);
 		};
 /* End PBXProject section */
@@ -259,6 +364,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		26C71B0C28C1461500C2DC59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26C71B1828C1468500C2DC59 /* day-ahead-prices-1.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -267,10 +380,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				261FC1A428B77720007B4A4E /* NotificationController.swift in Sources */,
+				26624ADF28C7DB2E000F7E2E /* AppState.swift in Sources */,
+				26624AE728C883C9000F7E2E /* Log.swift in Sources */,
+				26624AEA28C8EFFB000F7E2E /* Error.swift in Sources */,
 				261FC1A228B77720007B4A4E /* ContentView.swift in Sources */,
+				26624AE328C7DBC1000F7E2E /* DayAheadPrices.swift in Sources */,
 				261FC1A828B77720007B4A4E /* ComplicationController.swift in Sources */,
+				26624AE128C7DB6D000F7E2E /* Parser.swift in Sources */,
 				261FC1A028B77720007B4A4E /* EPWatchApp.swift in Sources */,
+				26F8C22A28C7DA01006C9DBC /* DateFormatter+RFC3339.swift in Sources */,
 				261FC1A628B77720007B4A4E /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26C71B0A28C1461500C2DC59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26C71B1128C1461500C2DC59 /* EPWatch_WatchKit_ExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +413,11 @@
 			isa = PBXTargetDependency;
 			target = 261FC19928B77720007B4A4E /* EPWatch WatchKit Extension */;
 			targetProxy = 261FC19C28B77720007B4A4E /* PBXContainerItemProxy */;
+		};
+		26C71B1328C1461500C2DC59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 261FC19928B77720007B4A4E /* EPWatch WatchKit Extension */;
+			targetProxy = 26C71B1228C1461500C2DC59 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -542,6 +674,46 @@
 			};
 			name = Release;
 		};
+		26C71B1528C1461500C2DC59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MDUSC5XAF4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "se.j0nas.EPWatch-WatchKit-ExtensionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EPWatch WatchKit Extension.appex/EPWatch WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		26C71B1628C1461500C2DC59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MDUSC5XAF4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "se.j0nas.EPWatch-WatchKit-ExtensionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EPWatch WatchKit Extension.appex/EPWatch WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -581,7 +753,58 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		26C71B1428C1461500C2DC59 /* Build configuration list for PBXNativeTarget "EPWatch WatchKit ExtensionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26C71B1528C1461500C2DC59 /* Debug */,
+				26C71B1628C1461500C2DC59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		26624AEB28C8F18C000F7E2E /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftDate.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		26C71B0828C145EA00C2DC59 /* XCRemoteSwiftPackageReference "XMLCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CoreOffice/XMLCoder.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		26624AE428C7DCDD000F7E2E /* XMLCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26C71B0828C145EA00C2DC59 /* XCRemoteSwiftPackageReference "XMLCoder" */;
+			productName = XMLCoder;
+		};
+		26624AEC28C8F18C000F7E2E /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26624AEB28C8F18C000F7E2E /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
+		};
+		26624AED28C8F1A1000F7E2E /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26624AEB28C8F18C000F7E2E /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
+		};
+		26C71B0928C145EA00C2DC59 /* XMLCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26C71B0828C145EA00C2DC59 /* XCRemoteSwiftPackageReference "XMLCoder" */;
+			productName = XMLCoder;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 261FC18528B7771F007B4A4E /* Project object */;
 }
