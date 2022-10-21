@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		261FC19028B7771F007B4A4E /* EPWatch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 261FC18F28B7771F007B4A4E /* EPWatch WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		261FC19528B77720007B4A4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 261FC19428B77720007B4A4E /* Assets.xcassets */; };
-		261FC19B28B77720007B4A4E /* EPWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 261FC19A28B77720007B4A4E /* EPWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		261FC1A028B77720007B4A4E /* EPWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC19F28B77720007B4A4E /* EPWatchApp.swift */; };
 		261FC1A228B77720007B4A4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC1A128B77720007B4A4E /* ContentView.swift */; };
 		261FC1A428B77720007B4A4E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC1A328B77720007B4A4E /* NotificationController.swift */; };
@@ -41,34 +40,16 @@
 			remoteGlobalIDString = 261FC18E28B7771F007B4A4E;
 			remoteInfo = "EPWatch WatchKit App";
 		};
-		261FC19C28B77720007B4A4E /* PBXContainerItemProxy */ = {
+		2687740928CBCDF500E72C0E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 261FC18528B7771F007B4A4E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 261FC19928B77720007B4A4E;
-			remoteInfo = "EPWatch WatchKit Extension";
-		};
-		26C71B1228C1461500C2DC59 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 261FC18528B7771F007B4A4E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 261FC19928B77720007B4A4E;
-			remoteInfo = "EPWatch WatchKit Extension";
+			remoteGlobalIDString = 261FC18E28B7771F007B4A4E;
+			remoteInfo = "EPWatch WatchKit App";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		261FC1B528B77721007B4A4E /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				261FC19B28B77720007B4A4E /* EPWatch WatchKit Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		261FC1B928B77721007B4A4E /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -86,7 +67,6 @@
 		261FC18B28B7771F007B4A4E /* EPWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EPWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		261FC18F28B7771F007B4A4E /* EPWatch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EPWatch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		261FC19428B77720007B4A4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		261FC19A28B77720007B4A4E /* EPWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EPWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		261FC19F28B77720007B4A4E /* EPWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPWatchApp.swift; sourceTree = "<group>"; };
 		261FC1A128B77720007B4A4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		261FC1A328B77720007B4A4E /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
@@ -147,7 +127,6 @@
 			children = (
 				261FC18B28B7771F007B4A4E /* EPWatch.app */,
 				261FC18F28B7771F007B4A4E /* EPWatch WatchKit App.app */,
-				261FC19A28B77720007B4A4E /* EPWatch WatchKit Extension.appex */,
 				26C71B0E28C1461500C2DC59 /* EPWatch WatchKit ExtensionTests.xctest */,
 			);
 			name = Products;
@@ -264,38 +243,21 @@
 			buildConfigurationList = 261FC1B628B77721007B4A4E /* Build configuration list for PBXNativeTarget "EPWatch WatchKit App" */;
 			buildPhases = (
 				261FC18D28B7771F007B4A4E /* Resources */,
-				261FC1B528B77721007B4A4E /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				261FC19D28B77720007B4A4E /* PBXTargetDependency */,
-			);
-			name = "EPWatch WatchKit App";
-			productName = "EPWatch WatchKit App";
-			productReference = 261FC18F28B7771F007B4A4E /* EPWatch WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		261FC19928B77720007B4A4E /* EPWatch WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 261FC1B228B77721007B4A4E /* Build configuration list for PBXNativeTarget "EPWatch WatchKit Extension" */;
-			buildPhases = (
 				261FC19628B77720007B4A4E /* Sources */,
 				261FC19728B77720007B4A4E /* Frameworks */,
-				261FC19828B77720007B4A4E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "EPWatch WatchKit Extension";
+			name = "EPWatch WatchKit App";
 			packageProductDependencies = (
-				26624AE428C7DCDD000F7E2E /* XMLCoder */,
-				26624AED28C8F1A1000F7E2E /* SwiftDate */,
+				2687740728CBCDF500E72C0E /* XMLCoder */,
+				2687740828CBCDF500E72C0E /* SwiftDate */,
 			);
-			productName = "EPWatch WatchKit Extension";
-			productReference = 261FC19A28B77720007B4A4E /* EPWatch WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
+			productName = "EPWatch WatchKit App";
+			productReference = 261FC18F28B7771F007B4A4E /* EPWatch WatchKit App.app */;
+			productType = "com.apple.product-type.application";
 		};
 		26C71B0D28C1461500C2DC59 /* EPWatch WatchKit ExtensionTests */ = {
 			isa = PBXNativeTarget;
@@ -308,7 +270,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				26C71B1328C1461500C2DC59 /* PBXTargetDependency */,
+				2687740A28CBCDF500E72C0E /* PBXTargetDependency */,
 			);
 			name = "EPWatch WatchKit ExtensionTests";
 			packageProductDependencies = (
@@ -325,7 +287,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					261FC18A28B7771F007B4A4E = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -333,12 +295,9 @@
 					261FC18E28B7771F007B4A4E = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
-					261FC19928B77720007B4A4E = {
-						CreatedOnToolsVersion = 13.4.1;
-					};
 					26C71B0D28C1461500C2DC59 = {
 						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = 261FC19928B77720007B4A4E;
+						TestTargetID = 261FC18E28B7771F007B4A4E;
 					};
 				};
 			};
@@ -361,7 +320,6 @@
 			targets = (
 				261FC18A28B7771F007B4A4E /* EPWatch */,
 				261FC18E28B7771F007B4A4E /* EPWatch WatchKit App */,
-				261FC19928B77720007B4A4E /* EPWatch WatchKit Extension */,
 				26C71B0D28C1461500C2DC59 /* EPWatch WatchKit ExtensionTests */,
 			);
 		};
@@ -379,16 +337,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				261FC19528B77720007B4A4E /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		261FC19828B77720007B4A4E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 				261FC1AD28B77721007B4A4E /* Preview Assets.xcassets in Resources */,
 				261FC1AA28B77721007B4A4E /* Assets.xcassets in Resources */,
+				261FC19528B77720007B4A4E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,15 +392,10 @@
 			target = 261FC18E28B7771F007B4A4E /* EPWatch WatchKit App */;
 			targetProxy = 261FC19128B7771F007B4A4E /* PBXContainerItemProxy */;
 		};
-		261FC19D28B77720007B4A4E /* PBXTargetDependency */ = {
+		2687740A28CBCDF500E72C0E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 261FC19928B77720007B4A4E /* EPWatch WatchKit Extension */;
-			targetProxy = 261FC19C28B77720007B4A4E /* PBXContainerItemProxy */;
-		};
-		26C71B1328C1461500C2DC59 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 261FC19928B77720007B4A4E /* EPWatch WatchKit Extension */;
-			targetProxy = 26C71B1228C1461500C2DC59 /* PBXContainerItemProxy */;
+			target = 261FC18E28B7771F007B4A4E /* EPWatch WatchKit App */;
+			targetProxy = 2687740928CBCDF500E72C0E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -566,83 +512,26 @@
 			};
 			name = Release;
 		};
-		261FC1B328B77721007B4A4E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"EPWatch WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = MDUSC5XAF4;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "EPWatch WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "EPWatch WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_WKWatchOnly = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = se.j0nas.EPWatch.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
-			};
-			name = Debug;
-		};
-		261FC1B428B77721007B4A4E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"EPWatch WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = MDUSC5XAF4;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "EPWatch WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "EPWatch WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_WKWatchOnly = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = se.j0nas.EPWatch.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
-			};
-			name = Release;
-		};
 		261FC1B728B77721007B4A4E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MDUSC5XAF4;
 				GENERATE_INFOPLIST_FILE = YES;
-				IBSC_MODULE = EPWatch_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "EPWatch WatchKit App";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = se.j0nas.EPWatch.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -651,7 +540,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -660,14 +549,21 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MDUSC5XAF4;
 				GENERATE_INFOPLIST_FILE = YES;
-				IBSC_MODULE = EPWatch_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "EPWatch WatchKit App";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = se.j0nas.EPWatch.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -676,7 +572,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -686,6 +582,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MDUSC5XAF4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = se.j0nas.EPWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -699,6 +596,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MDUSC5XAF4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = se.j0nas.EPWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -721,8 +619,8 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EPWatch WatchKit Extension.appex/EPWatch WatchKit Extension";
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EPWatch WatchKit App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EPWatch WatchKit App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -741,8 +639,8 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EPWatch WatchKit Extension.appex/EPWatch WatchKit Extension";
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EPWatch WatchKit App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EPWatch WatchKit App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -754,15 +652,6 @@
 			buildConfigurations = (
 				261FC1B028B77721007B4A4E /* Debug */,
 				261FC1B128B77721007B4A4E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		261FC1B228B77721007B4A4E /* Build configuration list for PBXNativeTarget "EPWatch WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				261FC1B328B77721007B4A4E /* Debug */,
-				261FC1B428B77721007B4A4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -827,6 +716,16 @@
 			productName = SwiftDate;
 		};
 		26624AED28C8F1A1000F7E2E /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26624AEB28C8F18C000F7E2E /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
+		};
+		2687740728CBCDF500E72C0E /* XMLCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26C71B0828C145EA00C2DC59 /* XCRemoteSwiftPackageReference "XMLCoder" */;
+			productName = XMLCoder;
+		};
+		2687740828CBCDF500E72C0E /* SwiftDate */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 26624AEB28C8F18C000F7E2E /* XCRemoteSwiftPackageReference "SwiftDate" */;
 			productName = SwiftDate;

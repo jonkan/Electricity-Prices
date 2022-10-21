@@ -40,6 +40,7 @@ public func LogError(
         case .rangingUnavailable: message = "rangingUnavailable"
         case .rangingFailure: message = "rangingFailure"
         case .promptDeclined: message = "promptDeclined"
+        case .historicalLocationError: message = "historicalLocationError"
         @unknown default: message = "unknown"
         }
     } else {
