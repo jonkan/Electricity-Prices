@@ -28,7 +28,7 @@ public class AppState: ObservableObject {
     @AppStorageCodable("CurrencyConversion")
     private var cachedForex: ForexLatest?
 
-    private var isUpdating: Bool = false
+    private var updateTask: Task<Void, Never>?
 
     nonisolated
     public static let didUpdateDayAheadPrices = Notification.Name("didUpdateDayAheadPrices")
@@ -70,28 +70,30 @@ public class AppState: ObservableObject {
     }
 
     public func updatePricesIfNeeded() async throws {
+        _ = await updateTask?.result
         if let price = prices?.price(for: Date()) {
             if price != currentPrice {
                 currentPrice = price
                 todaysPriceSpan = prices?.priceSpan(forDayOf: Date())
             }
+            Log("Update not needed")
             return
         }
-//        guard !isUpdating else { return }
-        Log("Update current price begin")
-//        isUpdating = true
-//        defer { isUpdating = false }
-        do {
-            prices = try await getTodaysPrices()
-            currentPrice = prices?.price(for: Date())
-            todaysPriceSpan = prices?.priceSpan(forDayOf: Date())
-            Log("Update current price success")
-            NotificationCenter.default.post(name: Self.didUpdateDayAheadPrices, object: self)
-        } catch {
-            currentPrice = nil
-            todaysPriceSpan = nil
-            throw error
+        updateTask = Task {
+            Log("Update current price begin")
+            do {
+                prices = try await getTodaysPrices()
+                currentPrice = prices?.price(for: Date())
+                todaysPriceSpan = prices?.priceSpan(forDayOf: Date())
+                Log("Update current price success")
+                NotificationCenter.default.post(name: Self.didUpdateDayAheadPrices, object: self)
+            } catch {
+                LogError(error)
+                currentPrice = nil
+                todaysPriceSpan = nil
+            }
         }
+        _ = await updateTask?.result
     }
 
     private func getTodaysPrices() async throws -> [PricePoint] {
