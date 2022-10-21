@@ -71,6 +71,10 @@ public struct PriceChartView: View {
             .symbolSize(70)
         }
         .widgetAccentable()
+        .chartYAxis {
+            AxisMarks(format: .currency(code: "SEK").precision(.fractionLength(1)))
+        }
+        .padding(.top, widgetRenderingMode != .fullColor ? 5 : 0)
     }
 
 }

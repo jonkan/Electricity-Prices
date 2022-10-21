@@ -337,12 +337,12 @@
 		260787B128D70C9D00FF2C33 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				260787B528D7109C00FF2C33 /* PricePointCircularWidgetView.swift */,
+				260787BB28D7123A00FF2C33 /* PricePointInlineWidgetView.swift */,
+				260787B928D711FF00FF2C33 /* PricePointLargeWidgetView.swift */,
+				260787B728D711C100FF2C33 /* PricePointRectangularWidgetView.swift */,
 				2674BCB528D08AA000E31A20 /* PricePointTimelineEntry.swift */,
 				260787B228D70CE900FF2C33 /* PricePointTimelineProvider.swift */,
-				260787B528D7109C00FF2C33 /* PricePointCircularWidgetView.swift */,
-				260787B728D711C100FF2C33 /* PricePointRectangularWidgetView.swift */,
-				260787B928D711FF00FF2C33 /* PricePointLargeWidgetView.swift */,
-				260787BB28D7123A00FF2C33 /* PricePointInlineWidgetView.swift */,
 				260787BD28D712BB00FF2C33 /* PricePointWidgetView.swift */,
 			);
 			path = Widget;
