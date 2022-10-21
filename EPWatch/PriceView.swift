@@ -23,7 +23,8 @@ struct PriceView: View {
             PriceChartView(
                 currentPrice: currentPrice,
                 prices: prices,
-                limits: limits
+                limits: limits,
+                currencyAxisFormat: true
             )
         }
     }

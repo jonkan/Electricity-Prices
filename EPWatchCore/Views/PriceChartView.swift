@@ -15,15 +15,18 @@ public struct PriceChartView: View {
     var currentPrice: PricePoint
     var prices: [PricePoint]
     var limits: PriceLimits
+    var currencyAxisFormat: Bool
 
     public init(
         currentPrice: PricePoint,
         prices: [PricePoint],
-        limits: PriceLimits
+        limits: PriceLimits,
+        currencyAxisFormat: Bool = false
     ) {
         self.currentPrice = currentPrice
         self.prices = prices
         self.limits = limits
+        self.currencyAxisFormat = currencyAxisFormat
     }
 
     public var body: some View {
@@ -72,9 +75,40 @@ public struct PriceChartView: View {
         }
         .widgetAccentable()
         .chartYAxis {
-            AxisMarks(format: .currency(code: "SEK").precision(.fractionLength(1)))
+            if let axisYValues = axisYValues {
+                if currencyAxisFormat {
+                    AxisMarks(
+                        format: .currency(code: "SEK").precision(precision),
+                        values: axisYValues
+                    )
+                } else {
+                    AxisMarks(values: axisYValues)
+                }
+            } else {
+                if currencyAxisFormat {
+                    AxisMarks(
+                        format: .currency(code: "SEK").precision(precision)
+                    )
+                } else {
+                    AxisMarks()
+                }
+            }
         }
         .padding(.top, widgetRenderingMode != .fullColor ? 5 : 0)
+    }
+
+    var axisYValues: [Double]? {
+        if currentPrice.dayPriceRange.upperBound <= 1.5 {
+          return [0.0, 0.5, 1.0, 1.5]
+        }
+        return nil
+    }
+
+    var precision: NumberFormatStyleConfiguration.Precision {
+        if currentPrice.dayPriceRange.upperBound <= 1.5 {
+            return .fractionLength(1)
+        }
+        return .significantDigits(1)
     }
 
 }
