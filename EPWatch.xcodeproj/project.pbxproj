@@ -43,9 +43,6 @@
 		2674BCB628D08AA000E31A20 /* PricePointTimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BCB528D08AA000E31A20 /* PricePointTimelineEntry.swift */; };
 		2674BCB728D0928500E31A20 /* day-ahead-prices-1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 26C71B1728C1468500C2DC59 /* day-ahead-prices-1.xml */; };
 		2690400228D4848A00A823F5 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 2690400128D4848A00A823F5 /* SwiftDate */; };
-		2690400428D4852B00A823F5 /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 2690400328D4852B00A823F5 /* XMLCoder */; };
-		2690400628D4852B00A823F5 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 2690400528D4852B00A823F5 /* SwiftDate */; };
-		2690400828D4853400A823F5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2690400728D4853400A823F5 /* Alamofire */; };
 		2690400928D5DA4100A823F5 /* EPWatchKitApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 261FC18F28B7771F007B4A4E /* EPWatchKitApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2696879028D10112002142BF /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696878F28D10112002142BF /* PriceView.swift */; };
 		2696879528D2021C002142BF /* Regions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879428D2021C002142BF /* Regions.swift */; };
@@ -225,10 +222,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2690400428D4852B00A823F5 /* XMLCoder in Frameworks */,
-				2690400828D4853400A823F5 /* Alamofire in Frameworks */,
 				2674BC9128D059A400E31A20 /* EPWatchCore.framework in Frameworks */,
-				2690400628D4852B00A823F5 /* SwiftDate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,9 +523,6 @@
 			);
 			name = EPWatchKitApp;
 			packageProductDependencies = (
-				2690400328D4852B00A823F5 /* XMLCoder */,
-				2690400528D4852B00A823F5 /* SwiftDate */,
-				2690400728D4853400A823F5 /* Alamofire */,
 			);
 			productName = "EPWatch WatchKit App";
 			productReference = 261FC18F28B7771F007B4A4E /* EPWatchKitApp.app */;
@@ -1360,21 +1351,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 26624AEB28C8F18C000F7E2E /* XCRemoteSwiftPackageReference "SwiftDate" */;
 			productName = SwiftDate;
-		};
-		2690400328D4852B00A823F5 /* XMLCoder */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 26C71B0828C145EA00C2DC59 /* XCRemoteSwiftPackageReference "XMLCoder" */;
-			productName = XMLCoder;
-		};
-		2690400528D4852B00A823F5 /* SwiftDate */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 26624AEB28C8F18C000F7E2E /* XCRemoteSwiftPackageReference "SwiftDate" */;
-			productName = SwiftDate;
-		};
-		2690400728D4853400A823F5 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 268B811028CE6B1600115BDC /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
 		};
 		2696882528D478C3002142BF /* XMLCoder */ = {
 			isa = XCSwiftPackageProductDependency;
