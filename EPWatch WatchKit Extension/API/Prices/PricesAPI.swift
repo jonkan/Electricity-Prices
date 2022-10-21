@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class PricesAPI {
 
@@ -33,7 +34,8 @@ class PricesAPI {
             URLQueryItem(name: "securityToken", value: "<redacted>")
         ]
 
-        let (data, _) = try await URLSession.shared.data(from: components.url!)
+        let downloadResponse = await AF.download(components.url!).serializingData().response
+        let data = try downloadResponse.result.get()
         do {
             let dayAheadPrices = try parseDayAheadPrices(fromXML: data)
             return dayAheadPrices

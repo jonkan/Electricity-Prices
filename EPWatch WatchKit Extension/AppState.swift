@@ -18,33 +18,37 @@ class AppState: ObservableObject {
     @Published var currentPrice: PricePoint?
 
     @AppStorageCodable("prices")
-    private var prices: [PricePoint]?
+    var prices: [PricePoint]?
+
+    var todaysPrices: [PricePoint] {
+        prices?.filter({ $0.start.isToday }) ?? []
+    }
 
     @AppStorageCodable("CurrencyConversion")
     private var cachedForex: ForexLatest?
 
-    private var isUpdatingCurrentPrice: Bool = false
+    private var isUpdating: Bool = false
 
     static let didUpdateDayAheadPrices = Notification.Name("didUpdateDayAheadPrices")
 
     private init() {
-        updateCurrentPrice()
+        updatePricesIfNeeded()
     }
 
     private var timer: Timer?
     var isTimerRunning: Bool = false {
         didSet {
             if isTimerRunning {
-                updateCurrentPrice()
                 let nextHour = DateInRegion().dateAtStartOf(.hour) + 1.hours
                 timer = Timer(
                     fireAt: nextHour.date,
                     interval: 1.hours.timeInterval,
                     target: self,
-                    selector: #selector(updateCurrentPrice),
+                    selector: #selector(updatePricesIfNeeded),
                     userInfo: nil,
                     repeats: true
                 )
+                timer?.fire()
             } else {
                 timer?.invalidate()
                 timer = nil
@@ -52,48 +56,39 @@ class AppState: ObservableObject {
         }
     }
 
-    @objc func updateCurrentPrice() {
-        guard !isUpdatingCurrentPrice else { return }
+    @objc func updatePricesIfNeeded() {
         Task {
             do {
-                _ = try await updateCurrentPrice()
+                _ = try await updatePricesIfNeeded()
             } catch {
                 LogError(error)
             }
         }
     }
 
-    @discardableResult
-    func updateCurrentPrice() async throws -> PricePoint {
-        Log("Update current price begin")
-        isUpdatingCurrentPrice = true
-        defer { isUpdatingCurrentPrice = false }
-
-        let price = try await getCurrentPrice()
-        currentPrice = price
-        Log("Update current price success")
-        return price
-    }
-
-    func allPrices() async throws -> [PricePoint] {
-        _ = try await getCurrentPrice()
-        return prices ?? []
-    }
-
-    private func getCurrentPrice() async throws -> PricePoint {
-        if let price = prices?.price(for: Date()) {
-            return price
+    func updatePricesIfNeeded() async throws {
+        if let price = prices?.price(for: Date()), price != currentPrice {
+            currentPrice = price
+            return
         }
+        guard !isUpdating else { return }
+        Log("Update current price begin")
+        isUpdating = true
+        defer { isUpdating = false }
+
+        prices = try await getTodaysPrices()
+        currentPrice = prices?.price(for: Date())
+        Log("Update current price success")
+        NotificationCenter.default.post(name: Self.didUpdateDayAheadPrices, object: self)
+    }
+
+    private func getTodaysPrices() async throws -> [PricePoint] {
         Log("Downloading day ahead prices")
         let dayAheadPrices = try await PricesAPI.shared.downloadDayAheadPrices()
         let forex = try await currentForex()
         let rate = try forex.rate(from: "EUR", to: "SEK")
-        prices = dayAheadPrices.prices(using: rate)
-        guard let price = prices?.price(for: Date()) else {
-            throw NSError(0, "No price found")
-        }
-        NotificationCenter.default.post(name: Self.didUpdateDayAheadPrices, object: self)
-        return price
+        let prices = dayAheadPrices.prices(using: rate)
+        return prices
     }
 
     private func currentForex() async throws -> ForexLatest {

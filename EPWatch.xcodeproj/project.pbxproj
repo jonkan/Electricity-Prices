@@ -27,6 +27,9 @@
 		26624AF228C9332F000F7E2E /* ForexAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AF128C9332F000F7E2E /* ForexAPI.swift */; };
 		26624AF428C93541000F7E2E /* AppStorageCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AF328C93541000F7E2E /* AppStorageCodable.swift */; };
 		26624AF828C93E1F000F7E2E /* PricesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AF728C93E1F000F7E2E /* PricesAPI.swift */; };
+		268B810E28CBD00300115BDC /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 2687740728CBCDF500E72C0E /* XMLCoder */; };
+		268B810F28CBD00300115BDC /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 2687740828CBCDF500E72C0E /* SwiftDate */; };
+		268B811228CE6B1600115BDC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 268B811128CE6B1600115BDC /* Alamofire */; };
 		26C71B1128C1461500C2DC59 /* EPWatch_WatchKit_ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C71B1028C1461500C2DC59 /* EPWatch_WatchKit_ExtensionTests.swift */; };
 		26C71B1828C1468500C2DC59 /* day-ahead-prices-1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 26C71B1728C1468500C2DC59 /* day-ahead-prices-1.xml */; };
 		26F8C22A28C7DA01006C9DBC /* DateFormatter+RFC3339.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F8C22928C7DA01006C9DBC /* DateFormatter+RFC3339.swift */; };
@@ -96,6 +99,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268B811228CE6B1600115BDC /* Alamofire in Frameworks */,
+				268B810F28CBD00300115BDC /* SwiftDate in Frameworks */,
+				268B810E28CBD00300115BDC /* XMLCoder in Frameworks */,
 				26624AEE28C8F1A1000F7E2E /* SwiftDate in Frameworks */,
 				26624AE528C7DCDD000F7E2E /* XMLCoder in Frameworks */,
 			);
@@ -254,6 +260,7 @@
 			packageProductDependencies = (
 				2687740728CBCDF500E72C0E /* XMLCoder */,
 				2687740828CBCDF500E72C0E /* SwiftDate */,
+				268B811128CE6B1600115BDC /* Alamofire */,
 			);
 			productName = "EPWatch WatchKit App";
 			productReference = 261FC18F28B7771F007B4A4E /* EPWatch WatchKit App.app */;
@@ -313,6 +320,7 @@
 			packageReferences = (
 				26C71B0828C145EA00C2DC59 /* XCRemoteSwiftPackageReference "XMLCoder" */,
 				26624AEB28C8F18C000F7E2E /* XCRemoteSwiftPackageReference "SwiftDate" */,
+				268B811028CE6B1600115BDC /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 261FC18C28B7771F007B4A4E /* Products */;
 			projectDirPath = "";
@@ -694,6 +702,14 @@
 				minimumVersion = 6.0.0;
 			};
 		};
+		268B811028CE6B1600115BDC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		26C71B0828C145EA00C2DC59 /* XCRemoteSwiftPackageReference "XMLCoder" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/CoreOffice/XMLCoder.git";
@@ -729,6 +745,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 26624AEB28C8F18C000F7E2E /* XCRemoteSwiftPackageReference "SwiftDate" */;
 			productName = SwiftDate;
+		};
+		268B811128CE6B1600115BDC /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 268B811028CE6B1600115BDC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 		26C71B0928C145EA00C2DC59 /* XMLCoder */ = {
 			isa = XCSwiftPackageProductDependency;

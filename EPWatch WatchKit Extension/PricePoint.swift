@@ -8,7 +8,7 @@
 import Foundation
 import SwiftDate
 
-struct PricePoint: Codable {
+struct PricePoint: Codable, Equatable {
     var price: Double
     var start: Date // And 1h forward
 
@@ -64,6 +64,13 @@ struct PricePoint: Codable {
 
 extension Array where Element == PricePoint {
     func price(for date: Date) -> PricePoint? {
-        return reversed().first(where: { $0.start <= date })
+        let d = date.in(region: .UTC)
+        return first(where: {
+            guard Calendar.current.isDate($0.start, inSameDayAs: date) else {
+                return false
+            }
+            let s = $0.start.in(region: .UTC)
+            return d.hour == s.hour
+        })
     }
 }

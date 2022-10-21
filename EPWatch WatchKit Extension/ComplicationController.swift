@@ -68,7 +68,10 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
         Task {
             do {
-                let pricePoint = try await AppState.shared.updateCurrentPrice()
+                try await AppState.shared.updatePricesIfNeeded()
+                guard let pricePoint = AppState.shared.prices?.price(for: Date()) else {
+                    throw NSError(0, "Unable to read pricePoint for current timeline")
+                }
                 let entry = getTimelineEntry(for: complication, pricePoint: pricePoint)
                 handler(entry)
             } catch {
@@ -81,26 +84,20 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     func getTimelineEntries(for complication: CLKComplication, after date: Date, limit: Int, withHandler handler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {
         // Call the handler with the timeline entries after the given date
         Task {
-            do {
-                var entries: [CLKComplicationTimelineEntry] = []
-                let pricePoints = try await AppState.shared.allPrices()
-                for pricePoint in pricePoints {
-                    guard entries.count < limit else {
-                        return
-                    }
-                    guard pricePoint.start.isToday else {
-                        continue
-                    }
-                    guard let entry = getTimelineEntry(for: complication, pricePoint: pricePoint) else {
-                        continue
-                    }
-                    entries.append(entry)
+            var entries: [CLKComplicationTimelineEntry] = []
+            for pricePoint in AppState.shared.prices ?? [] {
+                guard date < pricePoint.start else {
+                    continue
                 }
-                handler(entries)
-            } catch {
-                LogError(error)
-                handler(nil)
+                guard entries.count < limit else {
+                    return
+                }
+                guard let entry = getTimelineEntry(for: complication, pricePoint: pricePoint) else {
+                    continue
+                }
+                entries.append(entry)
             }
+            handler(entries)
         }
     }
 

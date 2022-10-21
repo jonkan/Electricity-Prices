@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftDate
+import Alamofire
 
 enum ForexError: Error {
     case wrongFrom
@@ -48,7 +49,8 @@ class ForexAPI {
             URLQueryItem(name: "format", value: "csvdata"),
             URLQueryItem(name: "startPeriod", value: yesterday)
         ]
-        let (data, _) = try await URLSession.shared.data(from: components.url!)
+        let downloadResponse = await AF.download(components.url!).serializingData().response
+        let data = try downloadResponse.result.get()
         do {
             guard let csv = String(data: data, encoding: .utf8) else {
                 throw NSError(0, "Failed to decode string from data")
