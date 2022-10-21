@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "icon-complication.svg",
       "idiom" : "watch",
       "scale" : "2x"
     },
