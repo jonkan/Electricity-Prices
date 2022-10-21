@@ -27,7 +27,7 @@ struct ContentView: View {
                 .tabViewStyle(.page)
             }
         } else {
-            Text("Updating prices...")
+            Text("Fetching prices...")
                 .padding()
         }
     }

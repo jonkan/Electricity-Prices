@@ -8,7 +8,7 @@
 "Price area" = "Elområde";
 
 /* No comment provided by engineer. */
-"Updating prices..." = "Uppdaterar priser...";
+"Fetching prices..." = "Hämtar priser...";
 
 /* No comment provided by engineer. */
 "Displays the current electricity price" = "Visar nuvarande elpris";

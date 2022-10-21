@@ -76,12 +76,14 @@ public class AppState: ObservableObject {
     }
 
     func invalidateAndUpdatePrices() {
-        DispatchQueue.main.async {
-            self.objectWillChange.send()
-        }
         prices = []
+        currentPrice = nil
         updatePricesIfNeeded {
             WidgetCenter.shared.reloadAllTimelines()
+            self.objectWillChange.send()
+        }
+        DispatchQueue.main.async {
+            self.objectWillChange.send()
         }
     }
 

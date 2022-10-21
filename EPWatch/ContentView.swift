@@ -15,37 +15,42 @@ struct ContentView: View {
     @State private var showsSettings: Bool = false
 
     var body: some View {
-        if let currentPrice = state.currentPrice {
-            NavigationStack {
-                List {
+        NavigationStack {
+            List {
+                if let currentPrice = state.currentPrice {
                     PriceView(
                         currentPrice: currentPrice,
                         prices: state.prices.filterInSameDayAs(currentPrice),
                         limits: state.priceLimits
                     )
                     .frame(minHeight: 200)
-                }
-                .navigationTitle("Electricity price")
-                .toolbar {
-                    ToolbarItemGroup(placement: .navigationBarTrailing) {
-                        Button {
-                            showsSettings = true
-                        } label: {
-                            Image(systemName: "gearshape")
-                                .bold()
-                                .foregroundColor(.primary)
-                        }
+                } else {
+                    HStack {
+                        Spacer()
+                        ProgressView("Fetching prices...")
+                        Spacer()
                     }
+                    .listRowBackground(Color.clear)
+                    .frame(minHeight: 200)
                 }
-                .sheet(isPresented: $showsSettings) {
-                    NavigationStack {
-                        SettingsView()
+            }
+            .navigationTitle("Electricity price")
+            .toolbar {
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    Button {
+                        showsSettings = true
+                    } label: {
+                        Image(systemName: "gearshape")
+                            .bold()
+                            .foregroundColor(.primary)
                     }
                 }
             }
-        } else {
-            Text("Updating prices...")
-                .padding()
+            .sheet(isPresented: $showsSettings) {
+                NavigationStack {
+                    SettingsView()
+                }
+            }
         }
     }
 
