@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @ObservedObject var state: AppState = .shared
+    @ObservedObject private var state: AppState = .shared
+    @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
         Group {
@@ -21,8 +22,8 @@ struct ContentView: View {
             }
         }
         .padding()
-        .onAppear {
-            state.updateCurrentPrice()
+        .onChange(of: scenePhase) { phase in
+            state.isTimerRunning = (phase == .active)
         }
     }
 }

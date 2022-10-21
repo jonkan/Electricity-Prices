@@ -16,6 +16,9 @@ struct EPWatchApp: App {
             }
         }
 
-        WKNotificationScene(controller: NotificationController.self, category: "myCategory")
+        WKNotificationScene(
+            controller: NotificationController.self,
+            category: "myCategory"
+        )
     }
 }

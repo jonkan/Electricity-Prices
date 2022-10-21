@@ -7,6 +7,9 @@
 
 import Foundation
 import SwiftUI
+import Combine
+import UIKit
+import SwiftDate
 
 @MainActor
 class AppState: ObservableObject {
@@ -27,12 +30,37 @@ class AppState: ObservableObject {
         nf.currencyCode = "SEK"
         return nf
     }()
+    private var isUpdatingCurrentPrice: Bool = false
 
     private init() {
         updateCurrentPrice()
     }
 
-    func updateCurrentPrice() {
+    private var timer: Timer?
+    var isTimerRunning: Bool = false {
+        didSet {
+            if isTimerRunning {
+                updateCurrentPrice()
+                let nextHour = DateInRegion().dateAtStartOf(.hour) + 1.hours
+                timer = Timer(
+                    fireAt: nextHour.date,
+                    interval: 1.hours.timeInterval,
+                    target: self,
+                    selector: #selector(updateCurrentPrice),
+                    userInfo: nil,
+                    repeats: true
+                )
+            } else {
+                timer?.invalidate()
+                timer = nil
+            }
+        }
+    }
+
+    @objc func updateCurrentPrice() {
+        guard !isUpdatingCurrentPrice else { return }
+        isUpdatingCurrentPrice = true
+        Log("Update current price begin")
         Task {
             do {
                 let price = try await currentPrice()
@@ -40,10 +68,12 @@ class AppState: ObservableObject {
                     throw NSError(0, "Failed to format price")
                 }
                 formattedCurrentPrice = priceText
+                Log("Update current price success")
             } catch {
                 formattedCurrentPrice = nil
                 LogError(error)
             }
+            isUpdatingCurrentPrice = false
         }
     }
 
