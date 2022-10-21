@@ -43,7 +43,7 @@
 		260787BC28D7123A00FF2C33 /* PricePointInlineWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787BB28D7123A00FF2C33 /* PricePointInlineWidgetView.swift */; };
 		260787BE28D712BB00FF2C33 /* PricePointWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787BD28D712BB00FF2C33 /* PricePointWidgetView.swift */; };
 		260787C028D7171E00FF2C33 /* libEPWatchCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2607877728D6693000FF2C33 /* libEPWatchCore.a */; };
-		260787C328D7182C00FF2C33 /* libEPWatchCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2607877728D6693000FF2C33 /* libEPWatchCore.a */; };
+		260787C328D7182C00FF2C33 /* libEPWatchCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2607877728D6693000FF2C33 /* libEPWatchCore.a */; platformFilters = (ios, watchos, ); };
 		260787C728D88A3900FF2C33 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 260787C528D88A3900FF2C33 /* InfoPlist.strings */; };
 		260787CA28D88A3900FF2C33 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 260787C828D88A3900FF2C33 /* Localizable.strings */; };
 		260787D828D88FFB00FF2C33 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 260787C528D88A3900FF2C33 /* InfoPlist.strings */; };
@@ -99,6 +99,13 @@
 			remoteInfo = EPWatchWidgetExtensionExtension;
 		};
 		260787C128D7171E00FF2C33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 261FC18528B7771F007B4A4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2607877628D6693000FF2C33;
+			remoteInfo = EPWatchCore;
+		};
+		260787E128D8983D00FF2C33 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 261FC18528B7771F007B4A4E /* Project object */;
 			proxyType = 1;
@@ -682,6 +689,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				260787E228D8983D00FF2C33 /* PBXTargetDependency */,
 			);
 			name = EPWatchCoreTests;
 			productName = EPWatchCoreTests;
@@ -926,6 +934,15 @@
 			isa = PBXTargetDependency;
 			target = 2607877628D6693000FF2C33 /* EPWatchCore */;
 			targetProxy = 260787C128D7171E00FF2C33 /* PBXContainerItemProxy */;
+		};
+		260787E228D8983D00FF2C33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilters = (
+				ios,
+				watchos,
+			);
+			target = 2607877628D6693000FF2C33 /* EPWatchCore */;
+			targetProxy = 260787E128D8983D00FF2C33 /* PBXContainerItemProxy */;
 		};
 		2674BC6E28D0572E00E31A20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1302,11 +1319,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = se.j0nas.EPWatchCoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx watchos watchsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				TARGETED_DEVICE_FAMILY = "1,4";
 			};
 			name = Debug;
 		};
@@ -1322,11 +1341,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = se.j0nas.EPWatchCoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx watchos watchsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				TARGETED_DEVICE_FAMILY = "1,4";
 			};
 			name = Release;
 		};
