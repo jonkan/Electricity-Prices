@@ -16,17 +16,27 @@ enum ForexError: Error {
 }
 
 struct ForexLatest: Codable {
+    static private let df: DateFormatter = {
+        let df = DateFormatter()
+        df.dateFormat = "yyyy-MM-dd"
+        return df
+    }()
+
     var date: String // "2022-09-07"
     var from: String // "EUR"
     var to: String   // "SEK"
     var rate: Double // 10.700151
 
     var isUpToDate: Bool {
-        let d = date.toDate("yyyy-MM-dd")
+        let d = ForexLatest.df.date(from: date) ?? .distantPast
         let friday = 6 // Doc: Sunday is 1
+        let cal = Calendar.current
         return (
-            d?.isToday == true ||
-            DateInRegion().isInWeekend && d?.weekday == friday
+            cal.isDateInToday(d) ||
+            (
+                cal.isDateInWeekend(d) &&
+                cal.component(.weekday, from: d) == friday
+            )
         )
     }
 

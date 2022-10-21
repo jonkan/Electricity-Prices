@@ -61,7 +61,7 @@ public struct PricePointTimelineProvider: TimelineProvider {
                 )
                 var entries: [Entry] = []
                 for (startOfDay, prices) in grouped {
-                    guard startOfDay.isToday || startOfDay.isInFuture else {
+                    guard Calendar.current.isDateInToday(startOfDay) || .now < startOfDay else {
                         continue
                     }
                     entries.append(
