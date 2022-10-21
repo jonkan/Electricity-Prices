@@ -88,11 +88,11 @@ public class AppState: ObservableObject {
             return
         }
         updateTask = Task {
-            Log("Update current price begin")
+            Log("Begin updating prices")
             do {
                 prices = try await getTodaysPrices()
                 currentPrice = prices?.price(for: Date())
-                Log("Update current price success")
+                Log("Success updating prices")
                 NotificationCenter.default.post(name: Self.didUpdateDayAheadPrices, object: self)
             } catch {
                 LogError(error)
