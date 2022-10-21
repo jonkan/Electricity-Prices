@@ -369,15 +369,15 @@
 		261FC18428B7771F007B4A4E = {
 			isa = PBXGroup;
 			children = (
-				26EC4A1528D9C54E004DD8EB /* Resources */,
 				2696881528D477ED002142BF /* EPWatch */,
-				260787A128D70B8C00FF2C33 /* EPWatchWidgetExtension */,
-				261FC19328B7771F007B4A4E /* EPWatchKitApp */,
-				2674BC6728D0572D00E31A20 /* EPWatchKitAppExtension */,
 				2674BC7A28D0596500E31A20 /* EPWatchCore */,
 				2674BC8628D0596500E31A20 /* EPWatchCoreTests */,
-				261FC18C28B7771F007B4A4E /* Products */,
+				261FC19328B7771F007B4A4E /* EPWatchKitApp */,
+				2674BC6728D0572D00E31A20 /* EPWatchKitAppExtension */,
+				260787A128D70B8C00FF2C33 /* EPWatchWidgetExtension */,
 				26C71B1928C1469D00C2DC59 /* Frameworks */,
+				261FC18C28B7771F007B4A4E /* Products */,
+				26EC4A1528D9C54E004DD8EB /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
