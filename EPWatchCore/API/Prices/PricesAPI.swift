@@ -16,14 +16,16 @@ class PricesAPI {
     private init() {}
 
     func downloadDayAheadPrices(for priceArea: PriceArea) async throws -> DayAheadPrices {
-        let startOfDay = Date.now
-            .in(region: .current)
-            .dateAtStartOf(.day)
-            .convertTo(region: .UTC)
-        let startOfDayStr = startOfDay
-            .toFormat("yyyyMMddHHmm")
-        let endOfDayStr = startOfDay.dateByAdding(24, .hour)
-            .toFormat("yyyyMMddHHmm")
+        let cal = Calendar.current
+        let startOfDay = cal.startOfDay(for: .now)
+        let endOfDay = cal.date(byAdding: .hour, value: 24, to: startOfDay)!
+
+        let df = DateFormatter()
+        df.timeZone = TimeZone(identifier: "UTC")
+        df.locale = Locale(identifier: "en_GB")
+        df.dateFormat = "yyyyMMddHHmm"
+        let startOfDayStr = df.string(from: startOfDay.date)
+        let endOfDayStr = df.string(from: endOfDay)
 
         var components = URLComponents(string: "https://transparency.entsoe.eu/api")!
         components.queryItems = [
@@ -50,9 +52,11 @@ class PricesAPI {
 
     func parseDayAheadPrices(fromXML data: Data) throws -> DayAheadPrices {
         let decoder = XMLDecoder()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mmZZZZZ"
-        decoder.dateDecodingStrategy = .formatted(dateFormatter)
+        let df = DateFormatter()
+        df.timeZone = TimeZone(identifier: "UTC")
+        df.locale = Locale(identifier: "en_GB")
+        df.dateFormat = "yyyy-MM-dd'T'HH:mmZ"
+        decoder.dateDecodingStrategy = .formatted(df)
         decoder.keyDecodingStrategy = .convertFromCapitalized
         let dayAheadPrices = try decoder.decode(DayAheadPrices.self, from: data)
         return dayAheadPrices
