@@ -19,6 +19,14 @@ struct EPWatchKitAppExtension: Widget {
         }
         .configurationDisplayName("Electricity price")
         .description("Displays the current electricity price")
+        .supportedFamilies(
+            [
+                .accessoryCircular,
+                .accessoryInline,
+                .accessoryCorner,
+                .accessoryRectangular
+            ]
+        )
     }
 }
 
