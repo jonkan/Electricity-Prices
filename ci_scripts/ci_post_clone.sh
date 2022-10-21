@@ -1,0 +1,1 @@
+echo "${ENTSOE_SECURITY_TOKEN}" > ../.security_token

@@ -27,6 +27,10 @@ class PricesAPI {
         let startOfDayStr = df.string(from: startOfDay.date)
         let endOfDayStr = df.string(from: endOfDay)
 
+        let plistToken = Bundle.main.object(forInfoDictionaryKey: "EntsoeSecurityToken")
+        guard let securityToken = plistToken as? String, !securityToken.isEmpty else {
+            throw NSError(0, "Failed to read EntsoeSecurityToken from Info.plist")
+        }
         var components = URLComponents(string: "https://transparency.entsoe.eu/api")!
         components.queryItems = [
             URLQueryItem(name: "documentType", value: "A44"),
@@ -34,7 +38,7 @@ class PricesAPI {
             URLQueryItem(name: "out_Domain", value: priceArea.domain),
             URLQueryItem(name: "periodStart", value: startOfDayStr),
             URLQueryItem(name: "periodEnd", value: endOfDayStr),
-            URLQueryItem(name: "securityToken", value: "<redacted>")
+            URLQueryItem(name: "securityToken", value: securityToken)
         ]
 
         let downloadResponse = await AF.download(components.url!).serializingData().response
