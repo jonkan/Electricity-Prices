@@ -46,6 +46,7 @@
 		2690400428D4852B00A823F5 /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 2690400328D4852B00A823F5 /* XMLCoder */; };
 		2690400628D4852B00A823F5 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 2690400528D4852B00A823F5 /* SwiftDate */; };
 		2690400828D4853400A823F5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2690400728D4853400A823F5 /* Alamofire */; };
+		2690400928D5DA4100A823F5 /* EPWatchKitApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 261FC18F28B7771F007B4A4E /* EPWatchKitApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2696879028D10112002142BF /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696878F28D10112002142BF /* PriceView.swift */; };
 		2696879528D2021C002142BF /* Regions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879428D2021C002142BF /* Regions.swift */; };
 		2696879728D26A3D002142BF /* PriceRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879628D26A3D002142BF /* PriceRange.swift */; };
@@ -98,6 +99,13 @@
 			remoteGlobalIDString = 2674BC7828D0596500E31A20;
 			remoteInfo = EPWatchCore;
 		};
+		2690400A28D5DA4100A823F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 261FC18528B7771F007B4A4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 261FC18E28B7771F007B4A4E;
+			remoteInfo = EPWatchKitApp;
+		};
 		2696882D28D478C3002142BF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 261FC18528B7771F007B4A4E /* Project object */;
@@ -128,6 +136,17 @@
 				2674BC9228D059A400E31A20 /* EPWatchCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2690400C28D5DA4100A823F5 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				2690400928D5DA4100A823F5 /* EPWatchKitApp.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2696882F28D478C3002142BF /* Embed Frameworks */ = {
@@ -588,11 +607,13 @@
 				2696881128D477EC002142BF /* Frameworks */,
 				2696881228D477EC002142BF /* Resources */,
 				2696882F28D478C3002142BF /* Embed Frameworks */,
+				2690400C28D5DA4100A823F5 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				2696882E28D478C3002142BF /* PBXTargetDependency */,
+				2690400B28D5DA4100A823F5 /* PBXTargetDependency */,
 			);
 			name = EPWatch;
 			packageProductDependencies = (
@@ -793,6 +814,11 @@
 			isa = PBXTargetDependency;
 			target = 2674BC7828D0596500E31A20 /* EPWatchCore */;
 			targetProxy = 2674BC9828D05A4C00E31A20 /* PBXContainerItemProxy */;
+		};
+		2690400B28D5DA4100A823F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 261FC18E28B7771F007B4A4E /* EPWatchKitApp */;
+			targetProxy = 2690400A28D5DA4100A823F5 /* PBXContainerItemProxy */;
 		};
 		2696882E28D478C3002142BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
