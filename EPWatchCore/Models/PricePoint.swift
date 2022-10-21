@@ -19,6 +19,12 @@ public struct PricePoint: Codable, Equatable {
         self.dayPriceRange = dayPriceRange
     }
 
+    init(date: String, price: Double, dayPriceRange: ClosedRange<Double>) {
+        self.date = ISO8601DateFormatter().date(from: date)!
+        self.price = price
+        self.dayPriceRange = dayPriceRange
+    }
+
     public func formattedPrice(_ style: FormattingStyle) -> String {
         return PriceFormatter.formatted(price, style: style)
     }
@@ -39,17 +45,32 @@ public extension PricePoint {
 }
 
 public extension Array where Element == PricePoint {
-    static let mockPrices: [PricePoint] = {
-        var prices: [PricePoint] = []
-        let date = DateInRegion().dateAtStartOf(.day)
-        for i in 0..<24 {
-            let d = (date + i.hours).date
-            prices.append(
-                PricePoint(date: d, price: 2.3 + 2 * sin(Double.pi/6*Double(i)), dayPriceRange: 0.3...4.3)
-            )
-        }
-        return prices
-    }()
+    static let mockPrices: [PricePoint] = [
+        PricePoint(date: "2022-09-18T22:00:00+0000", price: 0.342410544, dayPriceRange: 0.157547565...4.359819681),
+        PricePoint(date: "2022-09-18T23:00:00+0000", price: 0.319504311, dayPriceRange: 0.157547565...4.359819681),
+        PricePoint(date: "2022-09-19T00:00:00+0000", price: 0.298641357, dayPriceRange: 0.157547565...4.359819681),
+        PricePoint(date: "2022-09-19T01:00:00+0000", price: 0.274014467, dayPriceRange: 0.157547565...4.359819681),
+        PricePoint(date: "2022-09-19T02:00:00+0000", price: 0.300577095, dayPriceRange: 0.157547565...4.359819681),
+        PricePoint(date: "2022-09-19T03:00:00+0000", price: 0.348325299, dayPriceRange: 0.157547565...4.359819681),
+        PricePoint(date: "2022-09-19T04:00:00+0000", price: 1.279952981, dayPriceRange: 0.157547565...4.359819681),
+        PricePoint(date: "2022-09-19T05:00:00+0000", price: 2.844997155, dayPriceRange: 0.157547565...4.359819681),
+        PricePoint(date: "2022-09-19T06:00:00+0000", price: 4.359819681, dayPriceRange: 0.157547565...4.359819681),
+        PricePoint(date: "2022-09-19T07:00:00+0000", price: 3.726080568, dayPriceRange: 0.157547565...4.359819681),
+        PricePoint(date: "2022-09-19T08:00:00+0000", price: 3.421416914, dayPriceRange: 0.157547565...4.359819681),
+        PricePoint(date: "2022-09-19T09:00:00+0000", price: 2.421285615, dayPriceRange: 0.157547565...4.359819681),
+        PricePoint(date: "2022-09-19T10:00:00+0000", price: 2.002413420, dayPriceRange: 0.157547565...4.359819681),
+        PricePoint(date: "2022-09-19T11:00:00+0000", price: 1.609566146, dayPriceRange: 0.157547565...4.359819681),
+        PricePoint(date: "2022-09-19T12:00:00+0000", price: 1.469977929, dayPriceRange: 0.157547565...4.359819681),
+        PricePoint(date: "2022-09-19T13:00:00+0000", price: 1.290169377, dayPriceRange: 0.157547565...4.359819681),
+        PricePoint(date: "2022-09-19T14:00:00+0000", price: 1.204029035, dayPriceRange: 0.157547565...4.359819681),
+        PricePoint(date: "2022-09-19T15:00:00+0000", price: 3.593267432, dayPriceRange: 0.157547565...4.359819681),
+        PricePoint(date: "2022-09-19T16:00:00+0000", price: 4.085912754, dayPriceRange: 0.157547565...4.359819681),
+        PricePoint(date: "2022-09-19T17:00:00+0000", price: 4.193883918, dayPriceRange: 0.157547565...4.359819681),
+        PricePoint(date: "2022-09-19T18:00:00+0000", price: 3.226337541, dayPriceRange: 0.157547565...4.359819681),
+        PricePoint(date: "2022-09-19T19:00:00+0000", price: 0.349723332, dayPriceRange: 0.157547565...4.359819681),
+        PricePoint(date: "2022-09-19T20:00:00+0000", price: 0.261647252, dayPriceRange: 0.157547565...4.359819681),
+        PricePoint(date: "2022-09-19T21:00:00+0000", price: 0.157547565, dayPriceRange: 0.157547565...4.359819681)
+    ]
 
      func price(for date: Date) -> PricePoint? {
         let d = date.in(region: .UTC)
