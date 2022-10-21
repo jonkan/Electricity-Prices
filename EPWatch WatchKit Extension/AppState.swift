@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 @MainActor
 class AppState: ObservableObject {
@@ -13,36 +14,25 @@ class AppState: ObservableObject {
     static let shared: AppState = AppState()
     @Published var currentPrice: Double?
 
+    @AppStorageCodable("prices")
+    var prices: [PricePoint]?
+
+    @AppStorageCodable("CurrencyConversion")
+    var cachedForex: ForexLatest?
+
     private init() {
-        downloadDayAheadPrices()
+        downloadDayAheadPricesIfNeeded()
     }
 
-    func downloadDayAheadPrices() {
+    func downloadDayAheadPricesIfNeeded() {
         Task {
             do {
-                let startOfDay = Date()
-                    .in(region: .current)
-                    .dateAtStartOf(.day)
-                    .convertTo(region: .UTC)
-                let startOfDayStr = startOfDay
-                    .toFormat("yyyyMMddHHmm")
-                let endOfDayStr = startOfDay.dateByAdding(24, .hour)
-                    .toFormat("yyyyMMddHHmm")
-
-                var urlComponents = URLComponents(string: "https://transparency.entsoe.eu/api")!
-                urlComponents.queryItems = [
-                    URLQueryItem(name: "documentType", value: "A44"),
-                    URLQueryItem(name: "in_Domain", value: "10Y1001A1001A46L"),
-                    URLQueryItem(name: "out_Domain", value: "10Y1001A1001A46L"),
-                    URLQueryItem(name: "periodStart", value: startOfDayStr),
-                    URLQueryItem(name: "periodEnd", value: endOfDayStr),
-                    URLQueryItem(name: "securityToken", value: "<redacted>")
-                ]
-                print("URL: \(urlComponents.url!)")
-
-                let (data, _) = try await URLSession.shared.data(from: urlComponents.url!)
-                let dayAheadPrices = try parseDayAheadPrices(fromXML: data)
-                currentPrice = try dayAheadPrices.priceAmount(for: Date())
+                if prices == nil || prices?.contains(where: { $0.start.isToday }) == false {
+                    let dayAheadPrices = try await downloadDayAheadPrices()
+                    let forex = try await currentForex()
+                    let rate = try forex.rate(from: "EUR", to: "SEK")
+                    prices = dayAheadPrices.prices(using: rate)
+                }
             } catch {
                 LogError(error)
                 currentPrice = nil
@@ -50,8 +40,33 @@ class AppState: ObservableObject {
         }
     }
 
+    
+
+    func updateCurrentPrice() {
+
+    }
+
     func update(dayAheadPrices: DayAheadPrices) {
 
+    }
+
+//    func downloadForexIfNeeded() {
+//        Task {
+//            do {
+//                try await currentForex()
+//            } catch {
+//                LogError(error)
+//            }
+//        }
+//    }
+
+    func currentForex() async throws -> ForexLatest {
+        if let forex = cachedForex, forex.isUpToDate {
+            return forex
+        }
+        let res = try await ForexAPI.shared.download()
+        cachedForex = res
+        return res
     }
 
 }

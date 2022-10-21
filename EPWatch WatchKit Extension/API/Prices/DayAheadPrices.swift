@@ -54,7 +54,7 @@ struct DayAheadPrices: Codable {
         }
     }
 
-    func priceAmount(for date: Date) throws -> Double {
+    func price(for date: Date) throws -> Double {
         guard periodTimeInterval.includes(date) else {
             throw DayAheadPricesError.dateOutsideTimeInterval
         }
@@ -65,6 +65,11 @@ struct DayAheadPrices: Codable {
             throw DayAheadPricesError.noPointMatchingDate
         }
         return point.priceAmount
+    }
+
+    func prices(using eurExchangeRate: Double) -> [PricePoint] {
+        var points: [PricePoint] = []
+        return []
     }
 }
 

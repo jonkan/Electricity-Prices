@@ -35,7 +35,7 @@ class EPWatch_WatchKit_ExtensionTests: XCTestCase {
 
         let region = Region(calendar: Calendars.gregorian, zone: Zones.europeStockholm, locale: Locales.swedish)
         let date1 = DateInRegion("2022-08-26 08:00:00", region: region)!.date
-        let price = try dayAheadPrices.priceAmount(for: date1)
+        let price = try dayAheadPrices.price(for: date1)
         XCTAssertEqual(price, 619.96)
     }
 

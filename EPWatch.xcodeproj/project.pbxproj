@@ -24,6 +24,10 @@
 		26624AE728C883C9000F7E2E /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AE628C883C9000F7E2E /* Log.swift */; };
 		26624AEA28C8EFFB000F7E2E /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AE928C8EFFB000F7E2E /* Error.swift */; };
 		26624AEE28C8F1A1000F7E2E /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 26624AED28C8F1A1000F7E2E /* SwiftDate */; };
+		26624AF028C92D3C000F7E2E /* PricePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AEF28C92D3C000F7E2E /* PricePoint.swift */; };
+		26624AF228C9332F000F7E2E /* ForexAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AF128C9332F000F7E2E /* ForexAPI.swift */; };
+		26624AF428C93541000F7E2E /* AppStorageCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AF328C93541000F7E2E /* AppStorageCodable.swift */; };
+		26624AF828C93E1F000F7E2E /* PricesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AF728C93E1F000F7E2E /* PricesAPI.swift */; };
 		26C71B1128C1461500C2DC59 /* EPWatch_WatchKit_ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C71B1028C1461500C2DC59 /* EPWatch_WatchKit_ExtensionTests.swift */; };
 		26C71B1828C1468500C2DC59 /* day-ahead-prices-1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 26C71B1728C1468500C2DC59 /* day-ahead-prices-1.xml */; };
 		26F8C22A28C7DA01006C9DBC /* DateFormatter+RFC3339.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F8C22928C7DA01006C9DBC /* DateFormatter+RFC3339.swift */; };
@@ -97,6 +101,10 @@
 		26624AE228C7DBC1000F7E2E /* DayAheadPrices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayAheadPrices.swift; sourceTree = "<group>"; };
 		26624AE628C883C9000F7E2E /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		26624AE928C8EFFB000F7E2E /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		26624AEF28C92D3C000F7E2E /* PricePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePoint.swift; sourceTree = "<group>"; };
+		26624AF128C9332F000F7E2E /* ForexAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForexAPI.swift; sourceTree = "<group>"; };
+		26624AF328C93541000F7E2E /* AppStorageCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStorageCodable.swift; sourceTree = "<group>"; };
+		26624AF728C93E1F000F7E2E /* PricesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesAPI.swift; sourceTree = "<group>"; };
 		26C71B0E28C1461500C2DC59 /* EPWatch WatchKit ExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EPWatch WatchKit ExtensionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26C71B1028C1461500C2DC59 /* EPWatch_WatchKit_ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPWatch_WatchKit_ExtensionTests.swift; sourceTree = "<group>"; };
 		26C71B1728C1468500C2DC59 /* day-ahead-prices-1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "day-ahead-prices-1.xml"; sourceTree = "<group>"; };
@@ -160,15 +168,16 @@
 				261FC1A928B77721007B4A4E /* Assets.xcassets */,
 				261FC1A728B77720007B4A4E /* ComplicationController.swift */,
 				261FC1A128B77720007B4A4E /* ContentView.swift */,
-				26624AE828C88C4E000F7E2E /* Utils */,
-				26624AE228C7DBC1000F7E2E /* DayAheadPrices.swift */,
 				261FC19F28B77720007B4A4E /* EPWatchApp.swift */,
+				26624AF628C93DEA000F7E2E /* API */,
 				261FC1AE28B77721007B4A4E /* Info.plist */,
 				261FC1A328B77720007B4A4E /* NotificationController.swift */,
 				261FC1A528B77720007B4A4E /* NotificationView.swift */,
 				26624AE028C7DB6D000F7E2E /* Parser.swift */,
 				261FC1AB28B77721007B4A4E /* Preview Content */,
+				26624AEF28C92D3C000F7E2E /* PricePoint.swift */,
 				261FC1AF28B77721007B4A4E /* PushNotificationPayload.apns */,
+				26624AE828C88C4E000F7E2E /* Utils */,
 			);
 			path = "EPWatch WatchKit Extension";
 			sourceTree = "<group>";
@@ -184,11 +193,30 @@
 		26624AE828C88C4E000F7E2E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				26624AE928C8EFFB000F7E2E /* Error.swift */,
+				26624AF328C93541000F7E2E /* AppStorageCodable.swift */,
 				26F8C22928C7DA01006C9DBC /* DateFormatter+RFC3339.swift */,
+				26624AE928C8EFFB000F7E2E /* Error.swift */,
 				26624AE628C883C9000F7E2E /* Log.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		26624AF628C93DEA000F7E2E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				26624AF928C93E91000F7E2E /* Prices */,
+				26624AF128C9332F000F7E2E /* ForexAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		26624AF928C93E91000F7E2E /* Prices */ = {
+			isa = PBXGroup;
+			children = (
+				26624AE228C7DBC1000F7E2E /* DayAheadPrices.swift */,
+				26624AF728C93E1F000F7E2E /* PricesAPI.swift */,
+			);
+			path = Prices;
 			sourceTree = "<group>";
 		};
 		26C71B0F28C1461500C2DC59 /* EPWatch WatchKit ExtensionTests */ = {
@@ -380,14 +408,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				261FC1A428B77720007B4A4E /* NotificationController.swift in Sources */,
+				26624AF828C93E1F000F7E2E /* PricesAPI.swift in Sources */,
 				26624ADF28C7DB2E000F7E2E /* AppState.swift in Sources */,
 				26624AE728C883C9000F7E2E /* Log.swift in Sources */,
 				26624AEA28C8EFFB000F7E2E /* Error.swift in Sources */,
+				26624AF028C92D3C000F7E2E /* PricePoint.swift in Sources */,
 				261FC1A228B77720007B4A4E /* ContentView.swift in Sources */,
 				26624AE328C7DBC1000F7E2E /* DayAheadPrices.swift in Sources */,
 				261FC1A828B77720007B4A4E /* ComplicationController.swift in Sources */,
 				26624AE128C7DB6D000F7E2E /* Parser.swift in Sources */,
 				261FC1A028B77720007B4A4E /* EPWatchApp.swift in Sources */,
+				26624AF428C93541000F7E2E /* AppStorageCodable.swift in Sources */,
+				26624AF228C9332F000F7E2E /* ForexAPI.swift in Sources */,
 				26F8C22A28C7DA01006C9DBC /* DateFormatter+RFC3339.swift in Sources */,
 				261FC1A628B77720007B4A4E /* NotificationView.swift in Sources */,
 			);
