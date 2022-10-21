@@ -22,7 +22,12 @@ struct ForexLatest: Codable {
     var rate: Double // 10.700151
 
     var isUpToDate: Bool {
-        return date.toDate("yyyy-MM-dd")?.isToday == true
+        let d = date.toDate("yyyy-MM-dd")
+        let friday = 6 // Doc: Sunday is 1
+        return (
+            d?.isToday == true ||
+            DateInRegion().isInWeekend && d?.weekday == friday
+        )
     }
 
     func rate(from: String, to: String) throws -> Double {
@@ -42,15 +47,20 @@ class ForexAPI {
     private init() {}
 
     func download(from: String = "EUR", to: String = "SEK") async throws -> ForexLatest {
-        let yesterday = (DateInRegion() - 1.days)
-            .toFormat("yyyy-MM-dd")
+        var startDate = (DateInRegion() - 1.days)
+        while startDate.isInWeekend {
+            startDate = startDate - 1.days
+        }
+        let startPeriod = startDate.toFormat("yyyy-MM-dd")
+
         var components = URLComponents(string: "https://sdw-wsrest.ecb.europa.eu/service/data/EXR/D.\(to).\(from).SP00.A")!
         components.queryItems = [
             URLQueryItem(name: "format", value: "csvdata"),
-            URLQueryItem(name: "startPeriod", value: yesterday)
+            URLQueryItem(name: "startPeriod", value: startPeriod)
         ]
         let downloadResponse = await AF.download(components.url!).serializingData().response
         let data = try downloadResponse.result.get()
+        let statusCode = downloadResponse.response?.statusCode
         do {
             guard let csv = String(data: data, encoding: .utf8) else {
                 throw NSError(0, "Failed to decode string from data")
@@ -69,9 +79,9 @@ class ForexAPI {
             guard let rate = Double(values[7]) else {
                 throw NSError(0, "Unable to parse rate from csv data")
             }
-            return ForexLatest(date: yesterday, from: from, to: to, rate: rate)
+            return ForexLatest(date: startPeriod, from: from, to: to, rate: rate)
         } catch {
-            LogError("Failed to parse: \(String(data: data, encoding: .utf8) ?? "")")
+            LogError("Failed to parse: \(String(data: data, encoding: .utf8) ?? ""), statusCode: \(statusCode ?? 0)")
             throw error
         }
 
