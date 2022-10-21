@@ -29,9 +29,7 @@ struct Provider: TimelineProvider {
         Task {
             do {
                 try await AppState.shared.updatePricesIfNeeded()
-                guard let prices = await AppState.shared.prices else {
-                    throw NSError(0, "Unable to retrieve prices")
-                }
+                let prices = await AppState.shared.prices
                 guard let price = prices.price(for: Date()) else {
                     throw NSError(0, "Missing current pricePoint")
                 }
@@ -54,9 +52,7 @@ struct Provider: TimelineProvider {
         Task {
             do {
                 try await AppState.shared.updatePricesIfNeeded()
-                guard let allPrices = await AppState.shared.prices else {
-                    throw NSError(0, "Unable to retrieve current prices")
-                }
+                let allPrices = await AppState.shared.prices
                 let grouped = Dictionary(
                     grouping: allPrices,
                     by: { $0.date.dateAtStartOf(.day) }

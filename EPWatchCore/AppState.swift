@@ -18,12 +18,12 @@ public class AppState: ObservableObject {
     @Published public var currentPrice: PricePoint?
 
     @AppStorageCodable("prices")
-    public var prices: [PricePoint]?
+    public var prices: [PricePoint] = []
 
-    @AppStorageCodable2("Region")
+    @AppStorageCodable("Region")
     public var region: Region = .sweden
 
-    @AppStorageCodable2("PriceArea")
+    @AppStorageCodable("PriceArea")
     public var priceArea: PriceArea = Region.sweden.priceAreas[2] {
         didSet {
             guard oldValue != priceArea else { return }
@@ -35,7 +35,7 @@ public class AppState: ObservableObject {
     }
 
     @AppStorageCodable("CurrencyConversion")
-    private var cachedForex: ForexLatest?
+    private var cachedForex: ForexLatest? = nil
 
     private var updateTask: Task<Void, Never>?
 
@@ -80,7 +80,7 @@ public class AppState: ObservableObject {
 
     public func updatePricesIfNeeded() async throws {
         _ = await updateTask?.result
-        if let price = prices?.price(for: Date()) {
+        if let price = prices.price(for: Date()) {
             if price != currentPrice {
                 currentPrice = price
             }
@@ -91,7 +91,7 @@ public class AppState: ObservableObject {
             Log("Begin updating prices")
             do {
                 prices = try await getTodaysPrices()
-                currentPrice = prices?.price(for: Date())
+                currentPrice = prices.price(for: Date())
                 Log("Success updating prices")
                 NotificationCenter.default.post(name: Self.didUpdateDayAheadPrices, object: self)
             } catch {
