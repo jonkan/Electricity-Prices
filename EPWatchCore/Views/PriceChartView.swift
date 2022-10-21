@@ -11,6 +11,7 @@ import WidgetKit
 
 public struct PriceChartView: View {
 
+    @Environment(\.widgetRenderingMode) private var widgetRenderingMode
     var currentPrice: PricePoint
     var prices: [PricePoint]
     var limits: PriceLimits
@@ -39,30 +40,35 @@ public struct PriceChartView: View {
                 startPoint: .bottom,
                 endPoint: .top
             ))
+
             RuleMark(
                 x: .value("", currentPrice.date)
             )
             .lineStyle(StrokeStyle(lineWidth: 1.2, dash: [3, 6]))
             .foregroundStyle(.gray)
-            PointMark(
-                x: .value("", currentPrice.date),
-                y: .value("", currentPrice.price)
-            )
-            .foregroundStyle(.foreground.opacity(0.6))
-            .symbolSize(300)
-            PointMark(
-                x: .value("", currentPrice.date),
-                y: .value("", currentPrice.price)
-            )
-            .foregroundStyle(.background)
-            .symbolSize(100)
+
+            if widgetRenderingMode == .fullColor {
+                PointMark(
+                    x: .value("", currentPrice.date),
+                    y: .value("", currentPrice.price)
+                )
+                .foregroundStyle(.foreground.opacity(0.6))
+                .symbolSize(300)
+
+                PointMark(
+                    x: .value("", currentPrice.date),
+                    y: .value("", currentPrice.price)
+                )
+                .foregroundStyle(.background)
+                .symbolSize(100)
+            }
+
             PointMark(
                 x: .value("", currentPrice.date),
                 y: .value("", currentPrice.price)
             )
             .foregroundStyle(limits.color(of: currentPrice.price))
             .symbolSize(70)
-
         }
         .widgetAccentable()
     }
