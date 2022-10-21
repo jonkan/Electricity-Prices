@@ -20,7 +20,7 @@ public struct PricePointRectangularWidgetView: View {
             VStack {
                 Text(entry.pricePoint.formattedPrice(.short))
                     .bold()
-                Text("Kr")
+                Text("kr")
             }
             PriceChartView(
                 currentPrice: entry.pricePoint,

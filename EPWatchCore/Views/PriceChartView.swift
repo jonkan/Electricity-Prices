@@ -30,7 +30,7 @@ public struct PriceChartView: View {
             ForEach(prices, id: \.date) { p in
                 LineMark(
                     x: .value("", p.date),
-                    y: .value("Kr", p.price)
+                    y: .value("kr", p.price)
                 )
             }
             .interpolationMethod(.cardinal)
