@@ -21,30 +21,11 @@ struct PriceView: View {
                 .font(.title)
             Text(currentPrice.formattedTimeInterval(.normal))
                 .font(.subheadline)
-            Chart {
-                ForEach(prices, id: \.date) { p in
-                    LineMark(
-                        x: .value("", p.date),
-                        y: .value("Kr", p.price)
-                    )
-                }
-                .interpolationMethod(.cardinal)
-                .foregroundStyle(LinearGradient(
-                    stops: limits.stops(using: currentPrice.dayPriceRange),
-                    startPoint: .bottom,
-                    endPoint: .top
-                ))
-                RuleMark(
-                    x: .value("", currentPrice.date)
-                )
-                .lineStyle(StrokeStyle(lineWidth: 1.2, dash: [3, 6]))
-                .foregroundStyle(.gray)
-                PointMark(
-                    x: .value("", currentPrice.date),
-                    y: .value("Kr", currentPrice.price)
-                )
-                .foregroundStyle(.blue)
-            }
+            PriceChartView(
+                currentPrice: currentPrice,
+                prices: prices,
+                limits: limits
+            )
         }
     }
 
@@ -54,8 +35,8 @@ struct PriceView_Previews: PreviewProvider {
     static var previews: some View {
         PriceView(
             currentPrice: .mockPrice,
-            prices: PricePoint.mockPrices,
-            limits: PriceLimits(high: 3, low: 1)
+            prices: .mockPrices,
+            limits: .default
         )
     }
 }

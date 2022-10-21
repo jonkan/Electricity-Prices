@@ -51,6 +51,7 @@
 		2696879E28D3A2C8002142BF /* UserDefaults+AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879D28D3A2C8002142BF /* UserDefaults+AppGroup.swift */; };
 		269687A028D3A5D0002142BF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2696879F28D3A5D0002142BF /* WidgetKit.framework */; };
 		269687A528D3B5F8002142BF /* PriceLimits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269687A428D3B5F8002142BF /* PriceLimits.swift */; };
+		269687A928D452CB002142BF /* PriceChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269687A828D452CB002142BF /* PriceChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +173,7 @@
 		2696879D28D3A2C8002142BF /* UserDefaults+AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+AppGroup.swift"; sourceTree = "<group>"; };
 		2696879F28D3A5D0002142BF /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS9.0.sdk/System/Library/Frameworks/WidgetKit.framework; sourceTree = DEVELOPER_DIR; };
 		269687A428D3B5F8002142BF /* PriceLimits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLimits.swift; sourceTree = "<group>"; };
+		269687A828D452CB002142BF /* PriceChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceChartView.swift; sourceTree = "<group>"; };
 		26C71B1728C1468500C2DC59 /* day-ahead-prices-1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "day-ahead-prices-1.xml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -315,6 +317,7 @@
 				2674BCB228D0871800E31A20 /* Formatting */,
 				269687A328D3B5EA002142BF /* Models */,
 				2674BC9E28D0651F00E31A20 /* Utils */,
+				269687A728D452B9002142BF /* Views */,
 			);
 			path = EPWatchCore;
 			sourceTree = "<group>";
@@ -367,6 +370,14 @@
 				2696879428D2021C002142BF /* Regions.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		269687A728D452B9002142BF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				269687A828D452CB002142BF /* PriceChartView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		26C71B1928C1469D00C2DC59 /* Frameworks */ = {
@@ -632,6 +643,7 @@
 				2674BCB128D0870300E31A20 /* DateIntervalFormatter.swift in Sources */,
 				2674BCA128D0654A00E31A20 /* PricesAPI.swift in Sources */,
 				2696879728D26A3D002142BF /* PriceRange.swift in Sources */,
+				269687A928D452CB002142BF /* PriceChartView.swift in Sources */,
 				2674BCA328D0657B00E31A20 /* Log.swift in Sources */,
 				2674BCA428D0657B00E31A20 /* Error.swift in Sources */,
 				2696879528D2021C002142BF /* Regions.swift in Sources */,

@@ -11,31 +11,83 @@ import EPWatchCore
 import Combine
 
 struct ComplicationView : View {
-    @Environment(\.widgetRenderingMode) private var renderingMode
+    @Environment(\.widgetFamily) private var widgetFamily
     var entry: PricePointTimelineEntry
 
     var body: some View {
+        switch widgetFamily {
+        case .accessoryCircular:
+            circular
+        case .accessoryRectangular:
+            rectangular
+        case .accessoryCorner:
+            corner
+        case .accessoryInline:
+            inline
+        default: circular
+        }
+
+    }
+
+    var circular: some View {
         Gauge(value: entry.pricePoint.price, in: entry.pricePoint.dayPriceRange) {
             Text(entry.pricePoint.formattedTimeInterval(.short))
         } currentValueLabel: {
             Text("\(entry.pricePoint.formattedPrice(.short))")
                 .padding(1)
         }
-        .gaugeStyle(gaugeStyle)
-    }
-
-    var gaugeStyle: some GaugeStyle {
-        CircularGaugeStyle(
-            tint: Gradient(
-                stops: entry.limits.stops(using: entry.pricePoint.dayPriceRange)
+        .gaugeStyle(
+            CircularGaugeStyle(
+                tint: Gradient(
+                    stops: entry.limits.stops(using: entry.pricePoint.dayPriceRange)
+                )
             )
         )
+    }
+
+    var rectangular: some View {
+        HStack {
+            VStack {
+                Text(entry.pricePoint.formattedPrice(.short))
+                    .bold()
+                Text("Kr")
+            }
+            PriceChartView(
+                currentPrice: entry.pricePoint,
+                prices: entry.prices,
+                limits: entry.limits
+            )
+        }
+    }
+
+    var corner: some View {
+// TODO: Figure out the gradient
+//        ZStack {
+//            AccessoryWidgetBackground()
+//            Text(entry.pricePoint.formattedPrice(.short))
+//        }
+//        .widgetLabel {
+//            Gauge(value: entry.pricePoint.price, in: entry.pricePoint.dayPriceRange) {
+//                EmptyView()
+//            }
+//            .gaugeStyle(.linear)
+//            .tint(Gradient(
+//                stops: entry.limits.stops(using: entry.pricePoint.dayPriceRange)
+//            ))
+//        }
+        inline
+    }
+
+    var inline: some View {
+        Text(entry.pricePoint.formattedPrice(.normal))
+            .bold()
+            .foregroundColor(entry.limits.color(of: entry.pricePoint.price))
     }
 }
 
 struct Complication_Previews: PreviewProvider {
     static var previews: some View {
-        ComplicationView(entry: .mock2)
+        ComplicationView(entry: .mock3)
             .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
     }
 }

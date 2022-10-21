@@ -39,6 +39,7 @@ struct Provider: TimelineProvider {
                 }
                 let entry = PricePointTimelineEntry(
                     pricePoint: price,
+                    prices: prices.filterInSameDayAs(price),
                     limits: limits
                 )
                 completion(entry)
@@ -69,6 +70,7 @@ struct Provider: TimelineProvider {
                         contentsOf: prices.map({
                             PricePointTimelineEntry(
                                 pricePoint: $0,
+                                prices: prices,
                                 limits: limits
                             )
                         })

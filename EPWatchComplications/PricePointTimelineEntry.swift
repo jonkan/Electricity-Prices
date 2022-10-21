@@ -10,7 +10,16 @@ import EPWatchCore
 
 struct PricePointTimelineEntry: TimelineEntry {
     var pricePoint: PricePoint
+    var prices: [PricePoint]
     var limits: PriceLimits
+
+    init(pricePoint: PricePoint, prices: [PricePoint], limits: PriceLimits) {
+        self.pricePoint = pricePoint
+        self.prices = prices
+        self.limits = limits
+
+//        assert(prices.count == prices.filterInSameDayAs(pricePoint).count, "Prices not in the same day as the pricePoint")
+    }
 
     var date: Date {
         pricePoint.date
@@ -18,16 +27,19 @@ struct PricePointTimelineEntry: TimelineEntry {
 
     static var mock = PricePointTimelineEntry(
         pricePoint: .mockPrice,
-        limits: PriceLimits(high: 3, low: 1)
+        prices: .mockPrices,
+        limits: .default
     )
 
     static var mock2 = PricePointTimelineEntry(
         pricePoint: .mockPrice2,
+        prices: .mockPrices,
         limits: PriceLimits(high: 3.2, low: 1.4)
     )
 
     static var mock3 = PricePointTimelineEntry(
         pricePoint: .mockPrice3,
-        limits: PriceLimits(high: 3, low: 1)
+        prices: .mockPrices,
+        limits: .default
     )
 }

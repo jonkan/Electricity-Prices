@@ -32,11 +32,14 @@ public struct PricePoint: Codable, Equatable {
     }
 }
 
-extension PricePoint {
-    public static let mockPrice: PricePoint = Self.mockPrices[10]
-    public static let mockPrice2: PricePoint = Self.mockPrices[12]
-    public static let mockPrice3: PricePoint = Self.mockPrices[14]
-    public static let mockPrices: [PricePoint] = {
+public extension PricePoint {
+    static let mockPrice: PricePoint = [PricePoint].mockPrices[10]
+    static let mockPrice2: PricePoint = [PricePoint].mockPrices[12]
+    static let mockPrice3: PricePoint = [PricePoint].mockPrices[14]
+}
+
+public extension Array where Element == PricePoint {
+    static let mockPrices: [PricePoint] = {
         var prices: [PricePoint] = []
         let date = DateInRegion().dateAtStartOf(.day)
         for i in 0..<24 {
@@ -47,9 +50,7 @@ extension PricePoint {
         }
         return prices
     }()
-}
 
-public extension Array where Element == PricePoint {
      func price(for date: Date) -> PricePoint? {
         let d = date.in(region: .UTC)
         return first(where: {

@@ -40,7 +40,7 @@ public class AppState: ObservableObject {
     }
 
     @AppStorageCodable("PriceLimits", storage: .appGroup)
-    public var priceLimits: PriceLimits = PriceLimits(high: 3, low: 1)
+    public var priceLimits: PriceLimits = .default
 
     @AppStorageCodable("CurrencyConversion", storage: .appGroup)
     private var cachedForex: ForexLatest? = nil
@@ -144,7 +144,7 @@ extension AppState {
     public static let mocked: AppState = {
         let s = AppState()
         s.currentPrice = .mockPrice
-        s.prices = PricePoint.mockPrices
+        s.prices = .mockPrices
         return s
     }()
 }
