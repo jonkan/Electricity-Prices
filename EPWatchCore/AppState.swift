@@ -39,6 +39,9 @@ public class AppState: ObservableObject {
         }
     }
 
+    @AppStorageCodable("PriceLimits", storage: .appGroup)
+    public var priceLimits: PriceLimits = PriceLimits(high: 3, low: 1)
+
     @AppStorageCodable("CurrencyConversion", storage: .appGroup)
     private var cachedForex: ForexLatest? = nil
 

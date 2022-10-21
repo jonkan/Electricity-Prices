@@ -11,11 +11,12 @@ import SwiftDate
 public struct PricePoint: Codable, Equatable {
     public var date: Date // And 1h forward
     public var price: Double
-    public var dayPriceSpan: ClosedRange<Double>?
+    public var dayPriceRange: ClosedRange<Double>?
 
-    public init(date: Date, price: Double) {
+    public init(date: Date, price: Double, dayPriceRange: ClosedRange<Double>? = nil) {
         self.date = date
         self.price = price
+        self.dayPriceRange = dayPriceRange
     }
 
     public func formattedPrice(_ style: FormattingStyle) -> String {
@@ -38,7 +39,7 @@ extension PricePoint {
         for i in 0..<24 {
             let d = (date + i.hours).date
             prices.append(
-                PricePoint(date: d, price: sin(Double.pi/6*Double(i)))
+                PricePoint(date: d, price: 2.3 + 2 * sin(Double.pi/6*Double(i)), dayPriceRange: 0.3...4.3)
             )
         }
         return prices

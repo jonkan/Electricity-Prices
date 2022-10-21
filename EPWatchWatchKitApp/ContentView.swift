@@ -19,7 +19,8 @@ struct ContentView: View {
                 TabView {
                     PriceView(
                         currentPrice: currentPrice,
-                        prices: state.prices.filterInSameDayAs(currentPrice)
+                        prices: state.prices.filterInSameDayAs(currentPrice),
+                        limits: state.priceLimits
                     )
                     SettingsView()
                 }

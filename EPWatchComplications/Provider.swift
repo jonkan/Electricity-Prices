@@ -33,12 +33,12 @@ struct Provider: TimelineProvider {
                 guard let price = prices.price(for: Date()) else {
                     throw NSError(0, "Missing current pricePoint")
                 }
-                guard let priceSpan = prices.priceSpan(forDayOf: Date()) else {
+                guard let priceRange = prices.priceRange(forDayOf: Date()) else {
                     throw NSError(0, "No price span")
                 }
                 let entry = PricePointTimelineEntry(
                     pricePoint: price,
-                    dayPriceSpan: priceSpan
+                    dayPriceRange: priceRange
                 )
                 completion(entry)
             } catch {
@@ -62,7 +62,7 @@ struct Provider: TimelineProvider {
                     guard startOfDay.isToday || startOfDay.isInFuture else {
                         continue
                     }
-                    guard let span = prices.priceSpan(forDayOf: startOfDay) else {
+                    guard let span = prices.priceRange(forDayOf: startOfDay) else {
                         LogError("Failed to calculate price span of \(prices.count) prices")
                         continue
                     }
@@ -70,7 +70,7 @@ struct Provider: TimelineProvider {
                         contentsOf: prices.map({
                             PricePointTimelineEntry(
                                 pricePoint: $0,
-                                dayPriceSpan: span
+                                dayPriceRange: span
                             )
                         })
                     )

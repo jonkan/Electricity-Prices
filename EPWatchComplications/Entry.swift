@@ -10,7 +10,7 @@ import EPWatchCore
 
 struct PricePointTimelineEntry: TimelineEntry {
     var pricePoint: PricePoint
-    var dayPriceSpan: PriceSpan
+    var dayPriceRange: PriceRange
 
     var date: Date {
         pricePoint.date
@@ -19,7 +19,7 @@ struct PricePointTimelineEntry: TimelineEntry {
     static var example: PricePointTimelineEntry {
         PricePointTimelineEntry(
             pricePoint: PricePoint(date: Date(), price: 1.23),
-            dayPriceSpan: PriceSpan(date: Date(), min: 1, max: 2)
+            dayPriceRange: PriceRange(date: Date(), min: 1, max: 2)
         )
     }
 }

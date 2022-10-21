@@ -13,6 +13,7 @@ struct PriceView: View {
 
     var currentPrice: PricePoint
     var prices: [PricePoint]
+    var limits: PriceLimits
 
     var body: some View {
         VStack(spacing: 8) {
@@ -27,15 +28,22 @@ struct PriceView: View {
                         y: .value("Kr", p.price)
                     )
                 }
+                .interpolationMethod(.cardinal)
+                .foregroundStyle(LinearGradient(
+                    stops: limits.stops(using: currentPrice.dayPriceRange),
+                    startPoint: .bottom,
+                    endPoint: .top
+                ))
                 RuleMark(
                     x: .value("", currentPrice.date)
                 )
-                .lineStyle(StrokeStyle(lineWidth: 2, dash: [2, 4]))
+                .lineStyle(StrokeStyle(lineWidth: 1.2, dash: [3, 6]))
                 .foregroundStyle(.gray)
                 PointMark(
                     x: .value("", currentPrice.date),
                     y: .value("Kr", currentPrice.price)
                 )
+                .foregroundStyle(.blue)
             }
         }
     }
@@ -46,7 +54,8 @@ struct PriceView_Previews: PreviewProvider {
     static var previews: some View {
         PriceView(
             currentPrice: .mockPrices[10],
-            prices: PricePoint.mockPrices
+            prices: PricePoint.mockPrices,
+            limits: PriceLimits(high: 3, low: 1)
         )
     }
 }

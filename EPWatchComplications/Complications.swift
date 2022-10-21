@@ -14,12 +14,12 @@ struct ComplicationView : View {
     @Environment(\.widgetRenderingMode) private var renderingMode
     var entry: PricePointTimelineEntry
 
-    var priceSpan: ClosedRange<Double> {
-        entry.dayPriceSpan.min...entry.dayPriceSpan.max
+    var priceRange: ClosedRange<Double> {
+        entry.dayPriceRange.min...entry.dayPriceRange.max
     }
 
     var body: some View {
-        Gauge(value: entry.pricePoint.price, in: priceSpan) {
+        Gauge(value: entry.pricePoint.price, in: priceRange) {
             Text(entry.pricePoint.formattedTimeInterval(.short))
         } currentValueLabel: {
             Text("\(entry.pricePoint.formattedPrice(.short))")
