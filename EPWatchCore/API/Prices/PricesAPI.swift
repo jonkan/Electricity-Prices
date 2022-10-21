@@ -41,7 +41,9 @@ class PricesAPI {
             let dayAheadPrices = try parseDayAheadPrices(fromXML: data)
             return dayAheadPrices
         } catch {
-            LogError("Failed to parse: \(String(data: data, encoding: .utf8) ?? "")")
+            if let statusCode = downloadResponse.response?.statusCode, 200 <= statusCode, statusCode < 300 {
+                LogError("Failed to parse: \(String(data: data, encoding: .utf8) ?? "")")
+            }
             throw error
         }
     }
