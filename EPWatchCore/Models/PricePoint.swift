@@ -70,7 +70,12 @@ public extension Array where Element == PricePoint {
         PricePoint(date: "2022-09-19T19:00:00+0000", price: 0.349723332, dayPriceRange: 0.157547565...4.359819681),
         PricePoint(date: "2022-09-19T20:00:00+0000", price: 0.261647252, dayPriceRange: 0.157547565...4.359819681),
         PricePoint(date: "2022-09-19T21:00:00+0000", price: 0.157547565, dayPriceRange: 0.157547565...4.359819681)
-    ]
+    ].map({ p in
+        let h = p.date.timeIntervalSince1970 - p.date.dateAtStartOf(.day).timeIntervalSince1970
+        var p = p
+        p.date = .now.dateAtStartOf(.day).addingTimeInterval(h)
+        return p
+    })
 
      func price(for date: Date) -> PricePoint? {
         let d = date.in(region: .UTC)
