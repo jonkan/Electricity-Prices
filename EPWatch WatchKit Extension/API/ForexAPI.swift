@@ -43,12 +43,17 @@ class ForexAPI {
         components.queryItems = [
             URLQueryItem(name: "symbols", value: "SEK"), // Comma separated list
             URLQueryItem(name: "base", value: "EUR"),
-            URLQueryItem(name: "apiKey", value: "V7ChaSkcNEUXV2I0Z9ac4EqyzWkuNj7C")
+            URLQueryItem(name: "apikey", value: "V7ChaSkcNEUXV2I0Z9ac4EqyzWkuNj7C")
         ]
 
         let (data, _) = try await URLSession.shared.data(from: components.url!)
-        let response = try JSONDecoder().decode(ForexLatest.self, from: data)
-        return response
+        do {
+            let response = try JSONDecoder().decode(ForexLatest.self, from: data)
+            return response
+        } catch {
+            LogError("Failed to parse: \(String(data: data, encoding: .utf8) ?? "")")
+            throw error
+        }
     }
 
 }

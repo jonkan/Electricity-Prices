@@ -12,8 +12,13 @@ struct ContentView: View {
     @ObservedObject var state: AppState = .shared
 
     var body: some View {
-        Text("Current price: \(state.currentPrice ?? -1)")
-            .padding()
+        if let price = state.formattedCurrentPrice {
+            Text(price)
+                .padding()
+        } else {
+            Text("Loading current price...")
+                .padding()
+        }
     }
 }
 

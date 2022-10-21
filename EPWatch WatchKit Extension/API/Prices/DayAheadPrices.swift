@@ -69,7 +69,16 @@ struct DayAheadPrices: Codable {
 
     func prices(using eurExchangeRate: Double) -> [PricePoint] {
         var points: [PricePoint] = []
-        return []
+        for ts in timeSeries {
+            let period = ts.period
+            for p in period.point {
+                let start = period.timeInterval.start + (p.position - 1).hours
+                let MWperkW = 0.001
+                let price = p.priceAmount * eurExchangeRate * MWperkW
+                points.append(PricePoint(price: price, start: start))
+            }
+        }
+        return points
     }
 }
 

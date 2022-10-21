@@ -11,7 +11,7 @@ class PricesAPI {
 
     static let shared: PricesAPI = PricesAPI()
 
-    private init {}
+    private init() {}
 
     func downloadDayAheadPrices() async throws -> DayAheadPrices {
         let startOfDay = Date()
@@ -34,8 +34,13 @@ class PricesAPI {
         ]
 
         let (data, _) = try await URLSession.shared.data(from: components.url!)
-        let dayAheadPrices = try parseDayAheadPrices(fromXML: data)
-        return dayAheadPrices
+        do {
+            let dayAheadPrices = try parseDayAheadPrices(fromXML: data)
+            return dayAheadPrices
+        } catch {
+            LogError("Failed to parse: \(String(data: data, encoding: .utf8) ?? "")")
+            throw error
+        }
     }
 
 }

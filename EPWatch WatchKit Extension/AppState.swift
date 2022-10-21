@@ -12,58 +12,61 @@ import SwiftUI
 class AppState: ObservableObject {
 
     static let shared: AppState = AppState()
-    @Published var currentPrice: Double?
+    @Published var formattedCurrentPrice: String?
 
     @AppStorageCodable("prices")
-    var prices: [PricePoint]?
+    private var prices: [PricePoint]?
 
     @AppStorageCodable("CurrencyConversion")
-    var cachedForex: ForexLatest?
+    private var cachedForex: ForexLatest?
+
+    private let priceNumberFormatter: NumberFormatter = {
+        let nf = NumberFormatter()
+        nf.numberStyle = .currency
+        nf.maximumSignificantDigits = 3
+        nf.currencyCode = "SEK"
+        return nf
+    }()
 
     private init() {
-        downloadDayAheadPricesIfNeeded()
+        updateCurrentPrice()
     }
 
-    func downloadDayAheadPricesIfNeeded() {
+    func updateCurrentPrice() {
         Task {
             do {
-                if prices == nil || prices?.contains(where: { $0.start.isToday }) == false {
-                    let dayAheadPrices = try await downloadDayAheadPrices()
-                    let forex = try await currentForex()
-                    let rate = try forex.rate(from: "EUR", to: "SEK")
-                    prices = dayAheadPrices.prices(using: rate)
+                let price = try await currentPrice()
+                guard let priceText = priceNumberFormatter.string(from: price as NSNumber) else {
+                    throw NSError(0, "Failed to format price")
                 }
+                formattedCurrentPrice = priceText
             } catch {
+                formattedCurrentPrice = nil
                 LogError(error)
-                currentPrice = nil
             }
         }
     }
 
-    
-
-    func updateCurrentPrice() {
-
+    private func currentPrice() async throws -> Double {
+        if let price = prices?.price(for: Date()) {
+            return price
+        }
+        Log("Downloading day ahead prices")
+        let dayAheadPrices = try await PricesAPI.shared.downloadDayAheadPrices()
+        let forex = try await currentForex()
+        let rate = try forex.rate(from: "EUR", to: "SEK")
+        prices = dayAheadPrices.prices(using: rate)
+        guard let price = prices?.price(for: Date()) else {
+            throw NSError(0, "No price found")
+        }
+        return price
     }
 
-    func update(dayAheadPrices: DayAheadPrices) {
-
-    }
-
-//    func downloadForexIfNeeded() {
-//        Task {
-//            do {
-//                try await currentForex()
-//            } catch {
-//                LogError(error)
-//            }
-//        }
-//    }
-
-    func currentForex() async throws -> ForexLatest {
+    private func currentForex() async throws -> ForexLatest {
         if let forex = cachedForex, forex.isUpToDate {
             return forex
         }
+        Log("Downloading forex")
         let res = try await ForexAPI.shared.download()
         cachedForex = res
         return res
