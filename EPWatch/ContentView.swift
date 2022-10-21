@@ -25,7 +25,7 @@ struct ContentView: View {
                     )
                     .frame(minHeight: 200)
                 }
-                .navigationTitle("Electric price")
+                .navigationTitle("Electricity price")
                 .toolbar {
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
                         Button {
