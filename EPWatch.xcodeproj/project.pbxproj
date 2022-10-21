@@ -34,7 +34,7 @@
 		260787A028D70B8C00FF2C33 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2674BC6528D0572D00E31A20 /* SwiftUI.framework */; };
 		260787A328D70B8C00FF2C33 /* EPWatchWidgetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787A228D70B8C00FF2C33 /* EPWatchWidgetExtension.swift */; };
 		260787A528D70B8D00FF2C33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 260787A428D70B8D00FF2C33 /* Assets.xcassets */; };
-		260787A928D70B8D00FF2C33 /* EPWatchWidgetExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2607879E28D70B8C00FF2C33 /* EPWatchWidgetExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		260787A928D70B8D00FF2C33 /* EPWatchWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2607879E28D70B8C00FF2C33 /* EPWatchWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		260787B328D70CE900FF2C33 /* PricePointTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787B228D70CE900FF2C33 /* PricePointTimelineProvider.swift */; };
 		260787B428D70D1200FF2C33 /* PricePointTimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BCB528D08AA000E31A20 /* PricePointTimelineEntry.swift */; };
 		260787B628D7109C00FF2C33 /* PricePointCircularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787B528D7109C00FF2C33 /* PricePointCircularWidgetView.swift */; };
@@ -129,7 +129,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				260787A928D70B8D00FF2C33 /* EPWatchWidgetExtensionExtension.appex in Embed Foundation Extensions */,
+				260787A928D70B8D00FF2C33 /* EPWatchWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,7 +180,7 @@
 
 /* Begin PBXFileReference section */
 		2607877728D6693000FF2C33 /* libEPWatchCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEPWatchCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		2607879E28D70B8C00FF2C33 /* EPWatchWidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EPWatchWidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2607879E28D70B8C00FF2C33 /* EPWatchWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EPWatchWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		260787A228D70B8C00FF2C33 /* EPWatchWidgetExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPWatchWidgetExtension.swift; sourceTree = "<group>"; };
 		260787A428D70B8D00FF2C33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		260787A628D70B8D00FF2C33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -364,7 +364,7 @@
 				2674BC8228D0596500E31A20 /* EPWatchCoreTests.xctest */,
 				2696881428D477EC002142BF /* EPWatch.app */,
 				2607877728D6693000FF2C33 /* libEPWatchCore.a */,
-				2607879E28D70B8C00FF2C33 /* EPWatchWidgetExtensionExtension.appex */,
+				2607879E28D70B8C00FF2C33 /* EPWatchWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -588,9 +588,9 @@
 			productReference = 2607877728D6693000FF2C33 /* libEPWatchCore.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		2607879D28D70B8C00FF2C33 /* EPWatchWidgetExtensionExtension */ = {
+		2607879D28D70B8C00FF2C33 /* EPWatchWidgetExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 260787AA28D70B8D00FF2C33 /* Build configuration list for PBXNativeTarget "EPWatchWidgetExtensionExtension" */;
+			buildConfigurationList = 260787AA28D70B8D00FF2C33 /* Build configuration list for PBXNativeTarget "EPWatchWidgetExtension" */;
 			buildPhases = (
 				2607879A28D70B8C00FF2C33 /* Sources */,
 				2607879B28D70B8C00FF2C33 /* Frameworks */,
@@ -601,9 +601,9 @@
 			dependencies = (
 				260787C228D7171E00FF2C33 /* PBXTargetDependency */,
 			);
-			name = EPWatchWidgetExtensionExtension;
+			name = EPWatchWidgetExtension;
 			productName = EPWatchWidgetExtensionExtension;
-			productReference = 2607879E28D70B8C00FF2C33 /* EPWatchWidgetExtensionExtension.appex */;
+			productReference = 2607879E28D70B8C00FF2C33 /* EPWatchWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		261FC18E28B7771F007B4A4E /* EPWatchKitApp */ = {
@@ -744,7 +744,7 @@
 			projectRoot = "";
 			targets = (
 				2696881328D477EC002142BF /* EPWatch */,
-				2607879D28D70B8C00FF2C33 /* EPWatchWidgetExtensionExtension */,
+				2607879D28D70B8C00FF2C33 /* EPWatchWidgetExtension */,
 				261FC18E28B7771F007B4A4E /* EPWatchKitApp */,
 				2674BC6128D0572D00E31A20 /* EPWatchKitAppExtension */,
 				2607877628D6693000FF2C33 /* EPWatchCore */,
@@ -889,7 +889,7 @@
 		};
 		260787A828D70B8D00FF2C33 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2607879D28D70B8C00FF2C33 /* EPWatchWidgetExtensionExtension */;
+			target = 2607879D28D70B8C00FF2C33 /* EPWatchWidgetExtension */;
 			targetProxy = 260787A728D70B8D00FF2C33 /* PBXContainerItemProxy */;
 		};
 		260787C228D7171E00FF2C33 /* PBXTargetDependency */ = {
@@ -1362,7 +1362,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		260787AA28D70B8D00FF2C33 /* Build configuration list for PBXNativeTarget "EPWatchWidgetExtensionExtension" */ = {
+		260787AA28D70B8D00FF2C33 /* Build configuration list for PBXNativeTarget "EPWatchWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				260787AB28D70B8D00FF2C33 /* Debug */,

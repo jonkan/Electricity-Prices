@@ -16,8 +16,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2607879D28D70B8C00FF2C33"
-               BuildableName = "EPWatchWidgetExtensionExtension.appex"
-               BlueprintName = "EPWatchWidgetExtensionExtension"
+               BuildableName = "EPWatchWidgetExtension.appex"
+               BlueprintName = "EPWatchWidgetExtension"
                ReferencedContainer = "container:EPWatch.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -57,8 +57,18 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2607879D28D70B8C00FF2C33"
+            BuildableName = "EPWatchWidgetExtension.appex"
+            BlueprintName = "EPWatchWidgetExtension"
+            ReferencedContainer = "container:EPWatch.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2696881328D477EC002142BF"
@@ -66,7 +76,7 @@
             BlueprintName = "EPWatch"
             ReferencedContainer = "container:EPWatch.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "_XCWidgetKind"
