@@ -9,12 +9,18 @@ import SwiftUI
 
 @main
 struct EPWatchApp: App {
+
+    @Environment(\.scenePhase) private var scenePhase
+
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
                 ContentView()
                     .environmentObject(AppState.shared)
             }
+        }
+        .onChange(of: scenePhase) { phase in
+            AppState.shared.isTimerRunning = (phase == .active)
         }
 
         WKNotificationScene(

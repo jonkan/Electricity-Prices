@@ -11,11 +11,10 @@ import Charts
 struct ContentView: View {
 
     @EnvironmentObject private var state: AppState
-    @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
-        VStack(spacing: 8) {
-            if let currentPrice = state.currentPrice {
+        if let currentPrice = state.currentPrice {
+            VStack(spacing: 8) {
                 Text(currentPrice.formattedPrice(.regular))
                     .font(.title)
                 Text(currentPrice.formattedTimeInterval(.regular))
@@ -37,13 +36,11 @@ struct ContentView: View {
                         y: .value("Kr", currentPrice.price)
                     )
                 }
-            } else {
-                Text("Loading current price...")
             }
-        }
-        .padding()
-        .onChange(of: scenePhase) { phase in
-            state.isTimerRunning = (phase == .active)
+            .padding()
+        } else {
+            Text("Loading current price...")
+                .padding()
         }
     }
 }

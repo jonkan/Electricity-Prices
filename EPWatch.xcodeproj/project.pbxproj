@@ -150,18 +150,15 @@
 		261FC19E28B77720007B4A4E /* EPWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				26624ADE28C7DB2E000F7E2E /* AppState.swift */,
+				26624AF628C93DEA000F7E2E /* API */,
+				2674BC4328CF7CD600E31A20 /* App */,
 				261FC1A928B77721007B4A4E /* Assets.xcassets */,
 				261FC1A728B77720007B4A4E /* ComplicationController.swift */,
 				261FC1A128B77720007B4A4E /* ContentView.swift */,
-				261FC19F28B77720007B4A4E /* EPWatchApp.swift */,
-				26624AF628C93DEA000F7E2E /* API */,
-				261FC1A328B77720007B4A4E /* NotificationController.swift */,
-				261FC1A528B77720007B4A4E /* NotificationView.swift */,
+				2674BC4428CF7CF900E31A20 /* Notifications */,
 				26624AE028C7DB6D000F7E2E /* Parser.swift */,
 				261FC1AB28B77721007B4A4E /* Preview Content */,
 				26624AEF28C92D3C000F7E2E /* PricePoint.swift */,
-				261FC1AF28B77721007B4A4E /* PushNotificationPayload.apns */,
 				26624AE828C88C4E000F7E2E /* Utils */,
 			);
 			path = "EPWatch WatchKit Extension";
@@ -202,6 +199,25 @@
 				26624AF728C93E1F000F7E2E /* PricesAPI.swift */,
 			);
 			path = Prices;
+			sourceTree = "<group>";
+		};
+		2674BC4328CF7CD600E31A20 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				26624ADE28C7DB2E000F7E2E /* AppState.swift */,
+				261FC19F28B77720007B4A4E /* EPWatchApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2674BC4428CF7CF900E31A20 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				261FC1A328B77720007B4A4E /* NotificationController.swift */,
+				261FC1A528B77720007B4A4E /* NotificationView.swift */,
+				261FC1AF28B77721007B4A4E /* PushNotificationPayload.apns */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 		26C71B0F28C1461500C2DC59 /* EPWatch WatchKit ExtensionTests */ = {
