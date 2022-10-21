@@ -16,6 +16,7 @@ public class AppState: ObservableObject {
 
     public static let shared: AppState = AppState()
     @Published public var currentPrice: PricePoint?
+    @Published public var todaysPriceSpan: PriceSpan?
 
     @AppStorageCodable("prices")
     public var prices: [PricePoint]?
@@ -29,6 +30,7 @@ public class AppState: ObservableObject {
 
     private var isUpdating: Bool = false
 
+    nonisolated
     public static let didUpdateDayAheadPrices = Notification.Name("didUpdateDayAheadPrices")
 
     private init() {
@@ -71,18 +73,25 @@ public class AppState: ObservableObject {
         if let price = prices?.price(for: Date()) {
             if price != currentPrice {
                 currentPrice = price
+                todaysPriceSpan = prices?.priceSpan(forDayOf: Date())
             }
             return
         }
-        guard !isUpdating else { return }
+//        guard !isUpdating else { return }
         Log("Update current price begin")
-        isUpdating = true
-        defer { isUpdating = false }
-
-        prices = try await getTodaysPrices()
-        currentPrice = prices?.price(for: Date())
-        Log("Update current price success")
-        NotificationCenter.default.post(name: Self.didUpdateDayAheadPrices, object: self)
+//        isUpdating = true
+//        defer { isUpdating = false }
+        do {
+            prices = try await getTodaysPrices()
+            currentPrice = prices?.price(for: Date())
+            todaysPriceSpan = prices?.priceSpan(forDayOf: Date())
+            Log("Update current price success")
+            NotificationCenter.default.post(name: Self.didUpdateDayAheadPrices, object: self)
+        } catch {
+            currentPrice = nil
+            todaysPriceSpan = nil
+            throw error
+        }
     }
 
     private func getTodaysPrices() async throws -> [PricePoint] {

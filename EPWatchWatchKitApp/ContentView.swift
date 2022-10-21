@@ -16,9 +16,9 @@ struct ContentView: View {
     var body: some View {
         if let currentPrice = state.currentPrice {
             VStack(spacing: 8) {
-                Text(currentPrice.formattedPrice(.regular))
+                Text(currentPrice.formattedPrice(.normal))
                     .font(.title)
-                Text(currentPrice.formattedTimeInterval(.regular))
+                Text(currentPrice.formattedTimeInterval(.normal))
                     .font(.subheadline)
                 Chart {
                     ForEach(state.todaysPrices, id: \.date) { p in

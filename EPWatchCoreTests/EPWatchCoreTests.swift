@@ -7,30 +7,53 @@
 
 import XCTest
 @testable import EPWatchCore
+import SwiftDate
 
 final class EPWatchCoreTests: XCTestCase {
 
+    lazy var bundle = Bundle(for: type(of: self))
+
+    var dayAheadPrices: DayAheadPrices!
+    let swedishRegion = Region(
+        calendar: Calendars.gregorian,
+        zone: Zones.europeStockholm,
+        locale: Locales.swedish
+    )
+
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        let url = bundle.url(forResource: "day-ahead-prices-1", withExtension: "xml")!
+        let xmlData = try Data(contentsOf: url)
+        dayAheadPrices = try PricesAPI.shared.parseDayAheadPrices(fromXML: xmlData)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testDecodeDayAheadPrices1() throws {
+        XCTAssertEqual(dayAheadPrices.timeSeries.count, 2)
+        XCTAssertEqual(dayAheadPrices.periodTimeInterval.start.debugDescription, "2022-08-25 22:00:00 +0000")
+        XCTAssertEqual(dayAheadPrices.periodTimeInterval.end.debugDescription, "2022-08-27 22:00:00 +0000")
+        XCTAssertEqual(dayAheadPrices.timeSeries[0].period.point[3].position, 4)
+        XCTAssertEqual(dayAheadPrices.timeSeries[0].period.point[3].priceAmount, 8.18)
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testFindPriceAmount() throws {
+        let date1 = DateInRegion("2022-08-26 08:00:00", region: swedishRegion)!.date
+        let price = try dayAheadPrices.price(for: date1)
+        XCTAssertEqual(price, 619.96)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testPrices1() throws {
+        let prices = dayAheadPrices.prices(using: 1)
+        let date1 = DateInRegion("2022-08-26 08:00:00", region: swedishRegion)!.date
+        XCTAssertEqual(prices.price(for: date1)!.price, 0.61996, accuracy: 1e-10)
     }
 
+    func testPrices2() throws {
+        let prices = dayAheadPrices.prices(using: 1)
+        let date1 = DateInRegion("2022-08-26 14:33:00", region: swedishRegion)!.date
+        XCTAssertEqual(prices.price(for: date1)!.price, 0.62810, accuracy: 1e-10)
+    }
+
+    func testPricesOrderedChronologically() throws {
+        let  prices = dayAheadPrices.prices(using: 1)
+        XCTAssertTrue(prices.first!.date < prices.last!.date)
+    }
 }

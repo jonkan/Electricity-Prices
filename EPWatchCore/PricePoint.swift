@@ -11,64 +11,48 @@ import SwiftDate
 public struct PricePoint: Codable, Equatable {
     public var date: Date // And 1h forward
     public var price: Double
+    public var dayPriceSpan: ClosedRange<Double>?
 
     public init(date: Date, price: Double) {
         self.date = date
         self.price = price
     }
 
-    public enum Style {
-        case regular, short
-
-        static private let nfRegular: NumberFormatter = {
-            let nf = NumberFormatter()
-            nf.numberStyle = .currency
-            nf.currencyCode = "SEK"
-            nf.maximumSignificantDigits = 3
-            nf.maximumFractionDigits = 2
-            return nf
-        }()
-
-        static private let nfShort: NumberFormatter = {
-            let nf = NumberFormatter()
-            nf.numberStyle = .decimal
-            nf.maximumSignificantDigits = 2
-            return nf
-        }()
-
-        fileprivate func formattedPrice(price: Double) -> String {
-            switch self {
-            case .regular:
-                return Self.nfRegular.string(from: price as NSNumber) ?? ""
-            case .short:
-                return Self.nfShort.string(from: price as NSNumber) ?? ""
-            }
-        }
-
-        fileprivate func formattedTimeInterval(from start: DateInRegion, to end: DateInRegion) -> String {
-            switch self {
-            case .regular:
-                return "\(start.toFormat("HH:mm")) - \(end.toFormat("HH:mm"))"
-            case .short:
-                return "\(start.toFormat("H"))-\(end.toFormat("H"))"
-            }
-        }
+    public func formattedPrice(_ style: FormattingStyle) -> String {
+        return PriceFormatter.formatted(price, style: style)
     }
 
-    public func formattedPrice(_ style: Style) -> String {
-        return style.formattedPrice(price: price)
-    }
-
-    public func formattedTimeInterval(_ style: Style) -> String {
-        return style.formattedTimeInterval(
+    public func formattedTimeInterval(_ style: FormattingStyle) -> String {
+        return DateIntervalFormatter.formatted(
             from: date.convertTo(region: .current),
-            to: date.convertTo(region: .current).dateByAdding(1, .hour)
+            to: date.convertTo(region: .current).dateByAdding(1, .hour),
+            style: style
         )
     }
 }
 
-extension Array where Element == PricePoint {
-    public func price(for date: Date) -> PricePoint? {
+public struct PriceSpan {
+    public var date: Date
+    public var min: Double
+    public var max: Double
+
+    public init(date: Date, min: Double, max: Double) {
+        self.date = date
+        self.min = min
+        self.max = max
+    }
+
+    public func formattedMin(style: FormattingStyle) -> String {
+        return PriceFormatter.formatted(min, style: style)
+    }
+
+    public func formattedMax(style: FormattingStyle) -> String {
+        return PriceFormatter.formatted(max, style: style)
+    }
+}
+
+public extension Array where Element == PricePoint {
+     func price(for date: Date) -> PricePoint? {
         let d = date.in(region: .UTC)
         return first(where: {
             guard Calendar.current.isDate($0.date, inSameDayAs: date) else {
@@ -77,5 +61,31 @@ extension Array where Element == PricePoint {
             let s = $0.date.in(region: .UTC)
             return d.hour == s.hour
         })
+    }
+
+    func priceSpans() -> [PriceSpan] {
+        let groupedByDay = Dictionary(
+            grouping: self,
+            by: { $0.date.dateAtStartOf(.day) }
+        )
+        let spans = groupedByDay.map { (key, prices) in
+            let max = prices.map({ $0.price }).max() ?? 0
+            let min = prices.map({$0.price }).min() ?? 0
+            return PriceSpan(date: key, min: min, max: max)
+        }
+        return spans
+    }
+
+    func priceSpan(forDayOf date: Date) -> PriceSpan? {
+        let prices = filter({
+            Calendar.current.isDate($0.date, inSameDayAs: date)
+        })
+        let max = prices.map({ $0.price }).max() ?? 0
+        let min = prices.map({$0.price }).min() ?? 0
+        return PriceSpan(
+            date: date.dateAtStartOf(.day),
+            min: min,
+            max: max
+        )
     }
 }
