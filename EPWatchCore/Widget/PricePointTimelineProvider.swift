@@ -1,21 +1,19 @@
 //
-//  Provider.swift
-//  EPWatchComplicationsExtension
+//  PricePointTimelineProvider.swift
+//  EPWatchCore
 //
-//  Created by Jonas Bromö on 2022-09-13.
+//  Created by Jonas Bromö on 2022-09-18.
 //
 
 import WidgetKit
-import SwiftUI
-import EPWatchCore
 import Combine
 
-struct Provider: TimelineProvider {
+public struct PricePointTimelineProvider: TimelineProvider {
 
-    typealias Entry = PricePointTimelineEntry
+    public typealias Entry = PricePointTimelineEntry
     var didUpdateDayAheadPricesCancellable: AnyCancellable?
 
-    init() {
+    public init() {
         didUpdateDayAheadPricesCancellable = NotificationCenter.default
             .publisher(for: AppState.didUpdateDayAheadPrices)
             .sink { _ in
@@ -23,11 +21,11 @@ struct Provider: TimelineProvider {
             }
     }
 
-    func placeholder(in context: Context) -> Entry {
+    public func placeholder(in context: Context) -> Entry {
         return .mock
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (Entry) -> ()) {
+    public func getSnapshot(in context: Context, completion: @escaping (Entry) -> ()) {
         Task {
             do {
                 try await AppState.shared.updatePricesIfNeeded()
@@ -50,7 +48,7 @@ struct Provider: TimelineProvider {
         }
     }
 
-    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    public func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         Task {
             do {
                 try await AppState.shared.updatePricesIfNeeded()

@@ -1,19 +1,19 @@
 //
 //  PricePointTimelineEntry.swift
-//  EPWatchComplicationsExtension
+//  EPWatchCore
 //
 //  Created by Jonas Bromö on 2022-09-13.
 //
 
 import WidgetKit
-import EPWatchCore
 
-struct PricePointTimelineEntry: TimelineEntry {
-    var pricePoint: PricePoint
-    var prices: [PricePoint]
-    var limits: PriceLimits
+public struct PricePointTimelineEntry: TimelineEntry {
 
-    init(pricePoint: PricePoint, prices: [PricePoint], limits: PriceLimits) {
+    public var pricePoint: PricePoint
+    public var prices: [PricePoint]
+    public var limits: PriceLimits
+
+    public init(pricePoint: PricePoint, prices: [PricePoint], limits: PriceLimits) {
         self.pricePoint = pricePoint
         self.prices = prices
         self.limits = limits
@@ -21,23 +21,23 @@ struct PricePointTimelineEntry: TimelineEntry {
 //        assert(prices.count == prices.filterInSameDayAs(pricePoint).count, "Prices not in the same day as the pricePoint")
     }
 
-    var date: Date {
+    public var date: Date {
         pricePoint.date
     }
 
-    static var mock = PricePointTimelineEntry(
+    public static let mock = PricePointTimelineEntry(
         pricePoint: .mockPrice,
         prices: .mockPrices,
         limits: .default
     )
 
-    static var mock2 = PricePointTimelineEntry(
+    public static let mock2 = PricePointTimelineEntry(
         pricePoint: .mockPrice2,
         prices: .mockPrices,
         limits: PriceLimits(high: 3.2, low: 1.4)
     )
 
-    static var mock3 = PricePointTimelineEntry(
+    public static let mock3 = PricePointTimelineEntry(
         pricePoint: .mockPrice3,
         prices: .mockPrices,
         limits: .default
