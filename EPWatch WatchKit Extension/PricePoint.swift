@@ -18,16 +18,15 @@ struct PricePoint: Codable {
         static private let nfRegular: NumberFormatter = {
             let nf = NumberFormatter()
             nf.numberStyle = .currency
+            nf.currencyCode = "SEK"
             nf.maximumSignificantDigits = 3
             nf.maximumFractionDigits = 2
-            nf.currencyCode = "SEK"
             return nf
         }()
 
         static private let nfShort: NumberFormatter = {
             let nf = NumberFormatter()
             nf.numberStyle = .decimal
-            nf.locale = .current
             nf.maximumSignificantDigits = 2
             return nf
         }()
@@ -41,12 +40,12 @@ struct PricePoint: Codable {
             }
         }
 
-        fileprivate func formattedTimeInterval(from start: Date, to end: Date) -> String {
+        fileprivate func formattedTimeInterval(from start: DateInRegion, to end: DateInRegion) -> String {
             switch self {
             case .regular:
                 return "\(start.toFormat("HH:mm")) - \(end.toFormat("HH:mm"))"
             case .short:
-                return "\(start.toFormat("HH"))-\(end.toFormat("HH"))"
+                return "\(start.toFormat("H"))-\(end.toFormat("H"))"
             }
         }
     }
@@ -56,8 +55,10 @@ struct PricePoint: Codable {
     }
 
     func formattedTimeInterval(_ style: Style) -> String {
-        let end = start.dateByAdding(1, .hour).date
-        return style.formattedTimeInterval(from: start, to: end)
+        return style.formattedTimeInterval(
+            from: start.convertTo(region: .current),
+            to: start.convertTo(region: .current).dateByAdding(1, .hour)
+        )
     }
 }
 
