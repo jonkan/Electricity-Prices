@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "circular.pdf",
       "idiom" : "watch",
       "scale" : "2x"
     },
@@ -19,5 +18,8 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
+  },
+  "properties" : {
+    "auto-scaling" : "auto"
   }
 }
