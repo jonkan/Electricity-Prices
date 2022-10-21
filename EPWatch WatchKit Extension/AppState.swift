@@ -15,7 +15,7 @@ import SwiftDate
 class AppState: ObservableObject {
 
     static let shared: AppState = AppState()
-    @Published var formattedCurrentPrice: String?
+    @Published var currentPrice: PricePoint?
 
     @AppStorageCodable("prices")
     private var prices: [PricePoint]?
@@ -23,14 +23,9 @@ class AppState: ObservableObject {
     @AppStorageCodable("CurrencyConversion")
     private var cachedForex: ForexLatest?
 
-    private let priceNumberFormatter: NumberFormatter = {
-        let nf = NumberFormatter()
-        nf.numberStyle = .currency
-        nf.maximumSignificantDigits = 3
-        nf.currencyCode = "SEK"
-        return nf
-    }()
     private var isUpdatingCurrentPrice: Bool = false
+
+    static let didUpdateDayAheadPrices = Notification.Name("didUpdateDayAheadPrices")
 
     private init() {
         updateCurrentPrice()
@@ -59,25 +54,33 @@ class AppState: ObservableObject {
 
     @objc func updateCurrentPrice() {
         guard !isUpdatingCurrentPrice else { return }
-        isUpdatingCurrentPrice = true
-        Log("Update current price begin")
         Task {
             do {
-                let price = try await currentPrice()
-                guard let priceText = priceNumberFormatter.string(from: price as NSNumber) else {
-                    throw NSError(0, "Failed to format price")
-                }
-                formattedCurrentPrice = priceText
-                Log("Update current price success")
+                _ = try await updateCurrentPrice()
             } catch {
-                formattedCurrentPrice = nil
                 LogError(error)
             }
-            isUpdatingCurrentPrice = false
         }
     }
 
-    private func currentPrice() async throws -> Double {
+    @discardableResult
+    func updateCurrentPrice() async throws -> PricePoint {
+        Log("Update current price begin")
+        isUpdatingCurrentPrice = true
+        defer { isUpdatingCurrentPrice = false }
+
+        let price = try await getCurrentPrice()
+        currentPrice = price
+        Log("Update current price success")
+        return price
+    }
+
+    func allPrices() async throws -> [PricePoint] {
+        _ = try await getCurrentPrice()
+        return prices ?? []
+    }
+
+    private func getCurrentPrice() async throws -> PricePoint {
         if let price = prices?.price(for: Date()) {
             return price
         }
@@ -89,6 +92,7 @@ class AppState: ObservableObject {
         guard let price = prices?.price(for: Date()) else {
             throw NSError(0, "No price found")
         }
+        NotificationCenter.default.post(name: Self.didUpdateDayAheadPrices, object: self)
         return price
     }
 

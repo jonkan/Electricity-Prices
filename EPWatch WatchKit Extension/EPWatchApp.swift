@@ -13,6 +13,7 @@ struct EPWatchApp: App {
         WindowGroup {
             NavigationView {
                 ContentView()
+                    .environmentObject(AppState.shared)
             }
         }
 
