@@ -26,6 +26,7 @@ struct PriceView: View {
                 limits: limits,
                 currencyAxisFormat: true
             )
+            .padding(.bottom, 8)
         }
     }
 
