@@ -32,7 +32,7 @@ public struct PricePointTimelineProvider: TimelineProvider {
                 let prices = await AppState.shared.prices
                 let limits = await AppState.shared.priceLimits
 
-                guard let price = prices.price(for: Date()) else {
+                guard let price = prices.price(for: .now) else {
                     throw NSError(0, "Missing current pricePoint")
                 }
                 let entry = PricePointTimelineEntry(

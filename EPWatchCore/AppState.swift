@@ -99,7 +99,7 @@ public class AppState: ObservableObject {
 
     public func updatePricesIfNeeded() async throws {
         _ = await updateTask?.result
-        if let price = prices.price(for: Date()) {
+        if let price = prices.price(for: .now) {
             if price != currentPrice {
                 currentPrice = price
             }
@@ -110,7 +110,7 @@ public class AppState: ObservableObject {
             Log("Begin updating prices")
             do {
                 prices = try await getTodaysPrices()
-                currentPrice = prices.price(for: Date())
+                currentPrice = prices.price(for: .now)
                 Log("Success updating prices")
                 NotificationCenter.default.post(name: Self.didUpdateDayAheadPrices, object: self)
             } catch {

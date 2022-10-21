@@ -456,7 +456,6 @@
 		2674BC7A28D0596500E31A20 /* EPWatchCore */ = {
 			isa = PBXGroup;
 			children = (
-				260787B128D70C9D00FF2C33 /* Widget */,
 				26624AF628C93DEA000F7E2E /* API */,
 				26624ADE28C7DB2E000F7E2E /* AppState.swift */,
 				2674BC7C28D0596500E31A20 /* EPWatchCore.docc */,
@@ -464,6 +463,7 @@
 				269687A328D3B5EA002142BF /* Models */,
 				2674BC9E28D0651F00E31A20 /* Utils */,
 				269687A728D452B9002142BF /* Views */,
+				260787B128D70C9D00FF2C33 /* Widget */,
 			);
 			path = EPWatchCore;
 			sourceTree = "<group>";

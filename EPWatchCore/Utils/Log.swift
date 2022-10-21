@@ -93,7 +93,7 @@ public func Log(
     fileAndFunc = fileAndFunc
         .padding(toLength: 50, withPad: " ", startingAt: 0)
 
-    let dateAndTime = dateFormatter.string(from: Date())
+    let dateAndTime = dateFormatter.string(from: .now)
 
     let log = String(
         format: "%@ %@ [Line %5d] %@",

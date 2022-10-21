@@ -16,7 +16,7 @@ class PricesAPI {
     private init() {}
 
     func downloadDayAheadPrices(for priceArea: PriceArea) async throws -> DayAheadPrices {
-        let startOfDay = Date()
+        let startOfDay = Date.now
             .in(region: .current)
             .dateAtStartOf(.day)
             .convertTo(region: .UTC)
