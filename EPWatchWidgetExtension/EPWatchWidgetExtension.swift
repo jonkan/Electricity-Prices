@@ -24,7 +24,6 @@ struct EPWatchWidgetExtension: Widget {
                 .systemSmall,
                 .systemMedium,
                 .systemLarge,
-                .systemExtraLarge,
                 .accessoryCircular,
                 .accessoryInline,
                 .accessoryRectangular
