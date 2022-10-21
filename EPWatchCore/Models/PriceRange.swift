@@ -31,7 +31,7 @@ public extension Array where Element == PricePoint {
     func priceRanges() -> [PriceRange] {
         let groupedByDay = Dictionary(
             grouping: self,
-            by: { $0.date.dateAtStartOf(.day) }
+            by: { Calendar.current.startOfDay(for: $0.date) }
         )
         let spans = groupedByDay.map { (key, prices) in
             let max = prices.map({ $0.price }).max() ?? 0

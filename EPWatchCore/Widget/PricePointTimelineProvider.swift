@@ -57,7 +57,7 @@ public struct PricePointTimelineProvider: TimelineProvider {
 
                 let grouped = Dictionary(
                     grouping: allPrices,
-                    by: { $0.date.dateAtStartOf(.day) }
+                    by: { Calendar.current.startOfDay(for: $0.date) }
                 )
                 var entries: [Entry] = []
                 for (startOfDay, prices) in grouped {

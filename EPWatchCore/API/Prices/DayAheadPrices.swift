@@ -81,7 +81,7 @@ struct DayAheadPrices: Codable {
 
         let grouped = Dictionary(
             grouping: points,
-            by: { $0.date.dateAtStartOf(.day) }
+            by: { Calendar.current.startOfDay(for: $0.date) }
         )
         var pricePoints: [PricePoint] = []
         for (startOfDay, prices) in grouped {
