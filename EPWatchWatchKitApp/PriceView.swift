@@ -53,7 +53,7 @@ struct PriceView: View {
 struct PriceView_Previews: PreviewProvider {
     static var previews: some View {
         PriceView(
-            currentPrice: .mockPrices[10],
+            currentPrice: .mockPrice,
             prices: PricePoint.mockPrices,
             limits: PriceLimits(high: 3, low: 1)
         )

@@ -11,6 +11,8 @@ import EPWatchCore
 import Combine
 
 struct Provider: TimelineProvider {
+
+    typealias Entry = PricePointTimelineEntry
     var didUpdateDayAheadPricesCancellable: AnyCancellable?
 
     init() {
@@ -21,56 +23,53 @@ struct Provider: TimelineProvider {
             }
     }
 
-    func placeholder(in context: Context) -> PricePointTimelineEntry {
-        return .example
+    func placeholder(in context: Context) -> Entry {
+        return .mock
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (PricePointTimelineEntry) -> ()) {
+    func getSnapshot(in context: Context, completion: @escaping (Entry) -> ()) {
         Task {
             do {
                 try await AppState.shared.updatePricesIfNeeded()
                 let prices = await AppState.shared.prices
+                let limits = await AppState.shared.priceLimits
+
                 guard let price = prices.price(for: Date()) else {
                     throw NSError(0, "Missing current pricePoint")
                 }
-                guard let priceRange = prices.priceRange(forDayOf: Date()) else {
-                    throw NSError(0, "No price span")
-                }
                 let entry = PricePointTimelineEntry(
                     pricePoint: price,
-                    dayPriceRange: priceRange
+                    limits: limits
                 )
                 completion(entry)
             } catch {
                 LogError(error)
-                completion(.example)
+                completion(.mock)
             }
         }
     }
 
-    func getTimeline(in context: Context, completion: @escaping (Timeline<PricePointTimelineEntry>) -> ()) {
+    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         Task {
             do {
                 try await AppState.shared.updatePricesIfNeeded()
                 let allPrices = await AppState.shared.prices
+                let limits = await AppState.shared.priceLimits
+
                 let grouped = Dictionary(
                     grouping: allPrices,
                     by: { $0.date.dateAtStartOf(.day) }
                 )
-                var entries: [PricePointTimelineEntry] = []
+                var entries: [Entry] = []
                 for (startOfDay, prices) in grouped {
                     guard startOfDay.isToday || startOfDay.isInFuture else {
-                        continue
-                    }
-                    guard let span = prices.priceRange(forDayOf: startOfDay) else {
-                        LogError("Failed to calculate price span of \(prices.count) prices")
                         continue
                     }
                     entries.append(
                         contentsOf: prices.map({
                             PricePointTimelineEntry(
                                 pricePoint: $0,
-                                dayPriceRange: span
+                                limits: limits
                             )
                         })
                     )

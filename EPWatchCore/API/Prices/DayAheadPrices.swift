@@ -75,7 +75,7 @@ struct DayAheadPrices: Codable {
                 let start = period.timeInterval.start + (p.position - 1).hours
                 let MWperkW = 0.001
                 let price = p.priceAmount * eurExchangeRate * MWperkW
-                points.append(PricePoint(date: start, price: price))
+                points.append(PricePoint(date: start, price: price, dayPriceRange: price...price))
             }
         }
         return points.sorted(by: { $0.date < $1.date })

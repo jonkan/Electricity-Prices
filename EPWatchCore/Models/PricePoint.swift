@@ -11,9 +11,9 @@ import SwiftDate
 public struct PricePoint: Codable, Equatable {
     public var date: Date // And 1h forward
     public var price: Double
-    public var dayPriceRange: ClosedRange<Double>?
+    public var dayPriceRange: ClosedRange<Double>
 
-    public init(date: Date, price: Double, dayPriceRange: ClosedRange<Double>? = nil) {
+    public init(date: Date, price: Double, dayPriceRange: ClosedRange<Double>) {
         self.date = date
         self.price = price
         self.dayPriceRange = dayPriceRange
@@ -33,6 +33,9 @@ public struct PricePoint: Codable, Equatable {
 }
 
 extension PricePoint {
+    public static let mockPrice: PricePoint = Self.mockPrices[10]
+    public static let mockPrice2: PricePoint = Self.mockPrices[12]
+    public static let mockPrice3: PricePoint = Self.mockPrices[14]
     public static let mockPrices: [PricePoint] = {
         var prices: [PricePoint] = []
         let date = DateInRegion().dateAtStartOf(.day)

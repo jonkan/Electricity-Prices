@@ -143,7 +143,7 @@ public class AppState: ObservableObject {
 extension AppState {
     public static let mocked: AppState = {
         let s = AppState()
-        s.currentPrice = .mockPrices[10]
+        s.currentPrice = .mockPrice
         s.prices = PricePoint.mockPrices
         return s
     }()

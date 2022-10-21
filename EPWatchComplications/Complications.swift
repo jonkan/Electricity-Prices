@@ -14,12 +14,8 @@ struct ComplicationView : View {
     @Environment(\.widgetRenderingMode) private var renderingMode
     var entry: PricePointTimelineEntry
 
-    var priceRange: ClosedRange<Double> {
-        entry.dayPriceRange.min...entry.dayPriceRange.max
-    }
-
     var body: some View {
-        Gauge(value: entry.pricePoint.price, in: priceRange) {
+        Gauge(value: entry.pricePoint.price, in: entry.pricePoint.dayPriceRange) {
             Text(entry.pricePoint.formattedTimeInterval(.short))
         } currentValueLabel: {
             Text("\(entry.pricePoint.formattedPrice(.short))")
@@ -31,11 +27,7 @@ struct ComplicationView : View {
     var gaugeStyle: some GaugeStyle {
         CircularGaugeStyle(
             tint: Gradient(
-                stops: [
-                    .init(color: .green, location: 0.2),
-                    .init(color: .yellow, location: 0.4),
-                    .init(color: .red, location: 0.8)
-                ]
+                stops: entry.limits.stops(using: entry.pricePoint.dayPriceRange)
             )
         )
     }
@@ -43,7 +35,7 @@ struct ComplicationView : View {
 
 struct Complication_Previews: PreviewProvider {
     static var previews: some View {
-        ComplicationView(entry: .example)
+        ComplicationView(entry: .mock)
             .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
     }
 }
