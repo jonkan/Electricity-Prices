@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import EPWatch_WatchKit_Extension
+@testable import EPWatch_WatchKit_App
 import SwiftDate
 
 class EPWatch_WatchKit_ExtensionTests: XCTestCase {
@@ -43,13 +43,18 @@ class EPWatch_WatchKit_ExtensionTests: XCTestCase {
     func testPrices1() throws {
         let prices = dayAheadPrices.prices(using: 1)
         let date1 = DateInRegion("2022-08-26 08:00:00", region: swedishRegion)!.date
-        XCTAssertEqual(prices.price(for: date1)!, 0.61996, accuracy: 1e-10)
+        XCTAssertEqual(prices.price(for: date1)!.price, 0.61996, accuracy: 1e-10)
     }
 
     func testPrices2() throws {
         let prices = dayAheadPrices.prices(using: 1)
         let date1 = DateInRegion("2022-08-26 14:33:00", region: swedishRegion)!.date
-        XCTAssertEqual(prices.price(for: date1)!, 0.62810, accuracy: 1e-10)
+        XCTAssertEqual(prices.price(for: date1)!.price, 0.62810, accuracy: 1e-10)
+    }
+
+    func testPricesOrderedChronologically() throws {
+        let  prices = dayAheadPrices.prices(using: 1)
+        XCTAssertTrue(prices.first!.start < prices.last!.start)
     }
 
 }

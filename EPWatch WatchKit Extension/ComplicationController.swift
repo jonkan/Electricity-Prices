@@ -54,8 +54,8 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getTimelineEndDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
         // Call the handler with the last entry date you can currently provide or nil if you can't support future timelines
-        let endOfDay = DateInRegion().dateAtEndOf(.day).date
-        handler(endOfDay)
+        let lastPricePointDate = AppState.shared.prices?.last?.start
+        handler(lastPricePointDate)
     }
     
     func getPrivacyBehavior(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationPrivacyBehavior) -> Void) {

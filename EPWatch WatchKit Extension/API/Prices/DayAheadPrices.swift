@@ -78,7 +78,7 @@ struct DayAheadPrices: Codable {
                 points.append(PricePoint(price: price, start: start))
             }
         }
-        return points
+        return points.sorted(by: { $0.start < $1.start })
     }
 }
 
