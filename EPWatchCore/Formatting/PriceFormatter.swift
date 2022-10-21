@@ -20,10 +20,9 @@ struct PriceFormatter {
 
     static private let formatterNormalSmall: NumberFormatter = {
         let nf = NumberFormatter()
-        nf.numberStyle = .currency
-        nf.currencyCode = "SEK"
-        nf.maximumFractionDigits = 2
-        nf.minimumFractionDigits = 2
+        nf.numberStyle = .decimal
+        nf.maximumSignificantDigits = 2
+        nf.minimumSignificantDigits = 2
         return nf
     }()
 
@@ -49,7 +48,7 @@ struct PriceFormatter {
             if price >= 1 {
                 return formatterNormal.string(from: price as NSNumber) ?? ""
             } else {
-                return formatterNormalSmall.string(from: price as NSNumber) ?? ""
+                return (formatterNormalSmall.string(from: price * 100 as NSNumber) ?? "") + " öre"
             }
         case .short:
             if price >= 1 {

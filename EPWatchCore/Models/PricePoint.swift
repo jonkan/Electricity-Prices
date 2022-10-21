@@ -77,6 +77,38 @@ public extension Array where Element == PricePoint {
         return p
     })
 
+    static let mockPricesLow: [PricePoint] = [
+        PricePoint(date: "2022-10-04T22:00:00+0000", price: 0.19459063, dayPriceRange: -0.00205515...0.83190470),
+        PricePoint(date: "2022-10-04T23:00:00+0000", price: 0.18366586, dayPriceRange: -0.00205515...0.83190470),
+        PricePoint(date: "2022-10-05T00:00:00+0000", price: 0.17890656, dayPriceRange: -0.00205515...0.83190470),
+        PricePoint(date: "2022-10-05T01:00:00+0000", price: 0.18301687, dayPriceRange: -0.00205515...0.83190470),
+        PricePoint(date: "2022-10-05T02:00:00+0000", price: 0.20378474, dayPriceRange: -0.00205515...0.83190470),
+        PricePoint(date: "2022-10-05T03:00:00+0000", price: 0.31368140, dayPriceRange: -0.00205515...0.83190470),
+        PricePoint(date: "2022-10-05T04:00:00+0000", price: 0.50513522, dayPriceRange: -0.00205515...0.83190470),
+        PricePoint(date: "2022-10-05T05:00:00+0000", price: 0.68068863, dayPriceRange: -0.00205515...0.83190470),
+        PricePoint(date: "2022-10-05T06:00:00+0000", price: 0.77252157, dayPriceRange: -0.00205515...0.83190470),
+        PricePoint(date: "2022-10-05T07:00:00+0000", price: 0.79242411, dayPriceRange: -0.00205515...0.83190470),
+        PricePoint(date: "2022-10-05T08:00:00+0000", price: 0.83190470, dayPriceRange: -0.00205515...0.83190470),
+        PricePoint(date: "2022-10-05T09:00:00+0000", price: 0.59318234, dayPriceRange: -0.00205515...0.83190470),
+        PricePoint(date: "2022-10-05T10:00:00+0000", price: 0.42119840, dayPriceRange: -0.00205515...0.83190470),
+        PricePoint(date: "2022-10-05T11:00:00+0000", price: 0.25462276, dayPriceRange: -0.00205515...0.83190470),
+        PricePoint(date: "2022-10-05T12:00:00+0000", price: 0.18572102, dayPriceRange: -0.00205515...0.83190470),
+        PricePoint(date: "2022-10-05T13:00:00+0000", price: 0.21070736, dayPriceRange: -0.00205515...0.83190470),
+        PricePoint(date: "2022-10-05T14:00:00+0000", price: 0.38853227, dayPriceRange: -0.00205515...0.83190470),
+        PricePoint(date: "2022-10-05T15:00:00+0000", price: 0.27787845, dayPriceRange: -0.00205515...0.83190470),
+        PricePoint(date: "2022-10-05T16:00:00+0000", price: 0.21838715, dayPriceRange: -0.00205515...0.83190470),
+        PricePoint(date: "2022-10-05T17:00:00+0000", price: 0.17295743, dayPriceRange: -0.00205515...0.83190470),
+        PricePoint(date: "2022-10-05T18:00:00+0000", price: 0.10924766, dayPriceRange: -0.00205515...0.83190470),
+        PricePoint(date: "2022-10-05T19:00:00+0000", price: 0.04813387, dayPriceRange: -0.00205515...0.83190470),
+        PricePoint(date: "2022-10-05T20:00:00+0000", price: 0.00086532, dayPriceRange: -0.00205515...0.83190470),
+        PricePoint(date: "2022-10-05T21:00:00+0000", price: -0.0020551, dayPriceRange: -0.00205515...0.83190470)
+    ].map({ p in
+        let h = p.date.timeIntervalSince1970 - p.date.dateAtStartOf(.day).timeIntervalSince1970
+        var p = p
+        p.date = .now.dateAtStartOf(.day).addingTimeInterval(h)
+        return p
+    })
+
      func price(for date: Date) -> PricePoint? {
         let d = date.in(region: .UTC)
         return first(where: {
