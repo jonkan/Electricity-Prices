@@ -71,8 +71,9 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2674BC6128D0572D00E31A20"
@@ -80,7 +81,7 @@
             BlueprintName = "EPWatchKitAppExtension"
             ReferencedContainer = "container:EPWatch.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"

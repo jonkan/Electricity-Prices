@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2674BC7828D0596500E31A20"
-               BuildableName = "EPWatchCore.framework"
+               BlueprintIdentifier = "2607877628D6693000FF2C33"
+               BuildableName = "libEPWatchCore.a"
                BlueprintName = "EPWatchCore"
                ReferencedContainer = "container:EPWatch.xcodeproj">
             </BuildableReference>
@@ -61,8 +61,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2674BC7828D0596500E31A20"
-            BuildableName = "EPWatchCore.framework"
+            BlueprintIdentifier = "2607877628D6693000FF2C33"
+            BuildableName = "libEPWatchCore.a"
             BlueprintName = "EPWatchCore"
             ReferencedContainer = "container:EPWatch.xcodeproj">
          </BuildableReference>
