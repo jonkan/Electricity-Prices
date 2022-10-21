@@ -13,15 +13,13 @@ struct SettingsView: View {
     @EnvironmentObject private var state: AppState
 
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                NavigationLink("Price area") {
-                    PriceAreaSettingsView(
-                        priceAreas: state.region.priceAreas,
-                        priceArea: $state.priceArea
-                    )
-                    .navigationTitle("Price area")
-                }
+        ScrollView {
+            NavigationLink("Price area") {
+                PriceAreaSettingsView(
+                    priceAreas: state.region.priceAreas,
+                    priceArea: $state.priceArea
+                )
+                .navigationTitle("Price area")
             }
         }
     }
@@ -30,8 +28,10 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
-            .environmentObject(AppState.mocked)
+        NavigationStack {
+            SettingsView()
+        }
+        .environmentObject(AppState.mocked)
     }
 }
 

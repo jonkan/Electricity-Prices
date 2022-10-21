@@ -15,14 +15,16 @@ struct ContentView: View {
 
     var body: some View {
         if let currentPrice = state.currentPrice {
-            TabView {
-                PriceView(
-                    currentPrice: currentPrice,
-                    prices: state.prices?.filterInSameDayAs(currentPrice) ?? []
-                )
-                SettingsView()
+            NavigationStack {
+                TabView {
+                    PriceView(
+                        currentPrice: currentPrice,
+                        prices: state.prices?.filterInSameDayAs(currentPrice) ?? []
+                    )
+                    SettingsView()
+                }
+                .tabViewStyle(.page)
             }
-            .tabViewStyle(.page)
         } else {
             Text("Updating prices...")
                 .padding()
