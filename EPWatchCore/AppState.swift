@@ -10,6 +10,7 @@ import SwiftUI
 import Combine
 import UIKit
 import SwiftDate
+import WidgetKit
 
 @MainActor
 public class AppState: ObservableObject {
@@ -17,24 +18,28 @@ public class AppState: ObservableObject {
     public static let shared: AppState = AppState()
     @Published public var currentPrice: PricePoint?
 
-    @AppStorageCodable("prices")
+    @AppStorageCodable("prices", storage: .appGroup)
     public var prices: [PricePoint] = []
 
-    @AppStorageCodable("Region")
-    public var region: Region = .sweden
+    @AppStorageCodable("Region", storage: .appGroup)
+    public var region: Region = .sweden {
+        didSet {
+            guard oldValue != region else { return }
+            Log("Region did change: \(region.name)")
+            invalidateAndUpdatePrices()
+        }
+    }
 
-    @AppStorageCodable("PriceArea")
+    @AppStorageCodable("PriceArea", storage: .appGroup)
     public var priceArea: PriceArea = Region.sweden.priceAreas[2] {
         didSet {
             guard oldValue != priceArea else { return }
             Log("Price area did change: \(priceArea.title)")
-            objectWillChange.send()
-            prices = []
-            updatePricesIfNeeded()
+            invalidateAndUpdatePrices()
         }
     }
 
-    @AppStorageCodable("CurrencyConversion")
+    @AppStorageCodable("CurrencyConversion", storage: .appGroup)
     private var cachedForex: ForexLatest? = nil
 
     private var updateTask: Task<Void, Never>?
@@ -59,7 +64,7 @@ public class AppState: ObservableObject {
                     userInfo: nil,
                     repeats: true
                 )
-                timer?.fire()
+                updatePricesIfNeeded()
             } else {
                 timer?.invalidate()
                 timer = nil
@@ -67,14 +72,23 @@ public class AppState: ObservableObject {
         }
     }
 
+    func invalidateAndUpdatePrices() {
+        objectWillChange.send()
+        prices = []
+        updatePricesIfNeeded {
+            WidgetCenter.shared.reloadAllTimelines()
+        }
+    }
+
     @objc
-    public func updatePricesIfNeeded() {
+    public func updatePricesIfNeeded(completion: (() -> Void)? = nil) {
         Task {
             do {
                 _ = try await updatePricesIfNeeded()
             } catch {
                 LogError(error)
             }
+            completion?()
         }
     }
 

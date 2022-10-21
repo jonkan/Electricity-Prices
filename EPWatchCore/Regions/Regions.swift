@@ -10,6 +10,12 @@ import Foundation
 public enum Region: Codable {
     case sweden
 
+    public var name: String {
+        switch self {
+        case .sweden: return "Sweden"
+        }
+    }
+
     public var priceAreas: [PriceArea] {
         switch self {
         case .sweden:

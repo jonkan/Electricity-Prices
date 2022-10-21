@@ -48,6 +48,8 @@
 		2696879528D2021C002142BF /* Regions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879428D2021C002142BF /* Regions.swift */; };
 		2696879728D26A3D002142BF /* PriceSpan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879628D26A3D002142BF /* PriceSpan.swift */; };
 		2696879A28D26CD0002142BF /* PriceAreaSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879928D26CD0002142BF /* PriceAreaSettingsView.swift */; };
+		2696879E28D3A2C8002142BF /* UserDefaults+AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879D28D3A2C8002142BF /* UserDefaults+AppGroup.swift */; };
+		269687A028D3A5D0002142BF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2696879F28D3A5D0002142BF /* WidgetKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +166,10 @@
 		2696879428D2021C002142BF /* Regions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regions.swift; sourceTree = "<group>"; };
 		2696879628D26A3D002142BF /* PriceSpan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceSpan.swift; sourceTree = "<group>"; };
 		2696879928D26CD0002142BF /* PriceAreaSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceAreaSettingsView.swift; sourceTree = "<group>"; };
+		2696879B28D3A126002142BF /* EPWatchWatchKitApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EPWatchWatchKitApp.entitlements; sourceTree = "<group>"; };
+		2696879C28D3A164002142BF /* EPWatchComplicationsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EPWatchComplicationsExtension.entitlements; sourceTree = "<group>"; };
+		2696879D28D3A2C8002142BF /* UserDefaults+AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+AppGroup.swift"; sourceTree = "<group>"; };
+		2696879F28D3A5D0002142BF /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS9.0.sdk/System/Library/Frameworks/WidgetKit.framework; sourceTree = DEVELOPER_DIR; };
 		26C71B1728C1468500C2DC59 /* day-ahead-prices-1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "day-ahead-prices-1.xml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,6 +199,7 @@
 				2674BCA828D0660600E31A20 /* XMLCoder in Frameworks */,
 				2674BC9C28D05A8300E31A20 /* SwiftDate in Frameworks */,
 				2674BCA628D065ED00E31A20 /* Alamofire in Frameworks */,
+				269687A028D3A5D0002142BF /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +217,7 @@
 		261FC18428B7771F007B4A4E = {
 			isa = PBXGroup;
 			children = (
+				2696879C28D3A164002142BF /* EPWatchComplicationsExtension.entitlements */,
 				261FC19328B7771F007B4A4E /* EPWatchWatchKitApp */,
 				2674BC6728D0572D00E31A20 /* EPWatchComplications */,
 				2674BC7A28D0596500E31A20 /* EPWatchCore */,
@@ -234,6 +242,7 @@
 		261FC19328B7771F007B4A4E /* EPWatchWatchKitApp */ = {
 			isa = PBXGroup;
 			children = (
+				2696879B28D3A126002142BF /* EPWatchWatchKitApp.entitlements */,
 				261FC19428B77720007B4A4E /* Assets.xcassets */,
 				261FC1A128B77720007B4A4E /* ContentView.swift */,
 				261FC19F28B77720007B4A4E /* EPWatchApp.swift */,
@@ -325,6 +334,7 @@
 				26624AF328C93541000F7E2E /* AppStorageCodable.swift */,
 				26624AE928C8EFFB000F7E2E /* Error.swift */,
 				26624AE628C883C9000F7E2E /* Log.swift */,
+				2696879D28D3A2C8002142BF /* UserDefaults+AppGroup.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -360,6 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				2674BC6328D0572D00E31A20 /* WidgetKit.framework */,
+				2696879F28D3A5D0002142BF /* WidgetKit.framework */,
 				2674BC6528D0572D00E31A20 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
@@ -621,6 +632,7 @@
 				2674BCA428D0657B00E31A20 /* Error.swift in Sources */,
 				2696879528D2021C002142BF /* Regions.swift in Sources */,
 				2674BC9F28D0654300E31A20 /* ForexAPI.swift in Sources */,
+				2696879E28D3A2C8002142BF /* UserDefaults+AppGroup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -782,6 +794,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EPWatchWatchKitApp/EPWatchWatchKitApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MDUSC5XAF4;
@@ -814,6 +827,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EPWatchWatchKitApp/EPWatchWatchKitApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MDUSC5XAF4;
@@ -873,6 +887,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = EPWatchComplicationsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MDUSC5XAF4;
@@ -904,6 +919,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = EPWatchComplicationsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MDUSC5XAF4;
