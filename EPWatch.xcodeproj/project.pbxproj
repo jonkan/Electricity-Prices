@@ -43,6 +43,7 @@
 		260787BC28D7123A00FF2C33 /* PricePointInlineWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787BB28D7123A00FF2C33 /* PricePointInlineWidgetView.swift */; };
 		260787BE28D712BB00FF2C33 /* PricePointWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787BD28D712BB00FF2C33 /* PricePointWidgetView.swift */; };
 		260787C028D7171E00FF2C33 /* libEPWatchCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2607877728D6693000FF2C33 /* libEPWatchCore.a */; };
+		260787C328D7182C00FF2C33 /* libEPWatchCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2607877728D6693000FF2C33 /* libEPWatchCore.a */; };
 		261FC19528B77720007B4A4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 261FC19428B77720007B4A4E /* Assets.xcassets */; };
 		261FC1A028B77720007B4A4E /* EPWatchKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC19F28B77720007B4A4E /* EPWatchKitApp.swift */; };
 		261FC1A228B77720007B4A4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC1A128B77720007B4A4E /* ContentView.swift */; };
@@ -289,6 +290,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				260787C328D7182C00FF2C33 /* libEPWatchCore.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
