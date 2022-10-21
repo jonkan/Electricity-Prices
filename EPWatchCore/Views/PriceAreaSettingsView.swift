@@ -1,21 +1,25 @@
 //
 //  PriceAreaSettingsView.swift
-//  EPWatchWatchKitApp
+//  EPWatchCore
 //
-//  Created by Jonas Bromö on 2022-09-14.
+//  Created by Jonas Bromö on 2022-09-16.
 //
 
 import SwiftUI
-import EPWatchCore
 
-struct PriceAreaSettingsView: View {
+public struct PriceAreaSettingsView: View {
 
-    @Environment(\.dismiss) var dismiss
     var priceAreas: [PriceArea]
     @Binding var priceArea: PriceArea
+    @Environment(\.dismiss) private var dismiss
 
-    var body: some View {
-        ScrollView {
+    public init(priceAreas: [PriceArea], priceArea: Binding<PriceArea>) {
+        self.priceAreas = priceAreas
+        self._priceArea = priceArea
+    }
+
+    public var body: some View {
+        List {
             ForEach(priceAreas) { pa in
                 Button {
                     priceArea = pa
@@ -34,13 +38,3 @@ struct PriceAreaSettingsView: View {
     }
 
 }
-
-struct PriceAreaSettingsView_Previews: PreviewProvider {
-    static var previews: some View {
-        PriceAreaSettingsView(
-            priceAreas: Region.sweden.priceAreas,
-            priceArea: .constant(Region.sweden.priceAreas[2])
-        )
-    }
-}
-
