@@ -51,8 +51,8 @@ class PricesAPI {
         var components = URLComponents(string: "https://transparency.entsoe.eu/api")!
         components.queryItems = [
             URLQueryItem(name: "documentType", value: "A44"),
-            URLQueryItem(name: "in_Domain", value: priceArea.domain),
-            URLQueryItem(name: "out_Domain", value: priceArea.domain),
+            URLQueryItem(name: "in_Domain", value: priceArea.code),
+            URLQueryItem(name: "out_Domain", value: priceArea.code),
             URLQueryItem(name: "periodStart", value: startDateStr),
             URLQueryItem(name: "periodEnd", value: endDateStr),
             URLQueryItem(name: "securityToken", value: securityToken)
