@@ -146,7 +146,7 @@
 		26624AF128C9332F000F7E2E /* ForexAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForexAPI.swift; sourceTree = "<group>"; };
 		26624AF328C93541000F7E2E /* AppStorageCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStorageCodable.swift; sourceTree = "<group>"; };
 		26624AF728C93E1F000F7E2E /* PricesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesAPI.swift; sourceTree = "<group>"; };
-		2674BC0228CF5C6600E31A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		2674BC0228CF5C6600E31A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = EPWatchWatchKitApp/Resources/Info.plist; sourceTree = SOURCE_ROOT; };
 		2674BC6228D0572D00E31A20 /* EPWatchComplicationsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EPWatchComplicationsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2674BC6328D0572D00E31A20 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		2674BC6528D0572D00E31A20 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -221,7 +221,6 @@
 		261FC18428B7771F007B4A4E = {
 			isa = PBXGroup;
 			children = (
-				2696879C28D3A164002142BF /* EPWatchComplicationsExtension.entitlements */,
 				261FC19328B7771F007B4A4E /* EPWatchWatchKitApp */,
 				2674BC6728D0572D00E31A20 /* EPWatchComplications */,
 				2674BC7A28D0596500E31A20 /* EPWatchCore */,
@@ -246,14 +245,12 @@
 		261FC19328B7771F007B4A4E /* EPWatchWatchKitApp */ = {
 			isa = PBXGroup;
 			children = (
-				2696879B28D3A126002142BF /* EPWatchWatchKitApp.entitlements */,
-				261FC19428B77720007B4A4E /* Assets.xcassets */,
 				261FC1A128B77720007B4A4E /* ContentView.swift */,
 				261FC19F28B77720007B4A4E /* EPWatchApp.swift */,
-				2674BC0228CF5C6600E31A20 /* Info.plist */,
 				2674BC4428CF7CF900E31A20 /* Notifications */,
 				261FC1AB28B77721007B4A4E /* Preview Content */,
 				2696878F28D10112002142BF /* PriceView.swift */,
+				269687AA28D46FD7002142BF /* Resources */,
 				2696879828D26CBE002142BF /* Settings */,
 			);
 			path = EPWatchWatchKitApp;
@@ -298,11 +295,10 @@
 		2674BC6728D0572D00E31A20 /* EPWatchComplications */ = {
 			isa = PBXGroup;
 			children = (
-				2674BC6A28D0572E00E31A20 /* Assets.xcassets */,
 				2674BC6828D0572D00E31A20 /* Complications.swift */,
-				2674BC6C28D0572E00E31A20 /* Info.plist */,
 				2674BCB528D08AA000E31A20 /* PricePointTimelineEntry.swift */,
 				2674BCAC28D079B800E31A20 /* Provider.swift */,
+				269687AB28D46FF3002142BF /* Resources */,
 			);
 			path = EPWatchComplications;
 			sourceTree = "<group>";
@@ -378,6 +374,26 @@
 				269687A828D452CB002142BF /* PriceChartView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		269687AA28D46FD7002142BF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2674BC0228CF5C6600E31A20 /* Info.plist */,
+				261FC19428B77720007B4A4E /* Assets.xcassets */,
+				2696879B28D3A126002142BF /* EPWatchWatchKitApp.entitlements */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		269687AB28D46FF3002142BF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2674BC6A28D0572E00E31A20 /* Assets.xcassets */,
+				2696879C28D3A164002142BF /* EPWatchComplicationsExtension.entitlements */,
+				2674BC6C28D0572E00E31A20 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		26C71B1928C1469D00C2DC59 /* Frameworks */ = {
@@ -810,12 +826,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = EPWatchWatchKitApp/EPWatchWatchKitApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = EPWatchWatchKitApp/Resources/EPWatchWatchKitApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MDUSC5XAF4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = EPWatchWatchKitApp/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = EPWatch;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -843,12 +859,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = EPWatchWatchKitApp/EPWatchWatchKitApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = EPWatchWatchKitApp/Resources/EPWatchWatchKitApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MDUSC5XAF4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = EPWatchWatchKitApp/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = EPWatch;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -903,12 +919,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_ENTITLEMENTS = EPWatchComplicationsExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = EPWatchComplications/Resources/EPWatchComplicationsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MDUSC5XAF4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = EPWatchComplications/Info.plist;
+				INFOPLIST_FILE = EPWatchComplications/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = EPWatch;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -935,12 +951,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_ENTITLEMENTS = EPWatchComplicationsExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = EPWatchComplications/Resources/EPWatchComplicationsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MDUSC5XAF4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = EPWatchComplications/Info.plist;
+				INFOPLIST_FILE = EPWatchComplications/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = EPWatch;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
