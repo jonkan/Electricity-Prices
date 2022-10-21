@@ -14,6 +14,7 @@ struct PriceFormatter {
         nf.numberStyle = .currency
         nf.currencyCode = "SEK"
         nf.maximumSignificantDigits = 3
+        nf.minimumSignificantDigits = 3
         return nf
     }()
 
@@ -22,6 +23,7 @@ struct PriceFormatter {
         nf.numberStyle = .currency
         nf.currencyCode = "SEK"
         nf.maximumFractionDigits = 2
+        nf.minimumFractionDigits = 2
         return nf
     }()
 
@@ -29,6 +31,7 @@ struct PriceFormatter {
         let nf = NumberFormatter()
         nf.numberStyle = .decimal
         nf.maximumSignificantDigits = 2
+        nf.minimumSignificantDigits = 2
         return nf
     }()
 
@@ -36,6 +39,7 @@ struct PriceFormatter {
         let nf = NumberFormatter()
         nf.numberStyle = .decimal
         nf.maximumFractionDigits = 1
+        nf.minimumFractionDigits = 1
         return nf
     }()
 
