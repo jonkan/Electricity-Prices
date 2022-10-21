@@ -67,8 +67,10 @@ class AppState: ObservableObject {
     }
 
     func updatePricesIfNeeded() async throws {
-        if let price = prices?.price(for: Date()), price != currentPrice {
-            currentPrice = price
+        if let price = prices?.price(for: Date()) {
+            if price != currentPrice {
+                currentPrice = price
+            }
             return
         }
         guard !isUpdating else { return }
