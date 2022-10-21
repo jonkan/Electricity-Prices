@@ -23,7 +23,7 @@ struct PricePointTimelineEntry: TimelineEntry {
 
     static var mock2 = PricePointTimelineEntry(
         pricePoint: .mockPrice2,
-        limits: PriceLimits(high: 3, low: 1)
+        limits: PriceLimits(high: 3.2, low: 1.4)
     )
 
     static var mock3 = PricePointTimelineEntry(

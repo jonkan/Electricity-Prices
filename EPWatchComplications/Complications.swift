@@ -35,7 +35,7 @@ struct ComplicationView : View {
 
 struct Complication_Previews: PreviewProvider {
     static var previews: some View {
-        ComplicationView(entry: .mock)
+        ComplicationView(entry: .mock2)
             .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
     }
 }

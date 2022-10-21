@@ -23,9 +23,9 @@ public extension PriceLimits {
         guard let range = range else {
             return [.init(color: .blue, location: 0)]
         }
-        let span = range.upperBound + range.lowerBound // TODO: Fix/verify the math
-        let lowStop = low / span
-        let highStop = high / span
+        let span = range.upperBound - range.lowerBound
+        let highStop = max(0, high - range.lowerBound) / span
+        let lowStop = max(0, low - range.lowerBound) / span
         let fadeSize = 0.1
         return [
             .init(color: .red, location: highStop + fadeSize),
