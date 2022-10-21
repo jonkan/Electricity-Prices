@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-@propertyWrapper struct AppStorageCodable<Value: Codable>: DynamicProperty {
+@propertyWrapper
+public struct AppStorageCodable<Value: Codable>: DynamicProperty {
     let key: String
     var storage: UserDefaults
     
@@ -23,7 +24,7 @@ import SwiftUI
         decoder.dateDecodingStrategy = .iso8601
     }
     
-    var wrappedValue: Value? {
+    public var wrappedValue: Value? {
         get {
             do {
                 let data = storage.value(forKey: key) as? Data

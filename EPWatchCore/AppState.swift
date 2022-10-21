@@ -6,22 +6,21 @@
 //
 
 import Foundation
-import EPWatchCore
 import SwiftUI
 import Combine
 import UIKit
 import SwiftDate
 
 @MainActor
-class AppState: ObservableObject {
+public class AppState: ObservableObject {
 
-    static let shared: AppState = AppState()
-    @Published var currentPrice: PricePoint?
+    public static let shared: AppState = AppState()
+    @Published public var currentPrice: PricePoint?
 
     @AppStorageCodable("prices")
-    var prices: [PricePoint]?
+    public var prices: [PricePoint]?
 
-    var todaysPrices: [PricePoint] {
+    public var todaysPrices: [PricePoint] {
         prices?.filter({ $0.date.isToday }) ?? []
     }
 
@@ -30,14 +29,14 @@ class AppState: ObservableObject {
 
     private var isUpdating: Bool = false
 
-    static let didUpdateDayAheadPrices = Notification.Name("didUpdateDayAheadPrices")
+    public static let didUpdateDayAheadPrices = Notification.Name("didUpdateDayAheadPrices")
 
     private init() {
         updatePricesIfNeeded()
     }
 
     private var timer: Timer?
-    var isTimerRunning: Bool = false {
+    public var isTimerRunning: Bool = false {
         didSet {
             if isTimerRunning {
                 let nextHour = DateInRegion().dateAtStartOf(.hour) + 1.hours
@@ -57,7 +56,8 @@ class AppState: ObservableObject {
         }
     }
 
-    @objc func updatePricesIfNeeded() {
+    @objc
+    public func updatePricesIfNeeded() {
         Task {
             do {
                 _ = try await updatePricesIfNeeded()
@@ -67,7 +67,7 @@ class AppState: ObservableObject {
         }
     }
 
-    func updatePricesIfNeeded() async throws {
+    public func updatePricesIfNeeded() async throws {
         if let price = prices?.price(for: Date()) {
             if price != currentPrice {
                 currentPrice = price

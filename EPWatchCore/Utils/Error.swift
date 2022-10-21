@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension NSError {
+public extension NSError {
 
     convenience init(_ code: Int, _ description: String) {
         let userInfo: [String: Any] = [

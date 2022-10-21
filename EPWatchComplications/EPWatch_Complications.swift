@@ -12,33 +12,30 @@ import EPWatchCore
 extension PricePoint: TimelineEntry {}
 
 struct Provider: TimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date())
+    func placeholder(in context: Context) -> PricePoint {
+        PricePoint(date: Date(), price: 1.23)
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date())
+    func getSnapshot(in context: Context, completion: @escaping (PricePoint) -> ()) {
+        
+        let entry = PricePoint(date: Date(), price: 1.23)
         completion(entry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
+        var entries: [PricePoint] = []
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate)
+            let entry = PricePoint(date: entryDate, price: 1.23)
             entries.append(entry)
         }
 
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }
-}
-
-struct SimpleEntry: TimelineEntry {
-    let date: Date
 }
 
 struct EPWatch_ComplicationsEntryView : View {
@@ -64,7 +61,7 @@ struct EPWatch_Complications: Widget {
 
 struct EPWatch_Complications_Previews: PreviewProvider {
     static var previews: some View {
-        EPWatch_ComplicationsEntryView(entry: SimpleEntry(date: Date()))
+        EPWatch_ComplicationsEntryView(entry: PricePoint(date: Date(), price: 1.23))
             .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
     }
 }

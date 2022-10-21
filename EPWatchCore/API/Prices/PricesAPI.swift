@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import XMLCoder
 
 class PricesAPI {
 
@@ -43,6 +44,16 @@ class PricesAPI {
             LogError("Failed to parse: \(String(data: data, encoding: .utf8) ?? "")")
             throw error
         }
+    }
+
+    func parseDayAheadPrices(fromXML data: Data) throws -> DayAheadPrices {
+        let decoder = XMLDecoder()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mmZZZZZ"
+        decoder.dateDecodingStrategy = .formatted(dateFormatter)
+        decoder.keyDecodingStrategy = .convertFromCapitalized
+        let dayAheadPrices = try decoder.decode(DayAheadPrices.self, from: data)
+        return dayAheadPrices
     }
 
 }

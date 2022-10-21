@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import EPWatchCore
 
 @main
 struct EPWatchApp: App {

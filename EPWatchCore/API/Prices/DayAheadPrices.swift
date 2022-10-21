@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import EPWatchCore
 import SwiftDate
 
 struct DayAheadPrices: Codable {
