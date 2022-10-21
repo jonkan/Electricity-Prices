@@ -350,9 +350,3 @@ public enum Region: String, Codable, CaseIterable, Identifiable, Equatable {
     }
 
 }
-
-public struct PriceArea: Codable, Identifiable, Equatable {
-    public var title: String
-    public var id: String
-    public var code: String
-}

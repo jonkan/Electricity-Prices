@@ -63,6 +63,7 @@
 		264E989628DB2BA600E02F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2696881A28D477EE002142BF /* Assets.xcassets */; };
 		264E989728DB2BA600E02F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2696881A28D477EE002142BF /* Assets.xcassets */; };
 		265733182902E12E00CE9A4C /* RegionSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733172902E12E00CE9A4C /* RegionSettingsView.swift */; };
+		2657331A290311C200CE9A4C /* PriceArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26573319290311C200CE9A4C /* PriceArea.swift */; };
 		2674BC6428D0572D00E31A20 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2674BC6328D0572D00E31A20 /* WidgetKit.framework */; };
 		2674BC6628D0572D00E31A20 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2674BC6528D0572D00E31A20 /* SwiftUI.framework */; };
 		2674BC6928D0572D00E31A20 /* EPWatchKitAppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BC6828D0572D00E31A20 /* EPWatchKitAppExtension.swift */; };
@@ -235,6 +236,7 @@
 		261FC1AF28B77721007B4A4E /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		263A126028D906CD00A11816 /* day-ahead-prices-2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "day-ahead-prices-2.xml"; sourceTree = "<group>"; };
 		265733172902E12E00CE9A4C /* RegionSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSettingsView.swift; sourceTree = "<group>"; };
+		26573319290311C200CE9A4C /* PriceArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceArea.swift; sourceTree = "<group>"; };
 		26624ADE28C7DB2E000F7E2E /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		26624AE228C7DBC1000F7E2E /* DayAheadPrices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayAheadPrices.swift; sourceTree = "<group>"; };
 		26624AE628C883C9000F7E2E /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
@@ -547,6 +549,7 @@
 				26624AEF28C92D3C000F7E2E /* PricePoint.swift */,
 				2696879628D26A3D002142BF /* PriceRange.swift */,
 				2696879428D2021C002142BF /* Region.swift */,
+				26573319290311C200CE9A4C /* PriceArea.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -938,6 +941,7 @@
 				2607878E28D669D700FF2C33 /* AppState.swift in Sources */,
 				260787B628D7109C00FF2C33 /* PricePointCircularWidgetView.swift in Sources */,
 				2607878828D669D700FF2C33 /* Log.swift in Sources */,
+				2657331A290311C200CE9A4C /* PriceArea.swift in Sources */,
 				260787BE28D712BB00FF2C33 /* PricePointWidgetView.swift in Sources */,
 				2607879028D669D700FF2C33 /* PriceChartView.swift in Sources */,
 				2607878A28D669D700FF2C33 /* FormattingStyle.swift in Sources */,
