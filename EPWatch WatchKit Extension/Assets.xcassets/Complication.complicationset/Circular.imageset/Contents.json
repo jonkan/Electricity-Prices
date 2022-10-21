@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "icon-36.svg",
       "idiom" : "watch",
       "scale" : "2x"
     },
