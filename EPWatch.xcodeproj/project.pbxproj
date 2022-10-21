@@ -26,7 +26,6 @@
 		2674BC9128D059A400E31A20 /* EPWatchCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2674BC7928D0596500E31A20 /* EPWatchCore.framework */; };
 		2674BC9228D059A400E31A20 /* EPWatchCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2674BC7928D0596500E31A20 /* EPWatchCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2674BC9628D05A4C00E31A20 /* EPWatchCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2674BC7928D0596500E31A20 /* EPWatchCore.framework */; };
-		2674BC9C28D05A8300E31A20 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 2674BC9B28D05A8300E31A20 /* SwiftDate */; };
 		2674BC9D28D064F200E31A20 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624ADE28C7DB2E000F7E2E /* AppState.swift */; };
 		2674BC9F28D0654300E31A20 /* ForexAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AF128C9332F000F7E2E /* ForexAPI.swift */; };
 		2674BCA028D0654A00E31A20 /* DayAheadPrices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AE228C7DBC1000F7E2E /* DayAheadPrices.swift */; };
@@ -34,16 +33,22 @@
 		2674BCA228D0656800E31A20 /* AppStorageCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AF328C93541000F7E2E /* AppStorageCodable.swift */; };
 		2674BCA328D0657B00E31A20 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AE628C883C9000F7E2E /* Log.swift */; };
 		2674BCA428D0657B00E31A20 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AE928C8EFFB000F7E2E /* Error.swift */; };
-		2674BCA628D065ED00E31A20 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2674BCA528D065ED00E31A20 /* Alamofire */; };
-		2674BCA828D0660600E31A20 /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 2674BCA728D0660600E31A20 /* XMLCoder */; };
 		2674BCAD28D079B800E31A20 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BCAC28D079B800E31A20 /* Provider.swift */; };
 		2674BCAF28D086E500E31A20 /* PriceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BCAE28D086E500E31A20 /* PriceFormatter.swift */; };
 		2674BCB128D0870300E31A20 /* DateIntervalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BCB028D0870300E31A20 /* DateIntervalFormatter.swift */; };
 		2674BCB428D0872800E31A20 /* FormattingStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BCB328D0872800E31A20 /* FormattingStyle.swift */; };
 		2674BCB628D08AA000E31A20 /* PricePointTimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BCB528D08AA000E31A20 /* PricePointTimelineEntry.swift */; };
 		2674BCB728D0928500E31A20 /* day-ahead-prices-1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 26C71B1728C1468500C2DC59 /* day-ahead-prices-1.xml */; };
-		2690400228D4848A00A823F5 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 2690400128D4848A00A823F5 /* SwiftDate */; };
 		2690400928D5DA4100A823F5 /* EPWatchKitApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 261FC18F28B7771F007B4A4E /* EPWatchKitApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2690401128D6680B00A823F5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2690401028D6680B00A823F5 /* Alamofire */; };
+		2690401428D6681800A823F5 /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 2690401328D6681800A823F5 /* XMLCoder */; };
+		2690401728D6682800A823F5 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 2690401628D6682800A823F5 /* SwiftDate */; };
+		2690401928D6683D00A823F5 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 2690401828D6683D00A823F5 /* SwiftDate */; };
+		2690401B28D6684700A823F5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2690401A28D6684700A823F5 /* Alamofire */; };
+		2690401D28D6684700A823F5 /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 2690401C28D6684700A823F5 /* XMLCoder */; };
+		2690401F28D6686800A823F5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2690401E28D6686800A823F5 /* Alamofire */; };
+		2690402128D6686800A823F5 /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 2690402028D6686800A823F5 /* XMLCoder */; };
+		2690402328D6686800A823F5 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 2690402228D6686800A823F5 /* SwiftDate */; };
 		2696879028D10112002142BF /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696878F28D10112002142BF /* PriceView.swift */; };
 		2696879528D2021C002142BF /* Regions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879428D2021C002142BF /* Regions.swift */; };
 		2696879728D26A3D002142BF /* PriceRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879628D26A3D002142BF /* PriceRange.swift */; };
@@ -56,9 +61,6 @@
 		2696881928D477ED002142BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696881828D477ED002142BF /* ContentView.swift */; };
 		2696881B28D477EE002142BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2696881A28D477EE002142BF /* Assets.xcassets */; };
 		2696881E28D477EE002142BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2696881D28D477EE002142BF /* Preview Assets.xcassets */; };
-		2696882628D478C3002142BF /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 2696882528D478C3002142BF /* XMLCoder */; };
-		2696882828D478C3002142BF /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 2696882728D478C3002142BF /* SwiftDate */; };
-		2696882A28D478C3002142BF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2696882928D478C3002142BF /* Alamofire */; };
 		2696882B28D478C3002142BF /* EPWatchCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2674BC7928D0596500E31A20 /* EPWatchCore.framework */; };
 		2696882C28D478C3002142BF /* EPWatchCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2674BC7928D0596500E31A20 /* EPWatchCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2696883128D47C4B002142BF /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696883028D47C4B002142BF /* PriceView.swift */; };
@@ -230,8 +232,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2690400228D4848A00A823F5 /* SwiftDate in Frameworks */,
 				2674BC6628D0572D00E31A20 /* SwiftUI.framework in Frameworks */,
+				2690401F28D6686800A823F5 /* Alamofire in Frameworks */,
+				2690402328D6686800A823F5 /* SwiftDate in Frameworks */,
+				2690402128D6686800A823F5 /* XMLCoder in Frameworks */,
 				2674BC6428D0572D00E31A20 /* WidgetKit.framework in Frameworks */,
 				2674BC9628D05A4C00E31A20 /* EPWatchCore.framework in Frameworks */,
 			);
@@ -241,9 +245,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2674BCA828D0660600E31A20 /* XMLCoder in Frameworks */,
-				2674BC9C28D05A8300E31A20 /* SwiftDate in Frameworks */,
-				2674BCA628D065ED00E31A20 /* Alamofire in Frameworks */,
+				2690401B28D6684700A823F5 /* Alamofire in Frameworks */,
+				2690401928D6683D00A823F5 /* SwiftDate in Frameworks */,
+				2690401D28D6684700A823F5 /* XMLCoder in Frameworks */,
 				269687A028D3A5D0002142BF /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,10 +264,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2696882A28D478C3002142BF /* Alamofire in Frameworks */,
-				2696882828D478C3002142BF /* SwiftDate in Frameworks */,
+				2690401728D6682800A823F5 /* SwiftDate in Frameworks */,
+				2690401428D6681800A823F5 /* XMLCoder in Frameworks */,
 				2696882B28D478C3002142BF /* EPWatchCore.framework in Frameworks */,
-				2696882628D478C3002142BF /* XMLCoder in Frameworks */,
+				2690401128D6680B00A823F5 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,7 +547,9 @@
 			);
 			name = EPWatchKitAppExtension;
 			packageProductDependencies = (
-				2690400128D4848A00A823F5 /* SwiftDate */,
+				2690401E28D6686800A823F5 /* Alamofire */,
+				2690402028D6686800A823F5 /* XMLCoder */,
+				2690402228D6686800A823F5 /* SwiftDate */,
 			);
 			productName = "EPWatch ComplicationsExtension";
 			productReference = 2674BC6228D0572D00E31A20 /* EPWatchKitAppExtension.appex */;
@@ -564,9 +570,9 @@
 			);
 			name = EPWatchCore;
 			packageProductDependencies = (
-				2674BC9B28D05A8300E31A20 /* SwiftDate */,
-				2674BCA528D065ED00E31A20 /* Alamofire */,
-				2674BCA728D0660600E31A20 /* XMLCoder */,
+				2690401828D6683D00A823F5 /* SwiftDate */,
+				2690401A28D6684700A823F5 /* Alamofire */,
+				2690401C28D6684700A823F5 /* XMLCoder */,
 			);
 			productName = EPWatchCore;
 			productReference = 2674BC7928D0596500E31A20 /* EPWatchCore.framework */;
@@ -608,9 +614,9 @@
 			);
 			name = EPWatch;
 			packageProductDependencies = (
-				2696882528D478C3002142BF /* XMLCoder */,
-				2696882728D478C3002142BF /* SwiftDate */,
-				2696882928D478C3002142BF /* Alamofire */,
+				2690401028D6680B00A823F5 /* Alamofire */,
+				2690401328D6681800A823F5 /* XMLCoder */,
+				2690401628D6682800A823F5 /* SwiftDate */,
 			);
 			productName = EPWatch;
 			productReference = 2696881428D477EC002142BF /* EPWatch.app */;
@@ -653,9 +659,9 @@
 			);
 			mainGroup = 261FC18428B7771F007B4A4E;
 			packageReferences = (
-				26C71B0828C145EA00C2DC59 /* XCRemoteSwiftPackageReference "XMLCoder" */,
-				26624AEB28C8F18C000F7E2E /* XCRemoteSwiftPackageReference "SwiftDate" */,
-				268B811028CE6B1600115BDC /* XCRemoteSwiftPackageReference "Alamofire" */,
+				2690400F28D6680B00A823F5 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				2690401228D6681800A823F5 /* XCRemoteSwiftPackageReference "XMLCoder" */,
+				2690401528D6682800A823F5 /* XCRemoteSwiftPackageReference "SwiftDate" */,
 			);
 			productRefGroup = 261FC18C28B7771F007B4A4E /* Products */;
 			projectDirPath = "";
@@ -1305,15 +1311,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		26624AEB28C8F18C000F7E2E /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/malcommac/SwiftDate.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
-		268B811028CE6B1600115BDC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		2690400F28D6680B00A823F5 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -1321,7 +1319,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		26C71B0828C145EA00C2DC59 /* XCRemoteSwiftPackageReference "XMLCoder" */ = {
+		2690401228D6681800A823F5 /* XCRemoteSwiftPackageReference "XMLCoder" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/CoreOffice/XMLCoder.git";
 			requirement = {
@@ -1329,43 +1327,61 @@
 				minimumVersion = 0.9.0;
 			};
 		};
+		2690401528D6682800A823F5 /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftDate.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2674BC9B28D05A8300E31A20 /* SwiftDate */ = {
+		2690401028D6680B00A823F5 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 26624AEB28C8F18C000F7E2E /* XCRemoteSwiftPackageReference "SwiftDate" */;
-			productName = SwiftDate;
-		};
-		2674BCA528D065ED00E31A20 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 268B811028CE6B1600115BDC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 2690400F28D6680B00A823F5 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		2674BCA728D0660600E31A20 /* XMLCoder */ = {
+		2690401328D6681800A823F5 /* XMLCoder */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 26C71B0828C145EA00C2DC59 /* XCRemoteSwiftPackageReference "XMLCoder" */;
+			package = 2690401228D6681800A823F5 /* XCRemoteSwiftPackageReference "XMLCoder" */;
 			productName = XMLCoder;
 		};
-		2690400128D4848A00A823F5 /* SwiftDate */ = {
+		2690401628D6682800A823F5 /* SwiftDate */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 26624AEB28C8F18C000F7E2E /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			package = 2690401528D6682800A823F5 /* XCRemoteSwiftPackageReference "SwiftDate" */;
 			productName = SwiftDate;
 		};
-		2696882528D478C3002142BF /* XMLCoder */ = {
+		2690401828D6683D00A823F5 /* SwiftDate */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 26C71B0828C145EA00C2DC59 /* XCRemoteSwiftPackageReference "XMLCoder" */;
-			productName = XMLCoder;
-		};
-		2696882728D478C3002142BF /* SwiftDate */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 26624AEB28C8F18C000F7E2E /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			package = 2690401528D6682800A823F5 /* XCRemoteSwiftPackageReference "SwiftDate" */;
 			productName = SwiftDate;
 		};
-		2696882928D478C3002142BF /* Alamofire */ = {
+		2690401A28D6684700A823F5 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 268B811028CE6B1600115BDC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 2690400F28D6680B00A823F5 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		2690401C28D6684700A823F5 /* XMLCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2690401228D6681800A823F5 /* XCRemoteSwiftPackageReference "XMLCoder" */;
+			productName = XMLCoder;
+		};
+		2690401E28D6686800A823F5 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2690400F28D6680B00A823F5 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		2690402028D6686800A823F5 /* XMLCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2690401228D6681800A823F5 /* XCRemoteSwiftPackageReference "XMLCoder" */;
+			productName = XMLCoder;
+		};
+		2690402228D6686800A823F5 /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2690401528D6682800A823F5 /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
