@@ -16,18 +16,11 @@ public struct PricePointRectangularWidgetView: View {
     }
 
     public var body: some View {
-        HStack {
-            VStack {
-                Text(entry.pricePoint.formattedPrice(.short))
-                    .bold()
-                Text("kr")
-            }
-            PriceChartView(
-                currentPrice: entry.pricePoint,
-                prices: entry.prices,
-                limits: entry.limits
-            )
-        }
+        PriceChartView(
+            currentPrice: entry.pricePoint,
+            prices: entry.prices,
+            limits: entry.limits
+        )
     }
 
 }
