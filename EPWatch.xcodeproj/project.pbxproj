@@ -190,6 +190,7 @@
 		260787B928D711FF00FF2C33 /* PricePointLargeWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePointLargeWidgetView.swift; sourceTree = "<group>"; };
 		260787BB28D7123A00FF2C33 /* PricePointInlineWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePointInlineWidgetView.swift; sourceTree = "<group>"; };
 		260787BD28D712BB00FF2C33 /* PricePointWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePointWidgetView.swift; sourceTree = "<group>"; };
+		260787C428D72EA600FF2C33 /* EPWatchWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EPWatchWidgetExtension.entitlements; sourceTree = "<group>"; };
 		261FC18F28B7771F007B4A4E /* EPWatchKitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EPWatchKitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		261FC19428B77720007B4A4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		261FC19F28B77720007B4A4E /* EPWatchKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPWatchKitApp.swift; sourceTree = "<group>"; };
@@ -335,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				260787A428D70B8D00FF2C33 /* Assets.xcassets */,
+				260787C428D72EA600FF2C33 /* EPWatchWidgetExtension.entitlements */,
 				260787A628D70B8D00FF2C33 /* Info.plist */,
 			);
 			path = Resources;
@@ -943,6 +945,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = EPWatchWidgetExtension/Resources/EPWatchWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MDUSC5XAF4;
@@ -956,7 +959,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = se.j0nas.EPWatch.EPWatchWidgetExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = se.j0nas.EPWatch.widgetextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -970,6 +973,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = EPWatchWidgetExtension/Resources/EPWatchWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MDUSC5XAF4;
@@ -983,7 +987,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = se.j0nas.EPWatch.EPWatchWidgetExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = se.j0nas.EPWatch.widgetextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
