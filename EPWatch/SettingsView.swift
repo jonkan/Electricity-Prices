@@ -15,10 +15,23 @@ struct SettingsView: View {
 
     var body: some View {
         List {
-            Section {
+            NavigationLink {
+                RegionSettingsView(
+                    regions: Region.allCases,
+                    region: $state.region
+                )
+                .navigationTitle("Region")
+            } label: {
+                HStack {
+                    Text("Region")
+                    Spacer()
+                    Text(state.region?.name ?? "")
+                }
+            }
+            if let region = state.region {
                 NavigationLink {
                     PriceAreaSettingsView(
-                        priceAreas: state.region.priceAreas,
+                        priceAreas: region.priceAreas,
                         priceArea: $state.priceArea
                     )
                     .navigationTitle("Price area")
@@ -26,7 +39,7 @@ struct SettingsView: View {
                     HStack {
                         Text("Price area")
                         Spacer()
-                        Text(state.priceArea.title)
+                        Text(state.priceArea?.title ?? "")
                     }
                 }
             }

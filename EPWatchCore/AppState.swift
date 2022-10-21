@@ -22,19 +22,22 @@ public class AppState: ObservableObject {
     public var prices: [PricePoint] = []
 
     @AppStorageCodable("Region", storage: .appGroup)
-    public var region: Region = .sweden {
+    public var region: Region? = nil {
         didSet {
             guard oldValue != region else { return }
-            Log("Region did change: \(region.name)")
+            Log("Region did change: \(region?.name ?? "nil")")
+            if region?.priceAreas.contains(where: { $0.id == priceArea?.id }) == false {
+                priceArea = region?.priceAreas.first
+            }
             invalidateAndUpdatePrices()
         }
     }
 
     @AppStorageCodable("PriceArea", storage: .appGroup)
-    public var priceArea: PriceArea = Region.sweden.priceAreas[2] {
+    public var priceArea: PriceArea? = nil {
         didSet {
             guard oldValue != priceArea else { return }
-            Log("Price area did change: \(priceArea.title)")
+            Log("Price area did change: \(priceArea?.title ?? "nil")")
             invalidateAndUpdatePrices()
         }
     }
@@ -55,6 +58,17 @@ public class AppState: ObservableObject {
 
     private init() {
         updatePricesIfNeeded()
+
+        if region == nil {
+            let currentRegionId = Locale.current.region?.identifier
+            if let r = Region.allCases.first(where: { $0.id == currentRegionId }) {
+                region = r
+                priceArea = r.priceAreas.first
+            } else {
+                region = .sweden
+                priceArea = Region.sweden.priceAreas[2]
+            }
+        }
     }
 
     private var timer: Timer?
@@ -103,6 +117,10 @@ public class AppState: ObservableObject {
     }
 
     public func updatePricesIfNeeded() async throws {
+        guard priceArea != nil else {
+            Log("No price area set yet")
+            return
+        }
         _ = await updateTask?.result
 
         if let price = prices.price(for: .now) {
@@ -147,6 +165,9 @@ public class AppState: ObservableObject {
 
     private func downloadPrices() async throws -> [PricePoint] {
         Log("Downloading day ahead prices")
+        guard let priceArea = priceArea else {
+            throw NSError(0, "No price area selected")
+        }
         let dayAheadPrices = try await PricesAPI.shared.downloadDayAheadPrices(for: priceArea)
         let forex = try await currentForex()
         let rate = try forex.rate(from: "EUR", to: "SEK")

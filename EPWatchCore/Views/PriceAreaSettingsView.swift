@@ -10,10 +10,10 @@ import SwiftUI
 public struct PriceAreaSettingsView: View {
 
     var priceAreas: [PriceArea]
-    @Binding var priceArea: PriceArea
+    @Binding var priceArea: PriceArea?
     @Environment(\.dismiss) private var dismiss
 
-    public init(priceAreas: [PriceArea], priceArea: Binding<PriceArea>) {
+    public init(priceAreas: [PriceArea], priceArea: Binding<PriceArea?>) {
         self.priceAreas = priceAreas
         self._priceArea = priceArea
     }

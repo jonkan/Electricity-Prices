@@ -1,5 +1,5 @@
 //
-//  Regions.swift
+//  Region.swift
 //  EPWatchCore
 //
 //  Created by Jonas Bromö on 2022-09-14.
@@ -7,7 +7,8 @@
 
 import Foundation
 
-public enum Region: Codable {
+public enum Region: String, Codable, CaseIterable, Identifiable, Equatable {
+
     case albania        //Albania (AL)
     case austria        //Austria (AT)
     case belgium        //Belgium (BE)
@@ -94,7 +95,7 @@ public enum Region: Codable {
         }
     }
 
-    public var countryCode: String {
+    public var id: String {
         switch self {
         case .albania:          return "AL"
         case .austria:          return "AT"
@@ -347,6 +348,7 @@ public enum Region: Codable {
             ]
         }
     }
+
 }
 
 public struct PriceArea: Codable, Identifiable, Equatable {
