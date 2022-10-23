@@ -11,14 +11,14 @@ import SwiftUI
 
 public struct PricePointInlineWidgetView: View {
 
-    public var entry: PricePointTimelineEntry
+    var entry: PricePointTimelineEntry
 
     public init(entry: PricePointTimelineEntry) {
         self.entry = entry
     }
 
     public var body: some View {
-        Text(entry.pricePoint.formattedPrice(.normal))
+        Text(entry.pricePoint.formattedPrice(.normal, entry.currencyPresentation))
             .bold()
             .foregroundColor(entry.limits.color(of: entry.pricePoint.price))
     }

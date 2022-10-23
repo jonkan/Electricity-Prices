@@ -9,7 +9,7 @@ import SwiftUI
 
 public struct PricePointLargeWidgetView: View {
 
-    public var entry: PricePointTimelineEntry
+    var entry: PricePointTimelineEntry
 
     public init(entry: PricePointTimelineEntry) {
         self.entry = entry
@@ -17,7 +17,7 @@ public struct PricePointLargeWidgetView: View {
 
     public var body: some View {
         VStack(spacing: 8) {
-            Text(entry.pricePoint.formattedPrice(.normal))
+            Text(entry.pricePoint.formattedPrice(.normal, entry.currencyPresentation))
                 .font(.title)
             Text(entry.pricePoint.formattedTimeInterval(.normal))
                 .font(.subheadline)

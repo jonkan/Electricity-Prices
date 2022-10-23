@@ -9,7 +9,7 @@ import SwiftUI
 
 public struct PricePointCircularWidgetView: View {
 
-    public var entry: PricePointTimelineEntry
+    var entry: PricePointTimelineEntry
 
     public init(entry: PricePointTimelineEntry) {
         self.entry = entry
@@ -20,7 +20,7 @@ public struct PricePointCircularWidgetView: View {
             Text(entry.pricePoint.formattedTimeInterval(.short))
                 .padding(1)
         } currentValueLabel: {
-            Text("\(entry.pricePoint.formattedPrice(.short))")
+            Text("\(entry.pricePoint.formattedPrice(.short, entry.currencyPresentation))")
                 .padding(1)
         }
         .gaugeStyle(.accessoryCircular)

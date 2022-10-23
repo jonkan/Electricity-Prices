@@ -26,10 +26,14 @@ public class AppState: ObservableObject {
         didSet {
             guard oldValue != region else { return }
             Log("Region did change: \(region?.name ?? "nil")")
-            if region?.priceAreas.contains(where: { $0.id == priceArea?.id }) == false {
-                priceArea = region?.priceAreas.first
+            if let region = region {
+                // Reset the priceArea if the selected doesn't exist in the region
+                if !region.priceAreas.contains(where: { $0.id == priceArea?.id }) {
+                    priceArea = region.priceAreas.first
+                }
+                currency = region.suggestedCurrency
             }
-            invalidateAndUpdatePrices()
+            invalidateAndUpdatePricesSubject.send()
         }
     }
 
@@ -38,15 +42,46 @@ public class AppState: ObservableObject {
         didSet {
             guard oldValue != priceArea else { return }
             Log("Price area did change: \(priceArea?.title ?? "nil")")
-            invalidateAndUpdatePrices()
+            invalidateAndUpdatePricesSubject.send()
         }
     }
 
-    @AppStorageCodable("PriceLimits", storage: .appGroup)
-    public var priceLimits: PriceLimits = .default
+    /// The currently selected currency
+    @AppStorageCodable("Currency", storage: .appGroup)
+    public var currency: Currency = .EUR {
+        didSet {
+            guard oldValue != currency else { return }
+            Log("Currency did change: \(currency.name)")
+            invalidateAndUpdatePricesSubject.send()
+        }
+    }
+
+    @AppStorageCodable("CurrencyPresentation", storage: .appGroup)
+    public var currencyPresentation: CurrencyPresentation = .natural {
+        didSet {
+            guard oldValue != currencyPresentation else { return }
+            Log("CurrencyPresentation did change: \(currencyPresentation)")
+            // Workaround to make the settings view update after changing.
+            Task { objectWillChange.send() }
+        }
+    }
+
+    @AppStorageCodable("AllPriceLimits", storage: .appGroup)
+    private var allPriceLimits: [PriceLimits] = [
+        PriceLimits(.EUR, high: 0.3, low: 0.1),
+        PriceLimits(.SEK, high: 3, low: 1),
+        PriceLimits(.NOK, high: 3, low: 1),
+        PriceLimits(.DKK, high: 2, low: 0.7),
+    ]
+    public var priceLimits: PriceLimits {
+        return allPriceLimits.first(where: { $0.currency == currency })!
+    }
 
     @AppStorageCodable("CurrencyConversion", storage: .appGroup)
-    private var cachedForex: ForexLatest? = nil
+    private var cachedForex: ForexRate? = nil
+
+    private var invalidateAndUpdatePricesSubject = PassthroughSubject<Void, Never>()
+    private var invalidateAndUpdatePricesCancellable: AnyCancellable?
 
     @AppStorageCodable("LastAttemptFetchingTomorrowsPrices", storage: .appGroup)
     private var lastAttemptFetchingTomorrowsPrices: Date? = nil
@@ -69,6 +104,12 @@ public class AppState: ObservableObject {
                 priceArea = Region.sweden.priceAreas[2]
             }
         }
+
+        invalidateAndUpdatePricesCancellable = invalidateAndUpdatePricesSubject
+            .debounce(for: .milliseconds(250), scheduler: RunLoop.main)
+            .sink { [weak self] in
+                self?.invalidateAndUpdatePrices()
+            }
     }
 
     private var timer: Timer?
@@ -92,15 +133,18 @@ public class AppState: ObservableObject {
         }
     }
 
-    func invalidateAndUpdatePrices() {
-        prices = []
-        currentPrice = nil
-        updatePricesIfNeeded {
+    private func invalidateAndUpdatePrices() {
+        Task {
+            prices = []
+            currentPrice = nil
+            objectWillChange.send()
+            do {
+                _ = try await updatePricesIfNeeded()
+            } catch {
+                LogError(error)
+            }
             WidgetCenter.shared.reloadAllTimelines()
-            self.objectWillChange.send()
-        }
-        DispatchQueue.main.async {
-            self.objectWillChange.send()
+            objectWillChange.send()
         }
     }
 
@@ -121,9 +165,14 @@ public class AppState: ObservableObject {
             Log("No price area set yet")
             return
         }
+        // The updateTask is a hack to make sure we
+        // only run one update at a time, so we can
+        // await an already running task before launching
+        // a new one, if needed.
         _ = await updateTask?.result
 
-        if let price = prices.price(for: .now) {
+        if let price = prices.price(for: .now),
+           price.currency == currency {
             if price != currentPrice {
                 currentPrice = price
             }
@@ -169,18 +218,20 @@ public class AppState: ObservableObject {
             throw NSError(0, "No price area selected")
         }
         let dayAheadPrices = try await PricesAPI.shared.downloadDayAheadPrices(for: priceArea)
-        let forex = try await currentForex()
-        let rate = try forex.rate(from: "EUR", to: "SEK")
-        let prices = dayAheadPrices.prices(using: rate)
+        let rate = try await currentForexRate()
+        let prices = try dayAheadPrices.prices(using: rate)
         return prices
     }
 
-    private func currentForex() async throws -> ForexLatest {
-        if let forex = cachedForex, forex.isUpToDate {
-            return forex
+    private func currentForexRate() async throws -> ForexRate {
+        if let forexRate = cachedForex,
+           forexRate.isUpToDate,
+           forexRate.from == .EUR,
+           forexRate.to == currency {
+            return forexRate
         }
         Log("Downloading forex")
-        let res = try await ForexAPI.shared.download()
+        let res = try await ForexAPI.shared.download(from: .EUR, to: currency)
         cachedForex = res
         return res
     }

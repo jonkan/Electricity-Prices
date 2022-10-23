@@ -9,7 +9,7 @@ import SwiftUI
 
 public struct PricePointRectangularWidgetView: View {
 
-    public var entry: PricePointTimelineEntry
+    var entry: PricePointTimelineEntry
 
     public init(entry: PricePointTimelineEntry) {
         self.entry = entry

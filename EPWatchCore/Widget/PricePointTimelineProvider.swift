@@ -32,9 +32,11 @@ public struct PricePointTimelineProvider: TimelineProvider {
     public func getSnapshot(in context: Context, completion: @escaping (Entry) -> ()) {
         Task {
             do {
-                try await AppState.shared.updatePricesIfNeeded()
-                let prices = await AppState.shared.prices
-                let limits = await AppState.shared.priceLimits
+                let state = AppState.shared
+                try await state.updatePricesIfNeeded()
+                let prices = await state.prices
+                let limits = await state.priceLimits
+                let currencyPresentation = await state.currencyPresentation
 
                 guard let price = prices.price(for: .now) else {
                     throw NSError(0, "Missing current pricePoint")
@@ -42,7 +44,8 @@ public struct PricePointTimelineProvider: TimelineProvider {
                 let entry = PricePointTimelineEntry(
                     pricePoint: price,
                     prices: prices.filterInSameDayAs(price),
-                    limits: limits
+                    limits: limits,
+                    currencyPresentation: currencyPresentation
                 )
                 completion(entry)
             } catch {
@@ -55,9 +58,11 @@ public struct PricePointTimelineProvider: TimelineProvider {
     public func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         Task {
             do {
-                try await AppState.shared.updatePricesIfNeeded()
-                let allPrices = await AppState.shared.prices
-                let limits = await AppState.shared.priceLimits
+                let state = AppState.shared
+                try await state.updatePricesIfNeeded()
+                let allPrices = await state.prices
+                let limits = await state.priceLimits
+                let currencyPresentation = await state.currencyPresentation
 
                 let grouped = Dictionary(
                     grouping: allPrices,
@@ -73,7 +78,8 @@ public struct PricePointTimelineProvider: TimelineProvider {
                             PricePointTimelineEntry(
                                 pricePoint: $0,
                                 prices: prices,
-                                limits: limits
+                                limits: limits,
+                                currencyPresentation: currencyPresentation
                             )
                         })
                     )

@@ -11,7 +11,8 @@ import WidgetKit
 public struct WidgetView: View {
 
     @Environment(\.widgetFamily) private var widgetFamily
-    public var entry: PricePointTimelineEntry
+
+    var entry: PricePointTimelineEntry
 
     public init(entry: PricePointTimelineEntry) {
         self.entry = entry

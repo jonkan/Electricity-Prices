@@ -20,7 +20,8 @@ struct ContentView: View {
                     PriceView(
                         currentPrice: currentPrice,
                         prices: state.prices.filterInSameDayAs(currentPrice),
-                        limits: state.priceLimits
+                        limits: state.priceLimits,
+                        currencyPresentation: state.currencyPresentation
                     )
                     SettingsView()
                 }

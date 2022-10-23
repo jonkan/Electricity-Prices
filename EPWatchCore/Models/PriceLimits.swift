@@ -9,15 +9,15 @@ import Foundation
 import SwiftUI
 
 public struct PriceLimits: Codable {
+    var currency: Currency
     var high: Double
     var low: Double
 
-    public init(high: Double, low: Double) {
+    public init(_ currency: Currency, high: Double, low: Double) {
+        self.currency = currency
         self.high = high
         self.low = low
     }
-
-    public static let `default` = PriceLimits(high: 3, low: 1)
 }
 
 public extension PriceLimits {
@@ -43,4 +43,8 @@ public extension PriceLimits {
             return .green
         }
     }
+}
+
+public extension PriceLimits {
+    static let mockLimits = PriceLimits(.SEK, high: 3, low: 1)
 }

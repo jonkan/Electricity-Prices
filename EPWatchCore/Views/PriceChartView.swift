@@ -86,9 +86,7 @@ public struct PriceChartView: View {
                 }
             } else {
                 if useCurrencyAxisFormat {
-                    AxisMarks(
-                        format: currencyAxisFormat
-                    )
+                    AxisMarks(format: currencyAxisFormat)
                 } else {
                     AxisMarks()
                 }
@@ -106,9 +104,9 @@ public struct PriceChartView: View {
 
     var currencyAxisFormat: FloatingPointFormatStyle<Double>.Currency {
         if currentPrice.dayPriceRange.upperBound <= 10 {
-            return .currency(code: "SEK").precision(.fractionLength(1))
+            return .currency(code: currentPrice.currency.code).precision(.fractionLength(1))
         }
-        return .currency(code: "SEK").precision(.significantDigits(2))
+        return .currency(code: currentPrice.currency.code).precision(.significantDigits(2))
     }
 
 }
@@ -118,7 +116,7 @@ struct PriceChartView_Previews: PreviewProvider {
         PriceChartView(
             currentPrice: .mockPrice,
             prices: .mockPrices,
-            limits: .default
+            limits: .mockLimits
         )
     }
 }

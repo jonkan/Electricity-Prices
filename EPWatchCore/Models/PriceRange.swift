@@ -17,14 +17,6 @@ public struct PriceRange {
         self.min = min
         self.max = max
     }
-
-    public func formattedMin(style: FormattingStyle) -> String {
-        return PriceFormatter.formatted(min, style: style)
-    }
-
-    public func formattedMax(style: FormattingStyle) -> String {
-        return PriceFormatter.formatted(max, style: style)
-    }
 }
 
 public extension Array where Element == PricePoint {

@@ -14,10 +14,11 @@ struct PriceView: View {
     var currentPrice: PricePoint
     var prices: [PricePoint]
     var limits: PriceLimits
+    var currencyPresentation: CurrencyPresentation
 
     var body: some View {
         VStack(spacing: 8) {
-            Text(currentPrice.formattedPrice(.normal))
+            Text(currentPrice.formattedPrice(.normal, currencyPresentation))
                 .font(.title)
             Text(currentPrice.formattedTimeInterval(.normal))
                 .font(.subheadline)
@@ -37,7 +38,8 @@ struct PriceView_Previews: PreviewProvider {
         PriceView(
             currentPrice: .mockPrice,
             prices: .mockPrices,
-            limits: .default
+            limits: .mockLimits,
+            currencyPresentation: .natural
         )
     }
 }

@@ -67,15 +67,24 @@ struct DayAheadPrices: Codable {
         return point.priceAmount
     }
 
-    func prices(using eurExchangeRate: Double) -> [PricePoint] {
+    func prices(using rate: ForexRate) throws -> [PricePoint] {
+        guard rate.from == .EUR else {
+            throw NSError(0, "Unexpected forex rate, prices must be converted from EUR")
+        }
         var points: [PricePoint] = []
         for ts in timeSeries {
             let period = ts.period
             for p in period.point {
                 let start = period.timeInterval.start + (p.position - 1).hours
                 let MWperkW = 0.001
-                let price = p.priceAmount * eurExchangeRate * MWperkW
-                points.append(PricePoint(date: start, price: price, dayPriceRange: price...price))
+                let price = p.priceAmount * rate.rate * MWperkW
+                let pricePoint = PricePoint(
+                    date: start,
+                    price: price,
+                    dayPriceRange: price...price,
+                    currency: rate.to
+                )
+                points.append(pricePoint)
             }
         }
 
@@ -94,7 +103,8 @@ struct DayAheadPrices: Codable {
                     PricePoint(
                         date: $0.date,
                         price: $0.price,
-                        dayPriceRange: range.min...range.max
+                        dayPriceRange: range.min...range.max,
+                        currency: rate.to
                     )
                 })
             )

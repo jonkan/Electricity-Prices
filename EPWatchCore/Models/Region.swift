@@ -349,4 +349,13 @@ public enum Region: String, Codable, CaseIterable, Identifiable, Equatable {
         }
     }
 
+    var suggestedCurrency: Currency {
+        switch self {
+        case .sweden: return .SEK
+        case .norway: return .NOK
+        case .denmark: return .DKK
+        default: return .EUR
+        }
+    }
+
 }

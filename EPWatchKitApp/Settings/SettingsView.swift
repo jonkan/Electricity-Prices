@@ -14,34 +14,7 @@ struct SettingsView: View {
 
     var body: some View {
         ScrollView {
-            NavigationLink {
-                RegionSettingsView(
-                    regions: Region.allCases,
-                    region: $state.region
-                )
-                .navigationTitle("Region")
-            } label: {
-                HStack {
-                    Text("Region")
-                    Spacer()
-                    Text(state.region?.name ?? "")
-                }
-            }
-            if let region = state.region {
-                NavigationLink {
-                    PriceAreaSettingsView(
-                        priceAreas: region.priceAreas,
-                        priceArea: $state.priceArea
-                    )
-                    .navigationTitle("Price area")
-                } label: {
-                    HStack {
-                        Text("Price area")
-                        Spacer()
-                        Text(state.priceArea?.title ?? "")
-                    }
-                }
-            }
+            SettingsSection()
         }
     }
 
@@ -55,4 +28,3 @@ struct SettingsView_Previews: PreviewProvider {
         .environmentObject(AppState.mocked)
     }
 }
-

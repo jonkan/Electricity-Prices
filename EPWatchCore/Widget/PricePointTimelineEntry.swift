@@ -9,16 +9,21 @@ import WidgetKit
 
 public struct PricePointTimelineEntry: TimelineEntry {
 
-    public var pricePoint: PricePoint
-    public var prices: [PricePoint]
-    public var limits: PriceLimits
+    var pricePoint: PricePoint
+    var prices: [PricePoint]
+    var limits: PriceLimits
+    var currencyPresentation: CurrencyPresentation
 
-    public init(pricePoint: PricePoint, prices: [PricePoint], limits: PriceLimits) {
+    public init(
+        pricePoint: PricePoint,
+        prices: [PricePoint],
+        limits: PriceLimits,
+        currencyPresentation: CurrencyPresentation
+    ) {
         self.pricePoint = pricePoint
         self.prices = prices
         self.limits = limits
-
-//        assert(prices.count == prices.filterInSameDayAs(pricePoint).count, "Prices not in the same day as the pricePoint")
+        self.currencyPresentation = currencyPresentation
     }
 
     public var date: Date {
@@ -28,18 +33,21 @@ public struct PricePointTimelineEntry: TimelineEntry {
     public static let mock = PricePointTimelineEntry(
         pricePoint: .mockPrice,
         prices: .mockPrices,
-        limits: .default
+        limits: .mockLimits,
+        currencyPresentation: .natural
     )
 
     public static let mock2 = PricePointTimelineEntry(
         pricePoint: .mockPrice2,
         prices: .mockPrices,
-        limits: PriceLimits(high: 3.2, low: 1.4)
+        limits: PriceLimits(.SEK, high: 3.2, low: 1.4),
+        currencyPresentation: .natural
     )
 
     public static let mock3 = PricePointTimelineEntry(
         pricePoint: .mockPrice3,
         prices: .mockPrices,
-        limits: .default
+        limits: .mockLimits,
+        currencyPresentation: .natural
     )
 }
