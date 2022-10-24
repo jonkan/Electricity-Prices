@@ -204,9 +204,9 @@ public enum Region: String, Codable, CaseIterable, Identifiable, Equatable {
             ]
         case .germany:
             return [
-                PriceArea(title: "CZ+DE+SK", id: "BZN|CZ+DE+SK", code: "10Y1001A1001B012"),
+                PriceArea(title: "DE-LU", id: "BZN|DE-LU", code: "10Y1001A1001A82H"),
                 PriceArea(title: "DE-AT-LU", id: "BZN|DE-AT-LU", code: "10Y1001A1001A63L"),
-                PriceArea(title: "DE-LU", id: "BZN|DE-LU", code: "10Y1001A1001A82H")
+                PriceArea(title: "CZ+DE+SK", id: "BZN|CZ+DE+SK", code: "10YDOM-CZ-DE-SKK")
             ]
         case .greece:
             return [
@@ -256,8 +256,8 @@ public enum Region: String, Codable, CaseIterable, Identifiable, Equatable {
             ]
         case .luxembourg:
             return [
-                PriceArea(title: "DE-AT-LU", id: "BZN|DE-AT-LU", code: "10Y1001A1001A63L"),
-                PriceArea(title: "DE-LU", id: "BZN|DE-LU", code: "10Y1001A1001A82H")
+                PriceArea(title: "DE-LU", id: "BZN|DE-LU", code: "10Y1001A1001A82H"),
+                PriceArea(title: "DE-AT-LU", id: "BZN|DE-AT-LU", code: "10Y1001A1001A63L")
             ]
         case .malta:
             return [
