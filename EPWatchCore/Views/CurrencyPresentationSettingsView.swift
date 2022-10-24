@@ -14,17 +14,14 @@ public struct CurrencyPresentationSettingsNavigationLink: View {
     public init() {}
 
     public var body: some View {
-        Toggle(isOn: .constant(true)) {
-            Text("Use \(state.currency.subdivision.name)")
-        }
         BasicSettingsNavigationLink(
-            title: "Currency sign",
+            title: "Currency symbol",
             values: CurrencyPresentation.allCases,
             currentValue: $state.currencyPresentation,
             displayValue: { value in
                 switch value {
-                case .natural: return "Natural (\(state.currency.sign)/\(state.currency.subdivision.sign))"
-                case .subdivided: return "\(state.currency.subdivision.name) (\(state.currency.subdivision.sign))"
+                case .automatic: return "Automatic".localized
+                case .subdivided: return "\(state.currency.subdivision.name) (\(state.currency.subdivision.symbol))"
                 }
             }
         )

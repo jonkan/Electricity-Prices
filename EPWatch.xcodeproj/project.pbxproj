@@ -62,6 +62,8 @@
 		2657332229054A4000CE9A4C /* CurrencyPresentationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657332129054A4000CE9A4C /* CurrencyPresentationSettingsView.swift */; };
 		265733242905D09500CE9A4C /* BasicSettingsNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733232905D09500CE9A4C /* BasicSettingsNavigationLink.swift */; };
 		2657332A2905E3B600CE9A4C /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733292905E3B600CE9A4C /* SettingsSection.swift */; };
+		2657332C29070FBF00CE9A4C /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657332B29070FBF00CE9A4C /* ExchangeRate.swift */; };
+		265733312907291700CE9A4C /* PriceViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733302907291700CE9A4C /* PriceViewFooter.swift */; };
 		2674BC6428D0572D00E31A20 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2674BC6328D0572D00E31A20 /* WidgetKit.framework */; };
 		2674BC6628D0572D00E31A20 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2674BC6528D0572D00E31A20 /* SwiftUI.framework */; };
 		2674BC6928D0572D00E31A20 /* EPWatchKitAppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BC6828D0572D00E31A20 /* EPWatchKitAppExtension.swift */; };
@@ -87,8 +89,8 @@
 		26AC446B291269EB00B86B1E /* String+AppGroupIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2602DE4A290B0DE300CC83F2 /* String+AppGroupIdentifier.swift */; };
 		26AC446C291269EB00B86B1E /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AE628C883C9000F7E2E /* Log.swift */; };
 		26AC446D291269EB00B86B1E /* AppStorageCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AF328C93541000F7E2E /* AppStorageCodable.swift */; };
-		26AC446E291269EB00B86B1E /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FE62910796700D42DFB /* String+Localized.swift */; };
 		26AC446F291269EB00B86B1E /* WCSessionActivationState+Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FD62910773A00D42DFB /* WCSessionActivationState+Description.swift */; };
+		26AC447129126A6000B86B1E /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657332E2907244300CE9A4C /* String+Localized.swift */; };
 		26CD57C428DAFFC3007FC8BB /* libEPWatchCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2607877728D6693000FF2C33 /* libEPWatchCore.a */; };
 		26EC4A1428D9C52C004DD8EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2696881A28D477EE002142BF /* Assets.xcassets */; };
 		26F28FDC2910778300D42DFB /* SupportSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FDA2910778300D42DFB /* SupportSettingsView.swift */; };
@@ -248,6 +250,9 @@
 		265733252905D7B000CE9A4C /* CurrencySubdivision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySubdivision.swift; sourceTree = "<group>"; };
 		265733272905D7C500CE9A4C /* CurrencyPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPresentation.swift; sourceTree = "<group>"; };
 		265733292905E3B600CE9A4C /* SettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSection.swift; sourceTree = "<group>"; };
+		2657332B29070FBF00CE9A4C /* ExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
+		2657332E2907244300CE9A4C /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		265733302907291700CE9A4C /* PriceViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewFooter.swift; sourceTree = "<group>"; };
 		26624ADE28C7DB2E000F7E2E /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		26624AE228C7DBC1000F7E2E /* DayAheadPrices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayAheadPrices.swift; sourceTree = "<group>"; };
 		26624AE628C883C9000F7E2E /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
@@ -414,6 +419,7 @@
 				26C71B1928C1469D00C2DC59 /* Frameworks */,
 				261FC18C28B7771F007B4A4E /* Products */,
 				26EC4A1528D9C54E004DD8EB /* Resources */,
+				26AC447029126A4D00B86B1E /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -453,11 +459,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		2657332D290710B700CE9A4C /* Currency */ = {
+			isa = PBXGroup;
+			children = (
+				2657331B2903121E00CE9A4C /* Currency.swift */,
+				265733272905D7C500CE9A4C /* CurrencyPresentation.swift */,
+				265733252905D7B000CE9A4C /* CurrencySubdivision.swift */,
+				2657332B29070FBF00CE9A4C /* ExchangeRate.swift */,
+				26624AF128C9332F000F7E2E /* ForexAPI.swift */,
+			);
+			path = Currency;
+			sourceTree = "<group>";
+		};
 		26624AF628C93DEA000F7E2E /* API */ = {
 			isa = PBXGroup;
 			children = (
 				26624AF928C93E91000F7E2E /* Prices */,
-				26624AF128C9332F000F7E2E /* ForexAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -495,6 +512,7 @@
 			children = (
 				26624AF628C93DEA000F7E2E /* API */,
 				26624ADE28C7DB2E000F7E2E /* AppState.swift */,
+				2657332D290710B700CE9A4C /* Currency */,
 				2674BC7C28D0596500E31A20 /* EPWatchCore.docc */,
 				2674BCB228D0871800E31A20 /* Formatting */,
 				269687A328D3B5EA002142BF /* Models */,
@@ -525,7 +543,7 @@
 				26624AE628C883C9000F7E2E /* Log.swift */,
 				2602DE4E290BCD7E00CC83F2 /* LogOnce.swift */,
 				2602DE4A290B0DE300CC83F2 /* String+AppGroupIdentifier.swift */,
-				26F28FE62910796700D42DFB /* String+Localized.swift */,
+				2657332E2907244300CE9A4C /* String+Localized.swift */,
 				2696879D28D3A2C8002142BF /* UserDefaults+AppGroup.swift */,
 				26F28FD62910773A00D42DFB /* WCSessionActivationState+Description.swift */,
 			);
@@ -553,9 +571,6 @@
 		269687A328D3B5EA002142BF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2657331B2903121E00CE9A4C /* Currency.swift */,
-				265733272905D7C500CE9A4C /* CurrencyPresentation.swift */,
-				265733252905D7B000CE9A4C /* CurrencySubdivision.swift */,
 				26573319290311C200CE9A4C /* PriceArea.swift */,
 				269687A428D3B5F8002142BF /* PriceLimits.swift */,
 				26624AEF28C92D3C000F7E2E /* PricePoint.swift */,
@@ -607,6 +622,7 @@
 				26F28FDB2910778300D42DFB /* ShareLogsState.swift */,
 				26F28FDA2910778300D42DFB /* SupportSettingsView.swift */,
 				26AC446429112D5D00B86B1E /* CircularProgressView.swift */,
+				265733302907291700CE9A4C /* PriceViewFooter.swift */,
 			);
 			path = EPWatch;
 			sourceTree = "<group>";
@@ -626,6 +642,14 @@
 				2696882228D4784A002142BF /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		26AC447029126A4D00B86B1E /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				26F28FE62910796700D42DFB /* String+Localized.swift */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		26C71B1928C1469D00C2DC59 /* Frameworks */ = {
@@ -947,7 +971,6 @@
 				2607879328D66A1200FF2C33 /* DayAheadPrices.swift in Sources */,
 				26490D23290DB6CD0030AEE1 /* PriceRange.swift in Sources */,
 				26AC446C291269EB00B86B1E /* Log.swift in Sources */,
-				26AC446E291269EB00B86B1E /* String+Localized.swift in Sources */,
 				26AC4468291269EB00B86B1E /* LogOnce.swift in Sources */,
 				260787BA28D711FF00FF2C33 /* PricePointLargeWidgetView.swift in Sources */,
 				26490D27290DB6CD0030AEE1 /* PriceLimits.swift in Sources */,
@@ -956,6 +979,7 @@
 				26490D22290DB6CD0030AEE1 /* Currency.swift in Sources */,
 				265733242905D09500CE9A4C /* BasicSettingsNavigationLink.swift in Sources */,
 				26490D21290DB6CD0030AEE1 /* CurrencySubdivision.swift in Sources */,
+				26AC447129126A6000B86B1E /* String+Localized.swift in Sources */,
 				26AC446F291269EB00B86B1E /* WCSessionActivationState+Description.swift in Sources */,
 				2607879428D66A1200FF2C33 /* PricesAPI.swift in Sources */,
 				2607878E28D669D700FF2C33 /* AppState.swift in Sources */,
@@ -964,6 +988,7 @@
 				26490D28290DB6CD0030AEE1 /* PricePoint.swift in Sources */,
 				26490D25290DB6CD0030AEE1 /* Region.swift in Sources */,
 				260787B628D7109C00FF2C33 /* PricePointCircularWidgetView.swift in Sources */,
+				2657332C29070FBF00CE9A4C /* ExchangeRate.swift in Sources */,
 				260787BE28D712BB00FF2C33 /* PricePointWidgetView.swift in Sources */,
 				2657332A2905E3B600CE9A4C /* SettingsSection.swift in Sources */,
 				2607879028D669D700FF2C33 /* PriceChartView.swift in Sources */,
@@ -1027,6 +1052,7 @@
 			files = (
 				26F28FDD2910778300D42DFB /* ShareLogsState.swift in Sources */,
 				2696881928D477ED002142BF /* ContentView.swift in Sources */,
+				265733312907291700CE9A4C /* PriceViewFooter.swift in Sources */,
 				2696883428D4801F002142BF /* SettingsView.swift in Sources */,
 				26AC446529112D5D00B86B1E /* CircularProgressView.swift in Sources */,
 				26F28FDC2910778300D42DFB /* SupportSettingsView.swift in Sources */,

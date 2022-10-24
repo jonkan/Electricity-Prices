@@ -39,7 +39,7 @@ struct PriceView_Previews: PreviewProvider {
             currentPrice: .mockPrice,
             prices: .mockPrices,
             limits: .mockLimits,
-            currencyPresentation: .natural
+            currencyPresentation: .automatic
         )
     }
 }

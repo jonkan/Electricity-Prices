@@ -9,6 +9,6 @@ import Foundation
 
 public struct CurrencySubdivision {
     public let name: String
-    public let sign: String
+    public let symbol: String
     public let subdivisions: Double
 }

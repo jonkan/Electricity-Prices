@@ -25,13 +25,31 @@ public enum Currency: String, Codable, CaseIterable, Identifiable, Equatable {
     public var name: String {
         switch self {
         case .EUR: return "Euro"
-        case .SEK: return "Swedish kronor"
-        case .NOK: return "Norwegian kroner"
-        case .DKK: return "Danish kroner"
+        case .SEK: return "Swedish krona"
+        case .NOK: return "Norwegian krone"
+        case .DKK: return "Danish krone"
         }
     }
 
-    public var sign: String {
+    public var shortName: String {
+        switch self {
+        case .EUR: return "Euro"
+        case .SEK: return "Krona"
+        case .NOK: return "Krone"
+        case .DKK: return "Krone"
+        }
+    }
+
+    public var shortNamePlural: String {
+        switch self {
+        case .EUR: return "Euro"
+        case .SEK: return "Kronor"
+        case .NOK: return "Kroner"
+        case .DKK: return "Kroner"
+        }
+    }
+
+    public var symbol: String {
         switch self {
         case .EUR: return "€"
         case .SEK: return "kr"
@@ -42,10 +60,10 @@ public enum Currency: String, Codable, CaseIterable, Identifiable, Equatable {
 
     public var subdivision: CurrencySubdivision {
         switch self {
-        case .EUR: return CurrencySubdivision(name: "Cent", sign: "c", subdivisions: 100)
-        case .SEK: return CurrencySubdivision(name: "Öre", sign: "öre", subdivisions: 100)
-        case .NOK: return CurrencySubdivision(name: "Øre", sign: "øre", subdivisions: 100)
-        case .DKK: return CurrencySubdivision(name: "Øre", sign: "øre", subdivisions: 100)
+        case .EUR: return CurrencySubdivision(name: "Cent", symbol: "c", subdivisions: 100)
+        case .SEK: return CurrencySubdivision(name: "Öre", symbol: "öre", subdivisions: 100)
+        case .NOK: return CurrencySubdivision(name: "Øre", symbol: "øre", subdivisions: 100)
+        case .DKK: return CurrencySubdivision(name: "Øre", symbol: "øre", subdivisions: 100)
         }
     }
 
@@ -85,7 +103,7 @@ extension Currency {
         return nf
     }()
 
-    func formatted(
+    public func formatted(
         _ price: Double,
         _ style: FormattingStyle,
         _ currencyPresentation: CurrencyPresentation
@@ -94,7 +112,7 @@ extension Currency {
         var isSubdivided = currencyPresentation == .subdivided
         let subdividedPrice = price * subdivision.subdivisions
         switch (style, currencyPresentation) {
-        case (.normal, .natural):
+        case (.normal, .automatic):
             if price >= 1 {
                 value = Self.formatterNormal.string(from: price) ?? ""
             } else {
@@ -103,7 +121,7 @@ extension Currency {
             }
         case (.normal, .subdivided):
             value = Self.formatterNormalSmall.string(from: subdividedPrice) ?? ""
-        case (.short, .natural):
+        case (.short, .automatic):
             if price >= 1 {
                 value = Self.formatterShort.string(from: price) ?? ""
             } else {
@@ -114,17 +132,21 @@ extension Currency {
         }
 
         let formattedPrice: String
-        let showSign = style == .normal
-        if showSign {
+        let showSymbol = style == .normal
+        if showSymbol {
             switch self {
             case .EUR:
                 if isSubdivided {
-                    formattedPrice = "\(value)\(subdivision.sign)"
+                    formattedPrice = "\(value)\(subdivision.symbol)"
                 } else {
-                    formattedPrice = "\(sign)\(value)"
+                    formattedPrice = "\(symbol)\(value)"
                 }
             default:
-                formattedPrice = "\(value) \(sign)"
+                if isSubdivided {
+                    formattedPrice = "\(value) \(subdivision.symbol)"
+                } else {
+                    formattedPrice = "\(value) \(symbol)"
+                }
             }
         } else {
             formattedPrice = "\(value)"

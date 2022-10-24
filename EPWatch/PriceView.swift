@@ -27,7 +27,6 @@ struct PriceView: View {
                 limits: limits,
                 useCurrencyAxisFormat: true
             )
-
         }
         .padding(.vertical, 8)
     }
@@ -40,7 +39,7 @@ struct PriceView_Previews: PreviewProvider {
             currentPrice: .mockPrice,
             prices: .mockPrices,
             limits: .mockLimits,
-            currencyPresentation: .natural
+            currencyPresentation: .automatic
         )
     }
 }

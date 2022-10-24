@@ -8,7 +8,7 @@
 import Foundation
 
 public enum CurrencyPresentation: String, Codable, CaseIterable, Identifiable, Equatable {
-    case natural
+    case automatic
     case subdivided
 
     public var id: String {

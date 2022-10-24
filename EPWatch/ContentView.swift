@@ -18,13 +18,21 @@ struct ContentView: View {
         NavigationStack {
             List {
                 if let currentPrice = state.currentPrice {
-                    PriceView(
-                        currentPrice: currentPrice,
-                        prices: state.prices.filterInSameDayAs(currentPrice),
-                        limits: state.priceLimits,
-                        currencyPresentation: state.currencyPresentation
-                    )
-                    .frame(minHeight: 200)
+                    Section {
+                        PriceView(
+                            currentPrice: currentPrice,
+                            prices: state.prices.filterInSameDayAs(currentPrice),
+                            limits: state.priceLimits,
+                            currencyPresentation: state.currencyPresentation
+                        )
+                        .frame(minHeight: 200)
+                    } footer: {
+                        PriceViewFooter(
+                            priceArea: state.priceArea,
+                            region: state.region,
+                            exchangeRate: state.exchangeRate
+                        )
+                    }
                 } else {
                     HStack {
                         Spacer()
@@ -50,6 +58,13 @@ struct ContentView: View {
             .sheet(isPresented: $showsSettings) {
                 NavigationStack {
                     SettingsView()
+                }
+            }
+            .refreshable {
+                do {
+                    try await state.updatePricesIfNeeded()
+                } catch {
+                    LogError(error)
                 }
             }
         }

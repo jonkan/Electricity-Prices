@@ -55,7 +55,7 @@ public enum Region: String, Codable, CaseIterable, Identifiable, Equatable {
         case .albania:          return "Albania"
         case .austria:          return "Austria"
         case .belgium:          return "Belgium"
-        case .bosnia:           return "Bosnia and Herz."
+        case .bosnia:           return "Bosnia and Herzegovina"
         case .bulgaria:         return "Bulgaria"
         case .croatia:          return "Croatia"
         case .cyprus:           return "Cyprus"

@@ -19,7 +19,7 @@ public struct SettingsSection: View {
                 title: "Region",
                 values: Region.allCases,
                 currentValue: $state.region,
-                displayValue: { $0.name }
+                displayValue: { $0.name.localized }
             )
             if let region = state.region {
                 BasicSettingsNavigationLink(
@@ -33,15 +33,20 @@ public struct SettingsSection: View {
                 title: "Currency",
                 values: Currency.allCases,
                 currentValue: $state.currency,
-                displayValue: { $0.name }
+                displayValue: { $0.name.localized }
             )
+        }
+        Section {
             CurrencyPresentationSettingsNavigationLink()
         } footer: {
             switch state.currencyPresentation {
-            case .natural:
-                Text("Widgets will always show prices in \(state.currency.sign)")
+            case .automatic:
+                VStack(alignment: .leading) {
+                    Text("\(state.currency.subdivision.name) is used if the price is lower than \(state.currency.formatted(1, .normal, .automatic))")
+                    Text("Widgets always show prices in \("\(state.currency.shortNamePlural.localized.lowercased()) (\(state.currency.symbol))")")
+                }
             case .subdivided:
-                Text("Widgets will always show prices in \(state.currency.subdivision.sign)")
+                Text("\(state.currency.subdivision.name) is always used")
             }
         }
     }

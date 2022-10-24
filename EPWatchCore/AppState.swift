@@ -57,7 +57,7 @@ public class AppState: ObservableObject {
     }
 
     @AppStorageCodable("CurrencyPresentation", storage: .appGroup)
-    public var currencyPresentation: CurrencyPresentation = .natural {
+    public var currencyPresentation: CurrencyPresentation = .automatic {
         didSet {
             guard oldValue != currencyPresentation else { return }
             Log("CurrencyPresentation did change: \(currencyPresentation)")
@@ -77,8 +77,8 @@ public class AppState: ObservableObject {
         return allPriceLimits.first(where: { $0.currency == currency })!
     }
 
-    @AppStorageCodable("CurrencyConversion", storage: .appGroup)
-    private var cachedForex: ForexRate? = nil
+    @AppStorageCodable("ExchangeRate", storage: .appGroup)
+    public var exchangeRate: ExchangeRate? = nil
 
     private var invalidateAndUpdatePricesSubject = PassthroughSubject<Void, Never>()
     private var invalidateAndUpdatePricesCancellable: AnyCancellable?
@@ -218,13 +218,13 @@ public class AppState: ObservableObject {
             throw NSError(0, "No price area selected")
         }
         let dayAheadPrices = try await PricesAPI.shared.downloadDayAheadPrices(for: priceArea)
-        let rate = try await currentForexRate()
+        let rate = try await currentExchangeRate()
         let prices = try dayAheadPrices.prices(using: rate)
         return prices
     }
 
-    private func currentForexRate() async throws -> ForexRate {
-        if let forexRate = cachedForex,
+    public func currentExchangeRate() async throws -> ExchangeRate {
+        if let forexRate = exchangeRate,
            forexRate.isUpToDate,
            forexRate.from == .EUR,
            forexRate.to == currency {
@@ -232,7 +232,7 @@ public class AppState: ObservableObject {
         }
         Log("Downloading forex")
         let res = try await ForexAPI.shared.download(from: .EUR, to: currency)
-        cachedForex = res
+        exchangeRate = res
         return res
     }
 
@@ -242,7 +242,9 @@ extension AppState {
     public static let mocked: AppState = {
         let s = AppState()
         s.currentPrice = .mockPrice
+        s.priceArea = Region.sweden.priceAreas.first
         s.prices = .mockPrices
+        s.exchangeRate = .mocked
         return s
     }()
 }

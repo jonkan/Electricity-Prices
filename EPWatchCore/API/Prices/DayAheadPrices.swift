@@ -67,7 +67,7 @@ struct DayAheadPrices: Codable {
         return point.priceAmount
     }
 
-    func prices(using rate: ForexRate) throws -> [PricePoint] {
+    func prices(using rate: ExchangeRate) throws -> [PricePoint] {
         guard rate.from == .EUR else {
             throw NSError(0, "Unexpected forex rate, prices must be converted from EUR")
         }

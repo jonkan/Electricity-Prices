@@ -1,17 +1,70 @@
-/* No comment provided by engineer. */
 "Done" = "Klar";
 
-/* No comment provided by engineer. */
 "Electricity price" = "Elpriset";
 
-/* No comment provided by engineer. */
-"Price area" = "Elområde";
-
-/* No comment provided by engineer. */
 "Fetching prices..." = "Hämtar priser...";
-
-/* No comment provided by engineer. */
 "Displays the current electricity price" = "Visar nuvarande elpris";
+
+"Region" = "Land";
+"Price area" = "Elområde";
+"Price area: %@" = "Elområde: %@";
+"Exchange rate: %@" = "Växelkurs: %@";
+"%@ is used if the price is lower than %@" = "%@ används om priset är under %@";
+"Widgets always show prices in %@" = "Widgets visar alltid priser i %@";
+
+"Currency" = "Valuta";
+"Currency symbol" = "Valutasymbol";
+"Automatic" = "Automatisk";
+
+"Euro" = "Euro";
+"Swedish krona" = "Svensk krona";
+"Krona" = "Krona";
+"Kronor" = "Kronor";
+"Norwegian krone" = "Norsk krona";
+"Krone" = "Krona";
+"Kroner" = "Kronor";
+"Danish krone" = "Dansk krona";
+
+"Albania" = "Albanien";
+"Austria" = "Österrike";
+"Belgium" = "Belgien";
+"Bosnia and Herzegovina" = "Bosnien och Hercegovina";
+"Bulgaria" = "Bulgarien";
+"Croatia" = "Kroatien";
+"Cyprus" = "Cypern";
+"Czech Republic" = "Tjeckien";
+"Denmark" = "Danmark";
+"Estonia" = "Estland";
+"Finland" = "Finland";
+"France" = "Frankrike";
+"Georgia" = "Georgien";
+"Germany" = "Tyskland";
+"Greece" = "Grekland";
+"Hungary" = "Ungern";
+"Ireland" = "Irland";
+"Italy" = "Italien";
+"Kosovo" = "Kosovo";
+"Latvia" = "Lettland";
+"Lithuania" = "Lituen";
+"Luxembourg" = "Luxemburg";
+"Malta" = "Malta";
+"Moldova" = "Moldavien";
+"Montenegro" = "Montenegro";
+"Netherlands" = "Nederländerna";
+"North Macedonia" = "Nordmakedonien";
+"Norway" = "Norge";
+"Poland" = "Polen";
+"Portugal" = "Portugal";
+"Romania" = "Rumänien";
+"Serbia" = "Serbien";
+"Slovakia" = "Slovakien";
+"Slovenia" = "Slovenien";
+"Spain" = "Spanien";
+"Sweden" = "Sverige";
+"Switzerland" = "Schweiz";
+"Turkey" = "Turkiet";
+"Ukraine" = "Ukraina";
+"United Kingdom" = "Storbritannien";
 
 "Support" = "Support";
 "Please report any issues to " = "Rapportera gärna fel till ";
