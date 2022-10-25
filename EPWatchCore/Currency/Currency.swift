@@ -71,37 +71,56 @@ public enum Currency: String, Codable, CaseIterable, Identifiable, Equatable {
 
 extension Currency {
 
-    static private let formatterNormal: NumberFormatter = {
-        let nf = NumberFormatter()
-        nf.numberStyle = .decimal
-        nf.maximumSignificantDigits = 3
-        nf.minimumSignificantDigits = 3
-        return nf
-    }()
+    private enum Precision {
+        case threeSignificantDigits
+        case twoSignificantDigits
+        case oneFractionDigit
+        case integer
+        case integerWithoutGrouping
 
-    static private let formatterNormalSmall: NumberFormatter = {
-        let nf = NumberFormatter()
-        nf.numberStyle = .decimal
-        nf.maximumSignificantDigits = 2
-        nf.minimumSignificantDigits = 2
-        return nf
-    }()
+        func formatted(_ value: Double) -> String {
+            Currency.formatters[self]!.string(from: value as NSNumber) ?? ""
+        }
+    }
 
-    static private let formatterShort: NumberFormatter = {
-        let nf = NumberFormatter()
-        nf.numberStyle = .decimal
-        nf.maximumSignificantDigits = 2
-        nf.minimumSignificantDigits = 2
-        return nf
-    }()
-
-    static private let formatterShortSmall: NumberFormatter = {
-        let nf = NumberFormatter()
-        nf.numberStyle = .decimal
-        nf.maximumFractionDigits = 1
-        nf.minimumFractionDigits = 1
-        return nf
-    }()
+    static private var formatters: [Precision: NumberFormatter] = [
+        .threeSignificantDigits: {
+            let nf = NumberFormatter()
+            nf.numberStyle = .decimal
+            nf.maximumSignificantDigits = 3
+            nf.minimumSignificantDigits = 3
+            return nf
+        }(),
+        .twoSignificantDigits: {
+            let nf = NumberFormatter()
+            nf.numberStyle = .decimal
+            nf.maximumSignificantDigits = 2
+            nf.minimumSignificantDigits = 2
+            return nf
+        }(),
+        .oneFractionDigit: {
+            let nf = NumberFormatter()
+            nf.numberStyle = .decimal
+            nf.maximumFractionDigits = 1
+            nf.minimumFractionDigits = 1
+            return nf
+        }(),
+        .integer: {
+            let nf = NumberFormatter()
+            nf.numberStyle = .decimal
+            nf.maximumFractionDigits = 0
+            nf.minimumFractionDigits = 0
+            return nf
+        }(),
+        .integerWithoutGrouping: {
+            let nf = NumberFormatter()
+            nf.numberStyle = .decimal
+            nf.maximumFractionDigits = 0
+            nf.minimumFractionDigits = 0
+            nf.usesGroupingSeparator = false
+            return nf
+        }()
+    ]
 
     public func formatted(
         _ price: Double,
@@ -114,21 +133,29 @@ extension Currency {
         switch (style, currencyPresentation) {
         case (.normal, .automatic):
             if price >= 1 {
-                value = Self.formatterNormal.string(from: price) ?? ""
+                value = Precision.threeSignificantDigits.formatted(price)
             } else {
                 isSubdivided = true
-                value = Self.formatterNormalSmall.string(from: subdividedPrice) ?? ""
+                value = Precision.twoSignificantDigits.formatted(subdividedPrice)
             }
         case (.normal, .subdivided):
-            value = Self.formatterNormalSmall.string(from: subdividedPrice) ?? ""
+            if price >= 10 {
+                value = Precision.integer.formatted(subdividedPrice)
+            } else {
+                value = Precision.threeSignificantDigits.formatted(subdividedPrice)
+            }
         case (.short, .automatic):
             if price >= 1 {
-                value = Self.formatterShort.string(from: price) ?? ""
+                value = Precision.twoSignificantDigits.formatted(price)
             } else {
-                value = Self.formatterShortSmall.string(from: price) ?? ""
+                value = Precision.oneFractionDigit.formatted(price)
             }
         case (.short, .subdivided):
-            value = Self.formatterShortSmall.string(from: subdividedPrice) ?? ""
+            if subdividedPrice >= 10 {
+                value = Precision.integerWithoutGrouping.formatted(subdividedPrice)
+            } else {
+                value = Precision.oneFractionDigit.formatted(subdividedPrice)
+            }
         }
 
         let formattedPrice: String

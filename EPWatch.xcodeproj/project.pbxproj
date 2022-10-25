@@ -64,6 +64,7 @@
 		2657332A2905E3B600CE9A4C /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733292905E3B600CE9A4C /* SettingsSection.swift */; };
 		2657332C29070FBF00CE9A4C /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657332B29070FBF00CE9A4C /* ExchangeRate.swift */; };
 		265733312907291700CE9A4C /* PriceViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733302907291700CE9A4C /* PriceViewFooter.swift */; };
+		265733332907D2C100CE9A4C /* CurrencyFormattingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733322907D2C100CE9A4C /* CurrencyFormattingTests.swift */; };
 		2674BC6428D0572D00E31A20 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2674BC6328D0572D00E31A20 /* WidgetKit.framework */; };
 		2674BC6628D0572D00E31A20 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2674BC6528D0572D00E31A20 /* SwiftUI.framework */; };
 		2674BC6928D0572D00E31A20 /* EPWatchKitAppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BC6828D0572D00E31A20 /* EPWatchKitAppExtension.swift */; };
@@ -253,6 +254,7 @@
 		2657332B29070FBF00CE9A4C /* ExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
 		2657332E2907244300CE9A4C /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		265733302907291700CE9A4C /* PriceViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewFooter.swift; sourceTree = "<group>"; };
+		265733322907D2C100CE9A4C /* CurrencyFormattingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormattingTests.swift; sourceTree = "<group>"; };
 		26624ADE28C7DB2E000F7E2E /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		26624AE228C7DBC1000F7E2E /* DayAheadPrices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayAheadPrices.swift; sourceTree = "<group>"; };
 		26624AE628C883C9000F7E2E /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
@@ -526,6 +528,7 @@
 		2674BC8628D0596500E31A20 /* EPWatchCoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				265733322907D2C100CE9A4C /* CurrencyFormattingTests.swift */,
 				26C71B1728C1468500C2DC59 /* day-ahead-prices-1.xml */,
 				263A126028D906CD00A11816 /* day-ahead-prices-2.xml */,
 				2674BC8728D0596500E31A20 /* EPWatchCoreTests.swift */,
@@ -1043,6 +1046,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2674BC8828D0596500E31A20 /* EPWatchCoreTests.swift in Sources */,
+				265733332907D2C100CE9A4C /* CurrencyFormattingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
