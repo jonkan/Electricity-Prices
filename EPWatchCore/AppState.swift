@@ -244,7 +244,7 @@ extension AppState {
         s.currentPrice = .mockPrice
         s.priceArea = Region.sweden.priceAreas.first
         s.prices = .mockPrices
-        s.exchangeRate = .mocked
+        s.exchangeRate = .mockedSEK
         return s
     }()
 }

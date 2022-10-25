@@ -65,10 +65,18 @@ extension ExchangeRate {
 }
 
 extension ExchangeRate {
-    public static let mocked = ExchangeRate(
+    public static let mockedSEK = ExchangeRate(
         date: "2022-09-07",
         from: .EUR,
         to: .SEK,
         rate: 10.700151
     )
+    public static var mockedEUR: ExchangeRate {
+        ExchangeRate(
+            date: "2022-09-07",
+            from: .EUR,
+            to: .EUR,
+            rate: 1
+        )
+    }
 }

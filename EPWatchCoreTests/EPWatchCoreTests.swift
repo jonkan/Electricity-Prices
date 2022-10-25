@@ -41,26 +41,26 @@ final class EPWatchCoreTests: XCTestCase {
     }
 
     func testPrices1() throws {
-        let prices = dayAheadPrices.prices(using: 1)
+        let prices = try dayAheadPrices.prices(using: .mockedEUR)
         let date1 = DateInRegion("2022-08-26 08:00:00", region: swedishRegion)!.date
         XCTAssertEqual(prices.price(for: date1)!.price, 0.61996, accuracy: 1e-10)
     }
 
     func testPrices2() throws {
-        let prices = dayAheadPrices.prices(using: 1)
+        let prices = try dayAheadPrices.prices(using: .mockedEUR)
         let date1 = DateInRegion("2022-08-26 14:33:00", region: swedishRegion)!.date
         XCTAssertEqual(prices.price(for: date1)!.price, 0.62810, accuracy: 1e-10)
     }
 
     func testPricesOrderedChronologically() throws {
-        let prices = dayAheadPrices.prices(using: 1)
+        let prices = try dayAheadPrices.prices(using: .mockedEUR)
         XCTAssertTrue(prices.first!.date < prices.last!.date)
     }
 
     func testDayPriceRange() throws {
         let dayStart = DateInRegion("2022-08-26 00:00:00", region: swedishRegion)!.date
         let dayEnd = DateInRegion("2022-08-26 24:00:00", region: swedishRegion)!.date
-        let prices = dayAheadPrices.prices(using: 1)
+        let prices = try dayAheadPrices.prices(using: .mockedEUR)
             .filter({
                 dayStart <= $0.date && $0.date < dayEnd })
         XCTAssertEqual(prices.count, 24)

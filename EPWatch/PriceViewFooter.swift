@@ -35,7 +35,7 @@ struct PriceViewFooter_Previews: PreviewProvider {
         PriceViewFooter(
             priceArea: Region.sweden.priceAreas.first,
             region: .sweden,
-            exchangeRate: .mocked
+            exchangeRate: .mockedSEK
         )
     }
 }
