@@ -65,6 +65,8 @@
 		2657332C29070FBF00CE9A4C /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657332B29070FBF00CE9A4C /* ExchangeRate.swift */; };
 		265733312907291700CE9A4C /* PriceViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733302907291700CE9A4C /* PriceViewFooter.swift */; };
 		265733332907D2C100CE9A4C /* CurrencyFormattingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733322907D2C100CE9A4C /* CurrencyFormattingTests.swift */; };
+		265733352907E35300CE9A4C /* UserPresentableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733342907E35300CE9A4C /* UserPresentableError.swift */; };
+		265733372907E5BF00CE9A4C /* DayAheadPricesErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733362907E5BF00CE9A4C /* DayAheadPricesErrorResponse.swift */; };
 		2674BC6428D0572D00E31A20 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2674BC6328D0572D00E31A20 /* WidgetKit.framework */; };
 		2674BC6628D0572D00E31A20 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2674BC6528D0572D00E31A20 /* SwiftUI.framework */; };
 		2674BC6928D0572D00E31A20 /* EPWatchKitAppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BC6828D0572D00E31A20 /* EPWatchKitAppExtension.swift */; };
@@ -255,6 +257,8 @@
 		2657332E2907244300CE9A4C /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		265733302907291700CE9A4C /* PriceViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewFooter.swift; sourceTree = "<group>"; };
 		265733322907D2C100CE9A4C /* CurrencyFormattingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormattingTests.swift; sourceTree = "<group>"; };
+		265733342907E35300CE9A4C /* UserPresentableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPresentableError.swift; sourceTree = "<group>"; };
+		265733362907E5BF00CE9A4C /* DayAheadPricesErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayAheadPricesErrorResponse.swift; sourceTree = "<group>"; };
 		26624ADE28C7DB2E000F7E2E /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		26624AE228C7DBC1000F7E2E /* DayAheadPrices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayAheadPrices.swift; sourceTree = "<group>"; };
 		26624AE628C883C9000F7E2E /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
@@ -485,6 +489,7 @@
 			isa = PBXGroup;
 			children = (
 				26624AE228C7DBC1000F7E2E /* DayAheadPrices.swift */,
+				265733362907E5BF00CE9A4C /* DayAheadPricesErrorResponse.swift */,
 				26624AF728C93E1F000F7E2E /* PricesAPI.swift */,
 			);
 			path = Prices;
@@ -548,6 +553,7 @@
 				2602DE4A290B0DE300CC83F2 /* String+AppGroupIdentifier.swift */,
 				2657332E2907244300CE9A4C /* String+Localized.swift */,
 				2696879D28D3A2C8002142BF /* UserDefaults+AppGroup.swift */,
+				265733342907E35300CE9A4C /* UserPresentableError.swift */,
 				26F28FD62910773A00D42DFB /* WCSessionActivationState+Description.swift */,
 			);
 			path = Utils;
@@ -992,6 +998,7 @@
 				26490D25290DB6CD0030AEE1 /* Region.swift in Sources */,
 				260787B628D7109C00FF2C33 /* PricePointCircularWidgetView.swift in Sources */,
 				2657332C29070FBF00CE9A4C /* ExchangeRate.swift in Sources */,
+				265733352907E35300CE9A4C /* UserPresentableError.swift in Sources */,
 				260787BE28D712BB00FF2C33 /* PricePointWidgetView.swift in Sources */,
 				2657332A2905E3B600CE9A4C /* SettingsSection.swift in Sources */,
 				2607879028D669D700FF2C33 /* PriceChartView.swift in Sources */,
@@ -1003,6 +1010,7 @@
 				26490D26290DB6CD0030AEE1 /* CurrencyPresentation.swift in Sources */,
 				26490D24290DB6CD0030AEE1 /* PriceArea.swift in Sources */,
 				265733202905446D00CE9A4C /* BasicSettingsView.swift in Sources */,
+				265733372907E5BF00CE9A4C /* DayAheadPricesErrorResponse.swift in Sources */,
 				260787B428D70D1200FF2C33 /* PricePointTimelineEntry.swift in Sources */,
 				26AC4469291269EB00B86B1E /* FileManager+Directories.swift in Sources */,
 				260787B828D711C100FF2C33 /* PricePointRectangularWidgetView.swift in Sources */,

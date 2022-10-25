@@ -14,22 +14,32 @@ struct RootView: View {
     @EnvironmentObject private var state: AppState
 
     var body: some View {
-        if let currentPrice = state.currentPrice {
-            NavigationStack {
-                TabView {
+        NavigationStack {
+            TabView {
+                if let currentPrice = state.currentPrice {
                     PriceView(
                         currentPrice: currentPrice,
                         prices: state.prices.filterInSameDayAs(currentPrice),
                         limits: state.priceLimits,
                         currencyPresentation: state.currencyPresentation
                     )
-                    SettingsView()
+                } else if state.isFetching {
+                    Text("Fetching prices...")
+                        .padding()
+                } else {
+                    VStack {
+                        Image(systemName: "x.circle")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .foregroundColor(.red)
+                            .frame(height: 40)
+                        Text("\(state.userPresentableError?.localizedDescription ?? "")")
+                            .font(.caption)
+                    }
                 }
-                .tabViewStyle(.page)
+                SettingsView()
             }
-        } else {
-            Text("Fetching prices...")
-                .padding()
+            .tabViewStyle(.page)
         }
     }
 
@@ -39,5 +49,8 @@ struct RootView_Previews: PreviewProvider {
     static var previews: some View {
         RootView()
             .environmentObject(AppState.mocked)
+        RootView()
+            .environmentObject(AppState.mockedWithError)
+            .previewDisplayName("Error")
     }
 }

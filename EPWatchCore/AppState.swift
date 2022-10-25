@@ -60,7 +60,7 @@ public class AppState: ObservableObject {
     public var currencyPresentation: CurrencyPresentation = .automatic {
         didSet {
             guard oldValue != currencyPresentation else { return }
-            Log("CurrencyPresentation did change: \(currencyPresentation)")
+            Log("Currency presentation did change: \(currencyPresentation)")
             // Workaround to make the settings view update after changing.
             Task { objectWillChange.send() }
         }
@@ -80,13 +80,28 @@ public class AppState: ObservableObject {
     @AppStorageCodable("ExchangeRate", storage: .appGroup)
     public var exchangeRate: ExchangeRate? = nil
 
+    public var isFetching: Bool {
+        updateTask != nil
+    }
+
+    public var userPresentableError: UserPresentableError? {
+        didSet {
+            Log("User presentable error did change: \(userPresentableError?.localizedDescription ?? "nil")")
+            Task { objectWillChange.send() }
+        }
+    }
+
     private var invalidateAndUpdatePricesSubject = PassthroughSubject<Void, Never>()
     private var invalidateAndUpdatePricesCancellable: AnyCancellable?
 
     @AppStorageCodable("LastAttemptFetchingTomorrowsPrices", storage: .appGroup)
     private var lastAttemptFetchingTomorrowsPrices: Date? = nil
 
-    private var updateTask: Task<Void, Never>?
+    private var updateTask: Task<Void, Error>? {
+        didSet {
+            objectWillChange.send()
+        }
+    }
 
     nonisolated
     public static let didUpdateDayAheadPrices = Notification.Name("didUpdateDayAheadPrices")
@@ -140,8 +155,11 @@ public class AppState: ObservableObject {
             objectWillChange.send()
             do {
                 _ = try await updatePricesIfNeeded()
+            } catch let presentable as UserPresentableError {
+                userPresentableError = presentable
             } catch {
                 LogError(error)
+                userPresentableError = UserPresentableError(error)
             }
             WidgetCenter.shared.reloadAllTimelines()
             objectWillChange.send()
@@ -153,8 +171,11 @@ public class AppState: ObservableObject {
         Task {
             do {
                 _ = try await updatePricesIfNeeded()
+            } catch let presentable as UserPresentableError {
+                userPresentableError = presentable
             } catch {
                 LogError(error)
+                userPresentableError = UserPresentableError(error)
             }
             completion?()
         }
@@ -169,7 +190,9 @@ public class AppState: ObservableObject {
         // only run one update at a time, so we can
         // await an already running task before launching
         // a new one, if needed.
+        // Since we're only waiting, we ignore any thrown error.
         _ = await updateTask?.result
+        updateTask = nil
 
         if let price = prices.price(for: .now),
            price.currency == currency {
@@ -199,17 +222,13 @@ public class AppState: ObservableObject {
 
         updateTask = Task {
             Log("Begin updating prices")
-            do {
-                prices = try await downloadPrices()
-                currentPrice = prices.price(for: .now)
-                Log("Success updating prices")
-                NotificationCenter.default.post(name: Self.didUpdateDayAheadPrices, object: self)
-            } catch {
-                LogError(error)
-                currentPrice = nil
-            }
+            prices = try await downloadPrices()
+            currentPrice = prices.price(for: .now)
+            Log("Success updating prices")
+            NotificationCenter.default.post(name: Self.didUpdateDayAheadPrices, object: self)
         }
-        _ = await updateTask?.result
+        _ = try await updateTask?.value
+        updateTask = nil
     }
 
     private func downloadPrices() async throws -> [PricePoint] {
@@ -245,6 +264,14 @@ extension AppState {
         s.priceArea = Region.sweden.priceAreas.first
         s.prices = .mockPrices
         s.exchangeRate = .mockedSEK
+        return s
+    }()
+
+    public static let mockedWithError: AppState = {
+        let s = AppState()
+        s.currentPrice = nil
+        s.priceArea = nil
+        s.userPresentableError = .noData
         return s
     }()
 }

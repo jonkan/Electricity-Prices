@@ -33,6 +33,8 @@ struct RootView: View {
                             exchangeRate: state.exchangeRate
                         )
                     }
+                } else if let error = state.userPresentableError {
+                    Text("\(error.localizedDescription)")
                 } else {
                     HStack {
                         Spacer()

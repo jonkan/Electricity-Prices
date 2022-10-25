@@ -64,10 +64,17 @@ class PricesAPI {
             let dayAheadPrices = try parseDayAheadPrices(fromXML: data)
             return dayAheadPrices
         } catch {
+            var userPresentableError: UserPresentableError?
             if let statusCode = downloadResponse.response?.statusCode, 200 <= statusCode, statusCode < 300 {
-                LogError("Failed to parse: \(String(data: data, encoding: .utf8) ?? "")")
+                do {
+                    let errorResponse = try parseErrorResponse(fromXML: data)
+                    userPresentableError = UserPresentableError(errorResponse)
+                } catch {
+                    LogError("Failed to parse: \(String(data: data, encoding: .utf8) ?? "")")
+                    throw error
+                }
             }
-            throw error
+            throw userPresentableError ?? error
         }
     }
 
@@ -81,6 +88,13 @@ class PricesAPI {
         decoder.keyDecodingStrategy = .convertFromCapitalized
         let dayAheadPrices = try decoder.decode(DayAheadPrices.self, from: data)
         return dayAheadPrices
+    }
+
+    func parseErrorResponse(fromXML data: Data) throws -> DayAheadPricesErrorResponse {
+        let decoder = XMLDecoder()
+        decoder.keyDecodingStrategy = .convertFromCapitalized
+        let error = try decoder.decode(DayAheadPricesErrorResponse.self, from: data)
+        return error
     }
 
 }
