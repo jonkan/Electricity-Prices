@@ -12,7 +12,7 @@ public struct WidgetView: View {
 
     @Environment(\.widgetFamily) private var widgetFamily
 
-    var entry: PricePointTimelineEntry
+    let entry: PricePointTimelineEntry
 
     public init(entry: PricePointTimelineEntry) {
         self.entry = entry

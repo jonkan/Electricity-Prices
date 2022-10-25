@@ -8,7 +8,7 @@
 import Foundation
 
 public struct PriceArea: Codable, Identifiable, Equatable {
-    public var title: String
-    public var id: String
-    public var code: String
+    public let title: String
+    public let id: String
+    public let code: String
 }

@@ -9,10 +9,10 @@ import WidgetKit
 
 public struct PricePointTimelineEntry: TimelineEntry {
 
-    var pricePoint: PricePoint
-    var prices: [PricePoint]
-    var limits: PriceLimits
-    var currencyPresentation: CurrencyPresentation
+    let pricePoint: PricePoint
+    let prices: [PricePoint]
+    let limits: PriceLimits
+    let currencyPresentation: CurrencyPresentation
 
     public init(
         pricePoint: PricePoint,

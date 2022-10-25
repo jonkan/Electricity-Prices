@@ -9,10 +9,10 @@ import SwiftUI
 
 public struct BasicSettingsNavigationLink<SettingsValue: Identifiable & Equatable>: View {
 
-    var title: String
-    var values: [SettingsValue]
+    let title: String
+    let values: [SettingsValue]
     @Binding var currentValue: SettingsValue?
-    var displayValue: (SettingsValue) -> String
+    let displayValue: (SettingsValue) -> String
 
     public init(
         title: String,

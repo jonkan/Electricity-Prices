@@ -8,9 +8,9 @@
 import Foundation
 
 public struct PriceRange {
-    public var date: Date
-    public var min: Double
-    public var max: Double
+    public let date: Date
+    public let min: Double
+    public let max: Double
 
     public init(date: Date, min: Double, max: Double) {
         self.date = date

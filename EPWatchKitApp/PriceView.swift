@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Charts
 import EPWatchCore
 
 struct PriceView: View {

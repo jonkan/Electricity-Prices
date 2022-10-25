@@ -12,10 +12,10 @@ import WidgetKit
 public struct PriceChartView: View {
 
     @Environment(\.widgetRenderingMode) private var widgetRenderingMode
-    var currentPrice: PricePoint
-    var prices: [PricePoint]
-    var limits: PriceLimits
-    var useCurrencyAxisFormat: Bool
+    let currentPrice: PricePoint
+    let prices: [PricePoint]
+    let limits: PriceLimits
+    let useCurrencyAxisFormat: Bool
 
     public init(
         currentPrice: PricePoint,

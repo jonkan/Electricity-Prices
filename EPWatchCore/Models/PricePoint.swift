@@ -9,10 +9,10 @@ import Foundation
 import SwiftDate
 
 public struct PricePoint: Codable, Equatable {
-    public var date: Date // And 1h forward
-    public var price: Double
-    public var dayPriceRange: ClosedRange<Double>
-    public var currency: Currency
+    public let date: Date // And 1h forward
+    public let price: Double
+    public let dayPriceRange: ClosedRange<Double>
+    public let currency: Currency
 
     public init(
         date: Date,
@@ -88,9 +88,12 @@ public extension Array where Element == PricePoint {
         PricePoint(date: "2022-09-19T21:00:00+0000", price: 0.157547565, dayPriceRange: 0.157547565...4.359819681, currency: .SEK)
     ].enumerated().map({ (i, p) in
         let h = TimeInterval(i * 60 * 60)
-        var p = p
-        p.date = .now.dateAtStartOf(.day).addingTimeInterval(h)
-        return p
+        return PricePoint(
+            date: .now.dateAtStartOf(.day).addingTimeInterval(h),
+            price: p.price,
+            dayPriceRange: p.dayPriceRange,
+            currency: p.currency
+        )
     })
 
     static let mockPricesLow: [PricePoint] = [
@@ -120,12 +123,15 @@ public extension Array where Element == PricePoint {
         PricePoint(date: "2022-10-05T21:00:00+0000", price: -0.0020551, dayPriceRange: -0.00205515...0.83190470, currency: .SEK)
     ].enumerated().map({ (i, p) in
         let h = TimeInterval(i * 60 * 60)
-        var p = p
-        p.date = .now.dateAtStartOf(.day).addingTimeInterval(h)
-        return p
+        return PricePoint(
+            date: .now.dateAtStartOf(.day).addingTimeInterval(h),
+            price: p.price,
+            dayPriceRange: p.dayPriceRange,
+            currency: p.currency
+        )
     })
 
-     func price(for date: Date) -> PricePoint? {
+    func price(for date: Date) -> PricePoint? {
         let d = date.in(region: .UTC)
         return first(where: {
             guard Calendar.current.isDate($0.date, inSameDayAs: date) else {

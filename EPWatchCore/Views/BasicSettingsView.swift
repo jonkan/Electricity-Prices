@@ -9,9 +9,9 @@ import SwiftUI
 
 public struct BasicSettingsView<SettingsValue: Identifiable & Equatable>: View {
 
-    var values: [SettingsValue]
+    let values: [SettingsValue]
     @Binding var currentValue: SettingsValue?
-    var displayValue: (SettingsValue) -> String
+    let displayValue: (SettingsValue) -> String
     @Environment(\.dismiss) private var dismiss
 
     public init(

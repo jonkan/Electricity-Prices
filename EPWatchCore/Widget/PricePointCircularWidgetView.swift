@@ -9,7 +9,7 @@ import SwiftUI
 
 public struct PricePointCircularWidgetView: View {
 
-    var entry: PricePointTimelineEntry
+    let entry: PricePointTimelineEntry
 
     public init(entry: PricePointTimelineEntry) {
         self.entry = entry
