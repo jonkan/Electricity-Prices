@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  RootView.swift
 //  EPWatch
 //
 //  Created by Jonas Bromö on 2022-09-16.
@@ -8,7 +8,7 @@
 import SwiftUI
 import EPWatchCore
 
-struct ContentView: View {
+struct RootView: View {
 
     @EnvironmentObject private var state: AppState
 
@@ -72,9 +72,9 @@ struct ContentView: View {
 
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct RootView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        RootView()
             .environmentObject(AppState.mocked)
     }
 }

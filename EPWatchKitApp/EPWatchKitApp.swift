@@ -21,7 +21,7 @@ struct EPWatchKitApp: App {
 
     @SceneBuilder var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
                 .environmentObject(AppState.shared)
                 .environmentObject(HostCommunicationManager.shared)
         }
