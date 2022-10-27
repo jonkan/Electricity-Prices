@@ -15,18 +15,18 @@ public struct PriceChartView: View {
     var currentPrice: PricePoint
     var prices: [PricePoint]
     var limits: PriceLimits
-    var currencyAxisFormat: Bool
+    var useCurrencyAxisFormat: Bool
 
     public init(
         currentPrice: PricePoint,
         prices: [PricePoint],
         limits: PriceLimits,
-        currencyAxisFormat: Bool = false
+        useCurrencyAxisFormat: Bool = false
     ) {
         self.currentPrice = currentPrice
         self.prices = prices
         self.limits = limits
-        self.currencyAxisFormat = currencyAxisFormat
+        self.useCurrencyAxisFormat = useCurrencyAxisFormat
     }
 
     public var body: some View {
@@ -76,18 +76,18 @@ public struct PriceChartView: View {
         .widgetAccentable()
         .chartYAxis {
             if let axisYValues = axisYValues {
-                if currencyAxisFormat {
+                if useCurrencyAxisFormat {
                     AxisMarks(
-                        format: .currency(code: "SEK").precision(precision),
+                        format: currencyAxisFormat,
                         values: axisYValues
                     )
                 } else {
                     AxisMarks(values: axisYValues)
                 }
             } else {
-                if currencyAxisFormat {
+                if useCurrencyAxisFormat {
                     AxisMarks(
-                        format: .currency(code: "SEK").precision(precision)
+                        format: currencyAxisFormat
                     )
                 } else {
                     AxisMarks()
@@ -99,16 +99,16 @@ public struct PriceChartView: View {
 
     var axisYValues: [Double]? {
         if currentPrice.dayPriceRange.upperBound <= 1.5 {
-          return [0.0, 0.5, 1.0, 1.5]
+            return [0.0, 0.5, 1.0, 1.5]
         }
         return nil
     }
 
-    var precision: NumberFormatStyleConfiguration.Precision {
-        if currentPrice.dayPriceRange.upperBound <= 1.5 {
-            return .fractionLength(1)
+    var currencyAxisFormat: FloatingPointFormatStyle<Double>.Currency {
+        if currentPrice.dayPriceRange.upperBound <= 10 {
+            return .currency(code: "SEK").precision(.fractionLength(1))
         }
-        return .significantDigits(1)
+        return .currency(code: "SEK").precision(.significantDigits(2))
     }
 
 }
