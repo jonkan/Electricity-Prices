@@ -7,11 +7,15 @@
 
 import WidgetKit
 import Combine
+import SwiftUI
 
 public struct PricePointTimelineProvider: TimelineProvider {
 
     public typealias Entry = PricePointTimelineEntry
     var didUpdateDayAheadPricesCancellable: AnyCancellable?
+
+    @AppStorage("numberOfFailures")
+    var numberOfFailures: Int = 0
 
     public init() {
         didUpdateDayAheadPricesCancellable = NotificationCenter.default
@@ -75,12 +79,29 @@ public struct PricePointTimelineProvider: TimelineProvider {
                     )
                 }
                 let timeline = Timeline(entries: entries, policy: .atEnd)
+                numberOfFailures = 0
                 completion(timeline)
             } catch {
-                LogError(error)
-                completion(Timeline(entries: [], policy: .never))
+                LogError("Timeline failure \(numberOfFailures): \(String(describing: error))")
+                let delay = retryDelay(for: numberOfFailures)
+                numberOfFailures = numberOfFailures + 1
+                completion(Timeline(entries: [], policy: .after(.now.addingTimeInterval(delay))))
             }
         }
+    }
+
+    // Inspiration https://phelgo.com/exponential-backoff/
+    // This produces the delays (without the 0-30s jitter)
+    // 0: 30 s
+    // 1: 2 min
+    // 2: 8 min
+    // 3: 32 min
+    // 4: 60 min (max delay)
+    private func retryDelay(for retry: Int) -> TimeInterval {
+        let maxDelay: TimeInterval = 60 * 60
+        let delay = 30 * pow(4.0, Double(retry))
+        let jitter = 30 * TimeInterval.random(in: 0...1)
+        return min(delay + jitter, maxDelay)
     }
 
 }
