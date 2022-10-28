@@ -1,5 +1,5 @@
 //
-//  FileManager+DocumentsDirectory.swift
+//  FileManager+Directories.swift
 //  EPWatchCore
 //
 //  Created by Jonas Bromö on 2022-10-28.
@@ -21,4 +21,9 @@ extension FileManager {
         }
         return appGroupURL
     }
+
+    public func logFilesDirectory() -> URL {
+        return appGroupDirectory().appending(path: "logs", directoryHint: .isDirectory)
+    }
+
 }

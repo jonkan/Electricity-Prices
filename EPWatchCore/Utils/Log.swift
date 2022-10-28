@@ -134,9 +134,7 @@ private var logger: XCGLogger = {
     // Create a file log destination
     let bundleName = Bundle.main.infoDictionary!["CFBundleName"] as! String
     let logFileName = "\(bundleName).log"
-    let logFileUrl = FileManager.default.appGroupDirectory()
-        .appending(path: "logs", directoryHint: .isDirectory)
-        .appending(path: logFileName)
+    let logFileUrl = FileManager.default.logFilesDirectory().appending(path: logFileName)
     if !FileManager.default.fileExists(atPath: logFileUrl.path()) {
         try? FileManager.default.createDirectory(
             atPath: logFileUrl.deletingLastPathComponent().path(),

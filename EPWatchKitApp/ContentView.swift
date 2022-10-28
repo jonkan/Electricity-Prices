@@ -12,6 +12,7 @@ import Charts
 struct ContentView: View {
 
     @EnvironmentObject private var state: AppState
+    @EnvironmentObject private var communicationManager: HostCommunicationManager
 
     var body: some View {
         if let currentPrice = state.currentPrice {
@@ -25,6 +26,12 @@ struct ContentView: View {
                     SettingsView()
                 }
                 .tabViewStyle(.page)
+            }
+            .overlay {
+                if let progress = communicationManager.logFilesTransferProgress {
+                    ProgressView(value: progress.fractionCompleted)
+                        .progressViewStyle(.circular)
+                }
             }
         } else {
             Text("Fetching prices...")

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2602DE47290AD20200CC83F2 /* XCGLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 2602DE46290AD20200CC83F2 /* XCGLogger */; };
-		2602DE49290AD31E00CC83F2 /* FileManager+DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2602DE48290AD31E00CC83F2 /* FileManager+DocumentsDirectory.swift */; };
 		2602DE4B290B0DE300CC83F2 /* String+AppGroupIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2602DE4A290B0DE300CC83F2 /* String+AppGroupIdentifier.swift */; };
 		2602DE4F290BCD7E00CC83F2 /* LogOnce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2602DE4E290BCD7E00CC83F2 /* LogOnce.swift */; };
 		2602DE5F290D20FF00CC83F2 /* Calendar+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2602DE5E290D20FF00CC83F2 /* Calendar+Helpers.swift */; };
@@ -82,6 +81,13 @@
 		2696883728D4817D002142BF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879128D1CD91002142BF /* SettingsView.swift */; };
 		26CD57C428DAFFC3007FC8BB /* libEPWatchCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2607877728D6693000FF2C33 /* libEPWatchCore.a */; };
 		26EC4A1428D9C52C004DD8EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2696881A28D477EE002142BF /* Assets.xcassets */; };
+		26F28FD82910773A00D42DFB /* WCSessionActivationState+Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FD62910773A00D42DFB /* WCSessionActivationState+Description.swift */; };
+		26F28FD92910773A00D42DFB /* FileManager+Directories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FD72910773A00D42DFB /* FileManager+Directories.swift */; };
+		26F28FDC2910778300D42DFB /* SupportSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FDA2910778300D42DFB /* SupportSettingsView.swift */; };
+		26F28FDD2910778300D42DFB /* ShareLogsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FDB2910778300D42DFB /* ShareLogsState.swift */; };
+		26F28FDF2910782000D42DFB /* HostCommunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FDE2910781F00D42DFB /* HostCommunicationManager.swift */; };
+		26F28FE5291078B800D42DFB /* ActivityView in Frameworks */ = {isa = PBXBuildFile; productRef = 26F28FE4291078B800D42DFB /* ActivityView */; };
+		26F28FE72910796700D42DFB /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FE62910796700D42DFB /* String+Localized.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -202,7 +208,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2602DE48290AD31E00CC83F2 /* FileManager+DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+DocumentsDirectory.swift"; sourceTree = "<group>"; };
 		2602DE4A290B0DE300CC83F2 /* String+AppGroupIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AppGroupIdentifier.swift"; sourceTree = "<group>"; };
 		2602DE4E290BCD7E00CC83F2 /* LogOnce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOnce.swift; sourceTree = "<group>"; };
 		2602DE5E290D20FF00CC83F2 /* Calendar+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+Helpers.swift"; sourceTree = "<group>"; };
@@ -271,6 +276,12 @@
 		2696883228D47F3B002142BF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2696883528D4804A002142BF /* PriceAreaSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceAreaSettingsView.swift; sourceTree = "<group>"; };
 		26C71B1728C1468500C2DC59 /* day-ahead-prices-1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "day-ahead-prices-1.xml"; sourceTree = "<group>"; };
+		26F28FD62910773A00D42DFB /* WCSessionActivationState+Description.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WCSessionActivationState+Description.swift"; sourceTree = "<group>"; };
+		26F28FD72910773A00D42DFB /* FileManager+Directories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager+Directories.swift"; sourceTree = "<group>"; };
+		26F28FDA2910778300D42DFB /* SupportSettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportSettingsView.swift; sourceTree = "<group>"; };
+		26F28FDB2910778300D42DFB /* ShareLogsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareLogsState.swift; sourceTree = "<group>"; };
+		26F28FDE2910781F00D42DFB /* HostCommunicationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostCommunicationManager.swift; sourceTree = "<group>"; };
+		26F28FE62910796700D42DFB /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,6 +336,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26F28FE5291078B800D42DFB /* ActivityView in Frameworks */,
 				2607879528D66A5E00FF2C33 /* libEPWatchCore.a in Frameworks */,
 				2690401728D6682800A823F5 /* SwiftDate in Frameworks */,
 				261E7D3B28DB0F470018CB4A /* XMLCoder in Frameworks */,
@@ -409,6 +421,7 @@
 			children = (
 				261FC1A128B77720007B4A4E /* ContentView.swift */,
 				261FC19F28B77720007B4A4E /* EPWatchKitApp.swift */,
+				26F28FDE2910781F00D42DFB /* HostCommunicationManager.swift */,
 				2674BC4428CF7CF900E31A20 /* Notifications */,
 				261FC1AB28B77721007B4A4E /* Preview Content */,
 				2696878F28D10112002142BF /* PriceView.swift */,
@@ -494,11 +507,13 @@
 				26624AF328C93541000F7E2E /* AppStorageCodable.swift */,
 				2602DE5E290D20FF00CC83F2 /* Calendar+Helpers.swift */,
 				26624AE928C8EFFB000F7E2E /* Error.swift */,
-				2602DE48290AD31E00CC83F2 /* FileManager+DocumentsDirectory.swift */,
+				26F28FD72910773A00D42DFB /* FileManager+Directories.swift */,
 				26624AE628C883C9000F7E2E /* Log.swift */,
 				2602DE4E290BCD7E00CC83F2 /* LogOnce.swift */,
 				2602DE4A290B0DE300CC83F2 /* String+AppGroupIdentifier.swift */,
+				26F28FE62910796700D42DFB /* String+Localized.swift */,
 				2696879D28D3A2C8002142BF /* UserDefaults+AppGroup.swift */,
+				26F28FD62910773A00D42DFB /* WCSessionActivationState+Description.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -569,6 +584,8 @@
 				2696883028D47C4B002142BF /* PriceView.swift */,
 				2696882328D47864002142BF /* Resources */,
 				2696883228D47F3B002142BF /* SettingsView.swift */,
+				26F28FDB2910778300D42DFB /* ShareLogsState.swift */,
+				26F28FDA2910778300D42DFB /* SupportSettingsView.swift */,
 			);
 			path = EPWatch;
 			sourceTree = "<group>";
@@ -738,6 +755,7 @@
 				2690401028D6680B00A823F5 /* Alamofire */,
 				2690401628D6682800A823F5 /* SwiftDate */,
 				261E7D3A28DB0F470018CB4A /* XMLCoder */,
+				26F28FE4291078B800D42DFB /* ActivityView */,
 			);
 			productName = EPWatch;
 			productReference = 2696881428D477EC002142BF /* EPWatch.app */;
@@ -788,6 +806,7 @@
 				2690401228D6681800A823F5 /* XCRemoteSwiftPackageReference "XMLCoder" */,
 				2690401528D6682800A823F5 /* XCRemoteSwiftPackageReference "SwiftDate" */,
 				2602DE43290AD0D400CC83F2 /* XCRemoteSwiftPackageReference "XCGLogger" */,
+				26F28FE3291078B800D42DFB /* XCRemoteSwiftPackageReference "ActivityView" */,
 			);
 			productRefGroup = 261FC18C28B7771F007B4A4E /* Products */;
 			projectDirPath = "";
@@ -917,7 +936,6 @@
 				2607879028D669D700FF2C33 /* PriceChartView.swift in Sources */,
 				2607878A28D669D700FF2C33 /* FormattingStyle.swift in Sources */,
 				2607879228D66A1200FF2C33 /* ForexAPI.swift in Sources */,
-				2602DE49290AD31E00CC83F2 /* FileManager+DocumentsDirectory.swift in Sources */,
 				2607878B28D669D700FF2C33 /* PriceLimits.swift in Sources */,
 				2602DE4F290BCD7E00CC83F2 /* LogOnce.swift in Sources */,
 				260787BC28D7123A00FF2C33 /* PricePointInlineWidgetView.swift in Sources */,
@@ -928,7 +946,10 @@
 				2607878728D669D700FF2C33 /* Regions.swift in Sources */,
 				2607878628D669D700FF2C33 /* PriceFormatter.swift in Sources */,
 				260787B828D711C100FF2C33 /* PricePointRectangularWidgetView.swift in Sources */,
+				26F28FE72910796700D42DFB /* String+Localized.swift in Sources */,
 				2607878C28D669D700FF2C33 /* Error.swift in Sources */,
+				26F28FD82910773A00D42DFB /* WCSessionActivationState+Description.swift in Sources */,
+				26F28FD92910773A00D42DFB /* FileManager+Directories.swift in Sources */,
 				2607878428D669D700FF2C33 /* DateIntervalFormatter.swift in Sources */,
 				2607878D28D669D700FF2C33 /* PriceRange.swift in Sources */,
 			);
@@ -946,6 +967,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26F28FDF2910782000D42DFB /* HostCommunicationManager.swift in Sources */,
 				2696883728D4817D002142BF /* SettingsView.swift in Sources */,
 				261FC1A428B77720007B4A4E /* NotificationController.swift in Sources */,
 				261FC1A228B77720007B4A4E /* ContentView.swift in Sources */,
@@ -976,8 +998,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26F28FDD2910778300D42DFB /* ShareLogsState.swift in Sources */,
 				2696881928D477ED002142BF /* ContentView.swift in Sources */,
 				2696883428D4801F002142BF /* SettingsView.swift in Sources */,
+				26F28FDC2910778300D42DFB /* SupportSettingsView.swift in Sources */,
 				2696881728D477ED002142BF /* EPWatchApp.swift in Sources */,
 				2696883128D47C4B002142BF /* PriceView.swift in Sources */,
 			);
@@ -1601,6 +1625,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		26F28FE3291078B800D42DFB /* XCRemoteSwiftPackageReference "ActivityView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUI-Plus/ActivityView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1638,6 +1670,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2690401528D6682800A823F5 /* XCRemoteSwiftPackageReference "SwiftDate" */;
 			productName = SwiftDate;
+		};
+		26F28FE4291078B800D42DFB /* ActivityView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26F28FE3291078B800D42DFB /* XCRemoteSwiftPackageReference "ActivityView" */;
+			productName = ActivityView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

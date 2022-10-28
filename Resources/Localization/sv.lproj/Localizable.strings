@@ -10,5 +10,18 @@
 /* No comment provided by engineer. */
 "Fetching prices..." = "Hämtar priser...";
 
+<<<<<<< HEAD
 /* No comment provided by engineer. */
 "Displays the current electricity price" = "Visar nuvarande elpris";
+
+"Please report any issues to support@j0nas.se" = "Rapportera gärna fel till support@j0nas.se";
+"Tap to copy the email address" = "Peka för att kopiera e-postadressen";
+"Email adress copied!" = "E-post kopierad!";
+"Share" = "Dela";
+"Logs" = "Loggar";
+"%llu log files" = "%llu loggfiler";
+
+"Ready" = "Redo";
+"Waiting for the watch to respond" = "Väntar på att klockan ska svara";
+"Waiting for the watch to send its logs" = "Väntar på klockan att skicka sina loggar";
+"Processing logs" = "Behandlar loggar";

@@ -23,6 +23,7 @@ struct EPWatchApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(AppState.shared)
+                .environmentObject(ShareLogsState.shared)
         }
         .onChange(of: scenePhase) { phase in
             Log("Scene phase changed: \(scenePhase)")

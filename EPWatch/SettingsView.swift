@@ -15,17 +15,27 @@ struct SettingsView: View {
 
     var body: some View {
         List {
-            NavigationLink {
-                PriceAreaSettingsView(
-                    priceAreas: state.region.priceAreas,
-                    priceArea: $state.priceArea
-                )
-                .navigationTitle("Price area")
-            } label: {
-                HStack {
-                    Text("Price area")
-                    Spacer()
-                    Text(state.priceArea.title)
+            Section {
+                NavigationLink {
+                    PriceAreaSettingsView(
+                        priceAreas: state.region.priceAreas,
+                        priceArea: $state.priceArea
+                    )
+                    .navigationTitle("Price area")
+                } label: {
+                    HStack {
+                        Text("Price area")
+                        Spacer()
+                        Text(state.priceArea.title)
+                    }
+                }
+            }
+            Section {
+                NavigationLink {
+                    SupportSettingsView()
+                        .navigationTitle("Support")
+                } label: {
+                    Text("Support")
                 }
             }
         }
