@@ -13,12 +13,19 @@ struct EPWatchKitApp: App {
 
     @Environment(\.scenePhase) private var scenePhase
 
+    init() {
+#if DEBUG
+        LogDebugInformation()
+#endif
+    }
+
     @SceneBuilder var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(AppState.shared)
         }
         .onChange(of: scenePhase) { phase in
+            Log("Scene phase changed: \(scenePhase)")
             AppState.shared.isTimerRunning = (phase == .active)
         }
 

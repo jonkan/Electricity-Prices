@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2602DE47290AD20200CC83F2 /* XCGLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 2602DE46290AD20200CC83F2 /* XCGLogger */; };
+		2602DE49290AD31E00CC83F2 /* FileManager+DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2602DE48290AD31E00CC83F2 /* FileManager+DocumentsDirectory.swift */; };
+		2602DE4B290B0DE300CC83F2 /* String+AppGroupIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2602DE4A290B0DE300CC83F2 /* String+AppGroupIdentifier.swift */; };
+		2602DE4F290BCD7E00CC83F2 /* LogOnce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2602DE4E290BCD7E00CC83F2 /* LogOnce.swift */; };
 		2607877F28D669C200FF2C33 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2607877E28D669C200FF2C33 /* Alamofire */; };
 		2607878128D669C200FF2C33 /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 2607878028D669C200FF2C33 /* XMLCoder */; };
 		2607878328D669C200FF2C33 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 2607878228D669C200FF2C33 /* SwiftDate */; };
@@ -197,6 +201,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2602DE48290AD31E00CC83F2 /* FileManager+DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+DocumentsDirectory.swift"; sourceTree = "<group>"; };
+		2602DE4A290B0DE300CC83F2 /* String+AppGroupIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AppGroupIdentifier.swift"; sourceTree = "<group>"; };
+		2602DE4E290BCD7E00CC83F2 /* LogOnce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOnce.swift; sourceTree = "<group>"; };
 		2607877728D6693000FF2C33 /* libEPWatchCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEPWatchCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2607879E28D70B8C00FF2C33 /* EPWatchWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EPWatchWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		260787A228D70B8C00FF2C33 /* EPWatchWidgetExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPWatchWidgetExtension.swift; sourceTree = "<group>"; };
@@ -272,6 +279,7 @@
 				2607878128D669C200FF2C33 /* XMLCoder in Frameworks */,
 				2607877F28D669C200FF2C33 /* Alamofire in Frameworks */,
 				2607878328D669C200FF2C33 /* SwiftDate in Frameworks */,
+				2602DE47290AD20200CC83F2 /* XCGLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +491,10 @@
 			children = (
 				26624AF328C93541000F7E2E /* AppStorageCodable.swift */,
 				26624AE928C8EFFB000F7E2E /* Error.swift */,
+				2602DE48290AD31E00CC83F2 /* FileManager+DocumentsDirectory.swift */,
 				26624AE628C883C9000F7E2E /* Log.swift */,
+				2602DE4E290BCD7E00CC83F2 /* LogOnce.swift */,
+				2602DE4A290B0DE300CC83F2 /* String+AppGroupIdentifier.swift */,
 				2696879D28D3A2C8002142BF /* UserDefaults+AppGroup.swift */,
 			);
 			path = Utils;
@@ -615,6 +626,7 @@
 				2607877E28D669C200FF2C33 /* Alamofire */,
 				2607878028D669C200FF2C33 /* XMLCoder */,
 				2607878228D669C200FF2C33 /* SwiftDate */,
+				2602DE46290AD20200CC83F2 /* XCGLogger */,
 			);
 			productName = EPWatchCore;
 			productReference = 2607877728D6693000FF2C33 /* libEPWatchCore.a */;
@@ -772,6 +784,7 @@
 				2690400F28D6680B00A823F5 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				2690401228D6681800A823F5 /* XCRemoteSwiftPackageReference "XMLCoder" */,
 				2690401528D6682800A823F5 /* XCRemoteSwiftPackageReference "SwiftDate" */,
+				2602DE43290AD0D400CC83F2 /* XCRemoteSwiftPackageReference "XCGLogger" */,
 			);
 			productRefGroup = 261FC18C28B7771F007B4A4E /* Products */;
 			projectDirPath = "";
@@ -892,6 +905,7 @@
 				260787B328D70CE900FF2C33 /* PricePointTimelineProvider.swift in Sources */,
 				2607878528D669D700FF2C33 /* PricePoint.swift in Sources */,
 				2607878928D669D700FF2C33 /* UserDefaults+AppGroup.swift in Sources */,
+				2602DE4B290B0DE300CC83F2 /* String+AppGroupIdentifier.swift in Sources */,
 				2607879428D66A1200FF2C33 /* PricesAPI.swift in Sources */,
 				2607878E28D669D700FF2C33 /* AppState.swift in Sources */,
 				260787B628D7109C00FF2C33 /* PricePointCircularWidgetView.swift in Sources */,
@@ -900,7 +914,9 @@
 				2607879028D669D700FF2C33 /* PriceChartView.swift in Sources */,
 				2607878A28D669D700FF2C33 /* FormattingStyle.swift in Sources */,
 				2607879228D66A1200FF2C33 /* ForexAPI.swift in Sources */,
+				2602DE49290AD31E00CC83F2 /* FileManager+DocumentsDirectory.swift in Sources */,
 				2607878B28D669D700FF2C33 /* PriceLimits.swift in Sources */,
+				2602DE4F290BCD7E00CC83F2 /* LogOnce.swift in Sources */,
 				260787BC28D7123A00FF2C33 /* PricePointInlineWidgetView.swift in Sources */,
 				2607879128D669D700FF2C33 /* PriceAreaSettingsView.swift in Sources */,
 				2607878F28D669D700FF2C33 /* AppStorageCodable.swift in Sources */,
@@ -1549,6 +1565,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2602DE43290AD0D400CC83F2 /* XCRemoteSwiftPackageReference "XCGLogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DaveWoodCom/XCGLogger.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		2690400F28D6680B00A823F5 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -1576,6 +1600,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2602DE46290AD20200CC83F2 /* XCGLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2602DE43290AD0D400CC83F2 /* XCRemoteSwiftPackageReference "XCGLogger" */;
+			productName = XCGLogger;
+		};
 		2607877E28D669C200FF2C33 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2690400F28D6680B00A823F5 /* XCRemoteSwiftPackageReference "Alamofire" */;

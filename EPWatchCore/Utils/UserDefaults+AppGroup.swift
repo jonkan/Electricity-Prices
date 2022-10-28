@@ -10,7 +10,7 @@ import Foundation
 extension UserDefaults {
 
     static let appGroup: UserDefaults = {
-        guard let appGroup = UserDefaults(suiteName: "group.EPWatch") else {
+        guard let appGroup = UserDefaults(suiteName: .appGroupIdentifier) else {
             LogError("Failed to create app group UserDefaults")
             return .standard
         }

@@ -7,12 +7,30 @@
 
 import Foundation
 import CoreLocation
+import XCGLogger
+
+#if DEBUG
+public func LogDebugInformation() {
+    Log(
+"""
+Debug information:
+\tDocuments directory: \(FileManager.default.documentsDirectory().path())
+\tApp Group directory: \(FileManager.default.appGroupDirectory().path())
+\tMain bundle: \(Bundle.main.bundlePath)
+"""
+    )
+}
+#endif
+
+public enum LogLevel {
+    case debug, error
+}
 
 public func LogError(
     _ error: Error?,
     file: StaticString = #file,
     function: StaticString = #function,
-    line: UInt = #line
+    line: Int = #line
 ) {
     guard let error = error else {
         return
@@ -59,14 +77,14 @@ public func LogError(
     _ message: String,
     file: StaticString = #file,
     function: StaticString = #function,
-    line: UInt = #line
+    line: Int = #line
 ) {
    Log(
     message,
     file: file,
     function: function,
     line: line,
-    prefix: "🚨"
+    level: .error
    )
 }
 
@@ -81,66 +99,81 @@ public func Log(
     _ message: String,
     file: StaticString = #file,
     function: StaticString = #function,
-    line: UInt = #line,
-    prefix: String? = nil
+    line: Int = #line,
+    level: LogLevel = .debug
 ) {
-
-    let filename = URL(string: "\(file)")?.lastPathComponent ?? ""
-    var fileAndFunc = "\(filename) \(function)"
-    if let prefix = prefix {
-        fileAndFunc = "\(prefix) \(fileAndFunc)"
-    }
-    fileAndFunc = fileAndFunc
-        .padding(toLength: 50, withPad: " ", startingAt: 0)
-
-    let dateAndTime = dateFormatter.string(from: .now)
-
-    let log = String(
-        format: "%@ %@ [Line %5d] %@",
-        dateAndTime,
-        fileAndFunc,
-        line,
-        message
-    )
-    print(log)
-}
-
-var LogOnceLoggedMessages = Set<String>()
-
-public func LogOnce(
-    _ message: String,
-    file: StaticString = #file,
-    function: StaticString = #function,
-    line: UInt = #line,
-    prefix: String? = nil
-) {
-    guard !LogOnceLoggedMessages.contains(message) else {
-        return
-    }
-    LogOnceLoggedMessages.insert(message)
-    Log(
-        message,
-        file: file,
-        function: function,
-        line: line,
-        prefix: prefix
+    logger.logln(
+        level.xcgLevel,
+        functionName: function,
+        fileName: file,
+        lineNumber: line,
+        closure: { message }
     )
 }
 
-public func LogErrorOnce(
-    _ message: String,
-    file: StaticString = #file,
-    function: StaticString = #function,
-    line: UInt = #line
-) {
-    guard !LogOnceLoggedMessages.contains(message) else {
-        return
+private var logger: XCGLogger = {
+    // Create a logger object with no destinations
+    let log = XCGLogger(identifier: "Logger", includeDefaultDestinations: false)
+
+    // Create a destination for the system console log (via NSLog)
+    let systemDestination = AppleSystemLogDestination(identifier: "Logger.systemDestination")
+
+    // Optionally set some configuration options
+    systemDestination.outputLevel = .debug
+    systemDestination.showLogIdentifier = false
+    systemDestination.showFunctionName = true
+    systemDestination.showThreadName = true
+    systemDestination.showLevel = true
+    systemDestination.showFileName = true
+    systemDestination.showLineNumber = true
+    systemDestination.showDate = true
+
+    // Add the destination to the logger
+    log.add(destination: systemDestination)
+
+    // Create a file log destination
+    let bundleName = Bundle.main.infoDictionary!["CFBundleName"] as! String
+    let logFileName = "\(bundleName).log"
+    let logFileUrl = FileManager.default.appGroupDirectory()
+        .appending(path: "logs", directoryHint: .isDirectory)
+        .appending(path: logFileName)
+    if !FileManager.default.fileExists(atPath: logFileUrl.path()) {
+        try? FileManager.default.createDirectory(
+            atPath: logFileUrl.deletingLastPathComponent().path(),
+            withIntermediateDirectories: true
+        )
     }
-    LogOnceLoggedMessages.insert(message)
-    LogError(
-        message,
-        file: file,
-        function: function,
-        line: line
+    let fileDestination = AutoRotatingFileDestination(
+        writeToFile: logFileUrl.path(),
+        identifier: "Logger.fileDestination"
     )
+
+    // Optionally set some configuration options
+    fileDestination.outputLevel = .debug
+    fileDestination.showLogIdentifier = false
+    fileDestination.showFunctionName = true
+    fileDestination.showThreadName = true
+    fileDestination.showLevel = true
+    fileDestination.showFileName = true
+    fileDestination.showLineNumber = true
+    fileDestination.showDate = true
+
+    // Process this destination in the background
+    fileDestination.logQueue = XCGLogger.logQueue
+
+    // Add the destination to the logger
+    log.add(destination: fileDestination)
+
+    // Add basic app info, version info etc, to the start of the logs
+    log.logAppDetails()
+    return log
+}()
+
+private extension LogLevel {
+    var xcgLevel: XCGLogger.Level {
+        switch self {
+        case .debug: return .debug
+        case .error: return .error
+        }
+    }
 }
