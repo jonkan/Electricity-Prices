@@ -30,7 +30,7 @@ public struct ExchangeRate: Codable {
         return (
             cal.isDateInToday(d) ||
             (
-                cal.isDateInWeekend(d) &&
+                cal.isDateInWeekend(.now) &&
                 cal.component(.weekday, from: d) == friday
             )
         )
