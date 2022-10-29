@@ -11,6 +11,7 @@
 		2602DE49290AD31E00CC83F2 /* FileManager+DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2602DE48290AD31E00CC83F2 /* FileManager+DocumentsDirectory.swift */; };
 		2602DE4B290B0DE300CC83F2 /* String+AppGroupIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2602DE4A290B0DE300CC83F2 /* String+AppGroupIdentifier.swift */; };
 		2602DE4F290BCD7E00CC83F2 /* LogOnce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2602DE4E290BCD7E00CC83F2 /* LogOnce.swift */; };
+		2602DE5F290D20FF00CC83F2 /* Calendar+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2602DE5E290D20FF00CC83F2 /* Calendar+Helpers.swift */; };
 		2607877F28D669C200FF2C33 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2607877E28D669C200FF2C33 /* Alamofire */; };
 		2607878128D669C200FF2C33 /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 2607878028D669C200FF2C33 /* XMLCoder */; };
 		2607878328D669C200FF2C33 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 2607878228D669C200FF2C33 /* SwiftDate */; };
@@ -204,6 +205,7 @@
 		2602DE48290AD31E00CC83F2 /* FileManager+DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+DocumentsDirectory.swift"; sourceTree = "<group>"; };
 		2602DE4A290B0DE300CC83F2 /* String+AppGroupIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AppGroupIdentifier.swift"; sourceTree = "<group>"; };
 		2602DE4E290BCD7E00CC83F2 /* LogOnce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOnce.swift; sourceTree = "<group>"; };
+		2602DE5E290D20FF00CC83F2 /* Calendar+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+Helpers.swift"; sourceTree = "<group>"; };
 		2607877728D6693000FF2C33 /* libEPWatchCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEPWatchCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2607879E28D70B8C00FF2C33 /* EPWatchWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EPWatchWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		260787A228D70B8C00FF2C33 /* EPWatchWidgetExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPWatchWidgetExtension.swift; sourceTree = "<group>"; };
@@ -490,6 +492,7 @@
 			isa = PBXGroup;
 			children = (
 				26624AF328C93541000F7E2E /* AppStorageCodable.swift */,
+				2602DE5E290D20FF00CC83F2 /* Calendar+Helpers.swift */,
 				26624AE928C8EFFB000F7E2E /* Error.swift */,
 				2602DE48290AD31E00CC83F2 /* FileManager+DocumentsDirectory.swift */,
 				26624AE628C883C9000F7E2E /* Log.swift */,
@@ -921,6 +924,7 @@
 				2607879128D669D700FF2C33 /* PriceAreaSettingsView.swift in Sources */,
 				2607878F28D669D700FF2C33 /* AppStorageCodable.swift in Sources */,
 				260787B428D70D1200FF2C33 /* PricePointTimelineEntry.swift in Sources */,
+				2602DE5F290D20FF00CC83F2 /* Calendar+Helpers.swift in Sources */,
 				2607878728D669D700FF2C33 /* Regions.swift in Sources */,
 				2607878628D669D700FF2C33 /* PriceFormatter.swift in Sources */,
 				260787B828D711C100FF2C33 /* PricePointRectangularWidgetView.swift in Sources */,

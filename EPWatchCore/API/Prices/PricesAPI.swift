@@ -17,15 +17,32 @@ class PricesAPI {
 
     func downloadDayAheadPrices(for priceArea: PriceArea) async throws -> DayAheadPrices {
         let cal = Calendar.current
-        let startOfDay = cal.startOfDay(for: .now)
-        let endOfDay = cal.date(byAdding: .hour, value: 24, to: startOfDay)!
+        let startOfToday = cal.startOfDay(for: .now)
+        let endOfToday = cal.endOfDay(for: .now)
+        let endOfTomorrow = cal.date(byAdding: .day, value: 1, to: endOfToday)!
 
+        // The API doesn't seem to require the data to be complete in the requested time period, i.e.
+        // we can always request until tomorrow but might only get until today depending on tomorrows
+        // availability.
+        do {
+            return try await downloadDayAheadPrices(for: priceArea, from: startOfToday, to: endOfTomorrow)
+        } catch {
+            Log("Failed to download prices until end of tomorrow, error: \(error)")
+        }
+        return try await downloadDayAheadPrices(for: priceArea, from: startOfToday, to: endOfToday)
+    }
+
+    func downloadDayAheadPrices(
+        for priceArea: PriceArea,
+        from startDate: Date,
+        to endDate: Date
+    ) async throws -> DayAheadPrices {
         let df = DateFormatter()
         df.timeZone = TimeZone(identifier: "UTC")
-        df.locale = Locale(identifier: "en_GB")
+        df.locale = Locale(identifier: "en_US_POSIX")
         df.dateFormat = "yyyyMMddHHmm"
-        let startOfDayStr = df.string(from: startOfDay.date)
-        let endOfDayStr = df.string(from: endOfDay)
+        let startDateStr = df.string(from: startDate)
+        let endDateStr = df.string(from: endDate)
 
         let plistToken = Bundle.main.object(forInfoDictionaryKey: "EntsoeSecurityToken")
         guard let securityToken = plistToken as? String, !securityToken.isEmpty else {
@@ -36,8 +53,8 @@ class PricesAPI {
             URLQueryItem(name: "documentType", value: "A44"),
             URLQueryItem(name: "in_Domain", value: priceArea.domain),
             URLQueryItem(name: "out_Domain", value: priceArea.domain),
-            URLQueryItem(name: "periodStart", value: startOfDayStr),
-            URLQueryItem(name: "periodEnd", value: endOfDayStr),
+            URLQueryItem(name: "periodStart", value: startDateStr),
+            URLQueryItem(name: "periodEnd", value: endDateStr),
             URLQueryItem(name: "securityToken", value: securityToken)
         ]
 

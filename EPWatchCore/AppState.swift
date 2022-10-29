@@ -45,6 +45,9 @@ public class AppState: ObservableObject {
     @AppStorageCodable("CurrencyConversion", storage: .appGroup)
     private var cachedForex: ForexLatest? = nil
 
+    @AppStorageCodable("LastAttemptFetchingTomorrowsPrices", storage: .appGroup)
+    private var lastAttemptFetchingTomorrowsPrices: Date? = nil
+
     private var updateTask: Task<Void, Never>?
 
     nonisolated
@@ -101,17 +104,36 @@ public class AppState: ObservableObject {
 
     public func updatePricesIfNeeded() async throws {
         _ = await updateTask?.result
+
         if let price = prices.price(for: .now) {
             if price != currentPrice {
                 currentPrice = price
             }
-            Log("Update not needed")
-            return
+
+            let endOfToday = Calendar.current.endOfDay(for: .now)
+            let hasPricesForTomorrow = endOfToday < (prices.last?.date ?? .distantPast)
+            if hasPricesForTomorrow {
+                Log("Update not needed, has prices for tomorrow")
+                return
+            }
+
+            // If we have the current price but lack tomorrow's prices we make
+            // an attempt at updating provided it's after 13:00 and we haven't
+            // tried recently (within 30 min).
+            let currentHour = Calendar.current.component(.hour, from: .now)
+            let timeIntervalSinceLastFetchAttempt = Date.now.timeIntervalSince(lastAttemptFetchingTomorrowsPrices ?? .distantPast)
+            if currentHour < 13 || timeIntervalSinceLastFetchAttempt < (30 * 60) {
+                Log("Update not needed, skip trying to fetch for tomorrow")
+                return
+            }
+            Log("Update not needed, but will try to fetch for tomorrow")
         }
+        lastAttemptFetchingTomorrowsPrices = .now
+
         updateTask = Task {
             Log("Begin updating prices")
             do {
-                prices = try await getTodaysPrices()
+                prices = try await downloadPrices()
                 currentPrice = prices.price(for: .now)
                 Log("Success updating prices")
                 NotificationCenter.default.post(name: Self.didUpdateDayAheadPrices, object: self)
@@ -123,7 +145,7 @@ public class AppState: ObservableObject {
         _ = await updateTask?.result
     }
 
-    private func getTodaysPrices() async throws -> [PricePoint] {
+    private func downloadPrices() async throws -> [PricePoint] {
         Log("Downloading day ahead prices")
         let dayAheadPrices = try await PricesAPI.shared.downloadDayAheadPrices(for: priceArea)
         let forex = try await currentForex()
