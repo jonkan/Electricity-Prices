@@ -24,7 +24,8 @@ public struct PricePointLargeWidgetView: View {
             PriceChartView(
                 currentPrice: entry.pricePoint,
                 prices: entry.prices,
-                limits: entry.limits
+                limits: entry.limits,
+                currencyPresentation: entry.currencyPresentation
             )
         }
         .padding()

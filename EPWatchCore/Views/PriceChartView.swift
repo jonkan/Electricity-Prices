@@ -15,17 +15,20 @@ public struct PriceChartView: View {
     let currentPrice: PricePoint
     let prices: [PricePoint]
     let limits: PriceLimits
+    let currencyPresentation: CurrencyPresentation
     let useCurrencyAxisFormat: Bool
 
     public init(
         currentPrice: PricePoint,
         prices: [PricePoint],
         limits: PriceLimits,
+        currencyPresentation: CurrencyPresentation,
         useCurrencyAxisFormat: Bool = false
     ) {
         self.currentPrice = currentPrice
         self.prices = prices
         self.limits = limits
+        self.currencyPresentation = currencyPresentation
         self.useCurrencyAxisFormat = useCurrencyAxisFormat
     }
 
@@ -34,7 +37,7 @@ public struct PriceChartView: View {
             ForEach(prices, id: \.date) { p in
                 LineMark(
                     x: .value("", p.date),
-                    y: .value("kr", p.price)
+                    y: .value("", p.price(with: currencyPresentation))
                 )
             }
             .interpolationMethod(.cardinal)
@@ -53,14 +56,14 @@ public struct PriceChartView: View {
             if widgetRenderingMode == .fullColor {
                 PointMark(
                     x: .value("", currentPrice.date),
-                    y: .value("", currentPrice.price)
+                    y: .value("", currentPrice.price(with: currencyPresentation))
                 )
                 .foregroundStyle(.foreground.opacity(0.6))
                 .symbolSize(300)
 
                 PointMark(
                     x: .value("", currentPrice.date),
-                    y: .value("", currentPrice.price)
+                    y: .value("", currentPrice.price(with: currencyPresentation))
                 )
                 .foregroundStyle(.background)
                 .symbolSize(100)
@@ -68,7 +71,7 @@ public struct PriceChartView: View {
 
             PointMark(
                 x: .value("", currentPrice.date),
-                y: .value("", currentPrice.price)
+                y: .value("", currentPrice.price(with: currencyPresentation))
             )
             .foregroundStyle(limits.color(of: currentPrice.price))
             .symbolSize(70)
@@ -76,7 +79,8 @@ public struct PriceChartView: View {
         .widgetAccentable()
         .chartYAxis {
             if let axisYValues = axisYValues {
-                if useCurrencyAxisFormat {
+                // TODO: Figure out how to present subdivided units (e.g. Cent)
+                if useCurrencyAxisFormat && currencyPresentation != .subdivided {
                     AxisMarks(
                         format: currencyAxisFormat,
                         values: axisYValues
@@ -85,7 +89,7 @@ public struct PriceChartView: View {
                     AxisMarks(values: axisYValues)
                 }
             } else {
-                if useCurrencyAxisFormat {
+                if useCurrencyAxisFormat && currencyPresentation != .subdivided {
                     AxisMarks(format: currencyAxisFormat)
                 } else {
                     AxisMarks()
@@ -96,7 +100,7 @@ public struct PriceChartView: View {
     }
 
     var axisYValues: [Double]? {
-        if currentPrice.dayPriceRange.upperBound <= 1.5 {
+        if currentPrice.dayPriceRange.upperBound <= 1.5 && currencyPresentation != .subdivided {
             return [0.0, 0.5, 1.0, 1.5]
         }
         return nil
@@ -111,12 +115,24 @@ public struct PriceChartView: View {
 
 }
 
+private extension PricePoint {
+    func price(with currencyPresentation: CurrencyPresentation) -> Double {
+        switch currencyPresentation {
+        case .automatic:
+            return price
+        case .subdivided:
+            return price * currency.subdivision.subdivisions
+        }
+    }
+}
+
 struct PriceChartView_Previews: PreviewProvider {
     static var previews: some View {
         PriceChartView(
             currentPrice: .mockPrice,
             prices: .mockPrices,
-            limits: .mockLimits
+            limits: .mockLimits,
+            currencyPresentation: .automatic
         )
     }
 }

@@ -25,6 +25,7 @@ struct PriceView: View {
                 currentPrice: currentPrice,
                 prices: prices,
                 limits: limits,
+                currencyPresentation: currencyPresentation,
                 useCurrencyAxisFormat: true
             )
         }
