@@ -159,7 +159,7 @@ public class AppState: ObservableObject {
                 userPresentableError = presentable
             } catch {
                 LogError(error)
-                userPresentableError = UserPresentableError(error)
+                userPresentableError = .unknown(error)
             }
             WidgetCenter.shared.reloadAllTimelines()
             objectWillChange.send()
@@ -175,7 +175,7 @@ public class AppState: ObservableObject {
                 userPresentableError = presentable
             } catch {
                 LogError(error)
-                userPresentableError = UserPresentableError(error)
+                userPresentableError = .unknown(error)
             }
             completion?()
         }
@@ -250,9 +250,13 @@ public class AppState: ObservableObject {
             return forexRate
         }
         Log("Downloading forex")
-        let res = try await ForexAPI.shared.download(from: .EUR, to: currency)
-        exchangeRate = res
-        return res
+        do {
+            let res = try await ForexAPI.shared.download(from: .EUR, to: currency)
+            exchangeRate = res
+            return res
+        } catch {
+            throw UserPresentableError.noExchangeRate(error)
+        }
     }
 
 }

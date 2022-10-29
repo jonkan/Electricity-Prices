@@ -21,7 +21,8 @@ extension UserPresentableError {
         if error.reason.code == 999 {
             self = .noData
         } else {
-            self = .unknown
+            let message = "DayAheadPricesErrorResponse: \(error.reason.code), \(error.reason.text)"
+            self = .unknown(NSError(0, message))
         }
     }
 }

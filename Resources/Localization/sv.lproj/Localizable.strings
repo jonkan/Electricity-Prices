@@ -66,6 +66,10 @@
 "Ukraine" = "Ukraina";
 "United Kingdom" = "Storbritannien";
 
+"Unfortunately no data was found." = "Tyvärr hittades ingen data.";
+"Failed to fetch an up-to-date exchange rate." = "Misslyckades att hämta aktuell växelkurs.";
+"An unknown error occurred." = "Ett okänt fel inträffade.";
+
 "Support" = "Support";
 "Please report any issues to " = "Rapportera gärna fel till ";
 "Tap to copy the email address" = "Peka för att kopiera e-postadressen";
