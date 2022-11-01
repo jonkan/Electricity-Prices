@@ -39,7 +39,7 @@ public struct AppStorageCodable<Value: Codable>: DynamicProperty {
                 let value = try decoder.decode(Value.self, from: data)
                 return value
             } catch {
-                LogError(error)
+                LogError("key: \(key), error: \(String(describing: error))")
                 return _wrappedValue
             }
         }
@@ -50,7 +50,7 @@ public struct AppStorageCodable<Value: Codable>: DynamicProperty {
                 storage.set(data, forKey: key)
                 _wrappedValue = newValue
             } catch {
-                LogError(error)
+                LogError("key: \(key), error: \(String(describing: error))")
             }
         }
     }

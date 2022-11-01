@@ -34,7 +34,7 @@ struct SupportSettingsView: View {
                 }
             } footer: {
                 if acknowledgeEmailCopied {
-                    Text("Email adress copied!")
+                    Text("Email address copied!")
                 } else {
                     Text("Tap to copy the email address")
                 }
@@ -76,18 +76,45 @@ struct SupportSettingsView: View {
                     .labelStyle(.titleAndIcon)
                 }
                 .disabled(logURLs == nil)
+
+                if shareLogsState.fetchingWatchLogsError != nil {
+                    Button {
+                        fetchLogs()
+                    } label: {
+                        Label {
+                            Text("Retry")
+                        } icon: {
+                            Image(systemName: "arrow.clockwise")
+                                .frame(width: 20, height: 20)
+                        }
+                        .labelStyle(.titleAndIcon)
+                    }
+                }
             } header: {
                 Text("Logs")
+            } footer: {
+                if shareLogsState.didFetchWatchLogs {
+                    Text("Success fetching logs from the watch")
+                } else if shareLogsState.fetchingWatchLogsError != nil {
+                    VStack(alignment: .leading) {
+                        Text("Failed to fetch logs from the watch")
+                        Text("Try having the watch app in the foreground")
+                    }
+                }
             }
         }
         .activitySheet($logsActivityItem)
         .onAppear {
-            Task {
-                do {
-                    logURLs = try await shareLogsState.shareLogs()
-                } catch {
-                    LogError(error)
-                }
+            fetchLogs()
+        }
+    }
+
+    func fetchLogs() {
+        Task {
+            do {
+                logURLs = try await shareLogsState.fetchLogs()
+            } catch {
+                LogError(error)
             }
         }
     }
@@ -97,7 +124,7 @@ struct SupportSettingsView: View {
 struct SupportSettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SupportSettingsView()
-            .environmentObject(ShareLogsState.mockedInProgress)
+            .environmentObject(ShareLogsState.mocked)
     }
 }
 

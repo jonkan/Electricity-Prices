@@ -52,6 +52,14 @@ class ShareLogsState: NSObject, ObservableObject {
             Log("State did change: \(state)")
         }
     }
+    @Published var fetchingWatchLogsError: Error? {
+        didSet {
+            if let error = fetchingWatchLogsError {
+                LogError(error)
+            }
+        }
+    }
+    @Published var didFetchWatchLogs: Bool = false
 
     private var logsTempDirectoryURL = FileManager.default.temporaryDirectory
         .appending(path: "logs", directoryHint: .isDirectory)
@@ -60,10 +68,12 @@ class ShareLogsState: NSObject, ObservableObject {
 
     private override init() {}
 
-    func shareLogs() async throws -> [URL] {
+    func fetchLogs() async throws -> [URL] {
         guard state == .ready else {
             throw NSError(0, "Sharing logs already in progress")
         }
+        fetchingWatchLogsError = nil
+        didFetchWatchLogs = false
         // Remove any previous temp directory
         try? FileManager.default.removeItem(at: logsTempDirectoryURL)
         // Create the temp directory
@@ -76,10 +86,17 @@ class ShareLogsState: NSObject, ObservableObject {
 
             if WCSession.isSupported() {
                 WCSession.default.delegate = self
-                WCSession.default.activate()
+
                 state = .waitingForWatchSessionActivation
                 setTimeoutHandler(.seconds(5)) {
+                    self.fetchingWatchLogsError = NSError(0, "Timeout waiting for watch session activation")
                     self.processLogs(includingWatchLogs: false)
+                }
+
+                if WCSession.default.activationState == .activated {
+                    session(WCSession.default, activationDidCompleteWith: WCSession.default.activationState, error: nil)
+                } else {
+                    WCSession.default.activate()
                 }
             } else {
                 Log("WCSession not supported")
@@ -122,6 +139,7 @@ class ShareLogsState: NSObject, ObservableObject {
                 logsToShareCompletion.resume(throwing: error)
             }
             state = .ready
+            didFetchWatchLogs = includingWatchLogs
         }
     }
 
@@ -141,9 +159,11 @@ class ShareLogsState: NSObject, ObservableObject {
             leeway: .milliseconds(50)
         )
         timerSource.setEventHandler { [weak self] in
-            self?.timeoutTimer?.cancel()
-            self?.timeoutTimer = nil
-            handler()
+            Task {
+                self?.timeoutTimer?.cancel()
+                self?.timeoutTimer = nil
+                handler()
+            }
         }
         timeoutTimer = timerSource
         timerSource.resume()
@@ -163,10 +183,6 @@ class ShareLogsState: NSObject, ObservableObject {
         timeoutTimer = nil
     }
 
-    private func timeoutWaitingForWatch() {
-        Log("Timeout waiting for watch")
-    }
-
 }
 
 extension ShareLogsState: WCSessionDelegate {
@@ -177,37 +193,49 @@ extension ShareLogsState: WCSessionDelegate {
     ) {
         Task {
             Log("Session activation state: \(activationState.description)")
+            stopTimeoutHandler()
             guard state == .waitingForWatchSessionActivation else {
                 Log("State not .waitingForWatchSessionActivation")
+                processLogs(includingWatchLogs: false)
                 return
             }
             guard activationState == .activated else {
-                fireTimeoutHandler()
+                processLogs(includingWatchLogs: false)
                 return
             }
             guard WCSession.default.isWatchAppInstalled else {
                 Log("Watch app not installed")
-                fireTimeoutHandler()
+                processLogs(includingWatchLogs: false)
                 return
             }
-            stopTimeoutHandler()
+            guard WCSession.default.isReachable else {
+                fetchingWatchLogsError = NSError(0, "Watch not reachable")
+                processLogs(includingWatchLogs: false)
+                return
+            }
             state = .waitingForWatchToSendLogs(count: nil)
-            setTimeoutHandler(.seconds(90)) {
+            setTimeoutHandler(.seconds(30)) {
+                self.fetchingWatchLogsError = NSError(0, "Timeout waiting for message reply")
                 self.processLogs(includingWatchLogs: false)
             }
             session.sendMessage(["sendLogs": true]) { reply in
                 Task {
+                    Log("Did receive message reply \(reply)")
                     guard case .waitingForWatchToSendLogs = self.state else {
                         Log("State not .waitingForWatchToSendLogs")
                         return
                     }
                     guard let logs = reply["logs"] as? [String] else {
-                        LogError("Unexpected reply: \(reply)")
+                        LogError("Unexpected reply")
                         self.fireTimeoutHandler()
                         return
                     }
                     Log("Watch will send \(logs.count) logs")
                     self.state = .waitingForWatchToSendLogs(count: .init(total: logs.count, received: 0))
+                    self.setTimeoutHandler(.seconds(90)) {
+                        self.fetchingWatchLogsError = NSError(0, "Timeout waiting for watch file transfers 0/\(logs.count)")
+                        self.processLogs(includingWatchLogs: false)
+                    }
                 }
             }
         }
@@ -215,6 +243,7 @@ extension ShareLogsState: WCSessionDelegate {
 
     func sessionDidBecomeInactive(_ session: WCSession) {
         Task {
+            Log("Session did become inactive")
             guard state == .waitingForWatchSessionActivation else {
                 return
             }
@@ -224,6 +253,7 @@ extension ShareLogsState: WCSessionDelegate {
 
     func sessionDidDeactivate(_ session: WCSession) {
         Task {
+            Log("Session did deactivate")
             guard state == .waitingForWatchSessionActivation else {
                 return
             }
@@ -255,6 +285,7 @@ extension ShareLogsState: WCSessionDelegate {
             } else {
                 state = .waitingForWatchToSendLogs(count: count)
                 setTimeoutHandler(.seconds(90)) {
+                    self.fetchingWatchLogsError = NSError(0, "Timeout waiting for watch file transfers \(count.received)/\(count.total)")
                     self.processLogs(includingWatchLogs: true)
                 }
             }
@@ -266,12 +297,19 @@ extension ShareLogsState: WCSessionDelegate {
 extension ShareLogsState {
     static let mocked: ShareLogsState = {
         let s = ShareLogsState()
+        s.didFetchWatchLogs = true
         return s
     }()
 
     static let mockedInProgress: ShareLogsState = {
         let s = ShareLogsState()
         s.state = .waitingForWatchToSendLogs(count: .init(total: 2, received: 1))
+        return s
+    }()
+
+    static let mockedWithError: ShareLogsState = {
+        let s = ShareLogsState()
+        s.fetchingWatchLogsError = NSError(0, "Some error")
         return s
     }()
 }
