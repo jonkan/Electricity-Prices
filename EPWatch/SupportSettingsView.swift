@@ -40,31 +40,42 @@ struct SupportSettingsView: View {
                 }
             }
             Section {
-                VStack(alignment: .leading) {
-                    HStack(spacing: 12) {
-                        if shareLogsState.state != .ready {
-                            if case .waitingForWatchToSendLogs(let count) = shareLogsState.state, let count = count {
-                                CircularProgressView(
-                                    progress: Double(count.received) / Double(count.total)
-                                )
-                            } else {
-                                ProgressView()
-                                    .progressViewStyle(.circular)
-                            }
-                            Text(shareLogsState.state.localizedDescription)
+                Label {
+                    if shareLogsState.state != .ready {
+                        Text(shareLogsState.state.localizedDescription)
+                    } else {
+                        Text("\(logURLs?.count ?? 0) log files")
+                    }
+                } icon: {
+                    Group {
+                        if case .waitingForWatchToSendLogs(let count) = shareLogsState.state,
+                           let count = count {
+                            CircularProgressView(
+                                progress: Double(count.received) / Double(count.total)
+                            )
+                        } else if shareLogsState.state != .ready {
+                            ProgressView()
+                                .progressViewStyle(.circular)
                         } else {
-                            Text("\(logURLs?.count ?? 0) log files")
+                            Image(systemName: "doc.text")
                         }
                     }
+                    .frame(width: 20, height: 20)
                 }
-                HStack {
-                    Spacer()
-                    Button("Share") {
-                        logsActivityItem = ActivityItem(itemsArray: logURLs ?? [])
+                .labelStyle(.titleAndIcon)
+
+                Button {
+                    logsActivityItem = ActivityItem(itemsArray: logURLs ?? [])
+                } label: {
+                    Label {
+                        Text("Share")
+                    } icon: {
+                        Image(systemName: "square.and.arrow.up")
+                            .frame(width: 20, height: 20)
                     }
-                    .disabled(logURLs == nil)
-                    Spacer()
+                    .labelStyle(.titleAndIcon)
                 }
+                .disabled(logURLs == nil)
             } header: {
                 Text("Logs")
             }

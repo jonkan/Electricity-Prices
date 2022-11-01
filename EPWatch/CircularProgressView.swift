@@ -11,7 +11,7 @@ import SwiftUI
 struct CircularProgressView: View {
     let progress: Double
     var color: Color = .accentColor
-    var size: Double = 24
+    var size: Double = 20
     var lineWidth: Double = 4
 
     init(progress: Double) {
