@@ -14,7 +14,7 @@ struct SupportSettingsView: View {
     @EnvironmentObject private var shareLogsState: ShareLogsState
     @State private var logURLs: [URL]?
     @State private var logsActivityItem: ActivityItem?
-    @State private var isEmailCopied: Bool = false
+    @State private var acknowledgeEmailCopied: Bool = false
     private let supportEmail = "support@j0nas.se"
 
     var body: some View {
@@ -27,10 +27,13 @@ struct SupportSettingsView: View {
                 }
                 .onTapGesture {
                     UIPasteboard.general.url = URL(string: supportEmail)
-                    isEmailCopied = true
+                    acknowledgeEmailCopied = true
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+                        acknowledgeEmailCopied = false
+                    }
                 }
             } footer: {
-                if isEmailCopied {
+                if acknowledgeEmailCopied {
                     Text("Email adress copied!")
                 } else {
                     Text("Tap to copy the email address")
