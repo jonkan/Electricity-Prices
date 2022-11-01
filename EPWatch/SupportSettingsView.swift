@@ -15,15 +15,20 @@ struct SupportSettingsView: View {
     @State private var logURLs: [URL]?
     @State private var logsActivityItem: ActivityItem?
     @State private var isEmailCopied: Bool = false
+    private let supportEmail = "support@j0nas.se"
 
     var body: some View {
         List {
             Section {
-                Text("Please report any issues to support@j0nas.se")
-                    .onTapGesture {
-                        UIPasteboard.general.url = URL(string: "support@j0nas.se")
-                        isEmailCopied = true
-                    }
+                Group {
+                    Text("Please report any issues to ") +
+                    Text(verbatim: supportEmail)
+                        .foregroundColor(.accentColor)
+                }
+                .onTapGesture {
+                    UIPasteboard.general.url = URL(string: supportEmail)
+                    isEmailCopied = true
+                }
             } footer: {
                 if isEmailCopied {
                     Text("Email adress copied!")
