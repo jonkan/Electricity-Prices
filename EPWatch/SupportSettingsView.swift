@@ -32,13 +32,21 @@ struct SupportSettingsView: View {
                 }
             }
             Section {
-                HStack(spacing: 12) {
-                    if shareLogsState.state != .ready {
-                        ProgressView()
-                            .progressViewStyle(.circular)
-                        Text(shareLogsState.state.localizedDescription)
-                    } else {
-                        Text("\(logURLs?.count ?? 0) log files")
+                VStack(alignment: .leading) {
+                    HStack(spacing: 12) {
+                        if shareLogsState.state != .ready {
+                            if case .waitingForWatchToSendLogs(let count) = shareLogsState.state, let count = count {
+                                CircularProgressView(
+                                    progress: Double(count.received) / Double(count.total)
+                                )
+                            } else {
+                                ProgressView()
+                                    .progressViewStyle(.circular)
+                            }
+                            Text(shareLogsState.state.localizedDescription)
+                        } else {
+                            Text("\(logURLs?.count ?? 0) log files")
+                        }
                     }
                 }
                 HStack {

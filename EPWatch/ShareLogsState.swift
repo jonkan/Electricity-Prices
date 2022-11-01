@@ -14,10 +14,15 @@ class ShareLogsState: NSObject, ObservableObject {
 
     static let shared: ShareLogsState = .init()
 
+    struct LogCount: Equatable {
+        var total: Int
+        var received: Int
+    }
+
     enum StateMachine: Equatable {
         case ready
         case waitingForWatchSessionActivation
-        case waitingForWatchToSendLogs(count: Int?)
+        case waitingForWatchToSendLogs(count: LogCount?)
         case processingLogs(includingWatchLogs: Bool)
 
         var localizedDescription: String {
@@ -30,8 +35,12 @@ class ShareLogsState: NSObject, ObservableObject {
                 return "Ready"
             case .waitingForWatchSessionActivation:
                 return "Waiting for the watch to respond"
-            case .waitingForWatchToSendLogs:
-                return "Waiting for the watch to send its logs"
+            case .waitingForWatchToSendLogs(let count):
+                if count != nil {
+                    return "Transfering logs from the watch"
+                } else {
+                    return "Waiting for the watch to send logs"
+                }
             case .processingLogs:
                 return "Processing logs"
             }
@@ -198,7 +207,7 @@ extension ShareLogsState: WCSessionDelegate {
                         return
                     }
                     Log("Watch will send \(logs.count) logs")
-                    self.state = .waitingForWatchToSendLogs(count: logs.count)
+                    self.state = .waitingForWatchToSendLogs(count: .init(total: logs.count, received: 0))
                 }
             }
         }
@@ -225,12 +234,12 @@ extension ShareLogsState: WCSessionDelegate {
     func session(_ session: WCSession, didReceive file: WCSessionFile) {
         Task {
             Log("Did receive file: \(file.fileURL.lastPathComponent)")
-            guard case .waitingForWatchToSendLogs(let numberOfLogs) = state else {
+            guard case .waitingForWatchToSendLogs(let count) = state else {
                 LogError("Unexpected state not .waitingForWatchToSendLogs")
                 return
             }
-            guard let numberOfLogs = numberOfLogs, numberOfLogs > 0 else {
-                LogError("Unexpectedly no numberOfLogs set")
+            guard var count = count else {
+                LogError("Unexpected, no count set")
                 return
             }
             stopTimeoutHandler()
@@ -240,11 +249,11 @@ extension ShareLogsState: WCSessionDelegate {
             } catch {
                 LogError(error)
             }
-            let remaining = numberOfLogs - 1
-            if remaining == 0 {
+            count.received = count.received + 1
+            if count.received >= count.total {
                 processLogs(includingWatchLogs: true)
             } else {
-                state = .waitingForWatchToSendLogs(count: remaining)
+                state = .waitingForWatchToSendLogs(count: count)
                 setTimeoutHandler(.seconds(90)) {
                     self.processLogs(includingWatchLogs: true)
                 }
@@ -262,7 +271,7 @@ extension ShareLogsState {
 
     static let mockedInProgress: ShareLogsState = {
         let s = ShareLogsState()
-        s.state = .waitingForWatchToSendLogs(count: 2)
+        s.state = .waitingForWatchToSendLogs(count: .init(total: 2, received: 1))
         return s
     }()
 }
