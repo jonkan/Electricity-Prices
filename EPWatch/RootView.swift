@@ -39,9 +39,9 @@ struct RootView: View {
                     }
                     .listRowBackground(Color.clear)
                     .frame(maxWidth: .infinity, minHeight: 200)
-                } else {
+                } else if let error = state.userPresentableError {
                     Section {
-                        errorView
+                        errorView(error)
                     } footer: {
                         StateInfoFooterView(
                             priceArea: state.priceArea,
@@ -78,14 +78,14 @@ struct RootView: View {
         }
     }
 
-    var errorView: some View {
+    func errorView(_ error: UserPresentableError) -> some View {
         VStack {
             Image(systemName: "x.circle")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .foregroundColor(.red)
                 .frame(height: 50)
-            Text(state.userPresentableError?.localizedDescription ?? "")
+            Text(error.localizedDescription)
                 .multilineTextAlignment(.center)
         }
         .padding()

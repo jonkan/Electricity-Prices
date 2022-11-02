@@ -16,26 +16,32 @@ struct RootView: View {
     var body: some View {
         NavigationStack {
             TabView {
-                if let currentPrice = state.currentPrice {
-                    PriceView(
-                        currentPrice: currentPrice,
-                        prices: state.prices.filterInSameDayAs(currentPrice),
-                        limits: state.priceLimits,
-                        currencyPresentation: state.currencyPresentation
-                    )
-                } else if state.isFetching {
-                    Text("Fetching prices...")
-                        .padding()
-                } else {
-                    errorView
-                }
+                mainTab
                 SettingsView()
             }
             .tabViewStyle(.page)
         }
     }
 
-    var errorView: some View {
+    @ViewBuilder
+    var mainTab: some View {
+        if let currentPrice = state.currentPrice {
+            PriceView(
+                currentPrice: currentPrice,
+                prices: state.prices.filterInSameDayAs(currentPrice),
+                limits: state.priceLimits,
+                currencyPresentation: state.currencyPresentation
+            )
+        } else if state.isFetching {
+            ProgressView("Fetching prices...")
+        } else if let error = state.userPresentableError {
+            errorView(error)
+        } else {
+            Color.clear
+        }
+    }
+
+    func errorView(_ error: UserPresentableError) -> some View {
         GeometryReader { geometry in
             ScrollView(.vertical) {
                 VStack {
@@ -44,7 +50,7 @@ struct RootView: View {
                         .aspectRatio(contentMode: .fit)
                         .foregroundColor(.red)
                         .frame(height: 50)
-                    Text(state.userPresentableError?.localizedDescription ?? "")
+                    Text(error.localizedDescription)
                         .font(.caption)
                         .multilineTextAlignment(.center)
                 }
