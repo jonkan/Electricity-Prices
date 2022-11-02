@@ -53,11 +53,12 @@ public class AppState: ObservableObject {
             guard oldValue != currency else { return }
             Log("Currency did change: \(currency.name)")
             invalidateAndUpdatePricesSubject.send()
+            currencyPresentation = currency.suggestedCurrencyPresentation
         }
     }
 
     @AppStorageCodable("CurrencyPresentation", storage: .appGroup)
-    public var currencyPresentation: CurrencyPresentation = .automatic {
+    public var currencyPresentation: CurrencyPresentation = .subdivided {
         didSet {
             guard oldValue != currencyPresentation else { return }
             Log("Currency presentation did change: \(currencyPresentation)")

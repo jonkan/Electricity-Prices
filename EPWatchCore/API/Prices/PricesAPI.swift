@@ -82,7 +82,7 @@ class PricesAPI {
         let decoder = XMLDecoder()
         let df = DateFormatter()
         df.timeZone = TimeZone(identifier: "UTC")
-        df.locale = Locale(identifier: "en_GB")
+        df.locale = Locale(identifier: "en_US_POSIX")
         df.dateFormat = "yyyy-MM-dd'T'HH:mmZ"
         decoder.dateDecodingStrategy = .formatted(df)
         decoder.keyDecodingStrategy = .convertFromCapitalized

@@ -67,6 +67,13 @@ public enum Currency: String, Codable, CaseIterable, Identifiable, Equatable {
         }
     }
 
+    var suggestedCurrencyPresentation: CurrencyPresentation {
+        switch self {
+        case .EUR: return .subdivided
+        default: return .automatic
+        }
+    }
+
 }
 
 extension Currency {
