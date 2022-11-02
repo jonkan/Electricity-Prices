@@ -1,5 +1,5 @@
 //
-//  PriceViewFooter.swift
+//  StateInfoFooterView.swift
 //  EPWatch
 //
 //  Created by Jonas Bromö on 2022-10-24.
@@ -8,7 +8,7 @@
 import SwiftUI
 import EPWatchCore
 
-struct PriceViewFooter: View {
+struct StateInfoFooterView: View {
     
     let priceArea: PriceArea?
     let region: Region?
@@ -30,9 +30,9 @@ struct PriceViewFooter: View {
     
 }
 
-struct PriceViewFooter_Previews: PreviewProvider {
+struct StateInfoFooterView_Previews: PreviewProvider {
     static var previews: some View {
-        PriceViewFooter(
+        StateInfoFooterView(
             priceArea: Region.sweden.priceAreas.first,
             region: .sweden,
             exchangeRate: .mockedSEK

@@ -27,19 +27,30 @@ struct RootView: View {
                     Text("Fetching prices...")
                         .padding()
                 } else {
-                    VStack {
-                        Image(systemName: "x.circle")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .foregroundColor(.red)
-                            .frame(height: 40)
-                        Text("\(state.userPresentableError?.localizedDescription ?? "")")
-                            .font(.caption)
-                    }
+                    errorView
                 }
                 SettingsView()
             }
             .tabViewStyle(.page)
+        }
+    }
+
+    var errorView: some View {
+        GeometryReader { geometry in
+            ScrollView(.vertical) {
+                VStack {
+                    Image(systemName: "x.circle")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .foregroundColor(.red)
+                        .frame(height: 50)
+                    Text(state.userPresentableError?.localizedDescription ?? "")
+                        .font(.caption)
+                        .multilineTextAlignment(.center)
+                }
+                .frame(width: geometry.size.width)
+                .frame(minHeight: geometry.size.height)
+            }
         }
     }
 

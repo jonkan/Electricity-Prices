@@ -66,7 +66,7 @@
 "Ukraine" = "Ukraina";
 "United Kingdom" = "Storbritannien";
 
-"Unfortunately no data was found." = "Tyvärr hittades ingen data.";
+"Unfortunately no data was found for the selected price area." = "Tyvärr hittades ingen data för det valda elområdet.";
 "Failed to fetch an up-to-date exchange rate." = "Misslyckades att hämta aktuell växelkurs.";
 "An unknown error occurred." = "Ett okänt fel inträffade.";
 

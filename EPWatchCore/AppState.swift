@@ -86,7 +86,7 @@ public class AppState: ObservableObject {
 
     public var userPresentableError: UserPresentableError? {
         didSet {
-            Log("User presentable error did change: \(userPresentableError?.localizedDescription ?? "nil")")
+            Log("User presentable error did change: \(userPresentableError?.debugDescription ?? "nil")")
             Task { objectWillChange.send() }
         }
     }
@@ -230,8 +230,10 @@ public class AppState: ObservableObject {
             Log("Success updating prices")
             NotificationCenter.default.post(name: Self.didUpdateDayAheadPrices, object: self)
         }
+        defer {
+            updateTask = nil
+        }
         _ = try await updateTask?.value
-        updateTask = nil
     }
 
     private func downloadPrices() async throws -> [PricePoint] {
@@ -268,6 +270,7 @@ extension AppState {
     public static let mocked: AppState = {
         let s = AppState()
         s.currentPrice = .mockPrice
+        s.region = .sweden
         s.priceArea = Region.sweden.priceAreas.first
         s.prices = .mockPrices
         s.exchangeRate = .mockedSEK
@@ -277,7 +280,8 @@ extension AppState {
     public static let mockedWithError: AppState = {
         let s = AppState()
         s.currentPrice = nil
-        s.priceArea = nil
+        s.region = .sweden
+        s.priceArea = Region.sweden.priceAreas.first
         s.userPresentableError = .noData
         return s
     }()

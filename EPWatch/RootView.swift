@@ -27,22 +27,28 @@ struct RootView: View {
                         )
                         .frame(minHeight: 200)
                     } footer: {
-                        PriceViewFooter(
+                        StateInfoFooterView(
                             priceArea: state.priceArea,
                             region: state.region,
                             exchangeRate: state.exchangeRate
                         )
                     }
-                } else if let error = state.userPresentableError {
-                    Text("\(error.localizedDescription)")
-                } else {
-                    HStack {
-                        Spacer()
+                } else if state.isFetching {
+                    VStack {
                         ProgressView("Fetching prices...")
-                        Spacer()
                     }
                     .listRowBackground(Color.clear)
-                    .frame(minHeight: 200)
+                    .frame(maxWidth: .infinity, minHeight: 200)
+                } else {
+                    Section {
+                        errorView
+                    } footer: {
+                        StateInfoFooterView(
+                            priceArea: state.priceArea,
+                            region: state.region,
+                            exchangeRate: nil
+                        )
+                    }
                 }
             }
             .navigationTitle("Electricity price")
@@ -72,11 +78,28 @@ struct RootView: View {
         }
     }
 
+    var errorView: some View {
+        VStack {
+            Image(systemName: "x.circle")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .foregroundColor(.red)
+                .frame(height: 50)
+            Text(state.userPresentableError?.localizedDescription ?? "")
+                .multilineTextAlignment(.center)
+        }
+        .padding()
+        .frame(maxWidth: .infinity)
+    }
+
 }
 
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {
         RootView()
             .environmentObject(AppState.mocked)
+        RootView()
+            .environmentObject(AppState.mockedWithError)
+            .previewDisplayName("Error")
     }
 }

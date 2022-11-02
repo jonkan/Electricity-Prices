@@ -12,18 +12,23 @@ public enum UserPresentableError: Error {
     case noExchangeRate(_ error: Error)
     case unknown(_ error: Error)
 
-    public var short: String {
+    public var localizedDescription: String {
+        return description.localized
+    }
+
+    private var description: String {
         switch self {
         case .noData:
-            return "Unfortunately no data was found.".localized
+            return "Unfortunately no data was found for the selected price area."
         case .noExchangeRate:
-            return "Failed to fetch an up-to-date exchange rate.".localized
+            return "Failed to fetch an up-to-date exchange rate."
         case .unknown:
-            return "An unknown error occurred.".localized
+            return "An unknown error occurred."
         }
     }
 
-    public var long: String {
-        return short
+    public var debugDescription: String {
+        return String(describing: self)
     }
+
 }
