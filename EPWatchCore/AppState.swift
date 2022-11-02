@@ -149,6 +149,9 @@ public class AppState: ObservableObject {
     }
 
     private func invalidateAndUpdatePrices() {
+        guard !isSwiftUIPreview() else {
+            return
+        }
         Task {
             prices = []
             currentPrice = nil
