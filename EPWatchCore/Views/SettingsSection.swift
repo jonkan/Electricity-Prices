@@ -17,7 +17,7 @@ public struct SettingsSection: View {
         Section {
             BasicSettingsNavigationLink(
                 title: "Region",
-                values: Region.allCases,
+                values: Region.allEnabled.localizedSorted(),
                 currentValue: $state.region,
                 displayValue: { $0.name.localized }
             )

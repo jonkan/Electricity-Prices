@@ -50,6 +50,30 @@ public enum Region: String, Codable, CaseIterable, Identifiable, Equatable {
     case ukraine        //Ukraine (UA)
     case unitedKingdom  //United Kingdom (UK)
 
+    public static var allEnabled: [Region] {
+        return Region.allCases.filter({ !$0.disabled })
+    }
+
+    /// These regions doesn't (at the time of writing) have any data, will they ever?
+    public var disabled: Bool {
+        switch self {
+        case .albania: fallthrough
+        case .bosnia: fallthrough
+        case .cyprus: fallthrough
+        case .georgia: fallthrough
+        case .kosovo: fallthrough
+        case .malta: fallthrough
+        case .moldova: fallthrough
+        case .montenegro: fallthrough
+        case .northMacedonia: fallthrough
+        case .turkey: fallthrough
+        case .unitedKingdom:
+            return true
+        default:
+            return false
+        }
+    }
+
     public var name: String {
         switch self {
         case .albania:          return "Albania"
@@ -222,7 +246,6 @@ public enum Region: String, Codable, CaseIterable, Identifiable, Equatable {
             ]
         case .italy:
             return [
-                PriceArea(title: "IT-Brindisi", id: "BZN|IT-Brindisi", code: "10Y1001A1001A699"),
                 PriceArea(title: "IT-Calabria", id: "BZN|IT-Calabria", code: "10Y1001C--00096J"),
                 PriceArea(title: "IT-Centre-North", id: "BZN|IT-Centre-North", code: "10Y1001A1001A70O"),
                 PriceArea(title: "IT-Centre-South", id: "BZN|IT-Centre-South", code: "10Y1001A1001A71M"),
@@ -240,7 +263,8 @@ public enum Region: String, Codable, CaseIterable, Identifiable, Equatable {
                 PriceArea(title: "IT-SACODC", id: "BZN|IT-SACODC", code: "10Y1001A1001A893"),
                 PriceArea(title: "IT-Sardinia", id: "BZN|IT-Sardinia", code: "10Y1001A1001A74G"),
                 PriceArea(title: "IT-Sicily", id: "BZN|IT-Sicily", code: "10Y1001A1001A75E"),
-                PriceArea(title: "IT-South", id: "BZN|IT-South", code: "10Y1001A1001A788")
+                PriceArea(title: "IT-South", id: "BZN|IT-South", code: "10Y1001A1001A788"),
+                PriceArea(title: "IT-Brindisi", id: "BZN|IT-Brindisi", code: "10Y1001A1001A699") // Not working?
             ]
         case .kosovo:
             return [
@@ -306,8 +330,8 @@ public enum Region: String, Codable, CaseIterable, Identifiable, Equatable {
             ]
         case .slovakia:
             return [
-                PriceArea(title: "CZ+DE+SK", id: "BZN|CZ+DE+SK", code: "10YDOM-CZ-DE-SKK"),
-                PriceArea(title: "SK", id: "BZN|SK", code: "10YSK-SEPS-----K")
+                PriceArea(title: "SK", id: "BZN|SK", code: "10YSK-SEPS-----K"),
+                PriceArea(title: "CZ+DE+SK", id: "BZN|CZ+DE+SK", code: "10YDOM-CZ-DE-SKK"), // Not working?
             ]
         case .slovenia:
             return [
@@ -359,3 +383,12 @@ public enum Region: String, Codable, CaseIterable, Identifiable, Equatable {
     }
 
 }
+
+public extension Array where Element == Region {
+    func localizedSorted() -> [Region] {
+        sorted { a, b in
+            return a.name.localized < b.name.localized
+        }
+    }
+}
+

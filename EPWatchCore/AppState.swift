@@ -111,7 +111,7 @@ public class AppState: ObservableObject {
 
         if region == nil {
             let currentRegionId = Locale.current.region?.identifier
-            if let r = Region.allCases.first(where: { $0.id == currentRegionId }) {
+            if let r = Region.allEnabled.first(where: { $0.id == currentRegionId }) {
                 region = r
                 priceArea = r.priceAreas.first
             } else {
