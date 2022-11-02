@@ -245,6 +245,11 @@ public class AppState: ObservableObject {
         let dayAheadPrices = try await PricesAPI.shared.downloadDayAheadPrices(for: priceArea)
         let rate = try await currentExchangeRate()
         let prices = try dayAheadPrices.prices(using: rate)
+#if DEBUG
+        if ProcessInfo.processInfo.environment["SHOW_MOCKED_PRICES"] == "true" {
+            return .mockPrices
+        }
+#endif
         return prices
     }
 
