@@ -15,14 +15,27 @@ struct StateInfoFooterView: View {
     let exchangeRate: ExchangeRate?
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        Grid(alignment: .topLeading) {
             if let priceArea = priceArea, let region = region {
-                Text("Price area: \(priceArea.title + ", " + region.name.localized)")
+                GridRow {
+                    Text("Price area")
+                        .gridColumnAlignment(.trailing)
+                    Text("\(priceArea.title + ", " + region.name.localized)")
+                        .bold()
+                }
             }
             if let exchangeRate = exchangeRate,
                exchangeRate.to != .EUR,
                let formattedRate = exchangeRate.formattedRate() {
-                Text("Exchange rate: \(formattedRate + " " + exchangeRate.to.name.localized + "/" + exchangeRate.from.name.localized)")
+                GridRow {
+                    Text("Exchange rate")
+                        .gridColumnAlignment(.trailing)
+                    VStack(alignment: .leading) {
+                        Text("\(formattedRate + " " + exchangeRate.to.name.localized + "/" + exchangeRate.from.name.localized)")
+                            .bold()
+                        Text("ECB closing price \(exchangeRate.formattedDate())")
+                    }
+                }
             }
         }
         .font(.caption)

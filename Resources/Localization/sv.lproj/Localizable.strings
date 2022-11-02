@@ -7,8 +7,9 @@
 
 "Region" = "Land";
 "Price area" = "Elområde";
-"Price area: %@" = "Elområde: %@";
-"Exchange rate: %@" = "Växelkurs: %@";
+"Exchange rate" = "Växelkurs";
+"ECB closing price %@" = "ECB stängningskurs %@";
+"fetched" = "hämtad";
 "%@ is used if the price is lower than %@" = "%@ används om priset är under %@";
 "Widgets always show prices in %@" = "Widgets visar alltid priser i %@";
 
