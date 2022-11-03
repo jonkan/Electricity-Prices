@@ -37,8 +37,14 @@ struct StateInfoFooterView: View {
                     }
                 }
             }
+            Divider()
+                .gridCellUnsizedAxes([.horizontal, .vertical])
+            Text("Prices are ") +
+            Text("per kWh").bold() +
+            Text(", without energy taxes or fees.")
         }
         .font(.caption)
+        .frame(maxWidth: .infinity)
     }
     
 }
