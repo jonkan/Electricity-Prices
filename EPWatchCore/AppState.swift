@@ -52,8 +52,8 @@ public class AppState: ObservableObject {
         didSet {
             guard oldValue != currency else { return }
             Log("Currency did change: \(currency.name)")
-            invalidateAndUpdatePricesSubject.send()
             currencyPresentation = currency.suggestedCurrencyPresentation
+            invalidateAndUpdatePricesSubject.send()
         }
     }
 
@@ -62,8 +62,10 @@ public class AppState: ObservableObject {
         didSet {
             guard oldValue != currencyPresentation else { return }
             Log("Currency presentation did change: \(currencyPresentation)")
-            // Workaround to make the settings view update after changing.
-            Task { objectWillChange.send() }
+            Task {
+                objectWillChange.send()
+                WidgetCenter.shared.reloadAllTimelines()
+            }
         }
     }
 
