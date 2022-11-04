@@ -74,6 +74,9 @@ struct DayAheadPrices: Codable {
         var points: [PricePoint] = []
         for ts in timeSeries {
             let period = ts.period
+            guard period.resolution == "PT60M" else {
+                continue
+            }
             for p in period.point {
                 let start = period.timeInterval.start + (p.position - 1).hours
                 let MWperkW = 0.001
