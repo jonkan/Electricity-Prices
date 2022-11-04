@@ -65,6 +65,7 @@ public class AppState: ObservableObject {
             Task {
                 objectWillChange.send()
                 WidgetCenter.shared.reloadAllTimelines()
+                Log("Reloading all timelines")
             }
         }
     }
@@ -167,8 +168,9 @@ public class AppState: ObservableObject {
                 LogError(error)
                 userPresentableError = .unknown(error)
             }
-            WidgetCenter.shared.reloadAllTimelines()
             objectWillChange.send()
+            WidgetCenter.shared.reloadAllTimelines()
+            Log("Reloading all timelines")
         }
     }
 

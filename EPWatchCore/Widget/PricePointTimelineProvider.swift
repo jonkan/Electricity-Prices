@@ -22,6 +22,7 @@ public struct PricePointTimelineProvider: TimelineProvider {
             .publisher(for: AppState.didUpdateDayAheadPrices)
             .sink { _ in
                 WidgetCenter.shared.reloadAllTimelines()
+                Log("Reloading all timelines")
             }
     }
 
@@ -47,6 +48,7 @@ public struct PricePointTimelineProvider: TimelineProvider {
                     limits: limits,
                     currencyPresentation: currencyPresentation
                 )
+                Log("Provided a timeline snapshot")
                 completion(entry)
             } catch {
                 LogError(error)
@@ -85,6 +87,11 @@ public struct PricePointTimelineProvider: TimelineProvider {
                     )
                 }
                 let timeline = Timeline(entries: entries, policy: .atEnd)
+                if let start = entries.first?.date, let end = entries.last?.date {
+                    Log("Provided \(entries.count) timeline entries from: \(start), to: \(end)")
+                } else {
+                    Log("Provided no timeline entries")
+                }
                 numberOfFailures = 0
                 completion(timeline)
             } catch {
