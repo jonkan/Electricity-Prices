@@ -12,18 +12,12 @@ import SwiftUI
 public struct PricePointTimelineProvider: TimelineProvider {
 
     public typealias Entry = PricePointTimelineEntry
-    var didUpdateDayAheadPricesCancellable: AnyCancellable?
 
     @AppStorage("numberOfFailures")
     var numberOfFailures: Int = 0
 
     public init() {
-        didUpdateDayAheadPricesCancellable = NotificationCenter.default
-            .publisher(for: AppState.didUpdateDayAheadPrices)
-            .sink { _ in
-                WidgetCenter.shared.reloadAllTimelines()
-                Log("Reloading all timelines")
-            }
+
     }
 
     public func placeholder(in context: Context) -> Entry {

@@ -107,9 +107,6 @@ public class AppState: ObservableObject {
         }
     }
 
-    nonisolated
-    public static let didUpdateDayAheadPrices = Notification.Name("didUpdateDayAheadPrices")
-
     private init() {
         updatePricesIfNeeded()
 
@@ -233,7 +230,7 @@ public class AppState: ObservableObject {
             prices = try await downloadPrices()
             currentPrice = prices.price(for: .now)
             Log("Success updating prices")
-            NotificationCenter.default.post(name: Self.didUpdateDayAheadPrices, object: self)
+            WidgetCenter.shared.reloadAllTimelines()
         }
         defer {
             updateTask = nil
