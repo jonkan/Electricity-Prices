@@ -20,20 +20,6 @@
                ReferencedContainer = "container:EPWatch.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2696881328D477EC002142BF"
-               BuildableName = "EPWatch.app"
-               BlueprintName = "EPWatch"
-               ReferencedContainer = "container:EPWatch.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

@@ -7,32 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2602DE47290AD20200CC83F2 /* XCGLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 2602DE46290AD20200CC83F2 /* XCGLogger */; };
-		2607877F28D669C200FF2C33 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2607877E28D669C200FF2C33 /* Alamofire */; };
-		2607878128D669C200FF2C33 /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 2607878028D669C200FF2C33 /* XMLCoder */; };
-		2607878328D669C200FF2C33 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 2607878228D669C200FF2C33 /* SwiftDate */; };
-		2607878428D669D700FF2C33 /* DateIntervalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BCB028D0870300E31A20 /* DateIntervalFormatter.swift */; };
-		2607878A28D669D700FF2C33 /* FormattingStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BCB328D0872800E31A20 /* FormattingStyle.swift */; };
-		2607878E28D669D700FF2C33 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624ADE28C7DB2E000F7E2E /* AppState.swift */; };
-		2607879028D669D700FF2C33 /* PriceChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269687A828D452CB002142BF /* PriceChartView.swift */; };
-		2607879228D66A1200FF2C33 /* ForexAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AF128C9332F000F7E2E /* ForexAPI.swift */; };
-		2607879328D66A1200FF2C33 /* DayAheadPrices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AE228C7DBC1000F7E2E /* DayAheadPrices.swift */; };
-		2607879428D66A1200FF2C33 /* PricesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AF728C93E1F000F7E2E /* PricesAPI.swift */; };
-		2607879528D66A5E00FF2C33 /* libEPWatchCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2607877728D6693000FF2C33 /* libEPWatchCore.a */; };
-		2607879628D66A8C00FF2C33 /* libEPWatchCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2607877728D6693000FF2C33 /* libEPWatchCore.a */; };
 		2607879F28D70B8C00FF2C33 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2674BC6328D0572D00E31A20 /* WidgetKit.framework */; };
 		260787A028D70B8C00FF2C33 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2674BC6528D0572D00E31A20 /* SwiftUI.framework */; };
 		260787A328D70B8C00FF2C33 /* EPWatchWidgetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787A228D70B8C00FF2C33 /* EPWatchWidgetExtension.swift */; };
 		260787A928D70B8D00FF2C33 /* EPWatchWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2607879E28D70B8C00FF2C33 /* EPWatchWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		260787B328D70CE900FF2C33 /* PricePointTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787B228D70CE900FF2C33 /* PricePointTimelineProvider.swift */; };
-		260787B428D70D1200FF2C33 /* PricePointTimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BCB528D08AA000E31A20 /* PricePointTimelineEntry.swift */; };
-		260787B628D7109C00FF2C33 /* PricePointCircularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787B528D7109C00FF2C33 /* PricePointCircularWidgetView.swift */; };
-		260787B828D711C100FF2C33 /* PricePointRectangularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787B728D711C100FF2C33 /* PricePointRectangularWidgetView.swift */; };
-		260787BA28D711FF00FF2C33 /* PricePointLargeWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787B928D711FF00FF2C33 /* PricePointLargeWidgetView.swift */; };
-		260787BC28D7123A00FF2C33 /* PricePointInlineWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787BB28D7123A00FF2C33 /* PricePointInlineWidgetView.swift */; };
-		260787BE28D712BB00FF2C33 /* PricePointWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787BD28D712BB00FF2C33 /* PricePointWidgetView.swift */; };
-		260787C028D7171E00FF2C33 /* libEPWatchCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2607877728D6693000FF2C33 /* libEPWatchCore.a */; };
-		260787C328D7182C00FF2C33 /* libEPWatchCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2607877728D6693000FF2C33 /* libEPWatchCore.a */; platformFilters = (ios, watchos, ); };
 		260787C728D88A3900FF2C33 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 260787C528D88A3900FF2C33 /* InfoPlist.strings */; };
 		260787CA28D88A3900FF2C33 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 260787C828D88A3900FF2C33 /* Localizable.strings */; };
 		260787D828D88FFB00FF2C33 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 260787C528D88A3900FF2C33 /* InfoPlist.strings */; };
@@ -42,36 +20,20 @@
 		260787DC28D88FFC00FF2C33 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 260787C528D88A3900FF2C33 /* InfoPlist.strings */; };
 		260787DD28D88FFC00FF2C33 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 260787C828D88A3900FF2C33 /* Localizable.strings */; };
 		2612513B29127047003D9C15 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879128D1CD91002142BF /* SettingsView.swift */; };
-		2612513D291271D9003D9C15 /* isSwiftUIPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2612513C291271D9003D9C15 /* isSwiftUIPreview.swift */; };
 		261E7D3B28DB0F470018CB4A /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 261E7D3A28DB0F470018CB4A /* XMLCoder */; };
 		261FC1A028B77720007B4A4E /* EPWatchKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC19F28B77720007B4A4E /* EPWatchKitApp.swift */; };
 		261FC1A428B77720007B4A4E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC1A328B77720007B4A4E /* NotificationController.swift */; };
 		261FC1A628B77720007B4A4E /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC1A528B77720007B4A4E /* NotificationView.swift */; };
 		263A126128D906CD00A11816 /* day-ahead-prices-2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 263A126028D906CD00A11816 /* day-ahead-prices-2.xml */; };
 		2645EEFE2916677A0034C1E6 /* day-ahead-prices-3-DE-LU.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2645EEFD2916677A0034C1E6 /* day-ahead-prices-3-DE-LU.xml */; };
-		26490D21290DB6CD0030AEE1 /* CurrencySubdivision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733252905D7B000CE9A4C /* CurrencySubdivision.swift */; };
-		26490D22290DB6CD0030AEE1 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657331B2903121E00CE9A4C /* Currency.swift */; };
-		26490D23290DB6CD0030AEE1 /* PriceRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879628D26A3D002142BF /* PriceRange.swift */; };
-		26490D24290DB6CD0030AEE1 /* PriceArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26573319290311C200CE9A4C /* PriceArea.swift */; };
-		26490D25290DB6CD0030AEE1 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879428D2021C002142BF /* Region.swift */; };
-		26490D26290DB6CD0030AEE1 /* CurrencyPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733272905D7C500CE9A4C /* CurrencyPresentation.swift */; };
-		26490D27290DB6CD0030AEE1 /* PriceLimits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269687A428D3B5F8002142BF /* PriceLimits.swift */; };
-		26490D28290DB6CD0030AEE1 /* PricePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AEF28C92D3C000F7E2E /* PricePoint.swift */; };
+		2645EF5429166EAB0034C1E6 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 2645EF5329166EAB0034C1E6 /* SwiftDate */; };
 		264E989528DB2BA600E02F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2696881A28D477EE002142BF /* Assets.xcassets */; };
 		264E989628DB2BA600E02F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2696881A28D477EE002142BF /* Assets.xcassets */; };
 		264E989728DB2BA600E02F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2696881A28D477EE002142BF /* Assets.xcassets */; };
-		265733202905446D00CE9A4C /* BasicSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657331F2905446D00CE9A4C /* BasicSettingsView.swift */; };
-		2657332229054A4000CE9A4C /* CurrencyPresentationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657332129054A4000CE9A4C /* CurrencyPresentationSettingsView.swift */; };
-		265733242905D09500CE9A4C /* BasicSettingsNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733232905D09500CE9A4C /* BasicSettingsNavigationLink.swift */; };
-		2657332A2905E3B600CE9A4C /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733292905E3B600CE9A4C /* SettingsSection.swift */; };
-		2657332C29070FBF00CE9A4C /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657332B29070FBF00CE9A4C /* ExchangeRate.swift */; };
 		265733312907291700CE9A4C /* StateInfoFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733302907291700CE9A4C /* StateInfoFooterView.swift */; };
 		265733332907D2C100CE9A4C /* CurrencyFormattingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733322907D2C100CE9A4C /* CurrencyFormattingTests.swift */; };
-		265733352907E35300CE9A4C /* UserPresentableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733342907E35300CE9A4C /* UserPresentableError.swift */; };
-		265733372907E5BF00CE9A4C /* DayAheadPricesErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733362907E5BF00CE9A4C /* DayAheadPricesErrorResponse.swift */; };
 		2674BC6428D0572D00E31A20 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2674BC6328D0572D00E31A20 /* WidgetKit.framework */; };
 		2674BC6628D0572D00E31A20 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2674BC6528D0572D00E31A20 /* SwiftUI.framework */; };
-		2674BC6928D0572D00E31A20 /* EPWatchKitAppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BC6828D0572D00E31A20 /* EPWatchKitAppExtension.swift */; };
 		2674BC6F28D0572E00E31A20 /* EPWatchKitAppExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2674BC6228D0572D00E31A20 /* EPWatchKitAppExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2674BC8828D0596500E31A20 /* EPWatchCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BC8728D0596500E31A20 /* EPWatchCoreTests.swift */; };
 		2674BCB728D0928500E31A20 /* day-ahead-prices-1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 26C71B1728C1468500C2DC59 /* day-ahead-prices-1.xml */; };
@@ -83,20 +45,104 @@
 		2696881728D477ED002142BF /* EPWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696881628D477ED002142BF /* EPWatchApp.swift */; };
 		2696883128D47C4B002142BF /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696883028D47C4B002142BF /* PriceView.swift */; };
 		2696883428D4801F002142BF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696883228D47F3B002142BF /* SettingsView.swift */; };
+		26A6F68229199BE4006C3FFD /* EPWatchKitAppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BC6828D0572D00E31A20 /* EPWatchKitAppExtension.swift */; };
+		26A6F68F2919A713006C3FFD /* DayAheadPrices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AE228C7DBC1000F7E2E /* DayAheadPrices.swift */; };
+		26A6F6902919A713006C3FFD /* PricesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AF728C93E1F000F7E2E /* PricesAPI.swift */; };
+		26A6F6912919A713006C3FFD /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624ADE28C7DB2E000F7E2E /* AppState.swift */; };
+		26A6F6922919A713006C3FFD /* DayAheadPricesErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733362907E5BF00CE9A4C /* DayAheadPricesErrorResponse.swift */; };
+		26A6F6932919A724006C3FFD /* CurrencyPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733272905D7C500CE9A4C /* CurrencyPresentation.swift */; };
+		26A6F6942919A724006C3FFD /* PriceLimits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269687A428D3B5F8002142BF /* PriceLimits.swift */; };
+		26A6F6952919A724006C3FFD /* PriceRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879628D26A3D002142BF /* PriceRange.swift */; };
+		26A6F6962919A724006C3FFD /* PricePointWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787BD28D712BB00FF2C33 /* PricePointWidgetView.swift */; };
+		26A6F6972919A724006C3FFD /* UserDefaults+AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879D28D3A2C8002142BF /* UserDefaults+AppGroup.swift */; };
+		26A6F6982919A724006C3FFD /* PriceArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26573319290311C200CE9A4C /* PriceArea.swift */; };
+		26A6F6992919A724006C3FFD /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657332B29070FBF00CE9A4C /* ExchangeRate.swift */; };
+		26A6F69A2919A724006C3FFD /* DateIntervalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BCB028D0870300E31A20 /* DateIntervalFormatter.swift */; };
+		26A6F69B2919A724006C3FFD /* FormattingStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BCB328D0872800E31A20 /* FormattingStyle.swift */; };
+		26A6F69C2919A724006C3FFD /* FileManager+Directories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FD72910773A00D42DFB /* FileManager+Directories.swift */; };
+		26A6F69D2919A724006C3FFD /* CurrencyPresentationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657332129054A4000CE9A4C /* CurrencyPresentationSettingsView.swift */; };
+		26A6F69E2919A724006C3FFD /* UserPresentableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733342907E35300CE9A4C /* UserPresentableError.swift */; };
+		26A6F69F2919A724006C3FFD /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AE628C883C9000F7E2E /* Log.swift */; };
+		26A6F6A02919A724006C3FFD /* CurrencySubdivision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733252905D7B000CE9A4C /* CurrencySubdivision.swift */; };
+		26A6F6A12919A724006C3FFD /* PricePointRectangularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787B728D711C100FF2C33 /* PricePointRectangularWidgetView.swift */; };
+		26A6F6A22919A724006C3FFD /* LogOnce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2602DE4E290BCD7E00CC83F2 /* LogOnce.swift */; };
+		26A6F6A32919A724006C3FFD /* PricePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AEF28C92D3C000F7E2E /* PricePoint.swift */; };
+		26A6F6A42919A724006C3FFD /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879428D2021C002142BF /* Region.swift */; };
+		26A6F6A52919A724006C3FFD /* Calendar+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2602DE5E290D20FF00CC83F2 /* Calendar+Helpers.swift */; };
+		26A6F6A62919A724006C3FFD /* WCSessionActivationState+Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FD62910773A00D42DFB /* WCSessionActivationState+Description.swift */; };
+		26A6F6A72919A724006C3FFD /* BasicSettingsNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733232905D09500CE9A4C /* BasicSettingsNavigationLink.swift */; };
+		26A6F6A82919A724006C3FFD /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733292905E3B600CE9A4C /* SettingsSection.swift */; };
+		26A6F6A92919A724006C3FFD /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657331B2903121E00CE9A4C /* Currency.swift */; };
+		26A6F6AA2919A724006C3FFD /* String+AppGroupIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2602DE4A290B0DE300CC83F2 /* String+AppGroupIdentifier.swift */; };
+		26A6F6AB2919A724006C3FFD /* isSwiftUIPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2612513C291271D9003D9C15 /* isSwiftUIPreview.swift */; };
+		26A6F6AC2919A724006C3FFD /* AppStorageCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AF328C93541000F7E2E /* AppStorageCodable.swift */; };
+		26A6F6AD2919A724006C3FFD /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AE928C8EFFB000F7E2E /* Error.swift */; };
+		26A6F6AE2919A724006C3FFD /* PricePointInlineWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787BB28D7123A00FF2C33 /* PricePointInlineWidgetView.swift */; };
+		26A6F6AF2919A724006C3FFD /* ForexAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AF128C9332F000F7E2E /* ForexAPI.swift */; };
+		26A6F6B02919A724006C3FFD /* PriceChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269687A828D452CB002142BF /* PriceChartView.swift */; };
+		26A6F6B12919A724006C3FFD /* PricePointCircularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787B528D7109C00FF2C33 /* PricePointCircularWidgetView.swift */; };
+		26A6F6B22919A724006C3FFD /* PricePointLargeWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787B928D711FF00FF2C33 /* PricePointLargeWidgetView.swift */; };
+		26A6F6B32919A724006C3FFD /* PricePointTimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BCB528D08AA000E31A20 /* PricePointTimelineEntry.swift */; };
+		26A6F6B42919A724006C3FFD /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657332E2907244300CE9A4C /* String+Localized.swift */; };
+		26A6F6B52919A724006C3FFD /* BasicSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657331F2905446D00CE9A4C /* BasicSettingsView.swift */; };
+		26A6F6B62919A724006C3FFD /* PricePointTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787B228D70CE900FF2C33 /* PricePointTimelineProvider.swift */; };
+		26A6F6B82919A776006C3FFD /* XCGLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 26A6F6B72919A776006C3FFD /* XCGLogger */; };
+		26A6F6BA2919A785006C3FFD /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 26A6F6B92919A785006C3FFD /* SwiftDate */; };
+		26A6F6BC2919A790006C3FFD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 26A6F6BB2919A790006C3FFD /* Alamofire */; };
+		26A6F6BE2919A796006C3FFD /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 26A6F6BD2919A796006C3FFD /* XMLCoder */; };
+		26A6F6CB2919A953006C3FFD /* EPWatchCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A6F6882919A6BB006C3FFD /* EPWatchCore.framework */; };
+		26A6F6D02919A95F006C3FFD /* EPWatchCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A6F6882919A6BB006C3FFD /* EPWatchCore.framework */; };
+		26A6F6D12919A95F006C3FFD /* EPWatchCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 26A6F6882919A6BB006C3FFD /* EPWatchCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		26A6F6F0291BB325006C3FFD /* BasicSettingsNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733232905D09500CE9A4C /* BasicSettingsNavigationLink.swift */; };
+		26A6F6F1291BB325006C3FFD /* DayAheadPricesErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733362907E5BF00CE9A4C /* DayAheadPricesErrorResponse.swift */; };
+		26A6F6F2291BB325006C3FFD /* DateIntervalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BCB028D0870300E31A20 /* DateIntervalFormatter.swift */; };
+		26A6F6F3291BB325006C3FFD /* PricePointWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787BD28D712BB00FF2C33 /* PricePointWidgetView.swift */; };
+		26A6F6F4291BB325006C3FFD /* ForexAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AF128C9332F000F7E2E /* ForexAPI.swift */; };
+		26A6F6F5291BB325006C3FFD /* UserPresentableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733342907E35300CE9A4C /* UserPresentableError.swift */; };
+		26A6F6F6291BB325006C3FFD /* CurrencyPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733272905D7C500CE9A4C /* CurrencyPresentation.swift */; };
+		26A6F6F7291BB325006C3FFD /* BasicSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657331F2905446D00CE9A4C /* BasicSettingsView.swift */; };
+		26A6F6F8291BB325006C3FFD /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624ADE28C7DB2E000F7E2E /* AppState.swift */; };
+		26A6F6F9291BB325006C3FFD /* FileManager+Directories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FD72910773A00D42DFB /* FileManager+Directories.swift */; };
+		26A6F6FA291BB325006C3FFD /* PricePointLargeWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787B928D711FF00FF2C33 /* PricePointLargeWidgetView.swift */; };
+		26A6F6FB291BB325006C3FFD /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879428D2021C002142BF /* Region.swift */; };
+		26A6F6FC291BB325006C3FFD /* isSwiftUIPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2612513C291271D9003D9C15 /* isSwiftUIPreview.swift */; };
+		26A6F6FD291BB325006C3FFD /* PricePointCircularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787B528D7109C00FF2C33 /* PricePointCircularWidgetView.swift */; };
+		26A6F6FE291BB325006C3FFD /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657331B2903121E00CE9A4C /* Currency.swift */; };
+		26A6F6FF291BB325006C3FFD /* PricePointRectangularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787B728D711C100FF2C33 /* PricePointRectangularWidgetView.swift */; };
+		26A6F700291BB325006C3FFD /* PricePointInlineWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787BB28D7123A00FF2C33 /* PricePointInlineWidgetView.swift */; };
+		26A6F701291BB325006C3FFD /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657332E2907244300CE9A4C /* String+Localized.swift */; };
+		26A6F702291BB325006C3FFD /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AE928C8EFFB000F7E2E /* Error.swift */; };
+		26A6F703291BB325006C3FFD /* PriceArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26573319290311C200CE9A4C /* PriceArea.swift */; };
+		26A6F704291BB325006C3FFD /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AE628C883C9000F7E2E /* Log.swift */; };
+		26A6F705291BB325006C3FFD /* String+AppGroupIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2602DE4A290B0DE300CC83F2 /* String+AppGroupIdentifier.swift */; };
+		26A6F706291BB325006C3FFD /* PricesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AF728C93E1F000F7E2E /* PricesAPI.swift */; };
+		26A6F707291BB325006C3FFD /* AppStorageCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AF328C93541000F7E2E /* AppStorageCodable.swift */; };
+		26A6F708291BB325006C3FFD /* LogOnce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2602DE4E290BCD7E00CC83F2 /* LogOnce.swift */; };
+		26A6F709291BB325006C3FFD /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733292905E3B600CE9A4C /* SettingsSection.swift */; };
+		26A6F70A291BB325006C3FFD /* WCSessionActivationState+Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FD62910773A00D42DFB /* WCSessionActivationState+Description.swift */; };
+		26A6F70B291BB325006C3FFD /* FormattingStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BCB328D0872800E31A20 /* FormattingStyle.swift */; };
+		26A6F70C291BB325006C3FFD /* PricePointTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787B228D70CE900FF2C33 /* PricePointTimelineProvider.swift */; };
+		26A6F70D291BB325006C3FFD /* UserDefaults+AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879D28D3A2C8002142BF /* UserDefaults+AppGroup.swift */; };
+		26A6F70E291BB325006C3FFD /* DayAheadPrices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AE228C7DBC1000F7E2E /* DayAheadPrices.swift */; };
+		26A6F70F291BB325006C3FFD /* PriceLimits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269687A428D3B5F8002142BF /* PriceLimits.swift */; };
+		26A6F710291BB325006C3FFD /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657332B29070FBF00CE9A4C /* ExchangeRate.swift */; };
+		26A6F711291BB325006C3FFD /* PricePointTimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BCB528D08AA000E31A20 /* PricePointTimelineEntry.swift */; };
+		26A6F712291BB325006C3FFD /* PriceRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879628D26A3D002142BF /* PriceRange.swift */; };
+		26A6F713291BB325006C3FFD /* CurrencySubdivision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733252905D7B000CE9A4C /* CurrencySubdivision.swift */; };
+		26A6F714291BB325006C3FFD /* PricePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AEF28C92D3C000F7E2E /* PricePoint.swift */; };
+		26A6F715291BB325006C3FFD /* PriceChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269687A828D452CB002142BF /* PriceChartView.swift */; };
+		26A6F716291BB325006C3FFD /* Calendar+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2602DE5E290D20FF00CC83F2 /* Calendar+Helpers.swift */; };
+		26A6F717291BB325006C3FFD /* CurrencyPresentationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657332129054A4000CE9A4C /* CurrencyPresentationSettingsView.swift */; };
+		26A6F719291BB325006C3FFD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 26A6F6EA291BB325006C3FFD /* Alamofire */; };
+		26A6F71A291BB325006C3FFD /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 26A6F6E8291BB325006C3FFD /* SwiftDate */; };
+		26A6F71B291BB325006C3FFD /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 26A6F6EC291BB325006C3FFD /* XMLCoder */; };
+		26A6F71C291BB325006C3FFD /* XCGLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 26A6F6E6291BB325006C3FFD /* XCGLogger */; };
+		26A6F722291BB356006C3FFD /* EPWatchCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A6F721291BB325006C3FFD /* EPWatchCore.framework */; };
+		26A6F727291BB363006C3FFD /* EPWatchCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A6F721291BB325006C3FFD /* EPWatchCore.framework */; };
+		26A6F728291BB363006C3FFD /* EPWatchCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 26A6F721291BB325006C3FFD /* EPWatchCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		26AC446529112D5D00B86B1E /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AC446429112D5D00B86B1E /* CircularProgressView.swift */; };
-		26AC4466291269EB00B86B1E /* UserDefaults+AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879D28D3A2C8002142BF /* UserDefaults+AppGroup.swift */; };
-		26AC4467291269EB00B86B1E /* Calendar+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2602DE5E290D20FF00CC83F2 /* Calendar+Helpers.swift */; };
-		26AC4468291269EB00B86B1E /* LogOnce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2602DE4E290BCD7E00CC83F2 /* LogOnce.swift */; };
-		26AC4469291269EB00B86B1E /* FileManager+Directories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FD72910773A00D42DFB /* FileManager+Directories.swift */; };
-		26AC446A291269EB00B86B1E /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AE928C8EFFB000F7E2E /* Error.swift */; };
-		26AC446B291269EB00B86B1E /* String+AppGroupIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2602DE4A290B0DE300CC83F2 /* String+AppGroupIdentifier.swift */; };
-		26AC446C291269EB00B86B1E /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AE628C883C9000F7E2E /* Log.swift */; };
-		26AC446D291269EB00B86B1E /* AppStorageCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AF328C93541000F7E2E /* AppStorageCodable.swift */; };
-		26AC446F291269EB00B86B1E /* WCSessionActivationState+Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FD62910773A00D42DFB /* WCSessionActivationState+Description.swift */; };
-		26AC447129126A6000B86B1E /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657332E2907244300CE9A4C /* String+Localized.swift */; };
 		26AC447229126B6400B86B1E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696881828D477ED002142BF /* RootView.swift */; };
 		26AC447329126EFD00B86B1E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC1A128B77720007B4A4E /* RootView.swift */; };
-		26CD57C428DAFFC3007FC8BB /* libEPWatchCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2607877728D6693000FF2C33 /* libEPWatchCore.a */; };
 		26EC4A1428D9C52C004DD8EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2696881A28D477EE002142BF /* Assets.xcassets */; };
 		26F28FDC2910778300D42DFB /* SupportSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FDA2910778300D42DFB /* SupportSettingsView.swift */; };
 		26F28FDD2910778300D42DFB /* ShareLogsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FDB2910778300D42DFB /* ShareLogsState.swift */; };
@@ -105,33 +151,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2607879828D66B2300FF2C33 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 261FC18528B7771F007B4A4E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2607877628D6693000FF2C33;
-			remoteInfo = EPWatchCore;
-		};
 		260787A728D70B8D00FF2C33 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 261FC18528B7771F007B4A4E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2607879D28D70B8C00FF2C33;
 			remoteInfo = EPWatchWidgetExtensionExtension;
-		};
-		260787C128D7171E00FF2C33 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 261FC18528B7771F007B4A4E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2607877628D6693000FF2C33;
-			remoteInfo = EPWatchCore;
-		};
-		260787E128D8983D00FF2C33 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 261FC18528B7771F007B4A4E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2607877628D6693000FF2C33;
-			remoteInfo = EPWatchCore;
 		};
 		2674BC6D28D0572E00E31A20 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -147,25 +172,37 @@
 			remoteGlobalIDString = 261FC18E28B7771F007B4A4E;
 			remoteInfo = EPWatchKitApp;
 		};
-		26CD57C528DAFFC3007FC8BB /* PBXContainerItemProxy */ = {
+		26A6F6CD2919A953006C3FFD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 261FC18528B7771F007B4A4E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2607877628D6693000FF2C33;
+			remoteGlobalIDString = 26A6F6872919A6BA006C3FFD;
 			remoteInfo = EPWatchCore;
+		};
+		26A6F6D22919A960006C3FFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 261FC18528B7771F007B4A4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26A6F6872919A6BA006C3FFD;
+			remoteInfo = EPWatchCore;
+		};
+		26A6F724291BB356006C3FFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 261FC18528B7771F007B4A4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26A6F6E5291BB325006C3FFD;
+			remoteInfo = "EPWatchCore-watch";
+		};
+		26A6F729291BB363006C3FFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 261FC18528B7771F007B4A4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26A6F6E5291BB325006C3FFD;
+			remoteInfo = "EPWatchCore-watch";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2607877528D6693000FF2C33 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		260787AD28D70B8D00FF2C33 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -188,16 +225,6 @@
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2674BC9528D059A400E31A20 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2690400C28D5DA4100A823F5 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -215,6 +242,18 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				26A6F6D12919A95F006C3FFD /* EPWatchCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26A6F72B291BB363006C3FFD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				26A6F728291BB363006C3FFD /* EPWatchCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,7 +264,6 @@
 		2602DE4A290B0DE300CC83F2 /* String+AppGroupIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AppGroupIdentifier.swift"; sourceTree = "<group>"; };
 		2602DE4E290BCD7E00CC83F2 /* LogOnce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOnce.swift; sourceTree = "<group>"; };
 		2602DE5E290D20FF00CC83F2 /* Calendar+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+Helpers.swift"; sourceTree = "<group>"; };
-		2607877728D6693000FF2C33 /* libEPWatchCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEPWatchCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2607879E28D70B8C00FF2C33 /* EPWatchWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EPWatchWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		260787A228D70B8C00FF2C33 /* EPWatchWidgetExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPWatchWidgetExtension.swift; sourceTree = "<group>"; };
 		260787A628D70B8D00FF2C33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -303,6 +341,9 @@
 		2696882428D47888002142BF /* EPWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EPWatch.entitlements; sourceTree = "<group>"; };
 		2696883028D47C4B002142BF /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 		2696883228D47F3B002142BF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		26A6F6882919A6BB006C3FFD /* EPWatchCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EPWatchCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26A6F68A2919A6BB006C3FFD /* EPWatchCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPWatchCore.h; sourceTree = "<group>"; };
+		26A6F721291BB325006C3FFD /* EPWatchCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EPWatchCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26AC446429112D5D00B86B1E /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		26C71B1728C1468500C2DC59 /* day-ahead-prices-1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "day-ahead-prices-1.xml"; sourceTree = "<group>"; };
 		26F28FD62910773A00D42DFB /* WCSessionActivationState+Description.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WCSessionActivationState+Description.swift"; sourceTree = "<group>"; };
@@ -314,24 +355,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2607877428D6693000FF2C33 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2607878128D669C200FF2C33 /* XMLCoder in Frameworks */,
-				2607877F28D669C200FF2C33 /* Alamofire in Frameworks */,
-				2607878328D669C200FF2C33 /* SwiftDate in Frameworks */,
-				2602DE47290AD20200CC83F2 /* XCGLogger in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2607879B28D70B8C00FF2C33 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				260787C028D7171E00FF2C33 /* libEPWatchCore.a in Frameworks */,
 				260787A028D70B8C00FF2C33 /* SwiftUI.framework in Frameworks */,
 				2607879F28D70B8C00FF2C33 /* WidgetKit.framework in Frameworks */,
+				26A6F6CB2919A953006C3FFD /* EPWatchCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +369,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26CD57C428DAFFC3007FC8BB /* libEPWatchCore.a in Frameworks */,
+				26A6F727291BB363006C3FFD /* EPWatchCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,9 +377,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2607879628D66A8C00FF2C33 /* libEPWatchCore.a in Frameworks */,
 				2674BC6628D0572D00E31A20 /* SwiftUI.framework in Frameworks */,
 				2674BC6428D0572D00E31A20 /* WidgetKit.framework in Frameworks */,
+				26A6F722291BB356006C3FFD /* EPWatchCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +387,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				260787C328D7182C00FF2C33 /* libEPWatchCore.a in Frameworks */,
+				2645EF5429166EAB0034C1E6 /* SwiftDate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,11 +395,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26A6F6D02919A95F006C3FFD /* EPWatchCore.framework in Frameworks */,
 				26F28FE5291078B800D42DFB /* ActivityView in Frameworks */,
-				2607879528D66A5E00FF2C33 /* libEPWatchCore.a in Frameworks */,
 				2690401728D6682800A823F5 /* SwiftDate in Frameworks */,
 				261E7D3B28DB0F470018CB4A /* XMLCoder in Frameworks */,
 				2690401128D6680B00A823F5 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26A6F6852919A6BA006C3FFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26A6F6BC2919A790006C3FFD /* Alamofire in Frameworks */,
+				26A6F6BA2919A785006C3FFD /* SwiftDate in Frameworks */,
+				26A6F6BE2919A796006C3FFD /* XMLCoder in Frameworks */,
+				26A6F6B82919A776006C3FFD /* XCGLogger in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26A6F718291BB325006C3FFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26A6F719291BB325006C3FFD /* Alamofire in Frameworks */,
+				26A6F71A291BB325006C3FFD /* SwiftDate in Frameworks */,
+				26A6F71B291BB325006C3FFD /* XMLCoder in Frameworks */,
+				26A6F71C291BB325006C3FFD /* XCGLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,8 +492,9 @@
 				2674BC6228D0572D00E31A20 /* EPWatchKitAppExtension.appex */,
 				2674BC8228D0596500E31A20 /* EPWatchCoreTests.xctest */,
 				2696881428D477EC002142BF /* EPWatch.app */,
-				2607877728D6693000FF2C33 /* libEPWatchCore.a */,
 				2607879E28D70B8C00FF2C33 /* EPWatchWidgetExtension.appex */,
+				26A6F6882919A6BB006C3FFD /* EPWatchCore.framework */,
+				26A6F721291BB325006C3FFD /* EPWatchCore.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -521,6 +574,7 @@
 		2674BC7A28D0596500E31A20 /* EPWatchCore */ = {
 			isa = PBXGroup;
 			children = (
+				26A6F68A2919A6BB006C3FFD /* EPWatchCore.h */,
 				26624AF628C93DEA000F7E2E /* API */,
 				26624ADE28C7DB2E000F7E2E /* AppState.swift */,
 				2657332D290710B700CE9A4C /* Currency */,
@@ -688,30 +742,24 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXNativeTarget section */
-		2607877628D6693000FF2C33 /* EPWatchCore */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2607877B28D6693000FF2C33 /* Build configuration list for PBXNativeTarget "EPWatchCore" */;
-			buildPhases = (
-				2607877328D6693000FF2C33 /* Sources */,
-				2607877428D6693000FF2C33 /* Frameworks */,
-				2607877528D6693000FF2C33 /* CopyFiles */,
+/* Begin PBXHeadersBuildPhase section */
+		26A6F6832919A6BA006C3FFD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = EPWatchCore;
-			packageProductDependencies = (
-				2607877E28D669C200FF2C33 /* Alamofire */,
-				2607878028D669C200FF2C33 /* XMLCoder */,
-				2607878228D669C200FF2C33 /* SwiftDate */,
-				2602DE46290AD20200CC83F2 /* XCGLogger */,
-			);
-			productName = EPWatchCore;
-			productReference = 2607877728D6693000FF2C33 /* libEPWatchCore.a */;
-			productType = "com.apple.product-type.library.static";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
+		26A6F6EE291BB325006C3FFD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
 		2607879D28D70B8C00FF2C33 /* EPWatchWidgetExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 260787AA28D70B8D00FF2C33 /* Build configuration list for PBXNativeTarget "EPWatchWidgetExtension" */;
@@ -724,7 +772,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				260787C228D7171E00FF2C33 /* PBXTargetDependency */,
+				26A6F6CE2919A953006C3FFD /* PBXTargetDependency */,
 			);
 			name = EPWatchWidgetExtension;
 			productName = EPWatchWidgetExtensionExtension;
@@ -739,14 +787,14 @@
 				261FC19628B77720007B4A4E /* Sources */,
 				261FC19728B77720007B4A4E /* Frameworks */,
 				2674BC7028D0572E00E31A20 /* Embed Foundation Extensions */,
-				2674BC9528D059A400E31A20 /* Embed Frameworks */,
 				26DAC0BC29026F890079F66A /* Entsoe Security Token */,
+				26A6F72B291BB363006C3FFD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				2674BC6E28D0572E00E31A20 /* PBXTargetDependency */,
-				26CD57C628DAFFC3007FC8BB /* PBXTargetDependency */,
+				26A6F72A291BB363006C3FFD /* PBXTargetDependency */,
 			);
 			name = EPWatchKitApp;
 			packageProductDependencies = (
@@ -767,6 +815,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				26A6F725291BB356006C3FFD /* PBXTargetDependency */,
 			);
 			name = EPWatchKitAppExtension;
 			packageProductDependencies = (
@@ -786,9 +835,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				260787E228D8983D00FF2C33 /* PBXTargetDependency */,
 			);
 			name = EPWatchCoreTests;
+			packageProductDependencies = (
+				2645EF5329166EAB0034C1E6 /* SwiftDate */,
+			);
 			productName = EPWatchCoreTests;
 			productReference = 2674BC8228D0596500E31A20 /* EPWatchCoreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -808,9 +859,9 @@
 			buildRules = (
 			);
 			dependencies = (
-				2607879928D66B2300FF2C33 /* PBXTargetDependency */,
 				2690400B28D5DA4100A823F5 /* PBXTargetDependency */,
 				260787A828D70B8D00FF2C33 /* PBXTargetDependency */,
+				26A6F6D32919A960006C3FFD /* PBXTargetDependency */,
 			);
 			name = EPWatch;
 			packageProductDependencies = (
@@ -823,6 +874,54 @@
 			productReference = 2696881428D477EC002142BF /* EPWatch.app */;
 			productType = "com.apple.product-type.application";
 		};
+		26A6F6872919A6BA006C3FFD /* EPWatchCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26A6F68C2919A6BB006C3FFD /* Build configuration list for PBXNativeTarget "EPWatchCore" */;
+			buildPhases = (
+				26A6F6832919A6BA006C3FFD /* Headers */,
+				26A6F6842919A6BA006C3FFD /* Sources */,
+				26A6F6852919A6BA006C3FFD /* Frameworks */,
+				26A6F6862919A6BA006C3FFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EPWatchCore;
+			packageProductDependencies = (
+				26A6F6B72919A776006C3FFD /* XCGLogger */,
+				26A6F6B92919A785006C3FFD /* SwiftDate */,
+				26A6F6BB2919A790006C3FFD /* Alamofire */,
+				26A6F6BD2919A796006C3FFD /* XMLCoder */,
+			);
+			productName = EPWatchCore2;
+			productReference = 26A6F6882919A6BB006C3FFD /* EPWatchCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		26A6F6E5291BB325006C3FFD /* EPWatchCore-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26A6F71E291BB325006C3FFD /* Build configuration list for PBXNativeTarget "EPWatchCore-watchOS" */;
+			buildPhases = (
+				26A6F6EE291BB325006C3FFD /* Headers */,
+				26A6F6EF291BB325006C3FFD /* Sources */,
+				26A6F718291BB325006C3FFD /* Frameworks */,
+				26A6F71D291BB325006C3FFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EPWatchCore-watchOS";
+			packageProductDependencies = (
+				26A6F6E6291BB325006C3FFD /* XCGLogger */,
+				26A6F6E8291BB325006C3FFD /* SwiftDate */,
+				26A6F6EA291BB325006C3FFD /* Alamofire */,
+				26A6F6EC291BB325006C3FFD /* XMLCoder */,
+			);
+			productName = EPWatchCore2;
+			productReference = 26A6F721291BB325006C3FFD /* EPWatchCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -833,9 +932,6 @@
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
-					2607877628D6693000FF2C33 = {
-						CreatedOnToolsVersion = 14.0;
-					};
 					2607879D28D70B8C00FF2C33 = {
 						CreatedOnToolsVersion = 14.0;
 					};
@@ -850,6 +946,9 @@
 					};
 					2696881328D477EC002142BF = {
 						CreatedOnToolsVersion = 14.0;
+					};
+					26A6F6872919A6BA006C3FFD = {
+						CreatedOnToolsVersion = 14.1;
 					};
 				};
 			};
@@ -878,8 +977,9 @@
 				2607879D28D70B8C00FF2C33 /* EPWatchWidgetExtension */,
 				261FC18E28B7771F007B4A4E /* EPWatchKitApp */,
 				2674BC6128D0572D00E31A20 /* EPWatchKitAppExtension */,
-				2607877628D6693000FF2C33 /* EPWatchCore */,
 				2674BC8128D0596500E31A20 /* EPWatchCoreTests */,
+				26A6F6872919A6BA006C3FFD /* EPWatchCore */,
+				26A6F6E5291BB325006C3FFD /* EPWatchCore-watchOS */,
 			);
 		};
 /* End PBXProject section */
@@ -932,6 +1032,20 @@
 				260787CA28D88A3900FF2C33 /* Localizable.strings in Resources */,
 				26EC4A1428D9C52C004DD8EB /* Assets.xcassets in Resources */,
 				260787C728D88A3900FF2C33 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26A6F6862919A6BA006C3FFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26A6F71D291BB325006C3FFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1021,53 +1135,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2607877328D6693000FF2C33 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				26AC446D291269EB00B86B1E /* AppStorageCodable.swift in Sources */,
-				2607879328D66A1200FF2C33 /* DayAheadPrices.swift in Sources */,
-				26490D23290DB6CD0030AEE1 /* PriceRange.swift in Sources */,
-				26AC446C291269EB00B86B1E /* Log.swift in Sources */,
-				26AC4468291269EB00B86B1E /* LogOnce.swift in Sources */,
-				260787BA28D711FF00FF2C33 /* PricePointLargeWidgetView.swift in Sources */,
-				26490D27290DB6CD0030AEE1 /* PriceLimits.swift in Sources */,
-				260787B328D70CE900FF2C33 /* PricePointTimelineProvider.swift in Sources */,
-				26AC4466291269EB00B86B1E /* UserDefaults+AppGroup.swift in Sources */,
-				26490D22290DB6CD0030AEE1 /* Currency.swift in Sources */,
-				265733242905D09500CE9A4C /* BasicSettingsNavigationLink.swift in Sources */,
-				26490D21290DB6CD0030AEE1 /* CurrencySubdivision.swift in Sources */,
-				26AC447129126A6000B86B1E /* String+Localized.swift in Sources */,
-				26AC446F291269EB00B86B1E /* WCSessionActivationState+Description.swift in Sources */,
-				2607879428D66A1200FF2C33 /* PricesAPI.swift in Sources */,
-				2607878E28D669D700FF2C33 /* AppState.swift in Sources */,
-				26AC446A291269EB00B86B1E /* Error.swift in Sources */,
-				26AC446B291269EB00B86B1E /* String+AppGroupIdentifier.swift in Sources */,
-				26490D28290DB6CD0030AEE1 /* PricePoint.swift in Sources */,
-				26490D25290DB6CD0030AEE1 /* Region.swift in Sources */,
-				260787B628D7109C00FF2C33 /* PricePointCircularWidgetView.swift in Sources */,
-				2657332C29070FBF00CE9A4C /* ExchangeRate.swift in Sources */,
-				265733352907E35300CE9A4C /* UserPresentableError.swift in Sources */,
-				260787BE28D712BB00FF2C33 /* PricePointWidgetView.swift in Sources */,
-				2657332A2905E3B600CE9A4C /* SettingsSection.swift in Sources */,
-				2607879028D669D700FF2C33 /* PriceChartView.swift in Sources */,
-				2607878A28D669D700FF2C33 /* FormattingStyle.swift in Sources */,
-				2607879228D66A1200FF2C33 /* ForexAPI.swift in Sources */,
-				2657332229054A4000CE9A4C /* CurrencyPresentationSettingsView.swift in Sources */,
-				260787BC28D7123A00FF2C33 /* PricePointInlineWidgetView.swift in Sources */,
-				26AC4467291269EB00B86B1E /* Calendar+Helpers.swift in Sources */,
-				26490D26290DB6CD0030AEE1 /* CurrencyPresentation.swift in Sources */,
-				26490D24290DB6CD0030AEE1 /* PriceArea.swift in Sources */,
-				265733202905446D00CE9A4C /* BasicSettingsView.swift in Sources */,
-				265733372907E5BF00CE9A4C /* DayAheadPricesErrorResponse.swift in Sources */,
-				260787B428D70D1200FF2C33 /* PricePointTimelineEntry.swift in Sources */,
-				2612513D291271D9003D9C15 /* isSwiftUIPreview.swift in Sources */,
-				26AC4469291269EB00B86B1E /* FileManager+Directories.swift in Sources */,
-				260787B828D711C100FF2C33 /* PricePointRectangularWidgetView.swift in Sources */,
-				2607878428D669D700FF2C33 /* DateIntervalFormatter.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2607879A28D70B8C00FF2C33 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1095,7 +1162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2674BC6928D0572D00E31A20 /* EPWatchKitAppExtension.swift in Sources */,
+				26A6F68229199BE4006C3FFD /* EPWatchKitAppExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1123,32 +1190,107 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		26A6F6842919A6BA006C3FFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26A6F6A72919A724006C3FFD /* BasicSettingsNavigationLink.swift in Sources */,
+				26A6F6922919A713006C3FFD /* DayAheadPricesErrorResponse.swift in Sources */,
+				26A6F69A2919A724006C3FFD /* DateIntervalFormatter.swift in Sources */,
+				26A6F6962919A724006C3FFD /* PricePointWidgetView.swift in Sources */,
+				26A6F6AF2919A724006C3FFD /* ForexAPI.swift in Sources */,
+				26A6F69E2919A724006C3FFD /* UserPresentableError.swift in Sources */,
+				26A6F6932919A724006C3FFD /* CurrencyPresentation.swift in Sources */,
+				26A6F6B52919A724006C3FFD /* BasicSettingsView.swift in Sources */,
+				26A6F6912919A713006C3FFD /* AppState.swift in Sources */,
+				26A6F69C2919A724006C3FFD /* FileManager+Directories.swift in Sources */,
+				26A6F6B22919A724006C3FFD /* PricePointLargeWidgetView.swift in Sources */,
+				26A6F6A42919A724006C3FFD /* Region.swift in Sources */,
+				26A6F6AB2919A724006C3FFD /* isSwiftUIPreview.swift in Sources */,
+				26A6F6B12919A724006C3FFD /* PricePointCircularWidgetView.swift in Sources */,
+				26A6F6A92919A724006C3FFD /* Currency.swift in Sources */,
+				26A6F6A12919A724006C3FFD /* PricePointRectangularWidgetView.swift in Sources */,
+				26A6F6AE2919A724006C3FFD /* PricePointInlineWidgetView.swift in Sources */,
+				26A6F6B42919A724006C3FFD /* String+Localized.swift in Sources */,
+				26A6F6AD2919A724006C3FFD /* Error.swift in Sources */,
+				26A6F6982919A724006C3FFD /* PriceArea.swift in Sources */,
+				26A6F69F2919A724006C3FFD /* Log.swift in Sources */,
+				26A6F6AA2919A724006C3FFD /* String+AppGroupIdentifier.swift in Sources */,
+				26A6F6902919A713006C3FFD /* PricesAPI.swift in Sources */,
+				26A6F6AC2919A724006C3FFD /* AppStorageCodable.swift in Sources */,
+				26A6F6A22919A724006C3FFD /* LogOnce.swift in Sources */,
+				26A6F6A82919A724006C3FFD /* SettingsSection.swift in Sources */,
+				26A6F6A62919A724006C3FFD /* WCSessionActivationState+Description.swift in Sources */,
+				26A6F69B2919A724006C3FFD /* FormattingStyle.swift in Sources */,
+				26A6F6B62919A724006C3FFD /* PricePointTimelineProvider.swift in Sources */,
+				26A6F6972919A724006C3FFD /* UserDefaults+AppGroup.swift in Sources */,
+				26A6F68F2919A713006C3FFD /* DayAheadPrices.swift in Sources */,
+				26A6F6942919A724006C3FFD /* PriceLimits.swift in Sources */,
+				26A6F6992919A724006C3FFD /* ExchangeRate.swift in Sources */,
+				26A6F6B32919A724006C3FFD /* PricePointTimelineEntry.swift in Sources */,
+				26A6F6952919A724006C3FFD /* PriceRange.swift in Sources */,
+				26A6F6A02919A724006C3FFD /* CurrencySubdivision.swift in Sources */,
+				26A6F6A32919A724006C3FFD /* PricePoint.swift in Sources */,
+				26A6F6B02919A724006C3FFD /* PriceChartView.swift in Sources */,
+				26A6F6A52919A724006C3FFD /* Calendar+Helpers.swift in Sources */,
+				26A6F69D2919A724006C3FFD /* CurrencyPresentationSettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26A6F6EF291BB325006C3FFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26A6F6F0291BB325006C3FFD /* BasicSettingsNavigationLink.swift in Sources */,
+				26A6F6F1291BB325006C3FFD /* DayAheadPricesErrorResponse.swift in Sources */,
+				26A6F6F2291BB325006C3FFD /* DateIntervalFormatter.swift in Sources */,
+				26A6F6F3291BB325006C3FFD /* PricePointWidgetView.swift in Sources */,
+				26A6F6F4291BB325006C3FFD /* ForexAPI.swift in Sources */,
+				26A6F6F5291BB325006C3FFD /* UserPresentableError.swift in Sources */,
+				26A6F6F6291BB325006C3FFD /* CurrencyPresentation.swift in Sources */,
+				26A6F6F7291BB325006C3FFD /* BasicSettingsView.swift in Sources */,
+				26A6F6F8291BB325006C3FFD /* AppState.swift in Sources */,
+				26A6F6F9291BB325006C3FFD /* FileManager+Directories.swift in Sources */,
+				26A6F6FA291BB325006C3FFD /* PricePointLargeWidgetView.swift in Sources */,
+				26A6F6FB291BB325006C3FFD /* Region.swift in Sources */,
+				26A6F6FC291BB325006C3FFD /* isSwiftUIPreview.swift in Sources */,
+				26A6F6FD291BB325006C3FFD /* PricePointCircularWidgetView.swift in Sources */,
+				26A6F6FE291BB325006C3FFD /* Currency.swift in Sources */,
+				26A6F6FF291BB325006C3FFD /* PricePointRectangularWidgetView.swift in Sources */,
+				26A6F700291BB325006C3FFD /* PricePointInlineWidgetView.swift in Sources */,
+				26A6F701291BB325006C3FFD /* String+Localized.swift in Sources */,
+				26A6F702291BB325006C3FFD /* Error.swift in Sources */,
+				26A6F703291BB325006C3FFD /* PriceArea.swift in Sources */,
+				26A6F704291BB325006C3FFD /* Log.swift in Sources */,
+				26A6F705291BB325006C3FFD /* String+AppGroupIdentifier.swift in Sources */,
+				26A6F706291BB325006C3FFD /* PricesAPI.swift in Sources */,
+				26A6F707291BB325006C3FFD /* AppStorageCodable.swift in Sources */,
+				26A6F708291BB325006C3FFD /* LogOnce.swift in Sources */,
+				26A6F709291BB325006C3FFD /* SettingsSection.swift in Sources */,
+				26A6F70A291BB325006C3FFD /* WCSessionActivationState+Description.swift in Sources */,
+				26A6F70B291BB325006C3FFD /* FormattingStyle.swift in Sources */,
+				26A6F70C291BB325006C3FFD /* PricePointTimelineProvider.swift in Sources */,
+				26A6F70D291BB325006C3FFD /* UserDefaults+AppGroup.swift in Sources */,
+				26A6F70E291BB325006C3FFD /* DayAheadPrices.swift in Sources */,
+				26A6F70F291BB325006C3FFD /* PriceLimits.swift in Sources */,
+				26A6F710291BB325006C3FFD /* ExchangeRate.swift in Sources */,
+				26A6F711291BB325006C3FFD /* PricePointTimelineEntry.swift in Sources */,
+				26A6F712291BB325006C3FFD /* PriceRange.swift in Sources */,
+				26A6F713291BB325006C3FFD /* CurrencySubdivision.swift in Sources */,
+				26A6F714291BB325006C3FFD /* PricePoint.swift in Sources */,
+				26A6F715291BB325006C3FFD /* PriceChartView.swift in Sources */,
+				26A6F716291BB325006C3FFD /* Calendar+Helpers.swift in Sources */,
+				26A6F717291BB325006C3FFD /* CurrencyPresentationSettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2607879928D66B2300FF2C33 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2607877628D6693000FF2C33 /* EPWatchCore */;
-			targetProxy = 2607879828D66B2300FF2C33 /* PBXContainerItemProxy */;
-		};
 		260787A828D70B8D00FF2C33 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2607879D28D70B8C00FF2C33 /* EPWatchWidgetExtension */;
 			targetProxy = 260787A728D70B8D00FF2C33 /* PBXContainerItemProxy */;
-		};
-		260787C228D7171E00FF2C33 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2607877628D6693000FF2C33 /* EPWatchCore */;
-			targetProxy = 260787C128D7171E00FF2C33 /* PBXContainerItemProxy */;
-		};
-		260787E228D8983D00FF2C33 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			platformFilters = (
-				ios,
-				watchos,
-			);
-			target = 2607877628D6693000FF2C33 /* EPWatchCore */;
-			targetProxy = 260787E128D8983D00FF2C33 /* PBXContainerItemProxy */;
 		};
 		2674BC6E28D0572E00E31A20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1160,10 +1302,25 @@
 			target = 261FC18E28B7771F007B4A4E /* EPWatchKitApp */;
 			targetProxy = 2690400A28D5DA4100A823F5 /* PBXContainerItemProxy */;
 		};
-		26CD57C628DAFFC3007FC8BB /* PBXTargetDependency */ = {
+		26A6F6CE2919A953006C3FFD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2607877628D6693000FF2C33 /* EPWatchCore */;
-			targetProxy = 26CD57C528DAFFC3007FC8BB /* PBXContainerItemProxy */;
+			target = 26A6F6872919A6BA006C3FFD /* EPWatchCore */;
+			targetProxy = 26A6F6CD2919A953006C3FFD /* PBXContainerItemProxy */;
+		};
+		26A6F6D32919A960006C3FFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26A6F6872919A6BA006C3FFD /* EPWatchCore */;
+			targetProxy = 26A6F6D22919A960006C3FFD /* PBXContainerItemProxy */;
+		};
+		26A6F725291BB356006C3FFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26A6F6E5291BB325006C3FFD /* EPWatchCore-watchOS */;
+			targetProxy = 26A6F724291BB356006C3FFD /* PBXContainerItemProxy */;
+		};
+		26A6F72A291BB363006C3FFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26A6F6E5291BB325006C3FFD /* EPWatchCore-watchOS */;
+			targetProxy = 26A6F729291BB363006C3FFD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1188,38 +1345,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2607877C28D6693000FF2C33 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = MDUSC5XAF4;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx watchos watchsimulator";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-			};
-			name = Debug;
-		};
-		2607877D28D6693000FF2C33 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = MDUSC5XAF4;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx watchos watchsimulator";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-			};
-			name = Release;
-		};
 		260787AB28D70B8D00FF2C33 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1397,6 +1522,7 @@
 		261FC1B728B77721007B4A4E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1423,13 +1549,14 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
 			};
 			name = Debug;
 		};
 		261FC1B828B77721007B4A4E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1456,7 +1583,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
 			};
 			name = Release;
 		};
@@ -1488,7 +1615,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
 			};
 			name = Debug;
 		};
@@ -1520,7 +1647,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
 			};
 			name = Release;
 		};
@@ -1640,18 +1767,153 @@
 			};
 			name = Release;
 		};
+		26A6F68D2919A6BB006C3FFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MDUSC5XAF4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = se.j0nas.EPWatchCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		26A6F68E2919A6BB006C3FFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MDUSC5XAF4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = se.j0nas.EPWatchCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		26A6F71F291BB325006C3FFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MDUSC5XAF4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = se.j0nas.EPWatchCore;
+				PRODUCT_NAME = EPWatchCore;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		26A6F720291BB325006C3FFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MDUSC5XAF4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = se.j0nas.EPWatchCore;
+				PRODUCT_NAME = EPWatchCore;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2607877B28D6693000FF2C33 /* Build configuration list for PBXNativeTarget "EPWatchCore" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2607877C28D6693000FF2C33 /* Debug */,
-				2607877D28D6693000FF2C33 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		260787AA28D70B8D00FF2C33 /* Build configuration list for PBXNativeTarget "EPWatchWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1706,6 +1968,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		26A6F68C2919A6BB006C3FFD /* Build configuration list for PBXNativeTarget "EPWatchCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26A6F68D2919A6BB006C3FFD /* Debug */,
+				26A6F68E2919A6BB006C3FFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26A6F71E291BB325006C3FFD /* Build configuration list for PBXNativeTarget "EPWatchCore-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26A6F71F291BB325006C3FFD /* Debug */,
+				26A6F720291BB325006C3FFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -1741,6 +2021,38 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		26A6F6E7291BB325006C3FFD /* XCRemoteSwiftPackageReference "XCGLogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DaveWoodCom/XCGLogger.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		26A6F6E9291BB325006C3FFD /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftDate.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		26A6F6EB291BB325006C3FFD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		26A6F6ED291BB325006C3FFD /* XCRemoteSwiftPackageReference "XMLCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CoreOffice/XMLCoder.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
 		26F28FE3291078B800D42DFB /* XCRemoteSwiftPackageReference "ActivityView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftUI-Plus/ActivityView.git";
@@ -1752,30 +2064,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2602DE46290AD20200CC83F2 /* XCGLogger */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2602DE43290AD0D400CC83F2 /* XCRemoteSwiftPackageReference "XCGLogger" */;
-			productName = XCGLogger;
-		};
-		2607877E28D669C200FF2C33 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2690400F28D6680B00A823F5 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		2607878028D669C200FF2C33 /* XMLCoder */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2690401228D6681800A823F5 /* XCRemoteSwiftPackageReference "XMLCoder" */;
-			productName = XMLCoder;
-		};
-		2607878228D669C200FF2C33 /* SwiftDate */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2690401528D6682800A823F5 /* XCRemoteSwiftPackageReference "SwiftDate" */;
-			productName = SwiftDate;
-		};
 		261E7D3A28DB0F470018CB4A /* XMLCoder */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2690401228D6681800A823F5 /* XCRemoteSwiftPackageReference "XMLCoder" */;
 			productName = XMLCoder;
+		};
+		2645EF5329166EAB0034C1E6 /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2690401528D6682800A823F5 /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
 		};
 		2690401028D6680B00A823F5 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1786,6 +2083,46 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2690401528D6682800A823F5 /* XCRemoteSwiftPackageReference "SwiftDate" */;
 			productName = SwiftDate;
+		};
+		26A6F6B72919A776006C3FFD /* XCGLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2602DE43290AD0D400CC83F2 /* XCRemoteSwiftPackageReference "XCGLogger" */;
+			productName = XCGLogger;
+		};
+		26A6F6B92919A785006C3FFD /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2690401528D6682800A823F5 /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
+		};
+		26A6F6BB2919A790006C3FFD /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2690400F28D6680B00A823F5 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		26A6F6BD2919A796006C3FFD /* XMLCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2690401228D6681800A823F5 /* XCRemoteSwiftPackageReference "XMLCoder" */;
+			productName = XMLCoder;
+		};
+		26A6F6E6291BB325006C3FFD /* XCGLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26A6F6E7291BB325006C3FFD /* XCRemoteSwiftPackageReference "XCGLogger" */;
+			productName = XCGLogger;
+		};
+		26A6F6E8291BB325006C3FFD /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26A6F6E9291BB325006C3FFD /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
+		};
+		26A6F6EA291BB325006C3FFD /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26A6F6EB291BB325006C3FFD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		26A6F6EC291BB325006C3FFD /* XMLCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26A6F6ED291BB325006C3FFD /* XCRemoteSwiftPackageReference "XMLCoder" */;
+			productName = XMLCoder;
 		};
 		26F28FE4291078B800D42DFB /* ActivityView */ = {
 			isa = XCSwiftPackageProductDependency;
