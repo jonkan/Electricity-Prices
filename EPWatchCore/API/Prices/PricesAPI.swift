@@ -37,6 +37,7 @@ class PricesAPI {
         from startDate: Date,
         to endDate: Date
     ) async throws -> DayAheadPrices {
+        Log("Downloading day ahead prices")
         let df = DateFormatter()
         df.timeZone = TimeZone(identifier: "UTC")
         df.locale = Locale(identifier: "en_US_POSIX")
@@ -62,6 +63,7 @@ class PricesAPI {
         let data = try downloadResponse.result.get()
         do {
             let dayAheadPrices = try parseDayAheadPrices(fromXML: data)
+            Log("Success downloading day ahead prices")
             return dayAheadPrices
         } catch {
             var userPresentableError: UserPresentableError?

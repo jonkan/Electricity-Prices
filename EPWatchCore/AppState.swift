@@ -239,13 +239,12 @@ public class AppState: ObservableObject {
     }
 
     private func downloadPrices() async throws -> [PricePoint] {
-        Log("Downloading day ahead prices")
         guard let priceArea = priceArea else {
             throw NSError(0, "No price area selected")
         }
-        let dayAheadPrices = try await PricesAPI.shared.downloadDayAheadPrices(for: priceArea)
-        let rate = try await currentExchangeRate()
-        let prices = try dayAheadPrices.prices(using: rate)
+        async let dayAheadPrices = try PricesAPI.shared.downloadDayAheadPrices(for: priceArea)
+        async let rate = try currentExchangeRate()
+        let prices = try await dayAheadPrices.prices(using: rate)
 #if DEBUG
         if ProcessInfo.processInfo.environment["SHOW_MOCKED_PRICES"] == "true" {
             return .mockPrices
@@ -261,9 +260,10 @@ public class AppState: ObservableObject {
            forexRate.to == currency {
             return forexRate
         }
-        Log("Downloading forex")
+        Log("Downloading exchange rate")
         do {
             let res = try await ForexAPI.shared.download(from: .EUR, to: currency)
+            Log("Success downloading exchange rate")
             exchangeRate = res
             return res
         } catch {
