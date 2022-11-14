@@ -15,13 +15,29 @@ struct PriceView: View {
     var limits: PriceLimits
     var currencyPresentation: CurrencyPresentation
 
+    @State private var displayedPrice: PricePoint
+
+    init(
+        currentPrice: PricePoint,
+        prices: [PricePoint],
+        limits: PriceLimits,
+        currencyPresentation: CurrencyPresentation
+    ) {
+        self.currentPrice = currentPrice
+        self.prices = prices
+        self.limits = limits
+        self.currencyPresentation = currencyPresentation
+        _displayedPrice = .init(initialValue: currentPrice)
+    }
+
     var body: some View {
         VStack(spacing: 8) {
-            Text(currentPrice.formattedPrice(.normal, currencyPresentation))
+            Text(displayedPrice.formattedPrice(.normal, currencyPresentation))
                 .font(.title)
-            Text(currentPrice.formattedTimeInterval(.normal))
+            Text(displayedPrice.formattedTimeInterval(.normal))
                 .font(.subheadline)
             PriceChartView(
+                displayedPrice: $displayedPrice,
                 currentPrice: currentPrice,
                 prices: prices,
                 limits: limits,

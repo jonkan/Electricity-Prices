@@ -17,6 +17,7 @@ public struct PricePointRectangularWidgetView: View {
 
     public var body: some View {
         PriceChartView(
+            displayedPrice: .constant(entry.pricePoint),
             currentPrice: entry.pricePoint,
             prices: entry.prices,
             limits: entry.limits,

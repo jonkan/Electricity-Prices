@@ -143,6 +143,10 @@
 		26AC446529112D5D00B86B1E /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AC446429112D5D00B86B1E /* CircularProgressView.swift */; };
 		26AC447229126B6400B86B1E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696881828D477ED002142BF /* RootView.swift */; };
 		26AC447329126EFD00B86B1E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC1A128B77720007B4A4E /* RootView.swift */; };
+		26C3EE912922DF400066A65D /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C3EE902922DF400066A65D /* Collection+Safe.swift */; };
+		26C3EE922922DF400066A65D /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C3EE902922DF400066A65D /* Collection+Safe.swift */; };
+		26C3EE942922E5620066A65D /* SelectionHaptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C3EE932922E5620066A65D /* SelectionHaptics.swift */; };
+		26C3EE952922E5620066A65D /* SelectionHaptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C3EE932922E5620066A65D /* SelectionHaptics.swift */; };
 		26EC4A1428D9C52C004DD8EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2696881A28D477EE002142BF /* Assets.xcassets */; };
 		26F28FDC2910778300D42DFB /* SupportSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FDA2910778300D42DFB /* SupportSettingsView.swift */; };
 		26F28FDD2910778300D42DFB /* ShareLogsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FDB2910778300D42DFB /* ShareLogsState.swift */; };
@@ -345,6 +349,8 @@
 		26A6F68A2919A6BB006C3FFD /* EPWatchCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPWatchCore.h; sourceTree = "<group>"; };
 		26A6F721291BB325006C3FFD /* EPWatchCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EPWatchCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26AC446429112D5D00B86B1E /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		26C3EE902922DF400066A65D /* Collection+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
+		26C3EE932922E5620066A65D /* SelectionHaptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionHaptics.swift; sourceTree = "<group>"; };
 		26C71B1728C1468500C2DC59 /* day-ahead-prices-1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "day-ahead-prices-1.xml"; sourceTree = "<group>"; };
 		26F28FD62910773A00D42DFB /* WCSessionActivationState+Description.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WCSessionActivationState+Description.swift"; sourceTree = "<group>"; };
 		26F28FD72910773A00D42DFB /* FileManager+Directories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager+Directories.swift"; sourceTree = "<group>"; };
@@ -605,8 +611,10 @@
 			children = (
 				26624AF328C93541000F7E2E /* AppStorageCodable.swift */,
 				2602DE5E290D20FF00CC83F2 /* Calendar+Helpers.swift */,
+				26C3EE902922DF400066A65D /* Collection+Safe.swift */,
 				26624AE928C8EFFB000F7E2E /* Error.swift */,
 				26F28FD72910773A00D42DFB /* FileManager+Directories.swift */,
+				26C3EE932922E5620066A65D /* SelectionHaptics.swift */,
 				2612513C291271D9003D9C15 /* isSwiftUIPreview.swift */,
 				26624AE628C883C9000F7E2E /* Log.swift */,
 				2602DE4E290BCD7E00CC83F2 /* LogOnce.swift */,
@@ -1194,6 +1202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26C3EE942922E5620066A65D /* SelectionHaptics.swift in Sources */,
 				26A6F6A72919A724006C3FFD /* BasicSettingsNavigationLink.swift in Sources */,
 				26A6F6922919A713006C3FFD /* DayAheadPricesErrorResponse.swift in Sources */,
 				26A6F69A2919A724006C3FFD /* DateIntervalFormatter.swift in Sources */,
@@ -1216,6 +1225,7 @@
 				26A6F6982919A724006C3FFD /* PriceArea.swift in Sources */,
 				26A6F69F2919A724006C3FFD /* Log.swift in Sources */,
 				26A6F6AA2919A724006C3FFD /* String+AppGroupIdentifier.swift in Sources */,
+				26C3EE912922DF400066A65D /* Collection+Safe.swift in Sources */,
 				26A6F6902919A713006C3FFD /* PricesAPI.swift in Sources */,
 				26A6F6AC2919A724006C3FFD /* AppStorageCodable.swift in Sources */,
 				26A6F6A22919A724006C3FFD /* LogOnce.swift in Sources */,
@@ -1241,6 +1251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26C3EE952922E5620066A65D /* SelectionHaptics.swift in Sources */,
 				26A6F6F0291BB325006C3FFD /* BasicSettingsNavigationLink.swift in Sources */,
 				26A6F6F1291BB325006C3FFD /* DayAheadPricesErrorResponse.swift in Sources */,
 				26A6F6F2291BB325006C3FFD /* DateIntervalFormatter.swift in Sources */,
@@ -1263,6 +1274,7 @@
 				26A6F703291BB325006C3FFD /* PriceArea.swift in Sources */,
 				26A6F704291BB325006C3FFD /* Log.swift in Sources */,
 				26A6F705291BB325006C3FFD /* String+AppGroupIdentifier.swift in Sources */,
+				26C3EE922922DF400066A65D /* Collection+Safe.swift in Sources */,
 				26A6F706291BB325006C3FFD /* PricesAPI.swift in Sources */,
 				26A6F707291BB325006C3FFD /* AppStorageCodable.swift in Sources */,
 				26A6F708291BB325006C3FFD /* LogOnce.swift in Sources */,
