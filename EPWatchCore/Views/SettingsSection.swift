@@ -36,7 +36,7 @@ public struct SettingsSection: View {
                 displayValue: { $0.name.localized }
             )
             BasicSettingsNavigationLink(
-                title: "Currency symbol",
+                title: "Unit",
                 values: CurrencyPresentation.allCases,
                 currentValue: $state.currencyPresentation,
                 displayValue: { value in

@@ -21,7 +21,7 @@
 "Bar" = "Stapel";
 
 "Currency" = "Valuta";
-"Currency symbol" = "Valutasymbol";
+"Unit" = "Enhet";
 "Automatic" = "Automatisk";
 
 "Euro" = "Euro";
