@@ -147,6 +147,8 @@
 		26C3EE922922DF400066A65D /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C3EE902922DF400066A65D /* Collection+Safe.swift */; };
 		26C3EE942922E5620066A65D /* SelectionHaptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C3EE932922E5620066A65D /* SelectionHaptics.swift */; };
 		26C3EE952922E5620066A65D /* SelectionHaptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C3EE932922E5620066A65D /* SelectionHaptics.swift */; };
+		26C3EE972923A9E00066A65D /* Date+Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C3EE962923A9E00066A65D /* Date+Component.swift */; };
+		26C3EE982923A9E00066A65D /* Date+Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C3EE962923A9E00066A65D /* Date+Component.swift */; };
 		26EC4A1428D9C52C004DD8EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2696881A28D477EE002142BF /* Assets.xcassets */; };
 		26F28FDC2910778300D42DFB /* SupportSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FDA2910778300D42DFB /* SupportSettingsView.swift */; };
 		26F28FDD2910778300D42DFB /* ShareLogsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FDB2910778300D42DFB /* ShareLogsState.swift */; };
@@ -351,6 +353,7 @@
 		26AC446429112D5D00B86B1E /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		26C3EE902922DF400066A65D /* Collection+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
 		26C3EE932922E5620066A65D /* SelectionHaptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionHaptics.swift; sourceTree = "<group>"; };
+		26C3EE962923A9E00066A65D /* Date+Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Component.swift"; sourceTree = "<group>"; };
 		26C71B1728C1468500C2DC59 /* day-ahead-prices-1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "day-ahead-prices-1.xml"; sourceTree = "<group>"; };
 		26F28FD62910773A00D42DFB /* WCSessionActivationState+Description.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WCSessionActivationState+Description.swift"; sourceTree = "<group>"; };
 		26F28FD72910773A00D42DFB /* FileManager+Directories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager+Directories.swift"; sourceTree = "<group>"; };
@@ -612,12 +615,13 @@
 				26624AF328C93541000F7E2E /* AppStorageCodable.swift */,
 				2602DE5E290D20FF00CC83F2 /* Calendar+Helpers.swift */,
 				26C3EE902922DF400066A65D /* Collection+Safe.swift */,
+				26C3EE962923A9E00066A65D /* Date+Component.swift */,
 				26624AE928C8EFFB000F7E2E /* Error.swift */,
 				26F28FD72910773A00D42DFB /* FileManager+Directories.swift */,
-				26C3EE932922E5620066A65D /* SelectionHaptics.swift */,
 				2612513C291271D9003D9C15 /* isSwiftUIPreview.swift */,
 				26624AE628C883C9000F7E2E /* Log.swift */,
 				2602DE4E290BCD7E00CC83F2 /* LogOnce.swift */,
+				26C3EE932922E5620066A65D /* SelectionHaptics.swift */,
 				2602DE4A290B0DE300CC83F2 /* String+AppGroupIdentifier.swift */,
 				2657332E2907244300CE9A4C /* String+Localized.swift */,
 				2696879D28D3A2C8002142BF /* UserDefaults+AppGroup.swift */,
@@ -1228,6 +1232,7 @@
 				26C3EE912922DF400066A65D /* Collection+Safe.swift in Sources */,
 				26A6F6902919A713006C3FFD /* PricesAPI.swift in Sources */,
 				26A6F6AC2919A724006C3FFD /* AppStorageCodable.swift in Sources */,
+				26C3EE972923A9E00066A65D /* Date+Component.swift in Sources */,
 				26A6F6A22919A724006C3FFD /* LogOnce.swift in Sources */,
 				26A6F6A82919A724006C3FFD /* SettingsSection.swift in Sources */,
 				26A6F6A62919A724006C3FFD /* WCSessionActivationState+Description.swift in Sources */,
@@ -1277,6 +1282,7 @@
 				26C3EE922922DF400066A65D /* Collection+Safe.swift in Sources */,
 				26A6F706291BB325006C3FFD /* PricesAPI.swift in Sources */,
 				26A6F707291BB325006C3FFD /* AppStorageCodable.swift in Sources */,
+				26C3EE982923A9E00066A65D /* Date+Component.swift in Sources */,
 				26A6F708291BB325006C3FFD /* LogOnce.swift in Sources */,
 				26A6F709291BB325006C3FFD /* SettingsSection.swift in Sources */,
 				26A6F70A291BB325006C3FFD /* WCSessionActivationState+Description.swift in Sources */,

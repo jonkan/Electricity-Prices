@@ -157,20 +157,25 @@ public struct PriceChartView: View {
                         }
                         .onEnded { _ in
                             SelectionHaptics.shared.ended()
-                            scheduleSelectionResetTimer(in: .milliseconds(500))
+                            scheduleSelectionResetTimer(in: .milliseconds(500)) {
+                                displayedPrice = currentPrice
+                            }
                         }
                 )
         }
     }
 
     @State private var selectionResetTimer : DispatchSourceTimer?
-    private func scheduleSelectionResetTimer(in timeout: DispatchTimeInterval) {
+    private func scheduleSelectionResetTimer(
+        in timeout: DispatchTimeInterval,
+        handler: @escaping () -> Void
+    ) {
         if selectionResetTimer == nil {
             let timerSource = DispatchSource.makeTimerSource(queue: .global())
             timerSource.setEventHandler {
                 Task {
                     cancelSelectionResetTimer()
-                    displayedPrice = currentPrice
+                    handler()
                 }
             }
             selectionResetTimer = timerSource
