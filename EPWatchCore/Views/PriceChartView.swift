@@ -121,18 +121,23 @@ public struct PriceChartView: View {
     }
 
     var barChart: some View {
-        Chart {
-            BarMark(
-                x: .value("", displayedPrice.date)
-            )
-            .foregroundStyle(.gray.opacity(0.3))
-
-            ForEach(prices, id: \.date) { p in
+        GeometryReader { geometry in
+            let barWidth = geometry.size.width / (CGFloat(prices.count)*1.5+1)
+            return Chart {
                 BarMark(
-                    x: .value("", p.date),
-                    y: .value("", p.price(with: currencyPresentation))
+                    x: .value("", displayedPrice.date),
+                    width: .fixed(barWidth)
                 )
-                .foregroundStyle(limits.color(of: p.price))
+                .foregroundStyle(.gray.opacity(0.3))
+
+                ForEach(prices, id: \.date) { p in
+                    BarMark(
+                        x: .value("", p.date),
+                        y: .value("", p.price(with: currencyPresentation)),
+                        width: .fixed(barWidth)
+                    )
+                    .foregroundStyle(limits.color(of: p.price))
+                }
             }
         }
     }
