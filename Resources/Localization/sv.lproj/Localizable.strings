@@ -12,8 +12,9 @@
 "Prices are " = "Priserna är ";
 "per kWh" = "per kWh";
 ", without energy taxes or fees." = ", utan skatter och avgifter.";
-"%@ is used if the price is lower than %@" = "%@ används om priset är under %@";
-"Widgets always show prices in %@" = "Widgets visar alltid priser i %@";
+"%@ is used if the price is lower than %@." = "%@ används om priset är under %@.";
+"Widgets always show prices in %@." = "Widgets visar alltid priser i %@.";
+"%@ is always used." = "%@ används alltid.";
 "Chart" = "Graf";
 "Line (interpolated)" = "Linje (interpolerad)";
 "Line" = "Linje";
