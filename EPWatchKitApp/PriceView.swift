@@ -47,7 +47,8 @@ struct PriceView: View {
                 prices: prices,
                 limits: limits,
                 currencyPresentation: currencyPresentation,
-                useCurrencyAxisFormat: true
+                useCurrencyAxisFormat: true,
+                isChartGestureEnabled: false
             )
             .focusable()
             .digitalCrownRotation(

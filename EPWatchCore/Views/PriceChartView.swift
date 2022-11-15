@@ -17,6 +17,7 @@ public struct PriceChartView: View {
     let limits: PriceLimits
     let currencyPresentation: CurrencyPresentation
     let useCurrencyAxisFormat: Bool
+    let isChartGestureEnabled: Bool
 
     @Binding var displayedPrice: PricePoint
 
@@ -26,7 +27,8 @@ public struct PriceChartView: View {
         prices: [PricePoint],
         limits: PriceLimits,
         currencyPresentation: CurrencyPresentation,
-        useCurrencyAxisFormat: Bool = false
+        useCurrencyAxisFormat: Bool = false,
+        isChartGestureEnabled: Bool = true
     ) {
         _displayedPrice = displayedPrice
         self.currentPrice = currentPrice
@@ -34,6 +36,7 @@ public struct PriceChartView: View {
         self.limits = limits
         self.currencyPresentation = currencyPresentation
         self.useCurrencyAxisFormat = useCurrencyAxisFormat
+        self.isChartGestureEnabled = isChartGestureEnabled
     }
 
     public var body: some View {
@@ -160,7 +163,8 @@ public struct PriceChartView: View {
                             scheduleSelectionResetTimer(in: .milliseconds(500)) {
                                 displayedPrice = currentPrice
                             }
-                        }
+                        },
+                    including: isChartGestureEnabled ? .all : .subviews
                 )
         }
     }
