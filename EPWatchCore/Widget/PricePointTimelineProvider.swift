@@ -32,6 +32,7 @@ public struct PricePointTimelineProvider: TimelineProvider {
                 let prices = await state.prices
                 let limits = await state.priceLimits
                 let currencyPresentation = await state.currencyPresentation
+                let chartStyle = await state.chartStyle
 
                 guard let price = prices.price(for: .now) else {
                     throw NSError(0, "Missing current pricePoint")
@@ -40,7 +41,8 @@ public struct PricePointTimelineProvider: TimelineProvider {
                     pricePoint: price,
                     prices: prices.filterInSameDayAs(price),
                     limits: limits,
-                    currencyPresentation: currencyPresentation
+                    currencyPresentation: currencyPresentation,
+                    chartStyle: chartStyle
                 )
                 Log("Provided a timeline snapshot")
                 completion(entry)
@@ -59,6 +61,7 @@ public struct PricePointTimelineProvider: TimelineProvider {
                 let allPrices = await state.prices
                 let limits = await state.priceLimits
                 let currencyPresentation = await state.currencyPresentation
+                let chartStyle = await state.chartStyle
 
                 let grouped = Dictionary(
                     grouping: allPrices,
@@ -75,7 +78,8 @@ public struct PricePointTimelineProvider: TimelineProvider {
                                 pricePoint: $0,
                                 prices: prices,
                                 limits: limits,
-                                currencyPresentation: currencyPresentation
+                                currencyPresentation: currencyPresentation,
+                                chartStyle: chartStyle
                             )
                         })
                     )

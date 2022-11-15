@@ -14,6 +14,10 @@
 ", without energy taxes or fees." = ", utan skatter och avgifter.";
 "%@ is used if the price is lower than %@" = "%@ används om priset är under %@";
 "Widgets always show prices in %@" = "Widgets visar alltid priser i %@";
+"Chart" = "Graf";
+"Line (interpolated)" = "Linje (interpolerad)";
+"Line" = "Linje";
+"Bar" = "Stapel";
 
 "Currency" = "Valuta";
 "Currency symbol" = "Valutasymbol";

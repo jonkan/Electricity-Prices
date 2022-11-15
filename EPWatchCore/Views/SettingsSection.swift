@@ -35,9 +35,17 @@ public struct SettingsSection: View {
                 currentValue: $state.currency,
                 displayValue: { $0.name.localized }
             )
-        }
-        Section {
-            CurrencyPresentationSettingsNavigationLink()
+            BasicSettingsNavigationLink(
+                title: "Currency symbol",
+                values: CurrencyPresentation.allCases,
+                currentValue: $state.currencyPresentation,
+                displayValue: { value in
+                    switch value {
+                    case .automatic: return "Automatic".localized
+                    case .subdivided: return "\(state.currency.subdivision.name.localized) (\(state.currency.subdivision.symbol))"
+                    }
+                }
+            )
         } footer: {
             switch state.currencyPresentation {
             case .automatic:
@@ -49,13 +57,24 @@ public struct SettingsSection: View {
                 Text("\(state.currency.subdivision.name) is always used")
             }
         }
+
+        Section {
+            BasicSettingsNavigationLink(
+                title: "Chart",
+                values: PriceChartStyle.allCases,
+                currentValue: $state.chartStyle,
+                displayValue: { $0.title.localized }
+            )
+        }
     }
 
 }
 
 struct SettingsSection_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsSection()
+        List {
+            SettingsSection()
+        }
+        .environmentObject(AppState.mocked)
     }
 }
-

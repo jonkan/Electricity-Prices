@@ -23,7 +23,8 @@ struct RootView: View {
                             currentPrice: currentPrice,
                             prices: state.prices.filterInSameDayAs(currentPrice),
                             limits: state.priceLimits,
-                            currencyPresentation: state.currencyPresentation
+                            currencyPresentation: state.currencyPresentation,
+                            chartStyle: state.chartStyle
                         )
                         .frame(minHeight: 200)
                     } footer: {

@@ -16,6 +16,7 @@ public struct PriceChartView: View {
     let prices: [PricePoint]
     let limits: PriceLimits
     let currencyPresentation: CurrencyPresentation
+    let chartStyle: PriceChartStyle
     let useCurrencyAxisFormat: Bool
     let isChartGestureEnabled: Bool
 
@@ -27,6 +28,7 @@ public struct PriceChartView: View {
         prices: [PricePoint],
         limits: PriceLimits,
         currencyPresentation: CurrencyPresentation,
+        chartStyle: PriceChartStyle,
         useCurrencyAxisFormat: Bool = false,
         isChartGestureEnabled: Bool = true
     ) {
@@ -35,11 +37,44 @@ public struct PriceChartView: View {
         self.prices = prices
         self.limits = limits
         self.currencyPresentation = currencyPresentation
+        self.chartStyle = chartStyle
         self.useCurrencyAxisFormat = useCurrencyAxisFormat
         self.isChartGestureEnabled = isChartGestureEnabled
     }
 
     public var body: some View {
+        Group {
+            switch chartStyle {
+            case .lineInterpolated: lineChart(interpolated: true)
+            case .line: lineChart(interpolated: false)
+            case .bar: barChart
+            }
+        }
+        .widgetAccentable()
+        .chartYAxis {
+            if let axisYValues = axisYValues {
+                // TODO: Figure out how to present subdivided units (e.g. Cent)
+                if useCurrencyAxisFormat && currencyPresentation != .subdivided {
+                    AxisMarks(
+                        format: currencyAxisFormat,
+                        values: axisYValues
+                    )
+                } else {
+                    AxisMarks(values: axisYValues)
+                }
+            } else {
+                if useCurrencyAxisFormat && currencyPresentation != .subdivided {
+                    AxisMarks(format: currencyAxisFormat)
+                } else {
+                    AxisMarks()
+                }
+            }
+        }
+        .chartOverlay(content: chartGestureOverlay)
+        .padding(.top, widgetRenderingMode != .fullColor ? 5 : 0)
+    }
+
+    func lineChart(interpolated: Bool) -> some View {
         Chart {
             ForEach(prices, id: \.date) { p in
                 LineMark(
@@ -47,7 +82,7 @@ public struct PriceChartView: View {
                     y: .value("", p.price(with: currencyPresentation))
                 )
             }
-            .interpolationMethod(.cardinal)
+            .interpolationMethod(interpolated ? .monotone : .stepCenter)
             .foregroundStyle(LinearGradient(
                 stops: limits.stops(using: displayedPrice.dayPriceRange),
                 startPoint: .bottom,
@@ -83,28 +118,23 @@ public struct PriceChartView: View {
             .foregroundStyle(limits.color(of: displayedPrice.price))
             .symbolSize(70)
         }
-        .widgetAccentable()
-        .chartYAxis {
-            if let axisYValues = axisYValues {
-                // TODO: Figure out how to present subdivided units (e.g. Cent)
-                if useCurrencyAxisFormat && currencyPresentation != .subdivided {
-                    AxisMarks(
-                        format: currencyAxisFormat,
-                        values: axisYValues
-                    )
-                } else {
-                    AxisMarks(values: axisYValues)
-                }
-            } else {
-                if useCurrencyAxisFormat && currencyPresentation != .subdivided {
-                    AxisMarks(format: currencyAxisFormat)
-                } else {
-                    AxisMarks()
-                }
+    }
+
+    var barChart: some View {
+        Chart {
+            BarMark(
+                x: .value("", displayedPrice.date)
+            )
+            .foregroundStyle(.gray.opacity(0.3))
+
+            ForEach(prices, id: \.date) { p in
+                BarMark(
+                    x: .value("", p.date),
+                    y: .value("", p.price(with: currencyPresentation))
+                )
+                .foregroundStyle(limits.color(of: p.price))
             }
         }
-        .chartOverlay(content: chartGestureOverlay)
-        .padding(.top, widgetRenderingMode != .fullColor ? 5 : 0)
     }
 
     var axisYValues: [Double]? {
@@ -218,7 +248,8 @@ struct PriceChartView_Previews: PreviewProvider {
             currentPrice: .mockPrice,
             prices: .mockPrices,
             limits: .mockLimits,
-            currencyPresentation: .automatic
+            currencyPresentation: .automatic,
+            chartStyle: .line
         )
     }
 }

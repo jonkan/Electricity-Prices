@@ -14,6 +14,7 @@ struct PriceView: View {
     var prices: [PricePoint]
     var limits: PriceLimits
     var currencyPresentation: CurrencyPresentation
+    let chartStyle: PriceChartStyle
 
     @State private var displayedPrice: PricePoint
 
@@ -21,12 +22,14 @@ struct PriceView: View {
         currentPrice: PricePoint,
         prices: [PricePoint],
         limits: PriceLimits,
-        currencyPresentation: CurrencyPresentation
+        currencyPresentation: CurrencyPresentation,
+        chartStyle: PriceChartStyle
     ) {
         self.currentPrice = currentPrice
         self.prices = prices
         self.limits = limits
         self.currencyPresentation = currencyPresentation
+        self.chartStyle = chartStyle
         _displayedPrice = .init(initialValue: currentPrice)
     }
 
@@ -42,6 +45,7 @@ struct PriceView: View {
                 prices: prices,
                 limits: limits,
                 currencyPresentation: currencyPresentation,
+                chartStyle: chartStyle,
                 useCurrencyAxisFormat: true
             )
         }
@@ -56,7 +60,8 @@ struct PriceView_Previews: PreviewProvider {
             currentPrice: .mockPrice,
             prices: .mockPrices,
             limits: .mockLimits,
-            currencyPresentation: .automatic
+            currencyPresentation: .automatic,
+            chartStyle: .line
         )
     }
 }

@@ -37,6 +37,7 @@
 		2674BC6F28D0572E00E31A20 /* EPWatchKitAppExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2674BC6228D0572D00E31A20 /* EPWatchKitAppExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2674BC8828D0596500E31A20 /* EPWatchCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BC8728D0596500E31A20 /* EPWatchCoreTests.swift */; };
 		2674BCB728D0928500E31A20 /* day-ahead-prices-1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 26C71B1728C1468500C2DC59 /* day-ahead-prices-1.xml */; };
+		2682759629242E4E00A577BD /* PriceChartStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2682759529242E4E00A577BD /* PriceChartStyle.swift */; };
 		2690400928D5DA4100A823F5 /* EPWatchKitApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 261FC18F28B7771F007B4A4E /* EPWatchKitApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2690401128D6680B00A823F5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2690401028D6680B00A823F5 /* Alamofire */; };
 		2690401728D6682800A823F5 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 2690401628D6682800A823F5 /* SwiftDate */; };
@@ -60,7 +61,6 @@
 		26A6F69A2919A724006C3FFD /* DateIntervalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BCB028D0870300E31A20 /* DateIntervalFormatter.swift */; };
 		26A6F69B2919A724006C3FFD /* FormattingStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BCB328D0872800E31A20 /* FormattingStyle.swift */; };
 		26A6F69C2919A724006C3FFD /* FileManager+Directories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FD72910773A00D42DFB /* FileManager+Directories.swift */; };
-		26A6F69D2919A724006C3FFD /* CurrencyPresentationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657332129054A4000CE9A4C /* CurrencyPresentationSettingsView.swift */; };
 		26A6F69E2919A724006C3FFD /* UserPresentableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733342907E35300CE9A4C /* UserPresentableError.swift */; };
 		26A6F69F2919A724006C3FFD /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26624AE628C883C9000F7E2E /* Log.swift */; };
 		26A6F6A02919A724006C3FFD /* CurrencySubdivision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733252905D7B000CE9A4C /* CurrencySubdivision.swift */; };
@@ -249,7 +249,6 @@
 		26573319290311C200CE9A4C /* PriceArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceArea.swift; sourceTree = "<group>"; };
 		2657331B2903121E00CE9A4C /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		2657331F2905446D00CE9A4C /* BasicSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSettingsView.swift; sourceTree = "<group>"; };
-		2657332129054A4000CE9A4C /* CurrencyPresentationSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPresentationSettingsView.swift; sourceTree = "<group>"; };
 		265733232905D09500CE9A4C /* BasicSettingsNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSettingsNavigationLink.swift; sourceTree = "<group>"; };
 		265733252905D7B000CE9A4C /* CurrencySubdivision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySubdivision.swift; sourceTree = "<group>"; };
 		265733272905D7C500CE9A4C /* CurrencyPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPresentation.swift; sourceTree = "<group>"; };
@@ -279,6 +278,7 @@
 		2674BCB028D0870300E31A20 /* DateIntervalFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateIntervalFormatter.swift; sourceTree = "<group>"; };
 		2674BCB328D0872800E31A20 /* FormattingStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattingStyle.swift; sourceTree = "<group>"; };
 		2674BCB528D08AA000E31A20 /* PricePointTimelineEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePointTimelineEntry.swift; sourceTree = "<group>"; };
+		2682759529242E4E00A577BD /* PriceChartStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceChartStyle.swift; sourceTree = "<group>"; };
 		2696878F28D10112002142BF /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 		2696879128D1CD91002142BF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2696879428D2021C002142BF /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
@@ -606,7 +606,7 @@
 			children = (
 				265733232905D09500CE9A4C /* BasicSettingsNavigationLink.swift */,
 				2657331F2905446D00CE9A4C /* BasicSettingsView.swift */,
-				2657332129054A4000CE9A4C /* CurrencyPresentationSettingsView.swift */,
+				2682759529242E4E00A577BD /* PriceChartStyle.swift */,
 				269687A828D452CB002142BF /* PriceChartView.swift */,
 				265733292905E3B600CE9A4C /* SettingsSection.swift */,
 			);
@@ -1137,6 +1137,7 @@
 				26A6F6A22919A724006C3FFD /* LogOnce.swift in Sources */,
 				26A6F6A82919A724006C3FFD /* SettingsSection.swift in Sources */,
 				26A6F6A62919A724006C3FFD /* WCSessionActivationState+Description.swift in Sources */,
+				2682759629242E4E00A577BD /* PriceChartStyle.swift in Sources */,
 				26A6F69B2919A724006C3FFD /* FormattingStyle.swift in Sources */,
 				26A6F6B62919A724006C3FFD /* PricePointTimelineProvider.swift in Sources */,
 				26A6F6972919A724006C3FFD /* UserDefaults+AppGroup.swift in Sources */,
@@ -1149,7 +1150,6 @@
 				26A6F6A32919A724006C3FFD /* PricePoint.swift in Sources */,
 				26A6F6B02919A724006C3FFD /* PriceChartView.swift in Sources */,
 				26A6F6A52919A724006C3FFD /* Calendar+Helpers.swift in Sources */,
-				26A6F69D2919A724006C3FFD /* CurrencyPresentationSettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

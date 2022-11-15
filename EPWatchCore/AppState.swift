@@ -70,6 +70,19 @@ public class AppState: ObservableObject {
         }
     }
 
+    @AppStorageCodable("ChartStyle", storage: .appGroup)
+    public var chartStyle: PriceChartStyle = .lineInterpolated {
+        didSet {
+            guard oldValue != chartStyle else { return }
+            Log("Chart presentation did change: \(chartStyle)")
+            Task {
+                objectWillChange.send()
+                WidgetCenter.shared.reloadAllTimelines()
+                Log("Reloading all timelines")
+            }
+        }
+    }
+
     @AppStorageCodable("AllPriceLimits", storage: .appGroup)
     private var allPriceLimits: [PriceLimits] = [
         PriceLimits(.EUR, high: 0.3, low: 0.1),

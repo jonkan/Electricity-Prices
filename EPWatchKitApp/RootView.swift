@@ -30,7 +30,8 @@ struct RootView: View {
                 currentPrice: currentPrice,
                 prices: state.prices.filterInSameDayAs(currentPrice),
                 limits: state.priceLimits,
-                currencyPresentation: state.currencyPresentation
+                currencyPresentation: state.currencyPresentation,
+                chartStyle: state.chartStyle
             )
         } else if state.isFetching {
             ProgressView("Fetching prices...")

@@ -13,17 +13,20 @@ public struct PricePointTimelineEntry: TimelineEntry {
     let prices: [PricePoint]
     let limits: PriceLimits
     let currencyPresentation: CurrencyPresentation
+    let chartStyle: PriceChartStyle
 
     public init(
         pricePoint: PricePoint,
         prices: [PricePoint],
         limits: PriceLimits,
-        currencyPresentation: CurrencyPresentation
+        currencyPresentation: CurrencyPresentation,
+        chartStyle: PriceChartStyle
     ) {
         self.pricePoint = pricePoint
         self.prices = prices
         self.limits = limits
         self.currencyPresentation = currencyPresentation
+        self.chartStyle = chartStyle
     }
 
     public var date: Date {
@@ -34,20 +37,23 @@ public struct PricePointTimelineEntry: TimelineEntry {
         pricePoint: .mockPrice,
         prices: .mockPrices,
         limits: .mockLimits,
-        currencyPresentation: .automatic
+        currencyPresentation: .automatic,
+        chartStyle: .line
     )
 
     public static let mock2 = PricePointTimelineEntry(
         pricePoint: .mockPrice2,
         prices: .mockPrices,
         limits: PriceLimits(.SEK, high: 3.2, low: 1.4),
-        currencyPresentation: .automatic
+        currencyPresentation: .automatic,
+        chartStyle: .line
     )
 
     public static let mock3 = PricePointTimelineEntry(
         pricePoint: .mockPrice3,
         prices: .mockPrices,
         limits: .mockLimits,
-        currencyPresentation: .automatic
+        currencyPresentation: .automatic,
+        chartStyle: .line
     )
 }

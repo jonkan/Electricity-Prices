@@ -10,10 +10,11 @@ import EPWatchCore
 
 struct PriceView: View {
 
-    var currentPrice: PricePoint
-    var prices: [PricePoint]
-    var limits: PriceLimits
-    var currencyPresentation: CurrencyPresentation
+    let currentPrice: PricePoint
+    let prices: [PricePoint]
+    let limits: PriceLimits
+    let currencyPresentation: CurrencyPresentation
+    let chartStyle: PriceChartStyle
 
     @State private var displayedPrice: PricePoint
     @State private var crownValue: Double
@@ -24,12 +25,14 @@ struct PriceView: View {
         currentPrice: PricePoint,
         prices: [PricePoint],
         limits: PriceLimits,
-        currencyPresentation: CurrencyPresentation
+        currencyPresentation: CurrencyPresentation,
+        chartStyle: PriceChartStyle
     ) {
         self.currentPrice = currentPrice
         self.prices = prices
         self.limits = limits
         self.currencyPresentation = currencyPresentation
+        self.chartStyle = chartStyle
         _displayedPrice = .init(initialValue: currentPrice)
         let currentHour = currentPrice.date.component(.hour, in: calendar)
         _crownValue = .init(initialValue: Double(currentHour))
@@ -47,6 +50,7 @@ struct PriceView: View {
                 prices: prices,
                 limits: limits,
                 currencyPresentation: currencyPresentation,
+                chartStyle: chartStyle,
                 useCurrencyAxisFormat: true,
                 isChartGestureEnabled: false
             )
@@ -114,7 +118,8 @@ struct PriceView_Previews: PreviewProvider {
             currentPrice: .mockPrice,
             prices: .mockPrices,
             limits: .mockLimits,
-            currencyPresentation: .automatic
+            currencyPresentation: .automatic,
+            chartStyle: .line
         )
     }
 }
