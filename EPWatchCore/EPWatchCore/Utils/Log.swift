@@ -7,7 +7,7 @@
 
 import Foundation
 import CoreLocation
-import XCGLogger
+@_implementationOnly import XCGLogger
 
 #if DEBUG
 public func LogDebugInformation() {

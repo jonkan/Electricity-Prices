@@ -11,7 +11,12 @@ import SwiftDate
 
 final class EPWatchCoreTests: XCTestCase {
 
-    lazy var bundle = Bundle(for: type(of: self))
+    lazy var bundle: Bundle = {
+        let bundleURL = Bundle(for: type(of: self))
+            .bundleURL
+            .appending(path: "EPWatchCore_EPWatchCoreTests.bundle")
+        return Bundle(url: bundleURL)!
+    }()
 
     var dayAheadPrices: DayAheadPrices!
     let swedishRegion = Region(
