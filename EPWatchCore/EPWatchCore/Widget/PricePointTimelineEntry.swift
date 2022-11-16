@@ -38,7 +38,7 @@ public struct PricePointTimelineEntry: TimelineEntry {
         prices: .mockPrices,
         limits: .mockLimits,
         currencyPresentation: .automatic,
-        chartStyle: .line
+        chartStyle: .lineInterpolated
     )
 
     public static let mock2 = PricePointTimelineEntry(
@@ -46,7 +46,7 @@ public struct PricePointTimelineEntry: TimelineEntry {
         prices: .mockPrices,
         limits: PriceLimits(.SEK, high: 3.2, low: 1.4),
         currencyPresentation: .automatic,
-        chartStyle: .line
+        chartStyle: .lineInterpolated
     )
 
     public static let mock3 = PricePointTimelineEntry(
@@ -54,6 +54,6 @@ public struct PricePointTimelineEntry: TimelineEntry {
         prices: .mockPrices,
         limits: .mockLimits,
         currencyPresentation: .automatic,
-        chartStyle: .line
+        chartStyle: .lineInterpolated
     )
 }

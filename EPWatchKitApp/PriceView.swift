@@ -119,7 +119,7 @@ struct PriceView_Previews: PreviewProvider {
             prices: .mockPrices,
             limits: .mockLimits,
             currencyPresentation: .automatic,
-            chartStyle: .line
+            chartStyle: .lineInterpolated
         )
     }
 }
