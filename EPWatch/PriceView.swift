@@ -16,7 +16,10 @@ struct PriceView: View {
     let currencyPresentation: CurrencyPresentation
     let chartStyle: PriceChartStyle
 
-    @State private var displayedPrice: PricePoint
+    @State private var selectedPrice: PricePoint? = nil
+    var displayedPrice: PricePoint {
+        return selectedPrice ?? currentPrice
+    }
 
     init(
         currentPrice: PricePoint,
@@ -30,7 +33,6 @@ struct PriceView: View {
         self.limits = limits
         self.currencyPresentation = currencyPresentation
         self.chartStyle = chartStyle
-        _displayedPrice = .init(initialValue: currentPrice)
     }
 
     var body: some View {
@@ -40,7 +42,7 @@ struct PriceView: View {
             Text(displayedPrice.formattedTimeInterval(.normal))
                 .font(.subheadline)
             PriceChartView(
-                displayedPrice: $displayedPrice,
+                selectedPrice: $selectedPrice,
                 currentPrice: currentPrice,
                 prices: prices,
                 limits: limits,

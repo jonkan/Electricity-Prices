@@ -22,7 +22,7 @@ public struct PricePointLargeWidgetView: View {
             Text(entry.pricePoint.formattedTimeInterval(.normal))
                 .font(.subheadline)
             PriceChartView(
-                displayedPrice: .constant(entry.pricePoint),
+                selectedPrice: .constant(nil),
                 currentPrice: entry.pricePoint,
                 prices: entry.prices,
                 limits: entry.limits,

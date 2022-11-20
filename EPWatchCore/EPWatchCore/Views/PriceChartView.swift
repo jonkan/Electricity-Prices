@@ -20,10 +20,13 @@ public struct PriceChartView: View {
     let useCurrencyAxisFormat: Bool
     let isChartGestureEnabled: Bool
 
-    @Binding var displayedPrice: PricePoint
+    @Binding var selectedPrice: PricePoint?
+    var displayedPrice: PricePoint {
+        return selectedPrice ?? currentPrice
+    }
 
     public init(
-        displayedPrice: Binding<PricePoint>,
+        selectedPrice: Binding<PricePoint?>,
         currentPrice: PricePoint,
         prices: [PricePoint],
         limits: PriceLimits,
@@ -32,7 +35,7 @@ public struct PriceChartView: View {
         useCurrencyAxisFormat: Bool = false,
         isChartGestureEnabled: Bool = true
     ) {
-        _displayedPrice = displayedPrice
+        _selectedPrice = selectedPrice
         self.currentPrice = currentPrice
         self.prices = prices
         self.limits = limits
@@ -180,23 +183,16 @@ public struct PriceChartView: View {
                                 return roundedHour == priceHour
                             })
 
-                            if let price = price {
-                                if displayedPrice != price {
-                                    displayedPrice = price
-                                    SelectionHaptics.shared.changed()
-                                }
-                            } else {
-                                if displayedPrice != currentPrice {
-                                    displayedPrice = currentPrice
-                                    SelectionHaptics.shared.changed()
-                                }
+                            if selectedPrice != price {
+                                selectedPrice = price
+                                SelectionHaptics.shared.changed()
                             }
                             cancelSelectionResetTimer()
                         }
                         .onEnded { _ in
-                            SelectionHaptics.shared.ended()
                             scheduleSelectionResetTimer(in: .milliseconds(500)) {
-                                displayedPrice = currentPrice
+                                selectedPrice = nil
+                                SelectionHaptics.shared.ended()
                             }
                         },
                     including: isChartGestureEnabled ? .all : .subviews
@@ -249,7 +245,7 @@ private extension PricePoint {
 struct PriceChartView_Previews: PreviewProvider {
     static var previews: some View {
         PriceChartView(
-            displayedPrice: .constant(.mockPrice),
+            selectedPrice: .constant(nil),
             currentPrice: .mockPrice,
             prices: .mockPrices,
             limits: .mockLimits,

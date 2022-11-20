@@ -16,7 +16,10 @@ struct PriceView: View {
     let currencyPresentation: CurrencyPresentation
     let chartStyle: PriceChartStyle
 
-    @State private var displayedPrice: PricePoint
+    @State private var selectedPrice: PricePoint? = nil
+    var displayedPrice: PricePoint {
+        return selectedPrice ?? currentPrice
+    }
     @State private var crownValue: Double
 
     private var calendar: Calendar = .current
@@ -33,7 +36,6 @@ struct PriceView: View {
         self.limits = limits
         self.currencyPresentation = currencyPresentation
         self.chartStyle = chartStyle
-        _displayedPrice = .init(initialValue: currentPrice)
         let currentHour = currentPrice.date.component(.hour, in: calendar)
         _crownValue = .init(initialValue: Double(currentHour))
     }
@@ -45,7 +47,7 @@ struct PriceView: View {
             Text(displayedPrice.formattedTimeInterval(.normal))
                 .font(.subheadline)
             PriceChartView(
-                displayedPrice: $displayedPrice,
+                selectedPrice: $selectedPrice,
                 currentPrice: currentPrice,
                 prices: prices,
                 limits: limits,
@@ -63,18 +65,18 @@ struct PriceView: View {
                 sensitivity: .low,
                 onChange: { event in
                     let selectedHour = Int(round(event.offset))
-                    let selectedPrice = prices.first { price in
+                    let price = prices.first { price in
                         let priceHour = price.date.component(.hour, in: calendar)
                         return priceHour == selectedHour
                     }
-                    if let selectedPrice = selectedPrice, displayedPrice != selectedPrice {
-                        displayedPrice = selectedPrice
+                    if price != selectedPrice {
+                        selectedPrice = price
                     }
                     cancelSelectionResetTimer()
                 },
                 onIdle: {
-                    scheduleSelectionResetTimer(in: .seconds(5)) {
-                        displayedPrice = currentPrice
+                    scheduleSelectionResetTimer(in: .seconds(2)) {
+                        selectedPrice = nil
                         crownValue = Double(currentPrice.date.component(.hour, in: calendar))
                     }
                 }
