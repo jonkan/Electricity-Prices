@@ -202,6 +202,7 @@ public class AppState: ObservableObject {
     public func updatePricesIfNeeded() async throws {
         guard priceArea != nil else {
             Log("No price area set yet")
+            currentPrice = nil
             return
         }
         // The updateTask is a hack to make sure we
@@ -235,6 +236,8 @@ public class AppState: ObservableObject {
                 return
             }
             Log("Update not needed, but will try to fetch for tomorrow")
+        } else {
+            currentPrice = nil
         }
         lastAttemptFetchingTomorrowsPrices = .now
 
