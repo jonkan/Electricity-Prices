@@ -10,10 +10,10 @@ import EPWatchCore
 
 struct PriceView: View {
 
-    var currentPrice: PricePoint
-    var prices: [PricePoint]
-    var limits: PriceLimits
-    var currencyPresentation: CurrencyPresentation
+    let currentPrice: PricePoint
+    let prices: [PricePoint]
+    let limits: PriceLimits
+    let currencyPresentation: CurrencyPresentation
     let chartStyle: PriceChartStyle
 
     @State private var displayedPrice: PricePoint
