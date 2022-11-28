@@ -86,15 +86,7 @@ public extension Array where Element == PricePoint {
         PricePoint(date: "2022-09-19T19:00:00+0000", price: 0.349723332, dayPriceRange: 0.157547565...4.359819681, currency: .SEK),
         PricePoint(date: "2022-09-19T20:00:00+0000", price: 0.261647252, dayPriceRange: 0.157547565...4.359819681, currency: .SEK),
         PricePoint(date: "2022-09-19T21:00:00+0000", price: 0.157547565, dayPriceRange: 0.157547565...4.359819681, currency: .SEK)
-    ].enumerated().map({ (i, p) in
-        let h = TimeInterval(i * 60 * 60)
-        return PricePoint(
-            date: .now.dateAtStartOf(.day).addingTimeInterval(h),
-            price: p.price,
-            dayPriceRange: p.dayPriceRange,
-            currency: p.currency
-        )
-    })
+    ].shiftDatesToNow()
 
     static let mockPricesLow: [PricePoint] = [
         PricePoint(date: "2022-10-04T22:00:00+0000", price: 0.19459063, dayPriceRange: -0.00205515...0.83190470, currency: .SEK),
@@ -121,15 +113,58 @@ public extension Array where Element == PricePoint {
         PricePoint(date: "2022-10-05T19:00:00+0000", price: 0.04813387, dayPriceRange: -0.00205515...0.83190470, currency: .SEK),
         PricePoint(date: "2022-10-05T20:00:00+0000", price: 0.00086532, dayPriceRange: -0.00205515...0.83190470, currency: .SEK),
         PricePoint(date: "2022-10-05T21:00:00+0000", price: -0.0020551, dayPriceRange: -0.00205515...0.83190470, currency: .SEK)
-    ].enumerated().map({ (i, p) in
-        let h = TimeInterval(i * 60 * 60)
-        return PricePoint(
-            date: .now.dateAtStartOf(.day).addingTimeInterval(h),
-            price: p.price,
-            dayPriceRange: p.dayPriceRange,
-            currency: p.currency
-        )
-    })
+    ].shiftDatesToNow()
+
+    static let mockPricesWithTomorrow: [PricePoint] = [
+        PricePoint(date: "2022-11-27T23:00:00+0000", price: 1.3644039, dayPriceRange: 1.248972...2.704358, currency: .SEK),
+        PricePoint(date: "2022-11-28T00:00:00+0000", price: 1.3675413, dayPriceRange: 1.248972...2.704358, currency: .SEK),
+        PricePoint(date: "2022-11-28T01:00:00+0000", price: 1.3248090, dayPriceRange: 1.248972...2.704358, currency: .SEK),
+        PricePoint(date: "2022-11-28T02:00:00+0000", price: 1.2489727, dayPriceRange: 1.248972...2.704358, currency: .SEK),
+        PricePoint(date: "2022-11-28T03:00:00+0000", price: 1.2587092, dayPriceRange: 1.248972...2.704358, currency: .SEK),
+        PricePoint(date: "2022-11-28T04:00:00+0000", price: 1.2990614, dayPriceRange: 1.248972...2.704358, currency: .SEK),
+        PricePoint(date: "2022-11-28T05:00:00+0000", price: 1.5905064, dayPriceRange: 1.248972...2.704358, currency: .SEK),
+        PricePoint(date: "2022-11-28T06:00:00+0000", price: 1.9689306, dayPriceRange: 1.248972...2.704358, currency: .SEK),
+        PricePoint(date: "2022-11-28T07:00:00+0000", price: 2.2077986, dayPriceRange: 1.248972...2.704358, currency: .SEK),
+        PricePoint(date: "2022-11-28T08:00:00+0000", price: 2.2371162, dayPriceRange: 1.248972...2.704358, currency: .SEK),
+        PricePoint(date: "2022-11-28T09:00:00+0000", price: 2.4661396, dayPriceRange: 1.248972...2.704358, currency: .SEK),
+        PricePoint(date: "2022-11-28T10:00:00+0000", price: 2.5227193, dayPriceRange: 1.248972...2.704358, currency: .SEK),
+        PricePoint(date: "2022-11-28T11:00:00+0000", price: 2.5138483, dayPriceRange: 1.248972...2.704358, currency: .SEK),
+        PricePoint(date: "2022-11-28T12:00:00+0000", price: 2.5135238, dayPriceRange: 1.248972...2.704358, currency: .SEK),
+        PricePoint(date: "2022-11-28T13:00:00+0000", price: 2.5131992, dayPriceRange: 1.248972...2.704358, currency: .SEK),
+        PricePoint(date: "2022-11-28T14:00:00+0000", price: 2.5195820, dayPriceRange: 1.248972...2.704358, currency: .SEK),
+        PricePoint(date: "2022-11-28T15:00:00+0000", price: 2.6555681, dayPriceRange: 1.248972...2.704358, currency: .SEK),
+        PricePoint(date: "2022-11-28T16:00:00+0000", price: 2.7043586, dayPriceRange: 1.248972...2.704358, currency: .SEK),
+        PricePoint(date: "2022-11-28T17:00:00+0000", price: 2.6088330, dayPriceRange: 1.248972...2.704358, currency: .SEK),
+        PricePoint(date: "2022-11-28T18:00:00+0000", price: 2.3775377, dayPriceRange: 1.248972...2.704358, currency: .SEK),
+        PricePoint(date: "2022-11-28T19:00:00+0000", price: 2.1885420, dayPriceRange: 1.248972...2.704358, currency: .SEK),
+        PricePoint(date: "2022-11-28T20:00:00+0000", price: 2.0568833, dayPriceRange: 1.248972...2.704358, currency: .SEK),
+        PricePoint(date: "2022-11-28T21:00:00+0000", price: 1.9216546, dayPriceRange: 1.248972...2.704358, currency: .SEK),
+        PricePoint(date: "2022-11-28T22:00:00+0000", price: 1.5298158, dayPriceRange: 1.248972...2.704358, currency: .SEK),
+        PricePoint(date: "2022-11-28T23:00:00+0000", price: 2.2681647, dayPriceRange: 2.216994...5.421050, currency: .SEK),
+        PricePoint(date: "2022-11-29T00:00:00+0000", price: 2.2169942, dayPriceRange: 2.216994...5.421050, currency: .SEK),
+        PricePoint(date: "2022-11-29T01:00:00+0000", price: 2.2710857, dayPriceRange: 2.216994...5.421050, currency: .SEK),
+        PricePoint(date: "2022-11-29T02:00:00+0000", price: 2.2693547, dayPriceRange: 2.216994...5.421050, currency: .SEK),
+        PricePoint(date: "2022-11-29T03:00:00+0000", price: 2.2709775, dayPriceRange: 2.216994...5.421050, currency: .SEK),
+        PricePoint(date: "2022-11-29T04:00:00+0000", price: 2.4018789, dayPriceRange: 2.216994...5.421050, currency: .SEK),
+        PricePoint(date: "2022-11-29T05:00:00+0000", price: 2.8091879, dayPriceRange: 2.216994...5.421050, currency: .SEK),
+        PricePoint(date: "2022-11-29T06:00:00+0000", price: 4.1835447, dayPriceRange: 2.216994...5.421050, currency: .SEK),
+        PricePoint(date: "2022-11-29T07:00:00+0000", price: 4.7984569, dayPriceRange: 2.216994...5.421050, currency: .SEK),
+        PricePoint(date: "2022-11-29T08:00:00+0000", price: 4.8176053, dayPriceRange: 2.216994...5.421050, currency: .SEK),
+        PricePoint(date: "2022-11-29T09:00:00+0000", price: 4.8239881, dayPriceRange: 2.216994...5.421050, currency: .SEK),
+        PricePoint(date: "2022-11-29T10:00:00+0000", price: 4.7124514, dayPriceRange: 2.216994...5.421050, currency: .SEK),
+        PricePoint(date: "2022-11-29T11:00:00+0000", price: 4.5225903, dayPriceRange: 2.216994...5.421050, currency: .SEK),
+        PricePoint(date: "2022-11-29T12:00:00+0000", price: 4.5897719, dayPriceRange: 2.216994...5.421050, currency: .SEK),
+        PricePoint(date: "2022-11-29T13:00:00+0000", price: 4.8290727, dayPriceRange: 2.216994...5.421050, currency: .SEK),
+        PricePoint(date: "2022-11-29T14:00:00+0000", price: 4.8758078, dayPriceRange: 2.216994...5.421050, currency: .SEK),
+        PricePoint(date: "2022-11-29T15:00:00+0000", price: 4.9768507, dayPriceRange: 2.216994...5.421050, currency: .SEK),
+        PricePoint(date: "2022-11-29T16:00:00+0000", price: 5.4210501, dayPriceRange: 2.216994...5.421050, currency: .SEK),
+        PricePoint(date: "2022-11-29T17:00:00+0000", price: 5.2669975, dayPriceRange: 2.216994...5.421050, currency: .SEK),
+        PricePoint(date: "2022-11-29T18:00:00+0000", price: 4.8973362, dayPriceRange: 2.216994...5.421050, currency: .SEK),
+        PricePoint(date: "2022-11-29T19:00:00+0000", price: 4.2234643, dayPriceRange: 2.216994...5.421050, currency: .SEK),
+        PricePoint(date: "2022-11-29T20:00:00+0000", price: 3.5644134, dayPriceRange: 2.216994...5.421050, currency: .SEK),
+        PricePoint(date: "2022-11-29T21:00:00+0000", price: 3.1428243, dayPriceRange: 2.216994...5.421050, currency: .SEK),
+        PricePoint(date: "2022-11-29T22:00:00+0000", price: 2.8379646, dayPriceRange: 2.216994...5.421050, currency: .SEK)
+    ].shiftDatesToNow()
 
     func price(for date: Date) -> PricePoint? {
         let d = date.in(region: .UTC)
@@ -143,7 +178,25 @@ public extension Array where Element == PricePoint {
     }
 
     func filterInSameDayAs(_ pricePoint: PricePoint, using calendar: Calendar = .current) -> [PricePoint] {
-        filter({ calendar.isDate($0.date, inSameDayAs: pricePoint.date) })
+        filterInSameDayAs(pricePoint.date, using: calendar)
     }
 
+    func filterInSameDayAs(_ date: Date, using calendar: Calendar = .current) -> [PricePoint] {
+        filter({ calendar.isDate($0.date, inSameDayAs: date) })
+    }
+
+}
+
+private extension Array where Element == PricePoint {
+    func shiftDatesToNow() -> [PricePoint] {
+        return enumerated().map({ (i, p) in
+            let h = TimeInterval(i * 60 * 60)
+            return PricePoint(
+                date: .now.dateAtStartOf(.day).addingTimeInterval(h),
+                price: p.price,
+                dayPriceRange: p.dayPriceRange,
+                currency: p.currency
+            )
+        })
+    }
 }
