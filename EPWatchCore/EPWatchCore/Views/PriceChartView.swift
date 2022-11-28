@@ -142,6 +142,7 @@ public struct PriceChartView: View {
                     .foregroundStyle(limits.color(of: p.price))
                 }
             }
+            .chartXScale(range: .plotDimension(startPadding: barWidth/2, endPadding: barWidth/2))
         }
     }
 
