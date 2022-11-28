@@ -20,7 +20,7 @@ struct PriceView: View {
     var displayedPrice: PricePoint {
         return selectedPrice ?? currentPrice
     }
-    @State private var crownValue: Double
+    @State private var crownValue: Double = 0
 
     private var calendar: Calendar = .current
 
@@ -36,8 +36,10 @@ struct PriceView: View {
         self.limits = limits
         self.currencyPresentation = currencyPresentation
         self.chartStyle = chartStyle
-        let currentHour = currentPrice.date.component(.hour, in: calendar)
-        _crownValue = .init(initialValue: Double(currentHour))
+    }
+
+    var currentHour: Int {
+        return currentPrice.date.component(.hour, in: calendar)
     }
 
     var body: some View {
@@ -59,12 +61,12 @@ struct PriceView: View {
             .focusable()
             .digitalCrownRotation(
                 detent: $crownValue,
-                from: Double(prices.first?.date.component(.hour, in: calendar) ?? 0),
-                through: Double(prices.last?.date.component(.hour, in: calendar) ?? 23),
+                from: Double((prices.first?.date.component(.hour, in: calendar) ?? 0) - currentHour),
+                through: Double((prices.last?.date.component(.hour, in: calendar) ?? 23) - currentHour),
                 by: 1,
                 sensitivity: .low,
                 onChange: { event in
-                    let selectedHour = Int(round(event.offset))
+                    let selectedHour = currentHour + Int(round(event.offset))
                     let price = prices.first { price in
                         let priceHour = price.date.component(.hour, in: calendar)
                         return priceHour == selectedHour
@@ -77,7 +79,7 @@ struct PriceView: View {
                 onIdle: {
                     scheduleSelectionResetTimer(in: .seconds(2)) {
                         selectedPrice = nil
-                        crownValue = Double(currentPrice.date.component(.hour, in: calendar))
+                        crownValue = 0
                     }
                 }
             )
