@@ -177,12 +177,22 @@ public extension Array where Element == PricePoint {
         })
     }
 
-    func filterInSameDayAs(_ pricePoint: PricePoint, using calendar: Calendar = .current) -> [PricePoint] {
-        filterInSameDayAs(pricePoint.date, using: calendar)
-    }
-
     func filterInSameDayAs(_ date: Date, using calendar: Calendar = .current) -> [PricePoint] {
         filter({ calendar.isDate($0.date, inSameDayAs: date) })
+    }
+
+    /// Filter prices of today and the first 8 hours of tomorrow
+    func filterTodayAndComingNight(using calendar: Calendar = .current) -> [PricePoint] {
+        return filterInSameDayAndComingNightAs(.now, using: calendar)
+    }
+
+    /// Filters prices in the same day as 'date' and the first 8 hours of the next day
+    func filterInSameDayAndComingNightAs(_ date: Date, using calendar: Calendar = .current) -> [PricePoint] {
+        let todaysPrices = filterInSameDayAs(date)
+        let nextDay = calendar.date(byAdding: .day, value: 1, to: date)!
+        let tomorrowsPrices = filterInSameDayAs(nextDay)
+        let nightsPrices = tomorrowsPrices.count >= 8 ? Array(tomorrowsPrices[0..<8]) : []
+        return todaysPrices + nightsPrices
     }
 
 }

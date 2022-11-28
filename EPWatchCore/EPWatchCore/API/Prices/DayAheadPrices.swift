@@ -97,7 +97,7 @@ struct DayAheadPrices: Codable {
         )
         var pricePoints: [PricePoint] = []
         for (startOfDay, prices) in grouped {
-            guard let range = prices.priceRange(forDayOf: startOfDay) else {
+            guard let priceRange = prices.priceRange(forDayOf: startOfDay) else {
                 LogError("Failed to calculate price range")
                 continue
             }
@@ -106,7 +106,7 @@ struct DayAheadPrices: Codable {
                     PricePoint(
                         date: $0.date,
                         price: $0.price,
-                        dayPriceRange: range.min...range.max,
+                        dayPriceRange: priceRange,
                         currency: rate.to
                     )
                 })

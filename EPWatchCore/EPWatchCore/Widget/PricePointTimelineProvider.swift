@@ -15,6 +15,12 @@ public struct PricePointTimelineProvider: TimelineProvider {
 
     @AppStorage("numberOfFailures")
     var numberOfFailures: Int = 0
+    @AppStorage("numberTriesFetchingPricesOfTomorrow")
+    var numberTriesFetchingPricesOfTomorrow: Int = 0
+
+    var calendar: Calendar {
+        return .current
+    }
 
     public init() {
 
@@ -39,7 +45,7 @@ public struct PricePointTimelineProvider: TimelineProvider {
                 }
                 let entry = PricePointTimelineEntry(
                     pricePoint: price,
-                    prices: prices.filterInSameDayAs(price),
+                    prices: prices.filterInSameDayAs(price.date),
                     limits: limits,
                     currencyPresentation: currencyPresentation,
                     chartStyle: chartStyle
@@ -65,18 +71,22 @@ public struct PricePointTimelineProvider: TimelineProvider {
 
                 let grouped = Dictionary(
                     grouping: allPrices,
-                    by: { Calendar.current.startOfDay(for: $0.date) }
+                    by: { calendar.startOfDay(for: $0.date) }
                 )
+
                 var entries: [Entry] = []
                 for (startOfDay, prices) in grouped {
-                    guard Calendar.current.isDateInToday(startOfDay) || .now < startOfDay else {
+                    let isTodaysPrices = calendar.isDateInToday(startOfDay)
+                    let isFuturePrices = .now < startOfDay
+                    guard isTodaysPrices || isFuturePrices else {
                         continue
                     }
+                    let pricesOfDayAndComingNight = allPrices.filterInSameDayAndComingNightAs(startOfDay)
                     entries.append(
                         contentsOf: prices.map({
                             PricePointTimelineEntry(
                                 pricePoint: $0,
-                                prices: prices,
+                                prices: pricesOfDayAndComingNight,
                                 limits: limits,
                                 currencyPresentation: currencyPresentation,
                                 chartStyle: chartStyle
@@ -84,7 +94,25 @@ public struct PricePointTimelineProvider: TimelineProvider {
                         })
                     )
                 }
-                let timeline = Timeline(entries: entries, policy: .atEnd)
+
+                // Schedule the next reload depending on wether we have tomorrow's prices already.
+                let hasPricesForTomorrow = grouped.keys.contains(where: { calendar.isDateInTomorrow($0) })
+                let reloadPolicy: TimelineReloadPolicy
+                if hasPricesForTomorrow {
+                    reloadPolicy = .atEnd
+                    numberTriesFetchingPricesOfTomorrow = 0
+                } else if PricesAPI.shared.dateWhenTomorrowsPricesBecomeAvailable < .now {
+                    Log("Don't have prices for tomorrow, even though time is after dateWhenTomorrowsPricesBecomeAvailable")
+                    let delay = retryDelay(for: numberTriesFetchingPricesOfTomorrow)
+                    reloadPolicy = .after(.now.addingTimeInterval(delay))
+                    numberTriesFetchingPricesOfTomorrow = numberTriesFetchingPricesOfTomorrow + 1
+                } else {
+                    reloadPolicy = .after(PricesAPI.shared.dateWhenTomorrowsPricesBecomeAvailable)
+                    numberTriesFetchingPricesOfTomorrow = 0
+                    numberOfFailures = 0
+                }
+
+                let timeline = Timeline(entries: entries, policy: reloadPolicy)
                 if let start = entries.first?.date, let end = entries.last?.date {
                     Log("Provided \(entries.count) timeline entries from: \(start), to: \(end)")
                 } else {
@@ -101,18 +129,16 @@ public struct PricePointTimelineProvider: TimelineProvider {
         }
     }
 
-    // Inspiration https://phelgo.com/exponential-backoff/
-    // This produces the delays (without the 0-30s jitter)
-    // 0: 30 s
-    // 1: 2 min
-    // 2: 8 min
-    // 3: 32 min
-    // 4: 60 min (max delay)
     private func retryDelay(for retry: Int) -> TimeInterval {
-        let maxDelay: TimeInterval = 60 * 60
-        let delay = 30 * pow(4.0, Double(retry))
+        let delayInMinutes: Int
+        switch retry {
+        case 0: delayInMinutes = 10
+        case 1: delayInMinutes = 30
+        default: delayInMinutes = 60
+        }
+        // 0-30s jitter
         let jitter = 30 * TimeInterval.random(in: 0...1)
-        return min(delay + jitter, maxDelay)
+        return Double(delayInMinutes * 60) + jitter
     }
 
 }

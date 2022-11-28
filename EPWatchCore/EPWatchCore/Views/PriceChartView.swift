@@ -87,7 +87,7 @@ public struct PriceChartView: View {
             }
             .interpolationMethod(interpolated ? .monotone : .stepCenter)
             .foregroundStyle(LinearGradient(
-                stops: limits.stops(using: displayedPrice.dayPriceRange),
+                stops: limits.stops(using: prices.priceRange() ?? 0.0...0.0),
                 startPoint: .bottom,
                 endPoint: .top
             ))
@@ -176,13 +176,10 @@ public struct PriceChartView: View {
                                 Log("Failed to find selected X value")
                                 return
                             }
-                            let hour = Calendar.current.component(.hour, from: selectedDate)
-                            let minute = Calendar.current.component(.minute, from: selectedDate)
-                            let roundedHour = minute >= 30 ? hour + 1 : hour
-                            let price = prices.first(where: { price in
-                                let priceHour = Calendar.current.component(.hour, from: price.date)
-                                return roundedHour == priceHour
-                            })
+
+                            let secondsToFirst = selectedDate.timeIntervalSince(prices.first?.date ?? .distantPast)
+                            let selectedIndex = Int(round(secondsToFirst / 60 / 60))
+                            let price = prices[safe: selectedIndex]
 
                             if selectedPrice != price {
                                 selectedPrice = price
@@ -245,14 +242,16 @@ private extension PricePoint {
 
 struct PriceChartView_Previews: PreviewProvider {
     static var previews: some View {
-        PriceChartView(
-            selectedPrice: .constant(nil),
-            currentPrice: .mockPrice,
-            prices: .mockPrices,
-            limits: .mockLimits,
-            currencyPresentation: .automatic,
-            chartStyle: .lineInterpolated
-        )
+        List {
+            PriceChartView(
+                selectedPrice: .constant(nil),
+                currentPrice: [PricePoint].mockPricesWithTomorrow[21],
+                prices: .mockPricesWithTomorrow,
+                limits: .mockLimits,
+                currencyPresentation: .automatic,
+                chartStyle: .lineInterpolated
+            )
+            .frame(minHeight: 150)
+        }
     }
 }
-

@@ -42,6 +42,10 @@ struct PriceView: View {
         return currentPrice.date.component(.hour, in: calendar)
     }
 
+    var currentDate: Date {
+        return currentPrice.date
+    }
+
     var body: some View {
         VStack(spacing: 8) {
             Text(displayedPrice.formattedPrice(.normal, currencyPresentation))
@@ -61,16 +65,14 @@ struct PriceView: View {
             .focusable()
             .digitalCrownRotation(
                 detent: $crownValue,
-                from: Double((prices.first?.date.component(.hour, in: calendar) ?? 0) - currentHour),
-                through: Double((prices.last?.date.component(.hour, in: calendar) ?? 23) - currentHour),
+                from: (prices.first?.date.timeIntervalSince(currentDate) ?? 0) / 60 / 60,
+                through: (prices.last?.date.timeIntervalSince(currentDate) ?? 0) / 60 / 60,
                 by: 1,
                 sensitivity: .low,
                 onChange: { event in
-                    let selectedHour = currentHour + Int(round(event.offset))
-                    let price = prices.first { price in
-                        let priceHour = price.date.component(.hour, in: calendar)
-                        return priceHour == selectedHour
-                    }
+                    let currentIndex = prices.firstIndex(of: currentPrice) ?? 0
+                    let selectedIndex = currentIndex + Int(round(event.offset))
+                    let price = prices[safe: selectedIndex]
                     if price != selectedPrice {
                         selectedPrice = price
                     }

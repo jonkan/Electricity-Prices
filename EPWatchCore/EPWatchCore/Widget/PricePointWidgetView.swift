@@ -45,14 +45,14 @@ public struct WidgetView: View {
 
 }
 
-//struct WidgetView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        if #available(watchOS 9, *) {
-//            WidgetView(entry: .mock)
-//                .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-//        } else {
-//            WidgetView(entry: .mock)
-//                .previewContext(WidgetPreviewContext(family: .systemSmall))
-//        }
-//    }
-//}
+struct WidgetView_Previews: PreviewProvider {
+    static var previews: some View {
+#if os(watchOS)
+        WidgetView(entry: .mock)
+            .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+#else
+        WidgetView(entry: .mock)
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
+#endif
+    }
+}

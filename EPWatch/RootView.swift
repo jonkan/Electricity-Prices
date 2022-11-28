@@ -21,7 +21,7 @@ struct RootView: View {
                     Section {
                         PriceView(
                             currentPrice: currentPrice,
-                            prices: state.prices.filterInSameDayAs(currentPrice),
+                            prices: state.prices.filterTodayAndComingNight(),
                             limits: state.priceLimits,
                             currencyPresentation: state.currencyPresentation,
                             chartStyle: state.chartStyle
