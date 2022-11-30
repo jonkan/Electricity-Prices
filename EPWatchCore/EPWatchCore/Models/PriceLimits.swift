@@ -25,12 +25,13 @@ public extension PriceLimits {
         let span = range.upperBound - range.lowerBound
         let highStop = max(0, high - range.lowerBound) / span
         let lowStop = max(0, low - range.lowerBound) / span
-        let fadeSize = 0.1
+        // Make sure lowStop + fadeSize <= highStop - fadeSize
+        let fadeSize = min(0.1, (highStop-lowStop)/2)
         return [
             .init(color: .green, location: lowStop - fadeSize),
             .init(color: .orange, location: lowStop + fadeSize),
             .init(color: .orange, location: highStop - fadeSize),
-            .init(color: .red, location: highStop + fadeSize),
+            .init(color: .red, location: highStop + fadeSize)
         ]
     }
 
