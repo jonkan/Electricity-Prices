@@ -86,9 +86,9 @@
 "Logs" = "Loggar";
 "%lld log files" = "%lld loggfiler";
 "Retry" = "Försök igen";
-"Success fetching logs from the watch" = "Lyckades att hämta loggar från klockan";
-"Failed to fetch logs from the watch" = "Misslyckades att hämta loggar från klockan";
-"Try having the watch app in the foreground" = "Försök att ha appen på klockan i förgrunden";
+"Success fetching logs from the watch." = "Lyckades att hämta loggar från klockan.";
+"Failed to fetch logs from the watch." = "Misslyckades att hämta loggar från klockan.";
+"Try having the watch app in the foreground." = "Försök att ha appen på klockan i förgrunden.";
 
 "Ready" = "Redo";
 "Waiting for the watch to respond" = "Väntar på att klockan ska svara";

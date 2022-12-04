@@ -49,9 +49,9 @@ struct SupportSettingsView: View {
                 } icon: {
                     Group {
                         if case .waitingForWatchToSendLogs(let count) = shareLogsState.state,
-                           let count = count {
+                           let total = count.total {
                             CircularProgressView(
-                                progress: Double(count.received) / Double(count.total)
+                                progress: Double(count.received) / Double(total)
                             )
                         } else if shareLogsState.state != .ready {
                             ProgressView()
@@ -94,11 +94,11 @@ struct SupportSettingsView: View {
                 Text("Logs")
             } footer: {
                 if shareLogsState.didFetchWatchLogs {
-                    Text("Success fetching logs from the watch")
+                    Text("Success fetching logs from the watch.")
                 } else if shareLogsState.fetchingWatchLogsError != nil {
                     VStack(alignment: .leading) {
-                        Text("Failed to fetch logs from the watch")
-                        Text("Try having the watch app in the foreground")
+                        Text("Failed to fetch logs from the watch.")
+                        Text("Try having the watch app in the foreground.")
                     }
                 }
             }

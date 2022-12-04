@@ -15,14 +15,22 @@ class ShareLogsState: NSObject, ObservableObject {
     static let shared: ShareLogsState = .init()
 
     struct LogCount: Equatable {
-        var total: Int
+        var total: Int?
         var received: Int
+
+        var description: String {
+            if let total = total {
+                return "\(received)/\(total)"
+            } else {
+                return "\(received)/nil"
+            }
+        }
     }
 
     enum StateMachine: Equatable {
         case ready
         case waitingForWatchSessionActivation
-        case waitingForWatchToSendLogs(count: LogCount?)
+        case waitingForWatchToSendLogs(count: LogCount)
         case processingLogs(includingWatchLogs: Bool)
 
         var localizedDescription: String {
@@ -36,7 +44,7 @@ class ShareLogsState: NSObject, ObservableObject {
             case .waitingForWatchSessionActivation:
                 return "Waiting for the watch to respond"
             case .waitingForWatchToSendLogs(let count):
-                if count != nil {
+                if count.total != nil || count.received > 0 {
                     return "Transfering logs from the watch"
                 } else {
                     return "Waiting for the watch to send logs"
@@ -213,7 +221,7 @@ extension ShareLogsState: WCSessionDelegate {
                 processLogs(includingWatchLogs: false)
                 return
             }
-            state = .waitingForWatchToSendLogs(count: nil)
+            state = .waitingForWatchToSendLogs(count: .init(total: nil, received: 0))
             setTimeoutHandler(.seconds(5)) {
                 self.fetchingWatchLogsError = NSError(0, "Timeout waiting for message reply")
                 self.processLogs(includingWatchLogs: false)
@@ -221,7 +229,7 @@ extension ShareLogsState: WCSessionDelegate {
             session.sendMessage(["sendLogs": true]) { reply in
                 Task {
                     Log("Did receive message reply \(reply)")
-                    guard case .waitingForWatchToSendLogs = self.state else {
+                    guard case .waitingForWatchToSendLogs(var count) = self.state else {
                         Log("State not .waitingForWatchToSendLogs")
                         return
                     }
@@ -230,10 +238,11 @@ extension ShareLogsState: WCSessionDelegate {
                         self.fireTimeoutHandler()
                         return
                     }
-                    Log("Watch will send \(logs.count) logs")
-                    self.state = .waitingForWatchToSendLogs(count: .init(total: logs.count, received: 0))
+                    count.total = logs.count
+                    Log("Watch will send \(logs.count) logs (\(count.received) already received)")
+                    self.state = .waitingForWatchToSendLogs(count: count)
                     self.setTimeoutHandler(.seconds(10)) {
-                        self.fetchingWatchLogsError = NSError(0, "Timeout waiting for watch file transfers 0/\(logs.count)")
+                        self.fetchingWatchLogsError = NSError(0, "Timeout waiting for watch file transfers \(count.description)")
                         self.processLogs(includingWatchLogs: false)
                     }
                 }
@@ -264,12 +273,8 @@ extension ShareLogsState: WCSessionDelegate {
     func session(_ session: WCSession, didReceive file: WCSessionFile) {
         Task {
             Log("Did receive file: \(file.fileURL.lastPathComponent)")
-            guard case .waitingForWatchToSendLogs(let count) = state else {
+            guard case .waitingForWatchToSendLogs(var count) = state else {
                 LogError("Unexpected state not .waitingForWatchToSendLogs")
-                return
-            }
-            guard var count = count else {
-                LogError("Unexpected, no count set")
                 return
             }
             stopTimeoutHandler()
@@ -280,12 +285,12 @@ extension ShareLogsState: WCSessionDelegate {
                 LogError(error)
             }
             count.received = count.received + 1
-            if count.received >= count.total {
+            if let total = count.total, total <= count.received {
                 processLogs(includingWatchLogs: true)
             } else {
                 state = .waitingForWatchToSendLogs(count: count)
                 setTimeoutHandler(.seconds(10)) {
-                    self.fetchingWatchLogsError = NSError(0, "Timeout waiting for watch file transfers \(count.received)/\(count.total)")
+                    self.fetchingWatchLogsError = NSError(0, "Timeout waiting for watch file transfers \(count.description)")
                     self.processLogs(includingWatchLogs: true)
                 }
             }
