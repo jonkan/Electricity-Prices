@@ -214,7 +214,7 @@ extension ShareLogsState: WCSessionDelegate {
                 return
             }
             state = .waitingForWatchToSendLogs(count: nil)
-            setTimeoutHandler(.seconds(30)) {
+            setTimeoutHandler(.seconds(5)) {
                 self.fetchingWatchLogsError = NSError(0, "Timeout waiting for message reply")
                 self.processLogs(includingWatchLogs: false)
             }
@@ -232,7 +232,7 @@ extension ShareLogsState: WCSessionDelegate {
                     }
                     Log("Watch will send \(logs.count) logs")
                     self.state = .waitingForWatchToSendLogs(count: .init(total: logs.count, received: 0))
-                    self.setTimeoutHandler(.seconds(90)) {
+                    self.setTimeoutHandler(.seconds(10)) {
                         self.fetchingWatchLogsError = NSError(0, "Timeout waiting for watch file transfers 0/\(logs.count)")
                         self.processLogs(includingWatchLogs: false)
                     }
@@ -284,7 +284,7 @@ extension ShareLogsState: WCSessionDelegate {
                 processLogs(includingWatchLogs: true)
             } else {
                 state = .waitingForWatchToSendLogs(count: count)
-                setTimeoutHandler(.seconds(90)) {
+                setTimeoutHandler(.seconds(10)) {
                     self.fetchingWatchLogsError = NSError(0, "Timeout waiting for watch file transfers \(count.received)/\(count.total)")
                     self.processLogs(includingWatchLogs: true)
                 }
