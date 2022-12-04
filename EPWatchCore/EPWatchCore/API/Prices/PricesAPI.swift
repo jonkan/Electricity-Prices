@@ -16,7 +16,8 @@ class PricesAPI {
     private init() {}
 
     var dateWhenTomorrowsPricesBecomeAvailable: Date {
-        return Calendar.current.date(bySetting: .hour, value: 13, of: .now)!
+        let startOfDay = Calendar.current.startOfDay(for: .now)
+        return Calendar.current.date(byAdding: .hour, value: 13, to: startOfDay)!
     }
 
     func downloadDayAheadPrices(for priceArea: PriceArea) async throws -> DayAheadPrices {
