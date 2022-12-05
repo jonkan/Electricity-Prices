@@ -34,7 +34,7 @@ let package = Package(
             dependencies: ["EPWatchCore"],
             path: "EPWatchCoreTests",
             resources: [
-                .copy("Resources"),
+                .process("Resources"),
             ]
         )
     ]
