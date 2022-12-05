@@ -143,7 +143,9 @@ private var logger: XCGLogger = {
     }
     let fileDestination = AutoRotatingFileDestination(
         writeToFile: logFileUrl.path(),
-        identifier: "Logger.fileDestination"
+        identifier: "Logger.fileDestination",
+        shouldAppend: true,
+        maxTimeInterval: .greatestFiniteMagnitude
     )
 
     // Optionally set some configuration options
