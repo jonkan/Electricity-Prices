@@ -271,19 +271,21 @@ extension ShareLogsState: WCSessionDelegate {
     }
 
     func session(_ session: WCSession, didReceive file: WCSessionFile) {
+        // The file needs to be copied synchronously, otherwise it might already be deleted.
+        Log("Did receive file: \(file.fileURL.lastPathComponent)")
+        do {
+            let destinationURL = logsTempDirectoryURL.appending(path: file.fileURL.lastPathComponent)
+            try FileManager.default.copyItem(at: file.fileURL, to: destinationURL)
+        } catch {
+            LogError(error)
+        }
         Task {
-            Log("Did receive file: \(file.fileURL.lastPathComponent)")
             guard case .waitingForWatchToSendLogs(var count) = state else {
                 LogError("Unexpected state not .waitingForWatchToSendLogs")
                 return
             }
             stopTimeoutHandler()
-            do {
-                let destinationURL = logsTempDirectoryURL.appending(path: file.fileURL.lastPathComponent)
-                try FileManager.default.copyItem(at: file.fileURL, to: destinationURL)
-            } catch {
-                LogError(error)
-            }
+
             count.received = count.received + 1
             if let total = count.total, total <= count.received {
                 processLogs(includingWatchLogs: true)
