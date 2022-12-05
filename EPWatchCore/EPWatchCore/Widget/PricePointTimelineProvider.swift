@@ -98,23 +98,28 @@ public struct PricePointTimelineProvider: TimelineProvider {
                 // Schedule the next reload depending on wether we have tomorrow's prices already.
                 let hasPricesForTomorrow = grouped.keys.contains(where: { calendar.isDateInTomorrow($0) })
                 let reloadPolicy: TimelineReloadPolicy
+                let reloadDescription: String
                 if hasPricesForTomorrow {
                     reloadPolicy = .atEnd
+                    reloadDescription = "at end"
                     numberTriesFetchingPricesOfTomorrow = 0
                 } else if PricesAPI.shared.dateWhenTomorrowsPricesBecomeAvailable < .now {
                     Log("Don't have prices for tomorrow, even though time is after dateWhenTomorrowsPricesBecomeAvailable")
                     let delay = retryDelay(for: numberTriesFetchingPricesOfTomorrow)
-                    reloadPolicy = .after(.now.addingTimeInterval(delay))
+                    let nextReload: Date = .now.addingTimeInterval(delay)
+                    reloadPolicy = .after(nextReload)
+                    reloadDescription = "after \(nextReload)"
                     numberTriesFetchingPricesOfTomorrow = numberTriesFetchingPricesOfTomorrow + 1
                 } else {
                     reloadPolicy = .after(PricesAPI.shared.dateWhenTomorrowsPricesBecomeAvailable)
+                    reloadDescription = "after \(PricesAPI.shared.dateWhenTomorrowsPricesBecomeAvailable)"
                     numberTriesFetchingPricesOfTomorrow = 0
                     numberOfFailures = 0
                 }
 
                 let timeline = Timeline(entries: entries, policy: reloadPolicy)
                 if let start = entries.first?.date, let end = entries.last?.date {
-                    Log("Provided \(entries.count) timeline entries from: \(start), to: \(end)")
+                    Log("Provided \(entries.count) timeline entries from: \(start), to: \(end). Reload policy: \(reloadDescription)")
                 } else {
                     Log("Provided no timeline entries")
                 }

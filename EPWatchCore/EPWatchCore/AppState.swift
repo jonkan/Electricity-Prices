@@ -231,11 +231,15 @@ public class AppState: ObservableObject {
             // tried recently (within 5 min).
             let tomorrowsPricesShouldBeAvailable = PricesAPI.shared.dateWhenTomorrowsPricesBecomeAvailable < .now
             let timeIntervalSinceLastFetchAttempt = Date.now.timeIntervalSince(lastAttemptFetchingTomorrowsPrices ?? .distantPast)
-            if !tomorrowsPricesShouldBeAvailable || timeIntervalSinceLastFetchAttempt < (5 * 60) {
-                Log("Update not needed, skip trying to fetch for tomorrow")
+            if !tomorrowsPricesShouldBeAvailable {
+                Log("Update not needed, skip trying to fetch for tomorrow. Tomorrows prices not yet available.")
                 return
+            } else if timeIntervalSinceLastFetchAttempt < (5 * 60) {
+                Log("Update not needed, skip trying to fetch for tomorrow. Already tried fetching at \(lastAttemptFetchingTomorrowsPrices ?? .distantPast).")
+                return
+            } else {
+                Log("Update not needed, but will try to fetch for tomorrow.")
             }
-            Log("Update not needed, but will try to fetch for tomorrow")
         } else {
             currentPrice = nil
         }
