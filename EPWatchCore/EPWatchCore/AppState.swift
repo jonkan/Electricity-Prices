@@ -9,7 +9,6 @@ import Foundation
 import SwiftUI
 import Combine
 import UIKit
-import SwiftDate
 import WidgetKit
 
 @MainActor
@@ -145,10 +144,11 @@ public class AppState: ObservableObject {
     public var isTimerRunning: Bool = false {
         didSet {
             if isTimerRunning {
-                let nextHour = DateInRegion().dateAtStartOf(.hour) + 1.hours
+                let startOfHour = Calendar.current.startOfHour(for: .now)
+                let nextHour = Calendar.current.date(byAdding: .hour, value: 1, to: startOfHour)!
                 timer = Timer(
-                    fireAt: nextHour.date,
-                    interval: 1.hours.timeInterval,
+                    fireAt: nextHour,
+                    interval: 60 * 60,
                     target: self,
                     selector: #selector(updatePricesIfNeeded),
                     userInfo: nil,

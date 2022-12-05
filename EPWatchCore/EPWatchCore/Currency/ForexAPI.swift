@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftDate
 import Alamofire
 
 enum ForexError: Error {
@@ -19,11 +18,13 @@ class ForexAPI {
     private init() {}
 
     func download(from: Currency, to: Currency) async throws -> ExchangeRate {
-        var startDate = (DateInRegion() - 1.days)
-        while startDate.isInWeekend {
-            startDate = startDate - 1.days
+        var startDate = Calendar.current.date(byAdding: .day, value: -1, to: .now)!
+        while Calendar.current.isDateInWeekend(startDate) {
+            startDate = Calendar.current.date(byAdding: .day, value: -1, to: startDate)!
         }
-        let startPeriod = startDate.toFormat("yyyy-MM-dd")
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let startPeriod = dateFormatter.string(from: startDate)
 
         guard from != to else {
             return ExchangeRate(date: startPeriod, from: from, to: to, rate: 1)

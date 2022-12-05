@@ -541,7 +541,6 @@
 			packageReferences = (
 				2690400F28D6680B00A823F5 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				2690401228D6681800A823F5 /* XCRemoteSwiftPackageReference "XMLCoder" */,
-				2690401528D6682800A823F5 /* XCRemoteSwiftPackageReference "SwiftDate" */,
 				2602DE43290AD0D400CC83F2 /* XCRemoteSwiftPackageReference "XCGLogger" */,
 				26F28FE3291078B800D42DFB /* XCRemoteSwiftPackageReference "ActivityView" */,
 			);
@@ -1220,14 +1219,6 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 0.9.0;
-			};
-		};
-		2690401528D6682800A823F5 /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/malcommac/SwiftDate.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.0.0;
 			};
 		};
 		26F28FE3291078B800D42DFB /* XCRemoteSwiftPackageReference "ActivityView" */ = {

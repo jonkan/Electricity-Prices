@@ -7,7 +7,6 @@
 
 import XCTest
 @testable import EPWatchCore
-import SwiftDate
 
 final class EPWatchCoreTests: XCTestCase {
 
@@ -19,11 +18,13 @@ final class EPWatchCoreTests: XCTestCase {
     }()
 
     var dayAheadPrices: DayAheadPrices!
-    let swedishRegion = Region(
-        calendar: Calendars.gregorian,
-        zone: Zones.europeStockholm,
-        locale: Locales.swedish
-    )
+    let swedishDateFormatter: DateFormatter = {
+        let df = DateFormatter()
+        df.timeZone = TimeZone(identifier: "Europe/Stockholm")
+        df.locale = Locale(identifier: "sv_SE")
+        df.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        return df
+    }()
 
     override func setUpWithError() throws {
         let url = bundle.url(forResource: "day-ahead-prices-1", withExtension: "xml")!
@@ -40,20 +41,20 @@ final class EPWatchCoreTests: XCTestCase {
     }
 
     func testFindPriceAmount() throws {
-        let date1 = DateInRegion("2022-08-26 08:00:00", region: swedishRegion)!.date
+        let date1 = swedishDateFormatter.date(from: "2022-08-26 08:00:00")!
         let price = try dayAheadPrices.price(for: date1)
         XCTAssertEqual(price, 619.96)
     }
 
     func testPrices1() throws {
         let prices = try dayAheadPrices.prices(using: .mockedEUR)
-        let date1 = DateInRegion("2022-08-26 08:00:00", region: swedishRegion)!.date
+        let date1 = swedishDateFormatter.date(from: "2022-08-26 08:00:00")!
         XCTAssertEqual(prices.price(for: date1)!.price, 0.61996, accuracy: 1e-10)
     }
 
     func testPrices2() throws {
         let prices = try dayAheadPrices.prices(using: .mockedEUR)
-        let date1 = DateInRegion("2022-08-26 14:33:00", region: swedishRegion)!.date
+        let date1 = swedishDateFormatter.date(from: "2022-08-26 14:33:00")!
         XCTAssertEqual(prices.price(for: date1)!.price, 0.62810, accuracy: 1e-10)
     }
 
@@ -63,8 +64,8 @@ final class EPWatchCoreTests: XCTestCase {
     }
 
     func testDayPriceRange() throws {
-        let dayStart = DateInRegion("2022-08-26 00:00:00", region: swedishRegion)!.date
-        let dayEnd = DateInRegion("2022-08-26 24:00:00", region: swedishRegion)!.date
+        let dayStart = swedishDateFormatter.date(from: "2022-08-26 00:00:00")!
+        let dayEnd = swedishDateFormatter.date(from: "2022-08-27 00:00:00")!
         let prices = try dayAheadPrices.prices(using: .mockedEUR)
             .filter({
                 dayStart <= $0.date && $0.date < dayEnd })

@@ -7,7 +7,6 @@
 
 import XCTest
 @testable import EPWatchCore
-import SwiftDate
 
 final class CurrencyFormattingTests: XCTestCase {
 

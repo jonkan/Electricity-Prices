@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftDate
 
 struct DayAheadPrices: Codable {
     var timeSeries: [TimeSeries]
@@ -28,8 +27,12 @@ struct DayAheadPrices: Codable {
 
         func point(for date: Date) -> Point? {
             return point.first(where: { p in
-                let start = timeInterval.start + (p.position - 1).hours
-                let end = start + 1.hours
+                let calendar = Calendar.current
+                guard let start = calendar.date(byAdding: .hour, value: p.position - 1, to: timeInterval.start),
+                      let end = calendar.date(byAdding: .hour, value: 1, to: start) else {
+                    LogError("Failed to construct start/end time")
+                    return false
+                }
                 return TimeInterval(start: start, end: end).includes(date)
             })
         }
@@ -78,7 +81,7 @@ struct DayAheadPrices: Codable {
                 continue
             }
             for p in period.point {
-                let start = period.timeInterval.start + (p.position - 1).hours
+                let start = Calendar.current.date(byAdding: .hour, value: p.position - 1, to: period.timeInterval.start)!
                 let MWperkW = 0.001
                 let price = p.priceAmount * rate.rate * MWperkW
                 let pricePoint = PricePoint(

@@ -17,8 +17,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/CoreOffice/XMLCoder.git", from: "0.14.0"),
         .package(url: "https://github.com/DaveWoodCom/XCGLogger.git", from: "7.0.0"),
-        .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.6.1"),
-        .package(url: "https://github.com/malcommac/SwiftDate.git", from: "7.0.0")
+        .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.6.1")
     ],
     targets: [
         .target(
@@ -26,8 +25,7 @@ let package = Package(
             dependencies: [
                 "XMLCoder",
                 "XCGLogger",
-                "Alamofire",
-                "SwiftDate",
+                "Alamofire"
             ],
             path: "EPWatchCore"
         ),
@@ -38,6 +36,6 @@ let package = Package(
             resources: [
                 .copy("Resources"),
             ]
-        ),
+        )
     ]
 )

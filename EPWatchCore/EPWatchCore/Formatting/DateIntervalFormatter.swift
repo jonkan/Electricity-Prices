@@ -6,19 +6,32 @@
 //
 
 import Foundation
-import SwiftDate
 
 struct DateIntervalFormatter {
     static func formatted(
-        from start: DateInRegion,
-        to end: DateInRegion,
+        from start: Date,
+        to end: Date,
         style: FormattingStyle
     ) -> String {
         switch style {
         case .normal:
-            return "\(start.toFormat("HH:mm")) - \(end.toFormat("HH:mm"))"
+            return "\(DateFormatter.normal.string(from: start)) - \(DateFormatter.normal.string(from: end))"
         case .short:
-            return "\(start.toFormat("H"))-\(end.toFormat("H"))"
+            return "\(DateFormatter.short.string(from: start))-\(DateFormatter.short.string(from: end))"
         }
     }
+}
+
+private extension DateFormatter {
+    static let normal: DateFormatter = {
+        let df = DateFormatter()
+        df.dateFormat = "HH:mm"
+        return df
+    }()
+
+    static let short: DateFormatter = {
+        let df = DateFormatter()
+        df.dateFormat = "H"
+        return df
+    }()
 }

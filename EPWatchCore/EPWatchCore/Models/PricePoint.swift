@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftDate
 
 public struct PricePoint: Codable, Equatable {
     public let date: Date // And 1h forward
@@ -47,8 +46,8 @@ public struct PricePoint: Codable, Equatable {
 
     public func formattedTimeInterval(_ style: FormattingStyle) -> String {
         return DateIntervalFormatter.formatted(
-            from: date.convertTo(region: .current),
-            to: date.convertTo(region: .current).dateByAdding(1, .hour),
+            from: date,
+            to: Calendar.current.date(byAdding: .hour, value: 1, to: date)!,
             style: style
         )
     }
@@ -167,13 +166,12 @@ public extension Array where Element == PricePoint {
     ].shiftDatesToNow()
 
     func price(for date: Date) -> PricePoint? {
-        let d = date.in(region: .UTC)
+        let hour = Calendar.current.component(.hour, from: date)
         return first(where: {
             guard Calendar.current.isDate($0.date, inSameDayAs: date) else {
                 return false
             }
-            let s = $0.date.in(region: .UTC)
-            return d.hour == s.hour
+            return hour == Calendar.current.component(.hour, from: $0.date)
         })
     }
 
@@ -202,7 +200,7 @@ private extension Array where Element == PricePoint {
         return enumerated().map({ (i, p) in
             let h = TimeInterval(i * 60 * 60)
             return PricePoint(
-                date: .now.dateAtStartOf(.day).addingTimeInterval(h),
+                date: Calendar.current.startOfDay(for: .now).addingTimeInterval(h),
                 price: p.price,
                 dayPriceRange: p.dayPriceRange,
                 currency: p.currency
