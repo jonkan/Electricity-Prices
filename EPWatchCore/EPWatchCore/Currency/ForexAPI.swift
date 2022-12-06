@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Alamofire
 
 enum ForexError: Error {
     case outdatedRate
@@ -35,11 +34,11 @@ class ForexAPI {
             URLQueryItem(name: "format", value: "csvdata"),
             URLQueryItem(name: "startPeriod", value: startPeriod)
         ]
-        let downloadResponse = await AF.download(components.url!).serializingData().response
-        let data = try downloadResponse.result.get()
-        let statusCode = downloadResponse.response?.statusCode
+        let request = URLRequest(url: components.url!)
+        let response = try await SessionManager.shared.download(request)
+        let statusCode = response.httpResponse.statusCode
         do {
-            guard let csv = String(data: data, encoding: .utf8) else {
+            guard let csv = String(data: response.data, encoding: .utf8) else {
                 throw NSError(0, "Failed to decode string from data")
             }
             let lines = csv.split(whereSeparator: \.isNewline)
@@ -58,7 +57,7 @@ class ForexAPI {
             }
             return ExchangeRate(date: startPeriod, from: from, to: to, rate: rate)
         } catch {
-            LogError("Failed to parse: \(String(data: data, encoding: .utf8) ?? ""), statusCode: \(statusCode ?? 0)")
+            LogError("Failed to parse: \(String(data: response.data, encoding: .utf8) ?? ""), statusCode: \(statusCode)")
             throw error
         }
 

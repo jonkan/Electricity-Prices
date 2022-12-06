@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Alamofire
 import XMLCoder
 
 class PricesAPI {
@@ -64,20 +63,21 @@ class PricesAPI {
             URLQueryItem(name: "securityToken", value: securityToken)
         ]
 
-        let downloadResponse = await AF.download(components.url!).serializingData().response
-        let data = try downloadResponse.result.get()
+        let request = URLRequest(url: components.url!)
+        let response = try await SessionManager.shared.download(request)
+        let statusCode = response.httpResponse.statusCode
         do {
-            let dayAheadPrices = try parseDayAheadPrices(fromXML: data)
+            let dayAheadPrices = try parseDayAheadPrices(fromXML: response.data)
             Log("Success downloading day ahead prices")
             return dayAheadPrices
         } catch {
             var userPresentableError: UserPresentableError?
-            if let statusCode = downloadResponse.response?.statusCode, 200 <= statusCode, statusCode < 300 {
+            if 200 <= statusCode, statusCode < 300 {
                 do {
-                    let errorResponse = try parseErrorResponse(fromXML: data)
+                    let errorResponse = try parseErrorResponse(fromXML: response.data)
                     userPresentableError = UserPresentableError(errorResponse)
                 } catch {
-                    LogError("Failed to parse: \(String(data: data, encoding: .utf8) ?? "")")
+                    LogError("Failed to parse: \(String(data: response.data, encoding: .utf8) ?? "")")
                     throw error
                 }
             }

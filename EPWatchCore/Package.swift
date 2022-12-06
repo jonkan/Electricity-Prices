@@ -16,16 +16,14 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/CoreOffice/XMLCoder.git", from: "0.14.0"),
-        .package(url: "https://github.com/DaveWoodCom/XCGLogger.git", from: "7.0.0"),
-        .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.6.1")
+        .package(url: "https://github.com/DaveWoodCom/XCGLogger.git", from: "7.0.0")
     ],
     targets: [
         .target(
             name: "EPWatchCore",
             dependencies: [
                 "XMLCoder",
-                "XCGLogger",
-                "Alamofire"
+                "XCGLogger"
             ],
             path: "EPWatchCore"
         ),

@@ -29,5 +29,12 @@ struct EPWatchApp: App {
             Log("Scene phase changed: \(scenePhase)")
             AppState.shared.isTimerRunning = (phase == .active)
         }
+        .backgroundTask(.appRefresh("RefreshPrices")) {
+            do {
+                try await AppState.shared.updatePricesIfNeeded()
+            } catch {
+                LogError(error)
+            }
+        }
     }
 }
