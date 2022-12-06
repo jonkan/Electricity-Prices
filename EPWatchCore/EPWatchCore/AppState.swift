@@ -120,6 +120,9 @@ public class AppState: ObservableObject {
     }
 
     private init() {
+        Log("App version: \(AppInfo.version) (\(AppInfo.build)), \(AppInfo.commit)")
+        Log("System version: \(AppInfo.systemVersion)")
+
         updatePricesIfNeeded()
 
         if region == nil {

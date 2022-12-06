@@ -20,6 +20,11 @@ struct SupportSettingsView: View {
     var body: some View {
         List {
             Section {
+                Text("\(AppInfo.bundleDisplayName) \(AppInfo.version) (\(AppInfo.build))")
+            } footer: {
+                Text("\(AppInfo.commit)")
+            }
+            Section {
                 Group {
                     Text("Please report any issues to ") +
                     Text(verbatim: supportEmail)
