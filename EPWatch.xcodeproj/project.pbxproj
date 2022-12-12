@@ -603,6 +603,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		261C7C9C293FCF71005618D8 /* Add git commit hash to plist */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -621,6 +622,7 @@
 		};
 		261C7C9D293FCFD5005618D8 /* Add git commit hash to plist */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -639,6 +641,7 @@
 		};
 		261C7C9E293FCFE7005618D8 /* Add git commit hash to plist */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -657,6 +660,7 @@
 		};
 		261C7C9F293FD018005618D8 /* Add git commit hash to plist */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
