@@ -54,7 +54,7 @@ class PricesAPI {
         guard let securityToken = plistToken as? String, !securityToken.isEmpty else {
             throw NSError(0, "Failed to read EntsoeSecurityToken from Info.plist")
         }
-        var components = URLComponents(string: "https://transparency.entsoe.eu/api")!
+        var components = URLComponents(string: "https://web-api.tp.entsoe.eu/api")!
         components.queryItems = [
             URLQueryItem(name: "documentType", value: "A44"),
             URLQueryItem(name: "in_Domain", value: priceArea.code),
