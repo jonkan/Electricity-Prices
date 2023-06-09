@@ -60,9 +60,9 @@ public struct PricePointTimelineProvider: TimelineProvider {
     }
 
     public func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+        let durationStart = Date()
+        Log("Get timeline started")
         Task {
-            let durationStart = Date()
-            Log("Get timeline started")
             do {
                 let state = AppState.shared
                 try await state.updatePricesIfNeeded()
