@@ -145,7 +145,9 @@ private var logger: XCGLogger = {
         writeToFile: logFileUrl.path(),
         identifier: "Logger.fileDestination",
         shouldAppend: true,
-        maxTimeInterval: .greatestFiniteMagnitude
+        maxFileSize: 262_144, // 1/4 mebibyte
+        maxTimeInterval: .greatestFiniteMagnitude,
+        targetMaxLogFiles: 2
     )
 
     // Optionally set some configuration options
