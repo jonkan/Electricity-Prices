@@ -94,6 +94,7 @@ public struct PricePointTimelineProvider: TimelineProvider {
                         })
                     )
                 }
+                entries.sort(by: { $0.date < $1.date })
 
                 // Schedule the next reload depending on wether we have tomorrow's prices already.
                 let hasPricesForTomorrow = grouped.keys.contains(where: { calendar.isDateInTomorrow($0) })
@@ -119,6 +120,7 @@ public struct PricePointTimelineProvider: TimelineProvider {
 
                 let timeline = Timeline(entries: entries, policy: reloadPolicy)
                 if let start = entries.first?.date, let end = entries.last?.date {
+                    assert(start <= end, "The first entry should be dated before the last")
                     Log("Provided \(entries.count) timeline entries from: \(start), to: \(end). Reload policy: \(reloadDescription)")
                 } else {
                     Log("Provided no timeline entries")
