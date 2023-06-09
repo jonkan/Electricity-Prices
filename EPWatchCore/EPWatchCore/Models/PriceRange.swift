@@ -10,7 +10,7 @@ import Foundation
 public extension Array where Element == PricePoint {
     func priceRange() -> ClosedRange<Double>? {
         guard let max = map({ $0.price }).max(),
-              let min = map({$0.price }).min() else {
+              let min = map({ $0.price }).min() else {
             return nil
         }
         return min...max

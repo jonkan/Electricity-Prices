@@ -14,6 +14,7 @@ public struct PriceChartView: View {
     @Environment(\.widgetRenderingMode) private var widgetRenderingMode
     let currentPrice: PricePoint
     let prices: [PricePoint]
+    let priceRange: ClosedRange<Double>
     let limits: PriceLimits
     let currencyPresentation: CurrencyPresentation
     let chartStyle: PriceChartStyle
@@ -38,6 +39,7 @@ public struct PriceChartView: View {
         _selectedPrice = selectedPrice
         self.currentPrice = currentPrice
         self.prices = prices
+        self.priceRange = prices.priceRange() ?? 0.0...0.0
         self.limits = limits
         self.currencyPresentation = currencyPresentation
         self.chartStyle = chartStyle
@@ -87,7 +89,7 @@ public struct PriceChartView: View {
             }
             .interpolationMethod(interpolated ? .monotone : .stepCenter)
             .foregroundStyle(LinearGradient(
-                stops: limits.stops(using: prices.priceRange() ?? 0.0...0.0),
+                stops: limits.stops(using: priceRange),
                 startPoint: .bottom,
                 endPoint: .top
             ))
