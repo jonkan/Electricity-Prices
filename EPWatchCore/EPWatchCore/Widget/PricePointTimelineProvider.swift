@@ -61,6 +61,8 @@ public struct PricePointTimelineProvider: TimelineProvider {
 
     public func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         Task {
+            let durationStart = Date()
+            Log("Get timeline started")
             do {
                 let state = AppState.shared
                 try await state.updatePricesIfNeeded()
@@ -133,6 +135,8 @@ public struct PricePointTimelineProvider: TimelineProvider {
                 numberOfFailures = numberOfFailures + 1
                 completion(Timeline(entries: [], policy: .after(.now.addingTimeInterval(delay))))
             }
+            let duration = Date().timeIntervalSince(durationStart).rounded()
+            Log("Get timeline end, duration \(duration)s")
         }
     }
 
