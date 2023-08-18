@@ -71,35 +71,33 @@ public struct PricePointTimelineProvider: TimelineProvider {
                 let currencyPresentation = await state.currencyPresentation
                 let chartStyle = await state.chartStyle
 
-                let grouped = Dictionary(
-                    grouping: allPrices,
-                    by: { calendar.startOfDay(for: $0.date) }
-                )
-
                 var entries: [Entry] = []
-                for (startOfDay, prices) in grouped {
-                    let isTodaysPrices = calendar.isDateInToday(startOfDay)
-                    let isFuturePrices = .now < startOfDay
-                    guard isTodaysPrices || isFuturePrices else {
+                let currentHour = calendar.startOfHour(for: .now)
+                for price in allPrices {
+                    guard price.date >= currentHour else {
+                        // Skip past timeline entries
                         continue
                     }
+                    // Don't provide more than 12 entries, as
+                    // somewhere around 24-48 has shown too many.
+                    if entries.count >= 12 {
+                        break
+                    }
+                    let startOfDay = calendar.startOfDay(for: price.date)
                     let pricesOfDayAndComingNight = allPrices.filterInSameDayAndComingNightAs(startOfDay)
                     entries.append(
-                        contentsOf: prices.map({
-                            PricePointTimelineEntry(
-                                pricePoint: $0,
-                                prices: pricesOfDayAndComingNight,
-                                limits: limits,
-                                currencyPresentation: currencyPresentation,
-                                chartStyle: chartStyle
-                            )
-                        })
+                        PricePointTimelineEntry(
+                            pricePoint: price,
+                            prices: pricesOfDayAndComingNight,
+                            limits: limits,
+                            currencyPresentation: currencyPresentation,
+                            chartStyle: chartStyle
+                        )
                     )
                 }
-                entries.sort(by: { $0.date < $1.date })
 
                 // Schedule the next reload depending on wether we have tomorrow's prices already.
-                let hasPricesForTomorrow = grouped.keys.contains(where: { calendar.isDateInTomorrow($0) })
+                let hasPricesForTomorrow = calendar.isDateInTomorrow(entries.last?.date ?? .distantPast)
                 let reloadPolicy: TimelineReloadPolicy
                 let reloadDescription: String
                 if hasPricesForTomorrow {
