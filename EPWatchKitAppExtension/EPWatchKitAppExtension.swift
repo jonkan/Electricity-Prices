@@ -27,6 +27,7 @@ struct EPWatchKitAppExtension: Widget {
                 .accessoryRectangular
             ]
         )
+        .contentMarginsDisabled()
     }
 }
 

@@ -19,28 +19,31 @@ public struct WidgetView: View {
     }
 
     public var body: some View {
-        switch widgetFamily {
-        case .accessoryCircular:
-            PricePointCircularWidgetView(entry: entry)
-        case .accessoryRectangular:
-            PricePointRectangularWidgetView(entry: entry)
-        case .accessoryCorner:
-            PricePointInlineWidgetView(entry: entry)
-        case .accessoryInline:
-            PricePointInlineWidgetView(entry: entry)
+        ZStack {
+            switch widgetFamily {
+            case .accessoryCircular:
+                PricePointCircularWidgetView(entry: entry)
+            case .accessoryRectangular:
+                PricePointRectangularWidgetView(entry: entry)
+            case .accessoryCorner:
+                PricePointInlineWidgetView(entry: entry)
+            case .accessoryInline:
+                PricePointInlineWidgetView(entry: entry)
 #if os(iOS)
-        case .systemSmall:
-            PricePointLargeWidgetView(entry: entry)
-        case .systemMedium:
-            PricePointLargeWidgetView(entry: entry)
-        case .systemLarge:
-            PricePointLargeWidgetView(entry: entry)
-        case .systemExtraLarge:
-            PricePointLargeWidgetView(entry: entry)
+            case .systemSmall:
+                PricePointLargeWidgetView(entry: entry)
+            case .systemMedium:
+                PricePointLargeWidgetView(entry: entry)
+            case .systemLarge:
+                PricePointLargeWidgetView(entry: entry)
+            case .systemExtraLarge:
+                PricePointLargeWidgetView(entry: entry)
 #endif
-        default:
-            PricePointCircularWidgetView(entry: entry)
+            default:
+                PricePointCircularWidgetView(entry: entry)
+            }
         }
+        .widgetBackground(backgroundView: Color.clear)
     }
 
 }
