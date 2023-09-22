@@ -44,6 +44,7 @@
 		26C082D2292576200065DEFE /* EPWatchCore in Frameworks */ = {isa = PBXBuildFile; productRef = 26C082D1292576200065DEFE /* EPWatchCore */; };
 		26C082D4292576270065DEFE /* EPWatchCore in Frameworks */ = {isa = PBXBuildFile; productRef = 26C082D3292576270065DEFE /* EPWatchCore */; };
 		26C082D62925762E0065DEFE /* EPWatchCore in Frameworks */ = {isa = PBXBuildFile; productRef = 26C082D52925762E0065DEFE /* EPWatchCore */; };
+		26DF95642ABD8207001636BA /* PriceAdjustmentSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DF95632ABD8207001636BA /* PriceAdjustmentSettingsView.swift */; };
 		26EC4A1428D9C52C004DD8EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2696881A28D477EE002142BF /* Assets.xcassets */; };
 		26F28FDC2910778300D42DFB /* SupportSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FDA2910778300D42DFB /* SupportSettingsView.swift */; };
 		26F28FDD2910778300D42DFB /* ShareLogsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FDB2910778300D42DFB /* ShareLogsState.swift */; };
@@ -170,6 +171,7 @@
 		2696883228D47F3B002142BF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		26AA88752925702300BA2B02 /* EPWatchCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = EPWatchCore; sourceTree = "<group>"; };
 		26AC446429112D5D00B86B1E /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		26DF95632ABD8207001636BA /* PriceAdjustmentSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceAdjustmentSettingsView.swift; sourceTree = "<group>"; };
 		26F28FDA2910778300D42DFB /* SupportSettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportSettingsView.swift; sourceTree = "<group>"; };
 		26F28FDB2910778300D42DFB /* ShareLogsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareLogsState.swift; sourceTree = "<group>"; };
 		26F28FDE2910781F00D42DFB /* HostCommunicationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostCommunicationManager.swift; sourceTree = "<group>"; };
@@ -254,7 +256,6 @@
 				26C71B1928C1469D00C2DC59 /* Frameworks */,
 				261FC18C28B7771F007B4A4E /* Products */,
 				26EC4A1528D9C54E004DD8EB /* Resources */,
-				26AC447029126A4D00B86B1E /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -347,10 +348,8 @@
 				2696883028D47C4B002142BF /* PriceView.swift */,
 				2696882328D47864002142BF /* Resources */,
 				2696881828D477ED002142BF /* RootView.swift */,
-				2696883228D47F3B002142BF /* SettingsView.swift */,
-				26F28FDB2910778300D42DFB /* ShareLogsState.swift */,
+				26DF95622ABD81F2001636BA /* Settings */,
 				265733302907291700CE9A4C /* StateInfoFooterView.swift */,
-				26F28FDA2910778300D42DFB /* SupportSettingsView.swift */,
 			);
 			path = EPWatch;
 			sourceTree = "<group>";
@@ -380,13 +379,6 @@
 			name = Packages;
 			sourceTree = "<group>";
 		};
-		26AC447029126A4D00B86B1E /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
 		26C71B1928C1469D00C2DC59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -395,6 +387,17 @@
 				2674BC6528D0572D00E31A20 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		26DF95622ABD81F2001636BA /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				26DF95632ABD8207001636BA /* PriceAdjustmentSettingsView.swift */,
+				2696883228D47F3B002142BF /* SettingsView.swift */,
+				26F28FDB2910778300D42DFB /* ShareLogsState.swift */,
+				26F28FDA2910778300D42DFB /* SupportSettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		26EC4A1528D9C54E004DD8EB /* Resources */ = {
@@ -798,6 +801,7 @@
 				2696883428D4801F002142BF /* SettingsView.swift in Sources */,
 				26AC446529112D5D00B86B1E /* CircularProgressView.swift in Sources */,
 				26F28FDC2910778300D42DFB /* SupportSettingsView.swift in Sources */,
+				26DF95642ABD8207001636BA /* PriceAdjustmentSettingsView.swift in Sources */,
 				2696881728D477ED002142BF /* EPWatchApp.swift in Sources */,
 				2696883128D47C4B002142BF /* PriceView.swift in Sources */,
 			);

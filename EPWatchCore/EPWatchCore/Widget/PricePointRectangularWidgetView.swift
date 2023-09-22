@@ -21,7 +21,7 @@ public struct PricePointRectangularWidgetView: View {
             currentPrice: entry.pricePoint,
             prices: entry.prices,
             limits: entry.limits,
-            currencyPresentation: entry.currencyPresentation,
+            pricePresentation: entry.pricePresentation,
             chartStyle: entry.chartStyle
         )
     }

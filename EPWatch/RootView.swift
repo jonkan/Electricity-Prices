@@ -23,7 +23,7 @@ struct RootView: View {
                             currentPrice: currentPrice,
                             prices: state.prices.filterTodayAndComingNight(),
                             limits: state.priceLimits,
-                            currencyPresentation: state.currencyPresentation,
+                            pricePresentation: state.pricePresentation,
                             chartStyle: state.chartStyle
                         )
                         .frame(minHeight: 200)
@@ -31,7 +31,8 @@ struct RootView: View {
                         StateInfoFooterView(
                             priceArea: state.priceArea,
                             region: state.region,
-                            exchangeRate: state.exchangeRate
+                            exchangeRate: state.exchangeRate,
+                            hideWithoutTaxesOrFeesDisclamer: state.pricePresentation.adjustment.isEnabled
                         )
                     }
                 } else if state.isFetching {

@@ -13,7 +13,7 @@ struct PriceView: View {
     let currentPrice: PricePoint
     let prices: [PricePoint]
     let limits: PriceLimits
-    let currencyPresentation: CurrencyPresentation
+    let pricePresentation: PricePresentation
     let chartStyle: PriceChartStyle
 
     @State private var selectedPrice: PricePoint? = nil
@@ -28,13 +28,13 @@ struct PriceView: View {
         currentPrice: PricePoint,
         prices: [PricePoint],
         limits: PriceLimits,
-        currencyPresentation: CurrencyPresentation,
+        pricePresentation: PricePresentation,
         chartStyle: PriceChartStyle
     ) {
         self.currentPrice = currentPrice
         self.prices = prices
         self.limits = limits
-        self.currencyPresentation = currencyPresentation
+        self.pricePresentation = pricePresentation
         self.chartStyle = chartStyle
     }
 
@@ -48,16 +48,16 @@ struct PriceView: View {
 
     var body: some View {
         VStack(spacing: 8) {
-            Text(displayedPrice.formattedPrice(.normal, currencyPresentation))
+            Text(pricePresentation.formattedPrice(displayedPrice, style: .normal))
                 .font(.title)
-            Text(displayedPrice.formattedTimeInterval(.normal))
+            Text(pricePresentation.formattedDateTimeInterval(from: displayedPrice, style: .normal))
                 .font(.subheadline)
             PriceChartView(
                 selectedPrice: $selectedPrice,
                 currentPrice: currentPrice,
                 prices: prices,
                 limits: limits,
-                currencyPresentation: currencyPresentation,
+                pricePresentation: pricePresentation,
                 chartStyle: chartStyle,
                 useCurrencyAxisFormat: true,
                 isChartGestureEnabled: false
@@ -124,7 +124,7 @@ struct PriceView_Previews: PreviewProvider {
             currentPrice: .mockPrice,
             prices: .mockPrices,
             limits: .mockLimits,
-            currencyPresentation: .automatic,
+            pricePresentation: .init(),
             chartStyle: .lineInterpolated
         )
     }

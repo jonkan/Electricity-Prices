@@ -16,6 +16,26 @@ struct SettingsView: View {
     var body: some View {
         List {
             SettingsSection()
+            if let currentPrice = state.currentPrice {
+                Section {
+                    NavigationLink {
+                        PriceAdjustmentSettingsView(
+                            pricePresentation: $state.pricePresentation,
+                            currentPrice: currentPrice,
+                            currency: state.currency
+                        )
+                        .navigationTitle("Price adjustment")
+                    } label: {
+                        HStack {
+                            Text("Price adjustment")
+                            Spacer()
+                            Text(state.pricePresentation.adjustment.isEnabled ? "Enabled" : "Disabled")
+                        }
+                    }
+                } footer: {
+                    Text("Adjust the price to account for taxes and fees.")
+                }
+            }
             Section {
                 NavigationLink {
                     SupportSettingsView()

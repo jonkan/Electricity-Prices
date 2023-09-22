@@ -18,7 +18,7 @@ public struct PricePointInlineWidgetView: View {
     }
 
     public var body: some View {
-        Text(entry.pricePoint.formattedPrice(.normal, entry.currencyPresentation))
+        Text(entry.formattedPrice(style: .normal))
             .bold()
             .foregroundColor(entry.limits.color(of: entry.pricePoint.price))
     }

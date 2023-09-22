@@ -38,7 +38,7 @@ public struct SettingsSection: View {
             BasicSettingsNavigationLink(
                 title: "Unit",
                 values: CurrencyPresentation.allCases,
-                currentValue: $state.currencyPresentation,
+                currentValue: $state.pricePresentation.currencyPresentation,
                 displayValue: { value in
                     switch value {
                     case .automatic: return "Automatic".localized
@@ -47,7 +47,7 @@ public struct SettingsSection: View {
                 }
             )
         } footer: {
-            switch state.currencyPresentation {
+            switch state.pricePresentation.currencyPresentation {
             case .automatic:
                 VStack(alignment: .leading) {
                     Text("\(state.currency.subdivision.name) is used if the price is lower than \(state.currency.formatted(1, .normal, .automatic)).")

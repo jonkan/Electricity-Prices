@@ -17,16 +17,16 @@ public struct PricePointLargeWidgetView: View {
 
     public var body: some View {
         VStack(spacing: 8) {
-            Text(entry.pricePoint.formattedPrice(.normal, entry.currencyPresentation))
+            Text(entry.formattedPrice(style: .normal))
                 .font(.title)
-            Text(entry.pricePoint.formattedTimeInterval(.normal))
+            Text(entry.formattedDateTimeInterval(style: .normal))
                 .font(.subheadline)
             PriceChartView(
                 selectedPrice: .constant(nil),
                 currentPrice: entry.pricePoint,
                 prices: entry.prices,
                 limits: entry.limits,
-                currencyPresentation: entry.currencyPresentation,
+                pricePresentation: entry.pricePresentation,
                 chartStyle: entry.chartStyle
             )
         }

@@ -37,20 +37,6 @@ public struct PricePoint: Codable, Equatable {
         self.currency = currency
     }
 
-    public func formattedPrice(
-        _ style: FormattingStyle,
-        _ currencyPresentation: CurrencyPresentation
-    ) -> String {
-        return currency.formatted(price, style, currencyPresentation)
-    }
-
-    public func formattedTimeInterval(_ style: FormattingStyle) -> String {
-        return DateIntervalFormatter.formatted(
-            from: date,
-            to: Calendar.current.date(byAdding: .hour, value: 1, to: date)!,
-            style: style
-        )
-    }
 }
 
 public extension PricePoint {

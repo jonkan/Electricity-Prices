@@ -13,6 +13,7 @@ struct StateInfoFooterView: View {
     let priceArea: PriceArea?
     let region: Region?
     let exchangeRate: ExchangeRate?
+    var hideWithoutTaxesOrFeesDisclamer: Bool = false
     
     var body: some View {
         Grid(alignment: .topLeading) {
@@ -41,7 +42,11 @@ struct StateInfoFooterView: View {
                 .gridCellUnsizedAxes([.horizontal, .vertical])
             Text("Prices are ") +
             Text("per kWh").bold() +
-            Text(", without energy taxes or fees.")
+            (
+                hideWithoutTaxesOrFeesDisclamer
+                ? Text(".")
+                : Text(", without taxes or fees.")
+            )
         }
         .font(.caption)
         .frame(maxWidth: .infinity)

@@ -16,7 +16,7 @@ public struct PriceChartView: View {
     let prices: [PricePoint]
     let priceRange: ClosedRange<Double>
     let limits: PriceLimits
-    let currencyPresentation: CurrencyPresentation
+    let pricePresentation: PricePresentation
     let chartStyle: PriceChartStyle
     let useCurrencyAxisFormat: Bool
     let isChartGestureEnabled: Bool
@@ -31,7 +31,7 @@ public struct PriceChartView: View {
         currentPrice: PricePoint,
         prices: [PricePoint],
         limits: PriceLimits,
-        currencyPresentation: CurrencyPresentation,
+        pricePresentation: PricePresentation,
         chartStyle: PriceChartStyle,
         useCurrencyAxisFormat: Bool = false,
         isChartGestureEnabled: Bool = true
@@ -41,7 +41,7 @@ public struct PriceChartView: View {
         self.prices = prices
         self.priceRange = prices.priceRange() ?? 0.0...0.0
         self.limits = limits
-        self.currencyPresentation = currencyPresentation
+        self.pricePresentation = pricePresentation
         self.chartStyle = chartStyle
         self.useCurrencyAxisFormat = useCurrencyAxisFormat
         self.isChartGestureEnabled = isChartGestureEnabled
@@ -59,7 +59,7 @@ public struct PriceChartView: View {
         .chartYAxis {
             if let axisYValues = axisYValues {
                 // TODO: Figure out how to present subdivided units (e.g. Cent)
-                if useCurrencyAxisFormat && currencyPresentation != .subdivided {
+                if useCurrencyAxisFormat && pricePresentation.currencyPresentation != .subdivided {
                     AxisMarks(
                         format: currencyAxisFormat,
                         values: axisYValues
@@ -68,7 +68,7 @@ public struct PriceChartView: View {
                     AxisMarks(values: axisYValues)
                 }
             } else {
-                if useCurrencyAxisFormat && currencyPresentation != .subdivided {
+                if useCurrencyAxisFormat && pricePresentation.currencyPresentation != .subdivided {
                     AxisMarks(format: currencyAxisFormat)
                 } else {
                     AxisMarks()
@@ -84,7 +84,7 @@ public struct PriceChartView: View {
             ForEach(prices, id: \.date) { p in
                 LineMark(
                     x: .value("", p.date),
-                    y: .value("", p.price(with: currencyPresentation))
+                    y: .value("", p.adjusted(with: pricePresentation))
                 )
             }
             .interpolationMethod(interpolated ? .monotone : .stepCenter)
@@ -103,14 +103,14 @@ public struct PriceChartView: View {
             if widgetRenderingMode == .fullColor {
                 PointMark(
                     x: .value("", displayedPrice.date),
-                    y: .value("", displayedPrice.price(with: currencyPresentation))
+                    y: .value("", displayedPrice.adjusted(with: pricePresentation))
                 )
                 .foregroundStyle(.foreground.opacity(0.6))
                 .symbolSize(300)
 
                 PointMark(
                     x: .value("", displayedPrice.date),
-                    y: .value("", displayedPrice.price(with: currencyPresentation))
+                    y: .value("", displayedPrice.adjusted(with: pricePresentation))
                 )
                 .foregroundStyle(.background)
                 .symbolSize(100)
@@ -118,7 +118,7 @@ public struct PriceChartView: View {
 
             PointMark(
                 x: .value("", displayedPrice.date),
-                y: .value("", displayedPrice.price(with: currencyPresentation))
+                y: .value("", displayedPrice.adjusted(with: pricePresentation))
             )
             .foregroundStyle(limits.color(of: displayedPrice.price))
             .symbolSize(70)
@@ -138,7 +138,7 @@ public struct PriceChartView: View {
                 ForEach(prices, id: \.date) { p in
                     BarMark(
                         x: .value("", p.date),
-                        y: .value("", p.price(with: currencyPresentation)),
+                        y: .value("", p.adjusted(with: pricePresentation)),
                         width: .fixed(barWidth)
                     )
                     .foregroundStyle(limits.color(of: p.price))
@@ -149,7 +149,7 @@ public struct PriceChartView: View {
     }
 
     var axisYValues: [Double]? {
-        if currentPrice.dayPriceRange.upperBound <= 1.5 && currencyPresentation != .subdivided {
+        if currentPrice.dayPriceRange.upperBound <= 1.5 && pricePresentation.currencyPresentation != .subdivided {
             return [0.0, 0.5, 1.0, 1.5]
         }
         return nil
@@ -231,17 +231,6 @@ public struct PriceChartView: View {
 
 }
 
-private extension PricePoint {
-    func price(with currencyPresentation: CurrencyPresentation) -> Double {
-        switch currencyPresentation {
-        case .automatic:
-            return price
-        case .subdivided:
-            return price * currency.subdivision.subdivisions
-        }
-    }
-}
-
 struct PriceChartView_Previews: PreviewProvider {
     static var previews: some View {
         List {
@@ -250,7 +239,7 @@ struct PriceChartView_Previews: PreviewProvider {
                 currentPrice: [PricePoint].mockPricesWithTomorrow[21],
                 prices: .mockPricesWithTomorrow,
                 limits: .mockLimits,
-                currencyPresentation: .automatic,
+                pricePresentation: .init(),
                 chartStyle: .lineInterpolated
             )
             .frame(minHeight: 150)

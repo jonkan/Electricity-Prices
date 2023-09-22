@@ -37,7 +37,7 @@ public struct PricePointTimelineProvider: TimelineProvider {
                 try await state.updatePricesIfNeeded()
                 let prices = await state.prices
                 let limits = await state.priceLimits
-                let currencyPresentation = await state.currencyPresentation
+                let pricePresentation = await state.pricePresentation
                 let chartStyle = await state.chartStyle
 
                 guard let price = prices.price(for: .now) else {
@@ -47,7 +47,7 @@ public struct PricePointTimelineProvider: TimelineProvider {
                     pricePoint: price,
                     prices: prices.filterInSameDayAs(price.date),
                     limits: limits,
-                    currencyPresentation: currencyPresentation,
+                    pricePresentation: pricePresentation,
                     chartStyle: chartStyle
                 )
                 Log("Provided a timeline snapshot")
@@ -68,7 +68,7 @@ public struct PricePointTimelineProvider: TimelineProvider {
                 try await state.updatePricesIfNeeded()
                 let allPrices = await state.prices
                 let limits = await state.priceLimits
-                let currencyPresentation = await state.currencyPresentation
+                let pricePresentation = await state.pricePresentation
                 let chartStyle = await state.chartStyle
 
                 var entries: [Entry] = []
@@ -90,7 +90,7 @@ public struct PricePointTimelineProvider: TimelineProvider {
                             pricePoint: price,
                             prices: pricesOfDayAndComingNight,
                             limits: limits,
-                            currencyPresentation: currencyPresentation,
+                            pricePresentation: pricePresentation,
                             chartStyle: chartStyle
                         )
                     )

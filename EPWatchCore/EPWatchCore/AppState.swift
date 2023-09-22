@@ -51,21 +51,18 @@ public class AppState: ObservableObject {
         didSet {
             guard oldValue != currency else { return }
             Log("Currency did change: \(currency.name)")
-            currencyPresentation = currency.suggestedCurrencyPresentation
+            pricePresentation.currencyPresentation = currency.suggestedCurrencyPresentation
             invalidateAndUpdatePricesSubject.send()
         }
     }
 
-    @AppStorageCodable("CurrencyPresentation", storage: .appGroup)
-    public var currencyPresentation: CurrencyPresentation = .subdivided {
+    @AppStorageCodable("PricePresentation", storage: .appGroup)
+    public var pricePresentation: PricePresentation = .init() {
         didSet {
-            guard oldValue != currencyPresentation else { return }
-            Log("Currency presentation did change: \(currencyPresentation)")
-            Task {
-                objectWillChange.send()
-                WidgetCenter.shared.reloadAllTimelines()
-                Log("Reloading all timelines")
-            }
+            guard oldValue != pricePresentation else { return }
+            Log("Price presentation did change")
+            objectWillChange.send()
+            reloadAllTimelinesSubject.send()
         }
     }
 
@@ -74,11 +71,8 @@ public class AppState: ObservableObject {
         didSet {
             guard oldValue != chartStyle else { return }
             Log("Chart presentation did change: \(chartStyle)")
-            Task {
-                objectWillChange.send()
-                WidgetCenter.shared.reloadAllTimelines()
-                Log("Reloading all timelines")
-            }
+            objectWillChange.send()
+            reloadAllTimelinesSubject.send()
         }
     }
 
@@ -109,6 +103,8 @@ public class AppState: ObservableObject {
 
     private var invalidateAndUpdatePricesSubject = PassthroughSubject<Void, Never>()
     private var invalidateAndUpdatePricesCancellable: AnyCancellable?
+    private var reloadAllTimelinesSubject = PassthroughSubject<Void, Never>()
+    private var reloadAllTimelinesCancellable: AnyCancellable?
 
     @AppStorageCodable("LastAttemptFetchingTomorrowsPrices", storage: .appGroup)
     private var lastAttemptFetchingTomorrowsPrices: Date? = nil
@@ -140,6 +136,12 @@ public class AppState: ObservableObject {
             .debounce(for: .milliseconds(250), scheduler: RunLoop.main)
             .sink { [weak self] in
                 self?.invalidateAndUpdatePrices()
+            }
+
+        reloadAllTimelinesCancellable = reloadAllTimelinesSubject
+            .debounce(for: .seconds(1), scheduler: RunLoop.main)
+            .sink { [weak self] in
+                self?.reloadAllTimelines()
             }
     }
 
@@ -182,8 +184,7 @@ public class AppState: ObservableObject {
                 userPresentableError = .unknown(error)
             }
             objectWillChange.send()
-            WidgetCenter.shared.reloadAllTimelines()
-            Log("Reloading all timelines")
+            reloadAllTimelines()
         }
     }
 
@@ -253,7 +254,8 @@ public class AppState: ObservableObject {
             prices = try await downloadPrices()
             currentPrice = prices.price(for: .now)
             Log("Success updating prices")
-            WidgetCenter.shared.reloadAllTimelines()
+            objectWillChange.send()
+            reloadAllTimelines()
         }
         defer {
             updateTask = nil
@@ -277,11 +279,11 @@ public class AppState: ObservableObject {
     }
 
     public func currentExchangeRate() async throws -> ExchangeRate {
-        if let forexRate = exchangeRate,
-           forexRate.isUpToDate,
-           forexRate.from == .EUR,
-           forexRate.to == currency {
-            return forexRate
+        if let exchangeRate = exchangeRate,
+           exchangeRate.isUpToDate,
+           exchangeRate.from == .EUR,
+           exchangeRate.to == currency {
+            return exchangeRate
         }
         Log("Downloading exchange rate")
         do {
@@ -292,6 +294,11 @@ public class AppState: ObservableObject {
         } catch {
             throw UserPresentableError.noExchangeRate(error)
         }
+    }
+
+    private func reloadAllTimelines() {
+        WidgetCenter.shared.reloadAllTimelines()
+        Log("Reloading all timelines")
     }
 
 }

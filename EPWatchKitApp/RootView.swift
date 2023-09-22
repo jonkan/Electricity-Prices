@@ -30,7 +30,7 @@ struct RootView: View {
                 currentPrice: currentPrice,
                 prices: state.prices.filterTodayAndComingNight(),
                 limits: state.priceLimits,
-                currencyPresentation: state.currencyPresentation,
+                pricePresentation: state.pricePresentation,
                 chartStyle: state.chartStyle
             )
         } else if state.isFetching {
