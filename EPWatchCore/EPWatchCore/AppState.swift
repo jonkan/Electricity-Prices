@@ -56,6 +56,9 @@ public class AppState: ObservableObject {
         }
     }
 
+    @AppStorageCodable("CurrencyPresentation", storage: .appGroup)
+    private var currencyPresentation: CurrencyPresentation = .subdivided
+
     @AppStorageCodable("PricePresentation", storage: .appGroup)
     public var pricePresentation: PricePresentation = .init() {
         didSet {
@@ -109,6 +112,9 @@ public class AppState: ObservableObject {
     @AppStorageCodable("LastAttemptFetchingTomorrowsPrices", storage: .appGroup)
     private var lastAttemptFetchingTomorrowsPrices: Date? = nil
 
+    @AppStorage("LastUpgradeCheck")
+    var lastUpgradeCheck: String = "1.0"
+
     private var updateTask: Task<Void, Error>? {
         didSet {
             objectWillChange.send()
@@ -143,6 +149,12 @@ public class AppState: ObservableObject {
             .sink { [weak self] in
                 self?.reloadAllTimelines()
             }
+
+        // Upgrade if coming from an app older than 1.10
+        if lastUpgradeCheck.compare("1.10", options: .numeric) == .orderedAscending {
+            pricePresentation.currencyPresentation = currencyPresentation
+            lastUpgradeCheck = AppInfo.version
+        }
     }
 
     private var timer: Timer?
