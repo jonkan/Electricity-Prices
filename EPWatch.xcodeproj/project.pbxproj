@@ -11,14 +11,6 @@
 		260787A028D70B8C00FF2C33 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2674BC6528D0572D00E31A20 /* SwiftUI.framework */; };
 		260787A328D70B8C00FF2C33 /* EPWatchWidgetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787A228D70B8C00FF2C33 /* EPWatchWidgetExtension.swift */; };
 		260787A928D70B8D00FF2C33 /* EPWatchWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2607879E28D70B8C00FF2C33 /* EPWatchWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		260787C728D88A3900FF2C33 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 260787C528D88A3900FF2C33 /* InfoPlist.strings */; };
-		260787CA28D88A3900FF2C33 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 260787C828D88A3900FF2C33 /* Localizable.strings */; };
-		260787D828D88FFB00FF2C33 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 260787C528D88A3900FF2C33 /* InfoPlist.strings */; };
-		260787D928D88FFB00FF2C33 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 260787C828D88A3900FF2C33 /* Localizable.strings */; };
-		260787DA28D88FFC00FF2C33 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 260787C528D88A3900FF2C33 /* InfoPlist.strings */; };
-		260787DB28D88FFC00FF2C33 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 260787C828D88A3900FF2C33 /* Localizable.strings */; };
-		260787DC28D88FFC00FF2C33 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 260787C528D88A3900FF2C33 /* InfoPlist.strings */; };
-		260787DD28D88FFC00FF2C33 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 260787C828D88A3900FF2C33 /* Localizable.strings */; };
 		2612513B29127047003D9C15 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879128D1CD91002142BF /* SettingsView.swift */; };
 		261FC1A028B77720007B4A4E /* EPWatchKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC19F28B77720007B4A4E /* EPWatchKitApp.swift */; };
 		261FC1A428B77720007B4A4E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC1A328B77720007B4A4E /* NotificationController.swift */; };
@@ -36,6 +28,14 @@
 		2696881728D477ED002142BF /* EPWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696881628D477ED002142BF /* EPWatchApp.swift */; };
 		2696883128D47C4B002142BF /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696883028D47C4B002142BF /* PriceView.swift */; };
 		2696883428D4801F002142BF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696883228D47F3B002142BF /* SettingsView.swift */; };
+		26A2C6242AC6C28000DDEBD5 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 26A2C6232AC6C28000DDEBD5 /* Localizable.xcstrings */; };
+		26A2C6252AC6C28000DDEBD5 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 26A2C6232AC6C28000DDEBD5 /* Localizable.xcstrings */; };
+		26A2C6262AC6C28000DDEBD5 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 26A2C6232AC6C28000DDEBD5 /* Localizable.xcstrings */; };
+		26A2C6272AC6C28000DDEBD5 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 26A2C6232AC6C28000DDEBD5 /* Localizable.xcstrings */; };
+		26A2C6292AC6C28100DDEBD5 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 26A2C6282AC6C28000DDEBD5 /* InfoPlist.xcstrings */; };
+		26A2C62A2AC6C28100DDEBD5 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 26A2C6282AC6C28000DDEBD5 /* InfoPlist.xcstrings */; };
+		26A2C62B2AC6C28100DDEBD5 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 26A2C6282AC6C28000DDEBD5 /* InfoPlist.xcstrings */; };
+		26A2C62C2AC6C28100DDEBD5 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 26A2C6282AC6C28000DDEBD5 /* InfoPlist.xcstrings */; };
 		26A6F68229199BE4006C3FFD /* EPWatchKitAppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2674BC6828D0572D00E31A20 /* EPWatchKitAppExtension.swift */; };
 		26AC446529112D5D00B86B1E /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AC446429112D5D00B86B1E /* CircularProgressView.swift */; };
 		26AC447229126B6400B86B1E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696881828D477ED002142BF /* RootView.swift */; };
@@ -137,9 +137,6 @@
 		260787A228D70B8C00FF2C33 /* EPWatchWidgetExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPWatchWidgetExtension.swift; sourceTree = "<group>"; };
 		260787A628D70B8D00FF2C33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		260787C428D72EA600FF2C33 /* EPWatchWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EPWatchWidgetExtension.entitlements; sourceTree = "<group>"; };
-		260787C628D88A3900FF2C33 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		260787C928D88A3900FF2C33 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
-		260787E028D8922C00FF2C33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		261FC18F28B7771F007B4A4E /* EPWatchKitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EPWatchKitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		261FC19F28B77720007B4A4E /* EPWatchKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPWatchKitApp.swift; sourceTree = "<group>"; };
 		261FC1A128B77720007B4A4E /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -169,6 +166,8 @@
 		2696882428D47888002142BF /* EPWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EPWatch.entitlements; sourceTree = "<group>"; };
 		2696883028D47C4B002142BF /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 		2696883228D47F3B002142BF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		26A2C6232AC6C28000DDEBD5 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		26A2C6282AC6C28000DDEBD5 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		26AA88752925702300BA2B02 /* EPWatchCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = EPWatchCore; sourceTree = "<group>"; };
 		26AC446429112D5D00B86B1E /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		26DF95632ABD8207001636BA /* PriceAdjustmentSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceAdjustmentSettingsView.swift; sourceTree = "<group>"; };
@@ -239,8 +238,8 @@
 		260787D728D88F5100FF2C33 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
-				260787C828D88A3900FF2C33 /* Localizable.strings */,
-				260787C528D88A3900FF2C33 /* InfoPlist.strings */,
+				26A2C6232AC6C28000DDEBD5 /* Localizable.xcstrings */,
+				26A2C6282AC6C28000DDEBD5 /* InfoPlist.xcstrings */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -566,9 +565,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				260787D928D88FFB00FF2C33 /* Localizable.strings in Resources */,
+				26A2C62A2AC6C28100DDEBD5 /* InfoPlist.xcstrings in Resources */,
 				264E989528DB2BA600E02F65 /* Assets.xcassets in Resources */,
-				260787D828D88FFB00FF2C33 /* InfoPlist.strings in Resources */,
+				26A2C6252AC6C28000DDEBD5 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,9 +575,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				260787DB28D88FFC00FF2C33 /* Localizable.strings in Resources */,
+				26A2C62B2AC6C28100DDEBD5 /* InfoPlist.xcstrings in Resources */,
 				264E989628DB2BA600E02F65 /* Assets.xcassets in Resources */,
-				260787DA28D88FFC00FF2C33 /* InfoPlist.strings in Resources */,
+				26A2C6262AC6C28000DDEBD5 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,9 +585,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				260787DD28D88FFC00FF2C33 /* Localizable.strings in Resources */,
+				26A2C62C2AC6C28100DDEBD5 /* InfoPlist.xcstrings in Resources */,
 				264E989728DB2BA600E02F65 /* Assets.xcassets in Resources */,
-				260787DC28D88FFC00FF2C33 /* InfoPlist.strings in Resources */,
+				26A2C6272AC6C28000DDEBD5 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,9 +595,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				260787CA28D88A3900FF2C33 /* Localizable.strings in Resources */,
+				26A2C6292AC6C28100DDEBD5 /* InfoPlist.xcstrings in Resources */,
 				26EC4A1428D9C52C004DD8EB /* Assets.xcassets in Resources */,
-				260787C728D88A3900FF2C33 /* InfoPlist.strings in Resources */,
+				26A2C6242AC6C28000DDEBD5 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -827,26 +826,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		260787C528D88A3900FF2C33 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				260787C628D88A3900FF2C33 /* sv */,
-				260787E028D8922C00FF2C33 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		260787C828D88A3900FF2C33 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				260787C928D88A3900FF2C33 /* sv */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		260787AB28D70B8D00FF2C33 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -957,6 +936,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1014,6 +994,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

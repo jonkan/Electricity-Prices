@@ -1,0 +1,1117 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    " * " : {
+
+    },
+    " = " : {
+
+    },
+    ", without taxes or fees." : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ", utan skatter och avgifter."
+          }
+        }
+      }
+    },
+    "." : {
+
+    },
+    "(" : {
+
+    },
+    ") * " : {
+
+    },
+    "%@" : {
+
+    },
+    "%@ %@ (%@)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@ (%3$@)"
+          }
+        }
+      }
+    },
+    "%@ is always used." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ används alltid."
+          }
+        }
+      }
+    },
+    "%@ is used if the price is lower than %@." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ används om priset är under %@."
+          }
+        }
+      }
+    },
+    "%@/kWh" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@/kWh"
+          }
+        }
+      }
+    },
+    "%lld log files" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld loggfiler"
+          }
+        }
+      }
+    },
+    "A multiplier of 1.25 increases the price by 25%." : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En multiplikator på 1,25 ökar priset med 25%."
+          }
+        }
+      }
+    },
+    "Add" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lägg till"
+          }
+        }
+      }
+    },
+    "Adjust the price to account for taxes and fees." : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Justera priset för att ta hänsyn till skatter och avgifter."
+          }
+        }
+      }
+    },
+    "Albania" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Albanien"
+          }
+        }
+      }
+    },
+    "An unknown error occurred." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ett okänt fel inträffade."
+          }
+        }
+      }
+    },
+    "Austria" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Österrike"
+          }
+        }
+      }
+    },
+    "Automatic" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatisk"
+          }
+        }
+      }
+    },
+    "Bar" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stapel"
+          }
+        }
+      }
+    },
+    "Belgium" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Belgien"
+          }
+        }
+      }
+    },
+    "Bosnia and Herzegovina" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bosnien och Hercegovina"
+          }
+        }
+      }
+    },
+    "Bulgaria" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bulgarien"
+          }
+        }
+      }
+    },
+    "Calculation" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uträkning"
+          }
+        }
+      }
+    },
+    "Chart" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Graf"
+          }
+        }
+      }
+    },
+    "Croatia" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kroatien"
+          }
+        }
+      }
+    },
+    "Currency" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valuta"
+          }
+        }
+      }
+    },
+    "Cyprus" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cypern"
+          }
+        }
+      }
+    },
+    "Czech Republic" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tjeckien"
+          }
+        }
+      }
+    },
+    "Danish krone" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dansk krona"
+          }
+        }
+      }
+    },
+    "Denmark" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Danmark"
+          }
+        }
+      }
+    },
+    "Disabled" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inaktiverad"
+          }
+        }
+      }
+    },
+    "Displays the current electricity price" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visar nuvarande elpris"
+          }
+        }
+      }
+    },
+    "Done" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klar"
+          }
+        }
+      }
+    },
+    "ECB closing price %@" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ECB stängningskurs %@"
+          }
+        }
+      }
+    },
+    "Electricity price" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elpriset"
+          }
+        }
+      }
+    },
+    "Email address copied!" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-post kopierad!"
+          }
+        }
+      }
+    },
+    "Enabled" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktiv"
+          }
+        }
+      }
+    },
+    "Enter prices in " : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ange priser i "
+          }
+        }
+      }
+    },
+    "Estonia" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estland"
+          }
+        }
+      }
+    },
+    "Euro" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euro"
+          }
+        }
+      }
+    },
+    "Exchange rate" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Växelkurs"
+          }
+        }
+      }
+    },
+    "Failed to fetch an up-to-date exchange rate." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Misslyckades att hämta aktuell växelkurs."
+          }
+        }
+      }
+    },
+    "Failed to fetch logs from the watch." : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Misslyckades att hämta loggar från klockan."
+          }
+        }
+      }
+    },
+    "Fee" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avgift"
+          }
+        }
+      }
+    },
+    "Fees" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avgifter"
+          }
+        }
+      }
+    },
+    "Fetching prices..." : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hämtar priser..."
+          }
+        }
+      }
+    },
+    "Finland" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finland"
+          }
+        }
+      }
+    },
+    "France" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frankrike"
+          }
+        }
+      }
+    },
+    "Georgia" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Georgien"
+          }
+        }
+      }
+    },
+    "Germany" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tyskland"
+          }
+        }
+      }
+    },
+    "Greece" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grekland"
+          }
+        }
+      }
+    },
+    "Hello, World!" : {
+
+    },
+    "Hungary" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ungern"
+          }
+        }
+      }
+    },
+    "Ireland" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Irland"
+          }
+        }
+      }
+    },
+    "Italy" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Italien"
+          }
+        }
+      }
+    },
+    "Kosovo" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kosovo"
+          }
+        }
+      }
+    },
+    "Krona" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krona"
+          }
+        }
+      }
+    },
+    "Krone" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krona"
+          }
+        }
+      }
+    },
+    "Kroner" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kronor"
+          }
+        }
+      }
+    },
+    "Kronor" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kronor"
+          }
+        }
+      }
+    },
+    "Latvia" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lettland"
+          }
+        }
+      }
+    },
+    "Line" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Linje"
+          }
+        }
+      }
+    },
+    "Line (interpolated)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Linje (interpolerad)"
+          }
+        }
+      }
+    },
+    "Lithuania" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lituen"
+          }
+        }
+      }
+    },
+    "Logs" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loggar"
+          }
+        }
+      }
+    },
+    "Luxembourg" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luxemburg"
+          }
+        }
+      }
+    },
+    "Malta" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Malta"
+          }
+        }
+      }
+    },
+    "Moldova" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moldavien"
+          }
+        }
+      }
+    },
+    "Montenegro" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Montenegro"
+          }
+        }
+      }
+    },
+    "Multiplier" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Multiplikator"
+          }
+        }
+      }
+    },
+    "Name" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Namn"
+          }
+        }
+      }
+    },
+    "Netherlands" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nederländerna"
+          }
+        }
+      }
+    },
+    "North Macedonia" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nordmakedonien"
+          }
+        }
+      }
+    },
+    "Norway" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Norge"
+          }
+        }
+      }
+    },
+    "Norwegian krone" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Norsk krona"
+          }
+        }
+      }
+    },
+    "per kWh" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "per kWh"
+          }
+        }
+      }
+    },
+    "Please report any issues to " : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rapportera gärna fel till "
+          }
+        }
+      }
+    },
+    "Poland" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Polen"
+          }
+        }
+      }
+    },
+    "Portugal" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Portugal"
+          }
+        }
+      }
+    },
+    "Price adjustment" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prisjustering"
+          }
+        }
+      }
+    },
+    "Price area" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elområde"
+          }
+        }
+      }
+    },
+    "Prices are " : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Priserna är "
+          }
+        }
+      }
+    },
+    "Processing logs" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Behandlar loggar"
+          }
+        }
+      }
+    },
+    "Ready" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Redo"
+          }
+        }
+      }
+    },
+    "Region" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Land"
+          }
+        }
+      }
+    },
+    "Retry" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Försök igen"
+          }
+        }
+      }
+    },
+    "Romania" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rumänien"
+          }
+        }
+      }
+    },
+    "Serbia" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Serbien"
+          }
+        }
+      }
+    },
+    "Share" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dela"
+          }
+        }
+      }
+    },
+    "Slovakia" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slovakien"
+          }
+        }
+      }
+    },
+    "Slovenia" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slovenien"
+          }
+        }
+      }
+    },
+    "Spain" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spanien"
+          }
+        }
+      }
+    },
+    "Success fetching logs from the watch." : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lyckades att hämta loggar från klockan."
+          }
+        }
+      }
+    },
+    "Support" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support"
+          }
+        }
+      }
+    },
+    "Sweden" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sverige"
+          }
+        }
+      }
+    },
+    "Swedish krona" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Svensk krona"
+          }
+        }
+      }
+    },
+    "Switzerland" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schweiz"
+          }
+        }
+      }
+    },
+    "Tap to copy the email address" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Peka för att kopiera e-postadressen"
+          }
+        }
+      }
+    },
+    "Transfering logs from the watch" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Överför loggar från klockan"
+          }
+        }
+      }
+    },
+    "Try having the watch app in the foreground." : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Försök att ha appen på klockan i förgrunden."
+          }
+        }
+      }
+    },
+    "Turkey" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turkiet"
+          }
+        }
+      }
+    },
+    "Ukraine" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ukraina"
+          }
+        }
+      }
+    },
+    "Unfortunately no data was found for the selected price area." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tyvärr hittades ingen data för det valda elområdet."
+          }
+        }
+      }
+    },
+    "Unit" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enhet"
+          }
+        }
+      }
+    },
+    "United Kingdom" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Storbritannien"
+          }
+        }
+      }
+    },
+    "Waiting for the watch to respond" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Väntar på att klockan ska svara"
+          }
+        }
+      }
+    },
+    "Waiting for the watch to send logs" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Väntar på att klockan ska skicka loggar"
+          }
+        }
+      }
+    },
+    "Widgets always show prices in %@." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widgets visar alltid priser i %@."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
