@@ -24,6 +24,18 @@
 "Unit" = "Enhet";
 "Automatic" = "Automatisk";
 
+"Price adjustment" = "Prisjustering";
+"Adjust the price to account for taxes and fees." = "Justera priset för att ta hänsyn till skatter och avgifter.";
+"Enabled" = "Aktiv";
+"Add" = "Lägg till";
+"Fee" = "Avgift";
+"Fees" = "Avgifter";
+"Name" = "Namn";
+"Enter prices in " = "Ange priser i ";
+"Multiplier" = "Multiplikator";
+"A multiplier of 1.25 increases the price by 25%." = "En multiplikator på 1,25 ökar priset med 25%.";
+"Calculation" = "Uträkning";
+
 "Euro" = "Euro";
 "Swedish krona" = "Svensk krona";
 "Krona" = "Krona";

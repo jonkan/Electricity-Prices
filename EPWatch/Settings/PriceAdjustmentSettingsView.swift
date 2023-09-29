@@ -26,6 +26,8 @@ struct PriceAdjustmentSettingsView: View {
                 Toggle(isOn: $pricePresentation.adjustment.isEnabled) {
                     Text("Enabled")
                 }
+            } footer: {
+                Text("Adjust the price to account for taxes and fees.")
             }
             if pricePresentation.adjustment.isEnabled {
                 Section {
@@ -45,16 +47,16 @@ struct PriceAdjustmentSettingsView: View {
                         Label("Add", systemImage: "plus.circle")
                     }
                 } header: {
-                    Text("Addends")
+                    Text("Fees")
                 } footer: {
-                    if pricePresentation.adjustment.addends.isEmpty {
-                        Text("Specify prices in ") +
-                        Text("\(currency.subdivision.name.localized)/kWh").bold() +
-                        Text(".")
-                    }
+                    Text("Enter prices in ") +
+                    Text("\(currency.subdivision.name.localized)/kWh").bold() +
+                    Text(".")
                 }
                 Section {
                     multiplierRow
+                } footer: {
+                    Text("A multiplier of 1.25 increases the price by 25%.")
                 }
                 Section {
                     calculationRow
@@ -77,15 +79,15 @@ struct PriceAdjustmentSettingsView: View {
         }
         return HStack {
             TextField(
-                "Addend name",
+                "Name",
                 text: addend.title,
-                prompt: Text("Addend")
+                prompt: Text("Name")
             )
             TextField(
-                "Addend",
+                "Fee",
                 value: subdividedAddend,
                 format: .number,
-                prompt: Text("Addend")
+                prompt: Text("Fee")
             )
             .keyboardType(.decimalPad)
             .multilineTextAlignment(.trailing)
@@ -144,17 +146,23 @@ struct PriceAdjustmentSettingsView: View {
 
 struct PriceAdjustmentSettingsView_Previews: PreviewProvider {
 
-    @State static var pricePresentation = PricePresentation(
-        adjustment: PriceAdjustment(isEnabled: true)
-    )
+    struct Container: View {
+        @State var pricePresentation = PricePresentation(
+            adjustment: PriceAdjustment(isEnabled: true)
+        )
 
-    static var previews: some View {
-        NavigationStack {
+        var body: some View {
             PriceAdjustmentSettingsView(
                 pricePresentation: $pricePresentation,
                 currentPrice: .mockPrice,
                 currency: .SEK
             )
+        }
+    }
+
+    static var previews: some View {
+        NavigationStack {
+            Container()
         }
     }
 }

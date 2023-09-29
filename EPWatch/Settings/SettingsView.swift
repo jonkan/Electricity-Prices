@@ -32,8 +32,6 @@ struct SettingsView: View {
                             Text(state.pricePresentation.adjustment.isEnabled ? "Enabled" : "Disabled")
                         }
                     }
-                } footer: {
-                    Text("Adjust the price to account for taxes and fees.")
                 }
             }
             Section {
