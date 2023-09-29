@@ -1,5 +1,5 @@
 //
-//  HostCommunicationManager.swift
+//  HostSyncManager.swift
 //  EPWatchKitApp
 //
 //  Created by Jonas Bromö on 2022-10-28.
@@ -8,17 +8,27 @@
 import Foundation
 import WatchConnectivity
 import EPWatchCore
+import Combine
 
-class HostCommunicationManager: NSObject, ObservableObject {
-
-    static let shared: HostCommunicationManager = .init()
+@MainActor
+class HostSyncManager: NSObject, ObservableObject {
 
     @Published var logFilesTransferProgress: Progress?
 
-    private override init() {
+    private var appState: AppState
+    private var appStateWillChangeCancellable: AnyCancellable?
+
+    init(appState: AppState) {
+        self.appState = appState
         super.init()
         WCSession.default.delegate = self
         WCSession.default.activate()
+
+        appStateWillChangeCancellable = appState.objectWillChange
+            .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
+            .sink { [weak self] _ in
+                self?.syncAppContext()
+            }
     }
 
     func sendLogs() throws -> [String] {
@@ -54,9 +64,27 @@ class HostCommunicationManager: NSObject, ObservableObject {
         return logFileURLs.map({ $0.lastPathComponent })
     }
 
+    private func syncAppContext() {
+        Task {
+            do {
+                let appStateDTO = appState.toDTO()
+                let receivedAppStateDTO = try? AppStateDTO.decode(from: WCSession.default.receivedApplicationContext)
+                if appStateDTO != receivedAppStateDTO {
+                    let context = try appStateDTO.encodeToApplicationContext()
+                    try WCSession.default.updateApplicationContext(context)
+                    Log("Success updating application context")
+                } else {
+                    Log("App state not changed since last received, skipping sync")
+                }
+            } catch {
+                LogError(error)
+            }
+        }
+    }
+
 }
 
-extension HostCommunicationManager: WCSessionDelegate {
+extension HostSyncManager: WCSessionDelegate {
     func session(
         _ session: WCSession,
         activationDidCompleteWith activationState: WCSessionActivationState,
@@ -84,6 +112,24 @@ extension HostCommunicationManager: WCSessionDelegate {
             if !transfers.isEmpty {
                 Log("Cancelling \(transfers.count) transfers")
                 transfers.forEach({ $0.cancel() })
+            }
+        }
+    }
+
+    func session(
+        _ session: WCSession,
+        didReceiveApplicationContext applicationContext: [String : Any]
+    ) {
+        Task {
+            Log("Session did receive application context")
+            do {
+                guard let appStateDTO = try AppStateDTO.decode(from: applicationContext) else {
+                    throw NSError(0, "Missing appStateDTO from applicationContext")
+                }
+                appState.update(from: appStateDTO)
+                Log("Success updating app state")
+            } catch {
+                LogError("Failed to update app state: \(error)")
             }
         }
     }

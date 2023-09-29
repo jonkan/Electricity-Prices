@@ -212,6 +212,16 @@
         }
       }
     },
+    "Changes waiting to sync..." : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ändringar väntar på att synkroniseras..."
+          }
+        }
+      }
+    },
     "Chart" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -993,12 +1003,42 @@
         }
       }
     },
+    "Sync with the watch app" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Synkronisera med appen på klockan"
+          }
+        }
+      }
+    },
+    "Syncing..." : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Synkroniserar..."
+          }
+        }
+      }
+    },
     "Tap to copy the email address" : {
       "localizations" : {
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Peka för att kopiera e-postadressen"
+          }
+        }
+      }
+    },
+    "The watch app is up-to-date." : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appen på klockan är uppdaterad."
           }
         }
       }

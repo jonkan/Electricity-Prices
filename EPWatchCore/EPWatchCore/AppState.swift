@@ -80,7 +80,7 @@ public class AppState: ObservableObject {
     }
 
     @AppStorageCodable("AllPriceLimits", storage: .appGroup)
-    private var allPriceLimits: [PriceLimits] = [
+    public var allPriceLimits: [PriceLimits] = [
         PriceLimits(.EUR, high: 0.3, low: 0.1),
         PriceLimits(.SEK, high: 3, low: 1),
         PriceLimits(.NOK, high: 3, low: 1),
@@ -113,7 +113,7 @@ public class AppState: ObservableObject {
     private var lastAttemptFetchingTomorrowsPrices: Date? = nil
 
     @AppStorage("LastUpgradeCheck")
-    var lastUpgradeCheck: String = "1.0"
+    private var lastUpgradeCheck: String = "1.0"
 
     private var updateTask: Task<Void, Error>? {
         didSet {

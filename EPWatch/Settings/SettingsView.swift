@@ -11,13 +11,20 @@ import EPWatchCore
 struct SettingsView: View {
 
     @EnvironmentObject private var state: AppState
+    @EnvironmentObject private var watchSyncManager: WatchSyncManager
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {
         List {
             SettingsSection()
-            if let currentPrice = state.currentPrice {
-                Section {
+            Section {
+                BasicSettingsNavigationLink(
+                    title: "Chart",
+                    values: PriceChartStyle.allCases,
+                    currentValue: $state.chartStyle,
+                    displayValue: { $0.title.localized }
+                )
+                if let currentPrice = state.currentPrice {
                     NavigationLink {
                         PriceAdjustmentSettingsView(
                             pricePresentation: $state.pricePresentation,
@@ -31,6 +38,28 @@ struct SettingsView: View {
                             Spacer()
                             Text(state.pricePresentation.adjustment.isEnabled ? "Enabled" : "Disabled")
                         }
+                    }
+                }
+            }
+            if watchSyncManager.isSyncSupported || isSwiftUIPreview() {
+                Section {
+                    Toggle(isOn: $watchSyncManager.isAppContextSyncEnabled) {
+                        Text("Sync with the watch app")
+                    }
+                } footer: {
+                    if watchSyncManager.hasUnsyncedAppContextChanges {
+                        if watchSyncManager.isSyncing {
+                            HStack(spacing: 8) {
+                                ProgressView()
+                                Text("Syncing...")
+                            }
+                        } else if let error = watchSyncManager.syncError {
+                            Text(error.localizedDescription)
+                        } else {
+                            Text("Changes waiting to sync...")
+                        }
+                    } else {
+                        Text("The watch app is up-to-date.")
                     }
                 }
             }
@@ -60,5 +89,6 @@ struct SettingsView_Previews: PreviewProvider {
             SettingsView()
         }
         .environmentObject(AppState.mocked)
+        .environmentObject(WatchSyncManager.mocked)
     }
 }

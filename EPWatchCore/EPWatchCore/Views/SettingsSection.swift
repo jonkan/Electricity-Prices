@@ -57,15 +57,6 @@ public struct SettingsSection: View {
                 Text("\(state.currency.subdivision.name) is always used.")
             }
         }
-
-        Section {
-            BasicSettingsNavigationLink(
-                title: "Chart",
-                values: PriceChartStyle.allCases,
-                currentValue: $state.chartStyle,
-                displayValue: { $0.title.localized }
-            )
-        }
     }
 
 }

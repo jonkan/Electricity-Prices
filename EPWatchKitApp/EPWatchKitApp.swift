@@ -12,18 +12,20 @@ import EPWatchCore
 struct EPWatchKitApp: App {
 
     @Environment(\.scenePhase) private var scenePhase
+    private let hostSyncManager: HostSyncManager
 
     init() {
 #if DEBUG
         LogDebugInformation()
 #endif
+        hostSyncManager = HostSyncManager(appState: AppState.shared)
     }
 
     @SceneBuilder var body: some Scene {
         WindowGroup {
             RootView()
                 .environmentObject(AppState.shared)
-                .environmentObject(HostCommunicationManager.shared)
+                .environmentObject(hostSyncManager)
         }
         .onChange(of: scenePhase) { phase in
             Log("Scene phase changed: \(scenePhase)")

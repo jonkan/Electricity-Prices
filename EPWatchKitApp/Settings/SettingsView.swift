@@ -15,6 +15,14 @@ struct SettingsView: View {
     var body: some View {
         ScrollView {
             SettingsSection()
+            Section {
+                BasicSettingsNavigationLink(
+                    title: "Chart",
+                    values: PriceChartStyle.allCases,
+                    currentValue: $state.chartStyle,
+                    displayValue: { $0.title.localized }
+                )
+            }
         }
     }
 
