@@ -12,21 +12,25 @@ import EPWatchCore
 struct EPWatchApp: App {
 
     @Environment(\.scenePhase) private var scenePhase
+    private let appState: AppState
     private let watchSyncManager: WatchSyncManager
+    private let shareLogsState: ShareLogsState
 
     init() {
 #if DEBUG
         LogDebugInformation()
 #endif
-        watchSyncManager = WatchSyncManager(appState: AppState.shared)
+        appState = .shared
+        watchSyncManager = WatchSyncManager(appState: appState)
+        shareLogsState = ShareLogsState(watchSyncManager: watchSyncManager)
     }
 
     var body: some Scene {
         WindowGroup {
             RootView()
-                .environmentObject(AppState.shared)
-                .environmentObject(ShareLogsState.shared)
+                .environmentObject(appState)
                 .environmentObject(watchSyncManager)
+                .environmentObject(shareLogsState)
         }
         .onChange(of: scenePhase) { phase in
             Log("Scene phase changed: \(scenePhase)")

@@ -53,7 +53,7 @@ struct SupportSettingsView: View {
                     }
                 } icon: {
                     Group {
-                        if case .waitingForWatchToSendLogs(let count) = shareLogsState.state,
+                        if case .waitingForWatchToSendLogs(let count) = shareLogsState.syncState,
                            let total = count.total {
                             CircularProgressView(
                                 progress: Double(count.received) / Double(total)

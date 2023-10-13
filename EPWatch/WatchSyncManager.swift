@@ -15,9 +15,23 @@ import SwiftUI
 @MainActor
 class WatchSyncManager: NSObject, ObservableObject {
 
-    enum SyncState {
+    struct LogCount: Equatable {
+        var total: Int?
+        var received: Int
+
+        var description: String {
+            if let total = total {
+                return "\(received)/\(total)"
+            } else {
+                return "\(received)/nil"
+            }
+        }
+    }
+
+    enum SyncState: Equatable {
         case notReady
         case ready
+        case waitingForWatchToSendLogs(count: LogCount)
 
         var localizedDescription: String {
             description.localized
@@ -29,6 +43,12 @@ class WatchSyncManager: NSObject, ObservableObject {
                 "Not ready"
             case .ready:
                 "Ready"
+            case .waitingForWatchToSendLogs(let count):
+                if count.total != nil || count.received > 0 {
+                    "Transfering logs from the watch"
+                } else {
+                    "Waiting for the watch to send logs"
+                }
             }
         }
     }
@@ -39,7 +59,9 @@ class WatchSyncManager: NSObject, ObservableObject {
         case watchAppNotInstalled
         case watchNotReachable
         case watchActivationFailed
-        case other(_ errorMessage: String)
+        case timeoutWaitingForMessageReply
+        case timeoutWaitingForWatchFileTransfers(_ message: String)
+        case other(_ error: String)
 
         var localizedDescription: String {
             description.localized
@@ -57,8 +79,12 @@ class WatchSyncManager: NSObject, ObservableObject {
                 "Watch not reachable"
             case .watchActivationFailed:
                 "Watch not reacable (unknown)"
-            case .other(let errorMessage):
-                errorMessage
+            case .timeoutWaitingForMessageReply:
+                "Timeout waiting for message reply"
+            case .timeoutWaitingForWatchFileTransfers(let message):
+                "Timeout waiting for watch file transfers \(message)"
+            case .other(let error):
+                error
             }
         }
     }
@@ -80,7 +106,7 @@ class WatchSyncManager: NSObject, ObservableObject {
 
     @Published var syncState: SyncState = .notReady {
         didSet {
-            Log("State did change: \(syncState)")
+            Log("Did change: \(syncState)")
         }
     }
     @Published var syncError: Error? {
@@ -95,11 +121,12 @@ class WatchSyncManager: NSObject, ObservableObject {
     private var appStateWillChangeCancellable: AnyCancellable?
 
     private var activationContinuation: CheckedContinuation<Void, Error>?
+    private var fetchWatchLogsContinuation: CheckedContinuation<Void, Error>?
     private let timeoutHandler = TimeoutHandler()
 
     private enum SyncTask {
         case syncAppContext
-        case fetchWatchLogs
+        case fetchWatchLogs(_ continuation: CheckedContinuation<Void, Error>)
     }
     private var syncTaskChannel = AsyncChannel<SyncTask>()
 
@@ -131,6 +158,14 @@ class WatchSyncManager: NSObject, ObservableObject {
         }
     }
 
+    func fetchWatchLogs() async throws {
+        try await withCheckedThrowingContinuation { continuation in
+            Task {
+                await syncTaskChannel.send(.fetchWatchLogs(continuation))
+            }
+        }
+    }
+
     private func queueSyncTask(_ task: SyncTask) {
         Task {
             await syncTaskChannel.send(task)
@@ -147,9 +182,9 @@ class WatchSyncManager: NSObject, ObservableObject {
                     case .syncAppContext:
                         try await activate()
                         try await syncAppContext()
-                    case .fetchWatchLogs:
+                    case let .fetchWatchLogs(continuation):
                         try await activate()
-                        // TODO: fetch logs
+                        try await fetchWatchLogs(continuation)
                     }
                     syncError = nil
                 } catch {
@@ -190,7 +225,9 @@ class WatchSyncManager: NSObject, ObservableObject {
                 syncState = .notReady
                 activationContinuation?.resume(throwing: error)
             } else {
-                syncState = .ready
+                if syncState == .notReady {
+                    syncState = .ready
+                }
                 activationContinuation?.resume()
             }
             activationContinuation = nil
@@ -215,6 +252,62 @@ class WatchSyncManager: NSObject, ObservableObject {
             Log("App state not changed since last received, skipping sync")
         }
         hasUnsyncedAppContextChanges = false
+    }
+
+    private func fetchWatchLogs(_ continuation: CheckedContinuation<Void, Error>) async throws {
+        guard fetchWatchLogsContinuation == nil else {
+            throw SyncError.other("Fetch watch logs already in progress")
+        }
+        fetchWatchLogsContinuation = continuation
+
+        guard syncState == .ready else {
+            resumeFetchWatchLogs(
+                throwing: .other("Unable to fetch logs from watch, state not ready")
+            )
+            return
+        }
+        guard WCSession.default.isReachable else {
+            resumeFetchWatchLogs(throwing: .watchNotReachable)
+            return
+        }
+        syncState = .waitingForWatchToSendLogs(count: .init(total: nil, received: 0))
+        timeoutHandler.set(timeout: .seconds(5)) {
+            self.resumeFetchWatchLogs(throwing: .timeoutWaitingForMessageReply)
+        }
+
+        WCSession.default.sendMessage(["sendLogs": true]) { reply in
+            Task {
+                Log("Did receive message reply \(reply)")
+                guard case .waitingForWatchToSendLogs(var count) = self.syncState else {
+                    Log("State not .waitingForWatchToSendLogs")
+                    return
+                }
+                guard let logs = reply["logs"] as? [String] else {
+                    LogError("Unexpected reply")
+                    self.timeoutHandler.fireNow()
+                    return
+                }
+                count.total = logs.count
+                Log("Watch will send \(logs.count) logs (\(count.received) already received)")
+                self.syncState = .waitingForWatchToSendLogs(count: count)
+                self.timeoutHandler.set(timeout: .seconds(10)) {
+                    self.resumeFetchWatchLogs(throwing: .timeoutWaitingForWatchFileTransfers(count.description))
+                }
+            }
+        }
+    }
+
+    private func resumeFetchWatchLogs(throwing error: SyncError? = nil) {
+        Task {
+            if let error = error {
+                syncState = .notReady
+                fetchWatchLogsContinuation?.resume(throwing: error)
+            } else {
+                syncState = .ready
+                fetchWatchLogsContinuation?.resume()
+            }
+            fetchWatchLogsContinuation = nil
+        }
     }
 
 }
@@ -270,6 +363,35 @@ extension WatchSyncManager: WCSessionDelegate {
                 Log("Success updating app state")
             } catch {
                 LogError("Failed to update app state: \(error)")
+            }
+        }
+    }
+
+    func session(_ session: WCSession, didReceive file: WCSessionFile) {
+        // The file needs to be copied synchronously, otherwise it might already be deleted.
+        Log("Did receive file: \(file.fileURL.lastPathComponent)")
+        do {
+            let destinationURL = ShareLogsState.logsTempDirectoryURL
+                .appending(path: file.fileURL.lastPathComponent)
+            try FileManager.default.copyItem(at: file.fileURL, to: destinationURL)
+        } catch {
+            LogError(error)
+        }
+        Task {
+            guard case .waitingForWatchToSendLogs(var count) = syncState else {
+                LogError("Unexpected state not .waitingForWatchToSendLogs")
+                return
+            }
+            timeoutHandler.cancel()
+
+            count.received = count.received + 1
+            if let total = count.total, total <= count.received {
+                resumeFetchWatchLogs()
+            } else {
+                syncState = .waitingForWatchToSendLogs(count: count)
+                timeoutHandler.set(timeout: .seconds(10)) {
+                    self.resumeFetchWatchLogs(throwing: .timeoutWaitingForWatchFileTransfers(count.description))
+                }
             }
         }
     }
