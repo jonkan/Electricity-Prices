@@ -43,6 +43,7 @@ public extension PricePoint {
     static let mockPrice: PricePoint = [PricePoint].mockPrices[10]
     static let mockPrice2: PricePoint = [PricePoint].mockPrices[12]
     static let mockPrice3: PricePoint = [PricePoint].mockPrices[14]
+    static let mockPrice4Negative: PricePoint = [PricePoint].mockPricesLow.last!
 }
 
 public extension Array where Element == PricePoint {

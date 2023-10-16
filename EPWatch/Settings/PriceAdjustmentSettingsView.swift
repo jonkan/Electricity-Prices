@@ -30,44 +30,37 @@ struct PriceAdjustmentSettingsView: View {
                 Text("Adjust the price to account for taxes and fees.")
             }
             if pricePresentation.adjustment.isEnabled {
-                Section {
-                    ForEach($pricePresentation.adjustment.addends) { addend in
-                        addendRow(addend, currencySubdivisions: currency.subdivision.subdivisions)
-                    }
-                    .onDelete(perform: { indexSet in
-                        withAnimation {
-                            pricePresentation.adjustment.addends.remove(atOffsets: indexSet)
-                        }
-                    })
-                    Button {
-                        withAnimation {
-                            pricePresentation.adjustment.addAddend()
-                        }
-                    } label: {
-                        Label("Add", systemImage: "plus.circle")
-                    }
-                } header: {
-                    Text("Fees")
-                } footer: {
-                    Text("Enter prices in ") +
-                    Text("\(currency.subdivision.name.localized)/kWh").bold() +
-                    Text(".")
-                }
-                Section {
-                    multiplierRow
-                } footer: {
-                    Text("A multiplier of 1.25 increases the price by 25%.")
-                }
-                Section {
-                    calculationRow
-                } header: {
-                    Text("Calculation")
-                } footer: {
-                    Text("Prices are ") +
-                    Text("per kWh").bold() +
-                    Text(".")
-                }
+                feesSection
+                multiplierSection
+                clampNegativePricesToZeroSection
+                calculationSection
             }
+        }
+    }
+
+    var feesSection: some View {
+        Section {
+            ForEach($pricePresentation.adjustment.addends) { addend in
+                addendRow(addend, currencySubdivisions: currency.subdivision.subdivisions)
+            }
+            .onDelete(perform: { indexSet in
+                withAnimation {
+                    pricePresentation.adjustment.addends.remove(atOffsets: indexSet)
+                }
+            })
+            Button {
+                withAnimation {
+                    pricePresentation.adjustment.addAddend()
+                }
+            } label: {
+                Label("Add", systemImage: "plus.circle")
+            }
+        } header: {
+            Text("Fees")
+        } footer: {
+            Text("Enter prices in ") +
+            Text("\(currency.subdivision.name.localized)/kWh").bold() +
+            Text(".")
         }
     }
 
@@ -94,18 +87,43 @@ struct PriceAdjustmentSettingsView: View {
         }
     }
 
-    var multiplierRow: some View {
-        HStack {
-            Text("Multiplier")
-            TextField(
-                "Multiplier",
-                value: $pricePresentation.adjustment.multiplier,
-                formatter: Self.multiplierFormatter,
-                prompt: Text("Multiplier")
-            )
-            .keyboardType(.decimalPad)
-            .multilineTextAlignment(.trailing)
+    var multiplierSection: some View {
+        Section {
+            HStack {
+                Text("Multiplier")
+                TextField(
+                    "Multiplier",
+                    value: $pricePresentation.adjustment.multiplier,
+                    formatter: Self.multiplierFormatter,
+                    prompt: Text("Multiplier")
+                )
+                .keyboardType(.decimalPad)
+                .multilineTextAlignment(.trailing)
+            }
+        } footer: {
+            Text("A multiplier of 1.25 increases the price by 25%.")
+        }
+    }
 
+    var clampNegativePricesToZeroSection: some View {
+        Section {
+            Toggle(isOn: $pricePresentation.adjustment.clampNegativePricesToZero) {
+                Text("Clamp negative prices")
+            }
+        } footer: {
+            Text("Negative prices will be clamped to zero.")
+        }
+    }
+
+    var calculationSection: some View {
+        Section {
+            calculationRow
+        } header: {
+            Text("Calculation")
+        } footer: {
+            Text("Prices are ") +
+            Text("per kWh").bold() +
+            Text(".")
         }
     }
 
@@ -116,7 +134,10 @@ struct PriceAdjustmentSettingsView: View {
         )
 
         // The current price
-        let formattedCurrentPrice = unadjustedPresentation.formattedPrice(currentPrice, style: .normal)
+        var formattedCurrentPrice = unadjustedPresentation.formattedPrice(currentPrice, style: .normal)
+        if pricePresentation.adjustment.clampNegativePricesToZero {
+            formattedCurrentPrice = "max(0, \(formattedCurrentPrice))"
+        }
 
         // Addends
         let formattedAddends = pricePresentation.adjustment.addends.map { addend in
@@ -154,7 +175,7 @@ struct PriceAdjustmentSettingsView_Previews: PreviewProvider {
         var body: some View {
             PriceAdjustmentSettingsView(
                 pricePresentation: $pricePresentation,
-                currentPrice: .mockPrice,
+                currentPrice: .mockPrice4Negative,
                 currency: .SEK
             )
         }

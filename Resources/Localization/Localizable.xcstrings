@@ -233,6 +233,16 @@
         }
       }
     },
+    "Clamp negative prices" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Begränsa negativa priser"
+          }
+        }
+      }
+    },
     "Croatia" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -722,6 +732,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Namn"
+          }
+        }
+      }
+    },
+    "Negative prices will be clamped to zero." : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Negativa priser ersätts med noll."
           }
         }
       }
