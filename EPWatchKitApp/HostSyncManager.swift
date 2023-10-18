@@ -17,6 +17,7 @@ class HostSyncManager: NSObject, ObservableObject {
 
     private var appState: AppState
     private var appStateWillChangeCancellable: AnyCancellable?
+    private var lastReceivedAppStateDTO: AppStateDTO?
 
     init(appState: AppState) {
         self.appState = appState
@@ -68,10 +69,10 @@ class HostSyncManager: NSObject, ObservableObject {
         Task {
             do {
                 let appStateDTO = appState.toDTO()
-                let receivedAppStateDTO = try? AppStateDTO.decode(from: WCSession.default.receivedApplicationContext)
-                if appStateDTO != receivedAppStateDTO {
+                if appStateDTO != lastReceivedAppStateDTO {
                     let context = try appStateDTO.encodeToApplicationContext()
                     try WCSession.default.updateApplicationContext(context)
+                    lastReceivedAppStateDTO = nil
                     Log("Success updating application context")
                 } else {
                     Log("App state not changed since last received, skipping sync")
@@ -126,6 +127,7 @@ extension HostSyncManager: WCSessionDelegate {
                 guard let appStateDTO = try AppStateDTO.decode(from: applicationContext) else {
                     throw NSError(0, "Missing appStateDTO from applicationContext")
                 }
+                lastReceivedAppStateDTO = appStateDTO
                 appState.update(from: appStateDTO)
                 Log("Success updating app state")
             } catch {

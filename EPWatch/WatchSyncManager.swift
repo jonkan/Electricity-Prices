@@ -119,6 +119,7 @@ class WatchSyncManager: NSObject, ObservableObject {
 
     private var appState: AppState
     private var appStateWillChangeCancellable: AnyCancellable?
+    private var lastReceivedAppStateDTO: AppStateDTO?
 
     private var activationContinuation: CheckedContinuation<Void, Error>?
     private var fetchWatchLogsContinuation: CheckedContinuation<Void, Error>?
@@ -243,10 +244,10 @@ class WatchSyncManager: NSObject, ObservableObject {
             return
         }
         let appStateDTO = appState.toDTO()
-        let receivedAppStateDTO = try? AppStateDTO.decode(from: WCSession.default.receivedApplicationContext)
-        if appStateDTO != receivedAppStateDTO {
+        if appStateDTO != lastReceivedAppStateDTO {
             let context = try appStateDTO.encodeToApplicationContext()
             try WCSession.default.updateApplicationContext(context)
+            lastReceivedAppStateDTO = nil
             Log("Success updating application context")
         } else {
             Log("App state not changed since last received, skipping sync")
@@ -359,6 +360,7 @@ extension WatchSyncManager: WCSessionDelegate {
                 guard let appStateDTO = try AppStateDTO.decode(from: applicationContext) else {
                     throw NSError(0, "Missing appStateDTO from applicationContext")
                 }
+                lastReceivedAppStateDTO = appStateDTO
                 appState.update(from: appStateDTO)
                 Log("Success updating app state")
             } catch {
