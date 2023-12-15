@@ -60,3 +60,11 @@ extension PricePoint {
         }
     }
 }
+
+extension ClosedRange where Bound == Double {
+    func adjusted(with pricePresentation: PricePresentation) -> Self {
+        let adjustedLowerBound = pricePresentation.adjustment.adjustedPrice(lowerBound)
+        let adjustedUpperBound = pricePresentation.adjustment.adjustedPrice(upperBound)
+        return adjustedLowerBound...adjustedUpperBound
+    }
+}

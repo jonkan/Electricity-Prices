@@ -149,14 +149,16 @@ public struct PriceChartView: View {
     }
 
     var axisYValues: [Double]? {
-        if currentPrice.dayPriceRange.upperBound <= 1.5 && pricePresentation.currencyPresentation != .subdivided {
+        let adjustedDayPriceRange = currentPrice.dayPriceRange.adjusted(with: pricePresentation)
+        if adjustedDayPriceRange.upperBound <= 1.5 && pricePresentation.currencyPresentation != .subdivided {
             return [0.0, 0.5, 1.0, 1.5]
         }
         return nil
     }
 
     var currencyAxisFormat: FloatingPointFormatStyle<Double>.Currency {
-        if currentPrice.dayPriceRange.upperBound <= 10 {
+        let adjustedDayPriceRange = currentPrice.dayPriceRange.adjusted(with: pricePresentation)
+        if adjustedDayPriceRange.upperBound <= 10 {
             return .currency(code: currentPrice.currency.code).precision(.fractionLength(1))
         }
         return .currency(code: currentPrice.currency.code).precision(.significantDigits(2))
