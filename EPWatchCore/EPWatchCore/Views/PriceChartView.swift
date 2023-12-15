@@ -76,7 +76,6 @@ public struct PriceChartView: View {
             }
         }
         .chartOverlay(content: chartGestureOverlay)
-        .padding(.top, widgetRenderingMode != .fullColor ? 5 : 0)
     }
 
     func lineChart(interpolated: Bool) -> some View {
