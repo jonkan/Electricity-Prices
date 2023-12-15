@@ -31,9 +31,10 @@ struct EPWatchKitAppExtension: Widget {
     }
 }
 
-struct EPWatchKitAppExtension_Previews: PreviewProvider {
-    static var previews: some View {
-        WidgetView(entry: .mock3)            
-            .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-    }
+#Preview(as: .accessoryRectangular) {
+    EPWatchKitAppExtension()
+} timeline: {
+    PricePointTimelineEntry.mock
+    PricePointTimelineEntry.mock2
+    PricePointTimelineEntry.mock3
 }

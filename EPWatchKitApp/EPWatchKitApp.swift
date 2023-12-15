@@ -27,9 +27,9 @@ struct EPWatchKitApp: App {
                 .environmentObject(AppState.shared)
                 .environmentObject(hostSyncManager)
         }
-        .onChange(of: scenePhase) { phase in
+        .onChange(of: scenePhase) {
             Log("Scene phase changed: \(scenePhase)")
-            AppState.shared.isTimerRunning = (phase == .active)
+            AppState.shared.isTimerRunning = (scenePhase == .active)
         }
 
         WKNotificationScene(

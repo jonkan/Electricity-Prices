@@ -32,9 +32,9 @@ struct EPWatchApp: App {
                 .environmentObject(watchSyncManager)
                 .environmentObject(shareLogsState)
         }
-        .onChange(of: scenePhase) { phase in
+        .onChange(of: scenePhase) {
             Log("Scene phase changed: \(scenePhase)")
-            AppState.shared.isTimerRunning = (phase == .active) 
+            AppState.shared.isTimerRunning = (scenePhase == .active)
         }
     }
 }
