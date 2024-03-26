@@ -94,12 +94,14 @@ struct RootView: View {
 
 }
 
-struct RootView_Previews: PreviewProvider {
-    static var previews: some View {
-        RootView()
-            .environmentObject(AppState.mocked)
-        RootView()
-            .environmentObject(AppState.mockedWithError)
-            .previewDisplayName("Error")
-    }
+#Preview {
+    RootView()
+        .environmentObject(AppState.mocked)
+        .environmentObject(WatchSyncManager.mocked)
+}
+
+#Preview("Error") {
+    RootView()
+        .environmentObject(AppState.mockedWithError)
+        .environmentObject(WatchSyncManager.mocked)
 }

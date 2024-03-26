@@ -125,7 +125,9 @@ public class AppState: ObservableObject {
         Log("App version: \(AppInfo.version) (\(AppInfo.build)), \(AppInfo.commit)")
         Log("System version: \(AppInfo.systemVersion)")
 
-        updatePricesIfNeeded()
+        if !isSwiftUIPreview() {
+            updatePricesIfNeeded()
+        }
 
         if region == nil {
             let currentRegionId = Locale.current.region?.identifier
