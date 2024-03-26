@@ -33,7 +33,7 @@ public struct PricePointTimelineProvider: TimelineProvider {
     public func getSnapshot(in context: Context, completion: @escaping (Entry) -> ()) {
         Task {
             do {
-                let state = AppState.shared
+                let state = await AppState.shared
                 try await state.updatePricesIfNeeded()
                 let prices = await state.prices
                 let limits = await state.priceLimits
@@ -64,7 +64,7 @@ public struct PricePointTimelineProvider: TimelineProvider {
         Log("Get timeline started")
         Task {
             do {
-                let state = AppState.shared
+                let state = await AppState.shared
                 try await state.updatePricesIfNeeded()
                 let allPrices = await state.prices
                 let limits = await state.priceLimits
