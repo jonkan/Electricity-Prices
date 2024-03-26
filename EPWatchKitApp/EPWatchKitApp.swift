@@ -31,10 +31,6 @@ struct EPWatchKitApp: App {
             Log("Scene phase changed: \(scenePhase)")
             AppState.shared.isTimerRunning = (scenePhase == .active)
         }
-
-        WKNotificationScene(
-            controller: NotificationController.self,
-            category: "myCategory"
-        )
     }
+
 }

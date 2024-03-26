@@ -582,9 +582,6 @@
         }
       }
     },
-    "Hello, World!" : {
-
-    },
     "Hungary" : {
       "extractionState" : "manual",
       "localizations" : {

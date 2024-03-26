@@ -14,8 +14,6 @@
 		26089CD22BD9A1D4008764A4 /* LogFileURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26089CD12BD9A1D4008764A4 /* LogFileURL.swift */; };
 		2612513B29127047003D9C15 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879128D1CD91002142BF /* SettingsView.swift */; };
 		261FC1A028B77720007B4A4E /* EPWatchKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC19F28B77720007B4A4E /* EPWatchKitApp.swift */; };
-		261FC1A428B77720007B4A4E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC1A328B77720007B4A4E /* NotificationController.swift */; };
-		261FC1A628B77720007B4A4E /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC1A528B77720007B4A4E /* NotificationView.swift */; };
 		264E989528DB2BA600E02F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2696881A28D477EE002142BF /* Assets.xcassets */; };
 		264E989628DB2BA600E02F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2696881A28D477EE002142BF /* Assets.xcassets */; };
 		264E989728DB2BA600E02F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2696881A28D477EE002142BF /* Assets.xcassets */; };
@@ -145,10 +143,7 @@
 		261FC18F28B7771F007B4A4E /* EPWatchKitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EPWatchKitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		261FC19F28B77720007B4A4E /* EPWatchKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPWatchKitApp.swift; sourceTree = "<group>"; };
 		261FC1A128B77720007B4A4E /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		261FC1A328B77720007B4A4E /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		261FC1A528B77720007B4A4E /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		261FC1AC28B77721007B4A4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		261FC1AF28B77721007B4A4E /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		265733302907291700CE9A4C /* StateInfoFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateInfoFooterView.swift; sourceTree = "<group>"; };
 		2674BC6228D0572D00E31A20 /* EPWatchKitAppExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EPWatchKitAppExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2674BC6328D0572D00E31A20 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -282,7 +277,6 @@
 			children = (
 				261FC19F28B77720007B4A4E /* EPWatchKitApp.swift */,
 				26F28FDE2910781F00D42DFB /* HostSyncManager.swift */,
-				2674BC4428CF7CF900E31A20 /* Notifications */,
 				261FC1AB28B77721007B4A4E /* Preview Content */,
 				2696878F28D10112002142BF /* PriceView.swift */,
 				269687AA28D46FD7002142BF /* Resources */,
@@ -298,16 +292,6 @@
 				261FC1AC28B77721007B4A4E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		2674BC4428CF7CF900E31A20 /* Notifications */ = {
-			isa = PBXGroup;
-			children = (
-				261FC1A328B77720007B4A4E /* NotificationController.swift */,
-				261FC1A528B77720007B4A4E /* NotificationView.swift */,
-				261FC1AF28B77721007B4A4E /* PushNotificationPayload.apns */,
-			);
-			path = Notifications;
 			sourceTree = "<group>";
 		};
 		2674BC6728D0572D00E31A20 /* EPWatchKitAppExtension */ = {
@@ -786,9 +770,7 @@
 				26AC447329126EFD00B86B1E /* RootView.swift in Sources */,
 				2612513B29127047003D9C15 /* SettingsView.swift in Sources */,
 				26F28FDF2910782000D42DFB /* HostSyncManager.swift in Sources */,
-				261FC1A428B77720007B4A4E /* NotificationController.swift in Sources */,
 				261FC1A028B77720007B4A4E /* EPWatchKitApp.swift in Sources */,
-				261FC1A628B77720007B4A4E /* NotificationView.swift in Sources */,
 				2696879028D10112002142BF /* PriceView.swift in Sources */,
 				2696879A28D26CD0002142BF /* PriceAreaSettingsView.swift in Sources */,
 			);
