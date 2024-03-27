@@ -24,46 +24,66 @@ public enum Currency: String, Codable, CaseIterable, Identifiable, Equatable {
 
     public var name: String {
         switch self {
-        case .EUR: return "Euro"
-        case .SEK: return "Swedish krona"
-        case .NOK: return "Norwegian krone"
-        case .DKK: return "Danish krone"
+        case .EUR: return String(localized: "Euro", bundle: .module, comment: "Currency name")
+        case .SEK: return String(localized: "Swedish krona", bundle: .module, comment: "Currency name")
+        case .NOK: return String(localized: "Norwegian krone", bundle: .module, comment: "Currency name")
+        case .DKK: return String(localized: "Danish krone", bundle: .module, comment: "Currency name")
         }
     }
 
     public var shortName: String {
         switch self {
-        case .EUR: return "Euro"
-        case .SEK: return "Krona"
-        case .NOK: return "Krone"
-        case .DKK: return "Krone"
+        case .EUR: return String(localized: "Euro", bundle: .module, comment: "Currency name short")
+        case .SEK: return String(localized: "Krona", bundle: .module, comment: "Currency name short")
+        case .NOK: return String(localized: "Krone", bundle: .module, comment: "Currency name short")
+        case .DKK: return String(localized: "Krone", bundle: .module, comment: "Currency name short")
         }
     }
 
     public var shortNamePlural: String {
         switch self {
-        case .EUR: return "Euro"
-        case .SEK: return "Kronor"
-        case .NOK: return "Kroner"
-        case .DKK: return "Kroner"
+        case .EUR: return String(localized: "Euro", bundle: .module, comment: "Currency name short plural")
+        case .SEK: return String(localized: "Kronor", bundle: .module, comment: "Currency name short plural")
+        case .NOK: return String(localized: "Kroner", bundle: .module, comment: "Currency name short plural")
+        case .DKK: return String(localized: "Kroner", bundle: .module, comment: "Currency name short plural")
         }
     }
 
     public var symbol: String {
         switch self {
-        case .EUR: return "€"
-        case .SEK: return "kr"
-        case .NOK: return "kr"
-        case .DKK: return "kr"
+        case .EUR: return String(localized: "€", bundle: .module, comment: "Currency symbol")
+        case .SEK: return String(localized: "kr", bundle: .module, comment: "Currency symbol")
+        case .NOK: return String(localized: "kr", bundle: .module, comment: "Currency symbol")
+        case .DKK: return String(localized: "kr", bundle: .module, comment: "Currency symbol")
         }
     }
 
     public var subdivision: CurrencySubdivision {
         switch self {
-        case .EUR: return CurrencySubdivision(name: "Cent", symbol: "c", subdivisions: 100)
-        case .SEK: return CurrencySubdivision(name: "Öre", symbol: "öre", subdivisions: 100)
-        case .NOK: return CurrencySubdivision(name: "Øre", symbol: "øre", subdivisions: 100)
-        case .DKK: return CurrencySubdivision(name: "Øre", symbol: "øre", subdivisions: 100)
+        case .EUR:
+            return CurrencySubdivision(
+                name: String(localized: "Cent", bundle: .module, comment: "Currency subdivision name"),
+                symbol: String(localized: "c", bundle: .module, comment: "Currency subdivision symbol"),
+                subdivisions: 100
+            )
+        case .SEK:
+            return CurrencySubdivision(
+                name: String(localized: "Öre", bundle: .module, comment: "Currency subdivision name"),
+                symbol: String(localized: "öre", bundle: .module, comment: "Currency subdivision symbol"),
+                subdivisions: 100
+            )
+        case .NOK: 
+            return CurrencySubdivision(
+                name: String(localized: "Øre", bundle: .module, comment: "Currency subdivision name"),
+                symbol: String(localized:"øre", comment: "Currency subdivision symbol"),
+                subdivisions: 100
+        )
+        case .DKK:
+            return CurrencySubdivision(
+                name: String(localized: "Øre", bundle: .module, comment: "Currency subdivision name"),
+                symbol: String(localized: "øre", bundle: .module, comment: "Currency subdivision symbol"),
+                subdivisions: 100
+            )
         }
     }
 

@@ -48,10 +48,10 @@ public struct BasicSettingsNavigationLink<SettingsValue: Identifiable & Equatabl
                 currentValue: $currentValue,
                 displayValue: displayValue
             )
-            .navigationTitle(title.localized)
+            .navigationTitle(title)
         } label: {
             HStack {
-                Text(title.localized)
+                Text(title)
                 Spacer()
                 Text(currentValue != nil ? displayValue(currentValue!) : "")
             }

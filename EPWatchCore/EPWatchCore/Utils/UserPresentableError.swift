@@ -13,17 +13,17 @@ public enum UserPresentableError: Error {
     case unknown(_ error: Error)
 
     public var localizedDescription: String {
-        return description.localized
+        return description
     }
 
     private var description: String {
         switch self {
         case .noData:
-            return "Unfortunately no data was found for the selected price area."
+            return String(localized: "Unfortunately no data was found for the selected price area.", bundle: .module)
         case .noExchangeRate:
-            return "Failed to fetch an up-to-date exchange rate."
+            return String(localized: "Failed to fetch an up-to-date exchange rate.", bundle: .module)
         case .unknown:
-            return "An unknown error occurred."
+            return String(localized: "An unknown error occurred.", bundle: .module)
         }
     }
 

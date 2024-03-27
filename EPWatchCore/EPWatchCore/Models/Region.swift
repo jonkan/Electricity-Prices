@@ -76,46 +76,46 @@ public enum Region: String, Codable, CaseIterable, Identifiable, Equatable {
 
     public var name: String {
         switch self {
-        case .albania:          return "Albania"
-        case .austria:          return "Austria"
-        case .belgium:          return "Belgium"
-        case .bosnia:           return "Bosnia and Herzegovina"
-        case .bulgaria:         return "Bulgaria"
-        case .croatia:          return "Croatia"
-        case .cyprus:           return "Cyprus"
-        case .czech:            return "Czech Republic"
-        case .denmark:          return "Denmark"
-        case .estonia:          return "Estonia"
-        case .finland:          return "Finland"
-        case .france:           return "France"
-        case .georgia:          return "Georgia"
-        case .germany:          return "Germany"
-        case .greece:           return "Greece"
-        case .hungary:          return "Hungary"
-        case .ireland:          return "Ireland"
-        case .italy:            return "Italy"
-        case .kosovo:           return "Kosovo"
-        case .latvia:           return "Latvia"
-        case .lithuania:        return "Lithuania"
-        case .luxembourg:       return "Luxembourg"
-        case .malta:            return "Malta"
-        case .moldova:          return "Moldova"
-        case .montenegro:       return "Montenegro"
-        case .netherlands:      return "Netherlands"
-        case .northMacedonia:   return "North Macedonia"
-        case .norway:           return "Norway"
-        case .poland:           return "Poland"
-        case .portugal:         return "Portugal"
-        case .romania:          return "Romania"
-        case .serbia:           return "Serbia"
-        case .slovakia:         return "Slovakia"
-        case .slovenia:         return "Slovenia"
-        case .spain:            return "Spain"
-        case .sweden:           return "Sweden"
-        case .switzerland:      return "Switzerland"
-        case .turkey:           return "Turkey"
-        case .ukraine:          return "Ukraine"
-        case .unitedKingdom:    return "United Kingdom"
+        case .albania:          return String(localized: "Albania", bundle: .module, comment: "Region name")
+        case .austria:          return String(localized: "Austria", bundle: .module, comment: "Region name")
+        case .belgium:          return String(localized: "Belgium", bundle: .module, comment: "Region name")
+        case .bosnia:           return String(localized: "Bosnia and Herzegovina", bundle: .module, comment: "Region name")
+        case .bulgaria:         return String(localized: "Bulgaria", bundle: .module, comment: "Region name")
+        case .croatia:          return String(localized: "Croatia", bundle: .module, comment: "Region name")
+        case .cyprus:           return String(localized: "Cyprus", bundle: .module, comment: "Region name")
+        case .czech:            return String(localized: "Czech Republic", bundle: .module, comment: "Region name")
+        case .denmark:          return String(localized: "Denmark", bundle: .module, comment: "Region name")
+        case .estonia:          return String(localized: "Estonia", bundle: .module, comment: "Region name")
+        case .finland:          return String(localized: "Finland", bundle: .module, comment: "Region name")
+        case .france:           return String(localized: "France", bundle: .module, comment: "Region name")
+        case .georgia:          return String(localized: "Georgia", bundle: .module, comment: "Region name")
+        case .germany:          return String(localized: "Germany", bundle: .module, comment: "Region name")
+        case .greece:           return String(localized: "Greece", bundle: .module, comment: "Region name")
+        case .hungary:          return String(localized: "Hungary", bundle: .module, comment: "Region name")
+        case .ireland:          return String(localized: "Ireland", bundle: .module, comment: "Region name")
+        case .italy:            return String(localized: "Italy", bundle: .module, comment: "Region name")
+        case .kosovo:           return String(localized: "Kosovo", bundle: .module, comment: "Region name")
+        case .latvia:           return String(localized: "Latvia", bundle: .module, comment: "Region name")
+        case .lithuania:        return String(localized: "Lithuania", bundle: .module, comment: "Region name")
+        case .luxembourg:       return String(localized: "Luxembourg", bundle: .module, comment: "Region name")
+        case .malta:            return String(localized: "Malta", bundle: .module, comment: "Region name")
+        case .moldova:          return String(localized: "Moldova", bundle: .module, comment: "Region name")
+        case .montenegro:       return String(localized: "Montenegro", bundle: .module, comment: "Region name")
+        case .netherlands:      return String(localized: "Netherlands", bundle: .module, comment: "Region name")
+        case .northMacedonia:   return String(localized: "North Macedonia", bundle: .module, comment: "Region name")
+        case .norway:           return String(localized: "Norway", bundle: .module, comment: "Region name")
+        case .poland:           return String(localized: "Poland", bundle: .module, comment: "Region name")
+        case .portugal:         return String(localized: "Portugal", bundle: .module, comment: "Region name")
+        case .romania:          return String(localized: "Romania", bundle: .module, comment: "Region name")
+        case .serbia:           return String(localized: "Serbia", bundle: .module, comment: "Region name")
+        case .slovakia:         return String(localized: "Slovakia", bundle: .module, comment: "Region name")
+        case .slovenia:         return String(localized: "Slovenia", bundle: .module, comment: "Region name")
+        case .spain:            return String(localized: "Spain", bundle: .module, comment: "Region name")
+        case .sweden:           return String(localized: "Sweden", bundle: .module, comment: "Region name")
+        case .switzerland:      return String(localized: "Switzerland", bundle: .module, comment: "Region name")
+        case .turkey:           return String(localized: "Turkey", bundle: .module, comment: "Region name")
+        case .ukraine:          return String(localized: "Ukraine", bundle: .module, comment: "Region name")
+        case .unitedKingdom:    return String(localized: "United Kingdom", bundle: .module, comment: "Region name")
         }
     }
 
@@ -387,7 +387,7 @@ public enum Region: String, Codable, CaseIterable, Identifiable, Equatable {
 public extension Array where Element == Region {
     func localizedSorted() -> [Region] {
         sorted { a, b in
-            return a.name.localized < b.name.localized
+            return a.name.localizedStandardCompare(b.name) == .orderedAscending
         }
     }
 }

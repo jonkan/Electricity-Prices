@@ -1,0 +1,792 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "%@" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
+    },
+    "%@ is always used." : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ används alltid."
+          }
+        }
+      }
+    },
+    "%@ is used if the price is lower than %@." : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ används om priset är under %@."
+          }
+        }
+      }
+    },
+    "€" : {
+      "comment" : "Currency symbol",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "€"
+          }
+        }
+      }
+    },
+    "Albania" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Albanien"
+          }
+        }
+      }
+    },
+    "An unknown error occurred." : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ett okänt fel inträffade."
+          }
+        }
+      }
+    },
+    "Austria" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Österrike"
+          }
+        }
+      }
+    },
+    "Automatic" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatisk"
+          }
+        }
+      }
+    },
+    "Bar" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stapel"
+          }
+        }
+      }
+    },
+    "Belgium" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Belgien"
+          }
+        }
+      }
+    },
+    "Bosnia and Herzegovina" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bosnien och Hercegovina"
+          }
+        }
+      }
+    },
+    "Bulgaria" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bulgarien"
+          }
+        }
+      }
+    },
+    "c" : {
+      "comment" : "Currency subdivision symbol",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "c"
+          }
+        }
+      }
+    },
+    "Cent" : {
+      "comment" : "Currency subdivision name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cent"
+          }
+        }
+      }
+    },
+    "Croatia" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kroatien"
+          }
+        }
+      }
+    },
+    "Currency" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valuta"
+          }
+        }
+      }
+    },
+    "Cyprus" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cypern"
+          }
+        }
+      }
+    },
+    "Czech Republic" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tjeckien"
+          }
+        }
+      }
+    },
+    "Danish krone" : {
+      "comment" : "Currency name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dansk krona"
+          }
+        }
+      }
+    },
+    "Denmark" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Danmark"
+          }
+        }
+      }
+    },
+    "Estonia" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estland"
+          }
+        }
+      }
+    },
+    "Euro" : {
+      "comment" : "Currency name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euro"
+          }
+        }
+      }
+    },
+    "Failed to fetch an up-to-date exchange rate." : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Misslyckades att hämta aktuell växelkurs."
+          }
+        }
+      }
+    },
+    "Finland" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finland"
+          }
+        }
+      }
+    },
+    "France" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frankrike"
+          }
+        }
+      }
+    },
+    "Georgia" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Georgien"
+          }
+        }
+      }
+    },
+    "Germany" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tyskland"
+          }
+        }
+      }
+    },
+    "Greece" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grekland"
+          }
+        }
+      }
+    },
+    "Hungary" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ungern"
+          }
+        }
+      }
+    },
+    "Ireland" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Irland"
+          }
+        }
+      }
+    },
+    "Italy" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Italien"
+          }
+        }
+      }
+    },
+    "Kosovo" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kosovo"
+          }
+        }
+      }
+    },
+    "kr" : {
+      "comment" : "Currency symbol",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "kr"
+          }
+        }
+      }
+    },
+    "Krona" : {
+      "comment" : "Currency name short",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krona"
+          }
+        }
+      }
+    },
+    "Krone" : {
+      "comment" : "Currency name short",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krona"
+          }
+        }
+      }
+    },
+    "Kroner" : {
+      "comment" : "Currency name short plural",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kronor"
+          }
+        }
+      }
+    },
+    "Kronor" : {
+      "comment" : "Currency name short plural",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kronor"
+          }
+        }
+      }
+    },
+    "Latvia" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lettland"
+          }
+        }
+      }
+    },
+    "Line" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Linje"
+          }
+        }
+      }
+    },
+    "Line (interpolated)" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Linje (interpolerad)"
+          }
+        }
+      }
+    },
+    "Lithuania" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lituen"
+          }
+        }
+      }
+    },
+    "Luxembourg" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luxemburg"
+          }
+        }
+      }
+    },
+    "Malta" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Malta"
+          }
+        }
+      }
+    },
+    "Moldova" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moldavien"
+          }
+        }
+      }
+    },
+    "Montenegro" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Montenegro"
+          }
+        }
+      }
+    },
+    "Netherlands" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nederländerna"
+          }
+        }
+      }
+    },
+    "North Macedonia" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nordmakedonien"
+          }
+        }
+      }
+    },
+    "Norway" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Norge"
+          }
+        }
+      }
+    },
+    "Norwegian krone" : {
+      "comment" : "Currency name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Norsk krona"
+          }
+        }
+      }
+    },
+    "öre" : {
+      "comment" : "Currency subdivision symbol",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "öre"
+          }
+        }
+      }
+    },
+    "Öre" : {
+      "comment" : "Currency subdivision name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öre"
+          }
+        }
+      }
+    },
+    "øre" : {
+      "comment" : "Currency subdivision symbol",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "øre"
+          }
+        }
+      }
+    },
+    "Øre" : {
+      "comment" : "Currency subdivision name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Øre"
+          }
+        }
+      }
+    },
+    "Poland" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Polen"
+          }
+        }
+      }
+    },
+    "Portugal" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Portugal"
+          }
+        }
+      }
+    },
+    "Price area" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elområde"
+          }
+        }
+      }
+    },
+    "Region" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Land"
+          }
+        }
+      }
+    },
+    "Romania" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rumänien"
+          }
+        }
+      }
+    },
+    "Serbia" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Serbien"
+          }
+        }
+      }
+    },
+    "Setting" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inställning"
+          }
+        }
+      }
+    },
+    "Slovakia" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slovakien"
+          }
+        }
+      }
+    },
+    "Slovenia" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slovenien"
+          }
+        }
+      }
+    },
+    "Spain" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spanien"
+          }
+        }
+      }
+    },
+    "Sweden" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sverige"
+          }
+        }
+      }
+    },
+    "Swedish krona" : {
+      "comment" : "Currency name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Svensk krona"
+          }
+        }
+      }
+    },
+    "Switzerland" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schweiz"
+          }
+        }
+      }
+    },
+    "Turkey" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turkiet"
+          }
+        }
+      }
+    },
+    "Ukraine" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ukraina"
+          }
+        }
+      }
+    },
+    "Unfortunately no data was found for the selected price area." : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tyvärr hittades ingen data för det valda elområdet."
+          }
+        }
+      }
+    },
+    "Unit" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enhet"
+          }
+        }
+      }
+    },
+    "United Kingdom" : {
+      "comment" : "Region name",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Storbritannien"
+          }
+        }
+      }
+    },
+    "Widgets always show prices in %@." : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widgets visar alltid priser i %@."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

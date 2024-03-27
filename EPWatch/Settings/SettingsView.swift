@@ -20,10 +20,10 @@ struct SettingsView: View {
                 SettingsSection()
                 Section {
                     BasicSettingsNavigationLink(
-                        title: "Chart",
+                        title: String(localized: "Chart"),
                         values: PriceChartStyle.allCases,
                         currentValue: $state.chartStyle,
-                        displayValue: { $0.title.localized }
+                        displayValue: { $0.title }
                     )
                     if let currentPrice = state.currentPrice {
                         NavigationLink {

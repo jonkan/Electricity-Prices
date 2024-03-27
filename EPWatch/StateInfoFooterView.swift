@@ -21,7 +21,7 @@ struct StateInfoFooterView: View {
                 GridRow {
                     Text("Price area")
                         .gridColumnAlignment(.trailing)
-                    Text("\(priceArea.title + ", " + region.name.localized)")
+                    Text("\(priceArea.title + ", " + region.name)")
                         .bold()
                 }
             }
@@ -32,7 +32,7 @@ struct StateInfoFooterView: View {
                     Text("Exchange rate")
                         .gridColumnAlignment(.trailing)
                     VStack(alignment: .leading) {
-                        Text("\(formattedRate + " " + exchangeRate.to.name.localized + "/" + exchangeRate.from.name.localized)")
+                        Text("\(formattedRate + " " + exchangeRate.to.name + "/" + exchangeRate.from.name)")
                             .bold()
                         Text("ECB closing price \(exchangeRate.formattedDate())")
                     }

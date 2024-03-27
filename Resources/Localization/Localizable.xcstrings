@@ -16,7 +16,7 @@
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : " * "
           }
         }
       }
@@ -26,7 +26,7 @@
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : " = "
           }
         }
       }
@@ -46,7 +46,7 @@
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : "."
           }
         }
       }
@@ -56,7 +56,7 @@
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : "("
           }
         }
       }
@@ -66,7 +66,7 @@
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : ") * "
           }
         }
       }
@@ -76,7 +76,7 @@
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : "%@"
           }
         }
       }
@@ -92,29 +92,7 @@
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
-          }
-        }
-      }
-    },
-    "%@ is always used." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ används alltid."
-          }
-        }
-      }
-    },
-    "%@ is used if the price is lower than %@." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ används om priset är under %@."
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         }
       }
@@ -169,94 +147,6 @@
         }
       }
     },
-    "Albania" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Albanien"
-          }
-        }
-      }
-    },
-    "An unknown error occurred." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ett okänt fel inträffade."
-          }
-        }
-      }
-    },
-    "Austria" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Österrike"
-          }
-        }
-      }
-    },
-    "Automatic" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Automatisk"
-          }
-        }
-      }
-    },
-    "Bar" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Stapel"
-          }
-        }
-      }
-    },
-    "Belgium" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Belgien"
-          }
-        }
-      }
-    },
-    "Bosnia and Herzegovina" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bosnien och Hercegovina"
-          }
-        }
-      }
-    },
-    "Bulgaria" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bulgarien"
-          }
-        }
-      }
-    },
     "Calculation" : {
       "localizations" : {
         "sv" : {
@@ -278,7 +168,6 @@
       }
     },
     "Chart" : {
-      "extractionState" : "manual",
       "localizations" : {
         "sv" : {
           "stringUnit" : {
@@ -294,72 +183,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Begränsa negativa priser"
-          }
-        }
-      }
-    },
-    "Croatia" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kroatien"
-          }
-        }
-      }
-    },
-    "Currency" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Valuta"
-          }
-        }
-      }
-    },
-    "Cyprus" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cypern"
-          }
-        }
-      }
-    },
-    "Czech Republic" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tjeckien"
-          }
-        }
-      }
-    },
-    "Danish krone" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dansk krona"
-          }
-        }
-      }
-    },
-    "Denmark" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Danmark"
           }
         }
       }
@@ -444,45 +267,12 @@
         }
       }
     },
-    "Estonia" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Estland"
-          }
-        }
-      }
-    },
-    "Euro" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Euro"
-          }
-        }
-      }
-    },
     "Exchange rate" : {
       "localizations" : {
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Växelkurs"
-          }
-        }
-      }
-    },
-    "Failed to fetch an up-to-date exchange rate." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Misslyckades att hämta aktuell växelkurs."
           }
         }
       }
@@ -527,243 +317,12 @@
         }
       }
     },
-    "Finland" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Finland"
-          }
-        }
-      }
-    },
-    "France" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Frankrike"
-          }
-        }
-      }
-    },
-    "Georgia" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Georgien"
-          }
-        }
-      }
-    },
-    "Germany" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tyskland"
-          }
-        }
-      }
-    },
-    "Greece" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Grekland"
-          }
-        }
-      }
-    },
-    "Hungary" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ungern"
-          }
-        }
-      }
-    },
-    "Ireland" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Irland"
-          }
-        }
-      }
-    },
-    "Italy" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Italien"
-          }
-        }
-      }
-    },
-    "Kosovo" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kosovo"
-          }
-        }
-      }
-    },
-    "Krona" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Krona"
-          }
-        }
-      }
-    },
-    "Krone" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Krona"
-          }
-        }
-      }
-    },
-    "Kroner" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kronor"
-          }
-        }
-      }
-    },
-    "Kronor" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kronor"
-          }
-        }
-      }
-    },
-    "Latvia" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lettland"
-          }
-        }
-      }
-    },
-    "Line" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Linje"
-          }
-        }
-      }
-    },
-    "Line (interpolated)" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Linje (interpolerad)"
-          }
-        }
-      }
-    },
-    "Lithuania" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lituen"
-          }
-        }
-      }
-    },
     "Logs" : {
       "localizations" : {
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Loggar"
-          }
-        }
-      }
-    },
-    "Luxembourg" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Luxemburg"
-          }
-        }
-      }
-    },
-    "Malta" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Malta"
-          }
-        }
-      }
-    },
-    "Moldova" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Moldavien"
-          }
-        }
-      }
-    },
-    "Montenegro" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Montenegro"
           }
         }
       }
@@ -798,46 +357,12 @@
         }
       }
     },
-    "Netherlands" : {
-      "extractionState" : "manual",
+    "Not ready" : {
       "localizations" : {
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nederländerna"
-          }
-        }
-      }
-    },
-    "North Macedonia" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nordmakedonien"
-          }
-        }
-      }
-    },
-    "Norway" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Norge"
-          }
-        }
-      }
-    },
-    "Norwegian krone" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Norsk krona"
+            "value" : "Inte redo"
           }
         }
       }
@@ -858,28 +383,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rapportera gärna fel till "
-          }
-        }
-      }
-    },
-    "Poland" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Polen"
-          }
-        }
-      }
-    },
-    "Portugal" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Portugal"
           }
         }
       }
@@ -915,34 +418,21 @@
       }
     },
     "Processing logs" : {
-      "extractionState" : "manual",
       "localizations" : {
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Behandlar loggar"
+            "value" : "Bearbetar loggfiler"
           }
         }
       }
     },
     "Ready" : {
-      "extractionState" : "manual",
       "localizations" : {
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Redo"
-          }
-        }
-      }
-    },
-    "Region" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Land"
           }
         }
       }
@@ -957,67 +447,12 @@
         }
       }
     },
-    "Romania" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rumänien"
-          }
-        }
-      }
-    },
-    "Serbia" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Serbien"
-          }
-        }
-      }
-    },
     "Share" : {
       "localizations" : {
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dela"
-          }
-        }
-      }
-    },
-    "Slovakia" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Slovakien"
-          }
-        }
-      }
-    },
-    "Slovenia" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Slovenien"
-          }
-        }
-      }
-    },
-    "Spain" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Spanien"
           }
         }
       }
@@ -1038,39 +473,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Support"
-          }
-        }
-      }
-    },
-    "Sweden" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sverige"
-          }
-        }
-      }
-    },
-    "Swedish krona" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Svensk krona"
-          }
-        }
-      }
-    },
-    "Switzerland" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Schweiz"
           }
         }
       }
@@ -1116,12 +518,11 @@
       }
     },
     "Transfering logs from the watch" : {
-      "extractionState" : "manual",
       "localizations" : {
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Överför loggar från klockan"
+            "value" : "Hämtar loggfiler från klockan"
           }
         }
       }
@@ -1136,90 +537,12 @@
         }
       }
     },
-    "Turkey" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Turkiet"
-          }
-        }
-      }
-    },
-    "Ukraine" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ukraina"
-          }
-        }
-      }
-    },
-    "Unfortunately no data was found for the selected price area." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tyvärr hittades ingen data för det valda elområdet."
-          }
-        }
-      }
-    },
-    "Unit" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enhet"
-          }
-        }
-      }
-    },
-    "United Kingdom" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Storbritannien"
-          }
-        }
-      }
-    },
-    "Waiting for the watch to respond" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Väntar på att klockan ska svara"
-          }
-        }
-      }
-    },
     "Waiting for the watch to send logs" : {
-      "extractionState" : "manual",
       "localizations" : {
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Väntar på att klockan ska skicka loggar"
-          }
-        }
-      }
-    },
-    "Widgets always show prices in %@." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Widgets visar alltid priser i %@."
+            "value" : "Väntar på att klockan ska skicka loggfiler"
           }
         }
       }

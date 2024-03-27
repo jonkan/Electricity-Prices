@@ -36,17 +36,17 @@ class ShareLogsState: ObservableObject {
         case processingLogs
 
         var localizedDescription: String {
-            description.localized
+            description
         }
 
         private var description: String {
             switch self {
             case .ready:
-                return "Ready"
+                return String(localized: "Ready")
             case .syncing:
-                return "Waiting for the watch to send logs"
+                return String(localized: "Waiting for the watch to send logs")
             case .processingLogs:
-                return "Processing logs"
+                return String(localized: "Processing logs")
             }
         }
     }

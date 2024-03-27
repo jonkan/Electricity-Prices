@@ -59,7 +59,7 @@ struct PriceAdjustmentSettingsView: View {
             Text("Fees")
         } footer: {
             Text("Enter prices in ") +
-            Text("\(currency.subdivision.name.localized)/kWh").bold() +
+            Text("\(currency.subdivision.name)/kWh").bold() +
             Text(".")
         }
     }

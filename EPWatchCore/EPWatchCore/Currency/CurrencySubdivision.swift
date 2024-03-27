@@ -5,7 +5,7 @@
 //  Created by Jonas Bromö on 2022-10-23.
 //
 
-import Foundation
+import SwiftUI
 
 public struct CurrencySubdivision {
     public let name: String

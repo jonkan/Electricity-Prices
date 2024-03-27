@@ -34,20 +34,20 @@ class WatchSyncManager: NSObject, ObservableObject {
         case waitingForWatchToSendLogs(count: LogCount)
 
         var localizedDescription: String {
-            description.localized
+            description
         }
 
         private var description: String {
             switch self {
             case .notReady:
-                "Not ready"
+                String(localized: "Not ready")
             case .ready:
-                "Ready"
+                String(localized: "Ready")
             case .waitingForWatchToSendLogs(let count):
                 if count.total != nil || count.received > 0 {
-                    "Transfering logs from the watch"
+                    String(localized: "Transfering logs from the watch")
                 } else {
-                    "Waiting for the watch to send logs"
+                    String(localized: "Waiting for the watch to send logs")
                 }
             }
         }
@@ -64,7 +64,7 @@ class WatchSyncManager: NSObject, ObservableObject {
         case other(_ error: String)
 
         var localizedDescription: String {
-            description.localized
+            description
         }
 
         private var description: String {

@@ -20,7 +20,7 @@ struct SettingsView: View {
                     title: "Chart",
                     values: PriceChartStyle.allCases,
                     currentValue: $state.chartStyle,
-                    displayValue: { $0.title.localized }
+                    displayValue: { $0.title }
                 )
             }
         }

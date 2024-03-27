@@ -16,33 +16,33 @@ public struct SettingsSection: View {
     public var body: some View {
         Section {
             BasicSettingsNavigationLink(
-                title: "Region",
+                title: String(localized: "Region", bundle: .module),
                 values: Region.allEnabled.localizedSorted(),
                 currentValue: $state.region,
-                displayValue: { $0.name.localized }
+                displayValue: { $0.name }
             )
             if let region = state.region {
                 BasicSettingsNavigationLink(
-                    title: "Price area",
+                    title: String(localized: "Price area", bundle: .module),
                     values: region.priceAreas,
                     currentValue: $state.priceArea,
                     displayValue: { $0.title }
                 )
             }
             BasicSettingsNavigationLink(
-                title: "Currency",
+                title: String(localized: "Currency", bundle: .module),
                 values: Currency.allCases,
                 currentValue: $state.currency,
-                displayValue: { $0.name.localized }
+                displayValue: { $0.name }
             )
             BasicSettingsNavigationLink(
-                title: "Unit",
+                title: String(localized: "Unit", bundle: .module),
                 values: CurrencyPresentation.allCases,
                 currentValue: $state.pricePresentation.currencyPresentation,
                 displayValue: { value in
                     switch value {
-                    case .automatic: return "Automatic".localized
-                    case .subdivided: return "\(state.currency.subdivision.name.localized) (\(state.currency.subdivision.symbol))"
+                    case .automatic: return String(localized: "Automatic", bundle: .module)
+                    case .subdivided: return "\(state.currency.subdivision.name) (\(state.currency.subdivision.symbol))"
                     }
                 }
             )
@@ -50,11 +50,11 @@ public struct SettingsSection: View {
             switch state.pricePresentation.currencyPresentation {
             case .automatic:
                 VStack(alignment: .leading) {
-                    Text("\(state.currency.subdivision.name) is used if the price is lower than \(state.currency.formatted(1, .normal, .automatic)).")
-                    Text("Widgets always show prices in \("\(state.currency.shortNamePlural.localized.lowercased()) (\(state.currency.symbol))").")
+                    Text("\(state.currency.subdivision.name) is used if the price is lower than \(state.currency.formatted(1, .normal, .automatic)).", bundle: .module)
+                    Text("Widgets always show prices in \("\(state.currency.shortNamePlural.lowercased()) (\(state.currency.symbol))").", bundle: .module)
                 }
             case .subdivided:
-                Text("\(state.currency.subdivision.name) is always used.")
+                Text("\(state.currency.subdivision.name) is always used.", bundle: .module)
             }
         }
     }
