@@ -18,11 +18,17 @@ struct SettingsView: View {
         NavigationStack {
             List {
                 SettingsSection()
-                Section {
+                Section("Display") {
                     BasicSettingsNavigationLink(
                         title: String(localized: "Chart"),
                         values: PriceChartStyle.allCases,
                         currentValue: $state.chartStyle,
+                        displayValue: { $0.title }
+                    )
+                    BasicSettingsNavigationLink(
+                        title: String(localized: "View Mode"),
+                        values: PriceChartViewMode.allCases,
+                        currentValue: $state.chartViewMode,
                         displayValue: { $0.title }
                     )
                     if let currentPrice = state.currentPrice {

@@ -11,7 +11,6 @@ import EPWatchCore
 struct RootView: View {
 
     @EnvironmentObject private var state: AppState
-
     @State private var showsSettings: Bool = false
 
     var body: some View {
@@ -21,7 +20,7 @@ struct RootView: View {
                     Section {
                         PriceView(
                             currentPrice: currentPrice,
-                            prices: state.prices.filterTodayAndComingNight(),
+                            prices: state.prices.filterForViewMode(state.chartViewMode),
                             limits: state.priceLimits,
                             pricePresentation: state.pricePresentation,
                             chartStyle: state.chartStyle
@@ -78,7 +77,7 @@ struct RootView: View {
         }
     }
 
-    func errorView(_ error: UserPresentableError) -> some View {
+    private func errorView(_ error: UserPresentableError) -> some View {
         VStack {
             Image(systemName: "x.circle")
                 .resizable()

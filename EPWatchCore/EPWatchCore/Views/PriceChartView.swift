@@ -75,6 +75,35 @@ public struct PriceChartView: View {
                 }
             }
         }
+        .chartXAxis {
+            AxisMarks(values: .automatic) { value in
+                if let date = value.as(Date.self) {
+                    let calendar: Calendar = .current
+                    let hour = calendar.component(.hour, from: date)
+                    AxisValueLabel {
+                        if hour == 0 {
+                            if calendar.isDateInToday(date) {
+                                Text("Today", bundle: .module)
+                            } else if calendar.isDateInTomorrow(date) {
+                                Text("Tomorrow", bundle: .module)
+                            } else {
+                                Text(date, format: .dateTime.month(.abbreviated).day())
+                            }
+                        } else {
+                            Text(date, format: .dateTime.hour(.defaultDigits(amPM: .omitted)))
+                        }
+                    }
+
+                    if hour == 0 {
+                        AxisGridLine(stroke: StrokeStyle(lineWidth: 1))
+                        AxisTick(stroke: StrokeStyle(lineWidth: 1))
+                    } else {
+                        AxisGridLine()
+                        AxisTick()
+                    }
+                }
+            }
+        }
         .chartOverlay(content: chartGestureOverlay)
     }
 
@@ -229,21 +258,19 @@ public struct PriceChartView: View {
         selectionResetTimer = nil
     }
 
-
 }
 
-struct PriceChartView_Previews: PreviewProvider {
-    static var previews: some View {
-        List {
-            PriceChartView(
-                selectedPrice: .constant(nil),
-                currentPrice: [PricePoint].mockPricesWithTomorrow[21],
-                prices: .mockPricesWithTomorrow,
-                limits: .mockLimits,
-                pricePresentation: .init(),
-                chartStyle: .lineInterpolated
-            )
-            .frame(minHeight: 150)
-        }
+#Preview {
+    List {
+        PriceChartView(
+            selectedPrice: .constant(nil),
+            currentPrice: [PricePoint].mockPricesWithTomorrow[21],
+            prices: .mockPricesWithTomorrow,
+            limits: .mockLimits,
+            pricePresentation: .init(),
+            chartStyle: .bar
+        )
+        .frame(minHeight: 150)
+        .padding(.vertical)
     }
 }

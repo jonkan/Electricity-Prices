@@ -17,9 +17,15 @@ struct SettingsView: View {
             SettingsSection()
             Section {
                 BasicSettingsNavigationLink(
-                    title: "Chart",
+                    title: String(localized: "Chart"),
                     values: PriceChartStyle.allCases,
                     currentValue: $state.chartStyle,
+                    displayValue: { $0.title }
+                )
+                BasicSettingsNavigationLink(
+                    title: String(localized: "View mode"),
+                    values: PriceChartViewMode.allCases,
+                    currentValue: $state.chartViewMode,
                     displayValue: { $0.title }
                 )
             }

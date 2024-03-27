@@ -162,22 +162,39 @@ public extension Array where Element == PricePoint {
         })
     }
 
-    func filterInSameDayAs(_ date: Date, using calendar: Calendar = .current) -> [PricePoint] {
+    func filterInSameDay(as date: Date = .now, using calendar: Calendar = .current) -> [PricePoint] {
         filter({ calendar.isDate($0.date, inSameDayAs: date) })
     }
 
-    /// Filter prices of today and the first 8 hours of tomorrow
-    func filterTodayAndComingNight(using calendar: Calendar = .current) -> [PricePoint] {
-        return filterInSameDayAndComingNightAs(.now, using: calendar)
-    }
-
     /// Filters prices in the same day as 'date' and the first 8 hours of the next day
-    func filterInSameDayAndComingNightAs(_ date: Date, using calendar: Calendar = .current) -> [PricePoint] {
-        let todaysPrices = filterInSameDayAs(date)
+    func filterInSameDayAndComingNight(as date: Date = .now, using calendar: Calendar = .current) -> [PricePoint] {
+        let todaysPrices = filterInSameDay(as: date, using: calendar)
         let nextDay = calendar.date(byAdding: .day, value: 1, to: date)!
-        let tomorrowsPrices = filterInSameDayAs(nextDay)
+        let tomorrowsPrices = filterInSameDay(as: nextDay, using: calendar)
         let nightsPrices = tomorrowsPrices.count >= 8 ? Array(tomorrowsPrices[0..<8]) : []
         return todaysPrices + nightsPrices
+    }
+
+    func filterInSameDaysAs(_ dates: [Date], using calendar: Calendar = .current) -> [PricePoint] {
+        dates.sorted().reduce([]) { partialResult, date in
+            return partialResult + filterInSameDay(as: date, using: calendar)
+        }
+    }
+
+    func filterForViewMode(
+        _ viewMode: PriceChartViewMode,
+        at date: Date = .now,
+        using calendar: Calendar = .current
+    ) -> [Element] {
+        switch viewMode {
+        case .today:
+            return filterInSameDay(as: date, using: calendar)
+        case .todayAndComingNight:
+            return filterInSameDayAndComingNight(as: date, using: calendar)
+        case .todayAndTomorrow:
+            let nextDay = calendar.date(byAdding: .day, value: 1, to: date)!
+            return filterInSameDaysAs([date, nextDay], using: calendar)
+        }
     }
 
 }

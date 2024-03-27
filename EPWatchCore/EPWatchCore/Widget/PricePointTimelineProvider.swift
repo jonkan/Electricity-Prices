@@ -45,7 +45,7 @@ public struct PricePointTimelineProvider: TimelineProvider {
                 }
                 let entry = PricePointTimelineEntry(
                     pricePoint: price,
-                    prices: prices.filterInSameDayAs(price.date),
+                    prices: prices.filterInSameDay(as: price.date, using: calendar),
                     limits: limits,
                     pricePresentation: pricePresentation,
                     chartStyle: chartStyle
@@ -70,6 +70,7 @@ public struct PricePointTimelineProvider: TimelineProvider {
                 let limits = await state.priceLimits
                 let pricePresentation = await state.pricePresentation
                 let chartStyle = await state.chartStyle
+                let chartViewMode = await state.chartViewMode
 
                 var entries: [Entry] = []
                 let currentHour = calendar.startOfHour(for: .now)
@@ -83,12 +84,11 @@ public struct PricePointTimelineProvider: TimelineProvider {
                     if entries.count >= 12 {
                         break
                     }
-                    let startOfDay = calendar.startOfDay(for: price.date)
-                    let pricesOfDayAndComingNight = allPrices.filterInSameDayAndComingNightAs(startOfDay)
+                    let prices = allPrices.filterForViewMode(chartViewMode, at: price.date, using: calendar)
                     entries.append(
                         PricePointTimelineEntry(
                             pricePoint: price,
-                            prices: pricesOfDayAndComingNight,
+                            prices: prices,
                             limits: limits,
                             pricePresentation: pricePresentation,
                             chartStyle: chartStyle

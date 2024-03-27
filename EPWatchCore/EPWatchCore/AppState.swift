@@ -70,10 +70,20 @@ public class AppState: ObservableObject {
     }
 
     @AppStorageCodable("ChartStyle", storage: .appGroup)
-    public var chartStyle: PriceChartStyle = .lineInterpolated {
+    public var chartStyle: PriceChartStyle = .bar {
         didSet {
             guard oldValue != chartStyle else { return }
             Log("Chart presentation did change: \(chartStyle)")
+            objectWillChange.send()
+            reloadAllTimelinesSubject.send()
+        }
+    }
+
+    @AppStorageCodable("ChartViewMode", storage: .appGroup)
+    public var chartViewMode: PriceChartViewMode = .todayAndComingNight {
+        didSet {
+            guard oldValue != chartViewMode else { return }
+            Log("Chart view mode did change: \(chartViewMode)")
             objectWillChange.send()
             reloadAllTimelinesSubject.send()
         }
@@ -323,7 +333,7 @@ extension AppState {
         s.currentPrice = .mockPrice
         s.region = .sweden
         s.priceArea = Region.sweden.priceAreas.first
-        s.prices = .mockPrices
+        s.prices = .mockPricesWithTomorrow
         s.exchangeRate = .mockedSEK
         return s
     }()

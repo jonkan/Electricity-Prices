@@ -197,6 +197,16 @@
         }
       }
     },
+    "Display" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visning"
+          }
+        }
+      }
+    },
     "Displays the current electricity price" : {
       "localizations" : {
         "sv" : {
@@ -517,6 +527,16 @@
         }
       }
     },
+    "Tomorrows prices not yet available." : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Morgondagens priser är inte tillgängliga ännu."
+          }
+        }
+      }
+    },
     "Transfering logs from the watch" : {
       "localizations" : {
         "sv" : {
@@ -533,6 +553,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Försök att ha appen på klockan i förgrunden."
+          }
+        }
+      }
+    },
+    "View mode" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visningsläge"
           }
         }
       }

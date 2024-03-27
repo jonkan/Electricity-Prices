@@ -17,6 +17,9 @@ struct RootView: View {
         NavigationStack {
             TabView {
                 mainTab
+                if state.chartViewMode != .todayAndTomorrow {
+                    tomorrowTab
+                }
                 SettingsView()
             }
             .tabViewStyle(.page)
@@ -28,7 +31,7 @@ struct RootView: View {
         if let currentPrice = state.currentPrice {
             PriceView(
                 currentPrice: currentPrice,
-                prices: state.prices.filterTodayAndComingNight(),
+                prices: state.prices.filterForViewMode(state.chartViewMode),
                 limits: state.priceLimits,
                 pricePresentation: state.pricePresentation,
                 chartStyle: state.chartStyle
@@ -39,6 +42,23 @@ struct RootView: View {
             errorView(error)
         } else {
             Color.clear
+        }
+    }
+
+    @ViewBuilder
+    var tomorrowTab: some View {
+        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: .now)!
+        let tomorrowsPrices = state.prices.filterInSameDay(as: tomorrow)
+        if tomorrowsPrices.count == 24 {
+            PriceView(
+                currentPrice: tomorrowsPrices[0],
+                prices: tomorrowsPrices,
+                limits: state.priceLimits,
+                pricePresentation: state.pricePresentation,
+                chartStyle: state.chartStyle
+            )
+        } else {
+            Text("Tomorrows prices not yet available.")
         }
     }
 
@@ -63,12 +83,12 @@ struct RootView: View {
 
 }
 
-struct RootView_Previews: PreviewProvider {
-    static var previews: some View {
-        RootView()
-            .environmentObject(AppState.mocked)
-        RootView()
-            .environmentObject(AppState.mockedWithError)
-            .previewDisplayName("Error")
-    }
+#Preview {
+    RootView()
+        .environmentObject(AppState.mocked)
+}
+
+#Preview("Error") {
+    RootView()
+        .environmentObject(AppState.mockedWithError)
 }

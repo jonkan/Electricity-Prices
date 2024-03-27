@@ -724,6 +724,46 @@
         }
       }
     },
+    "Today" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idag"
+          }
+        }
+      }
+    },
+    "Today and Coming Night" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idag och kommande natt"
+          }
+        }
+      }
+    },
+    "Today and Tomorrow" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idag och imorgon"
+          }
+        }
+      }
+    },
+    "Tomorrow" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Imorgon"
+          }
+        }
+      }
+    },
     "Turkey" : {
       "comment" : "Region name",
       "localizations" : {
