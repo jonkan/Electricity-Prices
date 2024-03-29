@@ -153,6 +153,8 @@ public struct PriceChartView: View {
             )
             .foregroundStyle(limits.color(of: displayedPrice.price))
             .symbolSize(70)
+
+            priceLimitLines
         }
     }
 
@@ -176,17 +178,7 @@ public struct PriceChartView: View {
                     .foregroundStyle(limits.color(of: p.price))
                 }
 
-                if showPriceLimitsLines {
-                    RuleMark(
-                        y: .value("", pricePresentation.adjustedPrice(limits.high, in: limits.currency))
-                    )
-//                    .foregroundStyle(limits.color(of: limits.high))
-
-                    RuleMark(
-                        y: .value("", pricePresentation.adjustedPrice(limits.low, in: limits.currency))
-                    )
-//                    .foregroundStyle(limits.color(of: limits.low))
-                }
+                priceLimitLines
             }
             .chartXScale(range: .plotDimension(endPadding: barWidth))
         }
@@ -274,6 +266,18 @@ public struct PriceChartView: View {
         selectionResetTimer = nil
     }
 
+    @ChartContentBuilder
+    private var priceLimitLines: some ChartContent {
+        if showPriceLimitsLines {
+            RuleMark(
+                y: .value("", pricePresentation.adjustedPrice(limits.high, in: limits.currency))
+            )
+            RuleMark(
+                y: .value("", pricePresentation.adjustedPrice(limits.low, in: limits.currency))
+            )
+        }
+    }
+
 }
 
 // MARK: - Preview
@@ -291,7 +295,8 @@ private struct PriceChartViewPreview: View {
                         prices: .mockPricesWithTomorrow.filterForViewMode(viewMode),
                         limits: .mockLimits,
                         pricePresentation: .init(),
-                        chartStyle: style
+                        chartStyle: style,
+                        showPriceLimitsLines: false
                     )
                 }
                 .frame(minHeight: 150)
