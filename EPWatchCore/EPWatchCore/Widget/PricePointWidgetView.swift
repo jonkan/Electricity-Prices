@@ -48,14 +48,12 @@ public struct WidgetView: View {
 
 }
 
-struct WidgetView_Previews: PreviewProvider {
-    static var previews: some View {
+#Preview {
 #if os(watchOS)
-        WidgetView(entry: .mock)
-            .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+    WidgetView(entry: .mock)
+        .previewContext(WidgetPreviewContext(family: .accessoryCircular))
 #else
-        WidgetView(entry: .mock)
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+    WidgetView(entry: .mock)
+        .previewContext(WidgetPreviewContext(family: .systemSmall))
 #endif
-    }
 }

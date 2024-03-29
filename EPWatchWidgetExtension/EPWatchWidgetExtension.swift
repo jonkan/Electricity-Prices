@@ -12,9 +12,20 @@ import EPWatchCore
 @main
 struct EPWatchWidgetExtension: Widget {
     let kind: String = "EPWatchWidgetExtension"
+    private let state: AppState
+
+    @MainActor
+    init() {
+        state = .shared
+    }
+
+    @MainActor
+    init(state: AppState) {
+        self.state = state
+    }
 
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: PricePointTimelineProvider()) { entry in
+        StaticConfiguration(kind: kind, provider: PricePointTimelineProvider(state: state)) { entry in
             WidgetView(entry: entry)
         }
         .configurationDisplayName("Electricity price")
@@ -34,7 +45,9 @@ struct EPWatchWidgetExtension: Widget {
 }
 
 #Preview(as: .accessoryRectangular) {
-    EPWatchWidgetExtension()
+    MainActor.assumeIsolated {
+        EPWatchWidgetExtension(state: .mocked)
+    }
 } timeline: {
     PricePointTimelineEntry.mock
     PricePointTimelineEntry.mock2
