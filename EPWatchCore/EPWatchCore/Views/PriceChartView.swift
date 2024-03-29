@@ -51,11 +51,13 @@ public struct PriceChartView: View {
     }
 
     public var body: some View {
-        Group {
-            switch chartStyle {
-            case .lineInterpolated: lineChart(interpolated: true)
-            case .line: lineChart(interpolated: false)
-            case .bar: barChart
+        GeometryReader { geometry in
+            Group {
+                switch chartStyle {
+                case .lineInterpolated: lineChart(geometry, interpolated: true)
+                case .line: lineChart(geometry, interpolated: false)
+                case .bar: barChart(geometry)
+                }
             }
         }
         .widgetAccentable()
@@ -110,7 +112,7 @@ public struct PriceChartView: View {
         .chartOverlay(content: chartGestureOverlay)
     }
 
-    func lineChart(interpolated: Bool) -> some View {
+    private func lineChart(_ geometry: GeometryProxy, interpolated: Bool) -> some View {
         Chart {
             ForEach(prices, id: \.date) { p in
                 LineMark(
@@ -125,66 +127,97 @@ public struct PriceChartView: View {
                 endPoint: .top
             ))
 
-            RuleMark(
-                x: .value("", displayedPrice.date)
-            )
-            .lineStyle(StrokeStyle(lineWidth: 1.2, dash: [3, 6]))
-            .foregroundStyle(.gray)
-
-            if widgetRenderingMode == .fullColor {
-                PointMark(
-                    x: .value("", displayedPrice.date),
-                    y: .value("", pricePresentation.adjustedPrice(displayedPrice))
-                )
-                .foregroundStyle(.foreground.opacity(0.6))
-                .symbolSize(300)
-
-                PointMark(
-                    x: .value("", displayedPrice.date),
-                    y: .value("", pricePresentation.adjustedPrice(displayedPrice))
-                )
-                .foregroundStyle(.background)
-                .symbolSize(100)
+            if interpolated {
+                currentPriceRuleMark(displayedPrice.date)
+                currentPricePointMark(displayedPrice.date)
+            } else {
+                // A bar the width of an hour
+                let barWidth = geometry.size.width / (CGFloat(prices.count) + 1)
+                currentPriceBarMark(barWidth: barWidth)
+                // Show the point in the middle of the hour
+                let hourCenterDate = displayedPrice.date.addingTimeInterval(30*60)
+                currentPricePointMark(hourCenterDate)
             }
-
-            PointMark(
-                x: .value("", displayedPrice.date),
-                y: .value("", pricePresentation.adjustedPrice(displayedPrice))
-            )
-            .foregroundStyle(limits.color(of: displayedPrice.price))
-            .symbolSize(70)
-
             priceLimitLines
         }
     }
 
-    var barChart: some View {
-        GeometryReader { geometry in
-            let barWidth = geometry.size.width / (CGFloat(prices.count)*1.5+1)
-            return Chart {
+    private func currentPriceRuleMark(_ date: Date) -> some ChartContent {
+        RuleMark(
+            x: .value("", date)
+        )
+        .lineStyle(StrokeStyle(lineWidth: 1.2, dash: [3, 6]))
+        .foregroundStyle(.gray)
+    }
+
+    @ChartContentBuilder
+    private func currentPricePointMark(_ date: Date) -> some ChartContent {
+        if widgetRenderingMode == .fullColor {
+            PointMark(
+                x: .value("", date),
+                y: .value("", pricePresentation.adjustedPrice(displayedPrice))
+            )
+            .foregroundStyle(.foreground.opacity(0.6))
+            .symbolSize(300)
+
+            PointMark(
+                x: .value("", date),
+                y: .value("", pricePresentation.adjustedPrice(displayedPrice))
+            )
+            .foregroundStyle(.background)
+            .symbolSize(100)
+        }
+
+        PointMark(
+            x: .value("", date),
+            y: .value("", pricePresentation.adjustedPrice(displayedPrice))
+        )
+        .foregroundStyle(limits.color(of: displayedPrice.price))
+        .symbolSize(70)
+    }
+
+    private func barChart(_ geometry: GeometryProxy) -> some View {
+        let barWidth = geometry.size.width / (CGFloat(prices.count)*1.5+1)
+        return Chart {
+            currentPriceBarMark(barWidth: barWidth)
+
+            ForEach(prices, id: \.date) { p in
                 BarMark(
-                    x: .value("", displayedPrice.date),
+                    x: .value("", p.date),
+                    y: .value("", pricePresentation.adjustedPrice(p)),
                     width: .fixed(barWidth)
                 )
-                .foregroundStyle(.gray.opacity(0.3))
-
-                ForEach(prices, id: \.date) { p in
-                    BarMark(
-                        x: .value("", p.date),
-                        y: .value("", pricePresentation.adjustedPrice(p)),
-                        width: .fixed(barWidth)
-                    )
-                    .offset(x: barWidth / 2)
-                    .foregroundStyle(limits.color(of: p.price))
-                }
-
-                priceLimitLines
+                .offset(x: barWidth / 2)
+                .foregroundStyle(limits.color(of: p.price))
             }
-            .chartXScale(range: .plotDimension(endPadding: barWidth))
+
+            priceLimitLines
+        }
+        .chartXScale(range: .plotDimension(endPadding: barWidth))
+    }
+
+    private func currentPriceBarMark(barWidth: CGFloat) -> some ChartContent {
+        BarMark(
+            x: .value("", displayedPrice.date),
+            width: .fixed(barWidth)
+        )
+        .offset(x: barWidth / 2)
+        .foregroundStyle(.gray.opacity(0.3))
+    }
+
+    @ChartContentBuilder
+    private var priceLimitLines: some ChartContent {
+        if showPriceLimitsLines {
+            RuleMark(
+                y: .value("", pricePresentation.adjustedPrice(limits.high, in: limits.currency))
+            )
+            RuleMark(
+                y: .value("", pricePresentation.adjustedPrice(limits.low, in: limits.currency))
+            )
         }
     }
 
-    var axisYValues: [Double]? {
+    private var axisYValues: [Double]? {
         let adjustedDayPriceRange = pricePresentation.adjustedPriceRange(currentPrice.dayPriceRange)
         if adjustedDayPriceRange.upperBound <= 1.5 && pricePresentation.currencyPresentation != .subdivided {
             return [0.0, 0.5, 1.0, 1.5]
@@ -192,7 +225,7 @@ public struct PriceChartView: View {
         return nil
     }
 
-    var currencyAxisFormat: FloatingPointFormatStyle<Double>.Currency {
+    private var currencyAxisFormat: FloatingPointFormatStyle<Double>.Currency {
         let adjustedDayPriceRange = pricePresentation.adjustedPriceRange(currentPrice.dayPriceRange)
         if adjustedDayPriceRange.upperBound <= 10 {
             return .currency(code: currentPrice.currency.code).precision(.fractionLength(1))
@@ -200,7 +233,7 @@ public struct PriceChartView: View {
         return .currency(code: currentPrice.currency.code).precision(.significantDigits(2))
     }
 
-    func chartGestureOverlay(_ proxy: ChartProxy) -> some View {
+    private func chartGestureOverlay(_ proxy: ChartProxy) -> some View {
         GeometryReader { geometry in
             Color.clear.contentShape(Rectangle())
                 .gesture(
@@ -266,18 +299,6 @@ public struct PriceChartView: View {
         selectionResetTimer = nil
     }
 
-    @ChartContentBuilder
-    private var priceLimitLines: some ChartContent {
-        if showPriceLimitsLines {
-            RuleMark(
-                y: .value("", pricePresentation.adjustedPrice(limits.high, in: limits.currency))
-            )
-            RuleMark(
-                y: .value("", pricePresentation.adjustedPrice(limits.low, in: limits.currency))
-            )
-        }
-    }
-
 }
 
 // MARK: - Preview
@@ -296,6 +317,7 @@ private struct PriceChartViewPreview: View {
                         limits: .mockLimits,
                         pricePresentation: .init(),
                         chartStyle: style,
+                        isChartGestureEnabled: true,
                         showPriceLimitsLines: false
                     )
                 }
