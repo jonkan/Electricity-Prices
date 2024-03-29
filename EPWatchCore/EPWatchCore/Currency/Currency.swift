@@ -94,6 +94,50 @@ public enum Currency: String, Codable, CaseIterable, Identifiable, Equatable {
         }
     }
 
+    public var defaultPriceLimits: PriceLimits {
+        switch self {
+        case .EUR:
+            return PriceLimits(.EUR, high: 0.3, low: 0.1)
+        case .SEK:
+            return PriceLimits(.SEK, high: 3, low: 1)
+        case .NOK:
+            return PriceLimits(.NOK, high: 3, low: 1)
+        case .DKK:
+            return PriceLimits(.DKK, high: 2, low: 0.7)
+        }
+    }
+
+    public var priceLimitsRange: ClosedRange<Double> {
+        switch self {
+        case .EUR:
+            return 0...0.6
+        case .SEK:
+            return 0...6
+        case .NOK:
+            return 0...6
+        case .DKK:
+            return 0...4
+        }
+    }
+
+    public var priceLimitsStep: Double {
+        switch self {
+        case .EUR:
+            return 0.001
+        case .SEK:
+            return 0.01
+        case .NOK:
+            return 0.01
+        case .DKK:
+            return 0.01
+        }
+    }
+
+    static var defaultPriceLimitsDictionary: [Currency: PriceLimits] {
+        Dictionary(grouping: allCases, by: { $0 })
+            .mapValues({ $0[0].defaultPriceLimits })
+    }
+
 }
 
 extension Currency {

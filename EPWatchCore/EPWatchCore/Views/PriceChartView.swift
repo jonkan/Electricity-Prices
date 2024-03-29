@@ -20,6 +20,7 @@ public struct PriceChartView: View {
     let chartStyle: PriceChartStyle
     let useCurrencyAxisFormat: Bool
     let isChartGestureEnabled: Bool
+    let showPriceLimitsLines: Bool
 
     @Binding var selectedPrice: PricePoint?
     var displayedPrice: PricePoint {
@@ -34,7 +35,8 @@ public struct PriceChartView: View {
         pricePresentation: PricePresentation,
         chartStyle: PriceChartStyle,
         useCurrencyAxisFormat: Bool = false,
-        isChartGestureEnabled: Bool = true
+        isChartGestureEnabled: Bool = true,
+        showPriceLimitsLines: Bool = false
     ) {
         _selectedPrice = selectedPrice
         self.currentPrice = currentPrice
@@ -45,6 +47,7 @@ public struct PriceChartView: View {
         self.chartStyle = chartStyle
         self.useCurrencyAxisFormat = useCurrencyAxisFormat
         self.isChartGestureEnabled = isChartGestureEnabled
+        self.showPriceLimitsLines = showPriceLimitsLines
     }
 
     public var body: some View {
@@ -112,7 +115,7 @@ public struct PriceChartView: View {
             ForEach(prices, id: \.date) { p in
                 LineMark(
                     x: .value("", p.date),
-                    y: .value("", p.adjusted(with: pricePresentation))
+                    y: .value("", pricePresentation.adjustedPrice(p))
                 )
             }
             .interpolationMethod(interpolated ? .monotone : .stepEnd)
@@ -131,14 +134,14 @@ public struct PriceChartView: View {
             if widgetRenderingMode == .fullColor {
                 PointMark(
                     x: .value("", displayedPrice.date),
-                    y: .value("", displayedPrice.adjusted(with: pricePresentation))
+                    y: .value("", pricePresentation.adjustedPrice(displayedPrice))
                 )
                 .foregroundStyle(.foreground.opacity(0.6))
                 .symbolSize(300)
 
                 PointMark(
                     x: .value("", displayedPrice.date),
-                    y: .value("", displayedPrice.adjusted(with: pricePresentation))
+                    y: .value("", pricePresentation.adjustedPrice(displayedPrice))
                 )
                 .foregroundStyle(.background)
                 .symbolSize(100)
@@ -146,7 +149,7 @@ public struct PriceChartView: View {
 
             PointMark(
                 x: .value("", displayedPrice.date),
-                y: .value("", displayedPrice.adjusted(with: pricePresentation))
+                y: .value("", pricePresentation.adjustedPrice(displayedPrice))
             )
             .foregroundStyle(limits.color(of: displayedPrice.price))
             .symbolSize(70)
@@ -166,11 +169,23 @@ public struct PriceChartView: View {
                 ForEach(prices, id: \.date) { p in
                     BarMark(
                         x: .value("", p.date),
-                        y: .value("", p.adjusted(with: pricePresentation)),
+                        y: .value("", pricePresentation.adjustedPrice(p)),
                         width: .fixed(barWidth)
                     )
                     .offset(x: barWidth / 2)
                     .foregroundStyle(limits.color(of: p.price))
+                }
+
+                if showPriceLimitsLines {
+                    RuleMark(
+                        y: .value("", pricePresentation.adjustedPrice(limits.high, in: limits.currency))
+                    )
+//                    .foregroundStyle(limits.color(of: limits.high))
+
+                    RuleMark(
+                        y: .value("", pricePresentation.adjustedPrice(limits.low, in: limits.currency))
+                    )
+//                    .foregroundStyle(limits.color(of: limits.low))
                 }
             }
             .chartXScale(range: .plotDimension(endPadding: barWidth))
@@ -178,7 +193,7 @@ public struct PriceChartView: View {
     }
 
     var axisYValues: [Double]? {
-        let adjustedDayPriceRange = currentPrice.dayPriceRange.adjusted(with: pricePresentation)
+        let adjustedDayPriceRange = pricePresentation.adjustedPriceRange(currentPrice.dayPriceRange)
         if adjustedDayPriceRange.upperBound <= 1.5 && pricePresentation.currencyPresentation != .subdivided {
             return [0.0, 0.5, 1.0, 1.5]
         }
@@ -186,7 +201,7 @@ public struct PriceChartView: View {
     }
 
     var currencyAxisFormat: FloatingPointFormatStyle<Double>.Currency {
-        let adjustedDayPriceRange = currentPrice.dayPriceRange.adjusted(with: pricePresentation)
+        let adjustedDayPriceRange = pricePresentation.adjustedPriceRange(currentPrice.dayPriceRange)
         if adjustedDayPriceRange.upperBound <= 10 {
             return .currency(code: currentPrice.currency.code).precision(.fractionLength(1))
         }

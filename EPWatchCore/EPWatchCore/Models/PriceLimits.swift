@@ -9,9 +9,9 @@ import Foundation
 import SwiftUI
 
 public struct PriceLimits: Codable, Equatable {
-    let currency: Currency
-    let high: Double
-    let low: Double
+    public let currency: Currency
+    public var high: Double
+    public var low: Double
 
     public init(_ currency: Currency, high: Double, low: Double) {
         self.currency = currency

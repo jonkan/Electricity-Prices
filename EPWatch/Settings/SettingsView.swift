@@ -26,12 +26,22 @@ struct SettingsView: View {
                         displayValue: { $0.title }
                     )
                     BasicSettingsNavigationLink(
-                        title: String(localized: "View Mode"),
+                        title: String(localized: "View mode"),
                         values: PriceChartViewMode.allCases,
                         currentValue: $state.chartViewMode,
                         displayValue: { $0.title }
                     )
                     if let currentPrice = state.currentPrice {
+                        NavigationLink("Price limits") {
+                            PriceLimitsSettingsView(
+                                limits: $state.priceLimits,
+                                currentPrice: currentPrice,
+                                prices: state.prices.filterForViewMode(state.chartViewMode),
+                                pricePresentation: state.pricePresentation,
+                                chartStyle: state.chartStyle
+                            )
+                            .navigationTitle("Price limits")
+                        }
                         NavigationLink {
                             PriceAdjustmentSettingsView(
                                 pricePresentation: $state.pricePresentation,

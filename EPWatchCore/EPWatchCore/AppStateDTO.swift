@@ -16,7 +16,7 @@ public struct AppStateDTO: Codable, Equatable {
     let currency: Currency
     let pricePresentation: PricePresentation
     let chartStyle: PriceChartStyle
-    let allPriceLimits: [PriceLimits]
+    let allPriceLimits: [Currency: PriceLimits]
     let exchangeRate: ExchangeRate?
 
     public func encodeToApplicationContext() throws -> [String: Any] {

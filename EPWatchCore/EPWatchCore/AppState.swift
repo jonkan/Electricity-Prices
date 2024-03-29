@@ -90,14 +90,18 @@ public class AppState: ObservableObject {
     }
 
     @AppStorageCodable("AllPriceLimits", storage: .appGroup)
-    public var allPriceLimits: [PriceLimits] = [
-        PriceLimits(.EUR, high: 0.3, low: 0.1),
-        PriceLimits(.SEK, high: 3, low: 1),
-        PriceLimits(.NOK, high: 3, low: 1),
-        PriceLimits(.DKK, high: 2, low: 0.7),
-    ]
+    public var allPriceLimits: [Currency: PriceLimits] = Currency.defaultPriceLimitsDictionary {
+        didSet {
+            guard oldValue != allPriceLimits else { return }
+            Log("All price limits did change: \(allPriceLimits)")
+            objectWillChange.send()
+            reloadAllTimelinesSubject.send()
+        }
+    }
+
     public var priceLimits: PriceLimits {
-        return allPriceLimits.first(where: { $0.currency == currency })!
+        get { allPriceLimits[currency] ?? currency.defaultPriceLimits }
+        set { allPriceLimits[currency] = newValue }
     }
 
     @AppStorageCodable("ExchangeRate", storage: .appGroup)

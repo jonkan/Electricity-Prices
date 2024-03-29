@@ -11,6 +11,16 @@
         }
       }
     },
+    " " : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " "
+          }
+        }
+      }
+    },
     " * " : {
       "localizations" : {
         "sv" : {
@@ -327,12 +337,42 @@
         }
       }
     },
+    "High" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Högt"
+          }
+        }
+      }
+    },
+    "Limits" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gränser"
+          }
+        }
+      }
+    },
     "Logs" : {
       "localizations" : {
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Loggar"
+          }
+        }
+      }
+    },
+    "Low" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lågt"
           }
         }
       }
@@ -417,6 +457,16 @@
         }
       }
     },
+    "Price limits" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gränsvärden"
+          }
+        }
+      }
+    },
     "Prices are " : {
       "localizations" : {
         "sv" : {
@@ -443,6 +493,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Redo"
+          }
+        }
+      }
+    },
+    "Reset" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Återställ"
           }
         }
       }

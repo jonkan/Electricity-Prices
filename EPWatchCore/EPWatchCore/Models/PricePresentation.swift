@@ -47,24 +47,24 @@ public struct PricePresentation: Codable, Equatable {
         )
     }
 
-}
+    public func adjustedPrice(_ pricePoint: PricePoint) -> Double {
+        adjustedPrice(pricePoint.price, in: pricePoint.currency)
+    }
 
-extension PricePoint {
-    func adjusted(with pricePresentation: PricePresentation) -> Double {
-        let adjustedPrice = pricePresentation.adjustment.adjustedPrice(price)
-        switch pricePresentation.currencyPresentation {
+    public func adjustedPrice(_ price: Double, in currency: Currency) -> Double {
+        let adjustedPrice = adjustment.adjustedPrice(price)
+        switch currencyPresentation {
         case .automatic:
             return adjustedPrice
         case .subdivided:
             return adjustedPrice * currency.subdivision.subdivisions
         }
     }
-}
 
-extension ClosedRange where Bound == Double {
-    func adjusted(with pricePresentation: PricePresentation) -> Self {
-        let adjustedLowerBound = pricePresentation.adjustment.adjustedPrice(lowerBound)
-        let adjustedUpperBound = pricePresentation.adjustment.adjustedPrice(upperBound)
+    public func adjustedPriceRange(_ range: ClosedRange<Double>) -> ClosedRange<Double> {
+        let adjustedLowerBound = adjustment.adjustedPrice(range.lowerBound)
+        let adjustedUpperBound = adjustment.adjustedPrice(range.upperBound)
         return adjustedLowerBound...adjustedUpperBound
     }
+
 }
