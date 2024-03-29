@@ -115,7 +115,7 @@ public struct PriceChartView: View {
                     y: .value("", p.adjusted(with: pricePresentation))
                 )
             }
-            .interpolationMethod(interpolated ? .monotone : .stepCenter)
+            .interpolationMethod(interpolated ? .monotone : .stepEnd)
             .foregroundStyle(LinearGradient(
                 stops: limits.stops(using: priceRange),
                 startPoint: .bottom,
@@ -169,10 +169,11 @@ public struct PriceChartView: View {
                         y: .value("", p.adjusted(with: pricePresentation)),
                         width: .fixed(barWidth)
                     )
+                    .offset(x: barWidth / 2)
                     .foregroundStyle(limits.color(of: p.price))
                 }
             }
-            .chartXScale(range: .plotDimension(startPadding: barWidth/2, endPadding: barWidth/2))
+            .chartXScale(range: .plotDimension(endPadding: barWidth))
         }
     }
 
@@ -260,17 +261,43 @@ public struct PriceChartView: View {
 
 }
 
-#Preview {
-    List {
-        PriceChartView(
-            selectedPrice: .constant(nil),
-            currentPrice: [PricePoint].mockPricesWithTomorrow[21],
-            prices: .mockPricesWithTomorrow,
-            limits: .mockLimits,
-            pricePresentation: .init(),
-            chartStyle: .bar
-        )
-        .frame(minHeight: 150)
-        .padding(.vertical)
+// MARK: - Preview
+
+private struct PriceChartViewPreview: View {
+    @State var viewMode: PriceChartViewMode = .todayAndComingNight
+
+    var body: some View {
+        List {
+            Section {
+                ForEach(PriceChartStyle.allCases) { style in
+                    PriceChartView(
+                        selectedPrice: .constant(nil),
+                        currentPrice: [PricePoint].mockPricesWithTomorrow[21],
+                        prices: .mockPricesWithTomorrow.filterForViewMode(viewMode),
+                        limits: .mockLimits,
+                        pricePresentation: .init(),
+                        chartStyle: style
+                    )
+                }
+                .frame(minHeight: 150)
+                .padding(.vertical)
+            } header: {
+                Picker(selection: $viewMode) {
+                    ForEach(PriceChartViewMode.allCases) {
+                        Text($0.title)
+                            .tag($0)
+                    }
+                } label: {
+                    EmptyView()
+                }
+#if !os(watchOS)
+                .pickerStyle(.segmented)
+#endif
+            }
+        }
     }
+}
+
+#Preview {
+    PriceChartViewPreview()
 }

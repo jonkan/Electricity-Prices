@@ -8,9 +8,9 @@
 import SwiftUI
 
 public enum PriceChartStyle: String, Codable, CaseIterable, Identifiable, Equatable {
-    case lineInterpolated
-    case line
     case bar
+    case line
+    case lineInterpolated
 
     public var id: String {
         return rawValue
