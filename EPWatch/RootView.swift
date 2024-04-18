@@ -66,9 +66,7 @@ struct RootView: View {
                 }
             }
             .sheet(isPresented: $showsSettings) {
-                NavigationStack {
-                    SettingsView()
-                }
+                SettingsView()
             }
             .refreshable {
                 do {
