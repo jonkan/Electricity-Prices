@@ -65,8 +65,6 @@ public enum Region: String, Codable, CaseIterable, Identifiable, Equatable {
             .kosovo,
             .malta,
             .moldova,
-            .montenegro,
-            .northMacedonia,
             .turkey,
             .unitedKingdom
          ]

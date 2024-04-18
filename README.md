@@ -39,7 +39,9 @@ The app uses the [Day-ahead Prices](https://transparency.entsoe.eu/transmission-
 -   Latvia
 -   Lithuania
 -   Luxembourg
+-   Montenegro
 -   Netherlands
+-   North Macedonia
 -   Norway
 -   Poland
 -   Portugal
@@ -61,8 +63,6 @@ Some countries (available in the API) don't seem to have data, which currently a
 -   Kosovo
 -   Malta
 -   Moldova
--   Montenegro
--   North Macedonia
 -   Turkey
 -   United Kingdom
 
