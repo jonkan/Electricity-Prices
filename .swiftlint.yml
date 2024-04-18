@@ -1,0 +1,11 @@
+
+disabled_rules:
+  - identifier_name
+  - redundant_optional_initialization
+  - blanket_disable_command
+  - nesting
+
+line_length:
+  warning: 120
+  ignores_interpolated_strings: true
+  # ignores_urls: true

@@ -187,4 +187,3 @@ struct PriceAdjustmentSettingsView_Previews: PreviewProvider {
         }
     }
 }
-

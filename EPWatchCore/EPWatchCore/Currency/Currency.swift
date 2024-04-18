@@ -72,10 +72,10 @@ public enum Currency: String, Codable, CaseIterable, Identifiable, Equatable {
                 symbol: String(localized: "öre", bundle: .module, comment: "Currency subdivision symbol"),
                 subdivisions: 100
             )
-        case .NOK: 
+        case .NOK:
             return CurrencySubdivision(
                 name: String(localized: "Øre", bundle: .module, comment: "Currency subdivision name"),
-                symbol: String(localized:"øre", comment: "Currency subdivision symbol"),
+                symbol: String(localized: "øre", comment: "Currency subdivision symbol"),
                 subdivisions: 100
         )
         case .DKK:
@@ -193,6 +193,7 @@ extension Currency {
         }()
     ]
 
+    // swiftlint:disable:next cyclomatic_complexity function_body_length
     public func formatted(
         _ price: Double,
         _ style: FormattingStyle,
@@ -251,7 +252,6 @@ extension Currency {
         }
         return formattedPrice
     }
-
 
 }
 

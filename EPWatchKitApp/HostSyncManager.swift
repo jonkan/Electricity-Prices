@@ -96,8 +96,8 @@ extension HostSyncManager: WCSessionDelegate {
 
     func session(
         _ session: WCSession,
-        didReceiveMessage message: [String : Any],
-        replyHandler: @escaping ([String : Any]) -> Void
+        didReceiveMessage message: [String: Any],
+        replyHandler: @escaping ([String: Any]) -> Void
     ) {
         Log("Did receive message: \(message)")
         if message.keys.contains("sendLogs") {
@@ -119,7 +119,7 @@ extension HostSyncManager: WCSessionDelegate {
 
     func session(
         _ session: WCSession,
-        didReceiveApplicationContext applicationContext: [String : Any]
+        didReceiveApplicationContext applicationContext: [String: Any]
     ) {
         Task {
             Log("Session did receive application context")

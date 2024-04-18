@@ -12,6 +12,7 @@ import WatchConnectivity
 import AsyncAlgorithms
 import SwiftUI
 
+// swiftlint:disable type_body_length file_length
 @MainActor
 class WatchSyncManager: NSObject, ObservableObject {
 
@@ -175,7 +176,7 @@ class WatchSyncManager: NSObject, ObservableObject {
 
     private func handleSyncTaskChannel() {
         Task {
-            for try await task in syncTaskChannel.debounce(for: .milliseconds(250))  {
+            for try await task in syncTaskChannel.debounce(for: .milliseconds(250)) {
                 assert(!isSyncing, "Sync already in progress")
                 isSyncing = true
                 do {
@@ -349,7 +350,7 @@ extension WatchSyncManager: WCSessionDelegate {
         }
     }
 
-    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String: Any]) {
         Task {
             guard isAppContextSyncEnabled else {
                 Log("Session did receive application context (sync disabled)")
@@ -386,7 +387,7 @@ extension WatchSyncManager: WCSessionDelegate {
             }
             timeoutHandler.cancel()
 
-            count.received = count.received + 1
+            count.received += 1
             if let total = count.total, total <= count.received {
                 resumeFetchWatchLogs()
             } else {

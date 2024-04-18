@@ -23,7 +23,6 @@
 		2674BC6F28D0572E00E31A20 /* EPWatchKitAppExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2674BC6228D0572D00E31A20 /* EPWatchKitAppExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2690400928D5DA4100A823F5 /* EPWatchKitApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 261FC18F28B7771F007B4A4E /* EPWatchKitApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2696879028D10112002142BF /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696878F28D10112002142BF /* PriceView.swift */; };
-		2696879A28D26CD0002142BF /* PriceAreaSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879928D26CD0002142BF /* PriceAreaSettingsView.swift */; };
 		2696881728D477ED002142BF /* EPWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696881628D477ED002142BF /* EPWatchApp.swift */; };
 		2696883128D47C4B002142BF /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696883028D47C4B002142BF /* PriceView.swift */; };
 		2696883428D4801F002142BF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696883228D47F3B002142BF /* SettingsView.swift */; };
@@ -153,7 +152,6 @@
 		2674BC6C28D0572E00E31A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2696878F28D10112002142BF /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 		2696879128D1CD91002142BF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		2696879928D26CD0002142BF /* PriceAreaSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceAreaSettingsView.swift; sourceTree = "<group>"; };
 		2696879B28D3A126002142BF /* EPWatchKitApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EPWatchKitApp.entitlements; sourceTree = "<group>"; };
 		2696879C28D3A164002142BF /* EPWatchKitAppExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EPWatchKitAppExtension.entitlements; sourceTree = "<group>"; };
 		2696879F28D3A5D0002142BF /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS9.0.sdk/System/Library/Frameworks/WidgetKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -308,7 +306,6 @@
 		2696879828D26CBE002142BF /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				2696879928D26CD0002142BF /* PriceAreaSettingsView.swift */,
 				2696879128D1CD91002142BF /* SettingsView.swift */,
 			);
 			path = Settings;
@@ -414,6 +411,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 260787AA28D70B8D00FF2C33 /* Build configuration list for PBXNativeTarget "EPWatchWidgetExtension" */;
 			buildPhases = (
+				26BF385D2BD0447F002BC4A8 /* SwiftLint */,
 				2607879A28D70B8C00FF2C33 /* Sources */,
 				2607879B28D70B8C00FF2C33 /* Frameworks */,
 				2607879C28D70B8C00FF2C33 /* Resources */,
@@ -437,6 +435,7 @@
 			buildConfigurationList = 261FC1B628B77721007B4A4E /* Build configuration list for PBXNativeTarget "EPWatchKitApp" */;
 			buildPhases = (
 				261FC18D28B7771F007B4A4E /* Resources */,
+				26BF385E2BD04489002BC4A8 /* SwiftLint */,
 				261FC19628B77720007B4A4E /* Sources */,
 				261FC19728B77720007B4A4E /* Frameworks */,
 				2674BC7028D0572E00E31A20 /* Embed Foundation Extensions */,
@@ -461,6 +460,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2674BC7328D0572E00E31A20 /* Build configuration list for PBXNativeTarget "EPWatchKitAppExtension" */;
 			buildPhases = (
+				26BF385F2BD044A9002BC4A8 /* Swift Lint */,
 				2674BC5E28D0572D00E31A20 /* Sources */,
 				2674BC5F28D0572D00E31A20 /* Frameworks */,
 				2674BC6028D0572D00E31A20 /* Resources */,
@@ -483,6 +483,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2696881F28D477EE002142BF /* Build configuration list for PBXNativeTarget "EPWatch" */;
 			buildPhases = (
+				26BF385C2BD04465002BC4A8 /* SwiftLint */,
 				2696881028D477EC002142BF /* Sources */,
 				2696881128D477EC002142BF /* Frameworks */,
 				2696881228D477EC002142BF /* Resources */,
@@ -605,6 +606,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		261C7C9C293FCF71005618D8 /* Add git commit hash to plist */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -623,6 +625,7 @@
 		};
 		261C7C9D293FCFD5005618D8 /* Add git commit hash to plist */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -641,6 +644,7 @@
 		};
 		261C7C9E293FCFE7005618D8 /* Add git commit hash to plist */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -659,6 +663,7 @@
 		};
 		261C7C9F293FD018005618D8 /* Add git commit hash to plist */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -714,6 +719,82 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Look for a file named '.security_token' next to this .xcodeproj file\ntoken_file=.security_token\ntoken=\"$(cat $token_file 2>/dev/null)\"\nif [ \"$token\" ]; then\n  plutil -replace EntsoeSecurityToken -string $token \"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\nelse\n  echo \"error: Missing entsoe security token. Get a security token from <https://transparency.entsoe.eu/usrm/user/myAccountSettings>, then create a new file at $token_file that contains the security token.\"\nfi\n";
+		};
+		26BF385C2BD04465002BC4A8 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		26BF385D2BD0447F002BC4A8 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		26BF385E2BD04489002BC4A8 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		26BF385F2BD044A9002BC4A8 /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		26DAC0BB290268760079F66A /* Entsoe Security Token */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -775,7 +856,6 @@
 				26F28FDF2910782000D42DFB /* HostSyncManager.swift in Sources */,
 				261FC1A028B77720007B4A4E /* EPWatchKitApp.swift in Sources */,
 				2696879028D10112002142BF /* PriceView.swift in Sources */,
-				2696879A28D26CD0002142BF /* PriceAreaSettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

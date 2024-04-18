@@ -8,13 +8,13 @@
 import WidgetKit
 
 public struct PricePointTimelineEntry: TimelineEntry {
-    
+
     let pricePoint: PricePoint
     let prices: [PricePoint]
     let limits: PriceLimits
     let pricePresentation: PricePresentation
     let chartStyle: PriceChartStyle
-    
+
     public init(
         pricePoint: PricePoint,
         prices: [PricePoint],
@@ -28,19 +28,19 @@ public struct PricePointTimelineEntry: TimelineEntry {
         self.pricePresentation = pricePresentation
         self.chartStyle = chartStyle
     }
-    
+
     public var date: Date {
         pricePoint.date
     }
-    
+
     public func formattedPrice(style: FormattingStyle) -> String {
         pricePresentation.formattedPrice(pricePoint, style: style)
     }
-    
+
     public func formattedDateTimeInterval(style: FormattingStyle) -> String {
         pricePresentation.formattedDateTimeInterval(from: pricePoint, style: style)
     }
-    
+
     public static let mock = PricePointTimelineEntry(
         pricePoint: .mockPrice,
         prices: .mockPrices,
@@ -48,7 +48,7 @@ public struct PricePointTimelineEntry: TimelineEntry {
         pricePresentation: .init(),
         chartStyle: .lineInterpolated
     )
-    
+
     public static let mock2 = PricePointTimelineEntry(
         pricePoint: [PricePoint].mockPricesLow[8],
         prices: .mockPricesLow,
@@ -56,7 +56,7 @@ public struct PricePointTimelineEntry: TimelineEntry {
         pricePresentation: .init(),
         chartStyle: .lineInterpolated
     )
-    
+
     public static let mock3 = PricePointTimelineEntry(
         pricePoint: [PricePoint].mockPricesWithTomorrow[14],
         prices: .mockPricesWithTomorrow,

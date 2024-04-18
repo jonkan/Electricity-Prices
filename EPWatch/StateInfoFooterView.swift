@@ -9,12 +9,12 @@ import SwiftUI
 import EPWatchCore
 
 struct StateInfoFooterView: View {
-    
+
     let priceArea: PriceArea?
     let region: Region?
     let exchangeRate: ExchangeRate?
     var hideWithoutTaxesOrFeesDisclamer: Bool = false
-    
+
     var body: some View {
         Grid(alignment: .topLeading) {
             if let priceArea = priceArea, let region = region {
@@ -51,7 +51,7 @@ struct StateInfoFooterView: View {
         .font(.caption)
         .frame(maxWidth: .infinity)
     }
-    
+
 }
 
 struct StateInfoFooterView_Previews: PreviewProvider {

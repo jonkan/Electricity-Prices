@@ -123,4 +123,3 @@ private struct PriceLimitsSettingsViewPreview: View {
 #Preview {
     PriceLimitsSettingsViewPreview()
 }
-

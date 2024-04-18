@@ -26,6 +26,7 @@ public enum LogLevel {
     case debug, error
 }
 
+// swiftlint:disable cyclomatic_complexity
 public func LogError(
     _ error: Error?,
     file: StaticString = #file,
@@ -88,7 +89,7 @@ public func LogError(
    )
 }
 
-fileprivate let dateFormatter: DateFormatter = {
+private let dateFormatter: DateFormatter = {
     let df = DateFormatter()
     df.formatterBehavior = .behavior10_4
     df.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
@@ -132,8 +133,8 @@ private var logger: XCGLogger = {
     log.add(destination: systemDestination)
 
     // Create a file log destination
-    let bundleName = Bundle.main.infoDictionary!["CFBundleName"] as! String
-    let logFileName = "\(bundleName).log"
+    let bundleName = Bundle.main.infoDictionary?["CFBundleName"] as? String
+    let logFileName = "\(bundleName ?? "App").log"
     let logFileUrl = FileManager.default.logFilesDirectory().appending(path: logFileName)
     if !FileManager.default.fileExists(atPath: logFileUrl.path()) {
         try? FileManager.default.createDirectory(

@@ -88,7 +88,7 @@ struct PriceView: View {
         }
     }
 
-    @State private var selectionResetTimer : DispatchSourceTimer?
+    @State private var selectionResetTimer: DispatchSourceTimer?
     private func scheduleSelectionResetTimer(
         in timeout: DispatchTimeInterval,
         handler: @escaping () -> Void
@@ -129,4 +129,3 @@ struct PriceView_Previews: PreviewProvider {
         )
     }
 }
-

@@ -7,48 +7,49 @@
 
 import Foundation
 
+// swiftlint:disable type_body_length
 public enum Region: String, Codable, CaseIterable, Identifiable, Equatable {
 
-    case albania        //Albania (AL)
-    case austria        //Austria (AT)
-    case belgium        //Belgium (BE)
-    case bosnia         //Bosnia and Herz. (BA)
-    case bulgaria       //Bulgaria (BG)
-    case croatia        //Croatia (HR)
-    case cyprus         //Cyprus (CY)
-    case czech          //Czech Republic (CZ)
-    case denmark        //Denmark (DK)
-    case estonia        //Estonia (EE)
-    case finland        //Finland (FI)
-    case france         //France (FR)
-    case georgia        //Georgia (GE)
-    case germany        //Germany (DE)
-    case greece         //Greece (GR)
-    case hungary        //Hungary (HU)
-    case ireland        //Ireland (IE)
-    case italy          //Italy (IT)
-    case kosovo         //Kosovo (XK)
-    case latvia         //Latvia (LV)
-    case lithuania      //Lithuania (LT)
-    case luxembourg     //Luxembourg (LU)
-    case malta          //Malta (MT)
-    case moldova        //Moldova (MD)
-    case montenegro     //Montenegro (ME)
-    case netherlands    //Netherlands (NL)
-    case northMacedonia //North Macedonia (MK)
-    case norway         //Norway (NO)
-    case poland         //Poland (PL)
-    case portugal       //Portugal (PT)
-    case romania        //Romania (RO)
-    case serbia         //Serbia (RS)
-    case slovakia       //Slovakia (SK)
-    case slovenia       //Slovenia (SI)
-    case spain          //Spain (ES)
-    case sweden         //Sweden (SE)
-    case switzerland    //Switzerland (CH)
-    case turkey         //Turkey (TR)
-    case ukraine        //Ukraine (UA)
-    case unitedKingdom  //United Kingdom (UK)
+    case albania        // Albania (AL)
+    case austria        // Austria (AT)
+    case belgium        // Belgium (BE)
+    case bosnia         // Bosnia and Herz. (BA)
+    case bulgaria       // Bulgaria (BG)
+    case croatia        // Croatia (HR)
+    case cyprus         // Cyprus (CY)
+    case czech          // Czech Republic (CZ)
+    case denmark        // Denmark (DK)
+    case estonia        // Estonia (EE)
+    case finland        // Finland (FI)
+    case france         // France (FR)
+    case georgia        // Georgia (GE)
+    case germany        // Germany (DE)
+    case greece         // Greece (GR)
+    case hungary        // Hungary (HU)
+    case ireland        // Ireland (IE)
+    case italy          // Italy (IT)
+    case kosovo         // Kosovo (XK)
+    case latvia         // Latvia (LV)
+    case lithuania      // Lithuania (LT)
+    case luxembourg     // Luxembourg (LU)
+    case malta          // Malta (MT)
+    case moldova        // Moldova (MD)
+    case montenegro     // Montenegro (ME)
+    case netherlands    // Netherlands (NL)
+    case northMacedonia // North Macedonia (MK)
+    case norway         // Norway (NO)
+    case poland         // Poland (PL)
+    case portugal       // Portugal (PT)
+    case romania        // Romania (RO)
+    case serbia         // Serbia (RS)
+    case slovakia       // Slovakia (SK)
+    case slovenia       // Slovenia (SI)
+    case spain          // Spain (ES)
+    case sweden         // Sweden (SE)
+    case switzerland    // Switzerland (CH)
+    case turkey         // Turkey (TR)
+    case ukraine        // Ukraine (UA)
+    case unitedKingdom  // United Kingdom (UK)
 
     public static var allEnabled: [Region] {
         return Region.allCases.filter({ !$0.disabled })
@@ -56,66 +57,67 @@ public enum Region: String, Codable, CaseIterable, Identifiable, Equatable {
 
     /// These regions doesn't (at the time of writing) have any data, will they ever?
     public var disabled: Bool {
-        switch self {
-        case .albania: fallthrough
-        case .bosnia: fallthrough
-        case .cyprus: fallthrough
-        case .georgia: fallthrough
-        case .kosovo: fallthrough
-        case .malta: fallthrough
-        case .moldova: fallthrough
-        case .montenegro: fallthrough
-        case .northMacedonia: fallthrough
-        case .turkey: fallthrough
-        case .unitedKingdom:
-            return true
-        default:
-            return false
-        }
+        let disabledRegions: [Region] = [
+            .albania,
+            .bosnia,
+            .cyprus,
+            .georgia,
+            .kosovo,
+            .malta,
+            .moldova,
+            .montenegro,
+            .northMacedonia,
+            .turkey,
+            .unitedKingdom
+         ]
+        return disabledRegions.contains(self)
     }
 
     public var name: String {
+        func localized(_ key: String.LocalizationValue) -> String {
+            String(localized: key, bundle: .module, comment: "Region name")
+        }
         switch self {
-        case .albania:          return String(localized: "Albania", bundle: .module, comment: "Region name")
-        case .austria:          return String(localized: "Austria", bundle: .module, comment: "Region name")
-        case .belgium:          return String(localized: "Belgium", bundle: .module, comment: "Region name")
-        case .bosnia:           return String(localized: "Bosnia and Herzegovina", bundle: .module, comment: "Region name")
-        case .bulgaria:         return String(localized: "Bulgaria", bundle: .module, comment: "Region name")
-        case .croatia:          return String(localized: "Croatia", bundle: .module, comment: "Region name")
-        case .cyprus:           return String(localized: "Cyprus", bundle: .module, comment: "Region name")
-        case .czech:            return String(localized: "Czech Republic", bundle: .module, comment: "Region name")
-        case .denmark:          return String(localized: "Denmark", bundle: .module, comment: "Region name")
-        case .estonia:          return String(localized: "Estonia", bundle: .module, comment: "Region name")
-        case .finland:          return String(localized: "Finland", bundle: .module, comment: "Region name")
-        case .france:           return String(localized: "France", bundle: .module, comment: "Region name")
-        case .georgia:          return String(localized: "Georgia", bundle: .module, comment: "Region name")
-        case .germany:          return String(localized: "Germany", bundle: .module, comment: "Region name")
-        case .greece:           return String(localized: "Greece", bundle: .module, comment: "Region name")
-        case .hungary:          return String(localized: "Hungary", bundle: .module, comment: "Region name")
-        case .ireland:          return String(localized: "Ireland", bundle: .module, comment: "Region name")
-        case .italy:            return String(localized: "Italy", bundle: .module, comment: "Region name")
-        case .kosovo:           return String(localized: "Kosovo", bundle: .module, comment: "Region name")
-        case .latvia:           return String(localized: "Latvia", bundle: .module, comment: "Region name")
-        case .lithuania:        return String(localized: "Lithuania", bundle: .module, comment: "Region name")
-        case .luxembourg:       return String(localized: "Luxembourg", bundle: .module, comment: "Region name")
-        case .malta:            return String(localized: "Malta", bundle: .module, comment: "Region name")
-        case .moldova:          return String(localized: "Moldova", bundle: .module, comment: "Region name")
-        case .montenegro:       return String(localized: "Montenegro", bundle: .module, comment: "Region name")
-        case .netherlands:      return String(localized: "Netherlands", bundle: .module, comment: "Region name")
-        case .northMacedonia:   return String(localized: "North Macedonia", bundle: .module, comment: "Region name")
-        case .norway:           return String(localized: "Norway", bundle: .module, comment: "Region name")
-        case .poland:           return String(localized: "Poland", bundle: .module, comment: "Region name")
-        case .portugal:         return String(localized: "Portugal", bundle: .module, comment: "Region name")
-        case .romania:          return String(localized: "Romania", bundle: .module, comment: "Region name")
-        case .serbia:           return String(localized: "Serbia", bundle: .module, comment: "Region name")
-        case .slovakia:         return String(localized: "Slovakia", bundle: .module, comment: "Region name")
-        case .slovenia:         return String(localized: "Slovenia", bundle: .module, comment: "Region name")
-        case .spain:            return String(localized: "Spain", bundle: .module, comment: "Region name")
-        case .sweden:           return String(localized: "Sweden", bundle: .module, comment: "Region name")
-        case .switzerland:      return String(localized: "Switzerland", bundle: .module, comment: "Region name")
-        case .turkey:           return String(localized: "Turkey", bundle: .module, comment: "Region name")
-        case .ukraine:          return String(localized: "Ukraine", bundle: .module, comment: "Region name")
-        case .unitedKingdom:    return String(localized: "United Kingdom", bundle: .module, comment: "Region name")
+        case .albania:          return localized("Albania")
+        case .austria:          return localized("Austria")
+        case .belgium:          return localized("Belgium")
+        case .bosnia:           return localized("Bosnia and Herzegovina")
+        case .bulgaria:         return localized("Bulgaria")
+        case .croatia:          return localized("Croatia")
+        case .cyprus:           return localized("Cyprus")
+        case .czech:            return localized("Czech Republic")
+        case .denmark:          return localized("Denmark")
+        case .estonia:          return localized("Estonia")
+        case .finland:          return localized("Finland")
+        case .france:           return localized("France")
+        case .georgia:          return localized("Georgia")
+        case .germany:          return localized("Germany")
+        case .greece:           return localized("Greece")
+        case .hungary:          return localized("Hungary")
+        case .ireland:          return localized("Ireland")
+        case .italy:            return localized("Italy")
+        case .kosovo:           return localized("Kosovo")
+        case .latvia:           return localized("Latvia")
+        case .lithuania:        return localized("Lithuania")
+        case .luxembourg:       return localized("Luxembourg")
+        case .malta:            return localized("Malta")
+        case .moldova:          return localized("Moldova")
+        case .montenegro:       return localized("Montenegro")
+        case .netherlands:      return localized("Netherlands")
+        case .northMacedonia:   return localized("North Macedonia")
+        case .norway:           return localized("Norway")
+        case .poland:           return localized("Poland")
+        case .portugal:         return localized("Portugal")
+        case .romania:          return localized("Romania")
+        case .serbia:           return localized("Serbia")
+        case .slovakia:         return localized("Slovakia")
+        case .slovenia:         return localized("Slovenia")
+        case .spain:            return localized("Spain")
+        case .sweden:           return localized("Sweden")
+        case .switzerland:      return localized("Switzerland")
+        case .turkey:           return localized("Turkey")
+        case .ukraine:          return localized("Ukraine")
+        case .unitedKingdom:    return localized("United Kingdom")
         }
     }
 
@@ -310,7 +312,7 @@ public enum Region: String, Codable, CaseIterable, Identifiable, Equatable {
                 PriceArea(title: "NO2NSL", id: "BZN|NO2NSL", code: "50Y0JVU59B4JWQCU"),
                 PriceArea(title: "NO3", id: "BZN|NO3", code: "10YNO-3--------J"),
                 PriceArea(title: "NO4", id: "BZN|NO4", code: "10YNO-4--------9"),
-                PriceArea(title: "NO5", id: "BZN|NO5", code: "10Y1001A1001A48H"),
+                PriceArea(title: "NO5", id: "BZN|NO5", code: "10Y1001A1001A48H")
             ]
         case .poland:
             return [
@@ -331,7 +333,7 @@ public enum Region: String, Codable, CaseIterable, Identifiable, Equatable {
         case .slovakia:
             return [
                 PriceArea(title: "SK", id: "BZN|SK", code: "10YSK-SEPS-----K"),
-                PriceArea(title: "CZ+DE+SK", id: "BZN|CZ+DE+SK", code: "10YDOM-CZ-DE-SKK"), // Not working?
+                PriceArea(title: "CZ+DE+SK", id: "BZN|CZ+DE+SK", code: "10YDOM-CZ-DE-SKK") // Not working?
             ]
         case .slovenia:
             return [
@@ -346,7 +348,7 @@ public enum Region: String, Codable, CaseIterable, Identifiable, Equatable {
                 PriceArea(title: "SE1", id: "BZN|SE1", code: "10Y1001A1001A44P"),
                 PriceArea(title: "SE2", id: "BZN|SE2", code: "10Y1001A1001A45N"),
                 PriceArea(title: "SE3", id: "BZN|SE3", code: "10Y1001A1001A46L"),
-                PriceArea(title: "SE4", id: "BZN|SE4", code: "10Y1001A1001A47J"),
+                PriceArea(title: "SE4", id: "BZN|SE4", code: "10Y1001A1001A47J")
             ]
         case .switzerland:
             return [
@@ -391,4 +393,3 @@ public extension Array where Element == Region {
         }
     }
 }
-

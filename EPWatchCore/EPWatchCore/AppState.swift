@@ -11,6 +11,7 @@ import Combine
 import UIKit
 import WidgetKit
 
+// swiftlint:disable type_body_length
 @MainActor
 public class AppState: ObservableObject {
 
@@ -262,7 +263,9 @@ public class AppState: ObservableObject {
             // an attempt at updating provided it should be available and we haven't
             // tried recently (within 5 min).
             let tomorrowsPricesShouldBeAvailable = PricesAPI.shared.dateWhenTomorrowsPricesBecomeAvailable < .now
-            let timeIntervalSinceLastFetchAttempt = Date.now.timeIntervalSince(lastAttemptFetchingTomorrowsPrices ?? .distantPast)
+            let timeIntervalSinceLastFetchAttempt = Date.now.timeIntervalSince(
+                lastAttemptFetchingTomorrowsPrices ?? .distantPast
+            )
             if !tomorrowsPricesShouldBeAvailable {
                 Log("Update not needed, skip trying to fetch for tomorrow. Tomorrows prices not yet available.")
                 return

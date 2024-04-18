@@ -32,7 +32,7 @@ public struct PricePointTimelineProvider: TimelineProvider {
         return .mock
     }
 
-    public func getSnapshot(in context: Context, completion: @escaping (Entry) -> ()) {
+    public func getSnapshot(in context: Context, completion: @escaping (Entry) -> Void) {
         Task {
             do {
                 try await state.updatePricesIfNeeded()
@@ -60,7 +60,8 @@ public struct PricePointTimelineProvider: TimelineProvider {
         }
     }
 
-    public func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    // swiftlint:disable function_body_length
+    public func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
         let durationStart = Date()
         Log("Get timeline started")
         Task {
@@ -105,12 +106,13 @@ public struct PricePointTimelineProvider: TimelineProvider {
                     reloadDescription = "at end"
                     numberTriesFetchingPricesOfTomorrow = 0
                 } else if PricesAPI.shared.dateWhenTomorrowsPricesBecomeAvailable < .now {
+                    // swiftlint:disable:next line_length
                     Log("Don't have prices for tomorrow, even though time is after dateWhenTomorrowsPricesBecomeAvailable")
                     let delay = retryDelay(for: numberTriesFetchingPricesOfTomorrow)
                     let nextReload: Date = .now.addingTimeInterval(delay)
                     reloadPolicy = .after(nextReload)
                     reloadDescription = "after \(nextReload)"
-                    numberTriesFetchingPricesOfTomorrow = numberTriesFetchingPricesOfTomorrow + 1
+                    numberTriesFetchingPricesOfTomorrow += 1
                 } else {
                     reloadPolicy = .after(PricesAPI.shared.dateWhenTomorrowsPricesBecomeAvailable)
                     reloadDescription = "after \(PricesAPI.shared.dateWhenTomorrowsPricesBecomeAvailable)"
@@ -130,7 +132,7 @@ public struct PricePointTimelineProvider: TimelineProvider {
             } catch {
                 LogError("Timeline failure \(numberOfFailures): \(String(describing: error))")
                 let delay = retryDelay(for: numberOfFailures)
-                numberOfFailures = numberOfFailures + 1
+                numberOfFailures += 1
                 completion(Timeline(entries: [], policy: .after(.now.addingTimeInterval(delay))))
             }
             let duration = Date().timeIntervalSince(durationStart).rounded()

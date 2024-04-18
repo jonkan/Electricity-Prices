@@ -81,7 +81,11 @@ struct DayAheadPrices: Codable {
                 continue
             }
             for p in period.point {
-                let start = Calendar.current.date(byAdding: .hour, value: p.position - 1, to: period.timeInterval.start)!
+                let start = Calendar.current.date(
+                    byAdding: .hour,
+                    value: p.position - 1,
+                    to: period.timeInterval.start
+                )!
                 let MWperkW = 0.001
                 let price = p.priceAmount * rate.rate * MWperkW
                 let pricePoint = PricePoint(

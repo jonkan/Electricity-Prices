@@ -133,4 +133,3 @@ struct SupportSettingsView_Previews: PreviewProvider {
             .environmentObject(ShareLogsState.mocked)
     }
 }
-

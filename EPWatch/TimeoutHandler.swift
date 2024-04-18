@@ -11,13 +11,12 @@ import EPWatchCore
 @MainActor
 class TimeoutHandler {
 
-    private var timeoutTimer : DispatchSourceTimer?
+    private var timeoutTimer: DispatchSourceTimer?
 
     func set(
         timeout: DispatchTimeInterval,
         handler: @escaping () -> Void
     ) {
-        //Log("Start timeout: \(timeout)")
         if timeoutTimer != nil {
             timeoutTimer?.cancel()
         }
@@ -47,7 +46,6 @@ class TimeoutHandler {
     }
 
     func cancel() {
-        //Log("Cancel timeout")
         timeoutTimer?.cancel()
         timeoutTimer = nil
     }

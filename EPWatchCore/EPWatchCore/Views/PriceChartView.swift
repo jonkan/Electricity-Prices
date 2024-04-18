@@ -9,6 +9,7 @@ import SwiftUI
 import Charts
 import WidgetKit
 
+// swiftlint:disable type_body_length
 public struct PriceChartView: View {
 
     @Environment(\.widgetRenderingMode) private var widgetRenderingMode
@@ -63,7 +64,7 @@ public struct PriceChartView: View {
         .widgetAccentable()
         .chartYAxis {
             if let axisYValues = axisYValues {
-                // TODO: Figure out how to present subdivided units (e.g. Cent)
+                // Figure out how to present subdivided units (e.g. Cent)
                 if useCurrencyAxisFormat && pricePresentation.currencyPresentation != .subdivided {
                     AxisMarks(
                         format: currencyAxisFormat,
@@ -271,7 +272,7 @@ public struct PriceChartView: View {
         }
     }
 
-    @State private var selectionResetTimer : DispatchSourceTimer?
+    @State private var selectionResetTimer: DispatchSourceTimer?
     private func scheduleSelectionResetTimer(
         in timeout: DispatchTimeInterval,
         handler: @escaping () -> Void

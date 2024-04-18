@@ -43,7 +43,6 @@ public struct AppStorageCodable<Value: Codable>: DynamicProperty {
                 return _wrappedValue
             }
         }
-        
         set {
             do {
                 let data = try encoder.encode(newValue)

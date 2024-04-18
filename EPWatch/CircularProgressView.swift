@@ -5,7 +5,6 @@
 //  Created by Jonas Bromö on 2022-11-01.
 //
 
-
 import SwiftUI
 
 struct CircularProgressView: View {
@@ -56,4 +55,3 @@ struct CircularProgressView_Previews: PreviewProvider {
         }
     }
 }
-

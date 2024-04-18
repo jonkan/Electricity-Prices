@@ -39,4 +39,3 @@ struct PricePointRectangularWidgetView_Previews: PreviewProvider {
         PricePointRectangularWidgetView(entry: .mock)
     }
 }
-

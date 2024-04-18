@@ -40,4 +40,3 @@ struct PricePointLargeWidgetView_Previews: PreviewProvider {
         PricePointLargeWidgetView(entry: .mock)
     }
 }
-

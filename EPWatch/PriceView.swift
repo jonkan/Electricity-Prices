@@ -67,4 +67,3 @@ struct PriceView_Previews: PreviewProvider {
         )
     }
 }
-

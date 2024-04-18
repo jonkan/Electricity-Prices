@@ -30,4 +30,3 @@ struct PricePointInlineWidgetView_Previews: PreviewProvider {
         PricePointInlineWidgetView(entry: .mock)
     }
 }
-

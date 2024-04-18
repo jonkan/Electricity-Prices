@@ -13,7 +13,7 @@ let package = Package(
         .library(
             name: "EPWatchCore",
             targets: ["EPWatchCore"]
-        ),
+        )
     ],
     dependencies: [
         .package(url: "https://github.com/CoreOffice/XMLCoder.git", from: "0.14.0"),
@@ -35,7 +35,7 @@ let package = Package(
             dependencies: ["EPWatchCore"],
             path: "EPWatchCoreTests",
             resources: [
-                .process("Resources"),
+                .process("Resources")
             ]
         )
     ]

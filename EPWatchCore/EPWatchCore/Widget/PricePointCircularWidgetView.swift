@@ -34,4 +34,3 @@ struct PricePointCircularWidgetView_Previews: PreviewProvider {
         PricePointCircularWidgetView(entry: .mock)
     }
 }
-
