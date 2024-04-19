@@ -24,12 +24,6 @@ public struct PricePointRectangularWidgetView: View {
             pricePresentation: entry.pricePresentation,
             chartStyle: entry.chartStyle
         )
-        .chartYScale(
-            range: .plotDimension(
-                startPadding: 0,
-                endPadding: 6
-            )
-        )
     }
 
 }

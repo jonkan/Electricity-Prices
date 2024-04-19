@@ -46,7 +46,7 @@ public struct PricePointTimelineEntry: TimelineEntry {
         prices: .mockPrices,
         limits: .mockLimits,
         pricePresentation: .init(),
-        chartStyle: .lineInterpolated
+        chartStyle: .bar
     )
 
     public static let mock2 = PricePointTimelineEntry(
@@ -54,14 +54,32 @@ public struct PricePointTimelineEntry: TimelineEntry {
         prices: .mockPricesLow,
         limits: PriceLimits(.SEK, high: 3.2, low: 1.4),
         pricePresentation: .init(),
-        chartStyle: .lineInterpolated
+        chartStyle: .bar
     )
 
-    public static let mock3 = PricePointTimelineEntry(
-        pricePoint: [PricePoint].mockPricesWithTomorrow[14],
-        prices: .mockPricesWithTomorrow,
-        limits: .mockLimits,
-        pricePresentation: .init(),
-        chartStyle: .lineInterpolated
-    )
+    public static let mockTodayAndComingNight: PricePointTimelineEntry = {
+        let prices: [PricePoint] = .mockPricesWithTomorrow
+        let price = prices[14]
+        let entry = PricePointTimelineEntry(
+            pricePoint: price,
+            prices: prices.filterForViewMode(.todayAndComingNight, at: price.date),
+            limits: .mockLimits,
+            pricePresentation: .init(),
+            chartStyle: .bar
+        )
+        return entry
+    }()
+
+    public static let mockTodayAndTomorrow: PricePointTimelineEntry = {
+        let prices: [PricePoint] = .mockPricesWithTomorrow
+        let price = prices[14]
+        let entry = PricePointTimelineEntry(
+            pricePoint: price,
+            prices: prices.filterForViewMode(.todayAndTomorrow, at: price.date),
+            limits: .mockLimits,
+            pricePresentation: .init(),
+            chartStyle: .bar
+        )
+        return entry
+    }()
 }

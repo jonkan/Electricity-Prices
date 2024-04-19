@@ -36,17 +36,19 @@ public struct PricePointTimelineProvider: TimelineProvider {
         Task {
             do {
                 try await state.updatePricesIfNeeded()
-                let prices = await state.prices
+                let allPrices = await state.prices
                 let limits = await state.priceLimits
                 let pricePresentation = await state.pricePresentation
                 let chartStyle = await state.chartStyle
+                let chartViewMode = await state.chartViewMode
 
-                guard let price = prices.price(for: .now) else {
+                guard let price = allPrices.price(for: .now) else {
                     throw NSError(0, "Missing current pricePoint")
                 }
+                let prices = allPrices.filterForViewMode(chartViewMode, at: price.date, using: calendar)
                 let entry = PricePointTimelineEntry(
                     pricePoint: price,
-                    prices: prices.filterInSameDay(as: price.date, using: calendar),
+                    prices: prices,
                     limits: limits,
                     pricePresentation: pricePresentation,
                     chartStyle: chartStyle

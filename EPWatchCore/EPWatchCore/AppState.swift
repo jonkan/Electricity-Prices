@@ -345,6 +345,17 @@ extension AppState {
         s.priceArea = Region.sweden.priceAreas.first
         s.prices = .mockPricesWithTomorrow
         s.exchangeRate = .mockedSEK
+        s.chartViewMode = .todayAndComingNight
+        return s
+    }()
+
+    public static let mockedTodayAndTomorrow: AppState = {
+        let s = AppState()
+        s.currentPrice = .mockPrice
+        s.region = .sweden
+        s.priceArea = Region.sweden.priceAreas.first
+        s.prices = .mockPricesWithTomorrow
+        s.exchangeRate = .mockedSEK
         s.chartViewMode = .todayAndTomorrow
         return s
     }()

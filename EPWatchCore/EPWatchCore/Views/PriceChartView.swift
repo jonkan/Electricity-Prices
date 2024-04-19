@@ -13,6 +13,8 @@ import WidgetKit
 public struct PriceChartView: View {
 
     @Environment(\.widgetRenderingMode) private var widgetRenderingMode
+    @Environment(\.widgetFamily) private var widgetFamily
+
     let currentPrice: PricePoint
     let prices: [PricePoint]
     let priceRange: ClosedRange<Double>
@@ -22,7 +24,6 @@ public struct PriceChartView: View {
     let useCurrencyAxisFormat: Bool
     let isChartGestureEnabled: Bool
     let showPriceLimitsLines: Bool
-
     @Binding var selectedPrice: PricePoint?
     var displayedPrice: PricePoint {
         return selectedPrice ?? currentPrice
@@ -53,64 +54,91 @@ public struct PriceChartView: View {
 
     public var body: some View {
         GeometryReader { geometry in
-            Group {
-                switch chartStyle {
-                case .lineInterpolated: lineChart(geometry, interpolated: true)
-                case .line: lineChart(geometry, interpolated: false)
-                case .bar: barChart(geometry)
+            chart(geometry)
+                .widgetAccentable()
+                .chartYAxis {
+                    chartYAxis()
                 }
-            }
+                .chartXAxis {
+                    chartXAxis(compact: geometry.size.width < 150)
+                }
+                .chartOverlay { chart in
+                    chartGestureOverlay(chart: chart, geometry: geometry)
+                }
         }
-        .widgetAccentable()
-        .chartYAxis {
-            if let axisYValues = axisYValues {
-                // Figure out how to present subdivided units (e.g. Cent)
-                if useCurrencyAxisFormat && pricePresentation.currencyPresentation != .subdivided {
-                    AxisMarks(
-                        format: currencyAxisFormat,
-                        values: axisYValues
-                    )
-                } else {
-                    AxisMarks(values: axisYValues)
-                }
+    }
+
+    @ViewBuilder
+    private func chart(_ geometry: GeometryProxy) -> some View {
+        switch chartStyle {
+        case .lineInterpolated: lineChart(geometry, interpolated: true)
+        case .line: lineChart(geometry, interpolated: false)
+        case .bar: barChart(geometry)
+        }
+    }
+
+    @AxisContentBuilder
+    private func chartYAxis() -> some AxisContent {
+#if os(watchOS)
+        // This avoids the axis labels from being clipped on the rectangular watch widget
+        let preset: AxisMarkPreset = widgetFamily == .accessoryRectangular ? .extended : .aligned
+#else
+        let preset: AxisMarkPreset = .aligned
+#endif
+        if let axisYValues = axisYValues {
+            // Figure out how to present subdivided units (e.g. Cent)
+            if useCurrencyAxisFormat && pricePresentation.currencyPresentation != .subdivided {
+                AxisMarks(format: currencyAxisFormat, preset: preset, values: axisYValues)
             } else {
-                if useCurrencyAxisFormat && pricePresentation.currencyPresentation != .subdivided {
-                    AxisMarks(format: currencyAxisFormat)
-                } else {
-                    AxisMarks()
-                }
+                AxisMarks(preset: preset, values: axisYValues)
+            }
+        } else {
+            if useCurrencyAxisFormat && pricePresentation.currencyPresentation != .subdivided {
+                AxisMarks(format: currencyAxisFormat, preset: preset)
+            } else {
+                AxisMarks(preset: preset)
             }
         }
-        .chartXAxis {
-            AxisMarks(values: .automatic) { value in
-                if let date = value.as(Date.self) {
-                    let calendar: Calendar = .current
-                    let hour = calendar.component(.hour, from: date)
+    }
+
+    @AxisContentBuilder
+    private func chartXAxis(compact: Bool) -> some AxisContent {
+        let isShowing2Days = prices.count >= 48
+        AxisMarks(
+            values: isShowing2Days && compact ? .automatic(desiredCount: 2) : .automatic
+        ) { value in
+            if let date = value.as(Date.self) {
+                let calendar: Calendar = .current
+                let hour = calendar.component(.hour, from: date)
+                if isShowing2Days {
                     AxisValueLabel {
                         if hour == 0 {
                             if calendar.isDateInToday(date) {
                                 Text("Today", bundle: .module)
+                                    .minimumScaleFactor(0.01)
                             } else if calendar.isDateInTomorrow(date) {
                                 Text("Tomorrow", bundle: .module)
+                                    .minimumScaleFactor(0.01)
                             } else {
                                 Text(date, format: .dateTime.month(.abbreviated).day())
                             }
                         } else {
-                            Text(date, format: .dateTime.hour(.defaultDigits(amPM: .omitted)))
+                            Text(date, format: .dateTime.hour(.twoDigits(amPM: .omitted)))
                         }
                     }
+                } else {
+                    AxisValueLabel()
+                }
 
-                    if hour == 0 {
-                        AxisGridLine(stroke: StrokeStyle(lineWidth: 1))
-                        AxisTick(stroke: StrokeStyle(lineWidth: 1))
-                    } else {
-                        AxisGridLine()
-                        AxisTick()
-                    }
+                if hour == 0 {
+                    AxisGridLine(stroke: StrokeStyle(lineWidth: 1))
+                    AxisTick(stroke: StrokeStyle(lineWidth: 1))
+                } else {
+                    AxisGridLine()
+                    AxisTick()
                 }
             }
         }
-        .chartOverlay(content: chartGestureOverlay)
     }
 
     private func lineChart(_ geometry: GeometryProxy, interpolated: Bool) -> some View {
@@ -234,42 +262,45 @@ public struct PriceChartView: View {
         return .currency(code: currentPrice.currency.code).precision(.significantDigits(2))
     }
 
-    private func chartGestureOverlay(_ proxy: ChartProxy) -> some View {
-        GeometryReader { geometry in
-            Color.clear.contentShape(Rectangle())
-                .gesture(
-                    DragGesture()
-                        .onChanged { value in
-                            let origin = geometry[proxy.plotAreaFrame].origin
-                            let size = geometry[proxy.plotAreaFrame].size
-                            let location = CGPoint(
-                                x: max(origin.x, min(value.location.x - origin.x, size.width)),
-                                y: max(origin.y, min(value.location.y - origin.y, size.height))
-                            )
-                            guard let selectedDate = proxy.value(atX: location.x, as: Date.self) else {
-                                Log("Failed to find selected X value")
-                                return
-                            }
+    private func chartGestureOverlay(chart: ChartProxy, geometry: GeometryProxy) -> some View {
+        Color.clear
+            .contentShape(Rectangle())
+            .gesture(
+                dragGesture(chart: chart, geometry: geometry),
+                including: isChartGestureEnabled ? .all : .subviews
+            )
+    }
 
-                            let secondsToFirst = selectedDate.timeIntervalSince(prices.first?.date ?? .distantPast)
-                            let selectedIndex = Int(round(secondsToFirst / 60 / 60))
-                            let price = prices[safe: selectedIndex]
-
-                            if selectedPrice != price {
-                                selectedPrice = price
-                                SelectionHaptics.shared.changed()
-                            }
-                            cancelSelectionResetTimer()
-                        }
-                        .onEnded { _ in
-                            scheduleSelectionResetTimer(in: .milliseconds(500)) {
-                                selectedPrice = nil
-                                SelectionHaptics.shared.ended()
-                            }
-                        },
-                    including: isChartGestureEnabled ? .all : .subviews
+    private func dragGesture(chart: ChartProxy, geometry: GeometryProxy) -> some Gesture {
+        DragGesture()
+            .onChanged { value in
+                let origin = geometry[chart.plotAreaFrame].origin
+                let size = geometry[chart.plotAreaFrame].size
+                let location = CGPoint(
+                    x: max(origin.x, min(value.location.x - origin.x, size.width)),
+                    y: max(origin.y, min(value.location.y - origin.y, size.height))
                 )
-        }
+                guard let selectedDate = chart.value(atX: location.x, as: Date.self) else {
+                    Log("Failed to find selected X value")
+                    return
+                }
+
+                let secondsToFirst = selectedDate.timeIntervalSince(prices.first?.date ?? .distantPast)
+                let selectedIndex = Int(round(secondsToFirst / 60 / 60))
+                let price = prices[safe: selectedIndex]
+
+                if selectedPrice != price {
+                    selectedPrice = price
+                    SelectionHaptics.shared.changed()
+                }
+                cancelSelectionResetTimer()
+            }
+            .onEnded { _ in
+                scheduleSelectionResetTimer(in: .milliseconds(500)) {
+                    selectedPrice = nil
+                    SelectionHaptics.shared.ended()
+                }
+            }
     }
 
     @State private var selectionResetTimer: DispatchSourceTimer?
