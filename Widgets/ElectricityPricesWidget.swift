@@ -10,7 +10,11 @@ import SwiftUI
 import EPWatchCore
 
 struct ElectricityPricesWidget: Widget {
-    let kind: String = "Electricity Prices Widget"
+#if os(watchOS)
+    let kind: String = "EPWatchKitAppExtension"
+#else
+    let kind: String = "EPWatchWidgetExtension"
+#endif
     private let state: AppState
 
     @MainActor
