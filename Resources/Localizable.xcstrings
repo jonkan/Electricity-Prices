@@ -11,6 +11,16 @@
         }
       }
     },
+    "\n" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "\n"
+          }
+        }
+      }
+    },
     " " : {
       "localizations" : {
         "sv" : {
@@ -147,12 +157,22 @@
         }
       }
     },
-    "Adjust the price to account for taxes and fees." : {
+    "Adjust the price by adding VAT and fees to estimate what you actually pay for your electricity." : {
       "localizations" : {
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Justera priset för att ta hänsyn till skatter och avgifter."
+            "value" : "Justera priset genom att lägga till moms och avgifter för att estimera vad du faktiskt betalar för din el."
+          }
+        }
+      }
+    },
+    "Adjust the thresholds for what you consider low and high prices." : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Justera gränserna för vad du anser vara ett högt och lågt pris."
           }
         }
       }
@@ -247,7 +267,7 @@
         }
       }
     },
-    "Electricity price" : {
+    "Electricity Prices" : {
       "localizations" : {
         "sv" : {
           "stringUnit" : {
@@ -293,6 +313,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Växelkurs"
+          }
+        }
+      }
+    },
+    "Expand your chart to include all of tomorrow’s prices." : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utöka grafen till att inkludera alla morgondagens priser."
           }
         }
       }
@@ -417,6 +447,26 @@
         }
       }
     },
+    "One-Time Purchase" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Engångsköp"
+          }
+        }
+      }
+    },
+    "Pay once and enjoy lifetime access." : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Betal en gång och njut av livstidsåtkomst."
+          }
+        }
+      }
+    },
     "per kWh" : {
       "localizations" : {
         "sv" : {
@@ -437,7 +487,17 @@
         }
       }
     },
-    "Price adjustment" : {
+    "Power up your experience by unlocking all Pro features!" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skruva upp effekten på din upplevelse genom att låsa upp alla Pro-funktioner!"
+          }
+        }
+      }
+    },
+    "Price Adjustment" : {
       "localizations" : {
         "sv" : {
           "stringUnit" : {
@@ -457,7 +517,7 @@
         }
       }
     },
-    "Price limits" : {
+    "Price Limits" : {
       "localizations" : {
         "sv" : {
           "stringUnit" : {
@@ -507,12 +567,32 @@
         }
       }
     },
+    "Restore Purchases" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Återställ köp"
+          }
+        }
+      }
+    },
     "Retry" : {
       "localizations" : {
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Försök igen"
+          }
+        }
+      }
+    },
+    "Settings" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inställningar"
           }
         }
       }
@@ -617,7 +697,27 @@
         }
       }
     },
-    "View mode" : {
+    "Unlock Pro" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lås upp Pro"
+          }
+        }
+      }
+    },
+    "Unlock Pro!" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lås upp Pro!"
+          }
+        }
+      }
+    },
+    "View Mode" : {
       "localizations" : {
         "sv" : {
           "stringUnit" : {
@@ -633,6 +733,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Väntar på att klockan ska skicka loggfiler"
+          }
+        }
+      }
+    },
+    "Your purchase could not be verified by the App Store." : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ditt köp kunde inte verifieras av App Store."
           }
         }
       }

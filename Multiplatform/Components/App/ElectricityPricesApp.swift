@@ -13,6 +13,7 @@ struct ElectricityPricesApp: App {
 
     @Environment(\.scenePhase) private var scenePhase
     private let appState: AppState
+    private let store: Store
     private let watchSyncManager: WatchSyncManager
     private let shareLogsState: ShareLogsState
 
@@ -21,6 +22,7 @@ struct ElectricityPricesApp: App {
         LogDebugInformation()
 #endif
         appState = .shared
+        store = Store()
         watchSyncManager = WatchSyncManager(appState: appState)
         shareLogsState = ShareLogsState(watchSyncManager: watchSyncManager)
     }
@@ -29,6 +31,7 @@ struct ElectricityPricesApp: App {
         WindowGroup {
             RootView()
                 .environmentObject(appState)
+                .environmentObject(store)
                 .environmentObject(watchSyncManager)
                 .environmentObject(shareLogsState)
         }

@@ -23,7 +23,7 @@ struct SettingsView: View {
                     displayValue: { $0.title }
                 )
                 BasicSettingsNavigationLink(
-                    title: String(localized: "View mode"),
+                    title: String(localized: "View Mode"),
                     values: PriceChartViewMode.allCases,
                     currentValue: $state.chartViewMode,
                     displayValue: { $0.title }

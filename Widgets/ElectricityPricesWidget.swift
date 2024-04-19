@@ -51,7 +51,7 @@ struct ElectricityPricesWidget: Widget {
             WidgetView(entry: entry)
                 .unredacted()
         }
-        .configurationDisplayName("Electricity price")
+        .configurationDisplayName("Electricity Prices")
         .description("Displays the current electricity price")
         .supportedFamilies(families)
         .contentMarginsDisabled()

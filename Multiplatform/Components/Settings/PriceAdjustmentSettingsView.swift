@@ -27,7 +27,7 @@ struct PriceAdjustmentSettingsView: View {
                     Text("Enabled")
                 }
             } footer: {
-                Text("Adjust the price to account for taxes and fees.")
+                Text("Adjust the price by adding VAT and fees to estimate what you actually pay for your electricity.")
             }
             if pricePresentation.adjustment.isEnabled {
                 feesSection

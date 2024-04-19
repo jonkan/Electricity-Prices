@@ -52,7 +52,7 @@ struct RootView: View {
                     }
                 }
             }
-            .navigationTitle("Electricity price")
+            .navigationTitle("Electricity Prices")
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button {
@@ -96,11 +96,13 @@ struct RootView: View {
 #Preview {
     RootView()
         .environmentObject(AppState.mocked)
+        .environmentObject(Store.mockedProVersion)
         .environmentObject(WatchSyncManager.mocked)
 }
 
 #Preview("Error") {
     RootView()
         .environmentObject(AppState.mockedWithError)
+        .environmentObject(Store.mockedInitial)
         .environmentObject(WatchSyncManager.mocked)
 }

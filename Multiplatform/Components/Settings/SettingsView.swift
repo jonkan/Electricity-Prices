@@ -11,8 +11,10 @@ import EPWatchCore
 struct SettingsView: View {
 
     @EnvironmentObject private var state: AppState
+    @EnvironmentObject private var store: Store
     @EnvironmentObject private var watchSyncManager: WatchSyncManager
     @Environment(\.dismiss) private var dismiss
+    @State private var isShowingPurchaseView: Bool = false
 
     var body: some View {
         NavigationStack {
@@ -25,35 +27,43 @@ struct SettingsView: View {
                         currentValue: $state.chartStyle,
                         displayValue: { $0.title }
                     )
-                    BasicSettingsNavigationLink(
-                        title: String(localized: "View mode"),
-                        values: PriceChartViewMode.allCases,
-                        currentValue: $state.chartViewMode,
-                        displayValue: { $0.title }
-                    )
+                    proFeature {
+                        BasicSettingsNavigationLink(
+                            title: String(localized: "View Mode"),
+                            values: PriceChartViewMode.allCases,
+                            currentValue: $state.chartViewMode,
+                            displayValue: { $0.title }
+                        )
+                    }
                     if let currentPrice = state.currentPrice {
-                        NavigationLink("Price limits") {
-                            PriceLimitsSettingsView(
-                                limits: $state.priceLimits,
-                                currentPrice: currentPrice,
-                                prices: state.prices.filterForViewMode(state.chartViewMode),
-                                pricePresentation: state.pricePresentation,
-                                chartStyle: state.chartStyle
-                            )
-                            .navigationTitle("Price limits")
+                        proFeature {
+                            NavigationLink {
+                                PriceLimitsSettingsView(
+                                    limits: $state.priceLimits,
+                                    currentPrice: currentPrice,
+                                    prices: state.prices.filterForViewMode(state.chartViewMode),
+                                    pricePresentation: state.pricePresentation,
+                                    chartStyle: state.chartStyle
+                                )
+                                .navigationTitle("Price Limits")
+                            } label: {
+                                Text("Price Limits")
+                            }
                         }
-                        NavigationLink {
-                            PriceAdjustmentSettingsView(
-                                pricePresentation: $state.pricePresentation,
-                                currentPrice: currentPrice,
-                                currency: state.currency
-                            )
-                            .navigationTitle("Price adjustment")
-                        } label: {
-                            HStack {
-                                Text("Price adjustment")
-                                Spacer()
-                                Text(state.pricePresentation.adjustment.isEnabled ? "Enabled" : "Disabled")
+                        proFeature {
+                            NavigationLink {
+                                PriceAdjustmentSettingsView(
+                                    pricePresentation: $state.pricePresentation,
+                                    currentPrice: currentPrice,
+                                    currency: state.currency
+                                )
+                                .navigationTitle("Price Adjustment")
+                            } label: {
+                                HStack {
+                                    Text("Price Adjustment")
+                                    Spacer()
+                                    Text(state.pricePresentation.adjustment.isEnabled ? "Enabled" : "Disabled")
+                                }
                             }
                         }
                     }
@@ -80,6 +90,15 @@ struct SettingsView: View {
                         }
                     }
                 }
+                if !store.hasPurchasedProVersion {
+                    Section {
+                        Button {
+                            isShowingPurchaseView = true
+                        } label: {
+                            Text("Unlock Pro")
+                        }
+                    }
+                }
                 Section {
                     NavigationLink {
                         SupportSettingsView()
@@ -89,12 +108,38 @@ struct SettingsView: View {
                     }
                 }
             }
+            .navigationTitle("Settings")
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button("Done") {
                         dismiss()
                     }
                 }
+            }
+            .sheet(isPresented: $isShowingPurchaseView) {
+                if store.hasPurchasedProVersion {
+                    Log("Purchase view dismissed: Pro purchased")
+                } else {
+                    Log("Purchase view dismissed: No purchase")
+                }
+            } content: {
+                PurchaseView()
+            }
+        }
+    }
+
+    @ViewBuilder
+    private func proFeature<Content: View>(@ViewBuilder content: () -> Content) -> some View {
+        if store.hasPurchasedProVersion {
+            content()
+        } else {
+            HStack {
+                Image(systemName: "lock")
+                content()
+                    .disabled(true)
+            }
+            .onTapGesture {
+                isShowingPurchaseView = true
             }
         }
     }
@@ -107,6 +152,7 @@ struct SettingsView_Previews: PreviewProvider {
             SettingsView()
         }
         .environmentObject(AppState.mocked)
+        .environmentObject(Store.mockedInitial)
         .environmentObject(WatchSyncManager.mocked)
     }
 }

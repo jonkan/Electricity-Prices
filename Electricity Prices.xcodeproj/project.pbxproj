@@ -11,6 +11,10 @@
 		260787A028D70B8C00FF2C33 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2674BC6528D0572D00E31A20 /* SwiftUI.framework */; };
 		260787A328D70B8C00FF2C33 /* ElectricityPricesWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787A228D70B8C00FF2C33 /* ElectricityPricesWidget.swift */; };
 		260787A928D70B8D00FF2C33 /* Widgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2607879E28D70B8C00FF2C33 /* Widgets.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		261087622BD27788008ED50B /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261087612BD27788008ED50B /* Store.swift */; };
+		261087642BD294E5008ED50B /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261087632BD294E4008ED50B /* PurchaseView.swift */; };
+		261087662BD29DC3008ED50B /* Products.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 261087652BD29DC3008ED50B /* Products.storekit */; };
+		261087682BD29F7E008ED50B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261087672BD29F7E008ED50B /* StoreKit.framework */; };
 		2612513B29127047003D9C15 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879128D1CD91002142BF /* SettingsView.swift */; };
 		261FC1A028B77720007B4A4E /* ElectricityPricesWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC19F28B77720007B4A4E /* ElectricityPricesWatchApp.swift */; };
 		264E989528DB2BA600E02F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2696881A28D477EE002142BF /* Assets.xcassets */; };
@@ -134,6 +138,10 @@
 		260787A628D70B8D00FF2C33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		260787C428D72EA600FF2C33 /* Widgets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Widgets.entitlements; sourceTree = "<group>"; };
 		261FC18F28B7771F007B4A4E /* Electricity Prices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Electricity Prices.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		261087612BD27788008ED50B /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		261087632BD294E4008ED50B /* PurchaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
+		261087652BD29DC3008ED50B /* Products.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Products.storekit; sourceTree = "<group>"; };
+		261087672BD29F7E008ED50B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		261FC19F28B77720007B4A4E /* ElectricityPricesWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityPricesWatchApp.swift; sourceTree = "<group>"; };
 		261FC1A128B77720007B4A4E /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		261FC1AC28B77721007B4A4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -194,6 +202,7 @@
 			files = (
 				26C082D0292576160065DEFE /* EPWatchCore in Frameworks */,
 				26A2C6312AC6D9E200DDEBD5 /* AsyncAlgorithms in Frameworks */,
+				261087682BD29F7E008ED50B /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				2696881628D477ED002142BF /* ElectricityPricesApp.swift */,
+				261087612BD27788008ED50B /* Store.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -242,6 +252,7 @@
 			children = (
 				26AC446429112D5D00B86B1E /* CircularProgressView.swift */,
 				2696883028D47C4B002142BF /* PriceView.swift */,
+				261087632BD294E4008ED50B /* PurchaseView.swift */,
 				2696881828D477ED002142BF /* RootView.swift */,
 				265733302907291700CE9A4C /* StateInfoFooterView.swift */,
 			);
@@ -334,8 +345,9 @@
 		2696882328D47864002142BF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2696882428D47888002142BF /* Multiplatform.entitlements */,
 				2696882228D4784A002142BF /* Info.plist */,
+				2696882428D47888002142BF /* Multiplatform.entitlements */,
+				261087652BD29DC3008ED50B /* Products.storekit */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -351,6 +363,7 @@
 		26C71B1928C1469D00C2DC59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				261087672BD29F7E008ED50B /* StoreKit.framework */,
 				2674BC6328D0572D00E31A20 /* WidgetKit.framework */,
 				2674BC6528D0572D00E31A20 /* SwiftUI.framework */,
 			);
@@ -534,6 +547,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				261087662BD29DC3008ED50B /* Products.storekit in Resources */,
 				26A2C6292AC6C28100DDEBD5 /* InfoPlist.xcstrings in Resources */,
 				26EC4A1428D9C52C004DD8EB /* Assets.xcassets in Resources */,
 				26A2C6242AC6C28000DDEBD5 /* Localizable.xcstrings in Resources */,
@@ -749,10 +763,12 @@
 				26E009632BB6CFF6004A7241 /* PriceLimitsSettingsView.swift in Sources */,
 				26FAB1592BDAD3D600C08FBB /* LogFileURL.swift in Sources */,
 				26AC447229126B6400B86B1E /* RootView.swift in Sources */,
+				261087642BD294E5008ED50B /* PurchaseView.swift in Sources */,
 				26F28FDD2910778300D42DFB /* ShareLogsState.swift in Sources */,
 				265733312907291700CE9A4C /* StateInfoFooterView.swift in Sources */,
 				2696883428D4801F002142BF /* SettingsView.swift in Sources */,
 				26AC446529112D5D00B86B1E /* CircularProgressView.swift in Sources */,
+				261087622BD27788008ED50B /* Store.swift in Sources */,
 				26F28FDC2910778300D42DFB /* SupportSettingsView.swift in Sources */,
 				26DF95642ABD8207001636BA /* PriceAdjustmentSettingsView.swift in Sources */,
 				26DF95662ABDBEFC001636BA /* WatchSessionActivator.swift in Sources */,
@@ -985,7 +1001,7 @@
 				DEVELOPMENT_TEAM = MDUSC5XAF4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Watch/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Electricity price";
+				INFOPLIST_KEY_CFBundleDisplayName = "Electricity Prices";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = se.j0nas.EPWatch;
@@ -1018,7 +1034,7 @@
 				DEVELOPMENT_TEAM = MDUSC5XAF4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Watch/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Electricity price";
+				INFOPLIST_KEY_CFBundleDisplayName = "Electricity Prices";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = se.j0nas.EPWatch;
@@ -1052,7 +1068,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Multiplatform/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Electricity price";
+				INFOPLIST_KEY_CFBundleDisplayName = "Electricity Prices";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1088,7 +1104,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Multiplatform/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Electricity price";
+				INFOPLIST_KEY_CFBundleDisplayName = "Electricity Prices";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
