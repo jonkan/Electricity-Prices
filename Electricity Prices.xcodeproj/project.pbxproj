@@ -219,6 +219,35 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		2610875C2BD2768A008ED50B /* WatchSync */ = {
+			isa = PBXGroup;
+			children = (
+				26DF95672ABDC601001636BA /* TimeoutHandler.swift */,
+				26DF95652ABDBEFC001636BA /* WatchSessionActivator.swift */,
+				26A2C62D2AC6C60600DDEBD5 /* WatchSyncManager.swift */,
+			);
+			path = WatchSync;
+			sourceTree = "<group>";
+		};
+		2610875D2BD27702008ED50B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2696881628D477ED002142BF /* ElectricityPricesApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2610875E2BD27717008ED50B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				26AC446429112D5D00B86B1E /* CircularProgressView.swift */,
+				2696883028D47C4B002142BF /* PriceView.swift */,
+				2696881828D477ED002142BF /* RootView.swift */,
+				265733302907291700CE9A4C /* StateInfoFooterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		261FC18428B7771F007B4A4E = {
 			isa = PBXGroup;
 			children = (
@@ -267,14 +296,10 @@
 		2673D4282BD249A900140D0D /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				26AC446429112D5D00B86B1E /* CircularProgressView.swift */,
-				2696881628D477ED002142BF /* ElectricityPricesApp.swift */,
-				2696883028D47C4B002142BF /* PriceView.swift */,
-				2696881828D477ED002142BF /* RootView.swift */,
-				265733302907291700CE9A4C /* StateInfoFooterView.swift */,
-				26DF95672ABDC601001636BA /* TimeoutHandler.swift */,
-				26DF95652ABDBEFC001636BA /* WatchSessionActivator.swift */,
-				26A2C62D2AC6C60600DDEBD5 /* WatchSyncManager.swift */,
+				2610875D2BD27702008ED50B /* App */,
+				26DF95622ABD81F2001636BA /* Settings */,
+				2610875E2BD27717008ED50B /* Views */,
+				2610875C2BD2768A008ED50B /* WatchSync */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -294,7 +319,6 @@
 				2673D4282BD249A900140D0D /* Components */,
 				2696881C28D477EE002142BF /* Preview Content */,
 				2696882328D47864002142BF /* Resources */,
-				26DF95622ABD81F2001636BA /* Settings */,
 			);
 			path = Multiplatform;
 			sourceTree = "<group>";
