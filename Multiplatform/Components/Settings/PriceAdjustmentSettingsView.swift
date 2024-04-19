@@ -43,6 +43,9 @@ struct PriceAdjustmentSettingsView: View {
                 calculationSection
             }
         }
+        .onAppear {
+            UITextField.appearance().clearButtonMode = .whileEditing
+        }
     }
 
     var feesSection: some View {
