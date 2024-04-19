@@ -49,6 +49,7 @@ struct ElectricityPricesWidget: Widget {
             provider: PricePointTimelineProvider(state: state)
         ) { entry in
             WidgetView(entry: entry)
+                .unredacted()
         }
         .configurationDisplayName("Electricity price")
         .description("Displays the current electricity price")
