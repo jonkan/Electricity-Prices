@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "261FC18E28B7771F007B4A4E"
-               BuildableName = "Electricity Prices (Watch).app"
+               BuildableName = "Electricity Prices.app"
                BlueprintName = "Electricity Prices (Watch)"
                ReferencedContainer = "container:Electricity Prices.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "261FC18E28B7771F007B4A4E"
-            BuildableName = "Electricity Prices (Watch).app"
+            BuildableName = "Electricity Prices.app"
             BlueprintName = "Electricity Prices (Watch)"
             ReferencedContainer = "container:Electricity Prices.xcodeproj">
          </BuildableReference>
@@ -69,7 +69,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "261FC18E28B7771F007B4A4E"
-            BuildableName = "Electricity Prices (Watch).app"
+            BuildableName = "Electricity Prices.app"
             BlueprintName = "Electricity Prices (Watch)"
             ReferencedContainer = "container:Electricity Prices.xcodeproj">
          </BuildableReference>

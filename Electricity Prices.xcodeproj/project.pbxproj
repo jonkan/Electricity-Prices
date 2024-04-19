@@ -18,7 +18,7 @@
 		265733312907291700CE9A4C /* StateInfoFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265733302907291700CE9A4C /* StateInfoFooterView.swift */; };
 		2673D42A2BD24AAE00140D0D /* WidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2673D4292BD24AAE00140D0D /* WidgetsBundle.swift */; };
 		2673D42C2BD2562C00140D0D /* Widgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2607879E28D70B8C00FF2C33 /* Widgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2690400928D5DA4100A823F5 /* Electricity Prices (Watch).app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 261FC18F28B7771F007B4A4E /* Electricity Prices (Watch).app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2690400928D5DA4100A823F5 /* Electricity Prices.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 261FC18F28B7771F007B4A4E /* Electricity Prices.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2696879028D10112002142BF /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696878F28D10112002142BF /* PriceView.swift */; };
 		2696881728D477ED002142BF /* ElectricityPricesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696881628D477ED002142BF /* ElectricityPricesApp.swift */; };
 		2696883128D47C4B002142BF /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696883028D47C4B002142BF /* PriceView.swift */; };
@@ -101,7 +101,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				2690400928D5DA4100A823F5 /* Electricity Prices (Watch).app in Embed Watch Content */,
+				2690400928D5DA4100A823F5 /* Electricity Prices.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,7 +133,7 @@
 		260787A228D70B8C00FF2C33 /* ElectricityPricesWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityPricesWidget.swift; sourceTree = "<group>"; };
 		260787A628D70B8D00FF2C33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		260787C428D72EA600FF2C33 /* Widgets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Widgets.entitlements; sourceTree = "<group>"; };
-		261FC18F28B7771F007B4A4E /* Electricity Prices (Watch).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Electricity Prices (Watch).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		261FC18F28B7771F007B4A4E /* Electricity Prices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Electricity Prices.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		261FC19F28B77720007B4A4E /* ElectricityPricesWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityPricesWatchApp.swift; sourceTree = "<group>"; };
 		261FC1A128B77720007B4A4E /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		261FC1AC28B77721007B4A4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -264,7 +264,7 @@
 		261FC18C28B7771F007B4A4E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				261FC18F28B7771F007B4A4E /* Electricity Prices (Watch).app */,
+				261FC18F28B7771F007B4A4E /* Electricity Prices.app */,
 				2696881428D477EC002142BF /* Electricity Prices.app */,
 				2607879E28D70B8C00FF2C33 /* Widgets.appex */,
 			);
@@ -429,7 +429,7 @@
 				26C082D3292576270065DEFE /* EPWatchCore */,
 			);
 			productName = "EPWatch WatchKit App";
-			productReference = 261FC18F28B7771F007B4A4E /* Electricity Prices (Watch).app */;
+			productReference = 261FC18F28B7771F007B4A4E /* Electricity Prices.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2696881328D477EC002142BF /* Electricity Prices */ = {
@@ -996,7 +996,7 @@
 				);
 				MARKETING_VERSION = 1.14;
 				PRODUCT_BUNDLE_IDENTIFIER = se.j0nas.EPWatch.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Electricity Prices";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1029,7 +1029,7 @@
 				);
 				MARKETING_VERSION = 1.14;
 				PRODUCT_BUNDLE_IDENTIFIER = se.j0nas.EPWatch.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Electricity Prices";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
