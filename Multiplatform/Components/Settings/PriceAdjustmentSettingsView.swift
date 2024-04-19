@@ -14,9 +14,16 @@ struct PriceAdjustmentSettingsView: View {
     let currentPrice: PricePoint
     let currency: Currency
 
-    static let multiplierFormatter: NumberFormatter = {
+    static let multiplierNumberFormatter: NumberFormatter = {
         let nf = NumberFormatter()
         nf.maximumFractionDigits = 2
+        nf.zeroSymbol = ""
+        return nf
+    }()
+
+    static let addendFormatter: NumberFormatter = {
+        let nf = NumberFormatter()
+        nf.zeroSymbol = ""
         return nf
     }()
 
@@ -79,7 +86,7 @@ struct PriceAdjustmentSettingsView: View {
             TextField(
                 "Fee",
                 value: subdividedAddend,
-                format: .number,
+                formatter: Self.addendFormatter,
                 prompt: Text("Fee")
             )
             .keyboardType(.decimalPad)
@@ -94,7 +101,7 @@ struct PriceAdjustmentSettingsView: View {
                 TextField(
                     "Multiplier",
                     value: $pricePresentation.adjustment.multiplier,
-                    formatter: Self.multiplierFormatter,
+                    formatter: Self.multiplierNumberFormatter,
                     prompt: Text("Multiplier")
                 )
                 .keyboardType(.decimalPad)
