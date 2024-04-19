@@ -1,7 +1,7 @@
-<h1 align="center">EPWatch</h1>
+<h1 align="center">Electricity Prices</h1>
 
 <div align="center">
-<img alt="EPWatch" height="125" src="./Resources/Assets.xcassets/AppIcon.appiconset/icon.png">
+<img alt="Electricity Prices" height="125" src="./Resources/Assets.xcassets/AppIcon.appiconset/icon.png">
 </div>
 
 <p align="center">
@@ -9,12 +9,12 @@ App displaying the current electricity price,<br> with widgets for Apple Watch, 
 </p>
 <br>
 
-EPWatch is an open source app that allows you to see the current electricity price on your Apple Watch, iPhone and iPad.<br>
+Electricity Prices is an open source app that allows you to see the current electricity price on your Apple Watch, iPhone and iPad.<br>
 I created this app mainly for the Apple Watch, as I wanted such an app for myself and couldn't find one at the time. I added iPhone/iPad support because it was easy and I wanted try out the new iOS 16 lock screen widgets.
 
 ## Download
 
-EPWatch is available on the [App Store](https://apps.apple.com/us/app/elpriset-widget/id1644399828?platform=appleWatch).
+Electricity Prices is available on the [App Store](https://apps.apple.com/us/app/elpriset-widget/id1644399828?platform=appleWatch).
 
 [![Electricity price - Widget](./Resources/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg)](https://apps.apple.com/us/app/elpriset-widget/id1644399828?platform=appleWatch)
 

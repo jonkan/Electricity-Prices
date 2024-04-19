@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "1530"
-   version = "1.7">
+   version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2696881328D477EC002142BF"
-               BuildableName = "EPWatch.app"
-               BlueprintName = "EPWatch"
-               ReferencedContainer = "container:EPWatch.xcodeproj">
+               BuildableName = "Electricity Prices.app"
+               BlueprintName = "Electricity Prices"
+               ReferencedContainer = "container:Electricity Prices.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "261FC18E28B7771F007B4A4E"
-               BuildableName = "EPWatchKitApp.app"
-               BlueprintName = "EPWatchKitApp"
-               ReferencedContainer = "container:EPWatch.xcodeproj">
+               BuildableName = "Electricity Prices (Watch).app"
+               BlueprintName = "Electricity Prices (Watch)"
+               ReferencedContainer = "container:Electricity Prices.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2696881328D477EC002142BF"
-            BuildableName = "EPWatch.app"
-            BlueprintName = "EPWatch"
-            ReferencedContainer = "container:EPWatch.xcodeproj">
+            BuildableName = "Electricity Prices.app"
+            BlueprintName = "Electricity Prices"
+            ReferencedContainer = "container:Electricity Prices.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2696881328D477EC002142BF"
-            BuildableName = "EPWatch.app"
-            BlueprintName = "EPWatch"
-            ReferencedContainer = "container:EPWatch.xcodeproj">
+            BuildableName = "Electricity Prices.app"
+            BlueprintName = "Electricity Prices"
+            ReferencedContainer = "container:Electricity Prices.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

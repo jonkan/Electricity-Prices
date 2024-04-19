@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "1530"
+   wasCreatedForAppExtension = "YES"
    version = "2.0">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +15,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "261FC18E28B7771F007B4A4E"
-               BuildableName = "EPWatchKitApp.app"
-               BlueprintName = "EPWatchKitApp"
-               ReferencedContainer = "container:EPWatch.xcodeproj">
+               BlueprintIdentifier = "2607879D28D70B8C00FF2C33"
+               BuildableName = "Widgets.appex"
+               BlueprintName = "Widgets"
+               ReferencedContainer = "container:Electricity Prices.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +29,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2696881328D477EC002142BF"
-               BuildableName = "EPWatch.app"
-               BlueprintName = "EPWatch"
-               ReferencedContainer = "container:EPWatch.xcodeproj">
+               BlueprintIdentifier = "261FC18E28B7771F007B4A4E"
+               BuildableName = "Electricity Prices (Watch).app"
+               BlueprintName = "Electricity Prices (Watch)"
+               ReferencedContainer = "container:Electricity Prices.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,43 +47,69 @@
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      selectedDebuggerIdentifier = ""
+      selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       launchStyle = "0"
+      askForAppToLaunch = "Yes"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
-      launchAutomaticallySubstyle = "32">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      launchAutomaticallySubstyle = "2">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2607879D28D70B8C00FF2C33"
+            BuildableName = "Widgets.appex"
+            BlueprintName = "Widgets"
+            ReferencedContainer = "container:Electricity Prices.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "261FC18E28B7771F007B4A4E"
-            BuildableName = "EPWatchKitApp.app"
-            BlueprintName = "EPWatchKitApp"
-            ReferencedContainer = "container:EPWatch.xcodeproj">
+            BuildableName = "Electricity Prices (Watch).app"
+            BlueprintName = "Electricity Prices (Watch)"
+            ReferencedContainer = "container:Electricity Prices.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "_XCWidgetKind"
+            value = ""
+            isEnabled = "NO">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "_XCWidgetDefaultView"
+            value = "timeline"
+            isEnabled = "NO">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "_XCWidgetFamily"
+            value = "accessoryRectangular"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      debugDocumentVersioning = "YES"
-      launchAutomaticallySubstyle = "32">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      debugDocumentVersioning = "YES">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "261FC18E28B7771F007B4A4E"
-            BuildableName = "EPWatchKitApp.app"
-            BlueprintName = "EPWatchKitApp"
-            ReferencedContainer = "container:EPWatch.xcodeproj">
+            BuildableName = "Electricity Prices (Watch).app"
+            BlueprintName = "Electricity Prices (Watch)"
+            ReferencedContainer = "container:Electricity Prices.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

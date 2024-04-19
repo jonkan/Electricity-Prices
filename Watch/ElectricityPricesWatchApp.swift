@@ -1,6 +1,6 @@
 //
-//  EPWatchApp.swift
-//  EPWatchKitApp
+//  ElectricityPricesWatchApp.swift
+//  ElectricityPricesWatchApp
 //
 //  Created by Jonas Bromö on 2022-08-25.
 //
@@ -9,7 +9,7 @@ import SwiftUI
 import EPWatchCore
 
 @main
-struct EPWatchKitApp: App {
+struct ElectricityPricesWatchApp: App {
 
     @Environment(\.scenePhase) private var scenePhase
     private let hostSyncManager: HostSyncManager

@@ -1,6 +1,6 @@
 //
 //  HostSyncManager.swift
-//  EPWatchKitApp
+//  ElectricityPricesWatchApp
 //
 //  Created by Jonas Bromö on 2022-10-28.
 //

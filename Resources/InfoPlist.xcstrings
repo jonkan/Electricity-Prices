@@ -45,6 +45,12 @@
             "state" : "new",
             "value" : ""
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
         }
       }
     }

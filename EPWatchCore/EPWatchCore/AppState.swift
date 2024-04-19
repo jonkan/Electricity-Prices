@@ -154,6 +154,9 @@ public class AppState: ObservableObject {
                 priceArea = Region.sweden.priceAreas[2]
             }
         }
+        if priceArea == nil {
+            priceArea = region?.priceAreas.first
+        }
 
         invalidateAndUpdatePricesCancellable = invalidateAndUpdatePricesSubject
             .debounce(for: .milliseconds(250), scheduler: RunLoop.main)
