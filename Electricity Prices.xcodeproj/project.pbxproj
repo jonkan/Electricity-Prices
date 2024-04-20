@@ -15,6 +15,8 @@
 		261087642BD294E5008ED50B /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261087632BD294E4008ED50B /* PurchaseView.swift */; };
 		261087662BD29DC3008ED50B /* Products.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 261087652BD29DC3008ED50B /* Products.storekit */; };
 		261087682BD29F7E008ED50B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261087672BD29F7E008ED50B /* StoreKit.framework */; };
+		2610877F2BD432FA008ED50B /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2610877E2BD432FA008ED50B /* UITests.swift */; };
+		261087882BD43386008ED50B /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261087872BD43386008ED50B /* SnapshotHelper.swift */; };
 		2612513B29127047003D9C15 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879128D1CD91002142BF /* SettingsView.swift */; };
 		261FC1A028B77720007B4A4E /* ElectricityPricesWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC19F28B77720007B4A4E /* ElectricityPricesWatchApp.swift */; };
 		264E989528DB2BA600E02F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2696881A28D477EE002142BF /* Assets.xcassets */; };
@@ -59,6 +61,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2607879D28D70B8C00FF2C33;
 			remoteInfo = EPWatchWidgetExtensionExtension;
+		};
+		261087822BD432FA008ED50B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 261FC18528B7771F007B4A4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2696881328D477EC002142BF;
+			remoteInfo = "Electricity Prices";
 		};
 		2673D42D2BD259F700140D0D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -137,11 +146,14 @@
 		260787A228D70B8C00FF2C33 /* ElectricityPricesWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityPricesWidget.swift; sourceTree = "<group>"; };
 		260787A628D70B8D00FF2C33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		260787C428D72EA600FF2C33 /* Widgets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Widgets.entitlements; sourceTree = "<group>"; };
-		261FC18F28B7771F007B4A4E /* Electricity Prices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Electricity Prices.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		261087612BD27788008ED50B /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		261087632BD294E4008ED50B /* PurchaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
 		261087652BD29DC3008ED50B /* Products.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Products.storekit; sourceTree = "<group>"; };
 		261087672BD29F7E008ED50B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		2610877C2BD432FA008ED50B /* Electricity Prices UI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Electricity Prices UI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2610877E2BD432FA008ED50B /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
+		261087872BD43386008ED50B /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
+		261FC18F28B7771F007B4A4E /* Electricity Prices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Electricity Prices.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		261FC19F28B77720007B4A4E /* ElectricityPricesWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityPricesWatchApp.swift; sourceTree = "<group>"; };
 		261FC1A128B77720007B4A4E /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		261FC1AC28B77721007B4A4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -185,6 +197,13 @@
 				26C082D2292576200065DEFE /* EPWatchCore in Frameworks */,
 				260787A028D70B8C00FF2C33 /* SwiftUI.framework in Frameworks */,
 				2607879F28D70B8C00FF2C33 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		261087792BD432FA008ED50B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +278,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		2610877D2BD432FA008ED50B /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				261087872BD43386008ED50B /* SnapshotHelper.swift */,
+				2610877E2BD432FA008ED50B /* UITests.swift */,
+			);
+			path = UITests;
+			sourceTree = "<group>";
+		};
 		261FC18428B7771F007B4A4E = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +294,7 @@
 				260787A128D70B8C00FF2C33 /* Widgets */,
 				261FC19328B7771F007B4A4E /* Watch */,
 				26EC4A1528D9C54E004DD8EB /* Resources */,
+				2610877D2BD432FA008ED50B /* UITests */,
 				26C71B1928C1469D00C2DC59 /* Frameworks */,
 				26AA887329256FBB00BA2B02 /* Packages */,
 				261FC18C28B7771F007B4A4E /* Products */,
@@ -278,6 +307,7 @@
 				261FC18F28B7771F007B4A4E /* Electricity Prices.app */,
 				2696881428D477EC002142BF /* Electricity Prices.app */,
 				2607879E28D70B8C00FF2C33 /* Widgets.appex */,
+				2610877C2BD432FA008ED50B /* Electricity Prices UI Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -419,6 +449,24 @@
 			productReference = 2607879E28D70B8C00FF2C33 /* Widgets.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		2610877B2BD432FA008ED50B /* Electricity Prices UI Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 261087842BD432FA008ED50B /* Build configuration list for PBXNativeTarget "Electricity Prices UI Tests" */;
+			buildPhases = (
+				261087782BD432FA008ED50B /* Sources */,
+				261087792BD432FA008ED50B /* Frameworks */,
+				2610877A2BD432FA008ED50B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				261087832BD432FA008ED50B /* PBXTargetDependency */,
+			);
+			name = "Electricity Prices UI Tests";
+			productName = "Electricity Prices UI Tests";
+			productReference = 2610877C2BD432FA008ED50B /* Electricity Prices UI Tests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		261FC18E28B7771F007B4A4E /* Electricity Prices (Watch) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 261FC1B628B77721007B4A4E /* Build configuration list for PBXNativeTarget "Electricity Prices (Watch)" */;
@@ -481,11 +529,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
+				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					2607879D28D70B8C00FF2C33 = {
 						CreatedOnToolsVersion = 14.0;
+					};
+					2610877B2BD432FA008ED50B = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 2696881328D477EC002142BF;
 					};
 					261FC18E28B7771F007B4A4E = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -518,6 +570,7 @@
 				2696881328D477EC002142BF /* Electricity Prices */,
 				261FC18E28B7771F007B4A4E /* Electricity Prices (Watch) */,
 				2607879D28D70B8C00FF2C33 /* Widgets */,
+				2610877B2BD432FA008ED50B /* Electricity Prices UI Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -530,6 +583,13 @@
 				26A2C62A2AC6C28100DDEBD5 /* InfoPlist.xcstrings in Resources */,
 				264E989528DB2BA600E02F65 /* Assets.xcassets in Resources */,
 				26A2C6252AC6C28000DDEBD5 /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2610877A2BD432FA008ED50B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -743,6 +803,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		261087782BD432FA008ED50B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2610877F2BD432FA008ED50B /* UITests.swift in Sources */,
+				261087882BD43386008ED50B /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		261FC19628B77720007B4A4E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -786,6 +855,11 @@
 			platformFilter = ios;
 			target = 2607879D28D70B8C00FF2C33 /* Widgets */;
 			targetProxy = 260787A728D70B8D00FF2C33 /* PBXContainerItemProxy */;
+		};
+		261087832BD432FA008ED50B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2696881328D477EC002142BF /* Electricity Prices */;
+			targetProxy = 261087822BD432FA008ED50B /* PBXContainerItemProxy */;
 		};
 		2673D42E2BD259F700140D0D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -863,6 +937,47 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,4";
+			};
+			name = Release;
+		};
+		261087852BD432FA008ED50B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MDUSC5XAF4;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "se.j0nas.Electricity-Prices-UI-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Electricity Prices";
+			};
+			name = Debug;
+		};
+		261087862BD432FA008ED50B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MDUSC5XAF4;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "se.j0nas.Electricity-Prices-UI-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Electricity Prices";
 			};
 			name = Release;
 		};
@@ -1134,6 +1249,15 @@
 			buildConfigurations = (
 				260787AB28D70B8D00FF2C33 /* Debug */,
 				260787AC28D70B8D00FF2C33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		261087842BD432FA008ED50B /* Build configuration list for PBXNativeTarget "Electricity Prices UI Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				261087852BD432FA008ED50B /* Debug */,
+				261087862BD432FA008ED50B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

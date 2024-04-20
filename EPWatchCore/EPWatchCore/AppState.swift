@@ -140,10 +140,6 @@ public class AppState: ObservableObject {
         Log("App version: \(AppInfo.version) (\(AppInfo.build)), \(AppInfo.commit)")
         Log("System version: \(AppInfo.systemVersion)")
 
-        if !isSwiftUIPreview() {
-            updatePricesIfNeeded()
-        }
-
         if region == nil {
             let currentRegionId = Locale.current.region?.identifier
             if let r = Region.allEnabled.first(where: { $0.id == currentRegionId }) {
@@ -157,6 +153,19 @@ public class AppState: ObservableObject {
         if priceArea == nil {
             priceArea = region?.priceAreas.first
         }
+
+#if DEBUG
+        if isRunningForSnapshots() {
+            prices = .mockPrices
+            region = .sweden
+            priceArea = Region.sweden.priceAreas[2]
+            chartViewMode = .todayAndTomorrow
+        } else if !isSwiftUIPreview() {
+            updatePricesIfNeeded()
+        }
+#else
+        updatePricesIfNeeded()
+#endif
 
         invalidateAndUpdatePricesCancellable = invalidateAndUpdatePricesSubject
             .debounce(for: .milliseconds(250), scheduler: RunLoop.main)
@@ -235,7 +244,13 @@ public class AppState: ObservableObject {
         }
     }
 
+    // swiftlint:disable:next function_body_length
     public func updatePricesIfNeeded() async throws {
+#if DEBUG
+        guard !isRunningForSnapshots() || !isSwiftUIPreview() else {
+            return
+        }
+#endif
         guard priceArea != nil else {
             Log("No price area set yet")
             currentPrice = nil
@@ -304,11 +319,6 @@ public class AppState: ObservableObject {
         async let dayAheadPrices = try PricesAPI.shared.downloadDayAheadPrices(for: priceArea)
         async let rate = try currentExchangeRate()
         let prices = try await dayAheadPrices.prices(using: rate)
-#if DEBUG
-        if ProcessInfo.processInfo.environment["SHOW_MOCKED_PRICES"] == "true" {
-            return .mockPrices
-        }
-#endif
         return prices
     }
 
