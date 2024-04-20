@@ -58,7 +58,7 @@ struct PurchaseView: View {
                     )
                     row(
                         title: "One-Time Purchase",
-                        description: "Pay once and enjoy lifetime access.",
+                        description: "Pay once and enjoy lifetime access to all features.",
                         animationPhase: 4
                     )
                 }

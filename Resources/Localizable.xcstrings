@@ -457,12 +457,12 @@
         }
       }
     },
-    "Pay once and enjoy lifetime access." : {
+    "Pay once and enjoy lifetime access to all features." : {
       "localizations" : {
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Betal en gång och njut av livstidsåtkomst."
+            "value" : "Betala en gång och njut av livstidsåtkomst till alla funktioner."
           }
         }
       }
