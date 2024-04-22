@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct BasicSettingsView<SettingsValue: Identifiable & Equatable>: View {
+public struct BasicSettingsView<SettingsValue: Identifiable<String> & Equatable>: View {
 
     let values: [SettingsValue]
     @Binding var currentValue: SettingsValue?
@@ -39,6 +39,7 @@ public struct BasicSettingsView<SettingsValue: Identifiable & Equatable>: View {
                         }
                     }
                 }
+                .accessibilityIdentifier(value.id)
             }
         }
     }

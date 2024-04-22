@@ -373,6 +373,11 @@ public enum Region: String, Codable, CaseIterable, Identifiable, Equatable {
         }
     }
 
+    public static var current: Region? {
+        let currentRegionId = Locale.current.region?.identifier
+        return allEnabled.first(where: { $0.id == currentRegionId })
+    }
+
     var suggestedCurrency: Currency {
         switch self {
         case .sweden: return .SEK

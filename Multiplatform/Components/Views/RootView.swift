@@ -62,6 +62,7 @@ struct RootView: View {
                             .bold()
                             .foregroundColor(.primary)
                     }
+                    .accessibilityIdentifier("settings")
                 }
             }
             .sheet(isPresented: $showsSettings) {

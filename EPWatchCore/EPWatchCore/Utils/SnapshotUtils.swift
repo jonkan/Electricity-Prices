@@ -7,6 +7,6 @@
 
 import Foundation
 
-func isRunningForSnapshots() -> Bool {
+public func isRunningForSnapshots() -> Bool {
     UserDefaults.standard.bool(forKey: "FASTLANE_SNAPSHOT")
 }

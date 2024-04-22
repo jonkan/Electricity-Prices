@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct BasicSettingsNavigationLink<SettingsValue: Identifiable & Equatable>: View {
+public struct BasicSettingsNavigationLink<SettingsValue: Identifiable<String> & Equatable>: View {
 
     let title: String
     let values: [SettingsValue]

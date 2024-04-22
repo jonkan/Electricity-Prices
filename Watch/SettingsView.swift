@@ -22,12 +22,14 @@ struct SettingsView: View {
                     currentValue: $state.chartStyle,
                     displayValue: { $0.title }
                 )
+                .accessibilityIdentifier("chart")
                 BasicSettingsNavigationLink(
                     title: String(localized: "View Mode"),
                     values: PriceChartViewMode.allCases,
                     currentValue: $state.chartViewMode,
                     displayValue: { $0.title }
                 )
+                .accessibilityIdentifier("viewMode")
             }
         }
     }

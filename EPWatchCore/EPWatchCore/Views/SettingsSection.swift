@@ -21,6 +21,7 @@ public struct SettingsSection: View {
                 currentValue: $state.region,
                 displayValue: { $0.name }
             )
+            .accessibilityIdentifier("region")
             if let region = state.region {
                 BasicSettingsNavigationLink(
                     title: String(localized: "Price area", bundle: .module),
@@ -28,6 +29,7 @@ public struct SettingsSection: View {
                     currentValue: $state.priceArea,
                     displayValue: { $0.title }
                 )
+                .accessibilityIdentifier("priceArea")
             }
             BasicSettingsNavigationLink(
                 title: String(localized: "Currency", bundle: .module),
@@ -35,6 +37,7 @@ public struct SettingsSection: View {
                 currentValue: $state.currency,
                 displayValue: { $0.name }
             )
+            .accessibilityIdentifier("currency")
             BasicSettingsNavigationLink(
                 title: String(localized: "Unit", bundle: .module),
                 values: CurrencyPresentation.allCases,
@@ -46,6 +49,7 @@ public struct SettingsSection: View {
                     }
                 }
             )
+            .accessibilityIdentifier("unit")
         } footer: {
             switch state.pricePresentation.currencyPresentation {
             case .automatic:

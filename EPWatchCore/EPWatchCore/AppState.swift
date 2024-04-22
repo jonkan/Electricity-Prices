@@ -140,11 +140,10 @@ public class AppState: ObservableObject {
         Log("App version: \(AppInfo.version) (\(AppInfo.build)), \(AppInfo.commit)")
         Log("System version: \(AppInfo.systemVersion)")
 
-        if region == nil {
-            let currentRegionId = Locale.current.region?.identifier
-            if let r = Region.allEnabled.first(where: { $0.id == currentRegionId }) {
-                region = r
-                priceArea = r.priceAreas.first
+        if region == nil || isRunningForSnapshots() {
+            if let currentRetion = Region.current {
+                region = currentRetion
+                priceArea = currentRetion.priceAreas.first
             } else {
                 region = .sweden
                 priceArea = Region.sweden.priceAreas[2]
@@ -153,19 +152,6 @@ public class AppState: ObservableObject {
         if priceArea == nil {
             priceArea = region?.priceAreas.first
         }
-
-#if DEBUG
-        if isRunningForSnapshots() {
-            prices = .mockPrices
-            region = .sweden
-            priceArea = Region.sweden.priceAreas[2]
-            chartViewMode = .todayAndTomorrow
-        } else if !isSwiftUIPreview() {
-            updatePricesIfNeeded()
-        }
-#else
-        updatePricesIfNeeded()
-#endif
 
         invalidateAndUpdatePricesCancellable = invalidateAndUpdatePricesSubject
             .debounce(for: .milliseconds(250), scheduler: RunLoop.main)
@@ -183,6 +169,20 @@ public class AppState: ObservableObject {
         if lastUpgradeCheck.compare("1.10", options: .numeric) == .orderedAscending {
             pricePresentation.currencyPresentation = currencyPresentation
             lastUpgradeCheck = AppInfo.version
+        }
+
+        if isRunningForSnapshots() {
+            prices = .mockPricesWithTomorrow
+            currentPrice = prices.price(for: .now)
+            chartStyle = .bar
+            chartViewMode = .todayAndComingNight
+            currency = Region.current?.suggestedCurrency ?? .EUR
+            currencyPresentation = .automatic
+            priceLimits = PriceLimits(.SEK, high: 3.5, low: 2.0)
+            objectWillChange.send()
+            reloadAllTimelines()
+        } else if !isSwiftUIPreview() {
+            updatePricesIfNeeded()
         }
     }
 
@@ -209,7 +209,7 @@ public class AppState: ObservableObject {
     }
 
     private func invalidateAndUpdatePrices() {
-        guard !isSwiftUIPreview() else {
+        guard !isSwiftUIPreview() && !isRunningForSnapshots() else {
             return
         }
         Task {
@@ -246,11 +246,9 @@ public class AppState: ObservableObject {
 
     // swiftlint:disable:next function_body_length
     public func updatePricesIfNeeded() async throws {
-#if DEBUG
-        guard !isRunningForSnapshots() || !isSwiftUIPreview() else {
+        guard !isRunningForSnapshots() && !isSwiftUIPreview() else {
             return
         }
-#endif
         guard priceArea != nil else {
             Log("No price area set yet")
             currentPrice = nil

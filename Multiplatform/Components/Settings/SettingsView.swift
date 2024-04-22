@@ -27,6 +27,7 @@ struct SettingsView: View {
                         currentValue: $state.chartStyle,
                         displayValue: { $0.title }
                     )
+                    .accessibilityIdentifier("chart")
                     proFeature {
                         BasicSettingsNavigationLink(
                             title: String(localized: "View Mode"),
@@ -34,6 +35,7 @@ struct SettingsView: View {
                             currentValue: $state.chartViewMode,
                             displayValue: { $0.title }
                         )
+                        .accessibilityIdentifier("viewMode")
                     }
                     if let currentPrice = state.currentPrice {
                         proFeature {
@@ -49,6 +51,7 @@ struct SettingsView: View {
                             } label: {
                                 Text("Price Limits")
                             }
+                            .accessibilityIdentifier("priceLimits")
                         }
                         proFeature {
                             NavigationLink {
@@ -65,6 +68,7 @@ struct SettingsView: View {
                                     Text(state.pricePresentation.adjustment.isEnabled ? "Enabled" : "Disabled")
                                 }
                             }
+                            .accessibilityIdentifier("priceAdjustment")
                         }
                     }
                 }
@@ -114,6 +118,7 @@ struct SettingsView: View {
                     Button("Done") {
                         dismiss()
                     }
+                    .accessibilityIdentifier("done")
                 }
             }
             .sheet(isPresented: $isShowingPurchaseView) {
@@ -130,7 +135,7 @@ struct SettingsView: View {
 
     @ViewBuilder
     private func proFeature<Content: View>(@ViewBuilder content: () -> Content) -> some View {
-        if store.hasPurchasedProVersion {
+        if store.hasPurchasedProVersion || isRunningForSnapshots() {
             content()
         } else {
             HStack {
