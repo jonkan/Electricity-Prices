@@ -81,6 +81,7 @@ struct SupportSettingsView: View {
                     .labelStyle(.titleAndIcon)
                 }
                 .disabled(logURLs == nil)
+                .activitySheet($logsActivityItem)
 
                 if shareLogsState.fetchingWatchLogsError != nil {
                     Button {
@@ -108,7 +109,6 @@ struct SupportSettingsView: View {
                 }
             }
         }
-        .activitySheet($logsActivityItem)
         .onAppear {
             fetchLogs()
         }
