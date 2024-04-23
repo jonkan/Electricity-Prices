@@ -99,9 +99,11 @@ class ShareLogsState: ObservableObject {
         )
 
         do {
-            state = .syncing
-            try await watchSyncManager.fetchWatchLogs()
-            didFetchWatchLogs = true
+            if watchSyncManager.isSyncSupported {
+                state = .syncing
+                try await watchSyncManager.fetchWatchLogs()
+                didFetchWatchLogs = true
+            }
         } catch {
             fetchingWatchLogsError = error
         }
