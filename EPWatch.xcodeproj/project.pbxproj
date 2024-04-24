@@ -11,6 +11,7 @@
 		260787A028D70B8C00FF2C33 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2674BC6528D0572D00E31A20 /* SwiftUI.framework */; };
 		260787A328D70B8C00FF2C33 /* EPWatchWidgetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260787A228D70B8C00FF2C33 /* EPWatchWidgetExtension.swift */; };
 		260787A928D70B8D00FF2C33 /* EPWatchWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2607879E28D70B8C00FF2C33 /* EPWatchWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		26089CD22BD9A1D4008764A4 /* LogFileURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26089CD12BD9A1D4008764A4 /* LogFileURL.swift */; };
 		2612513B29127047003D9C15 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696879128D1CD91002142BF /* SettingsView.swift */; };
 		261FC1A028B77720007B4A4E /* EPWatchKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC19F28B77720007B4A4E /* EPWatchKitApp.swift */; };
 		261FC1A428B77720007B4A4E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC1A328B77720007B4A4E /* NotificationController.swift */; };
@@ -53,7 +54,6 @@
 		26F28FDC2910778300D42DFB /* SupportSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FDA2910778300D42DFB /* SupportSettingsView.swift */; };
 		26F28FDD2910778300D42DFB /* ShareLogsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FDB2910778300D42DFB /* ShareLogsState.swift */; };
 		26F28FDF2910782000D42DFB /* HostSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FDE2910781F00D42DFB /* HostSyncManager.swift */; };
-		26F28FE5291078B800D42DFB /* ActivityView in Frameworks */ = {isa = PBXBuildFile; productRef = 26F28FE4291078B800D42DFB /* ActivityView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +141,7 @@
 		260787A228D70B8C00FF2C33 /* EPWatchWidgetExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPWatchWidgetExtension.swift; sourceTree = "<group>"; };
 		260787A628D70B8D00FF2C33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		260787C428D72EA600FF2C33 /* EPWatchWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EPWatchWidgetExtension.entitlements; sourceTree = "<group>"; };
+		26089CD12BD9A1D4008764A4 /* LogFileURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFileURL.swift; sourceTree = "<group>"; };
 		261FC18F28B7771F007B4A4E /* EPWatchKitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EPWatchKitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		261FC19F28B77720007B4A4E /* EPWatchKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPWatchKitApp.swift; sourceTree = "<group>"; };
 		261FC1A128B77720007B4A4E /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -216,7 +217,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26F28FE5291078B800D42DFB /* ActivityView in Frameworks */,
 				26C082D0292576160065DEFE /* EPWatchCore in Frameworks */,
 				26A2C6312AC6D9E200DDEBD5 /* AsyncAlgorithms in Frameworks */,
 			);
@@ -402,6 +402,7 @@
 		26DF95622ABD81F2001636BA /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				26089CD12BD9A1D4008764A4 /* LogFileURL.swift */,
 				26DF95632ABD8207001636BA /* PriceAdjustmentSettingsView.swift */,
 				2696883228D47F3B002142BF /* SettingsView.swift */,
 				26F28FDB2910778300D42DFB /* ShareLogsState.swift */,
@@ -512,7 +513,6 @@
 			);
 			name = EPWatch;
 			packageProductDependencies = (
-				26F28FE4291078B800D42DFB /* ActivityView */,
 				26C082CF292576160065DEFE /* EPWatchCore */,
 				26A2C6302AC6D9E200DDEBD5 /* AsyncAlgorithms */,
 			);
@@ -558,7 +558,6 @@
 				2690400F28D6680B00A823F5 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				2690401228D6681800A823F5 /* XCRemoteSwiftPackageReference "XMLCoder" */,
 				2602DE43290AD0D400CC83F2 /* XCRemoteSwiftPackageReference "XCGLogger" */,
-				26F28FE3291078B800D42DFB /* XCRemoteSwiftPackageReference "ActivityView" */,
 				26A2C62F2AC6D39000DDEBD5 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */,
 			);
 			productRefGroup = 261FC18C28B7771F007B4A4E /* Products */;
@@ -812,6 +811,7 @@
 				26F28FDD2910778300D42DFB /* ShareLogsState.swift in Sources */,
 				265733312907291700CE9A4C /* StateInfoFooterView.swift in Sources */,
 				2696883428D4801F002142BF /* SettingsView.swift in Sources */,
+				26089CD22BD9A1D4008764A4 /* LogFileURL.swift in Sources */,
 				26AC446529112D5D00B86B1E /* CircularProgressView.swift in Sources */,
 				26F28FDC2910778300D42DFB /* SupportSettingsView.swift in Sources */,
 				26DF95642ABD8207001636BA /* PriceAdjustmentSettingsView.swift in Sources */,
@@ -1304,14 +1304,6 @@
 				minimumVersion = 0.1.0;
 			};
 		};
-		26F28FE3291078B800D42DFB /* XCRemoteSwiftPackageReference "ActivityView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftUI-Plus/ActivityView.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1335,11 +1327,6 @@
 		26C082D52925762E0065DEFE /* EPWatchCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = EPWatchCore;
-		};
-		26F28FE4291078B800D42DFB /* ActivityView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 26F28FE3291078B800D42DFB /* XCRemoteSwiftPackageReference "ActivityView" */;
-			productName = ActivityView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

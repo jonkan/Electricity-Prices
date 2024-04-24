@@ -6,14 +6,12 @@
 //
 
 import SwiftUI
-import ActivityView
 import EPWatchCore
 
 struct SupportSettingsView: View {
 
     @EnvironmentObject private var shareLogsState: ShareLogsState
-    @State private var logURLs: [URL]?
-    @State private var logsActivityItem: ActivityItem?
+    @State private var logFileURLs: [LogFileURL]?
     @State private var acknowledgeEmailCopied: Bool = false
     private let supportEmail = "support@j0nas.se"
 
@@ -49,7 +47,7 @@ struct SupportSettingsView: View {
                     if shareLogsState.state != .ready {
                         Text(shareLogsState.state.localizedDescription)
                     } else {
-                        Text("\(logURLs?.count ?? 0) log files")
+                        Text("\(logFileURLs?.count ?? 0) log files")
                     }
                 } icon: {
                     Group {
@@ -69,8 +67,11 @@ struct SupportSettingsView: View {
                 }
                 .labelStyle(.titleAndIcon)
 
-                Button {
-                    logsActivityItem = ActivityItem(itemsArray: logURLs ?? [])
+                ShareLink(items: logFileURLs ?? []) { logFileURL in
+                    SharePreview(
+                        logFileURL.fileURL.lastPathComponent,
+                        image: Image(systemName: "document")
+                    )
                 } label: {
                     Label {
                         Text("Share")
@@ -80,8 +81,7 @@ struct SupportSettingsView: View {
                     }
                     .labelStyle(.titleAndIcon)
                 }
-                .disabled(logURLs == nil)
-                .activitySheet($logsActivityItem)
+                .disabled(logFileURLs == nil)
 
                 if shareLogsState.fetchingWatchLogsError != nil {
                     Button {
@@ -117,7 +117,8 @@ struct SupportSettingsView: View {
     func fetchLogs() {
         Task {
             do {
-                logURLs = try await shareLogsState.fetchLogs()
+                logFileURLs = try await shareLogsState.fetchLogs()
+                    .map({ LogFileURL(fileURL: $0) })
             } catch {
                 LogError(error)
             }

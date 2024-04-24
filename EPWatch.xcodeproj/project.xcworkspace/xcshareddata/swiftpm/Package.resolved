@@ -1,15 +1,6 @@
 {
   "pins" : [
     {
-      "identity" : "activityview",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/SwiftUI-Plus/ActivityView.git",
-      "state" : {
-        "revision" : "444ff3755e49b0284c12360b3db0d64d31f0c3f8",
-        "version" : "1.2.0"
-      }
-    },
-    {
       "identity" : "alamofire",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Alamofire/Alamofire.git",
