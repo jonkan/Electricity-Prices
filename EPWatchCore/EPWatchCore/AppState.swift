@@ -244,7 +244,6 @@ public class AppState: ObservableObject {
         }
     }
 
-    // swiftlint:disable:next function_body_length
     public func updatePricesIfNeeded() async throws {
         guard !isRunningForSnapshots() && !isSwiftUIPreview() else {
             return

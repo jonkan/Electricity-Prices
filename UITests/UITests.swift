@@ -24,6 +24,7 @@ final class ElectricityPricesUITests: XCTestCase {
     }
 
     @MainActor
+    // swiftlint:disable:next function_body_length
     func testExample() throws {
         let app = XCUIApplication()
         snapshot("0MainView")
