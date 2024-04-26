@@ -331,13 +331,15 @@ extension WatchSyncManager: WCSessionDelegate {
             Log("Session activation state: \(activationState.description)")
             timeoutHandler.cancel()
 
-            if activationState == .activated {
-                resumeActivation()
-            } else if !WCSession.default.isWatchAppInstalled {
-                resumeActivation(throwing: .watchAppNotInstalled)
-            } else {
+            guard activationState == .activated  else {
                 resumeActivation(throwing: .watchActivationFailed)
+                return
             }
+            guard session.isWatchAppInstalled else {
+                resumeActivation(throwing: .watchAppNotInstalled)
+                return
+            }
+            resumeActivation()
         }
     }
 
