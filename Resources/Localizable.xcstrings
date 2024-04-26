@@ -737,6 +737,16 @@
         }
       }
     },
+    "Your price adjustment is temporarily excluded while you edit these limits." : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Din prisjustering är tillfälligt utesluten medan du redigerar dessa gränser."
+          }
+        }
+      }
+    },
     "Your purchase could not be verified by the App Store." : {
       "localizations" : {
         "sv" : {

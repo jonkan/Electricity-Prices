@@ -123,13 +123,13 @@ public enum Currency: String, Codable, CaseIterable, Identifiable, Equatable {
     public var priceLimitsStep: Double {
         switch self {
         case .EUR:
-            return 0.001
+            return 0.005
         case .SEK:
-            return 0.01
+            return 0.05
         case .NOK:
-            return 0.01
+            return 0.05
         case .DKK:
-            return 0.01
+            return 0.05
         }
     }
 
