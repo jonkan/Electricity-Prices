@@ -36,17 +36,6 @@ public struct PricePresentation: Codable, Equatable {
         return currency.formatted(adjustedPrice, style, currencyPresentation)
     }
 
-    public func formattedDateTimeInterval(
-        from pricePoint: PricePoint,
-        style: FormattingStyle
-    ) -> String {
-        return DateIntervalFormatter.formatted(
-            from: pricePoint.date,
-            to: Calendar.current.date(byAdding: .hour, value: 1, to: pricePoint.date)!,
-            style: style
-        )
-    }
-
     public func adjustedPrice(_ pricePoint: PricePoint) -> Double {
         adjustedPrice(pricePoint.price, in: pricePoint.currency)
     }

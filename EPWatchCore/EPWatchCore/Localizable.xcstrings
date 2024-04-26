@@ -11,6 +11,16 @@
         }
       }
     },
+    " - " : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " - "
+          }
+        }
+      }
+    },
     "%@" : {
       "localizations" : {
         "sv" : {

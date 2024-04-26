@@ -39,7 +39,7 @@ struct PriceView: View {
         VStack(spacing: 8) {
             Text(pricePresentation.formattedPrice(displayedPrice, style: .normal))
                 .font(.title)
-            Text(pricePresentation.formattedDateTimeInterval(from: displayedPrice, style: .normal))
+            DateIntervalText(displayedPrice.date, style: .normal)
                 .font(.subheadline)
             PriceChartView(
                 selectedPrice: $selectedPrice,

@@ -17,7 +17,7 @@ public struct PricePointCircularWidgetView: View {
 
     public var body: some View {
         Gauge(value: entry.pricePoint.price, in: entry.pricePoint.dayPriceRange) {
-            Text(entry.formattedDateTimeInterval(style: .short))
+            DateIntervalText(entry.date, style: .short)
                 .padding(1)
         } currentValueLabel: {
             Text(entry.formattedPrice(style: .short))

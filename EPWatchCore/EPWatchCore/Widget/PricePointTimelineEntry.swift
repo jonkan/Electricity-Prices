@@ -37,10 +37,6 @@ public struct PricePointTimelineEntry: TimelineEntry {
         pricePresentation.formattedPrice(pricePoint, style: style)
     }
 
-    public func formattedDateTimeInterval(style: FormattingStyle) -> String {
-        pricePresentation.formattedDateTimeInterval(from: pricePoint, style: style)
-    }
-
     public static let mock = PricePointTimelineEntry(
         pricePoint: .mockPrice,
         prices: .mockPrices,
