@@ -60,7 +60,7 @@ public struct PriceChartView: View {
                     chartYAxis()
                 }
                 .chartXAxis {
-                    chartXAxis(compact: geometry.size.width < 150)
+                    chartXAxis(compact: geometry.size.width < 180)
                 }
                 .chartOverlay { chart in
                     chartGestureOverlay(chart: chart, geometry: geometry)
