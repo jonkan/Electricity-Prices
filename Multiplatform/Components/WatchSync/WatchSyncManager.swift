@@ -54,7 +54,7 @@ class WatchSyncManager: NSObject, ObservableObject {
         }
     }
 
-    enum SyncError: Error {
+    enum SyncError: Error, Equatable {
         case timeoutWaitingForWatchSessionActivation
         case watchSessionNotSupported
         case watchAppNotInstalled
@@ -91,7 +91,9 @@ class WatchSyncManager: NSObject, ObservableObject {
     }
 
     var isSyncSupported: Bool {
-        WCSession.isSupported() && WCSession.default.isWatchAppInstalled
+        WCSession.isSupported() &&
+        WCSession.default.activationState == .activated &&
+        WCSession.default.isWatchAppInstalled
     }
     @AppStorage("isSyncWithWatchEnabled")
     public var isAppContextSyncEnabled: Bool = true {
@@ -110,13 +112,7 @@ class WatchSyncManager: NSObject, ObservableObject {
             Log("Did change: \(syncState)")
         }
     }
-    @Published var syncError: Error? {
-        didSet {
-            if let error = syncError {
-                LogError(error)
-            }
-        }
-    }
+    @Published private(set) var syncError: SyncError?
 
     private var appState: AppState
     private var appStateWillChangeCancellable: AnyCancellable?
@@ -185,12 +181,23 @@ class WatchSyncManager: NSObject, ObservableObject {
                         try await activate()
                         try await syncAppContext()
                     case let .fetchWatchLogs(continuation):
-                        try await activate()
+                        do {
+                            try await activate()
+                        } catch {
+                            continuation.resume(throwing: error)
+                            throw error
+                        }
                         try await fetchWatchLogs(continuation)
                     }
                     syncError = nil
-                } catch {
+                } catch let error as SyncError {
                     syncError = error
+                } catch {
+                    syncError = .other(error.localizedDescription)
+                }
+
+                if let syncError, syncError != .watchSessionNotSupported {
+                    LogError(syncError)
                 }
                 isSyncing = false
             }
