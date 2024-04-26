@@ -70,7 +70,7 @@ struct SupportSettingsView: View {
                 ShareLink(items: logFileURLs ?? []) { logFileURL in
                     SharePreview(
                         logFileURL.fileURL.lastPathComponent,
-                        image: Image(systemName: "document")
+                        icon: Image(systemName: "doc.text")
                     )
                 } label: {
                     Label {
