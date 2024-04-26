@@ -39,4 +39,18 @@ public struct AppInfo {
 #endif
     }
 
+    public static var systemName: String {
+#if os(iOS)
+        return UIDevice.current.systemName
+#elseif os(watchOS)
+        return WKInterfaceDevice.current().systemName
+#elseif os(tvOS)
+        return "tvOS"
+#elseif os(macOS)
+        return "macOS"
+#elseif os(visionOS)
+        return "visionOS"
+#endif
+    }
+
 }
