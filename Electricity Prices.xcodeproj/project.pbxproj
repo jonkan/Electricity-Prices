@@ -44,7 +44,6 @@
 		26C082D2292576200065DEFE /* EPWatchCore in Frameworks */ = {isa = PBXBuildFile; productRef = 26C082D1292576200065DEFE /* EPWatchCore */; };
 		26C082D4292576270065DEFE /* EPWatchCore in Frameworks */ = {isa = PBXBuildFile; productRef = 26C082D3292576270065DEFE /* EPWatchCore */; };
 		26DF95642ABD8207001636BA /* PriceAdjustmentSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DF95632ABD8207001636BA /* PriceAdjustmentSettingsView.swift */; };
-		26DF95662ABDBEFC001636BA /* WatchSessionActivator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DF95652ABDBEFC001636BA /* WatchSessionActivator.swift */; };
 		26DF95682ABDC601001636BA /* TimeoutHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DF95672ABDC601001636BA /* TimeoutHandler.swift */; };
 		26E009632BB6CFF6004A7241 /* PriceLimitsSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E009622BB6CFF6004A7241 /* PriceLimitsSettingsView.swift */; };
 		26EC4A1428D9C52C004DD8EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2696881A28D477EE002142BF /* Assets.xcassets */; };
@@ -180,7 +179,6 @@
 		26AA88752925702300BA2B02 /* EPWatchCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = EPWatchCore; sourceTree = "<group>"; };
 		26AC446429112D5D00B86B1E /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		26DF95632ABD8207001636BA /* PriceAdjustmentSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceAdjustmentSettingsView.swift; sourceTree = "<group>"; };
-		26DF95652ABDBEFC001636BA /* WatchSessionActivator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSessionActivator.swift; sourceTree = "<group>"; };
 		26DF95672ABDC601001636BA /* TimeoutHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeoutHandler.swift; sourceTree = "<group>"; };
 		26E009622BB6CFF6004A7241 /* PriceLimitsSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLimitsSettingsView.swift; sourceTree = "<group>"; };
 		26F28FDA2910778300D42DFB /* SupportSettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportSettingsView.swift; sourceTree = "<group>"; };
@@ -251,7 +249,6 @@
 			isa = PBXGroup;
 			children = (
 				26DF95672ABDC601001636BA /* TimeoutHandler.swift */,
-				26DF95652ABDBEFC001636BA /* WatchSessionActivator.swift */,
 				26A2C62D2AC6C60600DDEBD5 /* WatchSyncManager.swift */,
 			);
 			path = WatchSync;
@@ -840,7 +837,6 @@
 				261087622BD27788008ED50B /* Store.swift in Sources */,
 				26F28FDC2910778300D42DFB /* SupportSettingsView.swift in Sources */,
 				26DF95642ABD8207001636BA /* PriceAdjustmentSettingsView.swift in Sources */,
-				26DF95662ABDBEFC001636BA /* WatchSessionActivator.swift in Sources */,
 				2696881728D477ED002142BF /* ElectricityPricesApp.swift in Sources */,
 				26DF95682ABDC601001636BA /* TimeoutHandler.swift in Sources */,
 				2696883128D47C4B002142BF /* PriceView.swift in Sources */,
