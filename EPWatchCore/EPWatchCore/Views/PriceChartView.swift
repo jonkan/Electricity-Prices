@@ -115,10 +115,10 @@ public struct PriceChartView: View {
                         if hour == 0 {
                             if calendar.isDateInToday(date) {
                                 Text("Today", bundle: .module)
-                                    .minimumScaleFactor(0.01)
+                                    .minimumScaleFactor(0.5)
                             } else if calendar.isDateInTomorrow(date) {
                                 Text("Tomorrow", bundle: .module)
-                                    .minimumScaleFactor(0.01)
+                                    .minimumScaleFactor(0.5)
                             } else {
                                 Text(date, format: .dateTime.month(.abbreviated).day())
                             }
