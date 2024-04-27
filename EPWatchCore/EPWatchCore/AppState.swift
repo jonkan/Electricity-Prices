@@ -172,15 +172,12 @@ public class AppState: ObservableObject {
         }
 
         if isRunningForSnapshots() {
-            prices = .mockPricesWithTomorrow
-            currentPrice = prices.price(for: .now)
+            // Mocked prices are set in downloadPrices()
             chartStyle = .bar
-            chartViewMode = .todayAndComingNight
+            chartViewMode = .today
             currency = Region.current?.suggestedCurrency ?? .EUR
             currencyPresentation = .automatic
-            priceLimits = PriceLimits(.SEK, high: 3.5, low: 2.0)
-            objectWillChange.send()
-            reloadAllTimelines()
+            invalidateAndUpdatePrices()
         } else if !isSwiftUIPreview() {
             updatePricesIfNeeded()
         }
@@ -209,7 +206,7 @@ public class AppState: ObservableObject {
     }
 
     private func invalidateAndUpdatePrices() {
-        guard !isSwiftUIPreview() && !isRunningForSnapshots() else {
+        guard !isSwiftUIPreview() else {
             return
         }
         Task {
@@ -245,7 +242,7 @@ public class AppState: ObservableObject {
     }
 
     public func updatePricesIfNeeded() async throws {
-        guard !isRunningForSnapshots() && !isSwiftUIPreview() else {
+        guard !isSwiftUIPreview() else {
             return
         }
         guard priceArea != nil else {
@@ -300,8 +297,6 @@ public class AppState: ObservableObject {
             prices = try await downloadPrices()
             currentPrice = prices.price(for: .now)
             Log("Success updating prices")
-            objectWillChange.send()
-            reloadAllTimelines()
         }
         defer {
             updateTask = nil
@@ -313,10 +308,17 @@ public class AppState: ObservableObject {
         guard let priceArea = priceArea else {
             throw NSError(0, "No price area selected")
         }
-        async let dayAheadPrices = try PricesAPI.shared.downloadDayAheadPrices(for: priceArea)
-        async let rate = try currentExchangeRate()
-        let prices = try await dayAheadPrices.prices(using: rate)
-        return prices
+        if isRunningForSnapshots() {
+            let dayAheadPrices = DayAheadPrices.mocked1
+            let rate = ExchangeRate.mockedEUR(to: currency)
+            let prices = try dayAheadPrices.prices(using: rate).shiftDatesToNow()
+            return prices
+        } else {
+            async let dayAheadPrices = try PricesAPI.shared.downloadDayAheadPrices(for: priceArea)
+            async let rate = try currentExchangeRate()
+            let prices = try await dayAheadPrices.prices(using: rate)
+            return prices
+        }
     }
 
     public func currentExchangeRate() async throws -> ExchangeRate {

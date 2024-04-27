@@ -28,7 +28,10 @@ let package = Package(
                 "XCGLogger",
                 "Alamofire"
             ],
-            path: "EPWatchCore"
+            path: "EPWatchCore",
+            resources: [
+                .process("Resources")
+            ]
         ),
         .testTarget(
             name: "EPWatchCoreTests",

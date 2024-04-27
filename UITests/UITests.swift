@@ -51,11 +51,11 @@ final class ElectricityPricesUITests: XCTestCase {
         app.buttons["automatic"].tap()
         app.buttons["done"].tap()
         XCUIDevice.shared.press(.home)
-        sleep(1)
+        sleep(2)
         snapshot("3Homescreen")
 
         XCUIDevice.shared.perform(NSSelectorFromString("pressLockButton"))
-        sleep(1)
+        sleep(2)
         snapshot("4LockScreen")
 #elseif os(watchOS)
         app.swipeLeft()

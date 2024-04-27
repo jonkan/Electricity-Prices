@@ -200,7 +200,7 @@ public extension Array where Element == PricePoint {
 
 }
 
-private extension Array where Element == PricePoint {
+extension Array where Element == PricePoint {
     func shiftDatesToNow() -> [PricePoint] {
         return enumerated().map({ (i, p) in
             let h = TimeInterval(i * 60 * 60)

@@ -79,4 +79,23 @@ extension ExchangeRate {
             rate: 1
         )
     }
+    static func mockedEUR(to: Currency) -> ExchangeRate {
+        let rate: Double
+        switch to {
+        case .EUR:
+            rate = 1
+        case .SEK:
+            rate = 11.7052
+        case .NOK:
+            rate = 11.7995
+        case .DKK:
+            rate = 7.4573
+        }
+        return ExchangeRate(
+            date: "2024-04-26",
+            from: .EUR,
+            to: to,
+            rate: rate
+        )
+    }
 }
