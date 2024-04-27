@@ -248,8 +248,12 @@ public struct PriceChartView: View {
 
     private var axisYValues: [Double]? {
         let adjustedDayPriceRange = pricePresentation.adjustedPriceRange(currentPrice.dayPriceRange)
-        if adjustedDayPriceRange.upperBound <= 1.5 && pricePresentation.currencyPresentation != .subdivided {
-            return [0.0, 0.5, 1.0, 1.5]
+        // The minimum axis values prevents relatively low prices from being presented as very tall 
+        // bars (or the equivalent).
+        let minimumYAxisValues = currentPrice.currency.minimumYAxisValues
+        if adjustedDayPriceRange.upperBound <= minimumYAxisValues.last! &&
+            pricePresentation.currencyPresentation != .subdivided {
+            return minimumYAxisValues
         }
         return nil
     }

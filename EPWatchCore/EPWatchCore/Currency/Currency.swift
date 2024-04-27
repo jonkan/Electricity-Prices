@@ -138,6 +138,19 @@ public enum Currency: String, Codable, CaseIterable, Identifiable, Equatable {
             .mapValues({ $0[0].defaultPriceLimits })
     }
 
+    var minimumYAxisValues: [Double] {
+        switch self {
+        case .EUR:
+            return [0.0, 0.05, 0.1, 0.15]
+        case .SEK:
+            return [0.0, 0.5, 1.0, 1.5]
+        case .NOK:
+            return [0.0, 0.5, 1.0, 1.5]
+        case .DKK:
+            return [0.0, 0.25, 0.5, 1.0]
+        }
+    }
+
 }
 
 extension Currency {
