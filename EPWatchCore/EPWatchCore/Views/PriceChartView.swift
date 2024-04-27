@@ -123,7 +123,7 @@ public struct PriceChartView: View {
                                 Text(date, format: .dateTime.month(.abbreviated).day())
                             }
                         } else {
-                            Text(date, format: .dateTime.hour(.twoDigits(amPM: .omitted)))
+                            Text(date, format: .dateTime.hour())
                         }
                     }
                 } else {
