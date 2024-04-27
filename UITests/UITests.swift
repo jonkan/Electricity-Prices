@@ -71,15 +71,12 @@ final class ElectricityPricesUITests: XCTestCase {
         app.buttons["unit"].tap()
         app.buttons["subdivided"].tap()
         app.swipeRight()
-        snapshot("2LineChart")
+        snapshot("3LineChart")
 
         app.swipeLeft()
         app.buttons["chart"].tap()
         app.buttons["bar"].tap()
-        app.buttons["unit"].tap()
-        app.buttons["automatic"].tap()
         app.swipeRight()
-        snapshot("3UnitAutomatic")
 
         XCUIDevice.shared.press(.home)
         sleep(1)
