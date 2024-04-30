@@ -19,8 +19,11 @@ public struct PricePointLargeWidgetView: View {
         VStack(spacing: 8) {
             Text(entry.formattedPrice(style: .normal))
                 .font(.title)
+                .minimumScaleFactor(0.5)
             DateIntervalText(entry.date, style: .normal)
                 .font(.subheadline)
+                .minimumScaleFactor(0.5)
+
             PriceChartView(
                 selectedPrice: .constant(nil),
                 currentPrice: entry.pricePoint,

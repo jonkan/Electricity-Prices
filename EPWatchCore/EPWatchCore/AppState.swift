@@ -141,9 +141,9 @@ public class AppState: ObservableObject {
         Log("System version: \(AppInfo.systemVersion)")
 
         if region == nil || isRunningForSnapshots() {
-            if let currentRetion = Region.current {
-                region = currentRetion
-                priceArea = currentRetion.priceAreas.first
+            if let currentRegion = Region.current {
+                region = currentRegion
+                priceArea = currentRegion.priceAreas.first
             } else {
                 region = .sweden
                 priceArea = Region.sweden.priceAreas[2]
