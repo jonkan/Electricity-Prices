@@ -24,7 +24,6 @@ final class ElectricityPricesUITests: XCTestCase {
     }
 
     @MainActor
-    // swiftlint:disable:next function_body_length
     func testExample() throws {
         let app = XCUIApplication()
         snapshot("0MainView")
@@ -52,11 +51,13 @@ final class ElectricityPricesUITests: XCTestCase {
         app.buttons["done"].tap()
         XCUIDevice.shared.press(.home)
         sleep(2)
-        snapshot("3Homescreen")
+        snapshot("3HomeScreen")
 
         XCUIDevice.shared.perform(NSSelectorFromString("pressLockButton"))
+        XCUIDevice.shared.press(.home)
         sleep(2)
         snapshot("4LockScreen")
+
 #elseif os(watchOS)
         app.swipeLeft()
         app.swipeLeft()
@@ -80,8 +81,9 @@ final class ElectricityPricesUITests: XCTestCase {
 
         XCUIDevice.shared.press(.home)
         sleep(1)
-        snapshot("2Homescreen")
+        snapshot("2HomeScreen")
 #endif
+
     }
 
 }

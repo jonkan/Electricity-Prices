@@ -30,3 +30,4 @@ fastlane/report.xml
 fastlane/screenshots/**/*.png
 fastlane/screenshots/screenshots.html
 fastlane/metadata
+fastlane/Preview.html

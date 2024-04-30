@@ -23,7 +23,7 @@ output_directory("./fastlane/screenshots")
 
 configuration("Debug")
 localize_simulator(true)
-clear_previous_screenshots(true)
+clear_previous_screenshots(false)
 override_status_bar(true)
 stop_after_first_error(true)
 number_of_retries(0)

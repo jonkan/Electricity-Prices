@@ -1,0 +1,31 @@
+{
+    "default": {
+        "keyword": {
+            "color": "#000000"
+        },
+        "title": {
+            "color": "#000000",
+            "font_size": 80
+        },
+        "background": "./background-light.jpg",
+        "padding": 50,
+        "stack_title": true
+    },
+    "data": [
+        {
+            "filter": "0MainView"
+        },
+        {
+            "filter": "1TodayAndTomorrow"
+        },
+        {
+            "filter": "2LineChart"
+        },
+        {
+            "filter": "3HomeScreen"
+        },
+        {
+            "filter": "4LockScreen"
+        }
+    ]
+}

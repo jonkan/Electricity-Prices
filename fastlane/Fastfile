@@ -1,0 +1,10 @@
+screenshotsPath = "./screenshots"
+
+lane :create_dummy_screenshots do
+    Dir.entries(screenshotsPath).each do |directory|
+      path = File.join(screenshotsPath, directory)
+      next if directory == '.' || directory == '..' || File.directory?(path) == false
+  
+      sh("convert -size 1242x2208 xc:black \"#{path}/iPhone 8 Plus-dummy.png\"")
+    end
+end
