@@ -13,7 +13,7 @@ struct PriceLimitsSettingsView: View {
     @Binding var limits: PriceLimits
     let currentPrice: PricePoint
     let prices: [PricePoint]
-    @State var pricePresentation: PricePresentation
+    let pricePresentation: PricePresentation
     let chartStyle: PriceChartStyle
 
     @State private var editedLimits: PriceLimits
@@ -30,18 +30,20 @@ struct PriceLimitsSettingsView: View {
         self._limits = limits
         self.currentPrice = currentPrice
         self.prices = prices
-        self.pricePresentation = pricePresentation
+
+        var pricePresentationWithoutAdjustment = pricePresentation
+        pricePresentationWithoutAdjustment.adjustment.isEnabled = false
+        self.pricePresentation = pricePresentationWithoutAdjustment
+
         self.chartStyle = chartStyle
         self.editedLimits = limits.wrappedValue
-        self.lowSliderRange = 0...1
+        self.lowSliderRange = 0...max(limits.wrappedValue.currency.priceLimitsStep, limits.wrappedValue.high)
 
         if pricePresentation.adjustment.isEnabled {
             showPriceAdjustmentDisclamer = true
-            self.pricePresentation.adjustment.isEnabled = false
         } else {
             showPriceAdjustmentDisclamer = false
         }
-        updateLowSliderRange()
     }
 
     var body: some View {
