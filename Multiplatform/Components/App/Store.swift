@@ -84,7 +84,7 @@ class Store: ObservableObject {
                     await transaction.finish()
                 } catch {
                     // StoreKit has a transaction that fails verification. Don't deliver content to the user.
-                    print("Transaction failed verification")
+                    Log("Transaction failed verification")
                 }
             }
         }
