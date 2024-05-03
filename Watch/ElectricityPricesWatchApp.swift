@@ -18,6 +18,12 @@ struct ElectricityPricesWatchApp: App {
 #if DEBUG
         LogDebugInformation()
 #endif
+        if UserDefaults.standard.bool(forKey: "FASTLANE_SNAPSHOT") {
+            UserDefaults.appGroup.set(true, forKey: "FASTLANE_SNAPSHOT")
+        } else {
+            UserDefaults.appGroup.set(false, forKey: "FASTLANE_SNAPSHOT")
+        }
+
         hostSyncManager = HostSyncManager(appState: AppState.shared)
     }
 

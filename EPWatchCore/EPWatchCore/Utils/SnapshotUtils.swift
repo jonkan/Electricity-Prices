@@ -8,5 +8,5 @@
 import Foundation
 
 public func isRunningForSnapshots() -> Bool {
-    UserDefaults.standard.bool(forKey: "FASTLANE_SNAPSHOT")
+    UserDefaults.appGroup.bool(forKey: "FASTLANE_SNAPSHOT")
 }

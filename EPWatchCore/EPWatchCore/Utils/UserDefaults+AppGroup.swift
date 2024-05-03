@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension UserDefaults {
+public extension UserDefaults {
 
     static let appGroup: UserDefaults = {
         guard let appGroup = UserDefaults(suiteName: .appGroupIdentifier) else {

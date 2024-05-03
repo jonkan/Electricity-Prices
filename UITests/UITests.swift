@@ -13,14 +13,9 @@ final class ElectricityPricesUITests: XCTestCase {
     override func setUpWithError() throws {
         continueAfterFailure = false
 
-        UserDefaults.standard.setValue(true, forKey: "FASTLANE_SNAPSHOT")
         let app = XCUIApplication()
         setupSnapshot(app)
         app.launch()
-    }
-
-    override func tearDownWithError() throws {
-        UserDefaults.standard.setValue(false, forKey: "FASTLANE_SNAPSHOT")
     }
 
     @MainActor
