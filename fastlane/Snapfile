@@ -11,8 +11,20 @@ devices([
 ])
 
 languages([
+  "da",
+  "de-DE",
+  "el",
+  "en-GB",
   "en-US",
+  "es-ES",
+  "fi",
+  "fr-FR",
+  "it",
+  "nl-NL",
+  "no",
+  "pt-PT",
   ["sv", "sv-SE"],
+  "tr",  
 ])
 
 # The name of the scheme which contains the UI Tests

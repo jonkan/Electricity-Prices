@@ -79,17 +79,31 @@ extension ExchangeRate {
             rate: 1
         )
     }
+
+    // swiftlint:disable cyclomatic_complexity
     static func mockedEUR(to: Currency) -> ExchangeRate {
         let rate: Double
         switch to {
-        case .EUR:
-            rate = 1
-        case .SEK:
-            rate = 11.7052
-        case .NOK:
-            rate = 11.7995
-        case .DKK:
-            rate = 7.4573
+//        case .ALL: rate = 0.0
+//        case .BAM: rate = 0.0
+        case .BGN: rate = 1.9558
+        case .CHF: rate = 0.9779
+        case .CZK: rate = 25.164
+        case .DKK: rate = 7.4573
+        case .EUR: rate = 1
+        case .GBP: rate = 0.85643
+//        case .GEL: rate = 0.0
+//        case .HRK: rate = 0.0
+        case .HUF: rate = 392.28
+//        case .MDL: rate = 0.0
+//        case .MKD: rate = 0.0
+        case .NOK: rate = 11.7995
+        case .PLN: rate = 4.3205
+        case .RON: rate = 4.9764
+//        case .RSD: rate = 0.0
+        case .SEK: rate = 11.7052
+        case .TRY: rate = 34.8036
+//        case .UAH: rate = 0.0
         }
         return ExchangeRate(
             date: "2024-04-26",

@@ -7,7 +7,7 @@
 
 import Foundation
 
-// swiftlint:disable type_body_length
+// swiftlint:disable type_body_length file_length
 public enum Region: String, Codable, CaseIterable, Identifiable, Equatable {
 
     case albania        // Albania (AL)
@@ -380,10 +380,46 @@ public enum Region: String, Codable, CaseIterable, Identifiable, Equatable {
 
     var suggestedCurrency: Currency {
         switch self {
-        case .sweden: return .SEK
-        case .norway: return .NOK
-        case .denmark: return .DKK
-        default: return .EUR
+        case .albania:          return .EUR // .ALL
+        case .austria:          return .EUR
+        case .belgium:          return .EUR
+        case .bosnia:           return .EUR // .BAM
+        case .bulgaria:         return .BGN
+        case .croatia:          return .EUR // .HRK
+        case .cyprus:           return .EUR
+        case .czech:            return .CZK
+        case .denmark:          return .DKK
+        case .estonia:          return .EUR
+        case .finland:          return .EUR
+        case .france:           return .EUR
+        case .georgia:          return .EUR // .GEL
+        case .germany:          return .EUR
+        case .greece:           return .EUR
+        case .hungary:          return .HUF
+        case .ireland:          return .EUR
+        case .italy:            return .EUR
+        case .kosovo:           return .EUR
+        case .latvia:           return .EUR
+        case .lithuania:        return .EUR
+        case .luxembourg:       return .EUR
+        case .malta:            return .EUR
+        case .moldova:          return .EUR // .MDL
+        case .montenegro:       return .EUR
+        case .netherlands:      return .EUR
+        case .northMacedonia:   return .EUR // .MKD
+        case .norway:           return .NOK
+        case .poland:           return .PLN
+        case .portugal:         return .EUR
+        case .romania:          return .RON
+        case .serbia:           return .EUR // .RSD
+        case .slovakia:         return .EUR
+        case .slovenia:         return .EUR
+        case .spain:            return .EUR
+        case .sweden:           return .SEK
+        case .switzerland:      return .CHF
+        case .turkey:           return .TRY
+        case .ukraine:          return .EUR // .UAH
+        case .unitedKingdom:    return .GBP
         }
     }
 
