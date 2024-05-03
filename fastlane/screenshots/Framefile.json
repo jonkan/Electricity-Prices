@@ -1,4 +1,6 @@
 {
+    "number_of_treads": 4,
+    "skip_directories": ["Resources"],
     "default": {
         "keyword": {
             "color": "#000000"
@@ -9,23 +11,54 @@
         },
         "background": "./background-light.jpg",
         "padding": 50,
-        "stack_title": true
+        "stack_title": true,
+        "string_catalogs": ["./Resources/Localizable.xcstrings"]
     },
     "data": [
         {
-            "filter": "0MainView"
+            "filter": "0MainView",
+            "keyword": {
+                "text": "Consume Smarter!"
+            },
+            "title": {
+                "text": "Plan ahead and avoid the peaks"
+            }
         },
         {
-            "filter": "1TodayAndTomorrow"
+            "filter": "1TodayAndTomorrow",
+            "keyword": {
+                "text": "Cheaper Tomorrow?"
+            },
+            "title": {
+                "text": "Easily compare today's and tomorrow's prices"
+            }
         },
         {
-            "filter": "2LineChart"
+            "filter": "2LineChart",
+            "keyword": {
+                "text": "Customizable"
+            },
+            "title": {
+                "text": "To suit your preferences"
+            }
         },
         {
-            "filter": "3HomeScreen"
+            "filter": "3HomeScreen",
+            "keyword": {
+                "text": "Widgets"
+            },
+            "title": {
+                "text": "Stay updated without opening the app"
+            }
         },
         {
-            "filter": "4LockScreen"
+            "filter": "4LockScreen",
+            "keyword": {
+                "text": "Lock Screen Widgets"
+            },
+            "title": {
+                "text": "See prices at a glance"
+            }
         }
     ]
 }

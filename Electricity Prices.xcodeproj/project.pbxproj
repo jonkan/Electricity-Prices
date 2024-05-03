@@ -43,6 +43,7 @@
 		26C082D0292576160065DEFE /* EPWatchCore in Frameworks */ = {isa = PBXBuildFile; productRef = 26C082CF292576160065DEFE /* EPWatchCore */; };
 		26C082D2292576200065DEFE /* EPWatchCore in Frameworks */ = {isa = PBXBuildFile; productRef = 26C082D1292576200065DEFE /* EPWatchCore */; };
 		26C082D4292576270065DEFE /* EPWatchCore in Frameworks */ = {isa = PBXBuildFile; productRef = 26C082D3292576270065DEFE /* EPWatchCore */; };
+		26D88F712BE4DDB700AE2534 /* MetadataPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D88F6D2BE4CE1B00AE2534 /* MetadataPreview.swift */; };
 		26DF95642ABD8207001636BA /* PriceAdjustmentSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DF95632ABD8207001636BA /* PriceAdjustmentSettingsView.swift */; };
 		26DF95682ABDC601001636BA /* TimeoutHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DF95672ABDC601001636BA /* TimeoutHandler.swift */; };
 		26E009632BB6CFF6004A7241 /* PriceLimitsSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E009622BB6CFF6004A7241 /* PriceLimitsSettingsView.swift */; };
@@ -178,6 +179,7 @@
 		26A2C62D2AC6C60600DDEBD5 /* WatchSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSyncManager.swift; sourceTree = "<group>"; };
 		26AA88752925702300BA2B02 /* EPWatchCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = EPWatchCore; sourceTree = "<group>"; };
 		26AC446429112D5D00B86B1E /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		26D88F6D2BE4CE1B00AE2534 /* MetadataPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataPreview.swift; sourceTree = "<group>"; };
 		26DF95632ABD8207001636BA /* PriceAdjustmentSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceAdjustmentSettingsView.swift; sourceTree = "<group>"; };
 		26DF95672ABDC601001636BA /* TimeoutHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeoutHandler.swift; sourceTree = "<group>"; };
 		26E009622BB6CFF6004A7241 /* PriceLimitsSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLimitsSettingsView.swift; sourceTree = "<group>"; };
@@ -414,8 +416,9 @@
 			isa = PBXGroup;
 			children = (
 				2696881A28D477EE002142BF /* Assets.xcassets */,
-				26A2C6232AC6C28000DDEBD5 /* Localizable.xcstrings */,
 				26A2C6282AC6C28000DDEBD5 /* InfoPlist.xcstrings */,
+				26A2C6232AC6C28000DDEBD5 /* Localizable.xcstrings */,
+				26D88F6D2BE4CE1B00AE2534 /* MetadataPreview.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -828,6 +831,7 @@
 				26A2C62E2AC6C60600DDEBD5 /* WatchSyncManager.swift in Sources */,
 				26E009632BB6CFF6004A7241 /* PriceLimitsSettingsView.swift in Sources */,
 				26FAB1592BDAD3D600C08FBB /* LogFileURL.swift in Sources */,
+				26D88F712BE4DDB700AE2534 /* MetadataPreview.swift in Sources */,
 				26AC447229126B6400B86B1E /* RootView.swift in Sources */,
 				261087642BD294E5008ED50B /* PurchaseView.swift in Sources */,
 				26F28FDD2910778300D42DFB /* ShareLogsState.swift in Sources */,
