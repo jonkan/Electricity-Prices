@@ -1966,37 +1966,37 @@
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "bs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "en" : {
@@ -2008,139 +2008,139 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "ga" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "ka" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "mk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "mt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "nn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "sq" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "sr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "sv" : {
@@ -2152,13 +2152,13 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ %@ (%@)"
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         }
       }
@@ -8256,7 +8256,7 @@
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zámky obrazovky``````"
+            "value" : "Na uzamčené obrazovce"
           }
         },
         "da" : {
