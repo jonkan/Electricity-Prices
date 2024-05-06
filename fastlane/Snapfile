@@ -11,20 +11,20 @@ devices([
 ])
 
 languages([
-  "da",
-  "de-DE",
-  "el",
-  "en-GB",
-  "en-US",
-  "es-ES",
-  "fi",
-  "fr-FR",
-  "it",
-  "nl-NL",
-  "no",
-  "pt-PT",
-  ["sv", "sv-SE"],
-  "tr",  
+  "da", # Danish
+  "de-DE", # German (Germany)
+  "el", # Greek
+  "en-GB", # English (United Kingdom)
+  "en-US", # English (United States)
+  "es-ES", # Spanish (Spain)
+  "fi", # Finnish
+  "fr-FR", # French (France)
+  "it", # Italian
+  "nl-NL", # Dutch (Netherlands)
+  "no", # Norwegian
+  "pt-PT", # Portuguese (Portugal)
+  ["sv", "sv-SE"], # Swedish, Swedish (Sweden)
+  "tr", # Turkish
 ])
 
 # The name of the scheme which contains the UI Tests

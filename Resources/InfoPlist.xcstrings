@@ -47,6 +47,12 @@
             "value" : "Electricity Prices"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Electricity Prices"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -251,6 +257,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Electricity Prices"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Electricity Prices"
@@ -463,6 +475,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
+            "value" : ""
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
             "value" : ""
           }
         },

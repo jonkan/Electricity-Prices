@@ -39,6 +39,12 @@
             "value" : ""
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -230,6 +236,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "\n"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "\n"
@@ -431,6 +443,12 @@
             "value" : " "
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " "
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -625,6 +643,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : " * "
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " *"
           }
         },
         "es" : {
@@ -823,6 +847,12 @@
             "value" : " = "
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " ="
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1019,6 +1049,12 @@
             "value" : ", χωρίς φόρους ή τέλη."
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ", without taxes or fees."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1210,6 +1246,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "."
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "."
@@ -1411,6 +1453,12 @@
             "value" : "("
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "("
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1607,6 +1655,12 @@
             "value" : ") * "
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ") *"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1798,6 +1852,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@"
@@ -2005,6 +2065,12 @@
             "value" : "%1$@ %2$@ (%3$@)"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ %2$@ (%3$@)"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2196,6 +2262,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@/kWh"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@/kWh"
@@ -2397,6 +2469,12 @@
             "value" : "%lld αρχεία καταγραφής"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld log files"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2591,6 +2669,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ένας πολλαπλασιαστής του 1.25 αυξάνει την τιμή κατά 25%."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A multiplier of 1.25 increases the price by 25%."
           }
         },
         "es" : {
@@ -2789,6 +2873,12 @@
             "value" : "Προσθήκη"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2983,6 +3073,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Προσάρμοσε την τιμή προσθέτοντας ΦΠΑ και αμοιβές για να εκτιμήσεις τι πραγματικά πληρώνεις για το ηλεκτρικό σου ρεύμα."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adjust the price by adding VAT and fees to estimate what you actually pay for your electricity."
           }
         },
         "es" : {
@@ -3181,6 +3277,12 @@
             "value" : "Προσαρμόστε τα όρια για αυτό που θεωρείτε χαμηλές και υψηλές τιμές."
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adjust the thresholds for what you consider low and high prices."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3375,6 +3477,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Υπολογισμός"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calculation"
           }
         },
         "es" : {
@@ -3573,6 +3681,12 @@
             "value" : "Αλλαγές που περιμένουν να συγχρονιστούν..."
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Changes waiting to sync..."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3767,6 +3881,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Διάγραμμα"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chart"
           }
         },
         "es" : {
@@ -3965,6 +4085,12 @@
             "value" : "Φθηνότερο αύριο;"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cheaper Tomorrow?"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4159,6 +4285,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Σφίξτε τις αρνητικές τιμές"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clamp negative prices"
           }
         },
         "es" : {
@@ -4357,6 +4489,12 @@
             "value" : "Καταναλώστε Έξυπνα!"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Consume Smarter!"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4551,6 +4689,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Προσαρμόσιμο"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Customizable"
           }
         },
         "es" : {
@@ -4749,6 +4893,12 @@
             "value" : "Απενεργοποιημένο"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disabled"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4943,6 +5093,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Εμφάνιση"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Display"
           }
         },
         "es" : {
@@ -5141,6 +5297,12 @@
             "value" : "Εμφανίζει την τρέχουσα τιμή του ηλεκτρισμού"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Displays the current electricity price"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5335,6 +5497,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ολοκληρώθηκε"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
           }
         },
         "es" : {
@@ -5533,6 +5701,12 @@
             "value" : "Συγκρίνετε εύκολα τις τιμές σήμερα και αύριο"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Easily compare today's and tomorrow's prices"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5729,6 +5903,12 @@
             "value" : "Τιμή κλεισίματος της ΕΚΤ %@"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ECB closing price %@"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5920,6 +6100,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Electricity Prices"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Electricity Prices"
@@ -6121,6 +6307,12 @@
             "value" : "Η διεύθυνση email αντιγράφηκε!"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email address copied!"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6315,6 +6507,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ενεργοποιημένο"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enabled"
           }
         },
         "es" : {
@@ -6513,6 +6711,12 @@
             "value" : "Εισάγετε τις τιμές σε "
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter prices in"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6707,6 +6911,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Συναλλαγματική ισοτιμία"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exchange rate"
           }
         },
         "es" : {
@@ -6905,6 +7115,12 @@
             "value" : "Επεκτείνετε το διάγραμμά σας για να συμπεριλάβει όλες τις τιμές του αύριο."
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Expand your chart to include all of tomorrow’s prices."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7099,6 +7315,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Αποτυχία κατά την ανάκτηση των αρχείων καταγραφής από το ρολόι."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Failed to fetch logs from the watch."
           }
         },
         "es" : {
@@ -7297,6 +7519,12 @@
             "value" : "Χρέωση"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fee"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7491,6 +7719,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Χρεώσεις"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fees"
           }
         },
         "es" : {
@@ -7689,6 +7923,12 @@
             "value" : "Ανάκτηση τιμών..."
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fetching prices..."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7883,6 +8123,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Υψηλή"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "High"
           }
         },
         "es" : {
@@ -8081,6 +8327,12 @@
             "value" : "Όρια"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Limits"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8275,6 +8527,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Παράθυρα κλειδώματος οθόνης"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lock Screen Widgets"
           }
         },
         "es" : {
@@ -8473,6 +8731,12 @@
             "value" : "Αρχεία καταγραφής"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Logs"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8667,6 +8931,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Χαμηλή"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Low"
           }
         },
         "es" : {
@@ -8865,6 +9135,12 @@
             "value" : "Πολλαπλασιαστής"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Multiplier"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9059,6 +9335,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Όνομα"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name"
           }
         },
         "es" : {
@@ -9257,6 +9539,12 @@
             "value" : "Οι αρνητικές τιμές θα στρογγυλοποιηθούν στο μηδέν."
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Negative prices will be clamped to zero."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9451,6 +9739,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Δεν είναι έτοιμο"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not ready"
           }
         },
         "es" : {
@@ -9649,6 +9943,12 @@
             "value" : "Αγορά Μίας Φοράς"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "One-Time Purchase"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9843,6 +10143,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Πληρώστε μία φορά και απολαύστε πρόσβαση εφ' όρου ζωής σε όλες τις λειτουργίες."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pay once and enjoy lifetime access to all features."
           }
         },
         "es" : {
@@ -10041,6 +10347,12 @@
             "value" : "ανά kWh"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "per kWh"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10235,6 +10547,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Προγραμματίστε εκ των προτέρων και αποφύγετε τις κορυφές"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plan ahead and avoid the peaks"
           }
         },
         "es" : {
@@ -10433,6 +10751,12 @@
             "value" : "Παρακαλούμε αναφέρετε οποιαδήποτε προβλήματα σε "
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please report any issues to"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10627,6 +10951,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ενισχύστε την εμπειρία σας ξεκλειδώνοντας όλες τις επαγγελματικές λειτουργίες!"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Power up your experience by unlocking all Pro features!"
           }
         },
         "es" : {
@@ -10825,6 +11155,12 @@
             "value" : "Ρύθμιση Τιμής"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Price Adjustment"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11019,6 +11355,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Περιοχή τιμής"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Price area"
           }
         },
         "es" : {
@@ -11217,6 +11559,12 @@
             "value" : "Όρια Τιμών"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Price Limits"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11411,6 +11759,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Οι τιμές είναι "
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prices are"
           }
         },
         "es" : {
@@ -11609,6 +11963,12 @@
             "value" : "Επεξεργασία καταγραφών"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Processing logs"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11803,6 +12163,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Έτοιμο"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ready"
           }
         },
         "es" : {
@@ -12001,6 +12367,12 @@
             "value" : "Επαναφορά"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12195,6 +12567,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Επαναφορά Αγορών"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restore Purchases"
           }
         },
         "es" : {
@@ -12393,6 +12771,12 @@
             "value" : "Επανάληψη"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retry"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12587,6 +12971,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Δείτε τιμές σε μια ματιά"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See prices at a glance"
           }
         },
         "es" : {
@@ -12785,6 +13175,12 @@
             "value" : "Ρυθμίσεις"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12979,6 +13375,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Μοιραστείτε"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Share"
           }
         },
         "es" : {
@@ -13177,6 +13579,12 @@
             "value" : "Παραμείνετε ενημερωμένοι χωρίς να ανοίγετε την εφαρμογή"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stay updated without opening the app"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13371,6 +13779,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Επιτυχής λήψη καταγραφών από το ρολόι."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Success fetching logs from the watch."
           }
         },
         "es" : {
@@ -13569,6 +13983,12 @@
             "value" : "Υποστήριξη"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13763,6 +14183,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Συγχρονισμός με την εφαρμογή ρολοιού"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sync with the watch app"
           }
         },
         "es" : {
@@ -13961,6 +14387,12 @@
             "value" : "Συγχρονίζεται..."
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Syncing..."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14155,6 +14587,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Πατήστε για να αντιγράψετε τη διεύθυνση email"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap to copy the email address"
           }
         },
         "es" : {
@@ -14353,6 +14791,12 @@
             "value" : "Η εφαρμογή ρολοιού είναι ενημερωμένη."
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The watch app is up-to-date."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14547,6 +14991,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Για να προσαρμόσετε τις προτιμήσεις σας"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To suit your preferences"
           }
         },
         "es" : {
@@ -14745,6 +15195,12 @@
             "value" : "Οι τιμές του αύριο δεν είναι ακόμα διαθέσιμες."
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tomorrows prices not yet available."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14939,6 +15395,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Μεταφέρονται τα ημερολόγια από το ρολόι."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transfering logs from the watch"
           }
         },
         "es" : {
@@ -15137,6 +15599,12 @@
             "value" : "Δοκιμάστε να έχετε την εφαρμογή ρολοιού στο προσκήνιο."
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try having the watch app in the foreground."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15331,6 +15799,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ξεκλείδωμα Pro"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unlock Pro"
           }
         },
         "es" : {
@@ -15529,6 +16003,12 @@
             "value" : "Ξεκλείδωμα Pro!"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unlock Pro!"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15723,6 +16203,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Λειτουργία Προβολής"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View Mode"
           }
         },
         "es" : {
@@ -15921,6 +16407,12 @@
             "value" : "Αναμονή για την αποστολή αρχείων καταγραφής από το ρολόι"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waiting for the watch to send logs"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16115,6 +16607,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Μικροσυσκευές"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widgets"
           }
         },
         "es" : {
@@ -16313,6 +16811,12 @@
             "value" : "Η προσαρμογή τιμής σας είναι προσωρινά εξαιρεμένη ενώ επεξεργάζεστε αυτούς τους περιορισμούς."
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your price adjustment is temporarily excluded while you edit these limits."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16507,6 +17011,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Η αγορά σας δεν ήταν δυνατό να επαληθευτεί από το App Store."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your purchase could not be verified by the App Store."
           }
         },
         "es" : {

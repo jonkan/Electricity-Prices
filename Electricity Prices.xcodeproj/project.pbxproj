@@ -587,6 +587,7 @@
 				lb,
 				sl,
 				ga,
+				"en-GB",
 			);
 			mainGroup = 261FC18428B7771F007B4A4E;
 			packageReferences = (

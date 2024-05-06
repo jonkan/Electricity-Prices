@@ -39,6 +39,12 @@
             "value" : ""
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -235,6 +241,12 @@
             "value" : " - "
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " -"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -426,6 +438,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@"
@@ -627,6 +645,12 @@
             "value" : "Ο %@ χρησιμοποιείται πάντα."
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ is always used."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -823,6 +847,12 @@
             "value" : "Ο %@ χρησιμοποιείται αν η τιμή είναι χαμηλότερη από το %@."
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ is used if the price is lower than %@."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1014,6 +1044,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "£"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "£"
@@ -1216,6 +1252,12 @@
             "value" : "€"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "€"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1412,6 +1454,12 @@
             "value" : "₺"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "₺"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1550,6 +1598,12 @@
             "value" : "₺"
           }
         },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "₺"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1601,6 +1655,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Αλβανία"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Albania"
           }
         },
         "es" : {
@@ -1797,6 +1857,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Παρουσιάστηκε άγνωστο σφάλμα."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An unknown error occurred."
           }
         },
         "es" : {
@@ -1996,6 +2062,12 @@
             "value" : "Αυστρία"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Austria"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2192,6 +2264,12 @@
             "value" : "Αυτόματο"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatic"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2383,6 +2461,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "b"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "b"
@@ -2584,6 +2668,12 @@
             "value" : "Απαγόρευση"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ban"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2778,6 +2868,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Μπάρα"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bar"
           }
         },
         "es" : {
@@ -2977,6 +3073,12 @@
             "value" : "Βέλγιο"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Belgium"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3174,6 +3276,12 @@
             "value" : "Βοσνία και Ερζεγοβίνη"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bosnia and Herzegovina"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3368,6 +3476,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Βρετανική λίρα"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "British pound"
           }
         },
         "es" : {
@@ -3567,6 +3681,12 @@
             "value" : "Βουλγαρία"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bulgaria"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3763,6 +3883,12 @@
             "value" : "Βουλγαρικό λεβ"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bulgarian lev"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3955,6 +4081,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "c"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "c"
@@ -4157,6 +4289,12 @@
             "value" : "Λεπτό"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cent"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4348,6 +4486,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CHF"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "CHF"
@@ -4550,6 +4694,12 @@
             "value" : "Κροατία"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Croatia"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4744,6 +4894,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Νόμισμα"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Currency"
           }
         },
         "es" : {
@@ -4943,6 +5099,12 @@
             "value" : "Κύπρος"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cyprus"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5137,6 +5299,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Τσεχική κορώνα"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Czech koruna"
           }
         },
         "es" : {
@@ -5336,6 +5504,12 @@
             "value" : "Τσεχική Δημοκρατία"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Czech Republic"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5531,6 +5705,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Δανική κορώνα"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Danish krone"
           }
         },
         "es" : {
@@ -5730,6 +5910,12 @@
             "value" : "Δανία"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Denmark"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5925,6 +6111,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Εσθονία"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estonia"
           }
         },
         "es" : {
@@ -6124,6 +6316,12 @@
             "value" : "Ευρώ"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euro"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6315,6 +6513,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "f"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "f"
@@ -6516,6 +6720,12 @@
             "value" : "Αποτυχία λήψης ενημερωμένης συναλλαγματικής ισοτιμίας."
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Failed to fetch an up-to-date exchange rate."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6710,6 +6920,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Φιλίρ"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fillér"
           }
         },
         "es" : {
@@ -6909,6 +7125,12 @@
             "value" : "Φινλανδία"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finland"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7103,6 +7325,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Φιορίνι"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forint"
           }
         },
         "es" : {
@@ -7301,6 +7529,12 @@
             "value" : "Φιορίνια"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forints"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7495,6 +7729,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Φράγκο"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Franc"
           }
         },
         "es" : {
@@ -7694,6 +7934,12 @@
             "value" : "Γαλλία"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "France"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7890,6 +8136,12 @@
             "value" : "Φράγκα"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Francs"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8081,6 +8333,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ft"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ft"
@@ -8283,6 +8541,12 @@
             "value" : "Γεωργία"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Georgia"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8480,6 +8744,12 @@
             "value" : "Γερμανία"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Germany"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8671,6 +8941,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "gr"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "gr"
@@ -8873,6 +9149,12 @@
             "value" : "Ελλάδα"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Greece"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9069,6 +9351,12 @@
             "value" : "Γκρος"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grosz"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9260,6 +9548,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "h"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "h"
@@ -9461,6 +9755,12 @@
             "value" : "Χαλέρ"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haléř"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9655,6 +9955,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Φιορίνια Ουγγαρίας"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hungarian forint"
           }
         },
         "es" : {
@@ -9854,6 +10160,12 @@
             "value" : "Ουγγαρία"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hungary"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10049,6 +10361,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ιρλανδία"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ireland"
           }
         },
         "es" : {
@@ -10248,6 +10566,12 @@
             "value" : "Ιταλία"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Italy"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10439,6 +10763,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kč"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kč"
@@ -10640,6 +10970,12 @@
             "value" : "Κορόνα"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Koruna"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10834,6 +11170,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Κορόνες"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Koruny"
           }
         },
         "es" : {
@@ -11033,6 +11375,12 @@
             "value" : "Κόσοβο"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kosovo"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11225,6 +11573,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "kr"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "kr"
@@ -11427,6 +11781,12 @@
             "value" : "Κορόνα"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krona"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11622,6 +11982,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Κορόνα"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krone"
           }
         },
         "es" : {
@@ -11821,6 +12187,12 @@
             "value" : "Κορόνες"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kroner"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12018,6 +12390,12 @@
             "value" : "Κορόνες"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kronor"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12212,6 +12590,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Κουρούς"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kuruş"
           }
         },
         "es" : {
@@ -12411,6 +12795,12 @@
             "value" : "Λετονία"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Latvia"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12602,6 +12992,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "lei"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "lei"
@@ -12803,6 +13199,12 @@
             "value" : "Lei"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lei"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12994,6 +13396,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leu"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Leu"
@@ -13195,6 +13603,12 @@
             "value" : "Lev"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lev"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13386,6 +13800,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leva"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Leva"
@@ -13587,6 +14007,12 @@
             "value" : "Γραμμή"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Line"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13783,6 +14209,12 @@
             "value" : "Γραμμή (επικαλυπτόμενη)"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Line (interpolated)"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13974,6 +14406,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lira"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lira"
@@ -14176,6 +14614,12 @@
             "value" : "Λιθουανία"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lithuania"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14371,6 +14815,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Λουξεμβούργο"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luxembourg"
           }
         },
         "es" : {
@@ -14570,6 +15020,12 @@
             "value" : "Μάλτα"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Malta"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14765,6 +15221,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Μολδαβία"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moldova"
           }
         },
         "es" : {
@@ -14964,6 +15426,12 @@
             "value" : "Μαυροβούνιο"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Montenegro"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15159,6 +15627,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ολλανδία"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Netherlands"
           }
         },
         "es" : {
@@ -15358,6 +15832,12 @@
             "value" : "Βόρεια Μακεδονία"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "North Macedonia"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15553,6 +16033,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Νορβηγία"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Norway"
           }
         },
         "es" : {
@@ -15752,6 +16238,12 @@
             "value" : "Νορβηγική κορόνα"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Norwegian krone"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15944,6 +16436,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "öre"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "öre"
@@ -16146,6 +16644,12 @@
             "value" : "Öre"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öre"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16338,6 +16842,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "øre"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "øre"
@@ -16540,6 +17050,12 @@
             "value" : "Ορε"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Øre"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16731,6 +17247,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "p"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "p"
@@ -16932,6 +17454,12 @@
             "value" : "Πένι"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Penny"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17129,6 +17657,12 @@
             "value" : "Πολωνία"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poland"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17323,6 +17857,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Πολωνικό ζλότι"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Polish złoty"
           }
         },
         "es" : {
@@ -17522,6 +18062,12 @@
             "value" : "Πορτογαλία"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Portugal"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17716,6 +18262,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Λίρα"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pound"
           }
         },
         "es" : {
@@ -17914,6 +18466,12 @@
             "value" : "Περιοχή τιμής"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Price area"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18105,6 +18663,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rappen"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rappen"
@@ -18306,6 +18870,12 @@
             "value" : "Περιοχή"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Region"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18501,6 +19071,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ρουμανία"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Romania"
           }
         },
         "es" : {
@@ -18699,6 +19275,12 @@
             "value" : "Λέου της Ρουμανίας"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Romanian leu"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18890,6 +19472,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rp"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rp"
@@ -19092,6 +19680,12 @@
             "value" : "Σερβία"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Serbia"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19286,6 +19880,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ρύθμιση"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Setting"
           }
         },
         "es" : {
@@ -19485,6 +20085,12 @@
             "value" : "Σλοβακία"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slovakia"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19680,6 +20286,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Σλοβενία"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slovenia"
           }
         },
         "es" : {
@@ -19879,6 +20491,12 @@
             "value" : "Ισπανία"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spain"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20070,6 +20688,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "st"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "st"
@@ -20271,6 +20895,12 @@
             "value" : "Στοτίνκα"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stotinka"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20466,6 +21096,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Σουηδία"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sweden"
           }
         },
         "es" : {
@@ -20665,6 +21301,12 @@
             "value" : "Σουηδική κορόνα"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swedish krona"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20859,6 +21501,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ελβετικό φράγκο"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swiss franc"
           }
         },
         "es" : {
@@ -21058,6 +21706,12 @@
             "value" : "Ελβετία"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Switzerland"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21252,6 +21906,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Σήμερα"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today"
           }
         },
         "es" : {
@@ -21450,6 +22110,12 @@
             "value" : "Σήμερα και η Ερχόμενη Νύχτα"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today and Coming Night"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21646,6 +22312,12 @@
             "value" : "Σήμερα και Αύριο"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today and Tomorrow"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21840,6 +22512,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Αύριο"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tomorrow"
           }
         },
         "es" : {
@@ -22039,6 +22717,12 @@
             "value" : "Τουρκία"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turkey"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22233,6 +22917,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Τουρκική λίρα"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turkish lira"
           }
         },
         "es" : {
@@ -22432,6 +23122,12 @@
             "value" : "Ουκρανία"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ukraine"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22628,6 +23324,12 @@
             "value" : "Δυστυχώς δεν βρέθηκαν δεδομένα για την επιλεγμένη περιοχή τιμών."
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unfortunately no data was found for the selected price area."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22822,6 +23524,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Μονάδα"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unit"
           }
         },
         "es" : {
@@ -23021,6 +23729,12 @@
             "value" : "Ηνωμένο Βασίλειο"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "United Kingdom"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23217,6 +23931,12 @@
             "value" : "Τα widgets εμφανίζουν πάντα τις τιμές σε %@."
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widgets always show prices in %@."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23408,6 +24128,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "zł"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "zł"
@@ -23609,6 +24335,12 @@
             "value" : "Ζλότι"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Złoty"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23805,6 +24537,12 @@
             "value" : "Ζλότιχ"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Złotych"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23996,6 +24734,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "лв"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "лв"
