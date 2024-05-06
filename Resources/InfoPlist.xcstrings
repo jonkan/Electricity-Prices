@@ -107,12 +107,6 @@
             "value" : "ელფასი"
           }
         },
-        "lb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Stroumpräis"
-          }
-        },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
@@ -322,12 +316,6 @@
             "value" : "ელფასი"
           }
         },
-        "lb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Stroumpräis"
-          }
-        },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
@@ -533,12 +521,6 @@
           }
         },
         "ka" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
-          }
-        },
-        "lb" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : ""

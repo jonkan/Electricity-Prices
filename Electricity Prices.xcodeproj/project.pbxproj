@@ -584,7 +584,6 @@
 				tr,
 				uk,
 				bg,
-				lb,
 				sl,
 				ga,
 				"en-GB",
