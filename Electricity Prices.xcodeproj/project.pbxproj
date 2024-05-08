@@ -924,7 +924,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = se.j0nas.EPWatch.widgetextension;
 				"PRODUCT_BUNDLE_IDENTIFIER[sdk=watchos*]" = se.j0nas.EPWatch.watchkitapp.extension;
 				"PRODUCT_BUNDLE_IDENTIFIER[sdk=watchsimulator*]" = se.j0nas.EPWatch.watchkitapp.extension;
@@ -957,7 +957,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = se.j0nas.EPWatch.widgetextension;
 				"PRODUCT_BUNDLE_IDENTIFIER[sdk=watchos*]" = se.j0nas.EPWatch.watchkitapp.extension;
 				"PRODUCT_BUNDLE_IDENTIFIER[sdk=watchsimulator*]" = se.j0nas.EPWatch.watchkitapp.extension;
@@ -1163,7 +1163,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = se.j0nas.EPWatch.watchkitapp;
 				PRODUCT_NAME = "Electricity Prices";
 				SDKROOT = watchos;
@@ -1196,7 +1196,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = se.j0nas.EPWatch.watchkitapp;
 				PRODUCT_NAME = "Electricity Prices";
 				SDKROOT = watchos;
@@ -1231,7 +1231,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = se.j0nas.EPWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1267,7 +1267,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = se.j0nas.EPWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
