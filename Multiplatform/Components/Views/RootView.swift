@@ -52,7 +52,7 @@ struct RootView: View {
                     }
                 }
             }
-            .navigationTitle("Electricity Prices")
+            .navigationTitle(AppInfo.bundleDisplayName)
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button {
