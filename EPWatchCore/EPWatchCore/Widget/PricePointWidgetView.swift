@@ -15,7 +15,17 @@ public struct WidgetView: View {
     let entry: PricePointTimelineEntry
 
     public init(entry: PricePointTimelineEntry) {
-        self.entry = entry
+        if use941ForSnapshots() {
+            self.entry = .init(
+                pricePoint: entry.prices.price(for: .nine41)!,
+                prices: entry.prices,
+                limits: entry.limits,
+                pricePresentation: entry.pricePresentation,
+                chartStyle: entry.chartStyle
+            )
+        } else {
+            self.entry = entry
+        }
     }
 
     public var body: some View {

@@ -76,7 +76,9 @@ public struct PricePointTimelineProvider: TimelineProvider {
                 let chartViewMode = await state.chartViewMode
 
                 var entries: [Entry] = []
-                let currentHour = calendar.startOfHour(for: .now)
+                let currentHour = calendar.startOfHour(
+                    for: use941ForSnapshots() ? .nine41 : .now
+                )
                 for price in allPrices {
                     guard price.date >= currentHour else {
                         // Skip past timeline entries

@@ -241,8 +241,14 @@ public class AppState: ObservableObject {
         }
     }
 
+    // swiftlint:disable:next function_body_length
     public func updatePricesIfNeeded() async throws {
         guard !isSwiftUIPreview() else {
+            return
+        }
+        guard !isRunningForSnapshots() else {
+            prices = try await mockedPrices()
+            currentPrice = prices.price(for: use941ForSnapshots() ? .nine41 : .now)
             return
         }
         guard priceArea != nil else {
@@ -308,17 +314,17 @@ public class AppState: ObservableObject {
         guard let priceArea = priceArea else {
             throw NSError(0, "No price area selected")
         }
-        if isRunningForSnapshots() {
-            let dayAheadPrices = DayAheadPrices.mocked1
-            let rate = ExchangeRate.mockedEUR(to: currency)
-            let prices = try dayAheadPrices.prices(using: rate).shiftDatesToNow()
-            return prices
-        } else {
-            async let dayAheadPrices = try PricesAPI.shared.downloadDayAheadPrices(for: priceArea)
-            async let rate = try currentExchangeRate()
-            let prices = try await dayAheadPrices.prices(using: rate)
-            return prices
-        }
+        async let dayAheadPrices = try PricesAPI.shared.downloadDayAheadPrices(for: priceArea)
+        async let rate = try currentExchangeRate()
+        let prices = try await dayAheadPrices.prices(using: rate)
+        return prices
+    }
+
+    private func mockedPrices() async throws -> [PricePoint] {
+        let dayAheadPrices = DayAheadPrices.mocked1
+        let rate = ExchangeRate.mockedEUR(to: currency)
+        let prices = try dayAheadPrices.prices(using: rate).shiftDatesToNow()
+        return prices
     }
 
     public func currentExchangeRate() async throws -> ExchangeRate {

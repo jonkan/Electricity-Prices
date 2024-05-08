@@ -8,5 +8,17 @@
 import Foundation
 
 public func isRunningForSnapshots() -> Bool {
+#if DEBUG
     UserDefaults.appGroup.bool(forKey: "FASTLANE_SNAPSHOT")
+#else
+    false
+#endif
+}
+
+public func use941ForSnapshots() -> Bool {
+#if os(watchOS)
+    false
+#else
+    isRunningForSnapshots()
+#endif
 }
