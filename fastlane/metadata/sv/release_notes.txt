@@ -1,0 +1,4 @@
+Introducerar Pro-version med exklusiva funktioner som:
+- Visningsläge: Utöka grafen till att inkludera alla morgondagens priser.
+- Prisgränser: Justera gränserna för vad du anser vara ett högt och lågt pris.
+- Prisjustering: Justera priset genom att lägga till moms och avgifter för att estimera vad du faktiskt betalar för din el.

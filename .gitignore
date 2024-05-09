@@ -29,5 +29,5 @@ xcuserdata
 fastlane/report.xml
 fastlane/screenshots/**/*.png
 fastlane/screenshots/screenshots.html
-fastlane/metadata
+fastlane/metadata/review_information
 fastlane/Preview.html

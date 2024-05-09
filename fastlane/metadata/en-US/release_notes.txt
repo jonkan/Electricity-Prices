@@ -1,0 +1,4 @@
+Introducing Pro Version with exclusive features such as:
+- View Mode: Expand your chart to include all of tomorrow’s prices.
+- Price Limits: Adjust the thresholds for what you consider low and high prices.
+- Price Adjustment: Adjust the price by adding VAT and fees to estimate what you actually pay for your electricity.
