@@ -1,0 +1,44 @@
+Näe nykyinen sähkönhinta Apple Watchissa, iPhonessa ja iPadissa.
+Olitpa suunnittelemassa sähköautoasi lataamista tai kodinkoneiden käyttöä, pysy ajan tasalla sähkön hinnoista ja suunnittele energiankäyttösi fiksusti.
+
+- Apple Watchin komplikaatiot 
+- Widgetit iPhonelle ja iPadille
+- Usean valuutan tuki
+
+Pro-ominaisuudet:
+- Näkymätila: Laajenna kaavioosi, joka sisältää kaikki huomisen hinnat.
+- Hinnan rajat: Säädä kynnysarvoja alhaisille ja korkeille hintoille.
+- Hinnan säätö: Muuta hintaa lisäämällä arvonlisävero ja maksut, jotta arvioisit mitä todella maksat sähköstäsi.
+
+Tuettuja alueita ovat:
+- Itävalta
+- Belgia
+- Bulgaria
+- Kroatia
+- Tšekki
+- Tanska
+- Viro
+- Suomi
+- Ranska
+- Saksa
+- Kreikka
+- Unkari
+- Irlanti
+- Italia
+- Latvia
+- Liettua
+- Luxemburg
+- Montenegro
+- Alankomaat
+- Pohjois-Makedonia
+- Norja
+- Puola
+- Portugali
+- Romania
+- Serbia
+- Slovakia
+- Slovenia
+- Espanja
+- Ruotsi
+- Sveitsi
+- Ukraina

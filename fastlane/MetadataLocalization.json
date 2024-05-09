@@ -1,0 +1,67 @@
+{
+    "files": [
+        {
+            "sourceLocale": "en-US",
+            "sourceFileURL": "metadata/en-US/description.txt",
+            "comment": "Please order the translated list of supported areas alphabetically.",
+            "outputs": [
+                {
+                    "locale": "da-DK",
+                    "fileURL": "metadata/da/description.txt"
+                },
+                {
+                    "locale": "de-DE",
+                    "fileURL": "metadata/de-DE/description.txt"
+                },
+                {
+                    "locale": "el-GR",
+                    "fileURL": "metadata/el/description.txt"
+                },
+                {
+                    "locale": "en-GB",
+                    "fileURL": "metadata/en-GB/description.txt"
+                },
+                {
+                    "locale": "en-US",
+                    "fileURL": "metadata/en-US/description.txt"
+                },
+                {
+                    "locale": "es-ES",
+                    "fileURL": "metadata/es-ES/description.txt"
+                },
+                {
+                    "locale": "fi-FI",
+                    "fileURL": "metadata/fi/description.txt"
+                },
+                {
+                    "locale": "fr-FR",
+                    "fileURL": "metadata/fr-FR/description.txt"
+                },
+                {
+                    "locale": "it-IT",
+                    "fileURL": "metadata/it/description.txt"
+                },
+                {
+                    "locale": "nl-NL",
+                    "fileURL": "metadata/nl-NL/description.txt"
+                },
+                {
+                    "locale": "nb-NO",
+                    "fileURL": "metadata/no/description.txt"
+                },
+                {
+                    "locale": "pt-PT",
+                    "fileURL": "metadata/pt-PT/description.txt"
+                },
+                {
+                    "locale": "sv-SE",
+                    "fileURL": "metadata/sv/description.txt"
+                },
+                {
+                    "locale": "tr-TR",
+                    "fileURL": "metadata/tr/description.txt"
+                }
+            ]
+        }
+    ]
+}
