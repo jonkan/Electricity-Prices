@@ -10,21 +10,25 @@ devices([
     "Apple Watch Ultra 2 (49mm)"
 ])
 
+# TODO: Not sure if it's a good way to define locales consistently here, but feels like it. 
+# - It's very confusing when mixing languages and locales.
+# - If only specifying the language, `Locale.current.region` returns nil in the UI test.
+# - Currently this does not generate the correct folder structure (as expected by deliver).
 languages([
-  "da", # Danish
-  "de-DE", # German (Germany)
-  "el", # Greek
-  "en-GB", # English (United Kingdom)
-  "en-US", # English (United States)
-  "es-ES", # Spanish (Spain)
-  "fi", # Finnish
-  "fr-FR", # French (France)
-  "it", # Italian
-  "nl-NL", # Dutch (Netherlands)
-  "no", # Norwegian
-  "pt-PT", # Portuguese (Portugal)
-  ["sv", "sv-SE"], # Swedish, Swedish (Sweden)
-  "tr", # Turkish
+  "da-DK", # Denmark
+  "de-DE", # Germany
+  "el-GR", # Greece
+  "en-GB", # United Kingdom
+  "en-US", # United States
+  "es-ES", # Spain
+  "fi-FI", # Finland
+  "fr-FR", # France
+  "it-IT", # Italy
+  "nl-NL", # Netherlands
+  "nb-NO", # Norway
+  "pt-PT", # Portugal
+  "sv-SE", # Sweden
+  "tr-TR", # Turkey
 ])
 
 # The name of the scheme which contains the UI Tests

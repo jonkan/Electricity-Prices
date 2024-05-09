@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:jonkan/fastlane.git
-  revision: bee3feb3527dfc3452ba989843bbd647297f9529
+  revision: f08a56a08b00075f622e7170979428e397f6f467
   branch: frameit-string-catalog-support
   specs:
     fastlane (2.220.0)
