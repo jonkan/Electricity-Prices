@@ -176,6 +176,7 @@ public class AppState: ObservableObject {
             chartStyle = .bar
             chartViewMode = .today
             currency = Region.current?.suggestedCurrency ?? .EUR
+            exchangeRate = .mockedEUR(to: currency)
             currencyPresentation = .automatic
             invalidateAndUpdatePrices()
         } else if !isSwiftUIPreview() {
@@ -322,8 +323,8 @@ public class AppState: ObservableObject {
 
     private func mockedPrices() async throws -> [PricePoint] {
         let dayAheadPrices = DayAheadPrices.mocked1
-        let rate = ExchangeRate.mockedEUR(to: currency)
-        let prices = try dayAheadPrices.prices(using: rate).shiftDatesToNow()
+        assert(exchangeRate?.to == currency, "Missing preset exhange rate for currency \(currency.id)")
+        let prices = try dayAheadPrices.prices(using: exchangeRate!).shiftDatesToNow()
         return prices
     }
 
