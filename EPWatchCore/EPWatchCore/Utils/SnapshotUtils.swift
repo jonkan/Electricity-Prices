@@ -19,6 +19,6 @@ public func use941ForSnapshots() -> Bool {
 #if os(watchOS)
     false
 #else
-    isRunningForSnapshots()
+    false // As fastlane (xcrun simctl) appears to fail occasionally (just some locales?)
 #endif
 }
