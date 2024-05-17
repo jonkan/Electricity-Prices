@@ -29,7 +29,7 @@
         },
         "de" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
@@ -231,7 +231,7 @@
         },
         "de" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : " - "
           }
         },
@@ -2704,12 +2704,6 @@
             "value" : "Etsii"
           }
         },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Evo popisa stringova za prijevod:\n\"Zabrana"
-          }
-        },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2780,12 +2774,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ban"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aici sunt șirurile de tradus:\n\"Interzicere"
           }
         },
         "sk" : {
@@ -7115,7 +7103,7 @@
         },
         "de" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Finnland"
           }
         },
@@ -8250,12 +8238,6 @@
             "value" : "Francos"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aici sunt stringurile de tradus:\n\"Franți"
-          }
-        },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8278,12 +8260,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Franak"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Här är strängarna att översätta:\n\"Francs"
           }
         },
         "tr" : {
@@ -9058,12 +9034,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "gr"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Iată traducerile:\n\"gr"
           }
         },
         "sk" : {
@@ -13241,12 +13211,6 @@
             "value" : "Lei"
           }
         },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Itt vannak a fordítandó szövegek:\n\"Lej"
-          }
-        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13287,12 +13251,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lei"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hier zijn de strings om te vertalen:\n\"Lei"
           }
         },
         "nn" : {
@@ -16829,18 +16787,6 @@
             "value" : "øre"
           }
         },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Her er de strenge til oversættelse:\n\"øre"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hier sind die übersetzten Strings:\n\"øre"
-          }
-        },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17020,18 +16966,6 @@
             "value" : "Øre"
           }
         },
-        "bs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Evo prijevoda stringova:\n\"Øre"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zde jsou řetězce k překladu:\n\"Øre"
-          }
-        },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17086,18 +17020,6 @@
             "value" : "Øre"
           }
         },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Evo prijevoda:\n\"Øre"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Itt vannak a fordítandó sztringek:\n\"Øre"
-          }
-        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17122,28 +17044,10 @@
             "value" : "Øre"
           }
         },
-        "mk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Овде се низите за превод:\n\"Øre"
-          }
-        },
-        "mt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hawn huma l-istringi għat-traduzzjoni:\n\"Øre"
-          }
-        },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Øre"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hier zijn de strings om te vertalen:\n\"Øre"
           }
         },
         "nn" : {
@@ -17152,58 +17056,16 @@
             "value" : "Øre"
           }
         },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Oto tłumaczenia:\n\"Øre"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aqui estão as cordas para traduzir:\n\"Øre"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Iată traducerile:\n\"Øre"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tu sú reťazce na preklad:\n\"Øre"
-          }
-        },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tolar"
           }
         },
-        "sq" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Këtu janë frazat për t'u përkthyer:\n\"Øre"
-          }
-        },
-        "sr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Овде су стрингови за превод:\n\"Øre"
-          }
-        },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Øre"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "İşte çevirilecek metinler:\n\"Øre"
           }
         },
         "uk" : {
