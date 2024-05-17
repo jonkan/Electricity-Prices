@@ -11,20 +11,17 @@ Pro-Funktionen:
 - Preisjustierung: Passen Sie den Preis an, indem Sie Mehrwertsteuer und Gebühren hinzufügen, um abzuschätzen, was Sie tatsächlich für Ihren Strom bezahlen.
 
 Unterstützt Bereiche in:
-- Österreich
 - Belgien
 - Bulgarien
-- Kroatien
-- Tschechische Republik
+- Deutschland
 - Dänemark
 - Estland
 - Finnland
 - Frankreich
-- Deutschland
 - Griechenland
-- Ungarn
 - Irland
 - Italien
+- Kroatien
 - Lettland
 - Litauen
 - Luxemburg
@@ -35,10 +32,13 @@ Unterstützt Bereiche in:
 - Polen
 - Portugal
 - Rumänien
+- Schweden
+- Schweiz
 - Serbien
 - Slowakei
 - Slowenien
 - Spanien
-- Schweden
-- Schweiz
+- Tschechische Republik
 - Ukraine
+- Ungarn
+- Österreich

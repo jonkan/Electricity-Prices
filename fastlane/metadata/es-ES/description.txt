@@ -11,16 +11,18 @@ Funciones Pro:
 - Ajuste de Precio: Ajuste el precio agregando IVA y tasas para estimar lo que realmente paga por su electricidad.
 
 Admite áreas en:
+- Alemania
 - Austria
 - Bélgica
 - Bulgaria
 - Croacia
-- Republica Checa
 - Dinamarca
+- Eslovaquia
+- Eslovenia
+- España
 - Estonia
 - Finlandia
 - Francia
-- Alemania
 - Grecia
 - Hungría
 - Irlanda
@@ -28,17 +30,15 @@ Admite áreas en:
 - Letonia
 - Lituania
 - Luxemburgo
-- Montenegro
-- Países Bajos
 - Macedonia del Norte
+- Montenegro
 - Noruega
+- Países Bajos
 - Polonia
 - Portugal
+- Republica Checa
 - Rumanía
 - Serbia
-- Eslovaquia
-- Eslovenia
-- España
 - Suecia
 - Suiza
 - Ucrania

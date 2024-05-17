@@ -11,26 +11,28 @@ Pro Özellikler:
 - Fiyat Ayarı: KDV ve ücret ekleyerek fiyatı ayarlayın ve elektrik için gerçekten ne ödediğinizi tahmin edin.
 
 Aşağıdaki alanlarda desteği bulunmaktadır:
+- Almanya
 - Avusturya
 - Belçika
 - Bulgaristan
-- Hırvatistan
 - Çek Cumhuriyeti
 - Danimarka
 - Estonya
 - Finlandiya
 - Fransa
-- Almanya
-- Yunanistan
-- Macaristan
+- Hırvatistan
+- Hollanda
 - İrlanda
+- İspanya
+- İsveç
+- İsviçre
 - İtalya
+- Karadağ
+- Kuzey Makedonya
 - Letonya
 - Litvanya
 - Lüksemburg
-- Karadağ
-- Hollanda
-- Kuzey Makedonya
+- Macaristan
 - Norveç
 - Polonya
 - Portekiz
@@ -38,7 +40,5 @@ Aşağıdaki alanlarda desteği bulunmaktadır:
 - Sırbistan
 - Slovakya
 - Slovenya
-- İspanya
-- İsveç
-- İsviçre
 - Ukrayna
+- Yunanistan

@@ -11,16 +11,16 @@ Fonctionnalités Pro :
 - Ajustement de prix : Ajustez le prix en ajoutant la TVA et les frais pour estimer ce que vous payez réellement pour votre électricité.
 
 Zones prises en charge :
+- Allemagne
 - Autriche
 - Belgique
 - Bulgarie
 - Croatie
-- République tchèque
 - Danemark
+- Espagne
 - Estonie
 - Finlande
 - France
-- Allemagne
 - Grèce
 - Hongrie
 - Irlande
@@ -28,17 +28,17 @@ Zones prises en charge :
 - Lettonie
 - Lituanie
 - Luxembourg
-- Monténégro
-- Pays-Bas
 - Macédoine du Nord
+- Monténégro
 - Norvège
+- Pays-Bas
 - Pologne
 - Portugal
+- République tchèque
 - Roumanie
 - Serbie
 - Slovaquie
 - Slovénie
-- Espagne
 - Suède
 - Suisse
 - Ukraine

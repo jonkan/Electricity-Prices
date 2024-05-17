@@ -11,20 +11,18 @@ Pro-functies:
 - Prijsaanpassing: Pas de prijs aan door BTW en kosten toe te voegen om te schatten wat je daadwerkelijk betaalt voor je elektriciteit.
 
 Ondersteunt gebieden in:
-- Oostenrijk
 - België
 - Bulgarije
-- Kroatië
-- Tsjechische Republiek
 - Denemarken
+- Duitsland
 - Estland
 - Finland
 - Frankrijk
-- Duitsland
 - Griekenland
 - Hongarije
 - Ierland
 - Italië
+- Kroatië
 - Letland
 - Litouwen
 - Luxemburg
@@ -32,13 +30,15 @@ Ondersteunt gebieden in:
 - Nederland
 - Noord-Macedonië
 - Noorwegen
+- Oekraïne
+- Oostenrijk
 - Polen
 - Portugal
 - Roemenië
 - Servië
-- Slowakije
 - Slovenië
+- Slowakije
 - Spanje
+- Tsjechische Republiek
 - Zweden
 - Zwitserland
-- Oekraïne

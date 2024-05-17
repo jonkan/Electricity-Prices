@@ -15,25 +15,24 @@ Supporta aree in:
 - Belgio
 - Bulgaria
 - Croazia
-- Repubblica Ceca
 - Danimarca
 - Estonia
 - Finlandia
 - Francia
 - Germania
 - Grecia
-- Ungheria
 - Irlanda
 - Italia
 - Lettonia
 - Lituania
 - Lussemburgo
-- Montenegro
-- Paesi Bassi
 - Macedonia del Nord
+- Montenegro
 - Norvegia
+- Paesi Bassi
 - Polonia
 - Portogallo
+- Repubblica Ceca
 - Romania
 - Serbia
 - Slovacchia
@@ -42,3 +41,4 @@ Supporta aree in:
 - Svezia
 - Svizzera
 - Ucraina
+- Ungheria

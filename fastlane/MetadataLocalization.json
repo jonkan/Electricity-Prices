@@ -3,7 +3,6 @@
         {
             "sourceLocale": "en-US",
             "sourceFileURL": "metadata/en-US/description.txt",
-            "comment": "Please order the translated list of supported areas alphabetically.",
             "outputs": [
                 {
                     "locale": "da-DK",

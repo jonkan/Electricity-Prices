@@ -11,34 +11,34 @@ Pro-funktioner:
 - Prisjustering: Juster prisen ved at tilføje moms og gebyrer for at estimere, hvad du faktisk betaler for din elektricitet.
 
 Understøtter områder i:
-- Østrig
 - Belgien
 - Bulgarien
-- Kroatien
-- Tjekkiet
 - Danmark
 - Estland
 - Finland
 - Frankrig
-- Tyskland
 - Grækenland
-- Ungarn
+- Holland 
 - Irland
 - Italien
+- Kroatien
 - Letland
 - Litauen
 - Luxembourg
 - Montenegro
-- Holland 
 - Nordmakedonien
 - Norge
 - Polen
 - Portugal
 - Rumænien
+- Schweiz
 - Serbien
 - Slovakiet
 - Slovenien
 - Spanien
 - Sverige
-- Schweiz
+- Tjekkiet
+- Tyskland
 - Ukraine
+- Ungarn
+- Østrig
