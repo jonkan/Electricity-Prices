@@ -5,49 +5,49 @@
       "localizations" : {
         "bg" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "bs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "cs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "da" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "de" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : ""
           }
         },
         "el" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "en-GB" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "es" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
@@ -59,109 +59,109 @@
         },
         "fi" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "hr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "it" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "ka" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "nb" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "pt-PT" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "ro" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
@@ -173,31 +173,31 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         },
         "uk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : ""
           }
         }
@@ -231,13 +231,13 @@
         },
         "de" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : " - "
           }
         },
         "el" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : " - "
           }
         },
@@ -267,19 +267,19 @@
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : " - "
           }
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : " - "
           }
         },
         "hr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : " - "
           }
         },
@@ -291,14 +291,14 @@
         },
         "it" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : " - "
           }
         },
         "ka" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "- "
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "lt" : {
@@ -309,13 +309,13 @@
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : " - "
           }
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : " - "
           }
         },
@@ -327,7 +327,7 @@
         },
         "nb" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : " - "
           }
         },
@@ -345,7 +345,7 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : " - "
           }
         },
@@ -357,13 +357,13 @@
         },
         "ro" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : " - "
           }
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : " - "
           }
         },
@@ -583,7 +583,7 @@
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "%@"
           }
         },
@@ -677,8 +677,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ntumi nso %@ nea yɛde pa."
+            "state" : "needs_review",
+            "value" : "Úsáidtear %@ i gcónaí."
           }
         },
         "hr" : {
@@ -879,8 +879,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Yɛfa %@ sɛ ɛmfa nea ne kɛse no a, ɛyɛ sɛ ɔboafo no nyɛ %@."
+            "state" : "needs_review",
+            "value" : "Baintear úsáid as %@ má tá an praghas níos ísle ná %@."
           }
         },
         "hr" : {
@@ -903,8 +903,8 @@
         },
         "ka" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ გამოიყენება, თუ ფასი ჯერ არ არის %@-ზე დაბალი."
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "lt" : {
@@ -1051,8 +1051,8 @@
         },
         "en-GB" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "£"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "es" : {
@@ -1195,8 +1195,8 @@
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "лв"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "tr" : {
@@ -1612,7 +1612,7 @@
         },
         "uk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "₺"
           }
         }
@@ -1665,7 +1665,7 @@
         },
         "es" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Albania"
           }
         },
@@ -1677,7 +1677,7 @@
         },
         "fi" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Albania"
           }
         },
@@ -1689,8 +1689,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Albania"
+            "state" : "needs_review",
+            "value" : "An Albáin"
           }
         },
         "hr" : {
@@ -1737,7 +1737,7 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Albanija"
           }
         },
@@ -1755,13 +1755,13 @@
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Albania"
           }
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Albania"
           }
         },
@@ -1891,7 +1891,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Error a yennhwɛ kɔ ara"
           }
         },
@@ -2076,7 +2076,7 @@
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Austria"
           }
         },
@@ -2094,7 +2094,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Austria"
           }
         },
@@ -2166,7 +2166,7 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Austria"
           }
         },
@@ -2296,7 +2296,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Twa-tɔm-so"
           }
         },
@@ -2332,7 +2332,7 @@
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Automātisks"
           }
         },
@@ -2682,8 +2682,8 @@
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Keeldus"
+            "state" : "needs_review",
+            "value" : "Keelata"
           }
         },
         "fi" : {
@@ -2700,8 +2700,14 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Etsii"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Ban"
           }
         },
         "hu" : {
@@ -2718,8 +2724,8 @@
         },
         "ka" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "ბანი"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "lt" : {
@@ -2760,8 +2766,8 @@
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Utelate"
+            "state" : "needs_review",
+            "value" : "Forby"
           }
         },
         "pl" : {
@@ -2774,6 +2780,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ban"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Interdicție"
           }
         },
         "sk" : {
@@ -2830,7 +2842,7 @@
         },
         "bs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Bar"
           }
         },
@@ -2866,14 +2878,14 @@
         },
         "es" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Bar"
           }
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Baar"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "fi" : {
@@ -2884,14 +2896,14 @@
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Bar"
           }
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bar"
+            "state" : "needs_review",
+            "value" : "Beár"
           }
         },
         "hr" : {
@@ -2908,7 +2920,7 @@
         },
         "it" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Bar"
           }
         },
@@ -2950,13 +2962,13 @@
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bar"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Bar"
           }
         },
@@ -2968,7 +2980,7 @@
         },
         "pt-PT" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Bar"
           }
         },
@@ -2986,13 +2998,13 @@
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bar"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Bar"
           }
         },
@@ -3004,13 +3016,13 @@
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Stapel"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Bar"
           }
         },
@@ -3039,7 +3051,7 @@
         },
         "cs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Belgie"
           }
         },
@@ -3093,8 +3105,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Belgium"
+            "state" : "needs_review",
+            "value" : "An Bheilg"
           }
         },
         "hr" : {
@@ -3105,7 +3117,7 @@
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Belgium"
           }
         },
@@ -3141,8 +3153,8 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Belġju"
+            "state" : "needs_review",
+            "value" : "Il-Belġju"
           }
         },
         "nb" : {
@@ -3195,8 +3207,8 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Belgjikë"
+            "state" : "needs_review",
+            "value" : "Belgjika"
           }
         },
         "sr" : {
@@ -3248,7 +3260,7 @@
         },
         "da" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Bosnien og Herzegovina"
           }
         },
@@ -3296,7 +3308,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Bosnia ne Herzegovina"
           }
         },
@@ -3344,7 +3356,7 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Bosnja u Ħerżegovina"
           }
         },
@@ -3362,7 +3374,7 @@
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Bosnia og Herzegovina"
           }
         },
@@ -3498,8 +3510,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pɔɔndo British"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "hr" : {
@@ -3510,8 +3522,8 @@
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Brit font"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "it" : {
@@ -3701,8 +3713,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bulgaria"
+            "state" : "needs_review",
+            "value" : "An Bhulgáir"
           }
         },
         "hr" : {
@@ -3719,7 +3731,7 @@
         },
         "it" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Bulgaria"
           }
         },
@@ -3767,7 +3779,7 @@
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Bulgaria"
           }
         },
@@ -3803,8 +3815,8 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bullgari"
+            "state" : "needs_review",
+            "value" : "Bullgaria"
           }
         },
         "sr" : {
@@ -3855,8 +3867,8 @@
         },
         "da" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bulgarsk lev"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "de" : {
@@ -3885,13 +3897,13 @@
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Bulgaaria leev"
           }
         },
         "fi" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Bulgarian lev"
           }
         },
@@ -3903,8 +3915,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lev Bulgarian"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "hr" : {
@@ -3951,13 +3963,13 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Lev Bulgaru"
           }
         },
         "nb" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Bulgarsk lev"
           }
         },
@@ -4005,8 +4017,8 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Levi bullgar"
+            "state" : "needs_review",
+            "value" : "Lev bullgar"
           }
         },
         "sr" : {
@@ -4106,7 +4118,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "c"
           }
         },
@@ -4130,8 +4142,8 @@
         },
         "ka" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "ს"
+            "state" : "needs_review",
+            "value" : "ლ"
           }
         },
         "lt" : {
@@ -4214,7 +4226,7 @@
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "c"
           }
         },
@@ -4309,19 +4321,19 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pesewa"
+            "state" : "needs_review",
+            "value" : "Cent"
           }
         },
         "hr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Cent"
           }
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Cent"
           }
         },
@@ -4345,7 +4357,7 @@
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Cents"
           }
         },
@@ -4375,13 +4387,13 @@
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cent"
+            "state" : "needs_review",
+            "value" : "Øre"
           }
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Cent"
           }
         },
@@ -4399,13 +4411,13 @@
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Cent"
           }
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Cent"
           }
         },
@@ -4417,19 +4429,19 @@
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Cent"
           }
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Cent"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Cent"
           }
         },
@@ -4451,7 +4463,7 @@
         },
         "bs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "CHF"
           }
         },
@@ -4541,14 +4553,14 @@
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Šveicarijos frankas"
           }
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Šveices franks"
+            "state" : "needs_review",
+            "value" : "CHF"
           }
         },
         "mk" : {
@@ -4696,7 +4708,7 @@
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Horvaatia"
           }
         },
@@ -4714,8 +4726,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Croatia"
+            "state" : "needs_review",
+            "value" : "An Chróit"
           }
         },
         "hr" : {
@@ -4762,7 +4774,7 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kroazja"
           }
         },
@@ -4816,8 +4828,8 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kroaci"
+            "state" : "needs_review",
+            "value" : "Kroacia"
           }
         },
         "sr" : {
@@ -4982,7 +4994,7 @@
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Valuta"
           }
         },
@@ -5018,8 +5030,8 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Monedhë"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "sr" : {
@@ -5059,7 +5071,7 @@
         },
         "bs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kipar"
           }
         },
@@ -5119,7 +5131,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Cyprus"
           }
         },
@@ -5161,7 +5173,7 @@
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Кипар"
           }
         },
@@ -5179,7 +5191,7 @@
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Cyprus"
           }
         },
@@ -5209,7 +5221,7 @@
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Cyprus"
           }
         },
@@ -5221,7 +5233,7 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Qipro"
           }
         },
@@ -5261,7 +5273,7 @@
         },
         "bs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Češka kruna"
           }
         },
@@ -5321,13 +5333,13 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Koruna Czech"
           }
         },
         "hr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Češka kruna"
           }
         },
@@ -5357,8 +5369,8 @@
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Čehu krona"
+            "state" : "needs_review",
+            "value" : "Čehijas krona"
           }
         },
         "mk" : {
@@ -5369,8 +5381,8 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Koruna Ċeka"
+            "state" : "needs_review",
+            "value" : "koruna Ċeka"
           }
         },
         "nb" : {
@@ -5411,25 +5423,25 @@
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Česká koruna"
           }
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Češka krona"
           }
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Koruna çeke"
+            "state" : "needs_review",
+            "value" : "Korona çeke"
           }
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Češka kruna"
           }
         },
@@ -5464,7 +5476,7 @@
         },
         "bs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Češka Republika"
           }
         },
@@ -5524,14 +5536,14 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Czech Republic"
+            "state" : "needs_review",
+            "value" : "Poblacht na Seice"
           }
         },
         "hr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Češka Republika"
+            "state" : "needs_review",
+            "value" : "Češka"
           }
         },
         "hu" : {
@@ -5548,13 +5560,13 @@
         },
         "ka" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "ჩეხეთი"
+            "state" : "needs_review",
+            "value" : "ჩეხეთის რესპუბლიკა"
           }
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Čekijos Respublika"
           }
         },
@@ -5578,7 +5590,7 @@
         },
         "nb" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Tsjekkia"
           }
         },
@@ -5691,7 +5703,7 @@
         },
         "el" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Δανική κορώνα"
           }
         },
@@ -5727,7 +5739,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Danish krone"
           }
         },
@@ -5739,8 +5751,8 @@
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dán korona"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "it" : {
@@ -5751,7 +5763,7 @@
         },
         "ka" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "დანიში კრონა"
           }
         },
@@ -5775,7 +5787,7 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Krona Daniza"
           }
         },
@@ -5823,7 +5835,7 @@
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Danska krona"
           }
         },
@@ -5847,7 +5859,7 @@
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Danimarka kronu"
           }
         },
@@ -5870,7 +5882,7 @@
         },
         "bs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Danska"
           }
         },
@@ -5930,7 +5942,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Denmark"
           }
         },
@@ -6026,7 +6038,7 @@
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Danska"
           }
         },
@@ -6038,7 +6050,7 @@
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Danska"
           }
         },
@@ -6109,7 +6121,7 @@
         },
         "es" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Estonia"
           }
         },
@@ -6133,8 +6145,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Estonia"
+            "state" : "needs_review",
+            "value" : "An Eastóin"
           }
         },
         "hr" : {
@@ -6145,8 +6157,8 @@
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Egyesült Királyság"
+            "state" : "needs_review",
+            "value" : "Észtország"
           }
         },
         "it" : {
@@ -6181,7 +6193,7 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Estonja"
           }
         },
@@ -6199,7 +6211,7 @@
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Estonia"
           }
         },
@@ -6456,7 +6468,7 @@
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Euro"
           }
         },
@@ -6740,7 +6752,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Wɔnmo bu adi ho yɛ hwan abobɔfo adi soni ho."
           }
         },
@@ -6782,14 +6794,14 @@
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Не успеав да добијам актуелен курс."
+            "state" : "needs_review",
+            "value" : "Не успеавме да обезбедиме ажурирана курсна листа."
           }
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fallejt li jittrattwaw tassoċjazzjoni ta 'kambju aġġornata."
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "nb" : {
@@ -6876,13 +6888,13 @@
       "localizations" : {
         "bg" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Филир"
+            "state" : "needs_review",
+            "value" : "Филер"
           }
         },
         "bs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Fillér"
           }
         },
@@ -6906,8 +6918,8 @@
         },
         "el" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Φιλίρ"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -6942,7 +6954,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Fillér"
           }
         },
@@ -6960,7 +6972,7 @@
         },
         "it" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Fillér"
           }
         },
@@ -6990,8 +7002,8 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fillér"
+            "state" : "needs_review",
+            "value" : "Fillier"
           }
         },
         "nb" : {
@@ -7050,8 +7062,8 @@
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Filer"
+            "state" : "needs_review",
+            "value" : "Филер"
           }
         },
         "sv" : {
@@ -7097,13 +7109,13 @@
         },
         "da" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Finland"
           }
         },
         "de" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Finnland"
           }
         },
@@ -7145,8 +7157,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Finland"
+            "state" : "needs_review",
+            "value" : "An Fhionlainn"
           }
         },
         "hr" : {
@@ -7181,20 +7193,20 @@
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Somija"
           }
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Финска"
           }
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Finlandja"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "nb" : {
@@ -7211,7 +7223,7 @@
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Finland"
           }
         },
@@ -7241,7 +7253,7 @@
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Finska"
           }
         },
@@ -7287,7 +7299,7 @@
         },
         "bs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Forint"
           }
         },
@@ -7329,7 +7341,7 @@
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Forint"
           }
         },
@@ -7377,13 +7389,13 @@
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Forintas"
           }
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Forints"
           }
         },
@@ -7395,7 +7407,7 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Forint"
           }
         },
@@ -7437,13 +7449,13 @@
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Forint"
           }
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Forint"
           }
         },
@@ -7495,20 +7507,20 @@
         },
         "cs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Forinty"
           }
         },
         "da" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Forints"
           }
         },
         "de" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Forints"
+            "state" : "needs_review",
+            "value" : "Forint"
           }
         },
         "el" : {
@@ -7525,13 +7537,13 @@
         },
         "es" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Forints"
+            "state" : "needs_review",
+            "value" : "Forintos"
           }
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Forintid"
           }
         },
@@ -7549,7 +7561,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Forints"
           }
         },
@@ -7567,7 +7579,7 @@
         },
         "it" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Forinti"
           }
         },
@@ -7579,14 +7591,14 @@
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Forintai"
           }
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Forinti"
+            "state" : "needs_review",
+            "value" : "Forints"
           }
         },
         "mk" : {
@@ -7597,13 +7609,13 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Forints"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "nb" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Forinter"
           }
         },
@@ -7615,8 +7627,8 @@
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Forints"
+            "state" : "needs_review",
+            "value" : "Forint"
           }
         },
         "pl" : {
@@ -7627,49 +7639,49 @@
         },
         "pt-PT" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Forints"
           }
         },
         "ro" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Forinti"
+            "state" : "needs_review",
+            "value" : "Forinți"
           }
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Forinty"
           }
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Forinti"
           }
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Forints"
           }
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Forinti"
+            "state" : "needs_review",
+            "value" : "форинти"
           }
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Forints"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Forintler"
           }
         },
@@ -7691,14 +7703,14 @@
         },
         "bs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Franak"
           }
         },
         "cs" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Frank"
+            "state" : "needs_review",
+            "value" : "Franc"
           }
         },
         "da" : {
@@ -7733,8 +7745,8 @@
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Frank"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "fi" : {
@@ -7763,7 +7775,7 @@
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Frank"
           }
         },
@@ -7787,8 +7799,8 @@
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Franks"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "mk" : {
@@ -7811,8 +7823,8 @@
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Frank"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "nn" : {
@@ -7823,7 +7835,7 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Frank"
           }
         },
@@ -7841,14 +7853,14 @@
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Frank"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Frank"
+            "state" : "needs_review",
+            "value" : "Franc"
           }
         },
         "sq" : {
@@ -7859,8 +7871,8 @@
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Franak"
+            "state" : "needs_review",
+            "value" : "Франц"
           }
         },
         "sv" : {
@@ -7871,8 +7883,8 @@
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Frank"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "uk" : {
@@ -7954,8 +7966,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "France"
+            "state" : "needs_review",
+            "value" : "An Fhrainc"
           }
         },
         "hr" : {
@@ -8090,8 +8102,8 @@
       "localizations" : {
         "bg" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Франци"
+            "state" : "needs_review",
+            "value" : "Франкове"
           }
         },
         "bs" : {
@@ -8102,13 +8114,13 @@
         },
         "cs" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Franky"
+            "state" : "needs_review",
+            "value" : "Francs"
           }
         },
         "da" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Francs"
           }
         },
@@ -8138,7 +8150,7 @@
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Frank"
           }
         },
@@ -8156,7 +8168,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Francs"
           }
         },
@@ -8186,7 +8198,7 @@
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Frankai"
           }
         },
@@ -8198,20 +8210,20 @@
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Франци"
           }
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Franks"
+            "state" : "needs_review",
+            "value" : "Frani"
           }
         },
         "nb" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Franc"
+            "state" : "needs_review",
+            "value" : "Francs"
           }
         },
         "nl" : {
@@ -8238,10 +8250,16 @@
             "value" : "Francos"
           }
         },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "franci"
+          }
+        },
         "sk" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Franky"
+            "state" : "needs_review",
+            "value" : "Francs"
           }
         },
         "sl" : {
@@ -8260,6 +8278,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Franak"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Francs"
           }
         },
         "tr" : {
@@ -8495,7 +8519,7 @@
         },
         "cs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Gruzie"
           }
         },
@@ -8549,8 +8573,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Georgia"
+            "state" : "needs_review",
+            "value" : "An tSeoirsia"
           }
         },
         "hr" : {
@@ -8579,7 +8603,7 @@
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Gruzija"
           }
         },
@@ -8591,8 +8615,8 @@
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Грузија"
+            "state" : "needs_review",
+            "value" : "Џорџија"
           }
         },
         "mt" : {
@@ -8651,7 +8675,7 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Gjeorgjia"
           }
         },
@@ -8752,7 +8776,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Germany"
           }
         },
@@ -8894,7 +8918,7 @@
         },
         "bs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "gr"
           }
         },
@@ -8936,7 +8960,7 @@
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "gr"
           }
         },
@@ -8954,7 +8978,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "gr"
           }
         },
@@ -8978,13 +9002,13 @@
         },
         "ka" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "gr"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "gr"
           }
         },
@@ -9036,6 +9060,12 @@
             "value" : "gr"
           }
         },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : ""
+          }
+        },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9050,19 +9080,19 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "gr"
           }
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "gr"
+            "state" : "needs_review",
+            "value" : "гр"
           }
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "h"
           }
         },
@@ -9151,8 +9181,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Greece"
+            "state" : "needs_review",
+            "value" : "An Ghréig"
           }
         },
         "hr" : {
@@ -9287,13 +9317,13 @@
       "localizations" : {
         "bg" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Грош"
           }
         },
         "bs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Grosz"
           }
         },
@@ -9353,13 +9383,13 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Grosz"
           }
         },
         "hr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Grosz"
           }
         },
@@ -9395,14 +9425,14 @@
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Гросз"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Grosz"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "nb" : {
@@ -9479,7 +9509,7 @@
         },
         "uk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Гроші"
           }
         }
@@ -9579,7 +9609,7 @@
         },
         "ka" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "h"
           }
         },
@@ -9591,7 +9621,7 @@
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "h"
           }
         },
@@ -9669,7 +9699,7 @@
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "lei"
           }
         },
@@ -9697,7 +9727,7 @@
         },
         "bs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Haléř"
           }
         },
@@ -9709,20 +9739,20 @@
         },
         "da" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Haléř"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "de" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Haler"
+            "state" : "needs_review",
+            "value" : "Heller"
           }
         },
         "el" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Χαλέρ"
+            "state" : "needs_review",
+            "value" : "Χάλερ"
           }
         },
         "en-GB" : {
@@ -9739,13 +9769,13 @@
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Haléř"
           }
         },
         "fi" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Haléř"
           }
         },
@@ -9757,7 +9787,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Haléř"
           }
         },
@@ -9769,13 +9799,13 @@
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Haléř"
           }
         },
         "it" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Haléř"
           }
         },
@@ -9787,8 +9817,8 @@
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Haléř"
+            "state" : "needs_review",
+            "value" : "Halėras"
           }
         },
         "lv" : {
@@ -9799,13 +9829,13 @@
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Халељ"
+            "state" : "needs_review",
+            "value" : "Халé́р"
           }
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Haléř"
           }
         },
@@ -9823,7 +9853,7 @@
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Haléř"
           }
         },
@@ -9835,7 +9865,7 @@
         },
         "pt-PT" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Haléř"
           }
         },
@@ -9859,19 +9889,19 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Haléř"
           }
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Haler"
+            "state" : "needs_review",
+            "value" : "Гелер"
           }
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Haléř"
           }
         },
@@ -9883,7 +9913,7 @@
         },
         "uk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Галеї"
           }
         }
@@ -9923,8 +9953,8 @@
         },
         "el" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Φιορίνια Ουγγαρίας"
+            "state" : "needs_review",
+            "value" : "Ουγγρικό φιορίνι"
           }
         },
         "en-GB" : {
@@ -9935,7 +9965,7 @@
         },
         "es" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Forinto húngaro"
           }
         },
@@ -9959,8 +9989,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hungarian forint"
+            "state" : "needs_review",
+            "value" : "forint na hUngáire"
           }
         },
         "hr" : {
@@ -10007,7 +10037,7 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Hungarian forint"
           }
         },
@@ -10025,7 +10055,7 @@
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Ungarske forinter"
           }
         },
@@ -10061,14 +10091,14 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Forint hungarez"
           }
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mađarska forinta"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "sv" : {
@@ -10079,7 +10109,7 @@
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Macar forinti"
           }
         },
@@ -10162,8 +10192,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hungary"
+            "state" : "needs_review",
+            "value" : "An Ungáir"
           }
         },
         "hr" : {
@@ -10210,8 +10240,8 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ungerija"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "nb" : {
@@ -10264,7 +10294,7 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Hungaria"
           }
         },
@@ -10413,7 +10443,7 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Irlanda"
           }
         },
@@ -10616,7 +10646,7 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Italja"
           }
         },
@@ -10704,8 +10734,8 @@
       "localizations" : {
         "bg" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Кч"
+            "state" : "needs_review",
+            "value" : "кч"
           }
         },
         "bs" : {
@@ -10728,14 +10758,14 @@
         },
         "de" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kč"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "el" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kč"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -10746,7 +10776,7 @@
         },
         "es" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kč"
           }
         },
@@ -10764,13 +10794,13 @@
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kč"
           }
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kč"
           }
         },
@@ -10794,13 +10824,13 @@
         },
         "ka" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "კრონა"
+            "state" : "needs_review",
+            "value" : "Kč"
           }
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kč"
           }
         },
@@ -10812,7 +10842,7 @@
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Кч"
           }
         },
@@ -10848,7 +10878,7 @@
         },
         "pt-PT" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kč"
           }
         },
@@ -10872,8 +10902,8 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kč"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "sr" : {
@@ -10896,7 +10926,7 @@
         },
         "uk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kč"
           }
         }
@@ -10912,8 +10942,8 @@
         },
         "bs" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Koruna"
+            "state" : "needs_review",
+            "value" : "Kruna"
           }
         },
         "cs" : {
@@ -10924,7 +10954,7 @@
         },
         "da" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Koruna"
           }
         },
@@ -10960,7 +10990,7 @@
         },
         "fi" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Koruna"
           }
         },
@@ -10972,8 +11002,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Koruna"
+            "state" : "needs_review",
+            "value" : "Coróin"
           }
         },
         "hr" : {
@@ -10990,8 +11020,8 @@
         },
         "it" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Koruna"
+            "state" : "needs_review",
+            "value" : "Corona"
           }
         },
         "ka" : {
@@ -11002,13 +11032,13 @@
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Koruna"
           }
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Koruna"
           }
         },
@@ -11020,8 +11050,8 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Koruna"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "nb" : {
@@ -11038,8 +11068,8 @@
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Koruna"
+            "state" : "needs_review",
+            "value" : "Krone"
           }
         },
         "pl" : {
@@ -11062,19 +11092,19 @@
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Koruna"
           }
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Koruna"
           }
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Koruna"
           }
         },
@@ -11086,13 +11116,13 @@
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Koruna"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Koruna"
           }
         },
@@ -11156,13 +11186,13 @@
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Koruny"
+            "state" : "needs_review",
+            "value" : "Korunid"
           }
         },
         "fi" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Koruny"
           }
         },
@@ -11180,38 +11210,38 @@
         },
         "hr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Korune"
+            "state" : "needs_review",
+            "value" : "Krune"
           }
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Korona"
+            "state" : "needs_review",
+            "value" : "Koruny"
           }
         },
         "it" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Koruny"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "ka" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "კორუნი"
           }
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Korunos"
           }
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Korunas"
+            "state" : "needs_review",
+            "value" : "Koruny"
           }
         },
         "mk" : {
@@ -11222,7 +11252,7 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Koruny"
           }
         },
@@ -11240,8 +11270,8 @@
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Koruny"
+            "state" : "needs_review",
+            "value" : "Kroner"
           }
         },
         "pl" : {
@@ -11270,8 +11300,8 @@
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Koruny"
+            "state" : "needs_review",
+            "value" : "Kron"
           }
         },
         "sq" : {
@@ -11514,8 +11544,8 @@
       "localizations" : {
         "bg" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "kr"
+            "state" : "needs_review",
+            "value" : "кр"
           }
         },
         "bs" : {
@@ -11556,7 +11586,7 @@
         },
         "es" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "kr"
           }
         },
@@ -11592,13 +11622,13 @@
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "kr"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "it" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "kr"
           }
         },
@@ -11622,7 +11652,7 @@
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "kr"
           }
         },
@@ -11682,7 +11712,7 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "kr"
           }
         },
@@ -11783,8 +11813,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Krona"
+            "state" : "needs_review",
+            "value" : "Cróna"
           }
         },
         "hr" : {
@@ -11813,13 +11843,13 @@
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Krona"
           }
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Krona"
           }
         },
@@ -11831,7 +11861,7 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Krona"
           }
         },
@@ -11867,7 +11897,7 @@
         },
         "ro" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Krona"
           }
         },
@@ -11879,14 +11909,14 @@
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Krona"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Krona"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "sr" : {
@@ -11986,8 +12016,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Krone"
+            "state" : "needs_review",
+            "value" : "Krón"
           }
         },
         "hr" : {
@@ -12022,8 +12052,8 @@
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Krone"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "mk" : {
@@ -12058,8 +12088,8 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Krona"
+            "state" : "needs_review",
+            "value" : "Korona"
           }
         },
         "pt-PT" : {
@@ -12082,13 +12112,13 @@
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Krona"
           }
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Krone"
           }
         },
@@ -12106,13 +12136,13 @@
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Krone"
           }
         },
         "uk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Кроне"
           }
         }
@@ -12129,8 +12159,8 @@
         },
         "bs" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Krune"
+            "state" : "needs_review",
+            "value" : "Krone"
           }
         },
         "cs" : {
@@ -12147,7 +12177,7 @@
         },
         "de" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kroner"
           }
         },
@@ -12159,7 +12189,7 @@
         },
         "en-GB" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kroner"
           }
         },
@@ -12189,31 +12219,31 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kroner"
+            "state" : "needs_review",
+            "value" : "Coróin"
           }
         },
         "hr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Krune"
           }
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Korona"
+            "state" : "needs_review",
+            "value" : "Koronák"
           }
         },
         "it" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Corone"
           }
         },
         "ka" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "კრონერი"
           }
         },
@@ -12225,8 +12255,8 @@
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kroner"
+            "state" : "needs_review",
+            "value" : "Kronas"
           }
         },
         "mk" : {
@@ -12237,8 +12267,8 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kroner"
+            "state" : "needs_review",
+            "value" : "Kroni"
           }
         },
         "nb" : {
@@ -12261,7 +12291,7 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kroner"
           }
         },
@@ -12273,7 +12303,7 @@
         },
         "ro" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kroner"
           }
         },
@@ -12285,20 +12315,20 @@
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kroner"
           }
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kroner"
+            "state" : "needs_review",
+            "value" : "Kronë"
           }
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kruna"
+            "state" : "needs_review",
+            "value" : "Круне"
           }
         },
         "sv" : {
@@ -12309,13 +12339,13 @@
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kroner"
+            "state" : "needs_review",
+            "value" : "Kronlar"
           }
         },
         "uk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Кронер"
           }
         }
@@ -12326,14 +12356,14 @@
       "localizations" : {
         "bg" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Кронор"
           }
         },
         "bs" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kronor"
+            "state" : "needs_review",
+            "value" : "Krune"
           }
         },
         "cs" : {
@@ -12350,8 +12380,8 @@
         },
         "de" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kronor"
+            "state" : "needs_review",
+            "value" : "Kronen"
           }
         },
         "el" : {
@@ -12362,7 +12392,7 @@
         },
         "en-GB" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kronor"
           }
         },
@@ -12392,37 +12422,37 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kronor"
           }
         },
         "hr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kruna"
+            "state" : "needs_review",
+            "value" : "Kuna"
           }
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Korona"
           }
         },
         "it" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Corone"
           }
         },
         "ka" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "კრონორი"
           }
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kronorai"
           }
         },
@@ -12434,13 +12464,13 @@
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Кронор"
+            "state" : "needs_review",
+            "value" : "Крони"
           }
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kronor"
           }
         },
@@ -12464,7 +12494,7 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kronor"
           }
         },
@@ -12494,14 +12524,14 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kronor"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kruna"
+            "state" : "needs_review",
+            "value" : "Круне"
           }
         },
         "sv" : {
@@ -12512,14 +12542,14 @@
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kronor"
+            "state" : "needs_review",
+            "value" : "Kronlar"
           }
         },
         "uk" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Кронор"
+            "state" : "needs_review",
+            "value" : ""
           }
         }
       }
@@ -12558,8 +12588,8 @@
         },
         "el" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Κουρούς"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -12570,7 +12600,7 @@
         },
         "es" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kuruş"
           }
         },
@@ -12594,7 +12624,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kuruş"
           }
         },
@@ -12624,13 +12654,13 @@
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kurušai"
+            "state" : "needs_review",
+            "value" : "Kurušas"
           }
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kurušs"
           }
         },
@@ -12642,7 +12672,7 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kuruş"
           }
         },
@@ -12690,13 +12720,13 @@
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kuruş"
+            "state" : "needs_review",
+            "value" : "Kuruš"
           }
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kuruş"
           }
         },
@@ -12767,7 +12797,7 @@
         },
         "en-GB" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Latvia"
           }
         },
@@ -12797,7 +12827,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Laitvia"
           }
         },
@@ -12863,7 +12893,7 @@
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Latvia"
           }
         },
@@ -12899,7 +12929,7 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Letoni"
           }
         },
@@ -13113,8 +13143,8 @@
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "p"
+            "state" : "needs_review",
+            "value" : "lei"
           }
         },
         "tr" : {
@@ -13153,7 +13183,7 @@
         },
         "da" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Lei"
           }
         },
@@ -13165,8 +13195,8 @@
         },
         "el" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lei"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -13177,7 +13207,7 @@
         },
         "es" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Lei"
           }
         },
@@ -13209,6 +13239,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lei"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Ön"
           }
         },
         "it" : {
@@ -13273,8 +13309,8 @@
         },
         "ro" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Iei"
+            "state" : "needs_review",
+            "value" : "Lei"
           }
         },
         "sk" : {
@@ -13285,7 +13321,7 @@
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Lei"
           }
         },
@@ -13297,8 +13333,8 @@
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lej"
+            "state" : "needs_review",
+            "value" : "Lei"
           }
         },
         "sv" : {
@@ -13325,13 +13361,13 @@
       "localizations" : {
         "bg" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Леу"
           }
         },
         "bs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Leu"
           }
         },
@@ -13373,7 +13409,7 @@
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Leu"
           }
         },
@@ -13391,7 +13427,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Leu"
           }
         },
@@ -13433,7 +13469,7 @@
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Леу"
           }
         },
@@ -13517,8 +13553,8 @@
         },
         "uk" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Леу"
+            "state" : "needs_review",
+            "value" : ""
           }
         }
       }
@@ -13593,7 +13629,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Lev"
           }
         },
@@ -13735,13 +13771,13 @@
         },
         "bs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Leva"
           }
         },
         "cs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Leva"
           }
         },
@@ -13753,25 +13789,25 @@
         },
         "de" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Leva"
           }
         },
         "el" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Leva"
+            "state" : "needs_review",
+            "value" : "Λεβά"
           }
         },
         "en-GB" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Leva"
+            "state" : "needs_review",
+            "value" : "Lever"
           }
         },
         "es" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Leva"
           }
         },
@@ -13789,14 +13825,14 @@
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Leva"
+            "state" : "needs_review",
+            "value" : "Lever"
           }
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Leva"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "hr" : {
@@ -13807,7 +13843,7 @@
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Leva"
           }
         },
@@ -13879,25 +13915,25 @@
         },
         "ro" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Leva"
           }
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Leva"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Leva"
           }
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Leva"
           }
         },
@@ -13915,8 +13951,8 @@
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Leva"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "uk" : {
@@ -13943,8 +13979,8 @@
         },
         "cs" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Linka"
+            "state" : "needs_review",
+            "value" : "Řádek"
           }
         },
         "da" : {
@@ -14105,7 +14141,7 @@
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Linija"
           }
         },
@@ -14151,8 +14187,8 @@
         },
         "da" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Linje (interpolede)"
+            "state" : "needs_review",
+            "value" : "Linje (interpoleret)"
           }
         },
         "de" : {
@@ -14163,7 +14199,7 @@
         },
         "el" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Γραμμή (επικαλυπτόμενη)"
           }
         },
@@ -14383,8 +14419,8 @@
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Liir"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "fi" : {
@@ -14431,8 +14467,8 @@
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lira"
+            "state" : "needs_review",
+            "value" : "litas"
           }
         },
         "lv" : {
@@ -14503,14 +14539,14 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Lira"
           }
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lira"
+            "state" : "needs_review",
+            "value" : "Лира"
           }
         },
         "sv" : {
@@ -14604,7 +14640,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Lithuania"
           }
         },
@@ -14640,7 +14676,7 @@
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Lietuva"
           }
         },
@@ -14706,7 +14742,7 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Lituania"
           }
         },
@@ -14718,7 +14754,7 @@
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Lituen"
           }
         },
@@ -14807,7 +14843,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Luxembourg"
           }
         },
@@ -14849,7 +14885,7 @@
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Луксембург"
           }
         },
@@ -14873,7 +14909,7 @@
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Luxembourg"
           }
         },
@@ -15010,8 +15046,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Malta"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "hr" : {
@@ -15159,7 +15195,7 @@
         },
         "cs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Moldavsko"
           }
         },
@@ -15261,8 +15297,8 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Moldova"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "nb" : {
@@ -15315,8 +15351,8 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Moldavia"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "sr" : {
@@ -15446,7 +15482,7 @@
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Juodkalnija"
           }
         },
@@ -15464,7 +15500,7 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Montenegro"
           }
         },
@@ -15506,13 +15542,13 @@
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Čierna Hora"
           }
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Črna gora"
           }
         },
@@ -15571,8 +15607,8 @@
         },
         "da" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Holland"
+            "state" : "needs_review",
+            "value" : "Nederland"
           }
         },
         "de" : {
@@ -15601,7 +15637,7 @@
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Holland"
           }
         },
@@ -15667,7 +15703,7 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Olanda"
           }
         },
@@ -15721,7 +15757,7 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Holanda"
           }
         },
@@ -15822,8 +15858,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "North Macedonia"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "hr" : {
@@ -15977,7 +16013,7 @@
         },
         "da" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Norge"
           }
         },
@@ -15989,7 +16025,7 @@
         },
         "el" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Νορβηγία"
           }
         },
@@ -16007,7 +16043,7 @@
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Norra"
           }
         },
@@ -16025,8 +16061,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Norway"
+            "state" : "needs_review",
+            "value" : "An Iorua"
           }
         },
         "hr" : {
@@ -16091,8 +16127,8 @@
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Norge"
+            "state" : "needs_review",
+            "value" : "Noreg"
           }
         },
         "pl" : {
@@ -16127,8 +16163,8 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Norvegjia"
+            "state" : "needs_review",
+            "value" : "Norvegji"
           }
         },
         "sr" : {
@@ -16174,13 +16210,13 @@
         },
         "cs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Norská koruna"
           }
         },
         "da" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Norske kroner"
           }
         },
@@ -16192,7 +16228,7 @@
         },
         "el" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Νορβηγική κορόνα"
           }
         },
@@ -16228,8 +16264,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Norwegian krone"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "hr" : {
@@ -16324,7 +16360,7 @@
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Norveška krona"
           }
         },
@@ -16336,19 +16372,19 @@
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Norveška kruna"
           }
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Norsk krona"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Norveç kronu"
           }
         },
@@ -16371,8 +16407,8 @@
         },
         "bs" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "öre"
+            "state" : "needs_review",
+            "value" : "oeru"
           }
         },
         "cs" : {
@@ -16395,7 +16431,7 @@
         },
         "el" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "öre"
           }
         },
@@ -16407,7 +16443,7 @@
         },
         "es" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "öre"
           }
         },
@@ -16425,13 +16461,13 @@
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "öre"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "öre"
           }
         },
@@ -16461,8 +16497,8 @@
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "öre"
+            "state" : "needs_review",
+            "value" : "ore"
           }
         },
         "lv" : {
@@ -16533,13 +16569,13 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "öre"
           }
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "öre"
           }
         },
@@ -16568,8 +16604,8 @@
       "localizations" : {
         "bg" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Öre"
+            "state" : "needs_review",
+            "value" : "Йоре"
           }
         },
         "bs" : {
@@ -16598,8 +16634,8 @@
         },
         "el" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Öre"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -16610,7 +16646,7 @@
         },
         "es" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Öre"
           }
         },
@@ -16628,26 +16664,26 @@
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Öre"
           }
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Öre"
           }
         },
         "hr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Öre"
           }
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Öre"
+            "state" : "needs_review",
+            "value" : "szubegység neve "
           }
         },
         "it" : {
@@ -16658,32 +16694,32 @@
         },
         "ka" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Öre"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Öre"
+            "state" : "needs_review",
+            "value" : "Øre"
           }
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Öre"
+            "state" : "needs_review",
+            "value" : "ēr"
           }
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Öre"
+            "state" : "needs_review",
+            "value" : "оре"
           }
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Öre"
+            "state" : "needs_review",
+            "value" : "Ċenteżmu"
           }
         },
         "nb" : {
@@ -16724,25 +16760,25 @@
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Öre"
           }
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Öre"
           }
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Öre"
           }
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Öre"
           }
         },
@@ -16760,7 +16796,7 @@
         },
         "uk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Ере"
           }
         }
@@ -16777,7 +16813,7 @@
         },
         "bs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "øre"
           }
         },
@@ -16787,9 +16823,15 @@
             "value" : "øre"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : ""
+          }
+        },
         "el" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "øre"
           }
         },
@@ -16813,25 +16855,25 @@
         },
         "fi" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "øre"
+            "state" : "needs_review",
+            "value" : "äyri"
           }
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "øre"
           }
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "øre"
           }
         },
         "hr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "øre"
           }
         },
@@ -16843,32 +16885,32 @@
         },
         "it" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "øre"
           }
         },
         "ka" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "øre"
+            "state" : "needs_review",
+            "value" : "ორე"
           }
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "øre"
           }
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "ēre"
           }
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "øre"
+            "state" : "needs_review",
+            "value" : "оре"
           }
         },
         "mt" : {
@@ -16897,7 +16939,7 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "øre"
           }
         },
@@ -16933,8 +16975,8 @@
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "øre"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "sv" : {
@@ -16951,8 +16993,8 @@
         },
         "uk" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "øre"
+            "state" : "needs_review",
+            "value" : ""
           }
         }
       }
@@ -16962,8 +17004,20 @@
       "localizations" : {
         "bg" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Øre"
+          }
+        },
+        "bs" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Ore"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "da" : {
@@ -16980,8 +17034,8 @@
         },
         "el" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ορε"
+            "state" : "needs_review",
+            "value" : "Όρε"
           }
         },
         "en-GB" : {
@@ -16998,13 +17052,13 @@
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Øre"
+            "state" : "needs_review",
+            "value" : "Õre"
           }
         },
         "fi" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Øre"
           }
         },
@@ -17016,7 +17070,19 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
+            "value" : "Ré"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Øre"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "needs_review",
             "value" : "Øre"
           }
         },
@@ -17028,13 +17094,13 @@
         },
         "ka" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Øre"
+            "state" : "needs_review",
+            "value" : "თეთრი"
           }
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Øre"
           }
         },
@@ -17044,9 +17110,27 @@
             "value" : "Øre"
           }
         },
+        "mk" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : " Øre"
+          }
+        },
+        "mt" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Ħabba"
+          }
+        },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
+            "value" : "Øre"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
             "value" : "Øre"
           }
         },
@@ -17056,10 +17140,40 @@
             "value" : "Øre"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Øre"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "cêntimo"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Øre"
+          }
+        },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tolar"
+            "state" : "needs_review",
+            "value" : "Øre"
+          }
+        },
+        "sq" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Øre"
+          }
+        },
+        "sr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "sv" : {
@@ -17070,7 +17184,7 @@
         },
         "uk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Øre"
           }
         }
@@ -17260,7 +17374,7 @@
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "st"
           }
         },
@@ -17348,8 +17462,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Penny"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "hr" : {
@@ -17378,14 +17492,14 @@
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Penas"
+            "state" : "needs_review",
+            "value" : "Penny"
           }
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Penss"
+            "state" : "needs_review",
+            "value" : "Penny"
           }
         },
         "mk" : {
@@ -17396,7 +17510,7 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Penny"
           }
         },
@@ -17450,13 +17564,13 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Penny"
           }
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Peni"
           }
         },
@@ -17551,8 +17665,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Poland"
+            "state" : "needs_review",
+            "value" : "an Pholainn"
           }
         },
         "hr" : {
@@ -17599,7 +17713,7 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Polonja"
           }
         },
@@ -17687,25 +17801,25 @@
       "localizations" : {
         "bg" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Полска злота"
           }
         },
         "bs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Poljski zlot"
           }
         },
         "cs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Polský zlotý"
           }
         },
         "da" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Polsk złoty"
           }
         },
@@ -17729,14 +17843,14 @@
         },
         "es" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Złoty polaco"
+            "state" : "needs_review",
+            "value" : "zloty polaco"
           }
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Poola zlott"
+            "state" : "needs_review",
+            "value" : "Poola zlottü"
           }
         },
         "fi" : {
@@ -17753,20 +17867,20 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Polish złoty"
+            "state" : "needs_review",
+            "value" : "złoty Polannach"
           }
         },
         "hr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Poljski zlot"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lengyel zloty"
+            "state" : "needs_review",
+            "value" : "Lengyel zlotyi"
           }
         },
         "it" : {
@@ -17789,7 +17903,7 @@
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Poļu zlots"
           }
         },
@@ -17801,13 +17915,13 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Polish złoty"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "nb" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Polsk złoty"
           }
         },
@@ -17819,7 +17933,7 @@
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Polsk złoty"
           }
         },
@@ -17831,14 +17945,14 @@
         },
         "pt-PT" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Złoty polaco"
+            "state" : "needs_review",
+            "value" : "złoty polonês"
           }
         },
         "ro" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zlot polonez"
+            "state" : "needs_review",
+            "value" : "zlot polonez"
           }
         },
         "sk" : {
@@ -17849,32 +17963,32 @@
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Poljski zlot"
           }
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Polish złoty"
           }
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Poljski złot"
           }
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Polska zloty"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Polonya Zlotisi"
+            "state" : "needs_review",
+            "value" : "Polonya zlotisi"
           }
         },
         "uk" : {
@@ -17968,7 +18082,7 @@
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Portugália"
           }
         },
@@ -18004,7 +18118,7 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Portugall"
           }
         },
@@ -18052,7 +18166,7 @@
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Portugalska"
           }
         },
@@ -18064,8 +18178,8 @@
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Portugal"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "sv" : {
@@ -18158,8 +18272,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pound"
+            "state" : "needs_review",
+            "value" : "Punt"
           }
         },
         "hr" : {
@@ -18170,7 +18284,7 @@
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Font"
           }
         },
@@ -18200,7 +18314,7 @@
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Фунта"
           }
         },
@@ -18278,7 +18392,7 @@
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Pound"
           }
         },
@@ -18342,8 +18456,8 @@
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hinnaala"
+            "state" : "needs_review",
+            "value" : "Hinna vahemik"
           }
         },
         "fi" : {
@@ -18360,8 +18474,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Price area"
+            "state" : "needs_review",
+            "value" : "Ceantar Praghas"
           }
         },
         "hr" : {
@@ -18408,8 +18522,8 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Żona tal-prezz"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "nb" : {
@@ -18544,8 +18658,8 @@
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rappen"
+            "state" : "needs_review",
+            "value" : "Rapten"
           }
         },
         "fi" : {
@@ -18562,7 +18676,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Rappen"
           }
         },
@@ -18574,8 +18688,8 @@
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rappen"
+            "state" : "needs_review",
+            "value" : "Fillér"
           }
         },
         "it" : {
@@ -18598,8 +18712,8 @@
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rāpeni"
+            "state" : "needs_review",
+            "value" : "Rappen"
           }
         },
         "mk" : {
@@ -18610,7 +18724,7 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Rappen"
           }
         },
@@ -18646,7 +18760,7 @@
         },
         "ro" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Rappen"
           }
         },
@@ -18658,14 +18772,14 @@
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rappen"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rappen"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "sr" : {
@@ -18682,7 +18796,7 @@
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Rappen"
           }
         },
@@ -18716,7 +18830,7 @@
         },
         "da" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Region"
           }
         },
@@ -18764,8 +18878,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Region"
+            "state" : "needs_review",
+            "value" : "Réigiún"
           }
         },
         "hr" : {
@@ -18794,7 +18908,7 @@
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Regionas"
           }
         },
@@ -18836,8 +18950,8 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Region"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "pt-PT" : {
@@ -18854,7 +18968,7 @@
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Región"
           }
         },
@@ -18872,8 +18986,8 @@
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Region"
+            "state" : "needs_review",
+            "value" : "Регион"
           }
         },
         "sv" : {
@@ -18967,8 +19081,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Romania"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "hr" : {
@@ -19015,8 +19129,8 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rumanija"
+            "state" : "needs_review",
+            "value" : "Romania"
           }
         },
         "nb" : {
@@ -19033,7 +19147,7 @@
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Romania"
           }
         },
@@ -19069,8 +19183,8 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rumania"
+            "state" : "needs_review",
+            "value" : "Romani"
           }
         },
         "sr" : {
@@ -19103,8 +19217,8 @@
       "localizations" : {
         "bg" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Румънски лей"
+            "state" : "needs_review",
+            "value" : "румънски лея"
           }
         },
         "bs" : {
@@ -19157,7 +19271,7 @@
         },
         "fi" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Romanian leu"
           }
         },
@@ -19169,8 +19283,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Romanian leu"
+            "state" : "needs_review",
+            "value" : "Leu na Rómáine"
           }
         },
         "hr" : {
@@ -19205,20 +19319,20 @@
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rumāņu leja"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Румунска леи"
+            "state" : "needs_review",
+            "value" : "романски леј"
           }
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Leu Rumenu"
+            "state" : "needs_review",
+            "value" : "lew Rumen"
           }
         },
         "nb" : {
@@ -19265,14 +19379,14 @@
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Romunski leu"
           }
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Leke e Rumanisë"
+            "state" : "needs_review",
+            "value" : "Lei rumun"
           }
         },
         "sr" : {
@@ -19289,8 +19403,8 @@
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Romen leu"
+            "state" : "needs_review",
+            "value" : "Romanian leu"
           }
         },
         "uk" : {
@@ -19371,7 +19485,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Rp"
           }
         },
@@ -19550,14 +19664,14 @@
         },
         "es" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Serbia"
           }
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Serbia"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "fi" : {
@@ -19574,8 +19688,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Serbia"
+            "state" : "needs_review",
+            "value" : "An tSeirbia"
           }
         },
         "hr" : {
@@ -19592,7 +19706,7 @@
         },
         "it" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Serbia"
           }
         },
@@ -19640,13 +19754,13 @@
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Serbia"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Serbia"
           }
         },
@@ -19658,7 +19772,7 @@
         },
         "ro" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Serbia"
           }
         },
@@ -19776,7 +19890,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Setting"
           }
         },
@@ -19788,8 +19902,8 @@
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Beállítások"
+            "state" : "needs_review",
+            "value" : "Beállítás"
           }
         },
         "it" : {
@@ -19800,8 +19914,8 @@
         },
         "ka" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "პარამეტრები"
+            "state" : "needs_review",
+            "value" : "პარამეტრი"
           }
         },
         "lt" : {
@@ -19824,8 +19938,8 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Settings"
+            "state" : "needs_review",
+            "value" : "Twaqqif"
           }
         },
         "nb" : {
@@ -19848,8 +19962,8 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ustawienia"
+            "state" : "needs_review",
+            "value" : "Ustawienie"
           }
         },
         "pt-PT" : {
@@ -19884,8 +19998,8 @@
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Podešavanja"
+            "state" : "needs_review",
+            "value" : "Подесавање"
           }
         },
         "sv" : {
@@ -19961,13 +20075,13 @@
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Slovakkia"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "fi" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Slovakia"
           }
         },
@@ -19979,8 +20093,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Slovakia"
+            "state" : "needs_review",
+            "value" : "An tSlóvaic"
           }
         },
         "hr" : {
@@ -20033,7 +20147,7 @@
         },
         "nb" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Slovakia"
           }
         },
@@ -20045,7 +20159,7 @@
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Slovakia"
           }
         },
@@ -20081,7 +20195,7 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Sllovakia"
           }
         },
@@ -20170,7 +20284,7 @@
         },
         "fi" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Slovenia"
           }
         },
@@ -20182,8 +20296,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Slovenia"
+            "state" : "needs_review",
+            "value" : "An tSlóivéin"
           }
         },
         "hr" : {
@@ -20200,7 +20314,7 @@
         },
         "it" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Slovenia"
           }
         },
@@ -20224,19 +20338,19 @@
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Словенија"
           }
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Slovenja"
           }
         },
         "nb" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Slovenia"
           }
         },
@@ -20248,7 +20362,7 @@
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Slovenia"
           }
         },
@@ -20266,7 +20380,7 @@
         },
         "ro" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Slovenia"
           }
         },
@@ -20284,8 +20398,8 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Slovenia"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "sr" : {
@@ -20385,8 +20499,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Spain"
+            "state" : "needs_review",
+            "value" : "An Spáinn"
           }
         },
         "hr" : {
@@ -20409,8 +20523,8 @@
         },
         "ka" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "ესპანეთი"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "lt" : {
@@ -20521,7 +20635,7 @@
       "localizations" : {
         "bg" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "st"
           }
         },
@@ -20587,7 +20701,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "st"
           }
         },
@@ -20629,8 +20743,8 @@
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "st"
+            "state" : "needs_review",
+            "value" : "ст"
           }
         },
         "mt" : {
@@ -20701,7 +20815,7 @@
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "zł"
           }
         },
@@ -20747,7 +20861,7 @@
         },
         "de" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Stotinka"
           }
         },
@@ -20783,14 +20897,14 @@
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Stotinka"
           }
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Stotinka"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "hr" : {
@@ -20831,13 +20945,13 @@
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Стотинки"
+            "state" : "needs_review",
+            "value" : "Стотинка"
           }
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Stotinka"
           }
         },
@@ -20861,7 +20975,7 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Stotinka"
           }
         },
@@ -20944,7 +21058,7 @@
         },
         "da" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Sverige"
           }
         },
@@ -20992,8 +21106,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sweden"
+            "state" : "needs_review",
+            "value" : "An tSualainn"
           }
         },
         "hr" : {
@@ -21040,7 +21154,7 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Svezja"
           }
         },
@@ -21195,8 +21309,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Swedish krona"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "hr" : {
@@ -21243,13 +21357,13 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Krona Svediża"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "nb" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Svenske kroner"
           }
         },
@@ -21261,8 +21375,8 @@
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Svenske kroner"
+            "state" : "needs_review",
+            "value" : "Svensk krone"
           }
         },
         "pl" : {
@@ -21315,7 +21429,7 @@
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "İsveç kronu"
           }
         },
@@ -21397,8 +21511,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Swiss franc"
+            "state" : "needs_review",
+            "value" : "Franc na hEilvéise"
           }
         },
         "hr" : {
@@ -21445,8 +21559,8 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Frank Żviżer"
+            "state" : "needs_review",
+            "value" : "Franc Żvizzeru"
           }
         },
         "nb" : {
@@ -21552,7 +21666,7 @@
         },
         "da" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Schweiz"
           }
         },
@@ -21600,8 +21714,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Switzerland"
+            "state" : "needs_review",
+            "value" : "An Eilvéis"
           }
         },
         "hr" : {
@@ -21636,7 +21750,7 @@
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Šveice"
           }
         },
@@ -21648,8 +21762,8 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Svizzera"
+            "state" : "needs_review",
+            "value" : "Żvizzera"
           }
         },
         "nb" : {
@@ -21802,7 +21916,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Nea"
           }
         },
@@ -21986,8 +22100,8 @@
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Täna ja tulev öö"
+            "state" : "needs_review",
+            "value" : "Täna ja Saabuv Öö"
           }
         },
         "fi" : {
@@ -22004,7 +22118,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Nea ne Bambo De"
           }
         },
@@ -22028,8 +22142,8 @@
         },
         "ka" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "დღეს და მომავალ ღამეში"
+            "state" : "needs_review",
+            "value" : "დღეს და მომავალი ღამე"
           }
         },
         "lt" : {
@@ -22046,14 +22160,14 @@
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Денес и дојдовната ноќ"
+            "state" : "needs_review",
+            "value" : "Денес и Doаѓање Нoќ"
           }
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Illum u d-Dell filgħaxija"
+            "state" : "needs_review",
+            "value" : "Illum u Lejla li ġejjin"
           }
         },
         "nb" : {
@@ -22176,7 +22290,7 @@
         },
         "en-GB" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Today and Tomorrow"
           }
         },
@@ -22206,8 +22320,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nea ne Borɔ"
+            "state" : "needs_review",
+            "value" : "Inniu agus Amárach"
           }
         },
         "hr" : {
@@ -22348,7 +22462,7 @@
         },
         "bs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Sutra"
           }
         },
@@ -22408,7 +22522,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Borɔ"
           }
         },
@@ -22611,8 +22725,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Turkey"
+            "state" : "needs_review",
+            "value" : "An Tuirc"
           }
         },
         "hr" : {
@@ -22795,13 +22909,13 @@
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Türgi liir"
           }
         },
         "fi" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Turkin liira"
           }
         },
@@ -22813,8 +22927,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Turkish lira"
+            "state" : "needs_review",
+            "value" : "lira Tuircis"
           }
         },
         "hr" : {
@@ -22849,7 +22963,7 @@
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Turku lira"
           }
         },
@@ -22921,8 +23035,8 @@
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Turska lira"
+            "state" : "needs_review",
+            "value" : "Турска лира"
           }
         },
         "sv" : {
@@ -22950,7 +23064,7 @@
       "localizations" : {
         "bg" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Украйна"
           }
         },
@@ -23016,8 +23130,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ukraine"
+            "state" : "needs_review",
+            "value" : "An Úcráin"
           }
         },
         "hr" : {
@@ -23058,13 +23172,13 @@
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Украина"
           }
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Ukraina"
           }
         },
@@ -23218,7 +23332,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Nkɔsoo nhwɛ firi hɔ mpo a wɔnntumi nnhu ɔsraani titiriw a wopɛ"
           }
         },
@@ -23354,7 +23468,7 @@
       "localizations" : {
         "bg" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Единица"
           }
         },
@@ -23420,8 +23534,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nnua"
+            "state" : "needs_review",
+            "value" : "Aonad"
           }
         },
         "hr" : {
@@ -23623,8 +23737,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "United Kingdom"
+            "state" : "needs_review",
+            "value" : "Ríocht Aontaithe"
           }
         },
         "hr" : {
@@ -23671,7 +23785,7 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Ir-Renju Unit"
           }
         },
@@ -23825,8 +23939,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Widgets de gye beae mintumi mu wɔ %@ mu."
+            "state" : "needs_review",
+            "value" : "Taispeánann giuirléidí praghsanna i gcónaí i %@."
           }
         },
         "hr" : {
@@ -23891,8 +24005,8 @@
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Informer viser alltid priser i %@."
+            "state" : "needs_review",
+            "value" : "Widget viser alltid priser i %@."
           }
         },
         "pl" : {
@@ -23967,8 +24081,8 @@
         },
         "bs" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "zł"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "cs" : {
@@ -23979,7 +24093,7 @@
         },
         "da" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "zł"
           }
         },
@@ -23991,13 +24105,13 @@
         },
         "el" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "zł"
+            "state" : "needs_review",
+            "value" : "ζλ"
           }
         },
         "en-GB" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "zł"
           }
         },
@@ -24009,8 +24123,8 @@
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "zł"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "fi" : {
@@ -24033,13 +24147,13 @@
         },
         "hr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "zł"
           }
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "zł"
           }
         },
@@ -24069,7 +24183,7 @@
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "zł"
           }
         },
@@ -24081,7 +24195,7 @@
         },
         "nb" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "zł"
           }
         },
@@ -24117,7 +24231,7 @@
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "zł"
           }
         },
@@ -24129,25 +24243,25 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "zł"
           }
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "zł"
           }
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "£"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "zł"
           }
         },
@@ -24169,7 +24283,7 @@
         },
         "bs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złoty"
           }
         },
@@ -24187,8 +24301,8 @@
         },
         "de" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Złoty"
+            "state" : "needs_review",
+            "value" : "Zloty"
           }
         },
         "el" : {
@@ -24205,14 +24319,14 @@
         },
         "es" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złoty"
           }
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Złoty"
+            "state" : "needs_review",
+            "value" : "Zloty"
           }
         },
         "fi" : {
@@ -24229,7 +24343,7 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złoty"
           }
         },
@@ -24241,13 +24355,13 @@
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złoty"
           }
         },
         "it" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złoty"
           }
         },
@@ -24259,19 +24373,19 @@
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zlotas"
+            "state" : "needs_review",
+            "value" : "Złoty"
           }
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złoty"
           }
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Злоти"
           }
         },
@@ -24289,13 +24403,13 @@
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złoty"
           }
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złoty"
           }
         },
@@ -24319,37 +24433,37 @@
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Złoty"
+            "state" : "needs_review",
+            "value" : "Zlotý"
           }
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złoty"
           }
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złoty"
           }
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zloti"
+            "state" : "needs_review",
+            "value" : "Злоти"
           }
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złoty"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złoty"
           }
         },
@@ -24371,67 +24485,67 @@
         },
         "bs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złotych"
           }
         },
         "cs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złotych"
           }
         },
         "da" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złotych"
           }
         },
         "de" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złotych"
           }
         },
         "el" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ζλότιχ"
+            "state" : "needs_review",
+            "value" : "Ζουότυχ"
           }
         },
         "en-GB" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złotych"
           }
         },
         "es" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złotych"
           }
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Złotych"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "fi" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złotych"
           }
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złotych"
           }
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złotych"
           }
         },
@@ -24449,49 +24563,49 @@
         },
         "it" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Złotych"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "ka" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "ზლოტიჩი"
           }
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Zlotai"
           }
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złotych"
           }
         },
         "mk" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Злотичи"
+            "state" : "needs_review",
+            "value" : "Злоти"
           }
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Złotych"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "nb" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złotych"
           }
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złotych"
           }
         },
@@ -24509,19 +24623,19 @@
         },
         "pt-PT" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złotych"
           }
         },
         "ro" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złotych"
           }
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złotych"
           }
         },
@@ -24533,25 +24647,25 @@
         },
         "sq" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Złotych"
+            "state" : "needs_review",
+            "value" : "Zlotys"
           }
         },
         "sr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zlotihi"
+            "state" : "needs_review",
+            "value" : "Złotych"
           }
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złotych"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Złotych"
           }
         },
@@ -24585,7 +24699,7 @@
         },
         "da" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "лв"
           }
         },
@@ -24597,13 +24711,13 @@
         },
         "el" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "лв"
           }
         },
         "en-GB" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "лв"
           }
         },
@@ -24621,8 +24735,8 @@
         },
         "fi" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "лв"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "fr" : {
@@ -24633,8 +24747,8 @@
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "лв"
+            "state" : "needs_review",
+            "value" : ""
           }
         },
         "hr" : {
@@ -24645,25 +24759,25 @@
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "лв"
           }
         },
         "it" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "лв"
           }
         },
         "ka" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "лв"
           }
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "лв"
           }
         },
@@ -24681,7 +24795,7 @@
         },
         "mt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "лв"
           }
         },
@@ -24693,7 +24807,7 @@
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "лв"
           }
         },
@@ -24711,25 +24825,25 @@
         },
         "pt-PT" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "лв"
           }
         },
         "ro" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "лв"
           }
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "лв"
           }
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "лв"
           }
         },
@@ -24747,8 +24861,8 @@
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "₺"
+            "state" : "needs_review",
+            "value" : "лв"
           }
         },
         "tr" : {
