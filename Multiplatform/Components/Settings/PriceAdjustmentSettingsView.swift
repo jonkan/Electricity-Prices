@@ -131,8 +131,8 @@ struct PriceAdjustmentSettingsView: View {
         } header: {
             Text("Calculation")
         } footer: {
-            Text("Prices are ") +
-            Text("per kWh").bold() +
+            Text("Prices are ", comment: "Substring of \"Prices are per kWh\"") +
+            Text("per kWh", comment: "Substring of \"Prices are per kWh\"").bold() +
             Text(".")
         }
     }

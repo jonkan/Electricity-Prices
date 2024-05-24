@@ -40,8 +40,8 @@ struct StateInfoFooterView: View {
             }
             Divider()
                 .gridCellUnsizedAxes([.horizontal, .vertical])
-            Text("Prices are ") +
-            Text("per kWh").bold() +
+            Text("Prices are ", comment: "Substring of \"Prices are per kWh\"") +
+            Text("per kWh", comment: "Substring of \"Prices are per kWh\"").bold() +
             (
                 hideWithoutTaxesOrFeesDisclamer
                 ? Text(".")

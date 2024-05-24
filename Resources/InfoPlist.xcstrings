@@ -11,15 +11,9 @@
             "value" : "ЕлектроЦена"
           }
         },
-        "bs" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Cijena Struje"
-          }
-        },
         "cs" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Cena Elektřiny"
           }
         },
@@ -47,12 +41,6 @@
             "value" : "Electricity Prices"
           }
         },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Electricity Prices"
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "needs_review",
@@ -77,34 +65,22 @@
             "value" : "Prix Électrique"
           }
         },
-        "ga" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Praghas Leictreachais"
-          }
-        },
         "hr" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Cijena Struje"
           }
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Áramár"
           }
         },
         "it" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Prezzo Elettrico"
-          }
-        },
-        "ka" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "ელფასი"
           }
         },
         "lt" : {
@@ -119,18 +95,6 @@
             "value" : "Elektro Cena"
           }
         },
-        "mk" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Електроцена"
-          }
-        },
-        "mt" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Prezz Elettriku"
-          }
-        },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
@@ -143,15 +107,9 @@
             "value" : "Stroomprijs"
           }
         },
-        "nn" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Strømpris"
-          }
-        },
         "pl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Cena Prądu"
           }
         },
@@ -179,21 +137,9 @@
             "value" : "Elektro Cena"
           }
         },
-        "sq" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Çmimi i Energjisë"
-          }
-        },
-        "sr" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Struja Cena"
-          }
-        },
         "sv" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Elpriset"
           }
         },
@@ -220,15 +166,9 @@
             "value" : "ЕлектроЦена"
           }
         },
-        "bs" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Cijena Struje"
-          }
-        },
         "cs" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Cena Elektřiny"
           }
         },
@@ -251,12 +191,6 @@
           }
         },
         "en" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Electricity Prices"
-          }
-        },
-        "en-GB" : {
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "Electricity Prices"
@@ -286,21 +220,15 @@
             "value" : "Prix Électrique"
           }
         },
-        "ga" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Praghas Leictreachais"
-          }
-        },
         "hr" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Cijena Struje"
           }
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Áramár"
           }
         },
@@ -310,15 +238,9 @@
             "value" : "Prezzo Elettrico"
           }
         },
-        "ka" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "ელფასი"
-          }
-        },
         "lt" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Elektros Kaina"
           }
         },
@@ -328,39 +250,21 @@
             "value" : "Elektro Cena"
           }
         },
-        "mk" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Електроцена"
-          }
-        },
-        "mt" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Prezz Elettriku"
-          }
-        },
         "nb" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Strømpris"
           }
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Stroomprijs"
-          }
-        },
-        "nn" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Strømpris"
           }
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Cena Prądu"
           }
         },
@@ -388,18 +292,6 @@
             "value" : "Elektro Cena"
           }
         },
-        "sq" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Çmimi i Energjisë"
-          }
-        },
-        "sr" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Struja Cena"
-          }
-        },
         "sv" : {
           "stringUnit" : {
             "state" : "needs_review",
@@ -414,7 +306,7 @@
         },
         "uk" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Ціна Світла"
           }
         }
@@ -427,12 +319,6 @@
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
-          }
-        },
-        "bs" : {
-          "stringUnit" : {
-            "state" : "needs_review",
             "value" : ""
           }
         },
@@ -466,12 +352,6 @@
             "value" : ""
           }
         },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -496,15 +376,9 @@
             "value" : ""
           }
         },
-        "ga" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : ""
-          }
-        },
         "hr" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : ""
           }
         },
@@ -520,12 +394,6 @@
             "value" : ""
           }
         },
-        "ka" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : ""
-          }
-        },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
@@ -538,18 +406,6 @@
             "value" : ""
           }
         },
-        "mk" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : ""
-          }
-        },
-        "mt" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : ""
-          }
-        },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
@@ -559,12 +415,6 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
-          }
-        },
-        "nn" : {
-          "stringUnit" : {
-            "state" : "needs_review",
             "value" : ""
           }
         },
@@ -595,18 +445,6 @@
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
-          }
-        },
-        "sq" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : ""
-          }
-        },
-        "sr" : {
-          "stringUnit" : {
-            "state" : "needs_review",
             "value" : ""
           }
         },

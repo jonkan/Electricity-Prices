@@ -31,164 +31,146 @@ public enum Currency: String, Codable, CaseIterable, Identifiable, Equatable {
     }
 
     public var name: String {
-        func localized(_ key: String.LocalizationValue) -> String {
-            String(localized: key, bundle: .module, comment: "Currency name")
-        }
         switch self {
-        case .BGN: return localized("Bulgarian lev")
-        case .CHF: return localized("Swiss franc")
-        case .CZK: return localized("Czech koruna")
-        case .DKK: return localized("Danish krone")
-        case .EUR: return localized("Euro")
-        case .GBP: return localized("British pound")
-        case .HUF: return localized("Hungarian forint")
-        case .NOK: return localized("Norwegian krone")
-        case .PLN: return localized("Polish złoty")
-        case .RON: return localized("Romanian leu")
-        case .SEK: return localized("Swedish krona")
-        case .TRY: return localized("Turkish lira")
+        case .BGN: return String(localized: "Bulgarian lev", bundle: .module, comment: "Currency name for BGN")
+        case .CHF: return String(localized: "Swiss franc", bundle: .module, comment: "Currency name for CHF")
+        case .CZK: return String(localized: "Czech koruna", bundle: .module, comment: "Currency name for CZK")
+        case .DKK: return String(localized: "Danish krone", bundle: .module, comment: "Currency name for DKK")
+        case .EUR: return String(localized: "Euro", bundle: .module, comment: "Currency name for EUR")
+        case .GBP: return String(localized: "British pound", bundle: .module, comment: "Currency name for GBP")
+        case .HUF: return String(localized: "Hungarian forint", bundle: .module, comment: "Currency name for HUF")
+        case .NOK: return String(localized: "Norwegian krone", bundle: .module, comment: "Currency name for NOK")
+        case .PLN: return String(localized: "Polish złoty", bundle: .module, comment: "Currency name for PLN")
+        case .RON: return String(localized: "Romanian leu", bundle: .module, comment: "Currency name for RON")
+        case .SEK: return String(localized: "Swedish krona", bundle: .module, comment: "Currency name for SEK")
+        case .TRY: return String(localized: "Turkish lira", bundle: .module, comment: "Currency name for TRY")
         }
     }
 
     public var shortName: String {
-        func localized(_ key: String.LocalizationValue) -> String {
-            String(localized: key, bundle: .module, comment: "Currency name short")
-        }
         switch self {
-        case .BGN: return localized("Lev")
-        case .CHF: return localized("Franc")
-        case .CZK: return localized("Koruna")
-        case .DKK: return localized("Krone")
-        case .EUR: return localized("Euro")
-        case .GBP: return localized("Pound")
-        case .HUF: return localized("Forint")
-        case .NOK: return localized("Krone")
-        case .PLN: return localized("Złoty")
-        case .RON: return localized("Leu")
-        case .SEK: return localized("Krona")
-        case .TRY: return localized("Lira")
+        case .BGN: return String(localized: "Lev", bundle: .module, comment: "Currency name short for BGN")
+        case .CHF: return String(localized: "Franc", bundle: .module, comment: "Currency name short for CHF")
+        case .CZK: return String(localized: "Koruna", bundle: .module, comment: "Currency name short for CZK")
+        case .DKK: return String(localized: "Krone", bundle: .module, comment: "Currency name short for DKK")
+        case .EUR: return String(localized: "Euro", bundle: .module, comment: "Currency name short for EUR")
+        case .GBP: return String(localized: "Pound", bundle: .module, comment: "Currency name short for GBP")
+        case .HUF: return String(localized: "Forint", bundle: .module, comment: "Currency name short for HUF")
+        case .NOK: return String(localized: "Krone", bundle: .module, comment: "Currency name short for NOK")
+        case .PLN: return String(localized: "Złoty", bundle: .module, comment: "Currency name short for PLN")
+        case .RON: return String(localized: "Leu", bundle: .module, comment: "Currency name short for RON")
+        case .SEK: return String(localized: "Krona", bundle: .module, comment: "Currency name short for SEK")
+        case .TRY: return String(localized: "Lira", bundle: .module, comment: "Currency name short for TRY")
         }
     }
 
     public var shortNamePlural: String {
-        func localized(_ key: String.LocalizationValue) -> String {
-            String(localized: key, bundle: .module, comment: "Currency name short plural")
-        }
         switch self {
-        case .BGN: return localized("Leva")
-        case .CHF: return localized("Francs")
-        case .CZK: return localized("Koruny")
-        case .DKK: return localized("Kroner")
-        case .EUR: return localized("Euro")
-        case .GBP: return localized("Pound")
-        case .HUF: return localized("Forints")
-        case .NOK: return localized("Kroner")
-        case .PLN: return localized("Złotych")
-        case .RON: return localized("Lei")
-        case .SEK: return localized("Kronor")
-        case .TRY: return localized("Lira")
+        case .BGN: return String(localized: "Leva", bundle: .module, comment: "Currency name short plural for BGN")
+        case .CHF: return String(localized: "Francs", bundle: .module, comment: "Currency name short plural for CHF")
+        case .CZK: return String(localized: "Koruny", bundle: .module, comment: "Currency name short plural for CZK")
+        case .DKK: return String(localized: "Kroner", bundle: .module, comment: "Currency name short plural for DKK")
+        case .EUR: return String(localized: "Euro", bundle: .module, comment: "Currency name short plural for EUR")
+        case .GBP: return String(localized: "Pound", bundle: .module, comment: "Currency name short plural for GBP")
+        case .HUF: return String(localized: "Forints", bundle: .module, comment: "Currency name short plural for HUF")
+        case .NOK: return String(localized: "Kroner", bundle: .module, comment: "Currency name short plural for NOK")
+        case .PLN: return String(localized: "Złotych", bundle: .module, comment: "Currency name short plural for PLN")
+        case .RON: return String(localized: "Lei", bundle: .module, comment: "Currency name short plural for RON")
+        case .SEK: return String(localized: "Kronor", bundle: .module, comment: "Currency name short plural for SEK")
+        case .TRY: return String(localized: "Lira", bundle: .module, comment: "Currency name short plural for TRY")
         }
     }
 
     public var symbol: String {
-        func localized(_ key: String.LocalizationValue) -> String {
-            String(localized: key, bundle: .module, comment: "Currency symbol")
-        }
         switch self {
-        case .BGN: return localized("лв")
-        case .CHF: return localized("CHF")
-        case .CZK: return localized("Kč")
-        case .DKK: return localized("kr")
-        case .EUR: return localized("€")
-        case .GBP: return localized("£")
-        case .HUF: return localized("Ft")
-        case .NOK: return localized("kr")
-        case .PLN: return localized("zł")
-        case .RON: return localized("lei")
-        case .SEK: return localized("kr")
-        case .TRY: return localized("₺")
+        case .BGN: return String(localized: "лв", bundle: .module, comment: "Currency symbol for BGN")
+        case .CHF: return String(localized: "CHF", bundle: .module, comment: "Currency symbol for CHF")
+        case .CZK: return String(localized: "Kč", bundle: .module, comment: "Currency symbol for CZK")
+        case .DKK: return String(localized: "kr", bundle: .module, comment: "Currency symbol for DKK")
+        case .EUR: return String(localized: "€", bundle: .module, comment: "Currency symbol for EUR")
+        case .GBP: return String(localized: "£", bundle: .module, comment: "Currency symbol for GBP")
+        case .HUF: return String(localized: "Ft", bundle: .module, comment: "Currency symbol for HUF")
+        case .NOK: return String(localized: "kr", bundle: .module, comment: "Currency symbol for NOK")
+        case .PLN: return String(localized: "zł", bundle: .module, comment: "Currency symbol for PLN")
+        case .RON: return String(localized: "lei", bundle: .module, comment: "Currency symbol for RON")
+        case .SEK: return String(localized: "kr", bundle: .module, comment: "Currency symbol for SEK")
+        case .TRY: return String(localized: "₺", bundle: .module, comment: "Currency symbol for TRY")
         }
     }
 
     public var subdivision: CurrencySubdivision {
-        func localizedName(_ key: String.LocalizationValue) -> String {
-            String(localized: key, bundle: .module, comment: "Currency subdivision name")
-        }
-        func localizedSymbol(_ key: String.LocalizationValue) -> String {
-            String(localized: key, bundle: .module, comment: "Currency subdivision symbol")
-        }
         switch self {
         case .BGN:
             return CurrencySubdivision(
-                name: localizedName("Stotinka"),
-                symbol: localizedSymbol("st"),
+                name: String(localized: "Stotinka", bundle: .module, comment: "Currency subdivision name for BGN"),
+                symbol: String(localized: "st", bundle: .module, comment: "Currency subdivision symbol for BGN"),
                 subdivisions: 100
             )
         case .CHF:
             return CurrencySubdivision(
-                name: localizedName("Rappen"),
-                symbol: localizedSymbol("Rp"),
+                name: String(localized: "Rappen", bundle: .module, comment: "Currency subdivision name for CHF"),
+                symbol: String(localized: "Rp", bundle: .module, comment: "Currency subdivision symbol for CHF"),
                 subdivisions: 100
             )
         case .CZK:
             return CurrencySubdivision(
-                name: localizedName("Haléř"),
-                symbol: localizedSymbol("h"),
+                name: String(localized: "Haléř", bundle: .module, comment: "Currency subdivision name for CZK"),
+                symbol: String(localized: "h", bundle: .module, comment: "Currency subdivision symbol for CZK"),
                 subdivisions: 100
             )
         case .DKK:
             return CurrencySubdivision(
-                name: localizedName("Øre"),
-                symbol: localizedSymbol("øre"),
+                name: String(localized: "Øre", bundle: .module, comment: "Currency subdivision name for DKK"),
+                symbol: String(localized: "øre", bundle: .module, comment: "Currency subdivision symbol for DKK"),
                 subdivisions: 100
             )
         case .EUR:
             return CurrencySubdivision(
-                name: localizedName("Cent"),
-                symbol: localizedSymbol("c"),
+                name: String(localized: "Cent", bundle: .module, comment: "Currency subdivision name for EUR"),
+                symbol: String(localized: "c", bundle: .module, comment: "Currency subdivision symbol for EUR"),
                 subdivisions: 100
             )
         case .GBP:
             return CurrencySubdivision(
-                name: localizedName("Penny"),
-                symbol: localizedSymbol("p"),
+                name: String(localized: "Penny", bundle: .module, comment: "Currency subdivision name for GBP"),
+                symbol: String(localized: "p", bundle: .module, comment: "Currency subdivision symbol for GBP"),
                 subdivisions: 100
             )
         case .HUF:
             // Hungarian Forint technically does not use subdivisions anymore.
             return CurrencySubdivision(
-                name: localizedName("Fillér"),
-                symbol: localizedSymbol("f"),
+                name: String(localized: "Fillér", bundle: .module, comment: "Currency subdivision name for HUF"),
+                symbol: String(localized: "f", bundle: .module, comment: "Currency subdivision symbol for HUF"),
                 subdivisions: 100
             )
         case .NOK:
             return CurrencySubdivision(
-                name: localizedName("Øre"),
-                symbol: localizedSymbol("øre"),
+                name: String(localized: "Øre", bundle: .module, comment: "Currency subdivision name for NOK"),
+                symbol: String(localized: "øre", bundle: .module, comment: "Currency subdivision symbol for NOK"),
                 subdivisions: 100
             )
         case .PLN:
             return CurrencySubdivision(
-                name: localizedName("Grosz"),
-                symbol: localizedSymbol("gr"),
+                name: String(localized: "Grosz", bundle: .module, comment: "Currency subdivision name for PLN"),
+                symbol: String(localized: "gr", bundle: .module, comment: "Currency subdivision symbol for PLN"),
                 subdivisions: 100
             )
         case .RON:
             return CurrencySubdivision(
-                name: localizedName("Ban"),
-                symbol: localizedSymbol("b"),
+                name: String(localized: "Ban", bundle: .module, comment: "Currency subdivision name for RON"),
+                symbol: String(localized: "b", bundle: .module, comment: "Currency subdivision symbol for RON"),
                 subdivisions: 100
             )
         case .SEK:
             return CurrencySubdivision(
-                name: localizedName("Öre"),
-                symbol: localizedSymbol("öre"),
+                name: String(localized: "Öre", bundle: .module, comment: "Currency subdivision name for SEK"),
+                symbol: String(localized: "öre", bundle: .module, comment: "Currency subdivision symbol for SEK"),
                 subdivisions: 100
             )
         case .TRY:
             return CurrencySubdivision(
-                name: localizedName("Kuruş"),
-                symbol: localizedSymbol("kr"),
+                name: String(localized: "Kuruş", bundle: .module, comment: "Currency subdivision name for TRY"),
+                symbol: String(localized: "kr", bundle: .module, comment: "Currency subdivision symbol for TRY"),
                 subdivisions: 100
             )
         }
