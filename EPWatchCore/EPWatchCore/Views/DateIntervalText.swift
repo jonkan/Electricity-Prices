@@ -23,7 +23,7 @@ public struct DateIntervalText: View {
 
     public var body: Text {
         Text(start, format: dateFormatStyle) +
-        Text(" - ") +
+        Text(verbatim: " - ") +
         Text(end, format: dateFormatStyle)
     }
 

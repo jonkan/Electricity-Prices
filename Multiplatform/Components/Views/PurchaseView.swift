@@ -147,7 +147,7 @@ struct PurchaseView: View {
                 Group {
                     Text(product.displayName)
                         .font(.headline) +
-                    Text("\n") +
+                    Text(verbatim: "\n") +
                     Text(product.price, format: product.priceFormatStyle)
                         .font(.subheadline)
                 }

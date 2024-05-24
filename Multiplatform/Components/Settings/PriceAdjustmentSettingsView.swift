@@ -68,9 +68,7 @@ struct PriceAdjustmentSettingsView: View {
         } header: {
             Text("Fees")
         } footer: {
-            Text("Enter prices in ") +
-            Text("\(currency.subdivision.name)/kWh").bold() +
-            Text(".")
+            Text("Enter prices in **\(currency.subdivision.name)/kWh**.")
         }
     }
 
@@ -131,9 +129,7 @@ struct PriceAdjustmentSettingsView: View {
         } header: {
             Text("Calculation")
         } footer: {
-            Text("Prices are ", comment: "Substring of \"Prices are per kWh\"") +
-            Text("per kWh", comment: "Substring of \"Prices are per kWh\"").bold() +
-            Text(".")
+            Text("Prices are **per kWh**.")
         }
     }
 
@@ -161,18 +157,19 @@ struct PriceAdjustmentSettingsView: View {
         // The result
         let formattedAdjustedPrice = pricePresentation.formattedPrice(currentPrice, style: .normal)
 
-        return HStack {
-            Text(pricePresentation.adjustment.addends.isEmpty ? "" : "(") +
-            Text(([formattedCurrentPrice] + formattedAddends).joined(separator: " + ")) +
-            Text(pricePresentation.adjustment.addends.isEmpty ? " * " : ") * ") +
-            Text(pricePresentation.adjustment.multiplier, format: .number) +
-            Text(" = ") +
-            Text(formattedAdjustedPrice)
+        let multiplierText = Text(pricePresentation.adjustment.multiplier, format: .number)
+        let resultText: Text
+        if pricePresentation.adjustment.addends.isEmpty {
+            resultText = Text(verbatim: "\(formattedCurrentPrice) * \(multiplierText) = \(formattedAdjustedPrice)")
+        } else {
+            let addendsText = ([formattedCurrentPrice] + formattedAddends).joined(separator: " + ")
+            resultText = Text(verbatim: "(\(addendsText)) * \(multiplierText) = \(formattedAdjustedPrice)")
         }
-        .multilineTextAlignment(.leading)
-        .monospacedDigit()
-    }
 
+        return resultText
+            .multilineTextAlignment(.leading)
+            .monospacedDigit()
+    }
 }
 
 struct PriceAdjustmentSettingsView_Previews: PreviewProvider {

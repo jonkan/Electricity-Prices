@@ -18,23 +18,21 @@ struct SupportSettingsView: View {
     var body: some View {
         List {
             Section {
-                Text("\(AppInfo.bundleDisplayName) \(AppInfo.version) (\(AppInfo.build))")
+                Text(verbatim: "\(AppInfo.bundleDisplayName) \(AppInfo.version) (\(AppInfo.build))")
             } footer: {
-                Text("\(AppInfo.commit)")
+                Text(verbatim: "\(AppInfo.commit)")
             }
             Section {
-                Group {
-                    Text("Please report any issues to ") +
-                    Text(verbatim: supportEmail)
-                        .foregroundColor(.accentColor)
-                }
-                .onTapGesture {
-                    UIPasteboard.general.url = URL(string: supportEmail)
-                    acknowledgeEmailCopied = true
-                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
-                        acknowledgeEmailCopied = false
+                let emailText = Text(verbatim: supportEmail)
+                    .foregroundColor(.accentColor)
+                Text("Please report any issues to \(emailText)")
+                    .onTapGesture {
+                        UIPasteboard.general.url = URL(string: supportEmail)
+                        acknowledgeEmailCopied = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+                            acknowledgeEmailCopied = false
+                        }
                     }
-                }
             } footer: {
                 if acknowledgeEmailCopied {
                     Text("Email address copied!")

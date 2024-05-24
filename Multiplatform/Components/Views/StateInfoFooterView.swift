@@ -21,7 +21,7 @@ struct StateInfoFooterView: View {
                 GridRow {
                     Text("Price area")
                         .gridColumnAlignment(.trailing)
-                    Text("\(priceArea.title + ", " + region.name)")
+                    Text(verbatim: "\(priceArea.title), \(region.name)")
                         .bold()
                 }
             }
@@ -32,7 +32,7 @@ struct StateInfoFooterView: View {
                     Text("Exchange rate")
                         .gridColumnAlignment(.trailing)
                     VStack(alignment: .leading) {
-                        Text("\(formattedRate + " " + exchangeRate.to.name + "/" + exchangeRate.from.name)")
+                        Text(verbatim: "\(formattedRate) \(exchangeRate.to.name) / \(exchangeRate.from.name)")
                             .bold()
                         Text("ECB closing price \(exchangeRate.formattedDate())")
                     }
@@ -40,13 +40,11 @@ struct StateInfoFooterView: View {
             }
             Divider()
                 .gridCellUnsizedAxes([.horizontal, .vertical])
-            Text("Prices are ", comment: "Substring of \"Prices are per kWh\"") +
-            Text("per kWh", comment: "Substring of \"Prices are per kWh\"").bold() +
-            (
-                hideWithoutTaxesOrFeesDisclamer
-                ? Text(".")
-                : Text(", without taxes or fees.")
-            )
+            if hideWithoutTaxesOrFeesDisclamer {
+                Text("Prices are **per kWh**.")
+            } else {
+                Text("Prices are **per kWh**, without taxes or fees.")
+            }
         }
         .font(.caption)
         .frame(maxWidth: .infinity)

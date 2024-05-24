@@ -54,8 +54,11 @@ public struct SettingsSection: View {
             switch state.pricePresentation.currencyPresentation {
             case .automatic:
                 VStack(alignment: .leading) {
-                    Text("\(state.currency.subdivision.name) is used if the price is lower than \(state.currency.formatted(1, .normal, .automatic)).", bundle: .module)
-                    Text("Widgets always show prices in \("\(state.currency.shortNamePlural.lowercased()) (\(state.currency.symbol))").", bundle: .module)
+                    let subdivision = state.currency.subdivision.name
+                    let limit = state.currency.formatted(1, .normal, .automatic)
+                    let currency = "\(state.currency.shortNamePlural.lowercased()) (\(state.currency.symbol))"
+                    Text("\(subdivision) is used if the price is lower than \(limit).", bundle: .module)
+                    Text("Widgets always show prices in \(currency).", bundle: .module)
                 }
             case .subdivided:
                 Text("\(state.currency.subdivision.name) is always used.", bundle: .module)

@@ -46,6 +46,20 @@ struct PriceLimitsSettingsView: View {
         }
     }
 
+    var highLabel: some View {
+        let label = Text("High").foregroundStyle(.secondary)
+        let value = pricePresentation.formattedPrice(editedLimits.high, in: editedLimits.currency, style: .normal)
+        return Text(verbatim: "\(label) \(value)")
+            .monospacedDigit()
+    }
+
+    var lowLabel: some View {
+        let label = Text("Low").foregroundStyle(.secondary)
+        let value = pricePresentation.formattedPrice(editedLimits.low, in: editedLimits.currency, style: .normal)
+        return Text(verbatim: "\(label) \(value)")
+            .monospacedDigit()
+    }
+
     var body: some View {
         List {
             Section {
@@ -64,11 +78,7 @@ struct PriceLimitsSettingsView: View {
 
             Section {
                 VStack(alignment: .leading) {
-                    Text("High")
-                        .foregroundStyle(.secondary) +
-                    Text(" ") +
-                    Text(pricePresentation.formattedPrice(editedLimits.high, in: editedLimits.currency, style: .normal))
-                        .monospacedDigit()
+                    highLabel
                     Slider(
                         value: $editedLimits.high,
                         in: editedLimits.currency.priceLimitsRange,
@@ -83,11 +93,7 @@ struct PriceLimitsSettingsView: View {
                 }
 
                 VStack(alignment: .leading) {
-                    Text("Low")
-                        .foregroundStyle(.secondary) +
-                    Text(" ") +
-                    Text(pricePresentation.formattedPrice(editedLimits.low, in: editedLimits.currency, style: .normal))
-                        .monospacedDigit()
+                    lowLabel
                     Slider(
                         value: $editedLimits.low,
                         in: lowSliderRange,
