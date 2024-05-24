@@ -149,1640 +149,6 @@
         }
       }
     },
-    "\n" : {
-      "localizations" : {
-        "bg" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "\n"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "\n"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "\n"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "\n"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "\n"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "\n"
-          }
-        },
-        "et" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "\n"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "\n"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "\n"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "\n"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "\n"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "\n"
-          }
-        },
-        "lt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "\n"
-          }
-        },
-        "lv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "\n"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "\n"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "\n"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "\n"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "\n"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "\n"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "\n"
-          }
-        },
-        "sl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "\n"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "\n"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "\n"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "\n"
-          }
-        }
-      }
-    },
-    " " : {
-      "localizations" : {
-        "bg" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " ``````"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        },
-        "et" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        },
-        "lt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        },
-        "lv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        },
-        "sl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        }
-      }
-    },
-    " * " : {
-      "localizations" : {
-        "bg" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " * "
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " * "
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " * "
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " * "
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " * "
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " * "
-          }
-        },
-        "et" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " * "
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " * "
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " * "
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " * "
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " * "
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "*"
-          }
-        },
-        "lt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " * "
-          }
-        },
-        "lv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " * "
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " * "
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " * "
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " * "
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "*"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " * "
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " * "
-          }
-        },
-        "sl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " * "
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " * "
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " * "
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "*"
-          }
-        }
-      }
-    },
-    " = " : {
-      "localizations" : {
-        "bg" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " = "
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " = "
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " = "
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " = "
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " = "
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " = "
-          }
-        },
-        "et" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " = "
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " = "
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " = "
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " = "
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " = "
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "="
-          }
-        },
-        "lt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " = "
-          }
-        },
-        "lv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " = "
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " = "
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " = "
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " = "
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " = "
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " = "
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " = "
-          }
-        },
-        "sl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " = "
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " = "
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " = "
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "="
-          }
-        }
-      }
-    },
-    ", without taxes or fees." : {
-      "localizations" : {
-        "bg" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ", без данъци или такси."
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ", bez daní či poplatků."
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ", uden skatter eller gebyrer."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ", ohne Steuern oder Gebühren."
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ", χωρίς φόρους ή τέλη."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ", sin impuestos o tarifas."
-          }
-        },
-        "et" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ", ilma maksude või tasudeta."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ", ilman veroja tai maksuja."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ", sans taxes ou frais."
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ", bez poreza ili pristojbi."
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ", adók és díjak nélkül."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ", senza tasse o spese."
-          }
-        },
-        "lt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ", be mokesčių ar mokesčių."
-          }
-        },
-        "lv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ", bez nodokļiem un maksām."
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ", uten skatter eller avgifter."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ", exclusief belastingen of kosten."
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ", bez podatków i opłat."
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ", sem impostos ou taxas."
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ", fără taxe sau tarife."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ", bez daní alebo poplatkov."
-          }
-        },
-        "sl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ", brez davkov ali pristojbin."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ", utan skatter och avgifter."
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ", vergi veya ücretler olmadan."
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ", без податків та зборів."
-          }
-        }
-      }
-    },
-    "." : {
-      "localizations" : {
-        "bg" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "."
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "."
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "."
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "."
-          }
-        },
-        "et" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "."
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "."
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "."
-          }
-        },
-        "lt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "."
-          }
-        },
-        "lv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "."
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "."
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "."
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "."
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "."
-          }
-        },
-        "sl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "."
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "."
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "."
-          }
-        }
-      }
-    },
-    "(" : {
-      "localizations" : {
-        "bg" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "("
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "("
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "("
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "("
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "("
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "(``````"
-          }
-        },
-        "et" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "("
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "("
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "("
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "("
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "("
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "("
-          }
-        },
-        "lt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "("
-          }
-        },
-        "lv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "("
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "("
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "("
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "("
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "("
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "("
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "("
-          }
-        },
-        "sl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "("
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "("
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "("
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "("
-          }
-        }
-      }
-    },
-    ") * " : {
-      "localizations" : {
-        "bg" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ") * "
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ") * "
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ") * "
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ") * "
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ") * "
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ") * "
-          }
-        },
-        "et" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ") * "
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ") * "
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ") * "
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ") * "
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ") * "
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ") * "
-          }
-        },
-        "lt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ") * "
-          }
-        },
-        "lv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ") * "
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ") * "
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ") * "
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ") * "
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ") * "
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ") * "
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ") * "
-          }
-        },
-        "sl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ") * "
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ") * "
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ") * "
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ") * "
-          }
-        }
-      }
-    },
-    "%@" : {
-      "localizations" : {
-        "bg" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "et" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "lt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "lv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "sl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        }
-      }
-    },
-    "%@ %@ (%@)" : {
-      "localizations" : {
-        "bg" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ %@ (%@)"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@ (%3$@)"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@ (%3$@)"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@ (%3$@)"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@ (%3$@)"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@ %2$@ (%3$@)"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@ (%3$@)"
-          }
-        },
-        "et" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@ (%3$@)"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@ (%3$@)"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@ (%3$@)"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@ (%3$@)"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@ (%3$@)"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@ (%3$@)"
-          }
-        },
-        "lt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@ (%3$@)"
-          }
-        },
-        "lv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@ (%3$@)"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@ (%3$@)"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ %@ (%@)"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@ (%3$@)"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@ (%3$@)"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ %@ (%@)"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@ (%3$@)"
-          }
-        },
-        "sl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@ (%3$@)"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@ (%3$@)"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@ (%3$@)"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@ (%3$@)"
-          }
-        }
-      }
-    },
-    "%@/kWh" : {
-      "localizations" : {
-        "bg" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@/kWh"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@/kWh"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@/kWh"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@/kWh"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@/kWh"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@/kWh"
-          }
-        },
-        "et" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@/kWh"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@/kWh"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@/kWh"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@/kWh"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@/kWh"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@/kWh"
-          }
-        },
-        "lt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@/kWh"
-          }
-        },
-        "lv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@/kWh"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@/kWh"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@/kWh"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@/kWh"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@/kWh"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@/kWh"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@/kWh"
-          }
-        },
-        "sl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@/kWh"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@/kWh"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@/kWh"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@/кВт⋅год"
-          }
-        }
-      }
-    },
     "%lld log files" : {
       "localizations" : {
         "bg" : {
@@ -1936,7 +302,7 @@
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Множител на 1.25 увеличава цената с 25%"
+            "value" : "Множител от 1.25 увеличава цената с 25%."
           }
         },
         "cs" : {
@@ -2446,7 +812,7 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ajusta le soglie per quello che consideri prezzi bassi e alti."
+            "value" : "Regola le soglie per ciò che consideri prezzi bassi e alti."
           }
         },
         "lt" : {
@@ -2470,7 +836,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pas de drempels aan voor wat u lage en hoge prijzen vindt."
+            "value" : "Pas de drempels aan voor wat je als lage en hoge prijzen beschouwt."
           }
         },
         "pl" : {
@@ -2635,7 +1001,7 @@
         },
         "ro" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Calcul"
           }
         },
@@ -2859,8 +1225,8 @@
         },
         "et" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Diagramm"
+            "state" : "translated",
+            "value" : "Tabel"
           }
         },
         "fi" : {
@@ -2978,7 +1344,7 @@
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lacnější Zítra?"
+            "value" : "Levnější zítra?"
           }
         },
         "da" : {
@@ -2996,7 +1362,7 @@
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Φθηνότερο αύριο;"
+            "value" : "Φθηνότερα αύριο;"
           }
         },
         "es" : {
@@ -3110,7 +1476,7 @@
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Дешевший Завтра?"
+            "value" : "Дешевше завтра?"
           }
         }
       }
@@ -3174,13 +1540,13 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Stežu negativne cijene"
+            "value" : "Stezanje negativnih cijena"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Negatív árak befogása"
+            "value" : "Negatív árak rögzítése"
           }
         },
         "it" : {
@@ -3204,7 +1570,7 @@
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Klem negative priser"
+            "value" : "Begrens negative priser"
           }
         },
         "nl" : {
@@ -3221,8 +1587,8 @@
         },
         "pt-PT" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Apertar preços negativos"
+            "state" : "translated",
+            "value" : "Fixar preços negativos"
           }
         },
         "ro" : {
@@ -3322,7 +1688,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pametujte inteligentnije!"
+            "value" : "Konzumiraj pametnije!"
           }
         },
         "hu" : {
@@ -3352,7 +1718,7 @@
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Forbruk smartere!"
+            "value" : "Konsumere smartere!"
           }
         },
         "nl" : {
@@ -3488,7 +1854,7 @@
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pritaikomas."
+            "value" : "Pritaikomas"
           }
         },
         "lv" : {
@@ -3512,7 +1878,7 @@
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dostosowywalne"
+            "value" : "Dostosowywalny"
           }
         },
         "pt-PT" : {
@@ -3642,7 +2008,7 @@
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Invalidizēts"
+            "value" : "Atspējots"
           }
         },
         "nb" : {
@@ -3736,7 +2102,7 @@
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Εμφάνιση"
+            "value" : "Οθόνη"
           }
         },
         "es" : {
@@ -3754,7 +2120,7 @@
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Näyttää"
+            "value" : "Näyttö"
           }
         },
         "fr" : {
@@ -4186,7 +2552,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Comparar fácilmente los precios de hoy y mañana"
+            "value" : "Compare fácilmente los precios de hoy y mañana"
           }
         },
         "et" : {
@@ -4252,7 +2618,7 @@
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prosto porównaj ceny dzisiejsze i jutrzejsze"
+            "value" : "Łatwo porównaj dzisiejsze i jutrzejsze ceny"
           }
         },
         "pt-PT" : {
@@ -4288,7 +2654,7 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bugünün ve yarının fiyatlarını kolayca karşılaştırın```"
+            "value" : "Bugünün ve yarının fiyatlarını kolayca karşılaştırın"
           }
         },
         "uk" : {
@@ -4743,150 +3109,150 @@
         }
       }
     },
-    "Enter prices in " : {
+    "Enter prices in **%@/kWh**." : {
       "localizations" : {
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Въведете цени в "
+            "value" : "Въведете цени в **%@/kWh**."
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zadejte ceny v "
+            "value" : "Zadejte ceny v **%@/kWh**."
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Indtast priser i "
+            "value" : "Indtast priser i **%@/kWh**."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Geben Sie Preise in "
+            "value" : "Geben Sie Preise in **%@/kWh** ein."
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Εισάγετε τις τιμές σε "
+            "value" : "Εισαγάγετε τις τιμές σε **%@/kWh**."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Introducir precios en "
+            "value" : "Introduzca los precios en **%@/kWh**."
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sisestage hinnad "
+            "value" : "Sisestage hinnad **%@/kWh**."
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Syötä hinnat "
+            "value" : "Syötä hinnat **%@/kWh**."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Entrez les prix en "
+            "value" : "Saisissez les prix en **%@/kWh**."
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Unesite cijene u "
+            "value" : "Unesite cijene u **%@/kWh**."
           }
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : ""
+            "state" : "translated",
+            "value" : "Írja be az árakat **%@/kWh**-ban."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Inserisci i prezzi in "
+            "value" : "Inserisci i prezzi in **%@/kWh**."
           }
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Įveskite kainas "
+            "state" : "translated",
+            "value" : "Įveskite kainas **%@/kWh**."
           }
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : ""
+            "state" : "translated",
+            "value" : "Ievadiet cenas **%@/kWh**."
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Skriv inn priser i "
+            "value" : "Angi priser i **%@/kWh**."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Voer prijzen in "
+            "value" : "Voer prijzen in **%@/kWh** in."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Wprowadź ceny w "
+            "value" : "Wprowadź ceny w **%@/kWh**."
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Insira os preços em "
+            "value" : "Insira os preços em **%@/kWh**."
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Introduceți prețurile în "
+            "value" : "Introduceți prețurile în **%@/kWh**."
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zadajte ceny v "
+            "value" : "Zadajte ceny v **%@/kWh**."
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vnesite cene v "
+            "value" : "Vnesite cene v **%@/kWh**."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ange priser i "
+            "value" : "Ange priser i **%@/kWh**"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fiyatları şuraya girin "
+            "value" : "Fiyatları **%@/kWh** olarak girin."
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Введіть ціни в "
+            "value" : "Введіть ціни у **%@/кВт·год**."
           }
         }
       }
@@ -5460,7 +3826,7 @@
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tarifa"
+            "value" : "Nadomestilo"
           }
         },
         "sv" : {
@@ -5608,7 +3974,7 @@
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tarife"
+            "value" : "Pristojbine"
           }
         },
         "sv" : {
@@ -5780,6 +4146,7 @@
       }
     },
     "High" : {
+      "comment" : "As in a high price",
       "localizations" : {
         "bg" : {
           "stringUnit" : {
@@ -6092,7 +4459,7 @@
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Låseskærm Widgets"
+            "value" : "Låseskærmswidgets"
           }
         },
         "de" : {
@@ -6121,8 +4488,8 @@
         },
         "fi" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : ""
+            "state" : "translated",
+            "value" : "Lukitusnäytön widgetit"
           }
         },
         "fr" : {
@@ -6164,7 +4531,7 @@
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lås skjerm-widgets"
+            "value" : "Låsskjerm Widgets"
           }
         },
         "nl" : {
@@ -6176,7 +4543,7 @@
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Elementy blokady ekranu"
+            "value" : "Widgety ekranu blokady"
           }
         },
         "pt-PT" : {
@@ -6240,7 +4607,7 @@
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Logs"
+            "value" : "Logfiler"
           }
         },
         "de" : {
@@ -6293,8 +4660,8 @@
         },
         "it" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : ""
+            "state" : "translated",
+            "value" : "Registri"
           }
         },
         "lt" : {
@@ -6311,7 +4678,7 @@
         },
         "nb" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Logger"
           }
         },
@@ -6372,6 +4739,7 @@
       }
     },
     "Low" : {
+      "comment" : "As in a low price",
       "localizations" : {
         "bg" : {
           "stringUnit" : {
@@ -6490,7 +4858,7 @@
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nízka"
+            "value" : "Nízky"
           }
         },
         "sl" : {
@@ -6832,7 +5200,7 @@
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Negative priser vil blive fastsat til nul."
+            "value" : "Negative priser vil blive klemt til nul."
           }
         },
         "de" : {
@@ -6862,7 +5230,7 @@
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Negatiiviset hinnat pyöristetään nollaan."
+            "value" : "Negatiiviset hinnat kiinnitetään nollaan."
           }
         },
         "fr" : {
@@ -6898,13 +5266,13 @@
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Negatīvās cenas tiks nostiprinātas līdz nullei."
+            "value" : "Negatīvās cenas tiks piespiestas līdz nullei."
           }
         },
         "nb" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : ""
+            "state" : "translated",
+            "value" : "Negative priser vil bli klamret til null."
           }
         },
         "nl" : {
@@ -7040,7 +5408,7 @@
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nepasiruošęs"
+            "value" : "Neparuošta"
           }
         },
         "lv" : {
@@ -7300,7 +5668,7 @@
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Maksa korra ja naudi kogu eluiga kõigi funktsioonide juurdepääsu."
+            "value" : "Maksa üks kord ja naudi eluiga juurdepääsu kõigile funktsioonidele."
           }
         },
         "fi" : {
@@ -7407,155 +5775,6 @@
         }
       }
     },
-    "per kWh" : {
-      "comment" : "Substring of \"Prices are per kWh\"",
-      "localizations" : {
-        "bg" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "на кВтч"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "za kWh"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "pr. kWh"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "pro kWh"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ανά kWh"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "por kWh"
-          }
-        },
-        "et" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "kWh kohta"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "kWh:ta kohti"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "par kWh"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "po kWh"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "kWh-ként"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "per kWh"
-          }
-        },
-        "lt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "už kWh"
-          }
-        },
-        "lv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "par kWh"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "per kWh"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "per kWh"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "za kWh"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "por kWh"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "pe kWh"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "za kWh"
-          }
-        },
-        "sl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "na kWh"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "per kWh"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "kWh başına"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "за кВт·год"
-          }
-        }
-      }
-    },
     "Plan ahead and avoid the peaks" : {
       "localizations" : {
         "bg" : {
@@ -7639,7 +5858,7 @@
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Plānojiet iepriekš un izvairieties no virsotnēm"
+            "value" : "Plānojiet uz priekšu un izvairieties no maksimuma"
           }
         },
         "nb" : {
@@ -7704,150 +5923,150 @@
         }
       }
     },
-    "Please report any issues to " : {
+    "Please report any issues to %@" : {
       "localizations" : {
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Моля, сигнализирайте за всички проблеми на "
+            "value" : "Моля, докладвайте всякакви проблеми на %@"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hláste prosím jakékoliv problémy na "
+            "value" : "Prosím, nahlaste jakékoli problémy na %@"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rapporter eventuelle problemer til "
+            "value" : "Rapportér gerne eventuelle problemer til %@"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bitte melden Sie alle Probleme an "
+            "value" : "Bitte melden Sie etwaige Probleme an %@"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Παρακαλούμε αναφέρετε οποιαδήποτε προβλήματα σε "
+            "value" : "Παρακαλώ αναφέρετε τυχόν προβλήματα στο %@"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Por favor, informa de cualquier problema a "
+            "value" : "Por favor, reporte cualquier problema a %@"
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Palun teavitage kõigist probleemidest "
+            "value" : "Palun teata kõigist probleemidest aadressil %@"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ilmoita ongelmista osoitteeseen "
+            "value" : "Ilmoita kaikista ongelmista %@:lle"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Veuillez signaler tout problème à "
+            "value" : "Veuillez signaler tout problème à %@"
           }
         },
         "hr" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Molimo prijavite sve probleme "
+            "state" : "translated",
+            "value" : "Molimo prijavite sve probleme na %@"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kérjük, jelentse bármilyen problémát "
+            "value" : "Kérjük, jelentsen be minden problémát a %@ címre"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Si prega di segnalare eventuali problemi a "
+            "value" : "Si prega di segnalare eventuali problemi a %@"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prašome pranešti apie bet kokias problemas "
+            "value" : "Prašome pranešti apie bet kokias problemas adresu %@"
           }
         },
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lūdzu, ziņojiet par visām problēmām "
+            "value" : "Lūdzu, ziņojiet par visām problēmām uz %@"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vennligst rapporter eventuelle problemer til "
+            "value" : "Vennligst rapporter eventuelle problemer til %@"
           }
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : ""
+            "state" : "translated",
+            "value" : "Rapporteer eventuele problemen aan %@"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prosimy zgłaszać wszelkie problemy do "
+            "value" : "Proszę zgłaszać wszelkie problemy do %@"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Por favor reporte qualquer problema para "
+            "value" : "Por favor, reporte quaisquer problemas para %@"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vă rugăm să raportați orice probleme la "
+            "value" : "Vă rugăm să raportați orice probleme la %@"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prosím, nahláste akékoľvek problémy na "
+            "value" : "Nahláste akékoľvek problémy na %@"
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prosimo, poročajte o morebitnih težavah na "
+            "value" : "Prosimo, da morebitne težave prijavite na %@"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rapportera gärna fel till "
+            "value" : "Var god rapportera alla problem till %@"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lütfen tüm sorunları şuraya bildirin "
+            "value" : "Herhangi bir sorunu %@'ya bildirin"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Будь ласка, повідомляйте про будь-які проблеми "
+            "value" : "Будь ласка, повідомте про будь-які проблеми на %@"
           }
         }
       }
@@ -8065,7 +6284,7 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Árbeállítás"
+            "value" : "Árkorrekció"
           }
         },
         "it" : {
@@ -8183,7 +6402,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Área de Precio"
+            "value" : "Área de precios"
           }
         },
         "et" : {
@@ -8207,7 +6426,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Područje cijena"
+            "value" : "Cijena područje"
           }
         },
         "hu" : {
@@ -8444,151 +6663,298 @@
         }
       }
     },
-    "Prices are " : {
-      "comment" : "Substring of \"Prices are per kWh\"",
+    "Prices are **per kWh**, without taxes or fees." : {
       "localizations" : {
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Цените са "
+            "value" : "Цените са **на kWh**, без данъци или такси."
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ceny jsou "
+            "value" : "Ceny jsou **za kWh**, bez daní nebo poplatků."
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Priserne er "
+            "value" : "Priserne er **pr. kWh**, uden skatter eller afgifter."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Die Preise sind "
+            "value" : "Preise sind **pro kWh**, ohne Steuern oder Gebühren."
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Οι τιμές είναι "
+            "value" : "Οι τιμές είναι **ανά kWh**, χωρίς φόρους ή τέλη."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Los precios son "
+            "value" : "Los precios son **por kWh**, sin impuestos ni tarifas."
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hinnad on "
+            "value" : "Hinnad on **kWh kohta**, maksude või tasudeta."
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hinnat ovat "
+            "value" : "Hinnat ovat **per kWh**, ilman veroja tai maksuja."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Les prix sont "
+            "value" : "Les prix sont **par kWh**, sans taxes ni frais."
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cijene su "
+            "value" : "Cijene su **po kWh**, bez poreza ili naknada."
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Az árak "
+            "value" : "Az árak **kWh-nként** értendők, adók és díjak nélkül."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "I prezzi sono "
+            "value" : "I prezzi sono **per kWh**, senza tasse o spese."
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kainos yra "
+            "value" : "Kainos nurodytos **už kWh**, be mokesčių ar rinkliavų."
           }
         },
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cenas ir "
+            "value" : "Cenas ir **par kWh**, bez nodokļiem vai maksām."
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prisene er "
+            "value" : "Prisene er **per kWh**, uten avgifter eller gebyrer."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prijzen zijn "
+            "value" : "Prijzen zijn **per kWh**, zonder belastingen of toeslagen."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ceny są "
+            "value" : "Ceny są **za kWh**, bez podatków i opłat."
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Os preços são "
+            "value" : "Os preços são **por kWh**, sem impostos ou taxas."
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prețurile sunt "
+            "value" : "Prețurile sunt **per kWh**, fără taxe sau comisioane."
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ceny sú "
+            "value" : "Ceny sú **za kWh**, bez daní alebo poplatkov."
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cene so "
+            "value" : "Cene so **na kWh**, brez davkov ali pristojbin."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Priserna är "
+            "value" : "Priserna är **per kWh**, utan skatter eller avgifter."
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fiyatlar "
+            "value" : "Fiyatlar **kWh başına**, vergi veya ücretler olmadan."
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ціни становлять "
+            "value" : "Ціни вказані **за кВт·год**, без податків та зборів."
+          }
+        }
+      }
+    },
+    "Prices are **per kWh**." : {
+      "localizations" : {
+        "bg" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Цените са **за kWh**."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ceny jsou **za kWh**."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Priserne er **pr. kWh**."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Preise gelten **pro kWh**."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Οι τιμές είναι **ανά kWh**."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los precios son **por kWh**."
+          }
+        },
+        "et" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hinnad on **kWh kohta**."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hinnat ovat **per kWh**."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les prix sont **par kWh**."
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cijene su **po kWh**."
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Az árak **kWh-ként** értendők."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I prezzi sono **per kWh**."
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kainos yra **už kWh**."
+          }
+        },
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cenas ir **par kWh**."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Priser er **per kWh**."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prijzen zijn **per kWh**."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ceny są **za kWh**."
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Os preços são **por kWh**."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prețurile sunt **per kWh**."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ceny sú **za kWh**."
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cene so **na kWh**."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Priserna är **per kWh**."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fiyatlar **kWh başına**."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ціни вказані **за кВт·год**."
           }
         }
       }
@@ -8610,7 +6976,7 @@
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Behandler logs"
+            "value" : "Behandler logger"
           }
         },
         "de" : {
@@ -8730,7 +7096,7 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Logları İşleme"
+            "value" : "Logları işleme"
           }
         },
         "uk" : {
@@ -9344,7 +7710,7 @@
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Porovnejte ceny na první pohled"
+            "value" : "Podívejte se na ceny na první pohled"
           }
         },
         "da" : {
@@ -9398,7 +7764,7 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tekintse árak egyszerűen"
+            "value" : "Tekintse meg az árakat egy pillantás alatt"
           }
         },
         "it" : {
@@ -9433,8 +7799,8 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : ""
+            "state" : "translated",
+            "value" : "Zobacz ceny na pierwszy rzut oka"
           }
         },
         "pt-PT" : {
@@ -9458,7 +7824,7 @@
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Oglejte si cene na prvi pogled."
+            "value" : "Poglejte cene na prvi pogled"
           }
         },
         "sv" : {
@@ -9782,7 +8148,7 @@
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Пребивайте актуализирани без да отваряте приложението"
+            "value" : "Бъдете в течение, без да отваряте приложението"
           }
         },
         "cs" : {
@@ -9872,7 +8238,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Blijf op de hoogte zonder de app te openen``````"
+            "value" : "Blijf op de hoogte zonder de app te openen"
           }
         },
         "pl" : {
@@ -9884,7 +8250,7 @@
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mantenha-se atualizado sem abrir o aplicativo."
+            "value" : "Mantenha-se atualizado sem abrir a aplicação"
           }
         },
         "ro" : {
@@ -9920,7 +8286,7 @@
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Залишайтесь в курсі без відкриття додатку``````"
+            "value" : "Будьте в курсі без відкриття додатку"
           }
         }
       }
@@ -9972,7 +8338,7 @@
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Onnistui noutamaan lokit kellosovelluksesta."
+            "value" : "Onnistui lokien nouto kellosta."
           }
         },
         "fr" : {
@@ -10352,7 +8718,7 @@
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Synkronisera med appen på klockan"
+            "value" : "Synkronisera med klock-appen"
           }
         },
         "tr" : {
@@ -10724,7 +9090,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Aplikacija na satu je ažurirana."
+            "value" : "Aplikacija sata je ažurna."
           }
         },
         "hu" : {
@@ -10796,7 +9162,7 @@
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Appen på klockan är uppdaterad."
+            "value" : "Klockappen är uppdaterad."
           }
         },
         "tr" : {
@@ -10818,13 +9184,13 @@
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "За да отговарят на вашите предпочитания"
+            "value" : "Да отговори на вашите предпочитания"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "K přizpůsobení vašim přednostem"
+            "value" : "Aby vyhovoval vašim preferencím"
           }
         },
         "da" : {
@@ -10908,7 +9274,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Naar uw voorkeuren aanpassen"
+            "value" : "Aan uw voorkeuren aanpassen"
           }
         },
         "pl" : {
@@ -10950,7 +9316,7 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tercihlerinize göre ayarlama"
+            "value" : "Tercihlerinize uygun"
           }
         },
         "uk" : {
@@ -11002,7 +9368,7 @@
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Homseid hindu pole veel saadaval."
+            "value" : "Homme hinnad pole veel saadaval."
           }
         },
         "fi" : {
@@ -11109,66 +9475,66 @@
         }
       }
     },
-    "Transfering logs from the watch" : {
+    "Transferring logs from the watch" : {
       "localizations" : {
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Прехвърляне на регистрации от часовника"
+            "value" : "Прехвърляне на дневници от часовника"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Přenos protokolů z hodinek"
+            "value" : "Přenos záznamů z hodinek"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Overfører logs fra uret"
+            "value" : "Overfører logfiler fra uret"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Protokolle werden von der Uhr übertragen"
+            "value" : "Übertragung von Protokollen von der Uhr"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Μεταφέρονται τα ημερολόγια από το ρολόι."
+            "value" : "Μεταφορά αρχείων καταγραφής από το ρολόι"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Transfiriendo registros desde el reloj"
+            "value" : "Transfiriendo registros del reloj"
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Logide ülekandmine kellast"
+            "value" : "Logide edastamine kellalt"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lokien siirtäminen kellosta"
+            "value" : "Siirretään lokeja kellosta"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Transférer les journaux depuis la montre"
+            "value" : "Transfert des journaux de la montre"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prijenos zapisa s sata"
+            "value" : "Prenošenje zapisa s sata"
           }
         },
         "hu" : {
@@ -11180,19 +9546,19 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Trasferimento dei log dal watch"
+            "value" : "Trasferimento dei registri dall'orologio"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Perkeliant žurnalus iš laikrodžio"
+            "value" : "Žurnalų perkėlimas iš laikrodžio"
           }
         },
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pārsūta žurnālus no pulksteņa"
+            "value" : "Žurnālu pārsūtīšana no pulksteņa"
           }
         },
         "nb" : {
@@ -11204,37 +9570,37 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Logs overzetten vanuit het horloge"
+            "value" : "Logboeken overbrengen van het horloge"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Przesyłanie logów z zegarka"
+            "value" : "Przesyłanie dzienników z zegarka"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "A transferir registos do relógio"
+            "value" : "Transferindo registos do smartwatch"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Transferând jurnalele de pe ceas"
+            "value" : "Transferring logs from the watch"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prenos záznamov z hodiniek"
+            "value" : "Prenášanie protokolov z hodiniek"
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prenos dnevnikov iz ure"
+            "value" : "Medtem ko prenašate dnevnike z ure"
           }
         },
         "sv" : {
@@ -11246,13 +9612,13 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Saatteki kayıtlar aktarılıyor"
+            "value" : "Saatten günlük aktarma"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Передача логів з годинника"
+            "value" : "Передача журналів з годинника"
           }
         }
       }
@@ -11286,7 +9652,7 @@
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Δοκιμάστε να έχετε την εφαρμογή ρολοιού στο προσκήνιο."
+            "value" : "Προσπαθήστε να έχετε την εφαρμογή ρολογιού στο προσκήνιο."
           }
         },
         "es" : {
@@ -11400,7 +9766,7 @@
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Спробуйте забезпечити видимість додатка на годиннику."
+            "value" : "Спробуйте мати програму годинника на передньому плані."
           }
         }
       }
@@ -11409,8 +9775,8 @@
       "localizations" : {
         "bg" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Отключване на Pro"
+            "state" : "translated",
+            "value" : "Отключете Pro"
           }
         },
         "cs" : {
@@ -11446,7 +9812,7 @@
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vabasta Pro"
+            "value" : "Pro versiooni lukust avamine"
           }
         },
         "fi" : {
@@ -11558,7 +9924,7 @@
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Отключете Pro!"
+            "value" : "Отключи Професионал"
           }
         },
         "cs" : {
@@ -11582,7 +9948,7 @@
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ξεκλείδωμα Pro!"
+            "value" : "Ξεκλειδώστε το Pro!"
           }
         },
         "es" : {
@@ -11617,8 +9983,8 @@
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Nyisd fel a Pro!"
+            "state" : "translated",
+            "value" : "Oldd fel a Pro verziót!"
           }
         },
         "it" : {
@@ -11648,7 +10014,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pro Ontgrendelen!"
+            "value" : "Ontgrendel Pro!"
           }
         },
         "pl" : {
@@ -11672,7 +10038,7 @@
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Odomknúť Pro!"
+            "value" : "Odomknite Pro!"
           }
         },
         "sl" : {
@@ -11690,7 +10056,7 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pro Kilidi Aç!"
+            "value" : "Profesyonelin Kilidini Aç!"
           }
         },
         "uk" : {
@@ -11712,7 +10078,7 @@
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zobrazit režim"
+            "value" : "Režim zobrazení"
           }
         },
         "da" : {
@@ -11759,8 +10125,8 @@
         },
         "hr" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Prikaz način"
+            "state" : "translated",
+            "value" : "Način gledanja"
           }
         },
         "hu" : {
@@ -11783,8 +10149,8 @@
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "SkataVeids"
+            "state" : "translated",
+            "value" : "Skatīšanas režīms"
           }
         },
         "nb" : {
@@ -11932,7 +10298,7 @@
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gaida, līdz pulkstenis nosūta žurnālus"
+            "value" : "Gaida, lai pulkstenis nosūtītu žurnālus"
           }
         },
         "nb" : {
@@ -11962,7 +10328,7 @@
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Așteptare pentru ceas să trimită jurnale"
+            "value" : "Așteptând ca ceasul să trimită jurnale"
           }
         },
         "sk" : {
@@ -11986,7 +10352,7 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Saatın log göndermesi bekleniyor"
+            "value" : "Logların gönderilmesi için saatin beklenmesi"
           }
         },
         "uk" : {
@@ -12031,7 +10397,7 @@
         },
         "es" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Widgets"
           }
         },
@@ -12056,7 +10422,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Widgets"
+            "value" : "Widgeti"
           }
         },
         "hu" : {
@@ -12067,7 +10433,7 @@
         },
         "it" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Widget"
           }
         },
@@ -12086,7 +10452,7 @@
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Widgets"
+            "value" : "Widgeter"
           }
         },
         "nl" : {
@@ -12103,7 +10469,7 @@
         },
         "pt-PT" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Widgets"
           }
         },
@@ -12156,7 +10522,7 @@
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vaše úprava ceny je dočasně vyjmuta z provozu, dokud upravujete tyto limity."
+            "value" : "Vaše úprava ceny je dočasně vyloučena, zatímco upravujete tyto limity."
           }
         },
         "da" : {
@@ -12192,7 +10558,7 @@
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hintasi on tilapäisesti poissuljettu, kun muokkaat näitä rajoituksia."
+            "value" : "Hintasi tarkistus on väliaikaisesti poistettu käytöstä, kun muokkaat näitä rajoja."
           }
         },
         "fr" : {

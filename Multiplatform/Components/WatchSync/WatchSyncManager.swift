@@ -46,7 +46,7 @@ class WatchSyncManager: NSObject, ObservableObject {
                 String(localized: "Ready")
             case .waitingForWatchToSendLogs(let count):
                 if count.total != nil || count.received > 0 {
-                    String(localized: "Transfering logs from the watch")
+                    String(localized: "Transferring logs from the watch")
                 } else {
                     String(localized: "Waiting for the watch to send logs")
                 }

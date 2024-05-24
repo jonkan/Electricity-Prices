@@ -7,8 +7,8 @@
       "localizations" : {
         "bg" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "ЕлектроЦена"
+            "state" : "translated",
+            "value" : "Цени на Електричество"
           }
         },
         "cs" : {
@@ -19,20 +19,20 @@
         },
         "da" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Elprisen"
           }
         },
         "de" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Strompreis"
           }
         },
         "el" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Ηλεκτροτιμή"
+            "state" : "translated",
+            "value" : "Τιμή Ηλεκτρικής Ενέργειας"
           }
         },
         "en" : {
@@ -43,26 +43,26 @@
         },
         "es" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Precio Luz"
           }
         },
         "et" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Elektrihind"
           }
         },
         "fi" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Sähköhinta"
           }
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Prix Électrique"
+            "state" : "translated",
+            "value" : "Prix de l'Électricité"
           }
         },
         "hr" : {
@@ -80,30 +80,30 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prezzo Elettrico"
+            "value" : "Prezzo dell'Elettricità"
           }
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Elektros Kaina"
           }
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Elektro Cena"
+            "state" : "translated",
+            "value" : "Elektrības Cena"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Strømpris"
+            "value" : "Strømprisen"
           }
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Stroomprijs"
           }
         },
@@ -115,26 +115,26 @@
         },
         "pt-PT" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Preço Luz"
           }
         },
         "ro" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Preț Electricitate"
+            "state" : "translated",
+            "value" : "Prețul Electricității"
           }
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Cena Elektriny"
           }
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Elektro Cena"
+            "state" : "translated",
+            "value" : "Cene Elektrike"
           }
         },
         "sv" : {
@@ -145,13 +145,13 @@
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Elektrik Fiyatı"
           }
         },
         "uk" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Ціна Світла"
           }
         }
@@ -162,8 +162,8 @@
       "localizations" : {
         "bg" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "ЕлектроЦена"
+            "state" : "translated",
+            "value" : "Цени на Електричество"
           }
         },
         "cs" : {
@@ -174,20 +174,20 @@
         },
         "da" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Elprisen"
           }
         },
         "de" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Strompreis"
           }
         },
         "el" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Ηλεκτροτιμή"
+            "state" : "translated",
+            "value" : "Τιμή Ηλεκτρικής Ενέργειας"
           }
         },
         "en" : {
@@ -198,26 +198,26 @@
         },
         "es" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Precio Luz"
           }
         },
         "et" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Elektrihind"
           }
         },
         "fi" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Sähköhinta"
           }
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Prix Électrique"
+            "state" : "translated",
+            "value" : "Prix de l'Électricité"
           }
         },
         "hr" : {
@@ -234,8 +234,8 @@
         },
         "it" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Prezzo Elettrico"
+            "state" : "translated",
+            "value" : "Prezzo dell'Elettricità"
           }
         },
         "lt" : {
@@ -246,14 +246,14 @@
         },
         "lv" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Elektro Cena"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Strømpris"
+            "value" : "Strømprisen"
           }
         },
         "nl" : {
@@ -270,44 +270,44 @@
         },
         "pt-PT" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Preço Luz"
           }
         },
         "ro" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Preț Electricitate"
           }
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Cena Elektriny"
           }
         },
         "sl" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Elektro Cena"
+            "state" : "translated",
+            "value" : "Cene Elektrike"
           }
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Elpriset"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Elektrik Fiyatı"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ціна Світла"
+            "value" : "Ціна на Електрику"
           }
         }
       }
