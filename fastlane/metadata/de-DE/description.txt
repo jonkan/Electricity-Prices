@@ -10,6 +10,7 @@ Pro-Funktionen:
 - Preisgrenzen: Passen Sie die Schwellenwerte an, die Sie für niedrige und hohe Preise halten.
 - Preisjustierung: Passen Sie den Preis an, indem Sie Mehrwertsteuer und Gebühren hinzufügen, um abzuschätzen, was Sie tatsächlich für Ihren Strom bezahlen.
 
+
 Unterstützt Bereiche in:
 - Belgien
 - Bulgarien

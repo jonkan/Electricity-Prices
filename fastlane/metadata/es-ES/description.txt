@@ -1,20 +1,22 @@
 Vea el precio actual de la electricidad en su Apple Watch, iPhone y iPad.
-Ya sea que esté planeando cargar su vehículo eléctrico o usar los electrodomésticos del hogar, manténgase informado con los precios de la electricidad y planifique su uso de energía de manera inteligente.
+Ya sea que esté planeando cargar su coche eléctrico o usar electrodomésticos, manténgase informado con el precio de la electricidad y planifique su uso de energía de manera inteligente.
 
-- Complicaciones de Apple Watch
+- Complicaciones para Apple Watch
 - Widgets para iPhone y iPad
-- Soporte Multi-Moneda
+- Soporte para múltiples monedas
 
 Funciones Pro:
-- Modo de Vista: Amplíe su gráfico para incluir todos los precios de mañana.
-- Límites de Precio: Ajuste los umbrales de lo que considera precios bajos y altos.
-- Ajuste de Precio: Ajuste el precio agregando IVA y tasas para estimar lo que realmente paga por su electricidad.
+- Modo de Visualización: Expanda el gráfico para incluir todos los precios de mañana.
+- Límites de Precio: Ajuste los límites de lo que considera un precio alto y bajo.
+- Ajuste de Precio: Ajuste el precio añadiendo impuestos y tarifas para estimar lo que realmente paga por su electricidad.
 
-Admite áreas en:
+
+Soporta áreas eléctricas en:
 - Alemania
 - Austria
 - Bélgica
 - Bulgaria
+- Chequia
 - Croacia
 - Dinamarca
 - Eslovaquia
@@ -36,8 +38,7 @@ Admite áreas en:
 - Países Bajos
 - Polonia
 - Portugal
-- Republica Checa
-- Rumanía
+- Rumania
 - Serbia
 - Suecia
 - Suiza

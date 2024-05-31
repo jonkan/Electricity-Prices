@@ -1,16 +1,17 @@
 Se den aktuelle elpris på dit Apple Watch, iPhone og iPad.
-Uanset om du planlægger at oplade din elektriske bil eller køre husholdningsapparater, hold dig informeret om elpriserne og planlæg dit energiforbrug klogt.
+Uanset om du planlægger at oplade din elbil eller bruge husholdningsapparater, hold dig informeret om elpriserne og planlæg dit energiforbrug klogt.
 
-- Komplikationer for Apple Watch
+- Komplikationer til Apple Watch
 - Widgets til iPhone og iPad
-- Understøttelse af flere valutaer
+- Støtte til flere valutaer
 
 Pro-funktioner:
-- Visningsmodus: Udvid din tabel til at inkludere alle morgendagens priser.
-- Prisgrænser: Juster grænserne for hvad du anser for lave og høje priser.
-- Prisjustering: Juster prisen ved at tilføje moms og gebyrer for at estimere, hvad du faktisk betaler for din elektricitet.
+- Visningstilstand: Udvid grafen til at inkludere alle morgendagens priser.
+- Prisgrænser: Juster grænserne for hvad du anser for at være en høj og lav pris.
+- Prisjustering: Juster prisen ved at tilføje moms og gebyrer for at estimere, hvad du faktisk betaler for din el.
 
-Understøtter områder i:
+
+Understøtter elområder i:
 - Belgien
 - Bulgarien
 - Danmark
@@ -18,7 +19,7 @@ Understøtter områder i:
 - Finland
 - Frankrig
 - Grækenland
-- Holland 
+- Holland
 - Irland
 - Italien
 - Kroatien

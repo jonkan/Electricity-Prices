@@ -1,0 +1,1 @@
+preço,eletricidade,veículo,elétrico,carregar,spot,widget,watch,relógio,custo,economizar,consumo

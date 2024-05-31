@@ -1,0 +1,1 @@
+strømpris,strømpriser,pris,elbil,lading,spotpris,spot,widget,watch,kostnad,spare,strømforbruk

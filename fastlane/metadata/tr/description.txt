@@ -1,16 +1,17 @@
-Apple Watch, iPhone ve iPad'ınızda geçerli elektrik fiyatını görün.
-Elektrikli aracınızı şarj etmeyi veya ev aletlerinizi çalıştırmayı planlıyor olun, elektrik fiyatları hakkında bilgi sahibi olun ve enerji kullanımınızı akıllıca planlayın.
+Mevcut elektrik fiyatını Apple Watch, iPhone ve iPad'inizde görüntüleyin.
+Elektrikli aracınızı şarj etmeyi veya ev aletlerini kullanmayı planlıyor olun, elektrik fiyatları hakkında bilgi sahibi olun ve enerji kullanımınızı akıllıca planlayın.
 
-- Apple Watch Komplikasyonları
-- iPhone ve iPad için Widget'lar
-- Çoklu Para Birimi Desteği
+- Apple Watch komplikasyonları
+- iPhone ve iPad için widget'lar
+- Birden fazla para birimi desteği
 
 Pro Özellikler:
-- Görünüm Modu: Grafiğinizi, yarının tüm fiyatlarını içerecek şekilde genişletin.
-- Fiyat Limitleri: Düşük ve yüksek fiyatları ne olarak kabul ettiğinizin eşiklerini ayarlayın.
-- Fiyat Ayarı: KDV ve ücret ekleyerek fiyatı ayarlayın ve elektrik için gerçekten ne ödediğinizi tahmin edin.
+- Görünüm modu: Tüm yarının fiyatlarını içerecek şekilde grafiği genişletin.
+- Fiyat sınırları: Yüksek ve düşük fiyat olarak kabul ettiğiniz sınırları ayarlayın.
+- Fiyat ayarlaması: Elektrik için gerçekten ödediğiniz tutarı tahmin etmek amacıyla fiyatı vergi ve ücret ekleyerek ayarlayın.
 
-Aşağıdaki alanlarda desteği bulunmaktadır:
+
+Aşağıdaki elektrik bölgelerini destekler:
 - Almanya
 - Avusturya
 - Belçika

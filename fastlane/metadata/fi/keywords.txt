@@ -1,0 +1,1 @@
+sähkö,hinta,sähköauto,ladata,spot-hinta,spot,widget,watch,kello,kustannus,säästää,sähkönkulutus

@@ -1,16 +1,17 @@
-Consulta il prezzo attuale dell'energia elettrica sul tuo Apple Watch, iPhone e iPad.
-Che tu stia pianificando di caricare il tuo veicolo elettrico o di utilizzare gli elettrodomestici di casa, rimani informato sui prezzi dell'elettricità e pianifica il tuo consumo energetico in modo intelligente.
+ Vedi l'attuale prezzo dell'elettricità sul tuo Apple Watch, iPhone e iPad.
+ Sia che tu stia pianificando di caricare la tua auto elettrica o di utilizzare elettrodomestici, tieniti informato con il prezzo dell'elettricità e pianifica intelligentemente il tuo consumo energetico.
 
-- Complicazioni Apple Watch 
+- Complicazioni per Apple Watch
 - Widget per iPhone e iPad
-- Supporto Multi-Valuta
+- Supporto per più valute
 
-Caratteristiche Pro:
-- Modalità visualizzazione: espandi il tuo grafico per includere tutti i prezzi di domani.
-- Limiti di prezzo: Regola le soglie di ciò che consideri prezzi bassi e alti.
-- Regolazione del prezzo: Regola il prezzo aggiungendo l'IVA e le spese per stimare quanto effettivamente paghi per la tua elettricità.
+Funzioni Pro:
+- Modalità di visualizzazione: estendi il grafico per includere tutti i prezzi di domani.
+- Limiti di prezzo: regola i limiti di ciò che consideri un prezzo alto e basso.
+- Adjustamento del prezzo: regola il prezzo aggiungendo IVA e tasse per stimare quanto paghi effettivamente per la tua elettricità.
 
-Supporta aree in:
+
+Supporta le zone elettriche in:
 - Austria
 - Belgio
 - Bulgaria

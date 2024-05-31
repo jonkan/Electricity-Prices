@@ -1,0 +1,1 @@
+strompreis,stromkosten,elektroauto,aufladen,spotpreis,spotmarkt,widget,watch

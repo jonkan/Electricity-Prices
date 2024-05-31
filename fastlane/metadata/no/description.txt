@@ -1,16 +1,17 @@
 Se den nåværende strømprisen på din Apple Watch, iPhone og iPad.
-Enten du planlegger å lade din elektriske bil eller kjøre husholdningsapparater, hold deg informert om strømprisene og planlegg energibruken din smart.
+Enten du planlegger å lade elbilen eller bruke husholdningsapparater, hold deg informert med strømprisen og planlegg energiforbruket ditt smart.
 
-- Komplikasjoner for Apple Watch 
+- Komplikasjoner for Apple Watch
 - Widgets for iPhone og iPad
 - Støtte for flere valutaer
 
 Pro-funksjoner:
-- Visningsmodus: Utvid diagrammet for å inkludere alle morgendagens priser.
-- Prisgrenser: Juster tersklene for hva du anser som lave og høye priser.
-- Prisjustering: Juster prisen ved å legge til merverdiavgift og gebyrer for å anslå hva du faktisk betaler for strømmen din.
+- Visningsmodus: Utvid grafen til å inkludere alle morgendagens priser.
+- Prisgrenser: Juster grensene for hva du anser som høy og lav pris.
+- Prisjustering: Juster prisen ved å legge til merverdiavgift og avgifter for å estimere hva du faktisk betaler for strømmen din.
 
-Støtter områder i:
+
+Støtter strømområder i:
 - Belgia
 - Bulgaria
 - Danmark
@@ -23,7 +24,7 @@ Støtter områder i:
 - Kroatia
 - Latvia
 - Litauen
-- Luxemburg
+- Luxembourg
 - Montenegro
 - Nederland
 - Nord-Makedonia

@@ -1,66 +1,44 @@
 {
+    "sourceLocale": { "locale": "sv-SE", "folderName": "sv" },
+    "locales": [
+        { "locale": "da-DK", "folderName": "da" },
+        { "locale": "de-DE" },
+        { "locale": "el-GR", "folderName": "el" },
+        { "locale": "en-GB" },
+        { "locale": "en-US" },
+        { "locale": "es-ES" },
+        { "locale": "fi-FI", "folderName": "fi" },
+        { "locale": "fr-FR" },
+        { "locale": "it-IT", "folderName": "it" },
+        { "locale": "nb-NO", "folderName": "no" },
+        { "locale": "nl-NL" },
+        { "locale": "pt-PT" },
+        { "locale": "tr-TR", "folderName": "tr" }
+    ],
     "files": [
         {
-            "sourceLocale": "en-US",
-            "sourceFileURL": "metadata/en-US/description.txt",
-            "outputs": [
-                {
-                    "locale": "da-DK",
-                    "fileURL": "metadata/da/description.txt"
-                },
-                {
-                    "locale": "de-DE",
-                    "fileURL": "metadata/de-DE/description.txt"
-                },
-                {
-                    "locale": "el-GR",
-                    "fileURL": "metadata/el/description.txt"
-                },
-                {
-                    "locale": "en-GB",
-                    "fileURL": "metadata/en-GB/description.txt"
-                },
-                {
-                    "locale": "en-US",
-                    "fileURL": "metadata/en-US/description.txt"
-                },
-                {
-                    "locale": "es-ES",
-                    "fileURL": "metadata/es-ES/description.txt"
-                },
-                {
-                    "locale": "fi-FI",
-                    "fileURL": "metadata/fi/description.txt"
-                },
-                {
-                    "locale": "fr-FR",
-                    "fileURL": "metadata/fr-FR/description.txt"
-                },
-                {
-                    "locale": "it-IT",
-                    "fileURL": "metadata/it/description.txt"
-                },
-                {
-                    "locale": "nl-NL",
-                    "fileURL": "metadata/nl-NL/description.txt"
-                },
-                {
-                    "locale": "nb-NO",
-                    "fileURL": "metadata/no/description.txt"
-                },
-                {
-                    "locale": "pt-PT",
-                    "fileURL": "metadata/pt-PT/description.txt"
-                },
-                {
-                    "locale": "sv-SE",
-                    "fileURL": "metadata/sv/description.txt"
-                },
-                {
-                    "locale": "tr-TR",
-                    "fileURL": "metadata/tr/description.txt"
-                }
-            ]
+            "fileURL": "metadata/{locale}/description.txt"
+        },
+        {
+            "fileURL": "metadata/{locale}/keywords.txt",
+            "comment": "Keywords should be a comma separated list of a maximum of 100 characters."
+        },
+        {
+            "fileURL": "metadata/{locale}/name.txt"
+        },
+        {
+            "fileURL": "metadata/{locale}/subtitle.txt"
+        },
+        {
+            "fileURL": "metadata/{locale}/release_notes.txt"
+        },
+        {
+            "fileURL": "metadata/{locale}/privacy_url.txt",
+            "skipTranslation": true
+        },
+        {
+            "fileURL": "metadata/{locale}/support_url.txt",
+            "skipTranslation": true
         }
     ]
 }

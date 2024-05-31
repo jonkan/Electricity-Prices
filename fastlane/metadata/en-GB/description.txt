@@ -1,16 +1,17 @@
-See the current electricity price on your Apple Watch, iPhone and iPad.
-Whether you’re planning to charge your electric vehicle or run household appliances, stay informed with the electricity prices and plan your energy use smartly.
+See the current electricity price on your Apple Watch, iPhone, and iPad.
+Whether you plan to charge your electric car or use household appliances, stay informed with the electricity price and plan your energy usage smartly.
 
-- Apple Watch Complications 
+- Complications for Apple Watch
 - Widgets for iPhone and iPad
-- Multi-Currency Support
+- Support for multiple currencies
 
-Pro Features:
-- View Mode: Expand your chart to include all of tomorrow’s prices.
-- Price Limits: Adjust the thresholds for what you consider low and high prices.
+Pro features:
+- View Mode: Extend the graph to include all of tomorrow's prices.
+- Price Limits: Adjust the limits for what you consider to be a high and low price.
 - Price Adjustment: Adjust the price by adding VAT and fees to estimate what you actually pay for your electricity.
 
-Supports areas in:
+
+Supported regions:
 - Austria
 - Belgium
 - Bulgaria

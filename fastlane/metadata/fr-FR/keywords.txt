@@ -1,0 +1,1 @@
+tarif,prix,électricité,énergie,voiture,ev,spot,widget,watch,montre,coût,économiser,consommationd

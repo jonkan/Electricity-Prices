@@ -1,0 +1,1 @@
+elektrik,fiyat,elektrikli,elektrikliaraba,şarj,spot,widget,watch,saat,maliyet,tasarruf,tüketimi
