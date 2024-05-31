@@ -42,12 +42,12 @@ struct PurchaseView: View {
                 VStack(alignment: .leading, spacing: 25) {
                     row(
                         title: "View Mode",
-                        description: "Expand your chart to include all of tomorrow’s prices.",
+                        description: "Extend your chart to include all of tomorrow’s prices.",
                         animationPhase: 1
                     )
                     row(
                         title: "Price Limits",
-                        description: "Adjust the thresholds for what you consider low and high prices.",
+                        description: "Adjust the limits for what you consider to be a high and low price.",
                         animationPhase: 2
                     )
                     row(

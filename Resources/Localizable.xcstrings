@@ -593,6 +593,154 @@
         }
       }
     },
+    "Adjust the limits for what you consider to be a high and low price." : {
+      "localizations" : {
+        "bg" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройте границите за това, което считате за висока и ниска цена."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upravte limity pro to, co považujete za vysokou a nízkou cenu."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Juster grænserne for, hvad du betragter som en høj og lav pris."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passen Sie die Grenzen für das, was Sie als hohen und niedrigen Preis betrachten, an."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Προσαρμόστε τα όρια για αυτό που θεωρείτε ότι είναι υψηλή και χαμηλή τιμή."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajuste los límites de lo que considera un precio alto y bajo."
+          }
+        },
+        "et" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kohandage piire selle kohta, mida peate kõrgeks ja madalaks hinnaks."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Säädä rajat sille, mitä pidät korkeana ja alhaisena hintana."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajustez les limites de ce que vous considérez comme un prix élevé ou bas."
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prilagodite granice onoga što smatrate visokom i niskom cijenom."
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Állítsa be a határokat arra vonatkozóan, hogy mit tart magas és alacsony árnak."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regola i limiti per ciò che consideri essere un prezzo alto e basso."
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sureguliuokite ribas, ką laikote aukšta ir žema kaina."
+          }
+        },
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pielāgojiet robežas tam, ko uzskatāt par augstu un zemu cenu."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Juster grensene for hva du anser å være en høy og lav pris."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pas de limieten aan voor wat u als een hoge en lage prijs beschouwt."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dostosuj limity tego, co uważasz za wysoką i niską cenę."
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajuste os limites para o que considera ser um preço alto e baixo."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajustați limitele pentru ceea ce considerați a fi un preț mare și mic."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upravte limity toho, čo považujete za vysokú a nízku cenu."
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prilagodite meje za to, kar menite, da je visoka in nizka cena."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Justera gränserna för vad du anser vara ett högt och lågt pris."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yüksek ve düşük fiyat olarak düşündüğünüz sınırları ayarlayın."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Відкоригуйте межі того, що ви вважаєте високою і низькою ціною."
+          }
+        }
+      }
+    },
     "Adjust the price by adding VAT and fees to estimate what you actually pay for your electricity." : {
       "localizations" : {
         "bg" : {
@@ -737,154 +885,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Коригуйте ціну, додаючи ПДВ та комісії, щоб оцінити, скільки ви насправді платите за електрику."
-          }
-        }
-      }
-    },
-    "Adjust the thresholds for what you consider low and high prices." : {
-      "localizations" : {
-        "bg" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Коригирайте праговете, които считате за ниски и високи цени."
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Upravit prahy pro to, co považujete za nízké a vysoké ceny."
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Juster grænserne for, hvad du betragter som lave og høje priser."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Passen Sie die Schwellenwerte für das an, was Sie als niedrige und hohe Preise betrachten."
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Προσαρμόστε τα όρια για αυτό που θεωρείτε χαμηλές και υψηλές τιμές."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ajusta los umbrales de lo que consideras precios bajos y altos."
-          }
-        },
-        "et" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kohandage läveväärtuseid, mida peate madalateks ja kõrgeteks hindadeks."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Säädä kynnysarvoja, joita pidät alhaisina ja korkeina hintoina."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ajustez les seuils pour ce que vous considérez comme des prix bas et élevés."
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prilagodite pragove onoga što smatrate niskim i visokim cijenama."
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Állítsa be a küszöbértékeket, amelyeket alacsony és magas áraknak tekint."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Regola le soglie per ciò che consideri prezzi bassi e alti."
-          }
-        },
-        "lt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Koreguoti ribas, kurias laikote mažomis ir aukštomis kainomis."
-          }
-        },
-        "lv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Koriģējiet sliekšņus tam, ko jūs uzskatāt par zemām un augstām cenām."
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Justér tersklene for hva du anser som lave og høye priser."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pas de drempels aan voor wat je als lage en hoge prijzen beschouwt."
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dostosuj progi dla tego, co uważasz za niskie i wysokie ceny."
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ajuste os limites para o que considera preços baixos e altos."
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ajustați pragurile pentru ceea ce considerați prețuri mici și mari."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Upravte prahy pre to, čo považujete za nízke a vysoké ceny."
-          }
-        },
-        "sl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prilagodite pragove za tisto, kar smatrate za nizke in visoke cene."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Justera gränserna för vad du anser vara ett högt och lågt pris."
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Düşük ve yüksek fiyatları ne olarak gördüğünüzün eşiklerini ayarlayın."
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Коригуйте пороги для того, що ви вважаєте низькими та високими цінами."
           }
         }
       }
@@ -3405,54 +3405,54 @@
         }
       }
     },
-    "Expand your chart to include all of tomorrow’s prices." : {
+    "Extend your chart to include all of tomorrow’s prices." : {
       "localizations" : {
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Разширете графиката си, за да включи всички цени за утре."
+            "value" : "Разширете вашата диаграма, за да включите всички цени за утре."
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rozšiřte svůj graf o všechny zítřejší ceny."
+            "value" : "Prodloužte svůj graf, aby zahrnoval všechny zítřejší ceny."
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Udvid din diagram til at inkludere alle morgendagens priser."
+            "value" : "Forlæng dit diagram til at omfatte alle morgendagens priser."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Erweitern Sie Ihr Diagramm, um alle Preise von morgen einzuschließen."
+            "value" : "Erweitern Sie Ihr Diagramm, um alle Preise von morgen zu enthalten."
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Επεκτείνετε το διάγραμμά σας για να συμπεριλάβει όλες τις τιμές του αύριο."
+            "value" : "Επεκτείνετε το γράφημά σας ώστε να περιλαμβάνει όλες τις τιμές του αύριο."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Amplía tu gráfico para incluir todos los precios de mañana."
+            "value" : "Extienda su gráfico para incluir todos los precios de mañana."
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Laienda oma diagrammi, et lisada kõik homsed hinnad."
+            "value" : "Laiendage oma diagrammi, et hõlmata kõiki homseid hindu."
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Laajenna kaavio sisältämään kaikki huomisen hinnat."
+            "value" : "Laajenna kaaviosi sisältämään kaikki huomisen hinnat."
           }
         },
         "fr" : {
@@ -3464,31 +3464,31 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Proširite svoj grafikon kako bi uključio sve sutrašnje cijene."
+            "value" : "Proširite svoj grafikon da uključite sve sutrašnje cijene."
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bővítse a diagramját, hogy belefoglalja a holnapi összes árat."
+            "value" : "Bővítse a táblázatot úgy, hogy az tartalmazza a holnapi árakat is."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Espandi il tuo grafico per includere tutti i prezzi di domani."
+            "value" : "Estendi il tuo grafico per includere tutti i prezzi di domani."
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Išplėskite savo diagramą, kad būtų įtrauktos visos rytojaus kainos."
+            "value" : "Išplėskite savo grafiką, įtraukdami visas rytojaus kainas."
           }
         },
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Paplašiniet savu diagrammu, lai tajā iekļautu visas rītdienas cenas."
+            "value" : "Paplašiniet savu diagrammu, iekļaujot visas rītdienas cenas."
           }
         },
         "nb" : {
@@ -3506,13 +3506,13 @@
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rozszerz swój wykres, aby zawierał wszystkie ceny na jutro."
+            "value" : "Rozszerz swój wykres, aby uwzględnić wszystkie ceny na jutro."
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Expanda o seu gráfico para incluir todos os preços de amanhã."
+            "value" : "Estenda o seu gráfico para incluir todos os preços de amanhã."
           }
         },
         "ro" : {
@@ -3524,13 +3524,13 @@
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rozšírte svoj graf o všetky zajtrajšie ceny."
+            "value" : "Rozšírte svoj graf tak, aby obsahoval všetky zajtrajšie ceny."
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Razširite svojo tabelo, da vključuje vse jutrišnje cene."
+            "value" : "Razširite svojo tabelo, da vključite vse jutrišnje cene."
           }
         },
         "sv" : {
@@ -3548,7 +3548,7 @@
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Розширте свій графік, щоб включити всі ціни завтрашнього дня."
+            "value" : "Розширте ваш графік, щоб включити всі ціни на завтрашній день."
           }
         }
       }
