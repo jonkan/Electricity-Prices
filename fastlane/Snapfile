@@ -41,8 +41,8 @@ configuration("Debug")
 localize_simulator(true)
 clear_previous_screenshots(false)
 override_status_bar(false)
-stop_after_first_error(true)
-number_of_retries(0)
+stop_after_first_error(false)
+number_of_retries(2)
 dark_mode(false)
 
 # Arguments to pass to the app on launch. See https://docs.fastlane.tools/actions/snapshot/#launch-arguments

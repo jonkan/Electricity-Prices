@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:jonkan/fastlane.git
-  revision: 7d8f5eab1271bf43a806af4ed9aa21735725de56
+  revision: 85f92588ba673f21f97f7260a32be2c57023ee8a
   branch: frameit-string-catalog-support
   specs:
     fastlane (2.220.0)
@@ -57,7 +57,7 @@ GEM
     artifactory (3.0.17)
     atomos (0.1.3)
     aws-eventstream (1.3.0)
-    aws-partitions (1.934.0)
+    aws-partitions (1.937.0)
     aws-sdk-core (3.196.1)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.651.0)
