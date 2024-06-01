@@ -6386,29 +6386,30 @@
       }
     },
     "Please report any issues to %@" : {
+      "comment" : "Try to not to make it sound like a demand",
       "localizations" : {
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Моля, докладвайте всякакви проблеми на %@"
+            "value" : "Моля, съобщете за всякакви проблеми на %@"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prosím, nahlaste jakékoli problémy na %@"
+            "value" : "Prosím nahlaste jakékoli problémy na %@"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rapportér gerne eventuelle problemer til %@"
+            "value" : "Rapporter venligst eventuelle problemer til %@"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bitte melden Sie etwaige Probleme an %@"
+            "value" : "Bitte melden Sie Probleme an %@"
           }
         },
         "el" : {
@@ -6420,19 +6421,19 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Por favor, reporte cualquier problema a %@"
+            "value" : "Por favor, informe de cualquier problema a %@"
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Palun teata kõigist probleemidest aadressil %@"
+            "value" : "Palun teavitage kõigist probleemidest aadressil %@"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ilmoita kaikista ongelmista %@:lle"
+            "value" : "Ilmoitathan kaikista ongelmista osoitteeseen %@"
           }
         },
         "fr" : {
@@ -6450,7 +6451,7 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kérjük, jelentsen be minden problémát a %@ címre"
+            "value" : "Kérjük, minden problémát jelentsen a %@ címre."
           }
         },
         "it" : {
@@ -6468,7 +6469,7 @@
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lūdzu, ziņojiet par visām problēmām uz %@"
+            "value" : "Lūdzu, ziņojiet par jebkādām problēmām uz %@"
           }
         },
         "nb" : {
@@ -6486,43 +6487,43 @@
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Proszę zgłaszać wszelkie problemy do %@"
+            "value" : "Proszę zgłosić wszelkie problemy na %@"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Por favor, reporte quaisquer problemas para %@"
+            "value" : "Por favor, reporte qualquer problema para %@"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vă rugăm să raportați orice probleme la %@"
+            "value" : "Vă rugăm să raportați orice problemă la %@"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nahláste akékoľvek problémy na %@"
+            "value" : "Prosím oznámte akékoľvek problémy na %@"
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prosimo, da morebitne težave prijavite na %@"
+            "value" : "Prosimo, da morebitne težave sporočite na %@"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Var god rapportera alla problem till %@"
+            "value" : "Vänligen rapportera eventuella problem till %@"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Herhangi bir sorunu %@'ya bildirin"
+            "value" : "Lütfen her türlü sorunu %@ adresine bildirin"
           }
         },
         "uk" : {

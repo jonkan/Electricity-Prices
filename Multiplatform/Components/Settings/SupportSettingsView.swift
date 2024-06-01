@@ -25,7 +25,7 @@ struct SupportSettingsView: View {
             Section {
                 let emailText = Text(verbatim: supportEmail)
                     .foregroundColor(.accentColor)
-                Text("Please report any issues to \(emailText)")
+                Text("Please report any issues to \(emailText)", comment: "Try to not to make it sound like a demand")
                     .onTapGesture {
                         UIPasteboard.general.url = URL(string: supportEmail)
                         acknowledgeEmailCopied = true
