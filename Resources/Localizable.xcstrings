@@ -8902,6 +8902,7 @@
       }
     },
     "Support" : {
+      "comment" : "Support is for reporting problems",
       "localizations" : {
         "bg" : {
           "stringUnit" : {
@@ -8918,7 +8919,7 @@
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Støtte"
+            "value" : "Support"
           }
         },
         "de" : {
@@ -8931,6 +8932,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Υποστήριξη"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support"
           }
         },
         "es" : {
@@ -9032,7 +9039,7 @@
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Stöd"
+            "value" : "Support"
           }
         },
         "tr" : {

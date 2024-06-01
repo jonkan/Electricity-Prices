@@ -108,7 +108,7 @@ struct SettingsView: View {
                         SupportSettingsView()
                             .navigationTitle("Support")
                     } label: {
-                        Text("Support")
+                        Text("Support", comment: "Support is for reporting problems")
                     }
                 }
             }
