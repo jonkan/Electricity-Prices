@@ -160,10 +160,10 @@ struct PriceAdjustmentSettingsView: View {
         let multiplierText = Text(pricePresentation.adjustment.multiplier, format: .number)
         let resultText: Text
         if pricePresentation.adjustment.addends.isEmpty {
-            resultText = Text(verbatim: "\(formattedCurrentPrice) * \(multiplierText) = \(formattedAdjustedPrice)")
+            resultText = Text("\(formattedCurrentPrice) * \(multiplierText) = \(formattedAdjustedPrice)")
         } else {
             let addendsText = ([formattedCurrentPrice] + formattedAddends).joined(separator: " + ")
-            resultText = Text(verbatim: "(\(addendsText)) * \(multiplierText) = \(formattedAdjustedPrice)")
+            resultText = Text("(\(addendsText)) * \(multiplierText) = \(formattedAdjustedPrice)")
         }
 
         return resultText
