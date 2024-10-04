@@ -166,25 +166,17 @@ struct PriceAdjustmentSettingsView: View {
     }
 }
 
-struct PriceAdjustmentSettingsView_Previews: PreviewProvider {
+#Preview {
+    @Previewable @State var pricePresentation = PricePresentation(
+        adjustment: PriceAdjustment(isEnabled: true)
+    )
 
-    struct Container: View {
-        @State var pricePresentation = PricePresentation(
-            adjustment: PriceAdjustment(isEnabled: true)
+    NavigationStack {
+        PriceAdjustmentSettingsView(
+            pricePresentation: $pricePresentation,
+            currentPrice: .mockPrice4Negative,
+            currency: .SEK
         )
-
-        var body: some View {
-            PriceAdjustmentSettingsView(
-                pricePresentation: $pricePresentation,
-                currentPrice: .mockPrice4Negative,
-                currency: .SEK
-            )
-        }
     }
-
-    static var previews: some View {
-        NavigationStack {
-            Container()
-        }
-    }
+    .environment(\.locale, .init(identifier: "en_US"))
 }
