@@ -27,23 +27,21 @@ final class EPWatchCoreTests: XCTestCase {
     }()
 
     override func setUpWithError() throws {
-        let url = bundle.url(forResource: "day-ahead-prices-1", withExtension: "xml")!
+        dayAheadPrices = try loadDayAheadPrices("day-ahead-prices-1.xml")
+    }
+
+    func loadDayAheadPrices(_ filename: String) throws -> DayAheadPrices {
+        let url = bundle.url(forResource: filename, withExtension: nil)!
         let xmlData = try Data(contentsOf: url)
-        dayAheadPrices = try PricesAPI.shared.parseDayAheadPrices(fromXML: xmlData)
+        return try PricesAPI.shared.parseDayAheadPrices(fromXML: xmlData)
     }
 
     func testDecodeDayAheadPrices1() throws {
         XCTAssertEqual(dayAheadPrices.timeSeries.count, 2)
         XCTAssertEqual(dayAheadPrices.periodTimeInterval.start.debugDescription, "2022-08-25 22:00:00 +0000")
         XCTAssertEqual(dayAheadPrices.periodTimeInterval.end.debugDescription, "2022-08-27 22:00:00 +0000")
-        XCTAssertEqual(dayAheadPrices.timeSeries[0].period.point[3].position, 4)
-        XCTAssertEqual(dayAheadPrices.timeSeries[0].period.point[3].priceAmount, 8.18)
-    }
-
-    func testFindPriceAmount() throws {
-        let date1 = swedishDateFormatter.date(from: "2022-08-26 08:00:00")!
-        let price = try dayAheadPrices.price(for: date1)
-        XCTAssertEqual(price, 619.96)
+        XCTAssertEqual(dayAheadPrices.timeSeries[0].period[0].point[3].position, 4)
+        XCTAssertEqual(dayAheadPrices.timeSeries[0].period[0].point[3].priceAmount, 8.18)
     }
 
     func testPrices1() throws {
@@ -72,6 +70,13 @@ final class EPWatchCoreTests: XCTestCase {
         XCTAssertEqual(prices.count, 24)
         let ranges = prices.map({ $0.dayPriceRange }).sorted(by: { $0.lowerBound < $1.lowerBound })
         XCTAssertEqual(ranges.first, ranges.last)
+    }
+
+    func testMultiplePeriods() throws {
+        let dayAheadPrices = try loadDayAheadPrices("day-ahead-prices-4.xml")
+        let lastDate = try dayAheadPrices.prices(using: .mockedSEK).last!.date
+        let day = Calendar.current.component(.day, from: lastDate)
+        XCTAssertEqual(day, 6)
     }
 
 }

@@ -17,7 +17,7 @@ struct DayAheadPrices: Codable {
     }
 
     struct TimeSeries: Codable {
-        var period: Period
+        var period: [Period]
     }
 
     struct Period: Codable {
@@ -57,44 +57,32 @@ struct DayAheadPrices: Codable {
         }
     }
 
-    func price(for date: Date) throws -> Double {
-        guard periodTimeInterval.includes(date) else {
-            throw DayAheadPricesError.dateOutsideTimeInterval
-        }
-        guard let timeSeries = timeSeries.first(where: { $0.period.timeInterval.includes(date) }) else {
-            throw DayAheadPricesError.noTimeSeriesMatchingDate
-        }
-        guard let point = timeSeries.period.point(for: date) else {
-            throw DayAheadPricesError.noPointMatchingDate
-        }
-        return point.priceAmount
-    }
-
     func prices(using rate: ExchangeRate) throws -> [PricePoint] {
         guard rate.from == .EUR else {
             throw NSError(0, "Unexpected forex rate, prices must be converted from EUR")
         }
         var points: [PricePoint] = []
         for ts in timeSeries {
-            let period = ts.period
-            guard period.resolution == "PT60M" else {
-                continue
-            }
-            for p in period.point {
-                let start = Calendar.current.date(
-                    byAdding: .hour,
-                    value: p.position - 1,
-                    to: period.timeInterval.start
-                )!
-                let MWperkW = 0.001
-                let price = p.priceAmount * rate.rate * MWperkW
-                let pricePoint = PricePoint(
-                    date: start,
-                    price: price,
-                    dayPriceRange: price...price,
-                    currency: rate.to
-                )
-                points.append(pricePoint)
+            for period in ts.period {
+                guard period.resolution == "PT60M" else {
+                    continue
+                }
+                for p in period.point {
+                    let start = Calendar.current.date(
+                        byAdding: .hour,
+                        value: p.position - 1,
+                        to: period.timeInterval.start
+                    )!
+                    let MWperkW = 0.001
+                    let price = p.priceAmount * rate.rate * MWperkW
+                    let pricePoint = PricePoint(
+                        date: start,
+                        price: price,
+                        dayPriceRange: price...price,
+                        currency: rate.to
+                    )
+                    points.append(pricePoint)
+                }
             }
         }
 
