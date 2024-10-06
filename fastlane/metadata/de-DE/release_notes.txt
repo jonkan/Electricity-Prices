@@ -1,1 +1,1 @@
-Fügt Unterstützung für 23 weitere Sprachen hinzu!
+Behebt ein Problem beim Abrufen der Preise für morgen.

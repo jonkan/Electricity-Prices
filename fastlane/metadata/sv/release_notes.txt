@@ -1,1 +1,1 @@
-Lägger till stöd för ytterligare 23 språk!
+Löser ett problem med hämtningen av morgondagens priser.

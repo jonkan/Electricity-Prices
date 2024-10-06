@@ -1,1 +1,1 @@
-Adiciona suporte para mais 23 idiomas!
+Corrige um problema ao buscar os preços de amanhã.

@@ -1,1 +1,1 @@
-Adds support for an additional 23 languages!
+Fixes a problem with fetching tomorrow’s prices.

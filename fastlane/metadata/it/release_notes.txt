@@ -1,1 +1,1 @@
-Aggiunge il supporto per altre 23 lingue!
+Risolve un problema con il recupero dei prezzi di domani.

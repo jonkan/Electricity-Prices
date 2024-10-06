@@ -3,4 +3,4 @@ app_identifier("se.j0nas.EPWatch")
 
 ignore_language_directory_validation(false)
 
-overwrite_screenshots(true)
+overwrite_screenshots(false)

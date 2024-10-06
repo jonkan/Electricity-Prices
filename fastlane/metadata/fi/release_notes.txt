@@ -1,1 +1,1 @@
-Lisää tukea 23 uudelle kielelle!
+Korjaa ongelman huomisen hintojen hakemisessa.

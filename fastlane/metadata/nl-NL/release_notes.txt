@@ -1,1 +1,1 @@
-Toevoeging van ondersteuning voor nog 23 talen!
+Lost een probleem op met het ophalen van de prijzen van morgen.

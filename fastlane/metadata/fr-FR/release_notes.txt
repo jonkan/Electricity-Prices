@@ -1,1 +1,1 @@
-Ajout du support pour 23 langues supplémentaires!
+Corrige un problème avec la récupération des prix de demain.
