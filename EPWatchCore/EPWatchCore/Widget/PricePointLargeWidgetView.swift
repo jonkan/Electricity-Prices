@@ -20,9 +20,11 @@ public struct PricePointLargeWidgetView: View {
             Text(entry.formattedPrice(style: .normal))
                 .font(.title)
                 .minimumScaleFactor(0.5)
+                .lineLimit(1)
             DateIntervalText(entry.date, style: .normal)
                 .font(.subheadline)
                 .minimumScaleFactor(0.5)
+                .lineLimit(1)
 
             PriceChartView(
                 selectedPrice: .constant(nil),
