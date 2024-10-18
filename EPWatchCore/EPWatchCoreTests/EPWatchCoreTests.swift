@@ -79,4 +79,16 @@ final class EPWatchCoreTests: XCTestCase {
         XCTAssertEqual(day, 6)
     }
 
+    func testA03CurveType() throws {
+        let dayAheadPrices = try loadDayAheadPrices("day-ahead-prices-5.xml")
+        let prices = try dayAheadPrices.prices(using: .mockedEUR)
+        XCTAssertEqual(prices.count, 24)
+        XCTAssertEqual(prices[0].price, -0.002, accuracy: 1e-10)
+        XCTAssertEqual(prices[1].price, -0.002, accuracy: 1e-10)
+        XCTAssertEqual(prices[2].price, -0.00175, accuracy: 1e-10)
+        XCTAssertEqual(prices[13].price, 0.01317, accuracy: 1e-10)
+        XCTAssertEqual(prices[14].price, 0.01317, accuracy: 1e-10)
+        XCTAssertEqual(prices[15].price, 0.01342, accuracy: 1e-10)
+    }
+
 }

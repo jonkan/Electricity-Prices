@@ -61,13 +61,16 @@ struct DayAheadPrices: Codable {
         guard rate.from == .EUR else {
             throw NSError(0, "Unexpected forex rate, prices must be converted from EUR")
         }
-        var points: [PricePoint] = []
+        var pricePoints: [PricePoint] = []
         for ts in timeSeries {
             for period in ts.period {
                 guard period.resolution == "PT60M" else {
                     continue
                 }
-                for p in period.point {
+
+                let periodPoints = period.point.fillMissingPrices()
+
+                for p in periodPoints {
                     let start = Calendar.current.date(
                         byAdding: .hour,
                         value: p.position - 1,
@@ -81,22 +84,23 @@ struct DayAheadPrices: Codable {
                         dayPriceRange: price...price,
                         currency: rate.to
                     )
-                    points.append(pricePoint)
+                    pricePoints.append(pricePoint)
                 }
             }
         }
 
+        // Calculate price range for each day
         let grouped = Dictionary(
-            grouping: points,
+            grouping: pricePoints,
             by: { Calendar.current.startOfDay(for: $0.date) }
         )
-        var pricePoints: [PricePoint] = []
+        var processedPricePoints: [PricePoint] = []
         for (startOfDay, prices) in grouped {
             guard let priceRange = prices.priceRange(forDayOf: startOfDay) else {
                 LogError("Failed to calculate price range")
                 continue
             }
-            pricePoints.append(
+            processedPricePoints.append(
                 contentsOf: prices.map({
                     PricePoint(
                         date: $0.date,
@@ -107,8 +111,36 @@ struct DayAheadPrices: Codable {
                 })
             )
         }
-        return pricePoints.sorted(by: { $0.date < $1.date })
+        return processedPricePoints.sorted(by: { $0.date < $1.date })
     }
+
+}
+
+private typealias Point = DayAheadPrices.Point
+
+extension Array where Element == Point {
+
+    /// Fill any blanks (missing prices) with the previous price, see CurveType A03 in the entsoe docs.
+    func fillMissingPrices() -> [Element] {
+        var points: [Point] = []
+        var previous: Point?
+        for point in self {
+            if previous != nil {
+                while point.position - previous!.position > 1 {
+                    let fillPoint = Point(
+                        position: previous!.position + 1,
+                        priceAmount: previous!.priceAmount
+                    )
+                    points.append(fillPoint)
+                    previous = fillPoint
+                }
+            }
+            points.append(point)
+            previous = point
+        }
+        return points
+    }
+
 }
 
 enum DayAheadPricesError: Error {
