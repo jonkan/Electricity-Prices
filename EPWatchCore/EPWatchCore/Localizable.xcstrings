@@ -4465,7 +4465,7 @@
       }
     },
     "Euro" : {
-      "comment" : "Currency name for EUR",
+      "comment" : "Currency name for EUR\nCurrency name short for EUR\nCurrency name short plural for EUR",
       "localizations" : {
         "bg" : {
           "stringUnit" : {
@@ -8338,7 +8338,7 @@
       }
     },
     "kr" : {
-      "comment" : "Currency symbol for DKK",
+      "comment" : "Currency subdivision symbol for TRY\nCurrency symbol for DKK\nCurrency symbol for NOK\nCurrency symbol for SEK",
       "localizations" : {
         "bg" : {
           "stringUnit" : {
@@ -8636,7 +8636,7 @@
       }
     },
     "Krone" : {
-      "comment" : "Currency name short for DKK",
+      "comment" : "Currency name short for DKK\nCurrency name short for NOK",
       "localizations" : {
         "bg" : {
           "stringUnit" : {
@@ -8785,7 +8785,7 @@
       }
     },
     "Kroner" : {
-      "comment" : "Currency name short plural for DKK",
+      "comment" : "Currency name short plural for DKK\nCurrency name short plural for NOK",
       "localizations" : {
         "bg" : {
           "stringUnit" : {
@@ -10424,7 +10424,7 @@
       }
     },
     "Lira" : {
-      "comment" : "Currency name short for TRY",
+      "comment" : "Currency name short for TRY\nCurrency name short plural for TRY",
       "localizations" : {
         "bg" : {
           "stringUnit" : {
@@ -12212,7 +12212,7 @@
       }
     },
     "øre" : {
-      "comment" : "Currency subdivision symbol for DKK",
+      "comment" : "Currency subdivision symbol for DKK\nCurrency subdivision symbol for NOK",
       "localizations" : {
         "bg" : {
           "stringUnit" : {
@@ -12361,7 +12361,7 @@
       }
     },
     "Øre" : {
-      "comment" : "Currency subdivision name for DKK",
+      "comment" : "Currency subdivision name for DKK\nCurrency subdivision name for NOK",
       "localizations" : {
         "bg" : {
           "stringUnit" : {
@@ -13255,7 +13255,7 @@
       }
     },
     "Pound" : {
-      "comment" : "Currency name short for GBP",
+      "comment" : "Currency name short for GBP\nCurrency name short plural for GBP",
       "localizations" : {
         "bg" : {
           "stringUnit" : {
@@ -14440,154 +14440,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сербія"
-          }
-        }
-      }
-    },
-    "Setting" : {
-      "localizations" : {
-        "bg" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Настройка"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nastavení"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Indstilling"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Einstellung"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ρύθμιση"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Configuración"
-          }
-        },
-        "et" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Seade"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Asetus"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Paramètre"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Postavka"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Beállítás"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Impostazione"
-          }
-        },
-        "lt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nustatymas"
-          }
-        },
-        "lv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Iestatījumi"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Innstilling"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Instelling"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ustawienie"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Configuração"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Setare"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nastavenie"
-          }
-        },
-        "sl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nastavitev"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Inställning"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ayar"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Налаштування"
           }
         }
       }
