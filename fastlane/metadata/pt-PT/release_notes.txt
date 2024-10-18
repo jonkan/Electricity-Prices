@@ -1,1 +1,1 @@
-Corrige um problema ao buscar os preços de amanhã.
+Resolve um problema que fazia com que alguns preços pudessem estar ausentes.

@@ -1,1 +1,1 @@
-Behebt ein Problem beim Abrufen der Preise für morgen.
+Behebt ein Problem, das dazu führte, dass einige Preise fehlten.

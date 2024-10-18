@@ -1,1 +1,1 @@
-Korjaa ongelman huomisen hintojen hakemisessa.
+Ratkaisee ongelman, jonka vuoksi tietyt hinnat saattoivat puuttua.

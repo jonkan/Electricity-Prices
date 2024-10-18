@@ -1,1 +1,1 @@
-Lost een probleem op met het ophalen van de prijzen van morgen.
+Lost een probleem op waardoor sommige prijzen konden ontbreken.

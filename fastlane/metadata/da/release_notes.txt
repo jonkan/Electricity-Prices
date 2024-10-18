@@ -1,1 +1,1 @@
-Løser et problem med at hente morgendagens priser.
+Løser et problem, der gjorde, at visse priser kunne mangle.

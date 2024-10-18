@@ -1,1 +1,1 @@
-Yarınki fiyatları alma ile ilgili bir sorunu giderir.
+Bazı fiyatların eksik olmasına neden olan bir sorunu çözme.

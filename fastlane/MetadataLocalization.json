@@ -1,5 +1,6 @@
 {
     "sourceLocale": { "locale": "sv-SE", "folderName": "sv" },
+    "comment": "This is text for or about a mobile app that displays electricity prices.",
     "locales": [
         { "locale": "da-DK", "folderName": "da" },
         { "locale": "de-DE" },
@@ -30,10 +31,15 @@
             "fileURL": "metadata/{locale}/subtitle.txt"
         },
         {
-            "fileURL": "metadata/{locale}/release_notes.txt"
+            "fileURL": "metadata/{locale}/release_notes.txt",
+            "comment": "The following text is the release notes for a new version of the app. Release notes often mention new features and/or problems that have been fixed."
         },
         {
             "fileURL": "metadata/{locale}/privacy_url.txt",
+            "skipTranslation": true
+        },
+        {
+            "fileURL": "metadata/{locale}/marketing_url.txt",
             "skipTranslation": true
         },
         {

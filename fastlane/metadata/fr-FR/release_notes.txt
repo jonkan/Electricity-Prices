@@ -1,1 +1,1 @@
-Corrige un problème avec la récupération des prix de demain.
+Résout un problème qui faisait que certains prix pouvaient manquer.

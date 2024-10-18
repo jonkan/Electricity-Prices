@@ -1,1 +1,1 @@
-Risolve un problema con il recupero dei prezzi di domani.
+Risolto un problema che faceva sì che alcuni prezzi potessero mancare.

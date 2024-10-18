@@ -1,1 +1,1 @@
-Löser ett problem med hämtningen av morgondagens priser.
+Löser ett problem som gjorde att vissa priser kunde saknas.

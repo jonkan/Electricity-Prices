@@ -1,1 +1,1 @@
-Arregla un problema con la obtención de los precios de mañana.
+Resuelve un problema que hacía que algunos precios pudieran faltar.
