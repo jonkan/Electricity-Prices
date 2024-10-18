@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1530"
+   LastUpgradeVersion = "1600"
    wasCreatedForAppExtension = "YES"
    version = "2.0">
    <BuildAction
@@ -48,7 +48,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2610876C2BD432A3008ED50B"
+               BlueprintIdentifier = "2610877B2BD432FA008ED50B"
                BuildableName = "Electricity Prices UI Tests.xctest"
                BlueprintName = "Electricity Prices UI Tests"
                ReferencedContainer = "container:Electricity Prices.xcodeproj">
