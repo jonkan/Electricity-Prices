@@ -366,18 +366,20 @@ private struct PriceChartViewPreview: View {
     @State var viewMode: PriceChartViewMode = .todayAndComingNight
 
     var body: some View {
+        let prices: [PricePoint] = .mockPricesWithTomorrow.filterForViewMode(viewMode)
         List {
             Section {
                 ForEach(PriceChartStyle.allCases) { style in
                     PriceChartView(
                         selectedPrice: .constant(nil),
                         currentPrice: [PricePoint].mockPricesWithTomorrow[21],
-                        prices: .mockPricesWithTomorrow.filterForViewMode(viewMode),
+                        prices: prices,
                         limits: .mockLimits,
                         pricePresentation: .init(),
                         chartStyle: style,
                         isChartGestureEnabled: true,
-                        showPriceLimitsLines: false
+                        showPriceLimitsLines: false,
+                        cheapestHours: prices.cheapestHours(for: 4)
                     )
                 }
                 .frame(minHeight: 150)

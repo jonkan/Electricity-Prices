@@ -31,16 +31,22 @@ extension AppState {
     public var cheapestHours: CheapestHours {
         let filteredPrices = prices.filterForViewMode(chartViewMode)
             .filter({ Calendar.current.startOfHour(for: .now) <= $0.date })
+        return filteredPrices.cheapestHours(for: Int(cheapestHoursDuration))
+    }
 
-        let duration = Int(cheapestHoursDuration)
+}
+
+extension Array where Element == PricePoint {
+
+    func cheapestHours(for duration: Int) -> CheapestHours {
         var minCost: Double = .greatestFiniteMagnitude
         var start: Date = .distantPast
 
-        for i in 0...(filteredPrices.count - duration) {
+        for i in 0...(count - duration) {
             let cost = (0..<duration)
-                .map { filteredPrices[i + $0].price }
+                .map { self[i + $0].price }
                 .reduce(0, +)
-            let date = filteredPrices[i].date
+            let date = self[i].date
             if cost < minCost {
                 minCost = cost
                 start = date
@@ -53,5 +59,4 @@ extension AppState {
             price: minCost
         )
     }
-
 }
