@@ -59,11 +59,5 @@ public struct WidgetView: View {
 }
 
 #Preview {
-#if os(watchOS)
     WidgetView(entry: .mock)
-        .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-#else
-    WidgetView(entry: .mock)
-        .previewContext(WidgetPreviewContext(family: .systemSmall))
-#endif
 }

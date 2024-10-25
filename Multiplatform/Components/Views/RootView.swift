@@ -23,7 +23,8 @@ struct RootView: View {
                             prices: state.prices.filterForViewMode(state.chartViewMode),
                             limits: state.priceLimits,
                             pricePresentation: state.pricePresentation,
-                            chartStyle: state.chartStyle
+                            chartStyle: state.chartStyle,
+                            cheapestHours: state.cheapestHours
                         )
                         .frame(minHeight: 200)
                     } footer: {
@@ -33,6 +34,13 @@ struct RootView: View {
                             exchangeRate: state.exchangeRate,
                             hideWithoutTaxesOrFeesDisclamer: state.pricePresentation.adjustment.isEnabled
                         )
+                    }
+                    Section {
+                        Text("\(state.cheapestHours.start.formatted(date: .omitted, time: .shortened)) to \(state.cheapestHours.end.formatted(date: .omitted, time: .shortened)) (\(state.cheapestHours.duration) hours)")
+                        Slider(value: $state.cheapestHoursDuration, in: 1...10, step: 1)
+                    } header: {
+                        Text("Cheapest hours")
+                            .textCase(nil)
                     }
                 } else if state.isFetching {
                     VStack {

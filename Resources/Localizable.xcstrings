@@ -611,6 +611,16 @@
         }
       }
     },
+    "%@ to %@ (%lld hours)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ to %2$@ (%3$lld hours)"
+          }
+        }
+      }
+    },
     "%lld log files" : {
       "localizations" : {
         "bg" : {
@@ -1942,6 +1952,9 @@
           }
         }
       }
+    },
+    "Cheapest hours" : {
+
     },
     "Clamp negative prices" : {
       "localizations" : {

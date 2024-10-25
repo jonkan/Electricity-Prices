@@ -24,6 +24,8 @@ public struct PriceChartView: View {
     let useCurrencyAxisFormat: Bool
     let isChartGestureEnabled: Bool
     let showPriceLimitsLines: Bool
+    let cheapestHours: CheapestHours?
+
     @Binding var selectedPrice: PricePoint?
     var displayedPrice: PricePoint {
         return selectedPrice ?? currentPrice
@@ -38,7 +40,8 @@ public struct PriceChartView: View {
         chartStyle: PriceChartStyle,
         useCurrencyAxisFormat: Bool = false,
         isChartGestureEnabled: Bool = true,
-        showPriceLimitsLines: Bool = false
+        showPriceLimitsLines: Bool = false,
+        cheapestHours: CheapestHours? = nil
     ) {
         _selectedPrice = selectedPrice
         self.currentPrice = currentPrice
@@ -50,6 +53,7 @@ public struct PriceChartView: View {
         self.useCurrencyAxisFormat = useCurrencyAxisFormat
         self.isChartGestureEnabled = isChartGestureEnabled
         self.showPriceLimitsLines = showPriceLimitsLines
+        self.cheapestHours = cheapestHours
     }
 
     public var body: some View {
@@ -209,6 +213,7 @@ public struct PriceChartView: View {
         let barWidth = geometry.size.width / (CGFloat(prices.count)*1.5+1)
         return Chart {
             currentPriceBarMark(barWidth: barWidth)
+            cheapestHoursBarMarks(barWidth: barWidth)
 
             ForEach(prices, id: \.date) { p in
                 BarMark(
@@ -217,7 +222,11 @@ public struct PriceChartView: View {
                     width: .fixed(barWidth)
                 )
                 .offset(x: barWidth / 2)
-                .foregroundStyle(limits.color(of: p.price))
+                .foregroundStyle(
+                    cheapestHours?.includes(p) == true
+                    ? .purple.opacity(0.5)
+                    : limits.color(of: p.price)
+                )
             }
 
             priceLimitLines
@@ -232,6 +241,20 @@ public struct PriceChartView: View {
         )
         .offset(x: barWidth / 2)
         .foregroundStyle(.gray.opacity(0.3))
+    }
+
+    @ChartContentBuilder
+    private func cheapestHoursBarMarks(barWidth: CGFloat) -> some ChartContent {
+        if let cheapestHours {
+            ForEach(cheapestHours.priceDates, id: \.self) { date in
+                BarMark(
+                    x: .value("", date),
+                    width: .fixed(barWidth)
+                )
+                .offset(x: barWidth / 2)
+            }
+            .foregroundStyle(.purple.opacity(0.3))
+        }
     }
 
     @ChartContentBuilder

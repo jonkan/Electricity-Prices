@@ -108,6 +108,10 @@ public class AppState: ObservableObject {
     @AppStorageCodable("ExchangeRate", storage: .appGroup)
     public var exchangeRate: ExchangeRate? = nil
 
+    /// See Insights/CheapestHours.swift
+    @AppStorage("CheapestHoursDuration")
+    public var cheapestHoursDuration: Double = 3
+
     public var isFetching: Bool {
         updateTask != nil
     }
