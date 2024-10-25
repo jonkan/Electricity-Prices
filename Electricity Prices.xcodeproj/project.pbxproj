@@ -657,7 +657,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/libexec/PlistBuddy -c \"Set :GitCommitHash `git describe --match=NeVeRmAtCh --always --abbrev=7 --dirty`\" \"${TARGET_BUILD_DIR}\"/\"${INFOPLIST_PATH}\"\n";
+			shellScript = "set -e\ncommit_hash=$(git describe --match=NeVeRmAtCh --always --abbrev=7 --dirty)\nplutil -replace GitCommitHash -string \"$commit_hash\" \"${TARGET_BUILD_DIR}\"/\"${INFOPLIST_PATH}\"\n";
+			showEnvVarsInLog = 0;
 		};
 		261C7C9D293FCFD5005618D8 /* Add git commit hash to plist */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -676,7 +677,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/libexec/PlistBuddy -c \"Set :GitCommitHash `git describe --match=NeVeRmAtCh --always --abbrev=7 --dirty`\" \"${TARGET_BUILD_DIR}\"/\"${INFOPLIST_PATH}\"\n";
+			shellScript = "set -e\ncommit_hash=$(git describe --match=NeVeRmAtCh --always --abbrev=7 --dirty)\nplutil -replace GitCommitHash -string \"$commit_hash\" \"${TARGET_BUILD_DIR}\"/\"${INFOPLIST_PATH}\"\n";
 		};
 		261C7C9E293FCFE7005618D8 /* Add git commit hash to plist */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -695,7 +696,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/libexec/PlistBuddy -c \"Set :GitCommitHash `git describe --match=NeVeRmAtCh --always --abbrev=7 --dirty`\" \"${TARGET_BUILD_DIR}\"/\"${INFOPLIST_PATH}\"\n";
+			shellScript = "set -e\ncommit_hash=$(git describe --match=NeVeRmAtCh --always --abbrev=7 --dirty)\nplutil -replace GitCommitHash -string \"$commit_hash\" \"${TARGET_BUILD_DIR}\"/\"${INFOPLIST_PATH}\"\n";
 		};
 		2645EFB42917C0C90034C1E6 /* Entsoe Security Token */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -715,7 +716,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Look for a file named '.security_token' next to this .xcodeproj file\ntoken_file=.security_token\ntoken=\"$(cat $token_file 2>/dev/null)\"\nif [ \"$token\" ]; then\n  plutil -replace EntsoeSecurityToken -string $token \"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\nelse\n  echo \"error: Missing entsoe security token. Get a security token from <https://transparency.entsoe.eu/usrm/user/myAccountSettings>, then create a new file at $token_file that contains the security token.\"\nfi\n";
+			shellScript = "# Look for a file named '.security_token' next to this .xcodeproj file\ntoken_file=.security_token\ntoken=\"$(cat $token_file 2>/dev/null)\"\nif [ \"$token\" ]; then\n  plutil -replace EntsoeSecurityToken -string $token \"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\nelse\n  echo \"error: Missing entsoe security token. Get a security token from <https://transparency.entsoe.eu/usrm/user/myAccountSettings>, then create a new file at $token_file that contains the security token.\"\n  exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 		26BF385C2BD04465002BC4A8 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -792,7 +794,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Look for a file named '.security_token' next to this .xcodeproj file\ntoken_file=.security_token\ntoken=\"$(cat $token_file 2>/dev/null)\"\nif [ \"$token\" ]; then\n  plutil -replace EntsoeSecurityToken -string $token \"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\nelse\n  echo \"error: Missing entsoe security token. Get a security token from <https://transparency.entsoe.eu/usrm/user/myAccountSettings>, then create a new file at $token_file that contains the security token.\"\nfi\n";
+			shellScript = "# Look for a file named '.security_token' next to this .xcodeproj file\ntoken_file=.security_token\ntoken=\"$(cat $token_file 2>/dev/null)\"\nif [ \"$token\" ]; then\n  plutil -replace EntsoeSecurityToken -string $token \"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\nelse\n  echo \"error: Missing entsoe security token. Get a security token from <https://transparency.entsoe.eu/usrm/user/myAccountSettings>, then create a new file at $token_file that contains the security token.\"\n  exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 		26DAC0BC29026F890079F66A /* Entsoe Security Token */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -812,7 +815,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Look for a file named '.security_token' next to this .xcodeproj file\ntoken_file=.security_token\ntoken=\"$(cat $token_file 2>/dev/null)\"\nif [ \"$token\" ]; then\n  plutil -replace EntsoeSecurityToken -string $token \"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\nelse\n  echo \"error: Missing entsoe security token. Get a security token from <https://transparency.entsoe.eu/usrm/user/myAccountSettings>, then create a new file at $token_file that contains the security token.\"\nfi\n";
+			shellScript = "# Look for a file named '.security_token' next to this .xcodeproj file\ntoken_file=.security_token\ntoken=\"$(cat $token_file 2>/dev/null)\"\nif [ \"$token\" ]; then\n  plutil -replace EntsoeSecurityToken -string $token \"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\nelse\n  echo \"error: Missing entsoe security token. Get a security token from <https://transparency.entsoe.eu/usrm/user/myAccountSettings>, then create a new file at $token_file that contains the security token.\"\n  exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
