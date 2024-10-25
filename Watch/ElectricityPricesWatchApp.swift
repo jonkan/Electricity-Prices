@@ -29,7 +29,7 @@ struct ElectricityPricesWatchApp: App {
 
     @SceneBuilder var body: some Scene {
         WindowGroup {
-            RootView()
+            MainView()
                 .environmentObject(AppState.shared)
                 .environmentObject(hostSyncManager)
         }

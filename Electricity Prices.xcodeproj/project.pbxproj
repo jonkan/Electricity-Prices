@@ -38,8 +38,8 @@
 		26A2C62E2AC6C60600DDEBD5 /* WatchSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A2C62D2AC6C60600DDEBD5 /* WatchSyncManager.swift */; };
 		26A2C6312AC6D9E200DDEBD5 /* AsyncAlgorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 26A2C6302AC6D9E200DDEBD5 /* AsyncAlgorithms */; };
 		26AC446529112D5D00B86B1E /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AC446429112D5D00B86B1E /* CircularProgressView.swift */; };
-		26AC447229126B6400B86B1E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696881828D477ED002142BF /* RootView.swift */; };
-		26AC447329126EFD00B86B1E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC1A128B77720007B4A4E /* RootView.swift */; };
+		26AC447229126B6400B86B1E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696881828D477ED002142BF /* MainView.swift */; };
+		26AC447329126EFD00B86B1E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FC1A128B77720007B4A4E /* MainView.swift */; };
 		26C082D0292576160065DEFE /* EPWatchCore in Frameworks */ = {isa = PBXBuildFile; productRef = 26C082CF292576160065DEFE /* EPWatchCore */; };
 		26C082D2292576200065DEFE /* EPWatchCore in Frameworks */ = {isa = PBXBuildFile; productRef = 26C082D1292576200065DEFE /* EPWatchCore */; };
 		26C082D4292576270065DEFE /* EPWatchCore in Frameworks */ = {isa = PBXBuildFile; productRef = 26C082D3292576270065DEFE /* EPWatchCore */; };
@@ -155,7 +155,7 @@
 		261087872BD43386008ED50B /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		261FC18F28B7771F007B4A4E /* Electricity Prices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Electricity Prices.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		261FC19F28B77720007B4A4E /* ElectricityPricesWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityPricesWatchApp.swift; sourceTree = "<group>"; };
-		261FC1A128B77720007B4A4E /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		261FC1A128B77720007B4A4E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		261FC1AC28B77721007B4A4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		265733302907291700CE9A4C /* StateInfoFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateInfoFooterView.swift; sourceTree = "<group>"; };
 		2673D4292BD24AAE00140D0D /* WidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetsBundle.swift; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 		2696880C28D47422002142BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2696881428D477EC002142BF /* Electricity Prices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Electricity Prices.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2696881628D477ED002142BF /* ElectricityPricesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityPricesApp.swift; sourceTree = "<group>"; };
-		2696881828D477ED002142BF /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		2696881828D477ED002142BF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2696881A28D477EE002142BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2696881D28D477EE002142BF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2696882228D4784A002142BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -271,7 +271,7 @@
 				26AC446429112D5D00B86B1E /* CircularProgressView.swift */,
 				2696883028D47C4B002142BF /* PriceView.swift */,
 				261087632BD294E4008ED50B /* PurchaseView.swift */,
-				2696881828D477ED002142BF /* RootView.swift */,
+				2696881828D477ED002142BF /* MainView.swift */,
 				265733302907291700CE9A4C /* StateInfoFooterView.swift */,
 			);
 			path = Views;
@@ -317,7 +317,7 @@
 				261FC19F28B77720007B4A4E /* ElectricityPricesWatchApp.swift */,
 				26F28FDE2910781F00D42DFB /* HostSyncManager.swift */,
 				2696878F28D10112002142BF /* PriceView.swift */,
-				261FC1A128B77720007B4A4E /* RootView.swift */,
+				261FC1A128B77720007B4A4E /* MainView.swift */,
 				2696879128D1CD91002142BF /* SettingsView.swift */,
 				269687AA28D46FD7002142BF /* Resources */,
 				261FC1AB28B77721007B4A4E /* Preview Content */,
@@ -839,7 +839,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26AC447329126EFD00B86B1E /* RootView.swift in Sources */,
+				26AC447329126EFD00B86B1E /* MainView.swift in Sources */,
 				2612513B29127047003D9C15 /* SettingsView.swift in Sources */,
 				26F28FDF2910782000D42DFB /* HostSyncManager.swift in Sources */,
 				261FC1A028B77720007B4A4E /* ElectricityPricesWatchApp.swift in Sources */,
@@ -855,7 +855,7 @@
 				26E009632BB6CFF6004A7241 /* PriceLimitsSettingsView.swift in Sources */,
 				26FAB1592BDAD3D600C08FBB /* LogFileURL.swift in Sources */,
 				26D88F712BE4DDB700AE2534 /* MetadataPreview.swift in Sources */,
-				26AC447229126B6400B86B1E /* RootView.swift in Sources */,
+				26AC447229126B6400B86B1E /* MainView.swift in Sources */,
 				261087642BD294E5008ED50B /* PurchaseView.swift in Sources */,
 				26F28FDD2910778300D42DFB /* ShareLogsState.swift in Sources */,
 				265733312907291700CE9A4C /* StateInfoFooterView.swift in Sources */,

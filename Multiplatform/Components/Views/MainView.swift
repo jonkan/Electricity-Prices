@@ -1,5 +1,5 @@
 //
-//  RootView.swift
+//  MainView.swift
 //  EPWatch
 //
 //  Created by Jonas Bromö on 2022-09-16.
@@ -8,7 +8,7 @@
 import SwiftUI
 import EPWatchCore
 
-struct RootView: View {
+struct MainView: View {
 
     @EnvironmentObject private var state: AppState
     @State private var showsSettings: Bool = false
@@ -103,14 +103,14 @@ struct RootView: View {
 }
 
 #Preview {
-    RootView()
+    MainView()
         .environmentObject(AppState.mocked)
         .environmentObject(Store.mockedProVersion)
         .environmentObject(WatchSyncManager.mocked)
 }
 
 #Preview("Error") {
-    RootView()
+    MainView()
         .environmentObject(AppState.mockedWithError)
         .environmentObject(Store.mockedInitial)
         .environmentObject(WatchSyncManager.mocked)

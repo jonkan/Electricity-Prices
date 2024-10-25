@@ -9,7 +9,7 @@ import SwiftUI
 import EPWatchCore
 import Charts
 
-struct RootView: View {
+struct MainView: View {
 
     @EnvironmentObject private var state: AppState
 
@@ -84,11 +84,11 @@ struct RootView: View {
 }
 
 #Preview {
-    RootView()
+    MainView()
         .environmentObject(AppState.mocked)
 }
 
 #Preview("Error") {
-    RootView()
+    MainView()
         .environmentObject(AppState.mockedWithError)
 }

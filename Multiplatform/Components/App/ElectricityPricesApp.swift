@@ -36,7 +36,7 @@ struct ElectricityPricesApp: App {
 
     var body: some Scene {
         WindowGroup {
-            RootView()
+            MainView()
                 .environmentObject(appState)
                 .environmentObject(store)
                 .environmentObject(watchSyncManager)
