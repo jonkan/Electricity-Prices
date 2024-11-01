@@ -7,10 +7,12 @@
 
 import Foundation
 
-public struct CheapestHours {
+public struct CheapestHours: FormattablePrice {
+
     public let start: Date
     public let duration: Int
     public let price: Double
+    public let currency: Currency
 
     /// The end of the last price point.
     public var end: Date {
@@ -24,11 +26,12 @@ public struct CheapestHours {
     func includes(_ pricePoint: PricePoint) -> Bool {
         start <= pricePoint.date && pricePoint.date < end
     }
+
 }
 
-extension AppState {
+public extension AppState {
 
-    public var cheapestHours: CheapestHours {
+     var cheapestHours: CheapestHours? {
         let filteredPrices = prices.filterForViewMode(chartViewMode)
             .filter({ Calendar.current.startOfHour(for: .now) <= $0.date })
         return filteredPrices.cheapestHours(for: Int(cheapestHoursDuration))
@@ -36,9 +39,13 @@ extension AppState {
 
 }
 
-extension Array where Element == PricePoint {
+public extension Array where Element == PricePoint {
 
-    func cheapestHours(for duration: Int) -> CheapestHours {
+    func cheapestHours(for duration: Int) -> CheapestHours? {
+        guard count > 0 else {
+            return nil
+        }
+
         var minCost: Double = .greatestFiniteMagnitude
         var start: Date = .distantPast
         let length = Swift.max(0, count - duration)
@@ -57,7 +64,9 @@ extension Array where Element == PricePoint {
         return CheapestHours(
             start: start,
             duration: duration,
-            price: minCost
+            price: minCost / Double(duration),
+            currency: self[0].currency
         )
     }
+
 }

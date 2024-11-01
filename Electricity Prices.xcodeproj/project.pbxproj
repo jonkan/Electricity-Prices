@@ -29,6 +29,7 @@
 		2696881728D477ED002142BF /* ElectricityPricesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696881628D477ED002142BF /* ElectricityPricesApp.swift */; };
 		2696883128D47C4B002142BF /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696883028D47C4B002142BF /* PriceView.swift */; };
 		2696883428D4801F002142BF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696883228D47F3B002142BF /* SettingsView.swift */; };
+		26A2238F2CD52205005FA049 /* CheapestHoursView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A2238E2CD52205005FA049 /* CheapestHoursView.swift */; };
 		26A2C6242AC6C28000DDEBD5 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 26A2C6232AC6C28000DDEBD5 /* Localizable.xcstrings */; };
 		26A2C6252AC6C28000DDEBD5 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 26A2C6232AC6C28000DDEBD5 /* Localizable.xcstrings */; };
 		26A2C6262AC6C28000DDEBD5 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 26A2C6232AC6C28000DDEBD5 /* Localizable.xcstrings */; };
@@ -174,6 +175,7 @@
 		2696882428D47888002142BF /* Multiplatform.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Multiplatform.entitlements; sourceTree = "<group>"; };
 		2696883028D47C4B002142BF /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 		2696883228D47F3B002142BF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		26A2238E2CD52205005FA049 /* CheapestHoursView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheapestHoursView.swift; sourceTree = "<group>"; };
 		26A2C6232AC6C28000DDEBD5 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		26A2C6282AC6C28000DDEBD5 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		26A2C62D2AC6C60600DDEBD5 /* WatchSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSyncManager.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 				261087632BD294E4008ED50B /* PurchaseView.swift */,
 				2696881828D477ED002142BF /* MainView.swift */,
 				265733302907291700CE9A4C /* StateInfoFooterView.swift */,
+				26A2238E2CD52205005FA049 /* CheapestHoursView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -855,6 +858,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26A2238F2CD52205005FA049 /* CheapestHoursView.swift in Sources */,
 				26A2C62E2AC6C60600DDEBD5 /* WatchSyncManager.swift in Sources */,
 				26E009632BB6CFF6004A7241 /* PriceLimitsSettingsView.swift in Sources */,
 				26FAB1592BDAD3D600C08FBB /* LogFileURL.swift in Sources */,

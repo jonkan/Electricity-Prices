@@ -611,16 +611,6 @@
         }
       }
     },
-    "%@ to %@ (%lld hours)" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@ to %2$@ (%3$lld hours)"
-          }
-        }
-      }
-    },
     "%lld log files" : {
       "localizations" : {
         "bg" : {
@@ -1361,6 +1351,46 @@
         }
       }
     },
+    "Average price for the %lld cheapest upcoming hours." : {
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Average price for the cheapest upcoming hour."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "new",
+                  "value" : "Average price for the %lld cheapest upcoming hours."
+                }
+              }
+            }
+          }
+        },
+        "sv" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Genomsnittspris för den billigaste kommande timmen."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Genomsnittspris för de %lld billigaste kommande timmarna."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "Calculation" : {
       "localizations" : {
         "bg" : {
@@ -1953,8 +1983,85 @@
         }
       }
     },
-    "Cheapest hours" : {
-
+    "Cheapest %lld hours" : {
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Cheapest hour"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "new",
+                  "value" : "Cheapest %lld hours"
+                }
+              }
+            }
+          }
+        },
+        "sv" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Billigaste timmen"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Billigaste %lld timmarna"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Cheapest %lld hours, %@" : {
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Cheapest hour, %2$@"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "new",
+                  "value" : "Cheapest %1$lld hours, %2$@"
+                }
+              }
+            }
+          }
+        },
+        "sv" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Billigaste timmen, %2$@"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Billigaste %1$lld timmarna, %2$@"
+                }
+              }
+            }
+          }
+        }
+      }
     },
     "Clamp negative prices" : {
       "localizations" : {
@@ -4765,6 +4872,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Високий"
+          }
+        }
+      }
+    },
+    "Insights" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insikter"
           }
         }
       }

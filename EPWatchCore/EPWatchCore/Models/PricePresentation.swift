@@ -1,11 +1,16 @@
 //
 //  PricePresentation.swift
-//  
+//
 //
 //  Created by Jonas Bromö on 2022-12-08.
 //
 
 import Foundation
+
+public protocol FormattablePrice {
+    var price: Double { get }
+    var currency: Currency { get }
+}
 
 public struct PricePresentation: Codable, Equatable {
 
@@ -21,10 +26,10 @@ public struct PricePresentation: Codable, Equatable {
     }
 
     public func formattedPrice(
-        _ pricePoint: PricePoint,
+        _ formattablePrice: FormattablePrice,
         style: FormattingStyle
     ) -> String {
-        return formattedPrice(pricePoint.price, in: pricePoint.currency, style: style)
+        return formattedPrice(formattablePrice.price, in: formattablePrice.currency, style: style)
     }
 
     public func formattedPrice(

@@ -12,8 +12,8 @@ import WidgetKit
 // swiftlint:disable type_body_length
 public struct PriceChartView: View {
 
-    @Environment(\.widgetRenderingMode) private var widgetRenderingMode
-    @Environment(\.widgetFamily) private var widgetFamily
+    @Environment(\.widgetRenderingMode) private var widgetRenderingMode: WidgetRenderingMode
+    @Environment(\.widgetFamily) private var widgetFamily: WidgetFamily
 
     let currentPrice: PricePoint
     let prices: [PricePoint]
@@ -32,7 +32,7 @@ public struct PriceChartView: View {
     }
 
     public init(
-        selectedPrice: Binding<PricePoint?>,
+        selectedPrice: Binding<PricePoint?> = .constant(nil),
         currentPrice: PricePoint,
         prices: [PricePoint],
         limits: PriceLimits,
@@ -371,8 +371,7 @@ private struct PriceChartViewPreview: View {
             Section {
                 ForEach(PriceChartStyle.allCases) { style in
                     PriceChartView(
-                        selectedPrice: .constant(nil),
-                        currentPrice: [PricePoint].mockPricesWithTomorrow[21],
+                        currentPrice: prices[21],
                         prices: prices,
                         limits: .mockLimits,
                         pricePresentation: .init(),

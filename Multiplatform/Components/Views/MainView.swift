@@ -16,7 +16,8 @@ struct MainView: View {
     var body: some View {
         NavigationStack {
             List {
-                if let currentPrice = state.currentPrice {
+                if let currentPrice = state.currentPrice,
+                   let cheapestHours = state.cheapestHours {
                     Section {
                         PriceView(
                             currentPrice: currentPrice,
@@ -24,7 +25,7 @@ struct MainView: View {
                             limits: state.priceLimits,
                             pricePresentation: state.pricePresentation,
                             chartStyle: state.chartStyle,
-                            cheapestHours: state.cheapestHours
+                            cheapestHours: cheapestHours
                         )
                         .frame(minHeight: 200)
                     } footer: {
@@ -35,13 +36,10 @@ struct MainView: View {
                             hideWithoutTaxesOrFeesDisclamer: state.pricePresentation.adjustment.isEnabled
                         )
                     }
-                    Section {
-                        Text("\(state.cheapestHours.start.formatted(date: .omitted, time: .shortened)) to \(state.cheapestHours.end.formatted(date: .omitted, time: .shortened)) (\(state.cheapestHours.duration) hours)")
-                        Slider(value: $state.cheapestHoursDuration, in: 1...10, step: 1)
-                    } header: {
-                        Text("Cheapest hours")
-                            .textCase(nil)
-                    }
+                    insightsSection(
+                        currentPrice: currentPrice,
+                        cheapestHours: cheapestHours
+                    )
                 } else if state.isFetching {
                     VStack {
                         ProgressView("Fetching prices...")
@@ -83,6 +81,43 @@ struct MainView: View {
                     LogError(error)
                 }
             }
+        }
+    }
+
+    private func insightsSection(
+        currentPrice: PricePoint,
+        cheapestHours: CheapestHours
+    ) -> some View {
+        Section {
+            NavigationLink {
+                CheapestHoursView(
+                    currentPrice: currentPrice,
+                    prices: state.prices.filterForViewMode(state.chartViewMode),
+                    limits: state.priceLimits,
+                    pricePresentation: state.pricePresentation,
+                    chartStyle: state.chartStyle,
+                    cheapestHours: cheapestHours,
+                    cheapestHoursDuration: state.$cheapestHoursDuration
+                )
+            } label: {
+                VStack(alignment: .leading) {
+                    let formattedPrice = state.pricePresentation.formattedPrice(
+                        cheapestHours,
+                        style: .normal
+                    )
+                    Text("Cheapest \(cheapestHours.duration) hours, \(formattedPrice)")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                    DateIntervalText(
+                        cheapestHours.start,
+                        duration: (cheapestHours.duration, .hour),
+                        style: .normal
+                    )
+                }
+            }
+        } header: {
+            Text("Insights")
+                .textCase(nil)
         }
     }
 

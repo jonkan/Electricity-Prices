@@ -8,7 +8,7 @@
 import Foundation
 
 // swiftlint:disable line_length
-public struct PricePoint: Codable, Equatable {
+public struct PricePoint: Codable, Equatable, FormattablePrice {
     public let date: Date // And 1h forward
     public let price: Double
     public let dayPriceRange: ClosedRange<Double>
@@ -151,6 +151,57 @@ public extension Array where Element == PricePoint {
         PricePoint(date: "2022-11-29T20:00:00+0000", price: 3.5644134, dayPriceRange: 2.216994...5.421050, currency: .SEK),
         PricePoint(date: "2022-11-29T21:00:00+0000", price: 3.1428243, dayPriceRange: 2.216994...5.421050, currency: .SEK),
         PricePoint(date: "2022-11-29T22:00:00+0000", price: 2.8379646, dayPriceRange: 2.216994...5.421050, currency: .SEK)
+    ].shiftDatesToNow()
+
+    static let mockedPricesWithTomorrow2: [PricePoint] = [
+        PricePoint(date: "2024-11-04T23:00:00+0000", price: 0.2508225, dayPriceRange: 0.061715...2.513581, currency: .SEK),
+        PricePoint(date: "2024-11-05T00:00:00+0000", price: 0.0763879, dayPriceRange: 0.061715...2.513581, currency: .SEK),
+        PricePoint(date: "2024-11-05T01:00:00+0000", price: 0.0739425, dayPriceRange: 0.061715...2.513581, currency: .SEK),
+        PricePoint(date: "2024-11-05T02:00:00+0000", price: 0.0617158, dayPriceRange: 0.061715...2.513581, currency: .SEK),
+        PricePoint(date: "2024-11-05T03:00:00+0000", price: 0.0646269, dayPriceRange: 0.061715...2.513581, currency: .SEK),
+        PricePoint(date: "2024-11-05T04:00:00+0000", price: 0.4534368, dayPriceRange: 0.061715...2.513581, currency: .SEK),
+        PricePoint(date: "2024-11-05T05:00:00+0000", price: 0.9966527, dayPriceRange: 0.061715...2.513581, currency: .SEK),
+        PricePoint(date: "2024-11-05T06:00:00+0000", price: 1.4066556, dayPriceRange: 0.061715...2.513581, currency: .SEK),
+        PricePoint(date: "2024-11-05T07:00:00+0000", price: 1.3470357, dayPriceRange: 0.061715...2.513581, currency: .SEK),
+        PricePoint(date: "2024-11-05T08:00:00+0000", price: 1.1507094, dayPriceRange: 0.061715...2.513581, currency: .SEK),
+        PricePoint(date: "2024-11-05T09:00:00+0000", price: 1.0317027, dayPriceRange: 0.061715...2.513581, currency: .SEK),
+        PricePoint(date: "2024-11-05T10:00:00+0000", price: 0.9277173, dayPriceRange: 0.061715...2.513581, currency: .SEK),
+        PricePoint(date: "2024-11-05T11:00:00+0000", price: 0.9253884, dayPriceRange: 0.061715...2.513581, currency: .SEK),
+        PricePoint(date: "2024-11-05T12:00:00+0000", price: 0.9498418, dayPriceRange: 0.061715...2.513581, currency: .SEK),
+        PricePoint(date: "2024-11-05T13:00:00+0000", price: 1.0424156, dayPriceRange: 0.061715...2.513581, currency: .SEK),
+        PricePoint(date: "2024-11-05T14:00:00+0000", price: 1.2593526, dayPriceRange: 0.061715...2.513581, currency: .SEK),
+        PricePoint(date: "2024-11-05T15:00:00+0000", price: 1.8171242, dayPriceRange: 0.061715...2.513581, currency: .SEK),
+        PricePoint(date: "2024-11-05T16:00:00+0000", price: 2.5135817, dayPriceRange: 0.061715...2.513581, currency: .SEK),
+        PricePoint(date: "2024-11-05T17:00:00+0000", price: 1.8205011, dayPriceRange: 0.061715...2.513581, currency: .SEK),
+        PricePoint(date: "2024-11-05T18:00:00+0000", price: 1.0121399, dayPriceRange: 0.061715...2.513581, currency: .SEK),
+        PricePoint(date: "2024-11-05T19:00:00+0000", price: 0.8358422, dayPriceRange: 0.061715...2.513581, currency: .SEK),
+        PricePoint(date: "2024-11-05T20:00:00+0000", price: 0.7964838, dayPriceRange: 0.061715...2.513581, currency: .SEK),
+        PricePoint(date: "2024-11-05T21:00:00+0000", price: 0.5224887, dayPriceRange: 0.061715...2.513581, currency: .SEK),
+        PricePoint(date: "2024-11-05T22:00:00+0000", price: 0.2892493, dayPriceRange: 0.061715...2.513581, currency: .SEK),
+        PricePoint(date: "2024-11-05T23:00:00+0000", price: 0.1264592, dayPriceRange: 0.073942...2.362785, currency: .SEK),
+        PricePoint(date: "2024-11-06T00:00:00+0000", price: 0.0739425, dayPriceRange: 0.073942...2.362785, currency: .SEK),
+        PricePoint(date: "2024-11-06T01:00:00+0000", price: 0.0782510, dayPriceRange: 0.073942...2.362785, currency: .SEK),
+        PricePoint(date: "2024-11-06T02:00:00+0000", price: 0.0922244, dayPriceRange: 0.073942...2.362785, currency: .SEK),
+        PricePoint(date: "2024-11-06T03:00:00+0000", price: 0.0989782, dayPriceRange: 0.073942...2.362785, currency: .SEK),
+        PricePoint(date: "2024-11-06T04:00:00+0000", price: 0.4467994, dayPriceRange: 0.073942...2.362785, currency: .SEK),
+        PricePoint(date: "2024-11-06T05:00:00+0000", price: 0.6404475, dayPriceRange: 0.073942...2.362785, currency: .SEK),
+        PricePoint(date: "2024-11-06T06:00:00+0000", price: 1.8175900, dayPriceRange: 0.073942...2.362785, currency: .SEK),
+        PricePoint(date: "2024-11-06T07:00:00+0000", price: 1.7202419, dayPriceRange: 0.073942...2.362785, currency: .SEK),
+        PricePoint(date: "2024-11-06T08:00:00+0000", price: 1.2964986, dayPriceRange: 0.073942...2.362785, currency: .SEK),
+        PricePoint(date: "2024-11-06T09:00:00+0000", price: 1.0974941, dayPriceRange: 0.073942...2.362785, currency: .SEK),
+        PricePoint(date: "2024-11-06T10:00:00+0000", price: 0.9018665, dayPriceRange: 0.073942...2.362785, currency: .SEK),
+        PricePoint(date: "2024-11-06T11:00:00+0000", price: 0.9584587, dayPriceRange: 0.073942...2.362785, currency: .SEK),
+        PricePoint(date: "2024-11-06T12:00:00+0000", price: 1.1847114, dayPriceRange: 0.073942...2.362785, currency: .SEK),
+        PricePoint(date: "2024-11-06T13:00:00+0000", price: 1.3055813, dayPriceRange: 0.073942...2.362785, currency: .SEK),
+        PricePoint(date: "2024-11-06T14:00:00+0000", price: 1.3832501, dayPriceRange: 0.073942...2.362785, currency: .SEK),
+        PricePoint(date: "2024-11-06T15:00:00+0000", price: 1.3646189, dayPriceRange: 0.073942...2.362785, currency: .SEK),
+        PricePoint(date: "2024-11-06T16:00:00+0000", price: 2.3627854, dayPriceRange: 0.073942...2.362785, currency: .SEK),
+        PricePoint(date: "2024-11-06T17:00:00+0000", price: 1.4795501, dayPriceRange: 0.073942...2.362785, currency: .SEK),
+        PricePoint(date: "2024-11-06T18:00:00+0000", price: 1.0809589, dayPriceRange: 0.073942...2.362785, currency: .SEK),
+        PricePoint(date: "2024-11-06T19:00:00+0000", price: 0.7156709, dayPriceRange: 0.073942...2.362785, currency: .SEK),
+        PricePoint(date: "2024-11-06T20:00:00+0000", price: 0.5822250, dayPriceRange: 0.073942...2.362785, currency: .SEK),
+        PricePoint(date: "2024-11-06T21:00:00+0000", price: 0.5222558, dayPriceRange: 0.073942...2.362785, currency: .SEK),
+        PricePoint(date: "2024-11-06T22:00:00+0000", price: 0.2502403, dayPriceRange: 0.073942...2.362785, currency: .SEK)
     ].shiftDatesToNow()
 
     func price(for date: Date) -> PricePoint? {
