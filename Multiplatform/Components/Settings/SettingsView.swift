@@ -14,6 +14,7 @@ struct SettingsView: View {
     @EnvironmentObject private var store: Store
     @EnvironmentObject private var watchSyncManager: WatchSyncManager
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.openURL) private var openURL
     @State private var isShowingPurchaseView: Bool = false
 
     var body: some View {
@@ -102,6 +103,11 @@ struct SettingsView: View {
                             Text("Unlock Pro")
                         }
                     }
+                } else {
+                    Button("Rate This App") {
+                        let writeReviewURL = URL(string: "https://apps.apple.com/app/id1644399828?action=write-review")!
+                        openURL(writeReviewURL)
+                    }
                 }
                 Section {
                     NavigationLink {
@@ -151,13 +157,20 @@ struct SettingsView: View {
 
 }
 
-struct SettingsView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationStack {
-            SettingsView()
-        }
-        .environmentObject(AppState.mocked)
-        .environmentObject(Store.mockedInitial)
-        .environmentObject(WatchSyncManager.mocked)
+#Preview {
+    NavigationStack {
+        SettingsView()
     }
+    .environmentObject(AppState.mocked)
+    .environmentObject(Store.mockedInitial)
+    .environmentObject(WatchSyncManager.mocked)
+}
+
+#Preview("Pro") {
+    NavigationStack {
+        SettingsView()
+    }
+    .environmentObject(AppState.mocked)
+    .environmentObject(Store.mockedProVersion)
+    .environmentObject(WatchSyncManager.mocked)
 }
