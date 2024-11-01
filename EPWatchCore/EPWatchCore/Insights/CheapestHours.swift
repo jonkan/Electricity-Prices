@@ -41,8 +41,9 @@ extension Array where Element == PricePoint {
     func cheapestHours(for duration: Int) -> CheapestHours {
         var minCost: Double = .greatestFiniteMagnitude
         var start: Date = .distantPast
+        let length = Swift.max(0, count - duration)
 
-        for i in 0...(count - duration) {
+        for i in 0...length {
             let cost = (0..<duration)
                 .map { self[i + $0].price }
                 .reduce(0, +)
