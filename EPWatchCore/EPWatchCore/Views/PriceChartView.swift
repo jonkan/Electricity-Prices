@@ -22,7 +22,6 @@ public struct PriceChartView: View {
     let pricePresentation: PricePresentation
     let chartStyle: PriceChartStyle
     let useCurrencyAxisFormat: Bool
-    let isChartGestureEnabled: Bool
     let showPriceLimitsLines: Bool
     let cheapestHours: CheapestHours?
 
@@ -39,7 +38,6 @@ public struct PriceChartView: View {
         pricePresentation: PricePresentation,
         chartStyle: PriceChartStyle,
         useCurrencyAxisFormat: Bool = false,
-        isChartGestureEnabled: Bool = true,
         showPriceLimitsLines: Bool = false,
         cheapestHours: CheapestHours? = nil
     ) {
@@ -51,7 +49,6 @@ public struct PriceChartView: View {
         self.pricePresentation = pricePresentation
         self.chartStyle = chartStyle
         self.useCurrencyAxisFormat = useCurrencyAxisFormat
-        self.isChartGestureEnabled = isChartGestureEnabled
         self.showPriceLimitsLines = showPriceLimitsLines
         self.cheapestHours = cheapestHours
     }
@@ -292,10 +289,7 @@ public struct PriceChartView: View {
     private func chartGestureOverlay(chart: ChartProxy, geometry: GeometryProxy) -> some View {
         Color.clear
             .contentShape(Rectangle())
-            .gesture(
-                dragGesture(chart: chart, geometry: geometry),
-                including: isChartGestureEnabled ? .all : .subviews
-            )
+            .gesture(dragGesture(chart: chart, geometry: geometry))
     }
 
     private func dragGesture(chart: ChartProxy, geometry: GeometryProxy) -> some Gesture {
@@ -376,7 +370,6 @@ private struct PriceChartViewPreview: View {
                         limits: .mockLimits,
                         pricePresentation: .init(),
                         chartStyle: style,
-                        isChartGestureEnabled: true,
                         showPriceLimitsLines: false,
                         cheapestHours: prices.cheapestHours(for: 4)
                     )

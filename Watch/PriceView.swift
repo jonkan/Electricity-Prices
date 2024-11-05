@@ -59,9 +59,9 @@ struct PriceView: View {
                 limits: limits,
                 pricePresentation: pricePresentation,
                 chartStyle: chartStyle,
-                useCurrencyAxisFormat: true,
-                isChartGestureEnabled: false
+                useCurrencyAxisFormat: true
             )
+            .disabled(true)
             .focusable()
             .digitalCrownRotation(
                 detent: $crownValue,
