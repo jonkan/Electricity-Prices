@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct ExchangeRate: Codable, Equatable {
+public struct ExchangeRate: Codable, Equatable, Sendable {
     static private let dateFormatter: DateFormatter = {
         let df = DateFormatter()
         df.dateFormat = "yyyy-MM-dd"

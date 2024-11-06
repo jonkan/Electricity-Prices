@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public enum PriceChartStyle: String, Codable, CaseIterable, Identifiable, Equatable {
+public enum PriceChartStyle: String, Codable, CaseIterable, Identifiable, Equatable, Sendable {
     case bar
     case line
     case lineInterpolated

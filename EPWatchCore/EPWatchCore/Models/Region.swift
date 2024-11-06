@@ -8,7 +8,7 @@
 import Foundation
 
 // swiftlint:disable type_body_length file_length line_length
-public enum Region: String, Codable, CaseIterable, Identifiable, Equatable {
+public enum Region: String, Codable, CaseIterable, Identifiable, Equatable, Sendable {
 
     case albania        // Albania (AL)
     case austria        // Austria (AT)

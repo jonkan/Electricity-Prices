@@ -9,7 +9,7 @@ import Foundation
 
 public let EncodedAppStateApplicationContextKey = "EncodedAppStateDTO"
 
-public struct AppStateDTO: Codable, Equatable {
+public struct AppStateDTO: Codable, Equatable, Sendable {
     let prices: [PricePoint]
     let region: Region?
     let priceArea: PriceArea?

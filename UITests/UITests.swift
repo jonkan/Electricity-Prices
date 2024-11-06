@@ -9,13 +9,14 @@ import XCTest
 
 final class ElectricityPricesUITests: XCTestCase {
 
-    @MainActor
     override func setUpWithError() throws {
         continueAfterFailure = false
 
-        let app = XCUIApplication()
-        setupSnapshot(app)
-        app.launch()
+        Task { @MainActor in
+            let app = XCUIApplication()
+            setupSnapshot(app)
+            app.launch()
+        }
     }
 
     @MainActor

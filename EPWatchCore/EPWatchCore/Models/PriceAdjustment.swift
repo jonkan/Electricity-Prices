@@ -7,9 +7,9 @@
 
 import Foundation
 
-public struct PriceAdjustment: Codable, Equatable {
+public struct PriceAdjustment: Codable, Equatable, Sendable {
 
-    public struct Addend: Codable, Equatable, Identifiable {
+    public struct Addend: Codable, Equatable, Identifiable, Sendable {
         public var id: Int
         public var title: String = ""
         public var value: Double = 0

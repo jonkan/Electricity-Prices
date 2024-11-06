@@ -14,6 +14,7 @@ import Combine
 @MainActor
 class ShareLogsState: ObservableObject {
 
+    nonisolated
     static let logsTempDirectoryURL = FileManager.default.temporaryDirectory
         .appending(path: "logs", directoryHint: .isDirectory)
 

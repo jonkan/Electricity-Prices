@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum CurrencyPresentation: String, Codable, CaseIterable, Identifiable, Equatable {
+public enum CurrencyPresentation: String, Codable, CaseIterable, Identifiable, Equatable, Sendable {
     case automatic
     case subdivided
 

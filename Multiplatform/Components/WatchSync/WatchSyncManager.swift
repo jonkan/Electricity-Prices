@@ -322,12 +322,13 @@ class WatchSyncManager: NSObject, ObservableObject {
 }
 
 extension WatchSyncManager: WCSessionDelegate {
-    func session(
+    nonisolated func session(
         _ session: WCSession,
         activationDidCompleteWith activationState: WCSessionActivationState,
         error: Error?
     ) {
-        Task {
+        let isWatchAppInstalled = session.isWatchAppInstalled
+        Task { @MainActor in
             Log("Session activation state: \(activationState.description)")
             timeoutHandler.cancel()
 
@@ -335,7 +336,7 @@ extension WatchSyncManager: WCSessionDelegate {
                 resumeActivation(throwing: .watchActivationFailed)
                 return
             }
-            guard session.isWatchAppInstalled else {
+            guard isWatchAppInstalled else {
                 resumeActivation(throwing: .watchAppNotInstalled)
                 return
             }
@@ -343,43 +344,43 @@ extension WatchSyncManager: WCSessionDelegate {
         }
     }
 
-    func sessionDidBecomeInactive(_ session: WCSession) {
-        Task {
+    nonisolated func sessionDidBecomeInactive(_ session: WCSession) {
+        Task { @MainActor in
             Log("Session did become inactive")
             timeoutHandler.fireNow()
             syncState = .notReady
         }
     }
 
-    func sessionDidDeactivate(_ session: WCSession) {
-        Task {
+    nonisolated func sessionDidDeactivate(_ session: WCSession) {
+        Task { @MainActor in
             Log("Session did deactivate")
             timeoutHandler.fireNow()
             syncState = .notReady
         }
     }
 
-    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String: Any]) {
-        Task {
-            guard isAppContextSyncEnabled else {
-                Log("Session did receive application context (sync disabled)")
-                return
+    nonisolated func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String: Any]) {
+        Log("Session did receive application context")
+        do {
+            guard let appStateDTO = try AppStateDTO.decode(from: applicationContext) else {
+                throw NSError(0, "Missing appStateDTO from applicationContext")
             }
-            Log("Session did receive application context")
-            do {
-                guard let appStateDTO = try AppStateDTO.decode(from: applicationContext) else {
-                    throw NSError(0, "Missing appStateDTO from applicationContext")
+            Task { @MainActor in
+                guard isAppContextSyncEnabled else {
+                    Log("Session did receive application context (sync disabled)")
+                    return
                 }
                 lastReceivedAppStateDTO = appStateDTO
                 appState.update(from: appStateDTO)
                 Log("Success updating app state")
-            } catch {
-                LogError("Failed to update app state: \(error)")
             }
+        } catch {
+            LogError("Failed to update app state: \(error)")
         }
     }
 
-    func session(_ session: WCSession, didReceive file: WCSessionFile) {
+    nonisolated func session(_ session: WCSession, didReceive file: WCSessionFile) {
         // The file needs to be copied synchronously, otherwise it might already be deleted.
         Log("Did receive file: \(file.fileURL.lastPathComponent)")
         do {
@@ -389,7 +390,7 @@ extension WatchSyncManager: WCSessionDelegate {
         } catch {
             LogError(error)
         }
-        Task {
+        Task { @MainActor in
             guard case .waitingForWatchToSendLogs(var count) = syncState else {
                 LogError("Unexpected state not .waitingForWatchToSendLogs")
                 return

@@ -12,7 +12,7 @@ public protocol FormattablePrice {
     var currency: Currency { get }
 }
 
-public struct PricePresentation: Codable, Equatable {
+public struct PricePresentation: Codable, Equatable, Sendable {
 
     public var currencyPresentation: CurrencyPresentation
     public var adjustment: PriceAdjustment

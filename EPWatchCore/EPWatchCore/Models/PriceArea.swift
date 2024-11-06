@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct PriceArea: Codable, Identifiable, Equatable {
+public struct PriceArea: Codable, Identifiable, Equatable, Sendable {
     public let title: String
     public let id: String
     public let code: String

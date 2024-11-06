@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-public struct PriceLimits: Codable, Equatable {
+public struct PriceLimits: Codable, Equatable, Sendable {
     public let currency: Currency
     public var high: Double
     public var low: Double

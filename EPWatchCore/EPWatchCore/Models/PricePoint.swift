@@ -8,7 +8,7 @@
 import Foundation
 
 // swiftlint:disable line_length
-public struct PricePoint: Codable, Equatable, FormattablePrice {
+public struct PricePoint: Codable, Equatable, FormattablePrice, Sendable {
     public let date: Date // And 1h forward
     public let price: Double
     public let dayPriceRange: ClosedRange<Double>
