@@ -58,28 +58,25 @@ class HostSyncManager: NSObject, ObservableObject {
         let children = WCSession.default.outstandingFileTransfers.map({ $0.progress })
         let overallProgress = Progress(totalUnitCount: Int64(children.count))
         children.forEach({ overallProgress.addChild($0, withPendingUnitCount: 1) })
-        Task {
-            logFilesTransferProgress = overallProgress
-        }
+
+        logFilesTransferProgress = overallProgress
 
         return logFileURLs.map({ $0.lastPathComponent })
     }
 
     private func syncAppContext() {
-        Task {
-            do {
-                let appStateDTO = appState.toDTO()
-                if appStateDTO != lastReceivedAppStateDTO {
-                    let context = try appStateDTO.encodeToApplicationContext()
-                    try WCSession.default.updateApplicationContext(context)
-                    lastReceivedAppStateDTO = nil
-                    Log("Success updating application context")
-                } else {
-                    Log("App state not changed since last received, skipping sync")
-                }
-            } catch {
-                LogError(error)
+        do {
+            let appStateDTO = appState.toDTO()
+            if appStateDTO != lastReceivedAppStateDTO {
+                let context = try appStateDTO.encodeToApplicationContext()
+                try WCSession.default.updateApplicationContext(context)
+                lastReceivedAppStateDTO = nil
+                Log("Success updating application context")
+            } else {
+                Log("App state not changed since last received, skipping sync")
             }
+        } catch {
+            LogError(error)
         }
     }
 
