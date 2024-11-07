@@ -85,8 +85,8 @@ class HostSyncManager: NSObject, ObservableObject {
 
 }
 
-extension HostSyncManager: WCSessionDelegate {
-    func session(
+extension HostSyncManager: @preconcurrency WCSessionDelegate {
+    nonisolated func session(
         _ session: WCSession,
         activationDidCompleteWith activationState: WCSessionActivationState,
         error: Error?
@@ -101,12 +101,14 @@ extension HostSyncManager: WCSessionDelegate {
     ) {
         Log("Did receive message: \(message)")
         if message.keys.contains("sendLogs") {
-            do {
-                let logFileNames = try sendLogs()
-                replyHandler(["logs": logFileNames])
-            } catch {
-                LogError(error)
-                replyHandler(["error": error])
+            Task { @MainActor in
+                do {
+                    let logFileNames = try sendLogs()
+                    replyHandler(["logs": logFileNames])
+                } catch {
+                    LogError(error)
+                    replyHandler(["error": error])
+                }
             }
         } else if message.keys.contains("cancelFileTransfers") {
             let transfers = WCSession.default.outstandingFileTransfers
@@ -117,22 +119,22 @@ extension HostSyncManager: WCSessionDelegate {
         }
     }
 
-    func session(
+    nonisolated func session(
         _ session: WCSession,
         didReceiveApplicationContext applicationContext: [String: Any]
     ) {
-        Task {
-            Log("Session did receive application context")
-            do {
-                guard let appStateDTO = try AppStateDTO.decode(from: applicationContext) else {
-                    throw NSError(0, "Missing appStateDTO from applicationContext")
-                }
+        Log("Session did receive application context")
+        do {
+            guard let appStateDTO = try AppStateDTO.decode(from: applicationContext) else {
+                throw NSError(0, "Missing appStateDTO from applicationContext")
+            }
+            Task { @MainActor in
                 lastReceivedAppStateDTO = appStateDTO
                 appState.update(from: appStateDTO)
                 Log("Success updating app state")
-            } catch {
-                LogError("Failed to update app state: \(error)")
             }
+        } catch {
+            LogError("Failed to update app state: \(error)")
         }
     }
 
