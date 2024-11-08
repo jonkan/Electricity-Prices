@@ -9,6 +9,7 @@ import SwiftUI
 import Charts
 import WidgetKit
 
+// swiftlint:disable type_body_length
 public struct PriceChartView: View {
 
     @Environment(\.widgetRenderingMode) private var widgetRenderingMode: WidgetRenderingMode
@@ -24,6 +25,10 @@ public struct PriceChartView: View {
     let showPriceLimitsLines: Bool
     let cheapestHours: CheapestHours?
     let minHeight: CGFloat?
+
+    private let selectedPriceColor: Color = .gray.opacity(0.3)
+    private let cheapestHoursColor: Color = .purple.opacity(0.3)
+    private let cheapestHoursColorDarkened: Color = .purple.opacity(0.5)
 
     @Binding var selectedPrice: PricePoint?
     var displayedPrice: PricePoint {
@@ -107,7 +112,20 @@ public struct PriceChartView: View {
                 let hourCenterDate = displayedPrice.date.addingTimeInterval(30*60)
                 currentPricePointMark(hourCenterDate)
             }
+            cheapestHoursRectangleMark
             priceLimitLines
+        }
+    }
+
+    @ChartContentBuilder
+    private var cheapestHoursRectangleMark: some ChartContent {
+        if let cheapestHours {
+            RectangleMark(
+                xStart: .value("", cheapestHours.start),
+                xEnd: .value("", cheapestHours.end)
+            )
+            .foregroundStyle(cheapestHoursColor)
+            .cornerRadius(4)
         }
     }
 
@@ -169,11 +187,11 @@ public struct PriceChartView: View {
     private func barColor(for pricePoint: PricePoint) -> Color {
         var color: Color
         if cheapestHours?.includes(pricePoint) == true {
-            color = .purple.opacity(0.5)
+            color = cheapestHoursColorDarkened
         } else {
             color = limits.color(of: pricePoint.price)
         }
-        if pricePoint == displayedPrice, #available(iOS 18.0, *) {
+        if pricePoint == displayedPrice, #available(iOS 18.0, *), #available(watchOS 11.0, *) {
             color = color.mix(with: .black, by: 0.3)
         }
         return color
@@ -185,7 +203,7 @@ public struct PriceChartView: View {
             width: .fixed(barWidth)
         )
         .offset(x: barWidth / 2)
-        .foregroundStyle(.gray.opacity(0.3))
+        .foregroundStyle(selectedPriceColor)
     }
 
     @ChartContentBuilder
@@ -198,7 +216,7 @@ public struct PriceChartView: View {
                 )
                 .offset(x: barWidth / 2)
             }
-            .foregroundStyle(.purple.opacity(0.3))
+            .foregroundStyle(cheapestHoursColor)
         }
     }
 
@@ -284,27 +302,35 @@ public struct PriceChartView: View {
 
 // MARK: - Preview
 
-@available(iOS 17, *)
+@available(iOS 17, watchOS 10, *)
 #Preview {
     @Previewable @State var selectedPrice: PricePoint?
     @Previewable @State var viewMode: PriceChartViewMode = .todayAndComingNight
 
     let prices: [PricePoint] = .mockedPricesWithTomorrow2.filterForViewMode(viewMode)
+    let currentPrice = prices[21]
+
     List {
         Section {
-            ForEach(PriceChartStyle.allCases) { style in
-                PriceChartView(
-                    selectedPrice: $selectedPrice,
-                    currentPrice: prices[21],
-                    prices: prices,
-                    limits: .mocked,
-                    pricePresentation: .mocked,
-                    chartStyle: style,
-                    showPriceLimitsLines: false,
-                    cheapestHours: prices.cheapestHours(for: 4),
-                    minHeight: 130
+            VStack {
+                Text(
+                    selectedPrice?.date ?? currentPrice.date,
+                    format: .dateTime.hour(.twoDigits(amPM: .abbreviated))
                 )
-                .padding(.vertical)
+                ForEach(PriceChartStyle.allCases) { style in
+                    PriceChartView(
+                        selectedPrice: $selectedPrice,
+                        currentPrice: currentPrice,
+                        prices: prices,
+                        limits: .mocked,
+                        pricePresentation: .mocked,
+                        chartStyle: style,
+                        showPriceLimitsLines: false,
+                        cheapestHours: prices.cheapestHours(for: 4),
+                        minHeight: 130
+                    )
+                    .padding(.vertical)
+                }
             }
         } header: {
             Picker(selection: $viewMode) {
