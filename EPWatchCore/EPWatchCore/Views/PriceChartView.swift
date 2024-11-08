@@ -158,16 +158,25 @@ public struct PriceChartView: View {
                     width: .fixed(barWidth)
                 )
                 .offset(x: barWidth / 2)
-                .foregroundStyle(
-                    cheapestHours?.includes(p) == true
-                    ? .purple.opacity(0.5)
-                    : limits.color(of: p.price)
-                )
+                .foregroundStyle(barColor(for: p))
             }
 
             priceLimitLines
         }
         .chartXScale(range: .plotDimension(endPadding: barWidth))
+    }
+
+    private func barColor(for pricePoint: PricePoint) -> Color {
+        var color: Color
+        if cheapestHours?.includes(pricePoint) == true {
+            color = .purple.opacity(0.5)
+        } else {
+            color = limits.color(of: pricePoint.price)
+        }
+        if pricePoint == displayedPrice, #available(iOS 18.0, *) {
+            color = color.mix(with: .black, by: 0.3)
+        }
+        return color
     }
 
     private func currentPriceBarMark(barWidth: CGFloat) -> some ChartContent {
@@ -275,43 +284,40 @@ public struct PriceChartView: View {
 
 // MARK: - Preview
 
-private struct PriceChartViewPreview: View {
-    @State var viewMode: PriceChartViewMode = .todayAndComingNight
+@available(iOS 17, *)
+#Preview {
+    @Previewable @State var selectedPrice: PricePoint?
+    @Previewable @State var viewMode: PriceChartViewMode = .todayAndComingNight
 
-    var body: some View {
-        let prices: [PricePoint] = .mockPricesWithTomorrow.filterForViewMode(viewMode)
-        List {
-            Section {
-                ForEach(PriceChartStyle.allCases) { style in
-                    PriceChartView(
-                        currentPrice: prices[21],
-                        prices: prices,
-                        limits: .mocked,
-                        pricePresentation: .init(),
-                        chartStyle: style,
-                        showPriceLimitsLines: false,
-                        cheapestHours: prices.cheapestHours(for: 4)
-                    )
-                }
-                .frame(minHeight: 150)
+    let prices: [PricePoint] = .mockedPricesWithTomorrow2.filterForViewMode(viewMode)
+    List {
+        Section {
+            ForEach(PriceChartStyle.allCases) { style in
+                PriceChartView(
+                    selectedPrice: $selectedPrice,
+                    currentPrice: prices[21],
+                    prices: prices,
+                    limits: .mocked,
+                    pricePresentation: .mocked,
+                    chartStyle: style,
+                    showPriceLimitsLines: false,
+                    cheapestHours: prices.cheapestHours(for: 4),
+                    minHeight: 130
+                )
                 .padding(.vertical)
-            } header: {
-                Picker(selection: $viewMode) {
-                    ForEach(PriceChartViewMode.allCases) {
-                        Text($0.title)
-                            .tag($0)
-                    }
-                } label: {
-                    EmptyView()
-                }
-#if !os(watchOS)
-                .pickerStyle(.segmented)
-#endif
             }
+        } header: {
+            Picker(selection: $viewMode) {
+                ForEach(PriceChartViewMode.allCases) {
+                    Text($0.title)
+                        .tag($0)
+                }
+            } label: {
+                EmptyView()
+            }
+    #if !os(watchOS)
+            .pickerStyle(.segmented)
+    #endif
         }
     }
-}
-
-#Preview {
-    PriceChartViewPreview()
 }
