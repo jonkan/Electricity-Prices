@@ -47,8 +47,7 @@ struct MainView: View {
 
     @ViewBuilder
     var tomorrowTab: some View {
-        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: .now)!
-        let tomorrowsPrices = state.prices.filterInSameDay(as: tomorrow)
+        let tomorrowsPrices = state.prices.filterInSameDay(as: .nowTomorrow())
         if tomorrowsPrices.count == 24 {
             PriceView(
                 currentPrice: tomorrowsPrices[0],

@@ -8,9 +8,9 @@
 import Foundation
 
 public struct PriceRange {
-    let max: Double
-    let min: Double
-    let mean: Double
+    public let max: Double
+    public let min: Double
+    public let mean: Double
 
     static let zero = PriceRange(max: 0, min: 0, mean: 0)
 }

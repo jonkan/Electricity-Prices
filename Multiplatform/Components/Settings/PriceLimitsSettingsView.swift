@@ -47,14 +47,14 @@ struct PriceLimitsSettingsView: View {
     }
 
     var highLabel: some View {
-        let label = Text("High", comment: "As in a high price").foregroundStyle(.secondary)
+        let label = Text("High limit", comment: "Title for the high price limit").foregroundStyle(.secondary)
         let value = pricePresentation.formattedPrice(editedLimits.high, in: editedLimits.currency, style: .normal)
         return Text("\(label) \(value)")
             .monospacedDigit()
     }
 
     var lowLabel: some View {
-        let label = Text("Low", comment: "As in a low price").foregroundStyle(.secondary)
+        let label = Text("Low limit", comment: "Title for the low price limit").foregroundStyle(.secondary)
         let value = pricePresentation.formattedPrice(editedLimits.low, in: editedLimits.currency, style: .normal)
         return Text("\(label) \(value)")
             .monospacedDigit()

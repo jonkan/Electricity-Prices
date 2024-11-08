@@ -44,6 +44,8 @@
 		26C082D0292576160065DEFE /* EPWatchCore in Frameworks */ = {isa = PBXBuildFile; productRef = 26C082CF292576160065DEFE /* EPWatchCore */; };
 		26C082D2292576200065DEFE /* EPWatchCore in Frameworks */ = {isa = PBXBuildFile; productRef = 26C082D1292576200065DEFE /* EPWatchCore */; };
 		26C082D4292576270065DEFE /* EPWatchCore in Frameworks */ = {isa = PBXBuildFile; productRef = 26C082D3292576270065DEFE /* EPWatchCore */; };
+		26CCD4182CDE199800B070BE /* PriceRangeInsightsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CCD4172CDE199800B070BE /* PriceRangeInsightsRow.swift */; };
+		26CCD41A2CDE21E100B070BE /* CheapestHoursRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CCD4192CDE21E100B070BE /* CheapestHoursRow.swift */; };
 		26D88F712BE4DDB700AE2534 /* MetadataPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D88F6D2BE4CE1B00AE2534 /* MetadataPreview.swift */; };
 		26DF95642ABD8207001636BA /* PriceAdjustmentSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DF95632ABD8207001636BA /* PriceAdjustmentSettingsView.swift */; };
 		26DF95682ABDC601001636BA /* TimeoutHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DF95672ABDC601001636BA /* TimeoutHandler.swift */; };
@@ -181,6 +183,8 @@
 		26A2C62D2AC6C60600DDEBD5 /* WatchSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSyncManager.swift; sourceTree = "<group>"; };
 		26AA88752925702300BA2B02 /* EPWatchCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = EPWatchCore; sourceTree = "<group>"; };
 		26AC446429112D5D00B86B1E /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		26CCD4172CDE199800B070BE /* PriceRangeInsightsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceRangeInsightsRow.swift; sourceTree = "<group>"; };
+		26CCD4192CDE21E100B070BE /* CheapestHoursRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheapestHoursRow.swift; sourceTree = "<group>"; };
 		26D88F6D2BE4CE1B00AE2534 /* MetadataPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataPreview.swift; sourceTree = "<group>"; };
 		26DF95632ABD8207001636BA /* PriceAdjustmentSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceAdjustmentSettingsView.swift; sourceTree = "<group>"; };
 		26DF95672ABDC601001636BA /* TimeoutHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeoutHandler.swift; sourceTree = "<group>"; };
@@ -276,6 +280,8 @@
 				2696881828D477ED002142BF /* MainView.swift */,
 				265733302907291700CE9A4C /* StateInfoFooterView.swift */,
 				26A2238E2CD52205005FA049 /* CheapestHoursView.swift */,
+				26CCD4172CDE199800B070BE /* PriceRangeInsightsRow.swift */,
+				26CCD4192CDE21E100B070BE /* CheapestHoursRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -872,7 +878,9 @@
 				261087622BD27788008ED50B /* Store.swift in Sources */,
 				26F28FDC2910778300D42DFB /* SupportSettingsView.swift in Sources */,
 				26DF95642ABD8207001636BA /* PriceAdjustmentSettingsView.swift in Sources */,
+				26CCD41A2CDE21E100B070BE /* CheapestHoursRow.swift in Sources */,
 				2696881728D477ED002142BF /* ElectricityPricesApp.swift in Sources */,
+				26CCD4182CDE199800B070BE /* PriceRangeInsightsRow.swift in Sources */,
 				26DF95682ABDC601001636BA /* TimeoutHandler.swift in Sources */,
 				2696883128D47C4B002142BF /* PriceView.swift in Sources */,
 			);

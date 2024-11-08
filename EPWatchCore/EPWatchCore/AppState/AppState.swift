@@ -108,7 +108,7 @@ public class AppState: ObservableObject {
     @AppStorageCodable("ExchangeRate", storage: .appGroup)
     public var exchangeRate: ExchangeRate? = nil
 
-    /// See Insights/CheapestHours.swift
+    // See AppState+Insights.swift
     @AppStorage("CheapestHoursDuration")
     public var cheapestHoursDuration: Double = 3
 

@@ -12,12 +12,13 @@ struct MainView: View {
 
     @EnvironmentObject private var state: AppState
     @State private var showsSettings: Bool = false
+    @AppStorage("ShowCheapestHours")
+    private var showCheapestHours: Bool = true
 
     var body: some View {
         NavigationStack {
             List {
-                if let currentPrice = state.currentPrice,
-                   let cheapestHours = state.cheapestHours {
+                if let currentPrice = state.currentPrice {
                     Section {
                         PriceView(
                             currentPrice: currentPrice,
@@ -25,9 +26,17 @@ struct MainView: View {
                             limits: state.priceLimits,
                             pricePresentation: state.pricePresentation,
                             chartStyle: state.chartStyle,
-                            cheapestHours: cheapestHours
+                            cheapestHours: showCheapestHours ? state.cheapestHours : nil
                         )
                         .frame(minHeight: 200)
+                    }
+                    Section {
+                        priceRangeTodayRow
+                        priceRangeTomorrowRow
+                        cheapestHoursRow
+                    } header: {
+                        Text("Insights")
+                            .textCase(nil)
                     } footer: {
                         StateInfoFooterView(
                             priceArea: state.priceArea,
@@ -35,11 +44,8 @@ struct MainView: View {
                             exchangeRate: state.exchangeRate,
                             hideWithoutTaxesOrFeesDisclamer: state.pricePresentation.adjustment.isEnabled
                         )
+                        .padding(.top, 4)
                     }
-                    insightsSection(
-                        currentPrice: currentPrice,
-                        cheapestHours: cheapestHours
-                    )
                 } else if state.isFetching {
                     VStack {
                         ProgressView("Fetching prices...")
@@ -84,11 +90,10 @@ struct MainView: View {
         }
     }
 
-    private func insightsSection(
-        currentPrice: PricePoint,
-        cheapestHours: CheapestHours
-    ) -> some View {
-        Section {
+    @ViewBuilder
+    private var cheapestHoursRow: some View {
+        if let currentPrice = state.currentPrice,
+           let cheapestHours = state.cheapestHours {
             NavigationLink {
                 CheapestHoursView(
                     currentPrice: currentPrice,
@@ -97,27 +102,43 @@ struct MainView: View {
                     pricePresentation: state.pricePresentation,
                     chartStyle: state.chartStyle,
                     cheapestHours: cheapestHours,
-                    cheapestHoursDuration: state.$cheapestHoursDuration
+                    cheapestHoursDuration: state.$cheapestHoursDuration,
+                    showInMainChart: $showCheapestHours
                 )
             } label: {
-                VStack(alignment: .leading) {
-                    let formattedPrice = state.pricePresentation.formattedPrice(
-                        cheapestHours,
-                        style: .normal
-                    )
-                    Text("Cheapest \(cheapestHours.duration) hours, \(formattedPrice)")
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
-                    DateIntervalText(
-                        cheapestHours.start,
-                        duration: (cheapestHours.duration, .hour),
-                        style: .normal
-                    )
-                }
+                CheapestHoursRow(
+                    cheapestHours: cheapestHours,
+                    pricePresentation: state.pricePresentation,
+                    limits: state.priceLimits
+                )
+                .frame(maxWidth: .infinity)
             }
-        } header: {
-            Text("Insights")
-                .textCase(nil)
+        }
+    }
+
+    @ViewBuilder
+    private var priceRangeTodayRow: some View {
+        if let priceRangeToday = state.priceRangeToday {
+            PriceRangeInsightsRow(
+                title: "Today",
+                priceRange: priceRangeToday,
+                currency: state.currency,
+                pricePresentation: state.pricePresentation,
+                priceLimits: state.priceLimits
+            )
+        }
+    }
+
+    @ViewBuilder
+    private var priceRangeTomorrowRow: some View {
+        if let priceRangeTomorrow = state.priceRangeTomorrow {
+            PriceRangeInsightsRow(
+                title: "Tomorrow",
+                priceRange: priceRangeTomorrow,
+                currency: state.currency,
+                pricePresentation: state.pricePresentation,
+                priceLimits: state.priceLimits
+            )
         }
     }
 

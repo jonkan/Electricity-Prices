@@ -29,16 +29,6 @@ public struct CheapestHours: FormattablePrice {
 
 }
 
-public extension AppState {
-
-     var cheapestHours: CheapestHours? {
-        let filteredPrices = prices.filterForViewMode(chartViewMode)
-            .filter({ Calendar.current.startOfHour(for: .now) <= $0.date })
-        return filteredPrices.cheapestHours(for: Int(cheapestHoursDuration))
-    }
-
-}
-
 public extension Array where Element == PricePoint {
 
     func cheapestHours(for duration: Int) -> CheapestHours? {

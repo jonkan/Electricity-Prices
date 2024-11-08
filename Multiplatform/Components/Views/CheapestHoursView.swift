@@ -17,6 +17,7 @@ struct CheapestHoursView: View {
     let chartStyle: PriceChartStyle
     let cheapestHours: CheapestHours
     @Binding var cheapestHoursDuration: Double
+    @Binding var showInMainChart: Bool
 
     var body: some View {
         List {
@@ -54,6 +55,7 @@ struct CheapestHoursView: View {
                         .monospacedDigit()
                     Slider(value: $cheapestHoursDuration, in: 1...12, step: 1)
                 }
+                Toggle("Show in main chart", isOn: $showInMainChart)
             }
         }
     }
@@ -77,7 +79,8 @@ struct CheapestHoursView: View {
         cheapestHours: prices
             .filter({ Calendar.current.startOfHour(for: currentPrice.date) <= $0.date })
             .cheapestHours(for: Int(duration))!,
-        cheapestHoursDuration: $duration
+        cheapestHoursDuration: $duration,
+        showInMainChart: .constant(true)
     )
     .safeAreaInset(edge: .top) {
         VStack {

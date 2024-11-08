@@ -1351,6 +1351,23 @@
         }
       }
     },
+    "Average price" : {
+      "comment" : "Title for the mean price",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Average"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Genomsnitt"
+          }
+        }
+      }
+    },
     "Average price for the %lld cheapest upcoming hours." : {
       "localizations" : {
         "en" : {
@@ -2016,46 +2033,6 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "Billigaste %lld timmarna"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "Cheapest %lld hours, %@" : {
-      "localizations" : {
-        "en" : {
-          "variations" : {
-            "plural" : {
-              "one" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Cheapest hour, %2$@"
-                }
-              },
-              "other" : {
-                "stringUnit" : {
-                  "state" : "new",
-                  "value" : "Cheapest %1$lld hours, %2$@"
-                }
-              }
-            }
-          }
-        },
-        "sv" : {
-          "variations" : {
-            "plural" : {
-              "one" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Billigaste timmen, %2$@"
-                }
-              },
-              "other" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Billigaste %1$lld timmarna, %2$@"
                 }
               }
             }
@@ -4727,133 +4704,13 @@
         }
       }
     },
-    "High" : {
-      "comment" : "As in a high price",
+    "High limit" : {
+      "comment" : "Title for the high price limit",
       "localizations" : {
-        "bg" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Висок"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vysoký"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Høj"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hoch"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Υψηλή"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alto"
-          }
-        },
-        "et" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kõrge"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Korkea"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Haut"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Visoko"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Magas"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alto"
-          }
-        },
-        "lt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aukštas"
-          }
-        },
-        "lv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Augsts"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Høy"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hoog"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wysoki"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alto"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Înalt"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vysoká"
-          }
-        },
-        "sl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Visoko"
+            "value" : "High"
           }
         },
         "sv" : {
@@ -4861,17 +4718,22 @@
             "state" : "translated",
             "value" : "Högt"
           }
-        },
-        "tr" : {
+        }
+      }
+    },
+    "High price" : {
+      "comment" : "Title for the highest price",
+      "localizations" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Yüksek"
+            "value" : "High"
           }
         },
-        "uk" : {
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Високий"
+            "value" : "Hög"
           }
         }
       }
@@ -5330,133 +5192,13 @@
         }
       }
     },
-    "Low" : {
-      "comment" : "As in a low price",
+    "Low limit" : {
+      "comment" : "Title for the low price limit",
       "localizations" : {
-        "bg" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Нисък"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nízký"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lav"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Niedrig"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Χαμηλή"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bajo"
-          }
-        },
-        "et" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Madal"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Matala"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Faible"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nisko"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alacsony"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Basso"
-          }
-        },
-        "lt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Žemas"
-          }
-        },
-        "lv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zems"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lav"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Laag"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Niski"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Baixo"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Scăzut"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nízky"
-          }
-        },
-        "sl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nizko"
+            "value" : "Low"
           }
         },
         "sv" : {
@@ -5464,17 +5206,22 @@
             "state" : "translated",
             "value" : "Lågt"
           }
-        },
-        "tr" : {
+        }
+      }
+    },
+    "Low price" : {
+      "comment" : "Title for the lowest price",
+      "localizations" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Düşük"
+            "value" : "Low"
           }
         },
-        "uk" : {
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Низький"
+            "value" : "Låg"
           }
         }
       }
@@ -7701,7 +7448,14 @@
       }
     },
     "Rate This App" : {
-
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Betygsätt den här appen"
+          }
+        }
+      }
     },
     "Ready" : {
       "localizations" : {
@@ -8735,6 +8489,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Поділитися"
+          }
+        }
+      }
+    },
+    "Show in main chart" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visa i huvudgraf"
           }
         }
       }
@@ -9926,6 +9690,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Відповідно до вашого бажання"
+          }
+        }
+      }
+    },
+    "Today" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idag"
+          }
+        }
+      }
+    },
+    "Tomorrow" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Imorgon"
           }
         }
       }
