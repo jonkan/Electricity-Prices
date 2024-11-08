@@ -41,9 +41,9 @@ struct CheapestHoursView: View {
                         pricePresentation: pricePresentation,
                         chartStyle: chartStyle,
                         useCurrencyAxisFormat: true,
-                        cheapestHours: cheapestHours
+                        cheapestHours: cheapestHours,
+                        minHeight: 130
                     )
-                    .frame(minHeight: 130)
                 }
                 .padding(.vertical, 8)
             } footer: {

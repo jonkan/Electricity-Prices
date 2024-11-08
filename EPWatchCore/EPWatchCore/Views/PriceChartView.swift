@@ -24,6 +24,7 @@ public struct PriceChartView: View {
     let useCurrencyAxisFormat: Bool
     let showPriceLimitsLines: Bool
     let cheapestHours: CheapestHours?
+    let minHeight: CGFloat?
 
     @Binding var selectedPrice: PricePoint?
     var displayedPrice: PricePoint {
@@ -39,7 +40,8 @@ public struct PriceChartView: View {
         chartStyle: PriceChartStyle,
         useCurrencyAxisFormat: Bool = false,
         showPriceLimitsLines: Bool = false,
-        cheapestHours: CheapestHours? = nil
+        cheapestHours: CheapestHours? = nil,
+        minHeight: CGFloat? = nil
     ) {
         _selectedPrice = selectedPrice
         self.currentPrice = currentPrice
@@ -51,6 +53,7 @@ public struct PriceChartView: View {
         self.useCurrencyAxisFormat = useCurrencyAxisFormat
         self.showPriceLimitsLines = showPriceLimitsLines
         self.cheapestHours = cheapestHours
+        self.minHeight = minHeight
     }
 
     public var body: some View {
@@ -67,6 +70,7 @@ public struct PriceChartView: View {
                     chartGestureOverlay(chart: chart, geometry: geometry)
                 }
         }
+        .frame(minHeight: minHeight)
     }
 
     @ViewBuilder

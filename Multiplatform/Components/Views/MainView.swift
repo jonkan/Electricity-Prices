@@ -26,9 +26,9 @@ struct MainView: View {
                             limits: state.priceLimits,
                             pricePresentation: state.pricePresentation,
                             chartStyle: state.chartStyle,
-                            cheapestHours: showCheapestHours ? state.cheapestHours : nil
+                            cheapestHours: showCheapestHours ? state.cheapestHours : nil,
+                            minChartHeight: 130
                         )
-                        .frame(minHeight: 200)
                     }
                     Section {
                         priceRangeTodayRow

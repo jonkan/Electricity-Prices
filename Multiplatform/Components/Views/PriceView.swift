@@ -16,6 +16,7 @@ struct PriceView: View {
     let pricePresentation: PricePresentation
     let chartStyle: PriceChartStyle
     let cheapestHours: CheapestHours?
+    let minChartHeight: CGFloat?
 
     @State private var selectedPrice: PricePoint? = nil
     var displayedPrice: PricePoint {
@@ -28,7 +29,8 @@ struct PriceView: View {
         limits: PriceLimits,
         pricePresentation: PricePresentation,
         chartStyle: PriceChartStyle,
-        cheapestHours: CheapestHours? = nil
+        cheapestHours: CheapestHours? = nil,
+        minChartHeight: CGFloat? = nil
     ) {
         self.currentPrice = currentPrice
         self.prices = prices
@@ -36,6 +38,7 @@ struct PriceView: View {
         self.pricePresentation = pricePresentation
         self.chartStyle = chartStyle
         self.cheapestHours = cheapestHours
+        self.minChartHeight = minChartHeight
     }
 
     var body: some View {
@@ -52,7 +55,8 @@ struct PriceView: View {
                 pricePresentation: pricePresentation,
                 chartStyle: chartStyle,
                 useCurrencyAxisFormat: true,
-                cheapestHours: cheapestHours
+                cheapestHours: cheapestHours,
+                minHeight: minChartHeight
             )
         }
         .padding(.vertical, 8)
