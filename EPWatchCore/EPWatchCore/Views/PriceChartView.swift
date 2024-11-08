@@ -17,7 +17,7 @@ public struct PriceChartView: View {
 
     let currentPrice: PricePoint
     let prices: [PricePoint]
-    let priceRange: ClosedRange<Double>
+    let priceRange: PriceRange
     let limits: PriceLimits
     let pricePresentation: PricePresentation
     let chartStyle: PriceChartStyle
@@ -44,7 +44,7 @@ public struct PriceChartView: View {
         _selectedPrice = selectedPrice
         self.currentPrice = currentPrice
         self.prices = prices
-        self.priceRange = prices.priceRange() ?? 0.0...0.0
+        self.priceRange = prices.priceRange() ?? .zero
         self.limits = limits
         self.pricePresentation = pricePresentation
         self.chartStyle = chartStyle
@@ -267,11 +267,11 @@ public struct PriceChartView: View {
     }
 
     private var axisYValues: [Double]? {
-        let adjustedDayPriceRange = pricePresentation.adjustedPriceRange(currentPrice.dayPriceRange)
-        // The minimum axis values prevents relatively low prices from being presented as very tall 
+        let adjustedDayPriceRange = pricePresentation.adjustedPriceRange(priceRange)
+        // The minimum axis values prevents relatively low prices from being presented as very tall
         // bars (or the equivalent).
         let minimumYAxisValues = currentPrice.currency.minimumYAxisValues
-        if adjustedDayPriceRange.upperBound <= minimumYAxisValues.last! &&
+        if adjustedDayPriceRange.max <= minimumYAxisValues.last! &&
             pricePresentation.currencyPresentation != .subdivided {
             return minimumYAxisValues
         }
@@ -279,8 +279,8 @@ public struct PriceChartView: View {
     }
 
     private var currencyAxisFormat: FloatingPointFormatStyle<Double>.Currency {
-        let adjustedDayPriceRange = pricePresentation.adjustedPriceRange(currentPrice.dayPriceRange)
-        if adjustedDayPriceRange.upperBound <= 10 {
+        let adjustedDayPriceRange = pricePresentation.adjustedPriceRange(priceRange)
+        if adjustedDayPriceRange.max <= 10 {
             return .currency(code: currentPrice.currency.code).precision(.fractionLength(1))
         }
         return .currency(code: currentPrice.currency.code).precision(.significantDigits(2))

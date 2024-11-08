@@ -7,16 +7,24 @@
 
 import Foundation
 
+public struct PriceRange {
+    let max: Double
+    let min: Double
+    let mean: Double
+
+    static let zero = PriceRange(max: 0, min: 0, mean: 0)
+}
+
 public extension Array where Element == PricePoint {
-    func priceRange() -> ClosedRange<Double>? {
-        guard let max = map({ $0.price }).max(),
-              let min = map({ $0.price }).min() else {
+    func priceRange() -> PriceRange? {
+        let prices = map({ $0.price })
+        guard let max = prices.max(), let min = prices.min() else {
             return nil
         }
-        return min...max
+        return PriceRange(max: max, min: min, mean: prices.reduce(0, +) / Double(prices.count))
     }
 
-    func priceRange(forDayOf date: Date) -> ClosedRange<Double>? {
+    func priceRange(forDayOf date: Date) -> PriceRange? {
         let prices = filter({
             Calendar.current.isDate($0.date, inSameDayAs: date)
         })

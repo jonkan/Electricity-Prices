@@ -11,6 +11,7 @@ public struct PricePointTimelineEntry: TimelineEntry {
 
     let pricePoint: PricePoint
     let prices: [PricePoint]
+    let priceRange: PriceRange
     let limits: PriceLimits
     let pricePresentation: PricePresentation
     let chartStyle: PriceChartStyle
@@ -24,6 +25,7 @@ public struct PricePointTimelineEntry: TimelineEntry {
     ) {
         self.pricePoint = pricePoint
         self.prices = prices
+        self.priceRange = prices.priceRange() ?? .zero
         self.limits = limits
         self.pricePresentation = pricePresentation
         self.chartStyle = chartStyle

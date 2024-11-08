@@ -21,10 +21,10 @@ public struct PriceLimits: Codable, Equatable, Sendable {
 }
 
 public extension PriceLimits {
-    func stops(using range: ClosedRange<Double>) -> [Gradient.Stop] {
-        let span = range.upperBound - range.lowerBound
-        let highStop = max(0, high - range.lowerBound) / span
-        let lowStop = max(0, low - range.lowerBound) / span
+    func stops(using range: PriceRange) -> [Gradient.Stop] {
+        let rangeSpan = range.max - range.min
+        let highStop = max(0, high - range.min) / rangeSpan
+        let lowStop = max(0, low - range.min) / rangeSpan
         // Make sure lowStop + fadeSize <= highStop - fadeSize
         let fadeSize = min(0.1, (highStop-lowStop)/2)
         return [

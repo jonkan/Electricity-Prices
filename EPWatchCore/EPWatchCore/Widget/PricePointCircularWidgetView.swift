@@ -16,7 +16,8 @@ public struct PricePointCircularWidgetView: View {
     }
 
     public var body: some View {
-        Gauge(value: entry.pricePoint.price, in: entry.pricePoint.dayPriceRange) {
+        let closedRange = entry.priceRange.min...entry.priceRange.max
+        Gauge(value: entry.pricePoint.price, in: closedRange) {
             DateIntervalText(entry.date, style: .short)
                 .minimumScaleFactor(0.5)
                 .padding(1)
@@ -26,7 +27,7 @@ public struct PricePointCircularWidgetView: View {
                 .padding(1)
         }
         .gaugeStyle(.accessoryCircular)
-        .tint(Gradient(stops: entry.limits.stops(using: entry.pricePoint.dayPriceRange)))
+        .tint(Gradient(stops: entry.limits.stops(using: entry.priceRange)))
     }
 
 }

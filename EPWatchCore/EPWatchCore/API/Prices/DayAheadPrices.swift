@@ -81,37 +81,13 @@ struct DayAheadPrices: Codable {
                     let pricePoint = PricePoint(
                         date: start,
                         price: price,
-                        dayPriceRange: price...price,
                         currency: rate.to
                     )
                     pricePoints.append(pricePoint)
                 }
             }
         }
-
-        // Calculate price range for each day
-        let grouped = Dictionary(
-            grouping: pricePoints,
-            by: { Calendar.current.startOfDay(for: $0.date) }
-        )
-        var processedPricePoints: [PricePoint] = []
-        for (startOfDay, prices) in grouped {
-            guard let priceRange = prices.priceRange(forDayOf: startOfDay) else {
-                LogError("Failed to calculate price range")
-                continue
-            }
-            processedPricePoints.append(
-                contentsOf: prices.map({
-                    PricePoint(
-                        date: $0.date,
-                        price: $0.price,
-                        dayPriceRange: priceRange,
-                        currency: rate.to
-                    )
-                })
-            )
-        }
-        return processedPricePoints.sorted(by: { $0.date < $1.date })
+        return pricePoints.sorted(by: { $0.date < $1.date })
     }
 
 }

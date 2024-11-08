@@ -55,10 +55,12 @@ public struct PricePresentation: Codable, Equatable, Sendable {
         }
     }
 
-    public func adjustedPriceRange(_ range: ClosedRange<Double>) -> ClosedRange<Double> {
-        let adjustedLowerBound = adjustment.adjustedPrice(range.lowerBound)
-        let adjustedUpperBound = adjustment.adjustedPrice(range.upperBound)
-        return adjustedLowerBound...adjustedUpperBound
+    public func adjustedPriceRange(_ range: PriceRange) -> PriceRange {
+        PriceRange(
+            max: adjustment.adjustedPrice(range.max),
+            min: adjustment.adjustedPrice(range.min),
+            mean: adjustment.adjustedPrice(range.mean)
+        )
     }
 
 }
