@@ -367,7 +367,7 @@ private struct PriceChartViewPreview: View {
                     PriceChartView(
                         currentPrice: prices[21],
                         prices: prices,
-                        limits: .mockLimits,
+                        limits: .mocked,
                         pricePresentation: .init(),
                         chartStyle: style,
                         showPriceLimitsLines: false,

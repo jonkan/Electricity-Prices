@@ -71,8 +71,8 @@ struct CheapestHoursView: View {
     CheapestHoursView(
         currentPrice: currentPrice,
         prices: prices,
-        limits: .mockLimits,
-        pricePresentation: .init(),
+        limits: .mocked,
+        pricePresentation: .mocked,
         chartStyle: chartStyle,
         cheapestHours: prices
             .filter({ Calendar.current.startOfHour(for: currentPrice.date) <= $0.date })

@@ -64,3 +64,7 @@ public struct PricePresentation: Codable, Equatable, Sendable {
     }
 
 }
+
+public extension PricePresentation {
+    static let mocked = PricePresentation()
+}

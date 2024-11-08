@@ -47,5 +47,5 @@ public extension PriceLimits {
 }
 
 public extension PriceLimits {
-    static let mockLimits = PriceLimits(.SEK, high: 3, low: 1)
+    static let mocked = PriceLimits(.SEK, high: 3, low: 1)
 }

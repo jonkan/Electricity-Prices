@@ -42,7 +42,7 @@ public struct PricePointTimelineEntry: TimelineEntry {
     public static let mock = PricePointTimelineEntry(
         pricePoint: .mockPrice,
         prices: .mockPrices,
-        limits: .mockLimits,
+        limits: .mocked,
         pricePresentation: .init(),
         chartStyle: .bar
     )
@@ -61,7 +61,7 @@ public struct PricePointTimelineEntry: TimelineEntry {
         let entry = PricePointTimelineEntry(
             pricePoint: price,
             prices: prices.filterForViewMode(.todayAndComingNight, at: price.date),
-            limits: .mockLimits,
+            limits: .mocked,
             pricePresentation: .init(),
             chartStyle: .bar
         )
@@ -74,7 +74,7 @@ public struct PricePointTimelineEntry: TimelineEntry {
         let entry = PricePointTimelineEntry(
             pricePoint: price,
             prices: prices.filterForViewMode(.todayAndTomorrow, at: price.date),
-            limits: .mockLimits,
+            limits: .mocked,
             pricePresentation: .init(),
             chartStyle: .bar
         )
