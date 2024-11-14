@@ -18,12 +18,16 @@ struct CheapestHoursView: View {
     let cheapestHours: CheapestHours
     @Binding var cheapestHoursDuration: Double
     @Binding var showInMainChart: Bool
+    @State private var selectedPrice: PricePoint?
+    var displayedPrice: FormattablePrice {
+        return selectedPrice ?? cheapestHours
+    }
 
     var body: some View {
         List {
             Section {
                 VStack(spacing: 4) {
-                    Text(pricePresentation.formattedPrice(cheapestHours, style: .normal))
+                    Text(pricePresentation.formattedPrice(displayedPrice, style: .normal))
                         .font(.title)
 
                     DateIntervalText(
@@ -35,6 +39,7 @@ struct CheapestHoursView: View {
                     .padding(.bottom, 4)
 
                     PriceChartView(
+                        selectedPrice: $selectedPrice,
                         currentPrice: currentPrice,
                         prices: prices,
                         limits: limits,
