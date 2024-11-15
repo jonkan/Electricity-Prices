@@ -1,6 +1,6 @@
 {
     "number_of_treads": 4,
-    "skip_directories": ["Resources"],
+    "skip_directories": ["Resources", "DerivedData"],
     "default": {
         "keyword": {
             "color": "#000000"
