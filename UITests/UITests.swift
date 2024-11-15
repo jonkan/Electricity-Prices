@@ -14,6 +14,7 @@ final class ElectricityPricesUITests: XCTestCase {
 
         Task { @MainActor in
             let app = XCUIApplication()
+            app.launchArguments += ["-ShowCheapestHours", "NO"]
             setupSnapshot(app)
             app.launch()
         }
@@ -22,14 +23,14 @@ final class ElectricityPricesUITests: XCTestCase {
     @MainActor
     func testExample() throws {
         let app = XCUIApplication()
-        snapshot("0MainView")
+        snapshot("1MainView")
 
 #if os(iOS)
         app.buttons["settings"].tap()
         app.buttons["viewMode"].tap()
         app.buttons["todayAndTomorrow"].tap()
         app.buttons["done"].tap()
-        snapshot("1TodayAndTomorrow")
+        snapshot("3TodayAndTomorrow")
 
         app.buttons["settings"].tap()
         app.buttons["chart"].tap()
@@ -37,7 +38,7 @@ final class ElectricityPricesUITests: XCTestCase {
         app.buttons["unit"].tap()
         app.buttons["subdivided"].tap()
         app.buttons["done"].tap()
-        snapshot("2LineChart")
+        snapshot("4LineChart")
 
         app.buttons["settings"].tap()
         app.buttons["chart"].tap()
@@ -47,12 +48,12 @@ final class ElectricityPricesUITests: XCTestCase {
         app.buttons["done"].tap()
         XCUIDevice.shared.press(.home)
         sleep(2)
-        snapshot("3HomeScreen")
+        snapshot("2HomeScreen")
 
         XCUIDevice.shared.perform(NSSelectorFromString("pressLockButton"))
         XCUIDevice.shared.press(.home)
         sleep(2)
-        snapshot("4LockScreen")
+        snapshot("5LockScreen")
 
 #elseif os(watchOS)
         app.swipeLeft()
@@ -60,7 +61,7 @@ final class ElectricityPricesUITests: XCTestCase {
         app.buttons["viewMode"].tap()
         app.buttons["todayAndTomorrow"].tap()
         app.swipeRight()
-        snapshot("1TodayAndTomorrow")
+        snapshot("2TodayAndTomorrow")
 
         app.swipeLeft()
         app.buttons["chart"].tap()
@@ -68,7 +69,7 @@ final class ElectricityPricesUITests: XCTestCase {
         app.buttons["unit"].tap()
         app.buttons["subdivided"].tap()
         app.swipeRight()
-        snapshot("3LineChart")
+        snapshot("4LineChart")
 
         app.swipeLeft()
         app.buttons["chart"].tap()
@@ -77,7 +78,7 @@ final class ElectricityPricesUITests: XCTestCase {
 
         XCUIDevice.shared.press(.home)
         sleep(1)
-        snapshot("2HomeScreen")
+        snapshot("3HomeScreen")
 #endif
 
     }

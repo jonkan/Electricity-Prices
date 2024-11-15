@@ -16,7 +16,7 @@
     },
     "data": [
         {
-            "filter": "0MainView",
+            "filter": "1MainView",
             "keyword": {
                 "text": "Consume Smarter!"
             },
@@ -25,25 +25,7 @@
             }
         },
         {
-            "filter": "1TodayAndTomorrow",
-            "keyword": {
-                "text": "Cheaper Tomorrow?"
-            },
-            "title": {
-                "text": "Easily compare today's and tomorrow's prices"
-            }
-        },
-        {
-            "filter": "2LineChart",
-            "keyword": {
-                "text": "Customizable"
-            },
-            "title": {
-                "text": "To suit your preferences"
-            }
-        },
-        {
-            "filter": "3HomeScreen",
+            "filter": "2HomeScreen",
             "keyword": {
                 "text": "Widgets"
             },
@@ -52,7 +34,25 @@
             }
         },
         {
-            "filter": "4LockScreen",
+            "filter": "3TodayAndTomorrow",
+            "keyword": {
+                "text": "Cheaper Tomorrow?"
+            },
+            "title": {
+                "text": "Easily compare today's and tomorrow's prices"
+            }
+        },
+        {
+            "filter": "4LineChart",
+            "keyword": {
+                "text": "Customizable"
+            },
+            "title": {
+                "text": "To suit your preferences"
+            }
+        },
+        {
+            "filter": "5LockScreen",
             "keyword": {
                 "text": "Lock Screen Widgets"
             },
