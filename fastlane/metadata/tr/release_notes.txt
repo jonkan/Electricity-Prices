@@ -1,1 +1,1 @@
-Bazı fiyatların eksik olmasına neden olan bir sorunu çözme.
+Öngörüler: En ucuz gelecek saatlerin hangileri olduğunu görün.

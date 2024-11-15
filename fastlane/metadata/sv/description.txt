@@ -1,9 +1,10 @@
 Se det nuvarande elpriset på din Apple Watch, iPhone och iPad.
 Oavsett om du planerar att ladda din elbil eller använda hushållsapparater, håll dig informerad med elpriset och planera din energianvändning smart.
 
-- Komplikationer för Apple Watch
-- Widgets för iPhone och iPad
-- Stöd för flera valutor
+- Komplikationer för Apple Watch.
+- Widgets för iPhone och iPad.
+- Stöd för flera valutor.
+- Insikter: Se vilka dem billigaste kommande timmarna är.
 
 Pro-funktioner:
 - Visningsläge: Utöka grafen till att inkludera alla morgondagens priser.

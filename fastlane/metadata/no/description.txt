@@ -1,9 +1,10 @@
 Se den nåværende strømprisen på din Apple Watch, iPhone og iPad.
 Enten du planlegger å lade elbilen eller bruke husholdningsapparater, hold deg informert med strømprisen og planlegg energiforbruket ditt smart.
 
-- Komplikasjoner for Apple Watch
-- Widgets for iPhone og iPad
-- Støtte for flere valutaer
+- Komplikasjoner for Apple Watch.
+- Widgets for iPhone og iPad.
+- Støtte for flere valutaer.
+- Innsikter: Se hvilke de billigste kommende timene er.
 
 Pro-funksjoner:
 - Visningsmodus: Utvid grafen til å inkludere alle morgendagens priser.

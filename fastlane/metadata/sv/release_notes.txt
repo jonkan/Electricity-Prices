@@ -1,1 +1,1 @@
-Löser ett problem som gjorde att vissa priser kunde saknas.
+Insikter: Se vilka dem billigaste kommande timmarna är.

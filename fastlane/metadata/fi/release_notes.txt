@@ -1,1 +1,1 @@
-Ratkaisee ongelman, jonka vuoksi tietyt hinnat saattoivat puuttua.
+Oivallukset: Katso mitkä ovat halvimmat tulevat tunnit.

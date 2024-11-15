@@ -1,1 +1,1 @@
-Løser et problem, der gjorde, at visse priser kunne mangle.
+Indsigt: Se hvilke de billigste kommende timer er.

@@ -1,9 +1,10 @@
 Zie de huidige elektriciteitsprijs op uw Apple Watch, iPhone en iPad.
 Ongeacht of u van plan bent om uw elektrische auto op te laden of huishoudelijke apparaten te gebruiken, blijf geïnformeerd met de elektriciteitsprijs en plan uw energieverbruik slim.
 
-- Complicaties voor Apple Watch
-- Widgets voor iPhone en iPad
-- Ondersteuning voor meerdere valuta's
+- Complicaties voor Apple Watch.
+- Widgets voor iPhone en iPad.
+- Ondersteuning voor meerdere valuta's.
+- Inzichten: Zie welke de goedkoopste komende uren zijn.
 
 Pro-functies:
 - Weergavemodus: Breid de grafiek uit om alle prijzen van morgen op te nemen.

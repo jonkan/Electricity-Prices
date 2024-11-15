@@ -1,1 +1,1 @@
-Resolve um problema que fazia com que alguns preços pudessem estar ausentes.
+Insights: Veja quais são as horas mais baratas que estão por vir.

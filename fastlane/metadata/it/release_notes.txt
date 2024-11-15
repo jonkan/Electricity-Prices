@@ -1,1 +1,1 @@
-Risolto un problema che faceva sì che alcuni prezzi potessero mancare.
+Approfondimenti: vedi quali sono le ore più economiche in arrivo.

@@ -1,1 +1,1 @@
-Résout un problème qui faisait que certains prix pouvaient manquer.
+Aperçus: Voyez quelles sont les prochaines heures les moins chères.

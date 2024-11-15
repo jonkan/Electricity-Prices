@@ -1,1 +1,1 @@
-Resuelve un problema que hacía que algunos precios pudieran faltar.
+Perspectivas: Consulta cuáles son las horas más baratas que se aproximan.

@@ -1,9 +1,10 @@
 Sehen Sie den aktuellen Strompreis auf Ihrer Apple Watch, Ihrem iPhone und iPad.
 Ob Sie planen, Ihr Elektrofahrzeug zu laden oder Haushaltsgeräte zu betreiben, bleiben Sie mit den Strompreisen informiert und planen Sie Ihren Energieverbrauch klug.
 
-- Komplikationen für die Apple Watch
-- Widgets für iPhone und iPad
-- Unterstützung mehrerer Währungen
+- Komplikationen für Apple Watch.
+- Widgets für iPhone und iPad.
+- Unterstützung für mehrere Währungen.
+- Einblicke: Sehen Sie, welche die billigsten kommenden Stunden sind.
 
 Pro-Funktionen:
 - Ansichtsmodus: Erweitern Sie Ihr Diagramm, um alle Strompreise von morgen einzubeziehen.
