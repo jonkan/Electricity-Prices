@@ -1,1 +1,2 @@
-Perspectivas: Consulta cuáles son las horas más baratas que se aproximan.
+- Resuelve un problema donde los widgets se quedaban atascados de 09:00 a 10:00.
+- Mejora la apariencia del gráfico en widgets pequeños.

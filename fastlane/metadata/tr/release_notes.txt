@@ -1,1 +1,2 @@
-Öngörüler: En ucuz gelecek saatlerin hangileri olduğunu görün.
+- 09:00-10:00 arasında takılan widget sorununu çözüyor.
+- Küçük widget'lardaki grafik görünümünü iyileştirdi.

@@ -1,1 +1,2 @@
-Einblicke: Sehen Sie, welche die billigsten kommenden Stunden sind.
+- Behebt ein Problem, bei dem Widgets um 09:00-10:00 festhingen.
+- Verbesserte Darstellung des Graphen in kleinen Widgets.

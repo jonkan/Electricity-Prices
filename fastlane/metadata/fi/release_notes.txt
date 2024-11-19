@@ -1,1 +1,2 @@
-Oivallukset: Katso mitkä ovat halvimmat tulevat tunnit.
+- Ratkaisee ongelman, jossa widgetit jäävät jumiin kello 09:00-10:00.
+- Parannettu kaavion ulkoasua pienissä widgeteissä.

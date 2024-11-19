@@ -1,1 +1,2 @@
-Inzichten: Zie welke de goedkoopste komende uren zijn.
+- Lost een probleem op waar widgets vastzaten van 09:00-10:00.
+- Verbeterde uitstraling van de grafiek in kleine widgets.

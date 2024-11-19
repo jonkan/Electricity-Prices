@@ -1,1 +1,3 @@
-Insikter: Se vilka dem billigaste kommande timmarna är.
+- Löser ett problem att widgets fastnade på 09:00-10:00.
+- Förbättrat utseende på grafen i små widgets.
+
