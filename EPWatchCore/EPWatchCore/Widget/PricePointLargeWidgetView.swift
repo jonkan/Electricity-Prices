@@ -16,32 +16,53 @@ public struct PricePointLargeWidgetView: View {
     }
 
     public var body: some View {
-        VStack(spacing: 8) {
-            Text(entry.formattedPrice(style: .normal))
-                .font(.title)
-                .minimumScaleFactor(0.5)
-                .lineLimit(1)
-            DateIntervalText(entry.date, style: .normal)
-                .font(.subheadline)
-                .minimumScaleFactor(0.5)
-                .lineLimit(1)
+        GeometryReader { geometry in
+            VStack {
+                Text(entry.formattedPrice(style: .normal))
+                    .font(.title)
+                    .minimumScaleFactor(0.6)
+                    .lineLimit(1)
+                DateIntervalText(entry.date, style: .normal)
+                    .font(.subheadline)
+                    .minimumScaleFactor(0.6)
+                    .lineLimit(1)
 
-            PriceChartView(
-                selectedPrice: .constant(nil),
-                currentPrice: entry.pricePoint,
-                prices: entry.prices,
-                limits: entry.limits,
-                pricePresentation: entry.pricePresentation,
-                chartStyle: entry.chartStyle
-            )
+                PriceChartView(
+                    selectedPrice: .constant(nil),
+                    currentPrice: entry.pricePoint,
+                    prices: entry.prices,
+                    limits: entry.limits,
+                    pricePresentation: entry.pricePresentation,
+                    chartStyle: entry.chartStyle
+                )
+                .layoutPriority(geometry.size.height <= 120 ? 1 : 0)
+            }
+            .padding(.all, geometry.size.height < 150 ? 8 : nil)
         }
-        .padding()
     }
 
 }
 
-struct PricePointLargeWidgetView_Previews: PreviewProvider {
-    static var previews: some View {
-        PricePointLargeWidgetView(entry: .mock)
+#Preview {
+    ScrollView {
+        VStack {
+            Group {
+                PricePointLargeWidgetView(entry: .mock)
+                    .frame(height: 100)
+                PricePointLargeWidgetView(entry: .mock)
+                    .frame(height: 120)
+                PricePointLargeWidgetView(entry: .mock)
+                    .frame(height: 130)
+                PricePointLargeWidgetView(entry: .mock)
+                    .frame(height: 140)
+                PricePointLargeWidgetView(entry: .mock)
+                    .frame(height: 250)
+            }
+            .background {
+                RoundedRectangle(cornerRadius: 8)
+                    .stroke(.secondary, lineWidth: 1)
+            }
+        }
+        .padding()
     }
 }
