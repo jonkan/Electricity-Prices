@@ -16,9 +16,10 @@ public func isRunningForSnapshots() -> Bool {
 }
 
 public func use941ForSnapshots() -> Bool {
+    assert(isRunningForSnapshots(), "Don't use this function outside of snapshots")
 #if os(watchOS)
-    false
+    return false
 #else
-    true
+    return true
 #endif
 }

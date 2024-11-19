@@ -15,7 +15,7 @@ public struct WidgetView: View {
     let entry: PricePointTimelineEntry
 
     public init(entry: PricePointTimelineEntry) {
-        if use941ForSnapshots() {
+        if isRunningForSnapshots() && use941ForSnapshots() {
             self.entry = .init(
                 pricePoint: entry.prices.price(for: .nine41)!,
                 prices: entry.prices,
