@@ -43,16 +43,19 @@ extension PriceChartView {
 
     @AxisContentBuilder
     func chartXAxis(compact: Bool) -> some AxisContent {
-        let isShowing2Days = prices.count >= 48
+        let calendar: Calendar = .current
+        let isShowingMultipleDays = !calendar.isDate(
+            prices.first?.date ?? .now,
+            inSameDayAs: prices.last?.date ?? .now
+        )
         AxisMarks { value in
             if let date = value.as(Date.self) {
-                let calendar: Calendar = .current
                 let hour = calendar.component(.hour, from: date)
                 if compact {
                     AxisValueLabel {
                         Text(Self.twoDigitHourDateFormatter.string(from: date))
                     }
-                } else if isShowing2Days {
+                } else if isShowingMultipleDays {
                     AxisValueLabel {
                         if hour == 0 {
                             if calendar.isDateInToday(date) {

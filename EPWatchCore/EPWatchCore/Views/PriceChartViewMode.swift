@@ -11,6 +11,7 @@ public enum PriceChartViewMode: String, Codable, CaseIterable, Identifiable, Equ
     case today
     case todayAndComingNight
     case todayAndTomorrow
+    case nowAndAllAhead
 
     public var id: String {
         return rawValue
@@ -21,6 +22,7 @@ public enum PriceChartViewMode: String, Codable, CaseIterable, Identifiable, Equ
         case .today: return String(localized: "Today", bundle: .module)
         case .todayAndComingNight: return String(localized: "Today and Coming Night", bundle: .module)
         case .todayAndTomorrow: return String(localized: "Today and Tomorrow", bundle: .module)
+        case .nowAndAllAhead: return String(localized: "Now and All Ahead")
         }
     }
 }
