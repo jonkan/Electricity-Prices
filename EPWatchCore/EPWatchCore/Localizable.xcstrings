@@ -2826,151 +2826,151 @@
         }
       }
     },
-    "c" : {
+    "ct" : {
       "comment" : "Currency subdivision symbol for EUR",
       "localizations" : {
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "c"
+            "value" : "ct"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "c"
+            "value" : "ct"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "c"
+            "value" : "ct"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "c"
+            "value" : "ct"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "σ"
+            "value" : "ct"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "c"
+            "value" : "ct"
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "c"
+            "value" : "ct"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "snt"
+            "value" : "ct"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "c"
+            "value" : "ct"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "c"
+            "value" : "ct"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "c"
+            "value" : "ct"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "c"
+            "value" : "ct"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "c"
+            "value" : "ct"
           }
         },
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "santīms"
+            "value" : "ct"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "c"
+            "value" : "ct"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "c"
+            "value" : "ct"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "c"
+            "value" : "ct"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "c"
+            "value" : "ct"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "c"
+            "value" : "ct"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "c"
+            "value" : "ct"
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "c"
+            "value" : "ct"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "c"
+            "value" : "ct"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "c"
+            "value" : "ct"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "c"
+            "value" : "ct"
           }
         }
       }

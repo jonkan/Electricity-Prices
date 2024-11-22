@@ -127,7 +127,7 @@ public enum Currency: String, Codable, CaseIterable, Identifiable, Equatable, Se
         case .EUR:
             return CurrencySubdivision(
                 name: String(localized: "Cent", bundle: .module, comment: "Currency subdivision name for EUR"),
-                symbol: String(localized: "c", bundle: .module, comment: "Currency subdivision symbol for EUR"),
+                symbol: String(localized: "ct", bundle: .module, comment: "Currency subdivision symbol for EUR"),
                 subdivisions: 100
             )
         case .GBP:
