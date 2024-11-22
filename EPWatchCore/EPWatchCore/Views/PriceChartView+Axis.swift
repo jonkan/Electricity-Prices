@@ -10,6 +10,8 @@ import Charts
 
 extension PriceChartView {
 
+    static let twoDigitHourDateFormatter: DateFormatter = .twoDigitHourFormat()
+
     @AxisContentBuilder
     func chartYAxis() -> some AxisContent {
 #if os(watchOS)
@@ -37,13 +39,15 @@ extension PriceChartView {
     @AxisContentBuilder
     func chartXAxis(compact: Bool) -> some AxisContent {
         let isShowing2Days = prices.count >= 48
-        AxisMarks(
-            values: isShowing2Days && compact ? .automatic(desiredCount: 2) : .automatic
-        ) { value in
+        AxisMarks { value in
             if let date = value.as(Date.self) {
                 let calendar: Calendar = .current
                 let hour = calendar.component(.hour, from: date)
-                if isShowing2Days {
+                if compact {
+                    AxisValueLabel {
+                        Text(Self.twoDigitHourDateFormatter.string(from: date))
+                    }
+                } else if isShowing2Days {
                     AxisValueLabel {
                         if hour == 0 {
                             if calendar.isDateInToday(date) {
