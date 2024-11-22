@@ -81,3 +81,12 @@ struct ElectricityPricesWidget: Widget {
     PricePointTimelineEntry.mock2
     PricePointTimelineEntry.mockTodayAndTomorrow
 }
+
+#Preview("Now and Ahead", as: .accessoryRectangular) {
+    MainActor.assumeIsolated {
+        ElectricityPricesWidget(state: .mockedNowAndAllAhead)
+    }
+} timeline: {
+    PricePointTimelineEntry.mockedNowAndAllAhead1
+    PricePointTimelineEntry.mockedNowAndAllAhead2
+}

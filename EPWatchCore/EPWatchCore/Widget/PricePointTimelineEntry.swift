@@ -80,4 +80,30 @@ public struct PricePointTimelineEntry: TimelineEntry {
         )
         return entry
     }()
+
+    public static let mockedNowAndAllAhead1: PricePointTimelineEntry = {
+        let prices: [PricePoint] = .mockPrices
+        let price = prices[10]
+        let entry = PricePointTimelineEntry(
+            pricePoint: price,
+            prices: prices.filterForViewMode(.nowAndAllAhead, at: price.date),
+            limits: .mocked,
+            pricePresentation: .init(),
+            chartStyle: .bar
+        )
+        return entry
+    }()
+
+    public static let mockedNowAndAllAhead2: PricePointTimelineEntry = {
+        let prices: [PricePoint] = .mockPricesWithTomorrow
+        let price = prices[14]
+        let entry = PricePointTimelineEntry(
+            pricePoint: price,
+            prices: prices.filterForViewMode(.nowAndAllAhead, at: price.date),
+            limits: .mocked,
+            pricePresentation: .init(),
+            chartStyle: .bar
+        )
+        return entry
+    }()
 }
