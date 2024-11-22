@@ -65,7 +65,7 @@ public struct PriceChartView: View {
             chart(geometry)
                 .widgetAccentable()
                 .chartYAxis {
-                    chartYAxis()
+                    chartYAxis(compact: geometry.size.height < 60)
                 }
                 .chartXAxis {
                     chartXAxis(compact: geometry.size.width < 180)

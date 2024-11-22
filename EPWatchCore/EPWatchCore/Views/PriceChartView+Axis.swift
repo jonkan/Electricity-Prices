@@ -13,7 +13,7 @@ extension PriceChartView {
     static let twoDigitHourDateFormatter: DateFormatter = .twoDigitHourFormat()
 
     @AxisContentBuilder
-    func chartYAxis() -> some AxisContent {
+    func chartYAxis(compact: Bool) -> some AxisContent {
 #if os(watchOS)
         // This avoids the axis labels from being clipped on the rectangular watch widget
         let preset: AxisMarkPreset = widgetFamily == .accessoryRectangular ? .extended : .aligned
@@ -28,10 +28,15 @@ extension PriceChartView {
                 AxisMarks(preset: preset, values: axisYValues)
             }
         } else {
+            let axisYValues: AxisMarkValues = (
+                compact
+                ? .automatic(desiredCount: 3)
+                : .automatic
+            )
             if useCurrencyAxisFormat && pricePresentation.currencyPresentation != .subdivided {
-                AxisMarks(format: currencyAxisFormat, preset: preset)
+                AxisMarks(format: currencyAxisFormat, preset: preset, values: axisYValues)
             } else {
-                AxisMarks(preset: preset)
+                AxisMarks(preset: preset, values: axisYValues)
             }
         }
     }
