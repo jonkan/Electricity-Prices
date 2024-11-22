@@ -82,12 +82,24 @@ extension PriceChartView {
         let adjustedDayPriceRange = pricePresentation.adjustedPriceRange(priceRange)
         // The minimum axis values prevents relatively low prices from being presented as very tall
         // bars (or the equivalent).
-        let minimumYAxisValues = currentPrice.currency.minimumYAxisValues
         if adjustedDayPriceRange.max <= minimumYAxisValues.last! &&
             pricePresentation.currencyPresentation != .subdivided {
             return minimumYAxisValues
         }
         return nil
+    }
+
+    private var minimumYAxisValues: [Double] {
+        let low = currentPrice.currency.defaultPriceLimits.low
+        if low <= 0.3 {
+            return [0.0, 0.05, 0.1, 0.15]
+        } else if low <= 0.5 {
+            return [0.0, 0.25, 0.5, 1.0]
+        } else if low <= 1.0 {
+            return  [0.0, 0.5, 1.0, 1.5]
+        } else {
+            return  [0.0, 5.0, 10.0, 15.0]
+        }
     }
 
     private var currencyAxisFormat: FloatingPointFormatStyle<Double>.Currency {
