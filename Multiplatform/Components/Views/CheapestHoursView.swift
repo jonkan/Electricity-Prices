@@ -30,11 +30,17 @@ struct CheapestHoursView: View {
                     Text(pricePresentation.formattedPrice(displayedPrice, style: .normal))
                         .font(.title)
 
-                    DateIntervalText(
-                        cheapestHours.start,
-                        duration: (cheapestHours.duration, .hour),
-                        style: .normal
-                    )
+                    Group {
+                        if let selectedPrice {
+                            DateIntervalText(selectedPrice.date, style: .normal)
+                        } else {
+                            DateIntervalText(
+                                cheapestHours.start,
+                                duration: (cheapestHours.duration, .hour),
+                                style: .normal
+                            )
+                        }
+                    }
                     .font(.subheadline)
                     .padding(.bottom, 4)
 
