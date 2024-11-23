@@ -1,2 +1,2 @@
-- Behebt ein Problem, bei dem Widgets um 09:00-10:00 festhingen.
-- Verbesserte Darstellung des Graphen in kleinen Widgets.
+- Verbesserte Darstellung der Achsenbeschriftungen in kleinen Widgets.
+- Fehlerbehebungen und Verbesserungen.

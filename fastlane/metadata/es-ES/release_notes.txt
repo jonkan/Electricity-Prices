@@ -1,2 +1,2 @@
-- Resuelve un problema donde los widgets se quedaban atascados de 09:00 a 10:00.
-- Mejora la apariencia del gráfico en widgets pequeños.
+- Mejora en la apariencia de las etiquetas de los ejes en pequeños widgets.
+- Correcciones de errores y mejoras.

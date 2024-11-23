@@ -1,3 +1,2 @@
-- Löser ett problem att widgets fastnade på 09:00-10:00.
-- Förbättrat utseende på grafen i små widgets.
-
+- Förbättrat utseende av axeletiketter i små widgets.
+- Bugfixar och förbättringar.

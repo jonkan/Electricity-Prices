@@ -1,2 +1,2 @@
-- Solves an issue where widgets got stuck at 09:00-10:00.
-- Improved appearance of the graph in small widgets.
+- Improved appearance of axis labels in small widgets.
+- Bug fixes and improvements.

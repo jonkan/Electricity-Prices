@@ -1,2 +1,2 @@
-- 09:00-10:00 arasında takılan widget sorununu çözüyor.
-- Küçük widget'lardaki grafik görünümünü iyileştirdi.
+- Küçük widget'larda eksen etiketlerinin görünümünü iyileştirdi.
+- Hata düzeltmeleri ve iyileştirmeler.

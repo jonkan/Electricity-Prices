@@ -1,2 +1,2 @@
-- Lost een probleem op waar widgets vastzaten van 09:00-10:00.
-- Verbeterde uitstraling van de grafiek in kleine widgets.
+- Verbeterde weergave van aslabels in kleine widgets.
+- Bugfixes en verbeteringen.

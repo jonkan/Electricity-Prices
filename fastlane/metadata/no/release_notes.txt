@@ -1,2 +1,2 @@
-- Løser et problem der widgeter ble sittende fast mellom 09:00-10:00.
-- Forbedret utseende av grafen i små widgeter.
+- Forbedret utseende av akseetiketter i små widgets.
+- Feilrettinger og forbedringer.
