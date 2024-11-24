@@ -17,7 +17,7 @@ struct MainView: View {
         NavigationStack {
             TabView {
                 mainTab
-                if state.chartViewMode != .todayAndTomorrow {
+                if [.today, .todayAndComingNight].contains(state.chartViewMode) {
                     tomorrowTab
                 }
                 SettingsView()
