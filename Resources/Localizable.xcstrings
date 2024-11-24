@@ -2387,7 +2387,7 @@
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Graf"
+            "value" : "Diagram"
           }
         },
         "tr" : {
@@ -5062,7 +5062,7 @@
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Utöka grafen till att inkludera alla morgondagens priser."
+            "value" : "Utöka diagrammet till att inkludera alla morgondagens priser."
           }
         },
         "tr" : {
@@ -10288,150 +10288,150 @@
         }
       }
     },
-    "Show in main chart" : {
+    "Show in main chart and widgets" : {
       "localizations" : {
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Покажи в основната диаграма"
+            "value" : "Покажете в основната диаграма и в интерфейса за уиджети"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zobrazit v hlavním grafu"
+            "value" : "Zobrazit v hlavním grafu a widgetech"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vis i hoveddiagram"
+            "value" : "Vis i hoveddiagram og widgets"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Im Hauptdiagramm anzeigen"
+            "value" : "Im Hauptdiagramm und in den Widgets anzeigen"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Δείξε στο κύριο γράφημα"
+            "value" : "Δείξτε στο κύριο διάγραμμα και τα widgets"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mostrar en el gráfico principal"
+            "value" : "Mostrar en el gráfico principal y widgets"
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Näita peamisel diagrammil"
+            "value" : "Kuva peamises diagrammis ja vidinates"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Näytä pääkaaviossa"
+            "value" : "Näytä pääkaaviossa ja widgeteissä"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Afficher dans le graphique principal"
+            "value" : "Afficher dans le graphique principal et les widgets"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prikaži u glavnom grafikonu"
+            "value" : "Prikaži u glavnoj tablici i widgetima"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mutassa a fő diagramon"
+            "value" : "Mutasd a fő diagramon és a widgetekben"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mostra nel grafico principale"
+            "value" : "Mostra nel grafico principale e nei widget"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rodyti pagrindiniame grafike"
+            "value" : "Rodyti pagrindinėje diagramoje ir valdikliuose"
           }
         },
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rādīt galvenajā diagrammā"
+            "value" : "Rādīt galvenajā diagrammā un logrīkos"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vis i hoveddiagram"
+            "value" : "Vis i hoveddiagram og widgets"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Toon in de hoofdgrafiek"
+            "value" : "Toon in de hoofdgrafiek en widgets"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pokaż na głównym wykresie"
+            "value" : "Pokaż na głównym wykresie i widgetach"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mostrar no gráfico principal"
+            "value" : "Mostrar no gráfico principal e nos widgets"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Afișați în graficul principal"
+            "value" : "Afișați în graficul principal și widget-uri"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zobraziť v hlavnom grafe"
+            "value" : "Zobraziť v hlavnom grafe a widgetoch"
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prikaži v glavnem grafikonu"
+            "value" : "Prikaži v glavnem grafu in v pripomočkih"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Visa i huvudgraf"
+            "value" : "Visa i huvuddiagram och widgets"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ana grafik üzerinde göster"
+            "value" : "Ana grafikte ve widget'larda göster"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Показати на головній діаграмі"
+            "value" : "Показати в основній діаграмі та віджетах"
           }
         }
       }
