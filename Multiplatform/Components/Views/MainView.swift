@@ -12,8 +12,6 @@ struct MainView: View {
 
     @EnvironmentObject private var state: AppState
     @State private var showsSettings: Bool = false
-    @AppStorage("ShowCheapestHours")
-    private var showCheapestHours: Bool = true
 
     var body: some View {
         NavigationStack {
@@ -26,7 +24,7 @@ struct MainView: View {
                             limits: state.priceLimits,
                             pricePresentation: state.pricePresentation,
                             chartStyle: state.chartStyle,
-                            cheapestHours: showCheapestHours ? state.cheapestHours : nil,
+                            cheapestHours: state.showCheapestHours ? state.cheapestHours : nil,
                             minChartHeight: 130
                         )
                     }
@@ -102,8 +100,8 @@ struct MainView: View {
                     pricePresentation: state.pricePresentation,
                     chartStyle: state.chartStyle,
                     cheapestHours: cheapestHours,
-                    cheapestHoursDuration: state.$cheapestHoursDuration,
-                    showInMainChart: $showCheapestHours
+                    cheapestHoursDuration: $state.cheapestHoursDuration,
+                    showInMainChart: $state.showCheapestHours
                 )
             } label: {
                 CheapestHoursRow(

@@ -18,6 +18,8 @@ public struct AppStateDTO: Codable, Equatable, Sendable {
     let chartStyle: PriceChartStyle
     let allPriceLimits: [Currency: PriceLimits]
     let exchangeRate: ExchangeRate?
+    let cheapestHoursDuration: Double
+    let showCheapestHours: Bool
 
     public func encodeToApplicationContext() throws -> [String: Any] {
         let encodedAppStateDTO = try JSONEncoder().encode(self)
@@ -47,7 +49,9 @@ extension AppState {
             pricePresentation: pricePresentation,
             chartStyle: chartStyle,
             allPriceLimits: allPriceLimits,
-            exchangeRate: exchangeRate
+            exchangeRate: exchangeRate,
+            cheapestHoursDuration: cheapestHoursDuration,
+            showCheapestHours: showCheapestHours
         )
     }
 
@@ -60,5 +64,7 @@ extension AppState {
         chartStyle = dto.chartStyle
         allPriceLimits = dto.allPriceLimits
         exchangeRate = dto.exchangeRate
+        cheapestHoursDuration = dto.cheapestHoursDuration
+        showCheapestHours = dto.showCheapestHours
     }
 }

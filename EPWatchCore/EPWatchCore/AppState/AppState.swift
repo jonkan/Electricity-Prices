@@ -109,8 +109,25 @@ public class AppState: ObservableObject {
     public var exchangeRate: ExchangeRate? = nil
 
     // See AppState+Insights.swift
-    @AppStorage("CheapestHoursDuration")
-    public var cheapestHoursDuration: Double = 3
+    @AppStorage("CheapestHoursDuration", store: .appGroup)
+    public var cheapestHoursDuration: Double = 3 {
+        didSet {
+            guard oldValue != cheapestHoursDuration else { return }
+            Log("Cheapest hours duration did change: \(cheapestHoursDuration)")
+            objectWillChange.send()
+            reloadAllTimelinesSubject.send()
+        }
+    }
+
+    @AppStorage("ShowCheapestHours", store: .appGroup)
+    public var showCheapestHours: Bool = true {
+        didSet {
+            guard oldValue != showCheapestHours else { return }
+            Log("Show cheapest hours did change: \(showCheapestHours)")
+            objectWillChange.send()
+            reloadAllTimelinesSubject.send()
+        }
+    }
 
     public var isFetching: Bool {
         updateTask != nil

@@ -15,13 +15,15 @@ public struct PricePointTimelineEntry: TimelineEntry {
     let limits: PriceLimits
     let pricePresentation: PricePresentation
     let chartStyle: PriceChartStyle
+    let cheapestHours: CheapestHours?
 
     public init(
         pricePoint: PricePoint,
         prices: [PricePoint],
         limits: PriceLimits,
         pricePresentation: PricePresentation,
-        chartStyle: PriceChartStyle
+        chartStyle: PriceChartStyle,
+        cheapestHours: CheapestHours? = nil
     ) {
         self.pricePoint = pricePoint
         self.prices = prices
@@ -29,6 +31,7 @@ public struct PricePointTimelineEntry: TimelineEntry {
         self.limits = limits
         self.pricePresentation = pricePresentation
         self.chartStyle = chartStyle
+        self.cheapestHours = cheapestHours
     }
 
     public var date: Date {

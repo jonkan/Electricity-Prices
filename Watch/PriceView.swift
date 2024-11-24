@@ -15,6 +15,7 @@ struct PriceView: View {
     let limits: PriceLimits
     let pricePresentation: PricePresentation
     let chartStyle: PriceChartStyle
+    let cheapestHours: CheapestHours?
 
     @State private var selectedPrice: PricePoint? = nil
     var displayedPrice: PricePoint {
@@ -29,13 +30,15 @@ struct PriceView: View {
         prices: [PricePoint],
         limits: PriceLimits,
         pricePresentation: PricePresentation,
-        chartStyle: PriceChartStyle
+        chartStyle: PriceChartStyle,
+        cheapestHours: CheapestHours? = nil
     ) {
         self.currentPrice = currentPrice
         self.prices = prices
         self.limits = limits
         self.pricePresentation = pricePresentation
         self.chartStyle = chartStyle
+        self.cheapestHours = cheapestHours
     }
 
     var currentHour: Int {
@@ -59,7 +62,8 @@ struct PriceView: View {
                 limits: limits,
                 pricePresentation: pricePresentation,
                 chartStyle: chartStyle,
-                useCurrencyAxisFormat: true
+                useCurrencyAxisFormat: true,
+                cheapestHours: cheapestHours
             )
             .disabled(true)
             .focusable()

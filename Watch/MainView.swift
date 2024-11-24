@@ -34,7 +34,8 @@ struct MainView: View {
                 prices: state.prices.filterForViewMode(state.chartViewMode),
                 limits: state.priceLimits,
                 pricePresentation: state.pricePresentation,
-                chartStyle: state.chartStyle
+                chartStyle: state.chartStyle,
+                cheapestHours: state.showCheapestHours ? state.cheapestHours : nil
             )
         } else if state.isFetching {
             ProgressView("Fetching prices...")

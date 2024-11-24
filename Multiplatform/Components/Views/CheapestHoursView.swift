@@ -66,7 +66,7 @@ struct CheapestHoursView: View {
                         .monospacedDigit()
                     Slider(value: $cheapestHoursDuration, in: 1...12, step: 1)
                 }
-                Toggle("Show in main chart", isOn: $showInMainChart)
+                Toggle("Show in main chart and widgets", isOn: $showInMainChart)
             }
         }
     }

@@ -41,6 +41,7 @@ public struct PricePointTimelineProvider: TimelineProvider {
                 let pricePresentation = await state.pricePresentation
                 let chartStyle = await state.chartStyle
                 let chartViewMode = await state.chartViewMode
+                let cheapestHours = await state.showCheapestHours ? state.cheapestHours : nil
 
                 guard let price = allPrices.price(for: .now) else {
                     throw NSError(0, "Missing current pricePoint")
@@ -51,7 +52,8 @@ public struct PricePointTimelineProvider: TimelineProvider {
                     prices: prices,
                     limits: limits,
                     pricePresentation: pricePresentation,
-                    chartStyle: chartStyle
+                    chartStyle: chartStyle,
+                    cheapestHours: cheapestHours
                 )
                 Log("Provided a timeline snapshot")
                 completion(entry)
@@ -74,6 +76,7 @@ public struct PricePointTimelineProvider: TimelineProvider {
                 let pricePresentation = await state.pricePresentation
                 let chartStyle = await state.chartStyle
                 let chartViewMode = await state.chartViewMode
+                let cheapestHours = await state.showCheapestHours ? state.cheapestHours : nil
 
                 var entries: [Entry] = []
                 let currentHour = calendar.startOfHour(
@@ -96,7 +99,8 @@ public struct PricePointTimelineProvider: TimelineProvider {
                             prices: prices,
                             limits: limits,
                             pricePresentation: pricePresentation,
-                            chartStyle: chartStyle
+                            chartStyle: chartStyle,
+                            cheapestHours: cheapestHours
                         )
                     )
                 }

@@ -21,7 +21,8 @@ public struct WidgetView: View {
                 prices: entry.prices,
                 limits: entry.limits,
                 pricePresentation: entry.pricePresentation,
-                chartStyle: entry.chartStyle
+                chartStyle: entry.chartStyle,
+                cheapestHours: entry.cheapestHours
             )
         } else {
             self.entry = entry
