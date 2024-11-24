@@ -26,9 +26,9 @@ public struct PriceChartView: View {
     let cheapestHours: CheapestHours?
     let minHeight: CGFloat?
 
-    private let selectedPriceColor: Color = .gray.opacity(0.3)
-    private let cheapestHoursColor: Color = .purple.opacity(0.3)
-    private let cheapestHoursColorDarkened: Color = .purple.opacity(0.5)
+    private let selectedPriceColor: Color = .gray.opacity(0.5)
+    private let cheapestHoursColor: Color = .purple.opacity(0.5)
+    private let cheapestHoursColorDarkened: Color = .purple.opacity(0.7)
 
     @Binding var selectedPrice: PricePoint?
     var displayedPrice: PricePoint {
