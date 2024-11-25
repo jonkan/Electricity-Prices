@@ -9,10 +9,10 @@ import Foundation
 
 public extension AppState {
 
-    var cheapestHours: CheapestHours? {
+    func cheapestHours(for date: Date) -> CheapestHours? {
         // Filter prices that are shown in the chart and are not in the past.
         let filteredPrices = prices.filterForViewMode(chartViewMode)
-            .filter({ Calendar.current.startOfHour(for: .now) <= $0.date })
+            .filter({ Calendar.current.startOfHour(for: date) <= $0.date })
         return filteredPrices.cheapestHours(for: Int(cheapestHoursDuration))
     }
 

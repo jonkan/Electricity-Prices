@@ -35,7 +35,7 @@ struct MainView: View {
                 limits: state.priceLimits,
                 pricePresentation: state.pricePresentation,
                 chartStyle: state.chartStyle,
-                cheapestHours: state.showCheapestHours ? state.cheapestHours : nil
+                cheapestHours: state.showCheapestHours ? state.cheapestHours(for: currentPrice.date) : nil
             )
         } else if state.isFetching {
             ProgressView("Fetching prices...")

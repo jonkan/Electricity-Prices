@@ -36,12 +36,13 @@ public struct PricePointTimelineProvider: TimelineProvider {
         Task { @MainActor in
             do {
                 try await state.updatePricesIfNeeded()
-                let cheapestHours = state.showCheapestHours ? state.cheapestHours : nil
 
                 guard let price = state.prices.price(for: .now) else {
                     throw NSError(0, "Missing current pricePoint")
                 }
                 let prices = state.prices.filterForViewMode(state.chartViewMode, at: price.date, using: calendar)
+                let cheapestHours = state.showCheapestHours ? state.cheapestHours(for: price.date) : nil
+
                 let entry = PricePointTimelineEntry(
                     pricePoint: price,
                     prices: prices,
@@ -66,7 +67,6 @@ public struct PricePointTimelineProvider: TimelineProvider {
         Task { @MainActor in
             do {
                 try await state.updatePricesIfNeeded()
-                let cheapestHours = state.showCheapestHours ? state.cheapestHours : nil
 
                 var entries: [Entry] = []
                 let currentHour = calendar.startOfHour(
@@ -83,6 +83,8 @@ public struct PricePointTimelineProvider: TimelineProvider {
                         break
                     }
                     let prices = state.prices.filterForViewMode(state.chartViewMode, at: price.date, using: calendar)
+                    let cheapestHours = state.showCheapestHours ? state.cheapestHours(for: price.date) : nil
+
                     entries.append(
                         PricePointTimelineEntry(
                             pricePoint: price,

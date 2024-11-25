@@ -24,7 +24,7 @@ struct MainView: View {
                             limits: state.priceLimits,
                             pricePresentation: state.pricePresentation,
                             chartStyle: state.chartStyle,
-                            cheapestHours: state.showCheapestHours ? state.cheapestHours : nil,
+                            cheapestHours: state.showCheapestHours ? state.cheapestHours(for: currentPrice.date) : nil,
                             minChartHeight: 130
                         )
                     }
@@ -91,7 +91,7 @@ struct MainView: View {
     @ViewBuilder
     private var cheapestHoursRow: some View {
         if let currentPrice = state.currentPrice,
-           let cheapestHours = state.cheapestHours {
+           let cheapestHours = state.cheapestHours(for: currentPrice.date) {
             NavigationLink {
                 CheapestHoursView(
                     currentPrice: currentPrice,
