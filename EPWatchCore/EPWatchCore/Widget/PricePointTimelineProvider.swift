@@ -33,26 +33,21 @@ public struct PricePointTimelineProvider: TimelineProvider {
     }
 
     public func getSnapshot(in context: Context, completion: @escaping (Entry) -> Void) {
-        Task {
+        Task { @MainActor in
             do {
                 try await state.updatePricesIfNeeded()
-                let allPrices = await state.prices
-                let limits = await state.priceLimits
-                let pricePresentation = await state.pricePresentation
-                let chartStyle = await state.chartStyle
-                let chartViewMode = await state.chartViewMode
-                let cheapestHours = await state.showCheapestHours ? state.cheapestHours : nil
+                let cheapestHours = state.showCheapestHours ? state.cheapestHours : nil
 
-                guard let price = allPrices.price(for: .now) else {
+                guard let price = state.prices.price(for: .now) else {
                     throw NSError(0, "Missing current pricePoint")
                 }
-                let prices = allPrices.filterForViewMode(chartViewMode, at: price.date, using: calendar)
+                let prices = state.prices.filterForViewMode(state.chartViewMode, at: price.date, using: calendar)
                 let entry = PricePointTimelineEntry(
                     pricePoint: price,
                     prices: prices,
-                    limits: limits,
-                    pricePresentation: pricePresentation,
-                    chartStyle: chartStyle,
+                    limits: state.priceLimits,
+                    pricePresentation: state.pricePresentation,
+                    chartStyle: state.chartStyle,
                     cheapestHours: cheapestHours
                 )
                 Log("Provided a timeline snapshot")
@@ -68,21 +63,16 @@ public struct PricePointTimelineProvider: TimelineProvider {
     public func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
         let durationStart = Date()
         Log("Get timeline started")
-        Task {
+        Task { @MainActor in
             do {
                 try await state.updatePricesIfNeeded()
-                let allPrices = await state.prices
-                let limits = await state.priceLimits
-                let pricePresentation = await state.pricePresentation
-                let chartStyle = await state.chartStyle
-                let chartViewMode = await state.chartViewMode
-                let cheapestHours = await state.showCheapestHours ? state.cheapestHours : nil
+                let cheapestHours = state.showCheapestHours ? state.cheapestHours : nil
 
                 var entries: [Entry] = []
                 let currentHour = calendar.startOfHour(
                     for: isRunningForSnapshots() && use941ForSnapshots() ? .nine41 : .now
                 )
-                for price in allPrices {
+                for price in state.prices {
                     guard price.date >= currentHour else {
                         // Skip past timeline entries
                         continue
@@ -92,14 +82,14 @@ public struct PricePointTimelineProvider: TimelineProvider {
                     if entries.count >= 12 {
                         break
                     }
-                    let prices = allPrices.filterForViewMode(chartViewMode, at: price.date, using: calendar)
+                    let prices = state.prices.filterForViewMode(state.chartViewMode, at: price.date, using: calendar)
                     entries.append(
                         PricePointTimelineEntry(
                             pricePoint: price,
                             prices: prices,
-                            limits: limits,
-                            pricePresentation: pricePresentation,
-                            chartStyle: chartStyle,
+                            limits: state.priceLimits,
+                            pricePresentation: state.pricePresentation,
+                            chartStyle: state.chartStyle,
                             cheapestHours: cheapestHours
                         )
                     )
