@@ -89,7 +89,7 @@ public struct PricePointTimelineEntry: TimelineEntry {
         let price = prices[10]
         let entry = PricePointTimelineEntry(
             pricePoint: price,
-            prices: prices.filterForViewMode(.nowAndAllAhead, at: price.date),
+            prices: prices.filterForViewMode(.nowAndUpcoming, at: price.date),
             limits: .mocked,
             pricePresentation: .init(),
             chartStyle: .bar
@@ -102,7 +102,7 @@ public struct PricePointTimelineEntry: TimelineEntry {
         let price = prices[14]
         let entry = PricePointTimelineEntry(
             pricePoint: price,
-            prices: prices.filterForViewMode(.nowAndAllAhead, at: price.date),
+            prices: prices.filterForViewMode(.nowAndUpcoming, at: price.date),
             limits: .mocked,
             pricePresentation: .init(),
             chartStyle: .bar

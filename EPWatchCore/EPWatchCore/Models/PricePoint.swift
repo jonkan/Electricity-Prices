@@ -240,7 +240,7 @@ public extension Array where Element == PricePoint {
         case .todayAndTomorrow:
             let nextDay = calendar.date(byAdding: .day, value: 1, to: date)!
             return filterInSameDaysAs([date, nextDay], using: calendar)
-        case .nowAndAllAhead:
+        case .nowAndUpcoming:
             return filter({ calendar.startOfHour(for: date) <= $0.date })
         }
     }

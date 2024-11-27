@@ -37,7 +37,7 @@ extension AppState {
         s.priceArea = Region.sweden.priceAreas.first
         s.prices = .mockPricesWithTomorrow
         s.exchangeRate = .mockedSEK
-        s.chartViewMode = .nowAndAllAhead
+        s.chartViewMode = .nowAndUpcoming
         return s
     }()
 
