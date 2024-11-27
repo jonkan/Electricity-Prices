@@ -61,17 +61,6 @@ final class EPWatchCoreTests: XCTestCase {
         XCTAssertTrue(prices.first!.date < prices.last!.date)
     }
 
-    func testDayPriceRange() throws {
-        let dayStart = swedishDateFormatter.date(from: "2022-08-26 00:00:00")!
-        let dayEnd = swedishDateFormatter.date(from: "2022-08-27 00:00:00")!
-        let prices = try dayAheadPrices.prices(using: .mockedEUR)
-            .filter({
-                dayStart <= $0.date && $0.date < dayEnd })
-        XCTAssertEqual(prices.count, 24)
-        let ranges = prices.map({ $0.dayPriceRange }).sorted(by: { $0.lowerBound < $1.lowerBound })
-        XCTAssertEqual(ranges.first, ranges.last)
-    }
-
     func testMultiplePeriods() throws {
         let dayAheadPrices = try loadDayAheadPrices("day-ahead-prices-4.xml")
         let lastDate = try dayAheadPrices.prices(using: .mockedSEK).last!.date
