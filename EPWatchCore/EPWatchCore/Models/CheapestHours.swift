@@ -38,6 +38,7 @@ public extension Array where Element == PricePoint {
 
         var minCost: Double = .greatestFiniteMagnitude
         var start: Date = .distantPast
+        let duration = Swift.max(1, Swift.min(duration, count))
         let length = Swift.max(0, count - duration)
 
         for i in 0...length {
