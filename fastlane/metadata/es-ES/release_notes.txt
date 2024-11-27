@@ -1,2 +1,3 @@
-- Mejora en la apariencia de las etiquetas de los ejes en pequeños widgets.
+- Un nuevo modo de visualización "Ahora y Próximamente", que solo muestra los próximos precios.
+- Ahora también se muestran las horas más baratas en los widgets.
 - Correcciones de errores y mejoras.

@@ -1,2 +1,3 @@
-- Improved appearance of axis labels in small widgets.
+- A new display mode "Now and Upcoming", which only shows upcoming prices.
+- The cheapest hours are now shown in widgets.
 - Bug fixes and improvements.

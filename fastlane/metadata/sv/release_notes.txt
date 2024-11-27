@@ -1,2 +1,3 @@
-- Förbättrat utseende av axeletiketter i små widgets.
+- Ett nytt visningsläge "Nu och kommande", som bara visar kommande priser.
+- Nu visas även billigaste timmarna i widgets.
 - Bugfixar och förbättringar.

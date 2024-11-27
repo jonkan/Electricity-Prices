@@ -1,2 +1,3 @@
-- Verbesserte Darstellung der Achsenbeschriftungen in kleinen Widgets.
+- Ein neuer Anzeigemodus "Jetzt und Kommend", der nur kommende Preise anzeigt.
+- Jetzt werden auch die günstigsten Stunden in Widgets angezeigt.
 - Fehlerbehebungen und Verbesserungen.

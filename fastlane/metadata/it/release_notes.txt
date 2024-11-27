@@ -1,2 +1,3 @@
-- Migliorato l'aspetto delle etichette dell'asse nei piccoli widget.
-- Fix di bug e miglioramenti.
+- Una nuova modalità di visualizzazione "Ora e Prossimamente", che mostra solo i prezzi futuri.
+- Ora vengono mostrate anche le ore più economiche nei widget.
+- Correzioni di bug e miglioramenti.

@@ -1,2 +1,3 @@
-- Verbeterde weergave van aslabels in kleine widgets.
+- Een nieuwe weergavemodus "Nu en komende", die alleen de komende prijzen toont.
+- De goedkoopste uren worden nu ook weergegeven in widgets.
 - Bugfixes en verbeteringen.

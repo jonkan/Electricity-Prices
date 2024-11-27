@@ -1,2 +1,3 @@
-- Parannettu akselietikettien ulkoasua pienissä widgeteissä.
-- Virhekorjauksia ja parannuksia.
+- Uusi näyttötila "Nyt ja tulevat", joka näyttää vain tulevat hinnat.
+- Nyt widgeteissä näkyvät myös edullisimmat tunnit.
+- Virheenkorjauksia ja parannuksia.

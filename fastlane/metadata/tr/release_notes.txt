@@ -1,2 +1,3 @@
-- Küçük widget'larda eksen etiketlerinin görünümünü iyileştirdi.
+- Yeni görüntüleme modu “Şimdi ve Yakında”, sadece yaklaşan fiyatları gösterir.
+- Artık widget'larda en ucuz saatler de görüntüleniyor.
 - Hata düzeltmeleri ve iyileştirmeler.

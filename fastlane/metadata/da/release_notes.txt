@@ -1,2 +1,3 @@
-- Forbedret udseende af akselmærkater i små widgets.
-- Bugfixer og forbedringer.
+- Et nyt visningstilstand "Nu og kommende", der kun viser kommende priser.
+- Nu vises også de billigste timer i widgets.
+- Fejlrettelser og forbedringer.
