@@ -328,7 +328,11 @@ public class AppState: ObservableObject {
             Log("Begin updating prices")
             prices = try await downloadPrices()
             currentPrice = prices.price(for: .now)
-            Log("Success updating prices")
+            if currentPrice == nil {
+                throw UserPresentableError.noCurrentPrice
+            } else {
+                Log("Success updating prices")
+            }
         }
         defer {
             updateTask = nil

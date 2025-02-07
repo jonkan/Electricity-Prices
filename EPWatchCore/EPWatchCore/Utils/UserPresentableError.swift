@@ -9,6 +9,7 @@ import Foundation
 
 public enum UserPresentableError: Error {
     case noData
+    case noCurrentPrice
     case noExchangeRate(_ error: Error)
     case unknown(_ error: Error)
 
@@ -20,6 +21,8 @@ public enum UserPresentableError: Error {
         switch self {
         case .noData:
             return String(localized: "Unfortunately no data was found for the selected price area.", bundle: .module)
+        case .noCurrentPrice:
+            return String(localized: "Failed to fetch the current price.", bundle: .module)
         case .noExchangeRate:
             return String(localized: "Failed to fetch an up-to-date exchange rate.", bundle: .module)
         case .unknown:
