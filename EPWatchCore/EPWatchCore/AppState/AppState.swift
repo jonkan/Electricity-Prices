@@ -105,8 +105,12 @@ public class AppState: ObservableObject {
         set { allPriceLimits[currency] = newValue }
     }
 
-    @AppStorageCodable("ExchangeRate", storage: .appGroup)
-    public var exchangeRate: ExchangeRate? = nil
+    @AppStorageCodable("ExchangeRates", storage: .appGroup)
+    var exchangeRates: [Currency: ExchangeRate] = [:]
+
+    public var exchangeRate: ExchangeRate? {
+        exchangeRates[currency]
+    }
 
     // See AppState+Insights.swift
     @AppStorage("CheapestHoursDuration", store: .appGroup)
@@ -197,7 +201,7 @@ public class AppState: ObservableObject {
             chartStyle = .bar
             chartViewMode = .today
             currency = Region.current?.suggestedCurrency ?? .EUR
-            exchangeRate = .mockedEUR(to: currency)
+            exchangeRates[currency] = .mockedEUR(to: currency)
             currencyPresentation = .automatic
             invalidateAndUpdatePrices()
         } else if !isSwiftUIPreview() {
@@ -360,7 +364,7 @@ public class AppState: ObservableObject {
         do {
             let res = try await ForexAPI.shared.download(from: .EUR, to: currency)
             Log("Success downloading exchange rate")
-            exchangeRate = res
+            exchangeRates[res.to] = res
             return res
         } catch {
             throw UserPresentableError.noExchangeRate(error)

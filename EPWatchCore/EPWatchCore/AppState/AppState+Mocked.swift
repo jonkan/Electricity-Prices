@@ -14,7 +14,7 @@ extension AppState {
         s.region = .sweden
         s.priceArea = Region.sweden.priceAreas.first
         s.prices = .mockPricesWithTomorrow
-        s.exchangeRate = .mockedSEK
+        s.exchangeRates = [.SEK: .mockedSEK]
         s.chartViewMode = .todayAndComingNight
         return s
     }()
@@ -25,7 +25,7 @@ extension AppState {
         s.region = .sweden
         s.priceArea = Region.sweden.priceAreas.first
         s.prices = .mockPricesWithTomorrow
-        s.exchangeRate = .mockedSEK
+        s.exchangeRates = [.SEK: .mockedSEK]
         s.chartViewMode = .todayAndTomorrow
         return s
     }()
@@ -36,7 +36,7 @@ extension AppState {
         s.region = .sweden
         s.priceArea = Region.sweden.priceAreas.first
         s.prices = .mockPricesWithTomorrow
-        s.exchangeRate = .mockedSEK
+        s.exchangeRates = [.SEK: .mockedSEK]
         s.chartViewMode = .nowAndUpcoming
         return s
     }()
