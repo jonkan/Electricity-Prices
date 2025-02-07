@@ -16,6 +16,7 @@ public struct AppStateDTO: Codable, Equatable, Sendable {
     let currency: Currency
     let pricePresentation: PricePresentation
     let chartStyle: PriceChartStyle
+    let chartViewMode: PriceChartViewMode
     let allPriceLimits: [Currency: PriceLimits]
     let exchangeRates: [Currency: ExchangeRate]
     let cheapestHoursDuration: Double
@@ -48,6 +49,7 @@ extension AppState {
             currency: currency,
             pricePresentation: pricePresentation,
             chartStyle: chartStyle,
+            chartViewMode: chartViewMode,
             allPriceLimits: allPriceLimits,
             exchangeRates: exchangeRates,
             cheapestHoursDuration: cheapestHoursDuration,
@@ -62,6 +64,7 @@ extension AppState {
         currency = dto.currency
         pricePresentation = dto.pricePresentation
         chartStyle = dto.chartStyle
+        chartViewMode = dto.chartViewMode
         allPriceLimits = dto.allPriceLimits
         exchangeRates = dto.exchangeRates
         cheapestHoursDuration = dto.cheapestHoursDuration

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum PriceChartViewMode: String, Codable, CaseIterable, Identifiable, Equatable {
+public enum PriceChartViewMode: String, Codable, CaseIterable, Identifiable, Equatable, Sendable {
     case today
     case todayAndComingNight
     case todayAndTomorrow
