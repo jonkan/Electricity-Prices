@@ -27,8 +27,10 @@ public struct PriceChartView: View {
     let minHeight: CGFloat?
 
     private let selectedPriceColor: Color = .gray.opacity(0.5)
-    private let cheapestHoursColor: Color = .purple.opacity(0.5)
-    private let cheapestHoursColorDarkened: Color = .purple.opacity(0.7)
+    private let cheapestHoursUnderlineColor: Color = .purple
+    private var cheapestHoursUnderlineWidth: CGFloat {
+        return cheapestHours != nil ? 4 : 0
+    }
 
     @Binding var selectedPrice: PricePoint?
     var displayedPrice: PricePoint {
@@ -87,7 +89,8 @@ public struct PriceChartView: View {
     }
 
     private func lineChart(_ geometry: GeometryProxy, interpolated: Bool) -> some View {
-        Chart {
+        let barWidth = geometry.size.width / CGFloat(prices.count + 1)
+        return Chart {
             ForEach(prices, id: \.date) { p in
                 LineMark(
                     x: .value("", p.date),
@@ -106,34 +109,26 @@ public struct PriceChartView: View {
                 currentPricePointMark(displayedPrice.date)
             } else {
                 // A bar the width of an hour
-                let barWidth = geometry.size.width / (CGFloat(prices.count) + 1)
                 currentPriceBarMark(barWidth: barWidth)
                 // Show the point in the middle of the hour
                 let hourCenterDate = displayedPrice.date.addingTimeInterval(30*60)
                 currentPricePointMark(hourCenterDate)
             }
-            cheapestHoursRectangleMark
             priceLimitLines
         }
-    }
-
-    @ChartContentBuilder
-    private var cheapestHoursRectangleMark: some ChartContent {
-        if let cheapestHours {
-            RectangleMark(
-                xStart: .value("", cheapestHours.start),
-                xEnd: .value("", cheapestHours.end)
-            )
-            .foregroundStyle(cheapestHoursColor)
-            .cornerRadius(4)
+        .chartYScale(range: .plotDimension(startPadding: cheapestHoursUnderlineWidth))
+        .chartBackground { chart in
+            cheapestHoursUnderline(chart: chart, geometry: geometry, barWidth: barWidth)
         }
     }
 
     private func currentPriceRuleMark(_ date: Date) -> some ChartContent {
         RuleMark(
-            x: .value("", date)
+            x: .value("", date),
+            yStart: cheapestHoursUnderlineWidth
         )
         .lineStyle(StrokeStyle(lineWidth: 1.2, dash: [3, 6]))
+        .offset(y: -cheapestHoursUnderlineWidth)
         .foregroundStyle(.gray)
     }
 
@@ -164,10 +159,9 @@ public struct PriceChartView: View {
     }
 
     private func barChart(_ geometry: GeometryProxy) -> some View {
-        let barWidth = geometry.size.width / (CGFloat(prices.count)*1.5+1)
+        let barWidth = geometry.size.width / (CGFloat(prices.count-1)*1.5+1)
         return Chart {
             currentPriceBarMark(barWidth: barWidth)
-            cheapestHoursBarMarks(barWidth: barWidth)
 
             ForEach(prices, id: \.date) { p in
                 BarMark(
@@ -182,15 +176,14 @@ public struct PriceChartView: View {
             priceLimitLines
         }
         .chartXScale(range: .plotDimension(endPadding: barWidth))
+        .chartYScale(range: .plotDimension(startPadding: cheapestHoursUnderlineWidth))
+        .chartBackground { chart in
+            cheapestHoursUnderline(chart: chart, geometry: geometry, barWidth: barWidth)
+        }
     }
 
     private func barColor(for pricePoint: PricePoint) -> Color {
-        var color: Color
-        if cheapestHours?.includes(pricePoint) == true {
-            color = cheapestHoursColorDarkened
-        } else {
-            color = limits.color(of: pricePoint.price)
-        }
+        var color = limits.color(of: pricePoint.price)
         if pricePoint == displayedPrice, #available(iOS 18.0, *), #available(watchOS 11.0, *) {
             color = color.mix(with: .black, by: 0.3)
         }
@@ -200,23 +193,33 @@ public struct PriceChartView: View {
     private func currentPriceBarMark(barWidth: CGFloat) -> some ChartContent {
         BarMark(
             x: .value("", displayedPrice.date),
+            yStart: cheapestHoursUnderlineWidth,
             width: .fixed(barWidth)
         )
-        .offset(x: barWidth / 2)
+        .offset(x: barWidth / 2, y: -cheapestHoursUnderlineWidth)
         .foregroundStyle(selectedPriceColor)
     }
 
-    @ChartContentBuilder
-    private func cheapestHoursBarMarks(barWidth: CGFloat) -> some ChartContent {
-        if let cheapestHours {
-            ForEach(cheapestHours.priceDates, id: \.self) { date in
-                BarMark(
-                    x: .value("", date),
-                    width: .fixed(barWidth)
-                )
-                .offset(x: barWidth / 2)
+    @ViewBuilder
+    private func cheapestHoursUnderline(chart: ChartProxy, geometry: GeometryProxy, barWidth: CGFloat) -> some View {
+        if cheapestHours?.priceDates.isEmpty == false,
+           let startX = chart.position(forX: cheapestHours!.priceDates.first!),
+           let lastX = chart.position(forX: cheapestHours!.priceDates.last!) {
+
+            let endX = lastX + barWidth
+            let y = chart.plotSize.height
+
+            Path { path in
+                path.move(to: CGPoint(x: startX, y: y))
+                path.addLine(to: CGPoint(x: endX, y: y))
             }
-            .foregroundStyle(cheapestHoursColor)
+            .stroke(
+                cheapestHoursUnderlineColor,
+                style: StrokeStyle(
+                    lineWidth: cheapestHoursUnderlineWidth,
+                    lineCap: .round
+                )
+            )
         }
     }
 
