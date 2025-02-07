@@ -124,7 +124,7 @@ public class AppState: ObservableObject {
     }
 
     @AppStorage("ShowCheapestHours", store: .appGroup)
-    public var showCheapestHours: Bool = true {
+    public var showCheapestHours: Bool = false {
         didSet {
             guard oldValue != showCheapestHours else { return }
             Log("Show cheapest hours did change: \(showCheapestHours)")
