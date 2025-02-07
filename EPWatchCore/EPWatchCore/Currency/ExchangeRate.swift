@@ -11,6 +11,7 @@ public struct ExchangeRate: Codable, Equatable, Sendable {
     static private let dateFormatter: DateFormatter = {
         let df = DateFormatter()
         df.dateFormat = "yyyy-MM-dd"
+        df.timeZone = TimeZone(identifier: "UTC")
         return df
     }()
 
@@ -19,22 +20,46 @@ public struct ExchangeRate: Codable, Equatable, Sendable {
     public let to: Currency
     public let rate: Double // 10.700151
 
-    var parsedDate: Date? {
+    private var parsedDate: Date? {
         Self.dateFormatter.date(from: date)
     }
 
-    var isUpToDate: Bool {
-        let d = parsedDate ?? .distantPast
-        let friday = 6 // Doc: Sunday is 1
-        let cal = Calendar.current
-        return (
-            cal.isDateInToday(d) ||
-            (
-                cal.isDateInWeekend(.now) &&
-                cal.component(.weekday, from: d) == friday
-            )
-        )
+    /// This is a simple best-effort check to answer if this exchange rate is the latest one available.
+    /// E.g. on a Monday, before 16:00 CET, the most recent exchange rate is from last Friday
+    /// (provided that wasn't a holiday, which we don't handle).
+    /// See https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html
+    func isUpToDate(at date: Date = .now) -> Bool {
+        let exchangeRateDate = parsedDate ?? .distantPast
+        let calendar = Calendar.current
+        let daysAgo = calendar.dateComponents([.day], from: exchangeRateDate, to: date).day ?? .max
+        let fromAFriday = calendar.component(.weekday, from: exchangeRateDate) == 6 // Doc: Sunday is 1
+        let fromLastFriday = fromAFriday && daysAgo < 7
+        let dateIsBefore16CET = date < date.atCET(hour: 16)
+
+        // If it's from today it's up-to-date.
+        if daysAgo <= 0 {
+            return true
+        }
+
+        // If it's before 16:00 CET, the most recent exchange rate is from yesterday.
+        if dateIsBefore16CET && daysAgo <= 1 {
+            return true
+        }
+
+        // If it's Saturday or Sunday, the most recent exchange rate is from last friday.
+        if  fromLastFriday && daysAgo <= 2 {
+            return true
+        }
+
+        // If it's Monday before 16:00 CET, the most recent exchange rate is from last friday.
+        if fromLastFriday && daysAgo <= 3 && dateIsBefore16CET {
+            return true
+        }
+
+        // There's more corner cases that we don't care about here.
+        return false
     }
+
 }
 
 extension ExchangeRate {

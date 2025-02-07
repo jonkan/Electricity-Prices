@@ -355,7 +355,7 @@ public class AppState: ObservableObject {
 
     public func currentExchangeRate() async throws -> ExchangeRate {
         if let exchangeRate = exchangeRate,
-           exchangeRate.isUpToDate,
+           exchangeRate.isUpToDate(),
            exchangeRate.from == .EUR,
            exchangeRate.to == currency {
             return exchangeRate

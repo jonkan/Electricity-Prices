@@ -17,4 +17,12 @@ public extension Date {
         return calendar.component(component, from: self)
     }
 
+    func atCET(hour: Int, in calendar: Calendar = .current) -> Date {
+        var calendar = calendar
+        calendar.timeZone = TimeZone(identifier: "CET")!
+        var components = calendar.dateComponents([.year, .month, .day], from: self)
+        components.hour = hour
+        return calendar.date(from: components)!
+    }
+
 }
