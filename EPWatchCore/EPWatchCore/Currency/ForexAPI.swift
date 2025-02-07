@@ -29,7 +29,7 @@ class ForexAPI {
                 return ExchangeRate(date: startPeriod, from: from, to: to, rate: 1)
             }
 
-            var components = URLComponents(string: "https://sdw-wsrest.ecb.europa.eu/service/data/EXR/D.\(to).\(from).SP00.A")!
+            var components = URLComponents(string: "https://data-api.ecb.europa.eu/service/data/EXR/D.\(to).\(from).SP00.A")!
             components.queryItems = [
                 URLQueryItem(name: "format", value: "csvdata"),
                 URLQueryItem(name: "startPeriod", value: startPeriod)
