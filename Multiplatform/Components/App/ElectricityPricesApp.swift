@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import EPWatchCore
+import Core
 
 @main
 struct ElectricityPricesApp: App {

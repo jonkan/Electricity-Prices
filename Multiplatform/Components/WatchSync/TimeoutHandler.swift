@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import EPWatchCore
+import Core
 
 @MainActor
 class TimeoutHandler {

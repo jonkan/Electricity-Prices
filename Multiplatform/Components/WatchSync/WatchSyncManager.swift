@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import EPWatchCore
+import Core
 import Combine
 import WatchConnectivity
 import AsyncAlgorithms

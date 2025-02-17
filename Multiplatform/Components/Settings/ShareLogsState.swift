@@ -7,7 +7,7 @@
 
 import Foundation
 import WatchConnectivity
-import EPWatchCore
+import Core
 import SwiftUI
 import Combine
 

@@ -7,7 +7,7 @@
 
 import SwiftUI
 import StoreKit
-import EPWatchCore
+import Core
 
 enum StoreError: LocalizedError {
     case failedVerification

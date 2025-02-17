@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import EPWatchCore
+import Core
 
 struct PriceAdjustmentSettingsView: View {
 

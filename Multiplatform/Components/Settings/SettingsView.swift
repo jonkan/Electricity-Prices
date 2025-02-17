@@ -1,12 +1,12 @@
 //
 //  SettingsView.swift
-//  EPWatchCore
+//  Core
 //
 //  Created by Jonas Bromö on 2022-09-16.
 //
 
 import SwiftUI
-import EPWatchCore
+import Core
 
 struct SettingsView: View {
 

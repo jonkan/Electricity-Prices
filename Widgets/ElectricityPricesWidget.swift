@@ -7,7 +7,7 @@
 
 import WidgetKit
 import SwiftUI
-import EPWatchCore
+import Core
 
 struct ElectricityPricesWidget: Widget {
 #if os(watchOS)

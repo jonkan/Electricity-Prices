@@ -8,7 +8,7 @@
 
 import SwiftUI
 import StoreKit
-import EPWatchCore
+import Core
 
 struct PurchaseView: View {
 
