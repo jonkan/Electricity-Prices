@@ -28,20 +28,20 @@ public extension PriceLimits {
         // Make sure lowStop + fadeSize <= highStop - fadeSize
         let fadeSize = min(0.1, (highStop-lowStop)/2)
         return [
-            .init(color: .green, location: lowStop - fadeSize),
-            .init(color: .orange, location: lowStop + fadeSize),
-            .init(color: .orange, location: highStop - fadeSize),
-            .init(color: .red, location: highStop + fadeSize)
+            .init(color: Color(.chartLow), location: lowStop - fadeSize),
+            .init(color: Color(.chartMedium), location: lowStop + fadeSize),
+            .init(color: Color(.chartMedium), location: highStop - fadeSize),
+            .init(color: Color(.chartHigh), location: highStop + fadeSize)
         ]
     }
 
     func color(of price: Double) -> Color {
         if price >= high {
-            return .red
+            return Color(.chartHigh)
         } else if price >= low {
-            return .orange
+            return Color(.chartMedium)
         } else {
-            return .green
+            return Color(.chartLow)
         }
     }
 }

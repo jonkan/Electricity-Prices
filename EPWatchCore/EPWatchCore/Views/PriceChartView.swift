@@ -26,8 +26,6 @@ public struct PriceChartView: View {
     let cheapestHours: CheapestHours?
     let minHeight: CGFloat?
 
-    private let selectedPriceColor: Color = .gray.opacity(0.5)
-    private let cheapestHoursUnderlineColor: Color = .purple
     private var cheapestHoursUnderlineWidth: CGFloat {
         return cheapestHours != nil ? 4 : 0
     }
@@ -129,7 +127,7 @@ public struct PriceChartView: View {
         )
         .lineStyle(StrokeStyle(lineWidth: 1.2, dash: [3, 6]))
         .offset(y: -cheapestHoursUnderlineWidth)
-        .foregroundStyle(.gray)
+        .foregroundStyle(Color(.chartSelectedRule))
     }
 
     @ChartContentBuilder
@@ -197,7 +195,7 @@ public struct PriceChartView: View {
             width: .fixed(barWidth)
         )
         .offset(x: barWidth / 2, y: -cheapestHoursUnderlineWidth)
-        .foregroundStyle(selectedPriceColor)
+        .foregroundStyle(Color(.chartSelectedBar))
     }
 
     @ViewBuilder
@@ -214,7 +212,7 @@ public struct PriceChartView: View {
                 path.addLine(to: CGPoint(x: endX, y: y))
             }
             .stroke(
-                cheapestHoursUnderlineColor,
+                Color(.chartUnderlineCheapestHours),
                 style: StrokeStyle(
                     lineWidth: cheapestHoursUnderlineWidth,
                     lineCap: .round
