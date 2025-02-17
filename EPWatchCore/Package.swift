@@ -6,8 +6,8 @@ let package = Package(
     name: "EPWatchCore",
     defaultLocalization: "en",
     platforms: [
-        .iOS("16.0"),
-        .watchOS("9.0")
+        .iOS("17.0"),
+        .watchOS("10.0")
     ],
     products: [
         .library(

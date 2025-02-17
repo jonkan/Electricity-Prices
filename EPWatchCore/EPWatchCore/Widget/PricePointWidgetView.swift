@@ -54,7 +54,9 @@ public struct WidgetView: View {
                 PricePointCircularWidgetView(entry: entry)
             }
         }
-        .widgetBackground(backgroundView: Color.clear)
+        .containerBackground(for: .widget) {
+            Color.clear
+        }
     }
 
 }

@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-@available(iOS 10.0, *)
 class SelectionHaptics {
 
     static let shared = SelectionHaptics()

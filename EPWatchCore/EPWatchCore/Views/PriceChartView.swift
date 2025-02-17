@@ -241,8 +241,11 @@ public struct PriceChartView: View {
     private func dragGesture(chart: ChartProxy, geometry: GeometryProxy) -> some Gesture {
         DragGesture()
             .onChanged { value in
-                let origin = geometry[chart.plotAreaFrame].origin
-                let size = geometry[chart.plotAreaFrame].size
+                guard let plotFrame = chart.plotFrame else {
+                    return
+                }
+                let origin = geometry[plotFrame].origin
+                let size = geometry[plotFrame].size
                 let location = CGPoint(
                     x: max(origin.x, min(value.location.x - origin.x, size.width)),
                     y: max(origin.y, min(value.location.y - origin.y, size.height))
@@ -302,7 +305,6 @@ public struct PriceChartView: View {
 
 // MARK: - Preview
 
-@available(iOS 17, watchOS 10, *)
 #Preview {
     @Previewable @State var selectedPrice: PricePoint?
     @Previewable @State var viewMode: PriceChartViewMode = .todayAndComingNight
