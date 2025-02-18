@@ -1,3 +1,2 @@
-- Una nuova modalità di visualizzazione "Ora e Prossimamente", che mostra solo i prezzi futuri.
-- Ora vengono mostrate anche le ore più economiche nei widget.
+- Le ore più economiche nel grafico ora sono contrassegnate in modo più sottile con una sottolineatura.
 - Correzioni di bug e miglioramenti.

@@ -1,3 +1,2 @@
-- Yeni görüntüleme modu “Şimdi ve Yakında”, sadece yaklaşan fiyatları gösterir.
-- Artık widget'larda en ucuz saatler de görüntüleniyor.
+- Grafikde en ucuz saatler artık daha ince bir alt çizgi ile işaretleniyor.
 - Hata düzeltmeleri ve iyileştirmeler.

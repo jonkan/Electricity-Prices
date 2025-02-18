@@ -1,3 +1,2 @@
-- Un nouveau mode d'affichage "Maintenant et à venir", qui n'affiche que les prix à venir.
-- Les heures les moins chères sont également affichées dans les widgets.
-- Corrections de bugs et améliorations.
+- Les heures les moins chères dans le graphique sont désormais mises en évidence de manière plus subtile par un soulignement.
+- Corrections de bogues et améliorations.

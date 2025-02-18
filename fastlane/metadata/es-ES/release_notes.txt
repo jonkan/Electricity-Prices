@@ -1,3 +1,2 @@
-- Un nuevo modo de visualización "Ahora y Próximamente", que solo muestra los próximos precios.
-- Ahora también se muestran las horas más baratas en los widgets.
+- Las horas más baratas en el diagrama ahora se marcan de manera más sutil con un subrayado.
 - Correcciones de errores y mejoras.

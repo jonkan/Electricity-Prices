@@ -1,3 +1,2 @@
-- Et nyt visningstilstand "Nu og kommende", der kun viser kommende priser.
-- Nu vises også de billigste timer i widgets.
+- De billigste timer i diagrammet markeres nu mere subtilt med en understregning.
 - Fejlrettelser og forbedringer.

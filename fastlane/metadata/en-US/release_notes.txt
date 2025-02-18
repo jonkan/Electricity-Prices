@@ -1,3 +1,2 @@
-- A new display mode "Now and Upcoming", which only shows upcoming prices.
-- The cheapest hours are now also displayed in widgets.
+- The cheapest hours in the chart are now marked more subtly with an underline.
 - Bug fixes and improvements.

@@ -1,3 +1,2 @@
-- Uusi näyttötila "Nyt ja tulevat", joka näyttää vain tulevat hinnat.
-- Nyt widgeteissä näkyvät myös edullisimmat tunnit.
+- Halvimmat tunnit kaaviossa korostetaan nyt hienovaraisemmin alleviivauksen avulla.
 - Virheenkorjauksia ja parannuksia.

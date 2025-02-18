@@ -1,3 +1,2 @@
-- Een nieuwe weergavemodus "Nu en komende", die alleen de komende prijzen toont.
-- De goedkoopste uren worden nu ook weergegeven in widgets.
+- De goedkoopste uren in de grafiek worden nu subtieler gemarkeerd met een onderstreping.
 - Bugfixes en verbeteringen.

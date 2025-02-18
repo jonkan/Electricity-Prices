@@ -1,3 +1,2 @@
-- Ett nytt visningsläge "Nu och kommande", som bara visar kommande priser.
-- Nu visas även billigaste timmarna i widgets.
-- Bugfixar och förbättringar.
+- De billigaste timmarna i diagrammet markeras nu mer subtilt med en understrykning.
+- Buggfixar och förbättringar.

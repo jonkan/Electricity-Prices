@@ -1,3 +1,2 @@
-- Ein neuer Anzeigemodus "Jetzt und Kommend", der nur kommende Preise anzeigt.
-- Jetzt werden auch die günstigsten Stunden in Widgets angezeigt.
+- Die günstigsten Stunden im Diagramm werden jetzt subtiler mit einer Unterstreichung hervorgehoben.
 - Fehlerbehebungen und Verbesserungen.
