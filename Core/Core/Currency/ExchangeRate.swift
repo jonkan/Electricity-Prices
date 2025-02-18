@@ -30,7 +30,8 @@ public struct ExchangeRate: Codable, Equatable, Sendable {
     /// See https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html
     func isUpToDate(at date: Date = .now) -> Bool {
         let exchangeRateDate = parsedDate ?? .distantPast
-        let calendar = Calendar.current
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = TimeZone(identifier: "CET")!
         let daysAgo = calendar.dateComponents([.day], from: exchangeRateDate, to: date).day ?? .max
         let fromAFriday = calendar.component(.weekday, from: exchangeRateDate) == 6 // Doc: Sunday is 1
         let fromLastFriday = fromAFriday && daysAgo < 7
