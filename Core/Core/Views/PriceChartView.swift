@@ -172,11 +172,39 @@ public struct PriceChartView: View {
                 BarMark(
                     x: .value("", p.date),
                     y: .value("", pricePresentation.adjustedPrice(p)),
-                    width: .fixed(barWidth)
+                    width: .fixed(barWidth),
+                    stacking: .unstacked
                 )
-                .offset(x: barWidth / 2)
-                .foregroundStyle(barColor(for: p))
+                .foregroundStyle(
+                    chartStyle == .bar(.dimmed)
+                    ? barColor(for: p).dimmed()
+                    : barColor(for: p)
+                )
+
+                // Show a divider between the spot and adjusted price by
+                // overlaying a background colored bar, then a regular bar.
+                if pricePresentation.adjustment.isEnabled, chartStyle != .bar(.off) {
+                    BarMark(
+                        x: .value("", p.date),
+                        y: .value("", pricePresentation.spotPrice(p)),
+                        width: .fixed(barWidth),
+                        stacking: .unstacked
+                    )
+                    .offset(y: -2)
+                    .foregroundStyle(.background.secondary)
+                    .cornerRadius(0)
+
+                    BarMark(
+                        x: .value("", p.date),
+                        y: .value("", pricePresentation.spotPrice(p)),
+                        width: .fixed(barWidth),
+                        stacking: .unstacked
+                    )
+                    .foregroundStyle(barColor(for: p))
+                    .cornerRadius(0)
+                }
             }
+            .offset(x: barWidth / 2)
 
             priceLimitLines
         }
@@ -247,6 +275,7 @@ public struct PriceChartView: View {
 #Preview {
     @Previewable @State var selectedPrice: PricePoint?
     @Previewable @State var viewMode: PriceChartViewMode = .todayAndComingNight
+    @Previewable @State var priceAdjustmentStyle: PriceAdjustmentStyle = .dimmed
 
     let prices: [PricePoint] = .mockedPricesWithTomorrow2.filterForViewMode(viewMode)
     let currentPrice = prices[21]
@@ -258,14 +287,14 @@ public struct PriceChartView: View {
                     selectedPrice?.date ?? currentPrice.date,
                     format: .dateTime.hour(.twoDigits(amPM: .abbreviated))
                 )
-                ForEach(PriceChartStyle.allCases) { style in
+                ForEach(PriceChartStyle.mainStyles) { style in
                     PriceChartView(
                         selectedPrice: $selectedPrice,
                         currentPrice: currentPrice,
                         prices: prices,
                         limits: .mocked,
-                        pricePresentation: .mocked,
-                        chartStyle: style,
+                        pricePresentation: .mockedWithAdjustments,
+                        chartStyle: style.isBar ? .bar(priceAdjustmentStyle) : style,
                         showPriceLimitsLines: false,
                         cheapestHours: prices.cheapestHours(for: 4),
                         minHeight: 130
@@ -274,17 +303,37 @@ public struct PriceChartView: View {
                 }
             }
         } header: {
-            Picker(selection: $viewMode) {
-                ForEach(PriceChartViewMode.allCases) {
-                    Text($0.title)
-                        .tag($0)
+            VStack {
+                Picker(selection: $viewMode) {
+                    ForEach(PriceChartViewMode.allCases) {
+                        Text($0.title)
+                            .tag($0)
+                    }
+                } label: {
+                    EmptyView()
                 }
-            } label: {
-                EmptyView()
+                Picker(selection: $priceAdjustmentStyle) {
+                    ForEach(PriceAdjustmentStyle.allCases) {
+                        Text($0.title)
+                            .tag($0)
+                    }
+                } label: {
+                    EmptyView()
+                }
             }
-    #if !os(watchOS)
+#if !os(watchOS)
             .pickerStyle(.segmented)
-    #endif
+#endif
+        }
+    }
+}
+
+private extension Color {
+    func dimmed() -> Color {
+        if #available(iOS 18.0, watchOS 11.0, *) {
+            mix(with: .white, by: 0.3)
+        } else {
+            opacity(0.7)
         }
     }
 }

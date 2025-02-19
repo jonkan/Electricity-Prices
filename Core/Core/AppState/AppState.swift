@@ -71,7 +71,7 @@ public class AppState: ObservableObject {
     }
 
     @AppStorageCodable("ChartStyle", storage: .appGroup)
-    public var chartStyle: PriceChartStyle = .bar {
+    public var chartStyle: PriceChartStyle = .bar() {
         didSet {
             guard oldValue != chartStyle else { return }
             Log("Chart presentation did change: \(chartStyle)")
@@ -198,7 +198,7 @@ public class AppState: ObservableObject {
 
         if isRunningForSnapshots() {
             // Mocked prices are set in downloadPrices()
-            chartStyle = .bar
+            chartStyle = .bar()
             chartViewMode = .today
             currency = Region.current?.suggestedCurrency ?? .EUR
             exchangeRates[currency] = .mockedEUR(to: currency)

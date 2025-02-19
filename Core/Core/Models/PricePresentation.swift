@@ -45,13 +45,26 @@ public struct PricePresentation: Codable, Equatable, Sendable {
         adjustedPrice(pricePoint.price, in: pricePoint.currency)
     }
 
-    public func adjustedPrice(_ price: Double, in currency: Currency) -> Double {
+    func adjustedPrice(_ price: Double, in currency: Currency) -> Double {
         let adjustedPrice = adjustment.adjustedPrice(price)
         switch currencyPresentation {
         case .automatic:
             return adjustedPrice
         case .subdivided:
             return adjustedPrice * currency.subdivision.subdivisions
+        }
+    }
+
+    public func spotPrice(_ pricePoint: PricePoint) -> Double {
+        spotPrice(pricePoint.price, in: pricePoint.currency)
+    }
+
+    func spotPrice(_ price: Double, in currency: Currency) -> Double {
+        switch currencyPresentation {
+        case .automatic:
+            return price
+        case .subdivided:
+            return price * currency.subdivision.subdivisions
         }
     }
 
@@ -67,4 +80,16 @@ public struct PricePresentation: Codable, Equatable, Sendable {
 
 public extension PricePresentation {
     static let mocked = PricePresentation()
+
+    static let mockedWithAdjustments = PricePresentation(
+        adjustment: PriceAdjustment(
+            isEnabled: true,
+            addends: [
+                .init(
+                    id: 0,
+                    value: 0.5
+                )
+            ]
+        )
+    )
 }

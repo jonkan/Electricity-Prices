@@ -75,7 +75,7 @@ struct CheapestHoursView: View {
 
 #Preview {
     @Previewable @State var duration: Double = 3
-    @Previewable @State var chartStyle: PriceChartStyle = .bar
+    @Previewable @State var chartStyle: PriceChartStyle = .bar()
     @Previewable @State var viewMode: PriceChartViewMode = .todayAndTomorrow
 
     var prices: [PricePoint] { .mockedPricesWithTomorrow2.filterForViewMode(viewMode) }
@@ -96,7 +96,7 @@ struct CheapestHoursView: View {
     .safeAreaInset(edge: .top) {
         VStack {
             Picker(selection: $chartStyle) {
-                ForEach(PriceChartStyle.allCases) { style in
+                ForEach(PriceChartStyle.mainStyles) { style in
                     Text(style.title)
                         .tag(style)
                 }

@@ -24,7 +24,7 @@ struct SettingsView: View {
                 Section("Display") {
                     BasicSettingsNavigationLink(
                         title: String(localized: "Chart"),
-                        values: PriceChartStyle.allCases,
+                        values: PriceChartStyle.mainStyles,
                         currentValue: $state.chartStyle,
                         displayValue: { $0.title }
                     )
@@ -58,8 +58,10 @@ struct SettingsView: View {
                             NavigationLink {
                                 PriceAdjustmentSettingsView(
                                     pricePresentation: $state.pricePresentation,
+                                    chartStyle: $state.chartStyle,
                                     currentPrice: currentPrice,
-                                    currency: state.currency
+                                    limits: state.priceLimits,
+                                    prices: state.prices
                                 )
                                 .navigationTitle("Price Adjustment")
                             } label: {

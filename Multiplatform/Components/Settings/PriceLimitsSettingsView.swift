@@ -144,7 +144,7 @@ private struct PriceLimitsSettingsViewPreview: View {
                 currencyPresentation: .subdivided,
                 adjustment: .init(isEnabled: true)
             ),
-            chartStyle: .bar
+            chartStyle: .bar()
         )
     }
 }

@@ -9992,6 +9992,154 @@
         }
       }
     },
+    "Separates the spot price (bottom) from adjustments (top) in the chart. Only supported in bar charts." : {
+      "localizations" : {
+        "bg" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Разделя спот цената (долна) от корекциите (горна) в диаграмата. Поддържа се само в бар диаграми."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odděluje spotovou cenu (spodní) od úprav (horní) v grafu. Podporováno pouze u sloupkových grafů."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adskiller spotprisen (bund) fra justeringer (top) i diagrammet. Understøttes kun i søjlediagrammer."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trennt den Spotpreis (unten) von den Anpassungen (oben) im Diagramm. Nur in Balkendiagrammen unterstützt."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Χωρίζει την τιμή spot (κάτω) από τις προσαρμογές (πάνω) στο διάγραμμα. Υποστηρίζεται μόνο σε διαγράμματα μπαρ."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Separa el precio al contado (inferior) de los ajustes (superior) en el gráfico. Solo se admite en gráficos de barras."
+          }
+        },
+        "et" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eraldab koha hinnad (alumised) muudatustest (ülemised) graafikul. Toetatakse ainult ribagraafikutes."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erottaa spot-hinnan (alhaalla) säädöistä (ylempänä) kaaviossa. Tuettu vain palkkikaavioissa."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sépare le prix au comptant (en bas) des ajustements (en haut) dans le graphique. Prise en charge uniquement pour les graphiques en barres."
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Razdvaja spot cijenu (donja) od prilagodbi (gornja) u grafikonu. Podržano samo u stupčastim grafikama."
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elválasztja a spot árfolyamot (alul) az állításoktól (felül) a diagramon. Csak oszlopdiagramokban támogatott."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Separa il prezzo spot (in basso) dagli aggiustamenti (in alto) nel grafico. Supportato solo nei grafici a barre."
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atskirkite vietoje esančią kainą (apačioje) nuo pataisymų (viršuje) diagrama. Palaikoma tik stulpelinėse diagramose."
+          }
+        },
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atdala vietējās cenas (apakšā) no pielāgojumiem (augšā) diagrammā. Atbalsta tikai joslu diagrammas."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skiller spotpris (bunn) fra justeringer (topp) i diagrammet. Støttes bare i stolpediagrammer."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scheidt de spotprijs (onder) van de aanpassingen (boven) in de grafiek. Alleen ondersteund in staafdiagrammen."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oddziela cenę spotową (na dole) od korekt (na górze) w wykresie. Obsługiwane tylko w wykresach słupkowych."
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Separa o preço à vista (parte inferior) dos ajustes (parte superior) no gráfico. Somente suportado em gráficos de barras."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Separă prețul spot (partea de jos) de ajustări (partea de sus) în grafic. Suportat doar în grafice de tip bară."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oddeľuje spotovú cenu (spodná) od úprav (horná) v grafe. Podporované len v stĺpcových grafoch."
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loči ceno na kraju (dno) od prilagoditev (vrh) v grafu. Podprto le v stolpčnih grafikonih."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Separerar spotpriset (botten) från justeringar (toppen) i diagrammet. Stöds bara i stapeldiagram."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grafikteki ayarlamalardan (üstte) spot fiyatı (altta) ayırır. Sadece çubuk grafiklerde desteklenir."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Окремо відображає спотову ціну (нижня частина) від коригувань (верхня частина) на графіку. Підтримується лише у стовпчикових графіках."
+          }
+        }
+      }
+    },
     "Settings" : {
       "localizations" : {
         "bg" : {
@@ -12807,6 +12955,154 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Режим перегляду"
+          }
+        }
+      }
+    },
+    "Visualization" : {
+      "localizations" : {
+        "bg" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Визуализация"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vizualizace"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visualisering"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visualisierung"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Οπτικοποίηση"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visualización"
+          }
+        },
+        "et" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visualiseerimine"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visualisointi"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visualisation"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vizualizacija"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Látvány"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visualizzazione"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vizualizacija"
+          }
+        },
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vizualizācija"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visualisering"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visualisatie"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wizualizacja"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visualização"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vizualizare"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vizualizácia"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vizualizacija"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visualisering"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Görselleştirme"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Візуалізація"
           }
         }
       }

@@ -11,50 +11,90 @@ import Core
 struct PriceAdjustmentSettingsView: View {
 
     @Binding var pricePresentation: PricePresentation
+    @Binding var chartStyle: PriceChartStyle
     let currentPrice: PricePoint
-    let currency: Currency
+    let limits: PriceLimits
+    let prices: [PricePoint]
 
-    static let decimalNumberFormatter: NumberFormatter = {
+    @State private var editedPricePresentation: PricePresentation
+    @State private var editedChartStyle: PriceChartStyle
+    private var priceAdjustmentStyle: Binding<PriceAdjustmentStyle> {
+        Binding {
+            if case .bar(let style) = editedChartStyle {
+                return style
+            } else {
+                return .off
+            }
+        } set: { style in
+            editedChartStyle = .bar(style)
+        }
+    }
+    private var currency: Currency {
+        currentPrice.currency
+    }
+
+    private static let decimalNumberFormatter: NumberFormatter = {
         let nf = NumberFormatter()
         nf.maximumFractionDigits = 2
         nf.zeroSymbol = ""
         return nf
     }()
 
+    init(
+        pricePresentation: Binding<PricePresentation>,
+        chartStyle: Binding<PriceChartStyle>,
+        currentPrice: PricePoint,
+        limits: PriceLimits,
+        prices: [PricePoint]
+    ) {
+        _pricePresentation = pricePresentation
+        _editedPricePresentation = State(initialValue: pricePresentation.wrappedValue)
+        _chartStyle = chartStyle
+        _editedChartStyle = State(initialValue: chartStyle.wrappedValue)
+        self.currentPrice = currentPrice
+        self.limits = limits
+        self.prices = prices
+    }
+
     var body: some View {
         List {
             Section {
-                Toggle(isOn: $pricePresentation.adjustment.isEnabled) {
+                Toggle(isOn: $editedPricePresentation.adjustment.isEnabled) {
                     Text("Enabled")
                 }
             } footer: {
                 Text("Adjust the price by adding VAT and fees to estimate what you actually pay for your electricity.")
             }
-            if pricePresentation.adjustment.isEnabled {
+            if editedPricePresentation.adjustment.isEnabled {
                 feesSection
                 multiplierSection
                 clampNegativePricesToZeroSection
                 calculationSection
+                appearanceSection
             }
         }
         .onAppear {
             UITextField.appearance().clearButtonMode = .whileEditing
         }
+        .onDisappear {
+            pricePresentation = editedPricePresentation
+            chartStyle = editedChartStyle
+        }
     }
 
     var feesSection: some View {
         Section {
-            ForEach($pricePresentation.adjustment.addends) { addend in
+            ForEach($editedPricePresentation.adjustment.addends) { addend in
                 addendRow(addend, currencySubdivisions: currency.subdivision.subdivisions)
             }
             .onDelete(perform: { indexSet in
                 withAnimation {
-                    pricePresentation.adjustment.addends.remove(atOffsets: indexSet)
+                    editedPricePresentation.adjustment.addends.remove(atOffsets: indexSet)
                 }
             })
             Button {
                 withAnimation {
-                    pricePresentation.adjustment.addAddend()
+                    editedPricePresentation.adjustment.addAddend()
                 }
             } label: {
                 Label("Add", systemImage: "plus.circle")
@@ -109,7 +149,7 @@ struct PriceAdjustmentSettingsView: View {
 
     var clampNegativePricesToZeroSection: some View {
         Section {
-            Toggle(isOn: $pricePresentation.adjustment.clampNegativePricesToZero) {
+            Toggle(isOn: $editedPricePresentation.adjustment.clampNegativePricesToZero) {
                 Text("Clamp negative prices")
             }
         } footer: {
@@ -129,18 +169,18 @@ struct PriceAdjustmentSettingsView: View {
 
     var calculationRow: some View {
         let unadjustedPresentation = PricePresentation(
-            currencyPresentation: pricePresentation.currencyPresentation,
+            currencyPresentation: editedPricePresentation.currencyPresentation,
             adjustment: PriceAdjustment(isEnabled: false)
         )
 
         // The current price
         var formattedCurrentPrice = unadjustedPresentation.formattedPrice(currentPrice, style: .normal)
-        if pricePresentation.adjustment.clampNegativePricesToZero {
+        if editedPricePresentation.adjustment.clampNegativePricesToZero {
             formattedCurrentPrice = "max(0, \(formattedCurrentPrice))"
         }
 
         // Addends
-        let formattedAddends = pricePresentation.adjustment.addends.map { addend in
+        let formattedAddends = editedPricePresentation.adjustment.addends.map { addend in
             unadjustedPresentation.formattedPrice(
                 addend.value,
                 in: currency,
@@ -149,11 +189,11 @@ struct PriceAdjustmentSettingsView: View {
         }
 
         // The result
-        let formattedAdjustedPrice = pricePresentation.formattedPrice(currentPrice, style: .normal)
+        let formattedAdjustedPrice = editedPricePresentation.formattedPrice(currentPrice, style: .normal)
 
-        let multiplierText = Text(pricePresentation.adjustment.multiplier, format: .number)
+        let multiplierText = Text(editedPricePresentation.adjustment.multiplier, format: .number)
         let resultText: Text
-        if pricePresentation.adjustment.addends.isEmpty {
+        if editedPricePresentation.adjustment.addends.isEmpty {
             resultText = Text("\(formattedCurrentPrice) * \(multiplierText) = \(formattedAdjustedPrice)")
         } else {
             let addendsText = ([formattedCurrentPrice] + formattedAddends).joined(separator: " + ")
@@ -164,18 +204,52 @@ struct PriceAdjustmentSettingsView: View {
             .multilineTextAlignment(.leading)
             .monospacedDigit()
     }
+
+    var appearanceSection: some View {
+        Section {
+            PriceChartView(
+                selectedPrice: .constant(nil),
+                currentPrice: currentPrice,
+                prices: prices,
+                limits: limits,
+                pricePresentation: editedPricePresentation,
+                chartStyle: editedChartStyle
+            )
+            .frame(minHeight: 100)
+            .padding(.vertical)
+            Picker(selection: priceAdjustmentStyle) {
+                ForEach(PriceAdjustmentStyle.allCases) {
+                    Text($0.title)
+                        .tag($0)
+                }
+            } label: {
+                EmptyView()
+            }
+            .pickerStyle(.segmented)
+            .disabled(!editedChartStyle.isBar)
+        } header: {
+            Text("Visualization")
+        } footer: {
+            Text("Separates the spot price (bottom) from adjustments (top) in the chart. Only supported in bar charts.")
+        }
+    }
+
 }
 
 #Preview {
     @Previewable @State var pricePresentation = PricePresentation(
         adjustment: PriceAdjustment(isEnabled: true)
     )
+    @Previewable @State var chartStyle: PriceChartStyle = .bar()
+    let prices: [PricePoint] = .mockedPricesWithTomorrow2
 
     NavigationStack {
         PriceAdjustmentSettingsView(
             pricePresentation: $pricePresentation,
-            currentPrice: .mockedPrice4Negative,
-            currency: .SEK
+            chartStyle: $chartStyle,
+            currentPrice: prices[14],
+            limits: .mocked,
+            prices: prices
         )
     }
     .environment(\.locale, .init(identifier: "en_US"))
