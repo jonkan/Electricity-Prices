@@ -149,156 +149,156 @@
         }
       }
     },
-    "(%@) * %@ = %@" : {
+    "%@ %@" : {
       "localizations" : {
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%1$@) * %2$@ = %3$@"
+            "value" : "%1$@ %2$@"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%1$@) * %2$@ = %3$@"
+            "value" : "%1$@ %2$@"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%1$@) * %2$@ = %3$@"
+            "value" : "%1$@ %2$@"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%1$@) * %2$@ = %3$@"
+            "value" : "%1$@ %2$@"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%1$@) * %2$@ = %3$@"
+            "value" : "%1$@ %2$@"
           }
         },
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "(%1$@) * %2$@ = %3$@"
+            "state" : "new",
+            "value" : "%1$@ %2$@"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%1$@) * %2$@ = %3$@"
+            "value" : "%1$@ %2$@"
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%1$@) * %2$@ = %3$@"
+            "value" : "%1$@ %2$@"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%1$@) * %2$@ = %3$@"
+            "value" : "%1$@ %2$@"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%1$@) * %2$@ = %3$@"
+            "value" : "%1$@ %2$@"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%1$@) * %2$@ = %3$@"
+            "value" : "%1$@ %2$@"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%1$@) * %2$@ = %3$@"
+            "value" : "%1$@ %2$@"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%1$@) * %2$@ = %3$@"
+            "value" : "%1$@ %2$@"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%1$@) * %2$@ = %3$@"
+            "value" : "%1$@ %2$@"
           }
         },
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%1$@) * %2$@ = %3$@"
+            "value" : "%1$@ %2$@"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%1$@) * %2$@ = %3$@"
+            "value" : "%1$@ %2$@"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%1$@) * %2$@ = %3$@"
+            "value" : "%1$@ %2$@"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%1$@) * %2$@ = %3$@"
+            "value" : "%1$@ %2$@"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%1$@) * %2$@ = %3$@"
+            "value" : "%1$@ %2$@"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%1$@) * %2$@ = %3$@"
+            "value" : "%1$@ %2$@"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%1$@) * %2$@ = %3$@"
+            "value" : "%1$@ %2$@"
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%1$@) * %2$@ = %3$@"
+            "value" : "%1$@ %2$@"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%1$@) * %2$@ = %3$@"
+            "value" : "%1$@ %2$@"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%1$@) * %2$@ = %3$@"
+            "value" : "%1$@ %2$@"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(%1$@) * %2$@ = %3$@"
+            "value" : "%1$@ %2$@"
           }
         }
       }
@@ -457,160 +457,6 @@
         }
       }
     },
-    "%@ %@" : {
-      "localizations" : {
-        "bg" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@ %2$@"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@"
-          }
-        },
-        "et" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@"
-          }
-        },
-        "lt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@"
-          }
-        },
-        "lv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@"
-          }
-        },
-        "sl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ %2$@"
-          }
-        }
-      }
-    },
     "%lld log files" : {
       "localizations" : {
         "bg" : {
@@ -755,6 +601,160 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld лог-файлів"
+          }
+        }
+      }
+    },
+    "(%@) * %@ = %@" : {
+      "localizations" : {
+        "bg" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%1$@) * %2$@ = %3$@"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%1$@) * %2$@ = %3$@"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%1$@) * %2$@ = %3$@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%1$@) * %2$@ = %3$@"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%1$@) * %2$@ = %3$@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%1$@) * %2$@ = %3$@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%1$@) * %2$@ = %3$@"
+          }
+        },
+        "et" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%1$@) * %2$@ = %3$@"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%1$@) * %2$@ = %3$@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%1$@) * %2$@ = %3$@"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%1$@) * %2$@ = %3$@"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%1$@) * %2$@ = %3$@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%1$@) * %2$@ = %3$@"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%1$@) * %2$@ = %3$@"
+          }
+        },
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%1$@) * %2$@ = %3$@"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%1$@) * %2$@ = %3$@"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%1$@) * %2$@ = %3$@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%1$@) * %2$@ = %3$@"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%1$@) * %2$@ = %3$@"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%1$@) * %2$@ = %3$@"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%1$@) * %2$@ = %3$@"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%1$@) * %2$@ = %3$@"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%1$@) * %2$@ = %3$@"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%1$@) * %2$@ = %3$@"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%1$@) * %2$@ = %3$@"
           }
         }
       }
@@ -4043,154 +4043,6 @@
         }
       }
     },
-    "Easily compare today's and tomorrow's prices" : {
-      "localizations" : {
-        "bg" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Лесно сравнете цените на днес и утре"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Snadno porovnejte dnešní a zítřejší ceny"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sammenlign nemt dagens og morgendagens priser"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vergleichen Sie ganz einfach die Preise von heute und morgen."
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Συγκρίνετε εύκολα τις τιμές σήμερα και αύριο"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Compare fácilmente los precios de hoy y mañana"
-          }
-        },
-        "et" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Võrdle täna ja homme hindu lihtsalt"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vertaa helposti tämän päivän ja huomisen hinnat"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Comparer facilement les prix d'aujourd'hui et de demain"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lako usporedite današnje i sutrašnje cijene"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Könnyedén összehasonlíthatja a mai és a holnapi árakat"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Confronta facilmente i prezzi di oggi e di domani"
-          }
-        },
-        "lt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lengvai palyginti šių dienų ir rytojaus kainas"
-          }
-        },
-        "lv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Viegli salīdzināt šīs dienas un rītdienas cenas"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enkelt sammenligne dagens og morgendagens priser"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vergelijk eenvoudig de prijzen van vandaag en morgen"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Łatwo porównaj dzisiejsze i jutrzejsze ceny"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Compare facilmente os preços de hoje e amanhã."
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Compară ușor prețurile de astăzi și de mâine"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ľahko porovnajte dnešné a zajtrajšie ceny"
-          }
-        },
-        "sl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enostavno primerjajte cene danes in jutri."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jämför enkelt dagens och morgondagens priser"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bugünün ve yarının fiyatlarını kolayca karşılaştırın"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Легко порівнюйте сьогоднішні та завтрашні ціни"
-          }
-        }
-      }
-    },
     "ECB closing price %@" : {
       "localizations" : {
         "bg" : {
@@ -4335,6 +4187,154 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Закриття ціни ЕЦБ %@"
+          }
+        }
+      }
+    },
+    "Easily compare today's and tomorrow's prices" : {
+      "localizations" : {
+        "bg" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Лесно сравнете цените на днес и утре"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Snadno porovnejte dnešní a zítřejší ceny"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sammenlign nemt dagens og morgendagens priser"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vergleichen Sie ganz einfach die Preise von heute und morgen."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Συγκρίνετε εύκολα τις τιμές σήμερα και αύριο"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compare fácilmente los precios de hoy y mañana"
+          }
+        },
+        "et" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Võrdle täna ja homme hindu lihtsalt"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vertaa helposti tämän päivän ja huomisen hinnat"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comparer facilement les prix d'aujourd'hui et de demain"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lako usporedite današnje i sutrašnje cijene"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Könnyedén összehasonlíthatja a mai és a holnapi árakat"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confronta facilmente i prezzi di oggi e di domani"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lengvai palyginti šių dienų ir rytojaus kainas"
+          }
+        },
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Viegli salīdzināt šīs dienas un rītdienas cenas"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enkelt sammenligne dagens og morgendagens priser"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vergelijk eenvoudig de prijzen van vandaag en morgen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Łatwo porównaj dzisiejsze i jutrzejsze ceny"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compare facilmente os preços de hoje e amanhã."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compară ușor prețurile de astăzi și de mâine"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ľahko porovnajte dnešné a zajtrajšie ceny"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enostavno primerjajte cene danes in jutri."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jämför enkelt dagens och morgondagens priser"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bugünün ve yarının fiyatlarını kolayca karşılaştırın"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Легко порівнюйте сьогоднішні та завтрашні ціни"
           }
         }
       }
@@ -8364,154 +8364,6 @@
         }
       }
     },
-    "Price area" : {
-      "localizations" : {
-        "bg" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ценова зона"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cenová oblast"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prisområde"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Preisbereich"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Περιοχή τιμής"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Área de precios"
-          }
-        },
-        "et" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hinnapiirkond"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hinta-alue"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zone de prix"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cijena područje"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Árazási terület"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Area di Prezzo"
-          }
-        },
-        "lt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kainų sritis"
-          }
-        },
-        "lv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cenu zona"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prisområde"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prijzengebied"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obszar cenowy"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Área de preço"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zona de preț"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cenová oblasť"
-          }
-        },
-        "sl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cenovno območje"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Elområde"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fiyat alanı"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Цінова зона"
-          }
-        }
-      }
-    },
     "Price Limits" : {
       "localizations" : {
         "bg" : {
@@ -8656,6 +8508,154 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ліміти цін"
+          }
+        }
+      }
+    },
+    "Price area" : {
+      "localizations" : {
+        "bg" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ценова зона"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cenová oblast"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prisområde"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preisbereich"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Περιοχή τιμής"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Área de precios"
+          }
+        },
+        "et" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hinnapiirkond"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hinta-alue"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zone de prix"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cijena područje"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Árazási terület"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Area di Prezzo"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kainų sritis"
+          }
+        },
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cenu zona"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prisområde"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prijzengebied"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obszar cenowy"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Área de preço"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zona de preț"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cenová oblasť"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cenovno območje"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elområde"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fiyat alanı"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Цінова зона"
           }
         }
       }
@@ -13107,150 +13107,150 @@
         }
       }
     },
-    "Your price adjustment is temporarily excluded while you edit these limits." : {
+    "Your price adjustment is temporarily excluded while you edit the price limits." : {
       "localizations" : {
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Вашата корекция на цената е временно изключена докато редактирате тези ограничения."
+            "value" : "Вашата корекция на цената временно е изключена, докато редактирате ценовите лимити."
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vaše úprava ceny je dočasně vyloučena, zatímco upravujete tyto limity."
+            "value" : "Vaše úprava ceny je dočasně vyloučena, zatímco upravujete cenové limity."
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Din prisjustering er midlertidigt udelukket, mens du redigerer disse grænser."
+            "value" : "Din prisjustering er midlertidigt udelukket, mens du redigerer prisgrænserne."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ihre Preisänderung wird vorübergehend ausgeschlossen, während Sie diese Beschränkungen bearbeiten."
+            "value" : "Ihre Preisanpassung ist vorübergehend ausgeschlossen, während Sie die Preislimits bearbeiten."
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Η προσαρμογή τιμής σας είναι προσωρινά εξαιρεμένη ενώ επεξεργάζεστε αυτούς τους περιορισμούς."
+            "value" : "Η αναπροσαρμογή της τιμής σας είναι προσωρινά εξαιρούμενη ενώ επεξεργάζεστε τα όρια τιμής."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Su ajuste de precio está excluido temporalmente mientras edita estos límites."
+            "value" : "Su ajuste de precio está temporalmente excluido mientras edita los límites de precio."
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Teie hinnakohandus on ajutiselt välja arvatud, kuni muudate neid piiranguid."
+            "value" : "Teie hinnakohandamine on ajutiselt välistatud, samas kui te muudate hinnapiire."
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hintasi tarkistus on väliaikaisesti poistettu käytöstä, kun muokkaat näitä rajoja."
+            "value" : "Hinnankorjaustasi on tilapäisesti suljettu, kun muokkaat hintarajoja."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Votre ajustement de prix est temporairement exclu pendant que vous modifiez ces limites."
+            "value" : "Votre ajustement de prix est temporairement exclu pendant que vous modifiez les limites de prix."
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vaše prilagodbe cijene su privremeno isključene dok uređujete ove granice."
+            "value" : "Vaša prilagodba cijene je privremeno isključena dok uređujete limite cijena."
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Az árkorrekció átmenetileg kizárt, amíg szerkeszted ezeket a korlátokat."
+            "value" : "Az árkorrekció ideiglenesen ki van zárva, amíg az árhatárokat szerkeszti."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "La modifica del prezzo è temporaneamente esclusa mentre modifichi questi limiti."
+            "value" : "Il tuo aggiustamento di prezzo è temporaneamente escluso mentre modifichi i limiti di prezzo."
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Jūsų kainų koregavimas laikinai neįtrauktas, kol redaguojate šiuos limitus."
+            "value" : "Jūsų kainos koregavimas laikinai neįtrauktas, kol redaguojate kainų ribas."
           }
         },
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Jūsu cenu korekcija pagaidām tiek izslēgta, kamēr Jūs rediģējat šos limitus."
+            "value" : "Jūsu cenu korekcija ir pagaidu izslēgta, kamēr jūs rediģējat cenu ierobežojumus."
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Din prisjustering er midlertidig utelatt mens du redigerer disse grensene."
+            "value" : "Din prisjustering er midlertidig utelatt mens du redigerer prisgrensene."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Uw prijswijziging is tijdelijk uitgesloten terwijl u deze limieten bewerkt."
+            "value" : "Uw prijsaanpassing is tijdelijk uitgesloten terwijl u de prijsgrenzen bewerkt."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Twoja korekta ceny jest tymczasowo wykluczona podczas edycji tych limitów."
+            "value" : "Twoja korekta ceny jest tymczasowo wyłączona, podczas gdy edytujesz limity cenowe."
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "O seu ajuste de preço está temporariamente excluído enquanto edita estes limites."
+            "value" : "Seu ajuste de preço está temporariamente excluído enquanto você edita os limites de preço."
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ajustarea ta de preț este temporar exclusă în timp ce editezi aceste limite."
+            "value" : "Ajustarea prețului este temporar exclusă în timp ce editați limitele de preț."
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tvoje cenové úpravy sú dočasne vylúčené, kým upravuješ tieto limity."
+            "value" : "Vaša úprava ceny je dočasne vyňatá, kým upravujete cenové limity."
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vaša cenovna prilagoditev je začasno izključena, medtem ko urejate te omejitve."
+            "value" : "Vaša prilagoditev cene je začasno izključena, medtem ko urejate cenovne meje."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Din prisjustering är tillfälligt utesluten medan du redigerar dessa gränser."
+            "value" : "Din prisjustering är tillfälligt utesluten medan du redigerar gränsvärdena."
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fiyat ayarınız, bu sınırları düzenlerken geçici olarak hariç tutulur."
+            "value" : "Fiyat ayarlamanız, fiyat limitlerini düzenlerken geçici olarak hariç tutulmuştur."
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ваше коригування ціни тимчасово виключено, поки ви редагуєте ці обмеження."
+            "value" : "Ваша корекція ціни тимчасово виключена, поки ви редагуєте межі цін."
           }
         }
       }

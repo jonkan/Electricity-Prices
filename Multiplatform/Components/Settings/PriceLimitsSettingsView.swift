@@ -13,12 +13,12 @@ struct PriceLimitsSettingsView: View {
     @Binding var limits: PriceLimits
     let currentPrice: PricePoint
     let prices: [PricePoint]
-    let pricePresentation: PricePresentation
+    @State var pricePresentation: PricePresentation
     let chartStyle: PriceChartStyle
 
     @State private var editedLimits: PriceLimits
     @State private var lowSliderRange: ClosedRange<Double>
-    private let showPriceAdjustmentDisclamer: Bool
+    private let priceAdjustmentEnabled: Bool
 
     init(
         limits: Binding<PriceLimits>,
@@ -30,20 +30,12 @@ struct PriceLimitsSettingsView: View {
         self._limits = limits
         self.currentPrice = currentPrice
         self.prices = prices
-
-        var pricePresentationWithoutAdjustment = pricePresentation
-        pricePresentationWithoutAdjustment.adjustment.isEnabled = false
-        self.pricePresentation = pricePresentationWithoutAdjustment
+        _pricePresentation = State(initialValue: pricePresentation)
+        priceAdjustmentEnabled = pricePresentation.adjustment.isEnabled
 
         self.chartStyle = chartStyle
         self.editedLimits = limits.wrappedValue
         self.lowSliderRange = 0...max(limits.wrappedValue.currency.priceLimitsStep, limits.wrappedValue.high)
-
-        if pricePresentation.adjustment.isEnabled {
-            showPriceAdjustmentDisclamer = true
-        } else {
-            showPriceAdjustmentDisclamer = false
-        }
     }
 
     var highLabel: some View {
@@ -107,9 +99,15 @@ struct PriceLimitsSettingsView: View {
                 }
             } header: {
                 Text("Limits")
-            } footer: {
-                if showPriceAdjustmentDisclamer {
-                    Text("Your price adjustment is temporarily excluded while you edit these limits.")
+            }
+
+            if priceAdjustmentEnabled {
+                Section {
+                    Toggle("Price Adjustment", isOn: $pricePresentation.adjustment.isEnabled)
+                } footer: {
+                    if !pricePresentation.adjustment.isEnabled {
+                        Text("Your price adjustment is temporarily excluded while you edit the price limits.")
+                    }
                 }
             }
 
