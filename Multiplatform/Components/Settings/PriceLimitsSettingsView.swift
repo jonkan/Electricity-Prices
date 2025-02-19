@@ -138,8 +138,8 @@ private struct PriceLimitsSettingsViewPreview: View {
     var body: some View {
         PriceLimitsSettingsView(
             limits: $limits,
-            currentPrice: .mockPrice,
-            prices: .mockPricesWithTomorrow,
+            currentPrice: .mockedPrice,
+            prices: .mockedPricesWithTomorrow,
             pricePresentation: PricePresentation(
                 currencyPresentation: .subdivided,
                 adjustment: .init(isEnabled: true)

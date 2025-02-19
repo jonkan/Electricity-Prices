@@ -10,10 +10,10 @@ import Foundation
 extension AppState {
     public static let mocked: AppState = {
         let s: AppState = .shared
-        s.currentPrice = .mockPrice
+        s.currentPrice = .mockedPrice
         s.region = .sweden
         s.priceArea = Region.sweden.priceAreas.first
-        s.prices = .mockPricesWithTomorrow
+        s.prices = .mockedPricesWithTomorrow
         s.exchangeRates = [.SEK: .mockedSEK]
         s.chartViewMode = .todayAndComingNight
         return s
@@ -21,10 +21,10 @@ extension AppState {
 
     public static let mockedTodayAndTomorrow: AppState = {
         let s: AppState = .shared
-        s.currentPrice = .mockPrice
+        s.currentPrice = .mockedPrice
         s.region = .sweden
         s.priceArea = Region.sweden.priceAreas.first
-        s.prices = .mockPricesWithTomorrow
+        s.prices = .mockedPricesWithTomorrow
         s.exchangeRates = [.SEK: .mockedSEK]
         s.chartViewMode = .todayAndTomorrow
         return s
@@ -32,10 +32,10 @@ extension AppState {
 
     public static let mockedNowAndAllAhead: AppState = {
         let s: AppState = .shared
-        s.currentPrice = .mockPrice
+        s.currentPrice = .mockedPrice
         s.region = .sweden
         s.priceArea = Region.sweden.priceAreas.first
-        s.prices = .mockPricesWithTomorrow
+        s.prices = .mockedPricesWithTomorrow
         s.exchangeRates = [.SEK: .mockedSEK]
         s.chartViewMode = .nowAndUpcoming
         return s

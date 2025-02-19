@@ -31,6 +31,6 @@ public struct PricePointRectangularWidgetView: View {
 
 struct PricePointRectangularWidgetView_Previews: PreviewProvider {
     static var previews: some View {
-        PricePointRectangularWidgetView(entry: .mock)
+        PricePointRectangularWidgetView(entry: .mocked)
     }
 }

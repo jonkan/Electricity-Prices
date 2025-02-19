@@ -125,8 +125,8 @@ struct PriceView: View {
 struct PriceView_Previews: PreviewProvider {
     static var previews: some View {
         PriceView(
-            currentPrice: .mockPrice,
-            prices: .mockPrices,
+            currentPrice: .mockedPrice,
+            prices: .mockedPrices,
             limits: .mocked,
             pricePresentation: .init(),
             chartStyle: .lineInterpolated

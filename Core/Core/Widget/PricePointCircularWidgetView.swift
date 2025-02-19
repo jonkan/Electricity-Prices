@@ -34,6 +34,6 @@ public struct PricePointCircularWidgetView: View {
 
 struct PricePointCircularWidgetView_Previews: PreviewProvider {
     static var previews: some View {
-        PricePointCircularWidgetView(entry: .mock)
+        PricePointCircularWidgetView(entry: .mocked)
     }
 }

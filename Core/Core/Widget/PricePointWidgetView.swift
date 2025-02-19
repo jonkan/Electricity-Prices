@@ -62,5 +62,5 @@ public struct WidgetView: View {
 }
 
 #Preview {
-    WidgetView(entry: .mock)
+    WidgetView(entry: .mocked)
 }

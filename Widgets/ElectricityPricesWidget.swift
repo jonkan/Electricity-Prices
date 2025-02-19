@@ -67,9 +67,9 @@ struct ElectricityPricesWidget: Widget {
         ElectricityPricesWidget(state: .mocked)
     }
 } timeline: {
-    PricePointTimelineEntry.mock
-    PricePointTimelineEntry.mock2
-    PricePointTimelineEntry.mockTodayAndComingNight
+    PricePointTimelineEntry.mocked
+    PricePointTimelineEntry.mocked2
+    PricePointTimelineEntry.mockedTodayAndComingNight
 }
 
 #Preview("Today and Tomorrow", as: .accessoryRectangular) {
@@ -77,9 +77,9 @@ struct ElectricityPricesWidget: Widget {
         ElectricityPricesWidget(state: .mockedTodayAndTomorrow)
     }
 } timeline: {
-    PricePointTimelineEntry.mock
-    PricePointTimelineEntry.mock2
-    PricePointTimelineEntry.mockTodayAndTomorrow
+    PricePointTimelineEntry.mocked
+    PricePointTimelineEntry.mocked2
+    PricePointTimelineEntry.mockedTodayAndTomorrow
 }
 
 #Preview("Now and Ahead", as: .accessoryRectangular) {

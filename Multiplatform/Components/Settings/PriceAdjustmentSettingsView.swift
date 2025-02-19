@@ -174,7 +174,7 @@ struct PriceAdjustmentSettingsView: View {
     NavigationStack {
         PriceAdjustmentSettingsView(
             pricePresentation: $pricePresentation,
-            currentPrice: .mockPrice4Negative,
+            currentPrice: .mockedPrice4Negative,
             currency: .SEK
         )
     }

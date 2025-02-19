@@ -35,14 +35,14 @@ public struct PricePoint: Codable, Equatable, FormattablePrice, Sendable {
 }
 
 public extension PricePoint {
-    static let mockPrice: PricePoint = [PricePoint].mockPrices[10]
-    static let mockPrice2: PricePoint = [PricePoint].mockPrices[12]
-    static let mockPrice3: PricePoint = [PricePoint].mockPrices[14]
-    static let mockPrice4Negative: PricePoint = [PricePoint].mockPricesLow.last!
+    static let mockedPrice: PricePoint = [PricePoint].mockedPrices[10]
+    static let mockedPrice2: PricePoint = [PricePoint].mockedPrices[12]
+    static let mockedPrice3: PricePoint = [PricePoint].mockedPrices[14]
+    static let mockedPrice4Negative: PricePoint = [PricePoint].mockedPricesLow.last!
 }
 
 public extension Array where Element == PricePoint {
-    static let mockPrices: [PricePoint] = [
+    static let mockedPrices: [PricePoint] = [
         PricePoint(date: "2022-09-18T22:00:00+0000", price: 0.342410544, currency: .SEK),
         PricePoint(date: "2022-09-18T23:00:00+0000", price: 0.319504311, currency: .SEK),
         PricePoint(date: "2022-09-19T00:00:00+0000", price: 0.298641357, currency: .SEK),
@@ -69,7 +69,7 @@ public extension Array where Element == PricePoint {
         PricePoint(date: "2022-09-19T21:00:00+0000", price: 0.157547565, currency: .SEK)
     ].shiftDatesToNow()
 
-    static let mockPricesLow: [PricePoint] = [
+    static let mockedPricesLow: [PricePoint] = [
         PricePoint(date: "2022-10-04T22:00:00+0000", price: 0.19459063, currency: .SEK),
         PricePoint(date: "2022-10-04T23:00:00+0000", price: 0.18366586, currency: .SEK),
         PricePoint(date: "2022-10-05T00:00:00+0000", price: 0.17890656, currency: .SEK),
@@ -96,7 +96,7 @@ public extension Array where Element == PricePoint {
         PricePoint(date: "2022-10-05T21:00:00+0000", price: -0.0020551, currency: .SEK)
     ].shiftDatesToNow()
 
-    static let mockPricesWithTomorrow: [PricePoint] = [
+    static let mockedPricesWithTomorrow: [PricePoint] = [
         PricePoint(date: "2022-11-27T23:00:00+0000", price: 1.3644039, currency: .SEK),
         PricePoint(date: "2022-11-28T00:00:00+0000", price: 1.3675413, currency: .SEK),
         PricePoint(date: "2022-11-28T01:00:00+0000", price: 1.3248090, currency: .SEK),

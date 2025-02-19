@@ -27,6 +27,6 @@ public struct PricePointInlineWidgetView: View {
 
 struct PricePointInlineWidgetView_Previews: PreviewProvider {
     static var previews: some View {
-        PricePointInlineWidgetView(entry: .mock)
+        PricePointInlineWidgetView(entry: .mocked)
     }
 }

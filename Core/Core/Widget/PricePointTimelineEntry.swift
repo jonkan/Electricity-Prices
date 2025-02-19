@@ -42,24 +42,24 @@ public struct PricePointTimelineEntry: TimelineEntry {
         pricePresentation.formattedPrice(pricePoint, style: style)
     }
 
-    public static let mock = PricePointTimelineEntry(
-        pricePoint: .mockPrice,
-        prices: .mockPrices,
+    public static let mocked = PricePointTimelineEntry(
+        pricePoint: .mockedPrice,
+        prices: .mockedPrices,
         limits: .mocked,
         pricePresentation: .init(),
         chartStyle: .bar
     )
 
-    public static let mock2 = PricePointTimelineEntry(
-        pricePoint: [PricePoint].mockPricesLow[8],
-        prices: .mockPricesLow,
+    public static let mocked2 = PricePointTimelineEntry(
+        pricePoint: [PricePoint].mockedPricesLow[8],
+        prices: .mockedPricesLow,
         limits: PriceLimits(.SEK, high: 3.2, low: 1.4),
         pricePresentation: .init(),
         chartStyle: .bar
     )
 
-    public static let mockTodayAndComingNight: PricePointTimelineEntry = {
-        let prices: [PricePoint] = .mockPricesWithTomorrow
+    public static let mockedTodayAndComingNight: PricePointTimelineEntry = {
+        let prices: [PricePoint] = .mockedPricesWithTomorrow
         let price = prices[14]
         let entry = PricePointTimelineEntry(
             pricePoint: price,
@@ -71,8 +71,8 @@ public struct PricePointTimelineEntry: TimelineEntry {
         return entry
     }()
 
-    public static let mockTodayAndTomorrow: PricePointTimelineEntry = {
-        let prices: [PricePoint] = .mockPricesWithTomorrow
+    public static let mockedTodayAndTomorrow: PricePointTimelineEntry = {
+        let prices: [PricePoint] = .mockedPricesWithTomorrow
         let price = prices[14]
         let entry = PricePointTimelineEntry(
             pricePoint: price,
@@ -85,7 +85,7 @@ public struct PricePointTimelineEntry: TimelineEntry {
     }()
 
     public static let mockedNowAndAllAhead1: PricePointTimelineEntry = {
-        let prices: [PricePoint] = .mockPrices
+        let prices: [PricePoint] = .mockedPrices
         let price = prices[10]
         let entry = PricePointTimelineEntry(
             pricePoint: price,
@@ -98,7 +98,7 @@ public struct PricePointTimelineEntry: TimelineEntry {
     }()
 
     public static let mockedNowAndAllAhead2: PricePointTimelineEntry = {
-        let prices: [PricePoint] = .mockPricesWithTomorrow
+        let prices: [PricePoint] = .mockedPricesWithTomorrow
         let price = prices[14]
         let entry = PricePointTimelineEntry(
             pricePoint: price,

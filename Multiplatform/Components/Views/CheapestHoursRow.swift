@@ -48,7 +48,7 @@ struct CheapestHoursRow: View {
 #Preview {
     List {
         CheapestHoursRow(
-            cheapestHours: [PricePoint].mockPricesWithTomorrow.cheapestHours(for: 3)!,
+            cheapestHours: [PricePoint].mockedPricesWithTomorrow.cheapestHours(for: 3)!,
             pricePresentation: .mocked,
             limits: .mocked
         )

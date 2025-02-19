@@ -11,7 +11,7 @@ import XCTest
 final class CheapestHoursTests: XCTestCase {
 
     func testCheapestHour() {
-        let prices: [PricePoint] = .mockPrices
+        let prices: [PricePoint] = .mockedPrices
         let cheapestHours = prices.cheapestHours(for: 1)!
 
         XCTAssertEqual(cheapestHours.price, prices[23].price)
@@ -21,7 +21,7 @@ final class CheapestHoursTests: XCTestCase {
     }
 
     func testCheapestHours() {
-        let prices: [PricePoint] = .mockPrices
+        let prices: [PricePoint] = .mockedPrices
         let cheapestHours = prices.cheapestHours(for: 3)!
 
         XCTAssertEqual(cheapestHours.price, prices[21...23].map({ $0.price }).reduce(0, +) / 3.0)
@@ -31,7 +31,7 @@ final class CheapestHoursTests: XCTestCase {
     }
 
     func testDurations() {
-        let prices = Array([PricePoint].mockPrices[0...2])
+        let prices = Array([PricePoint].mockedPrices[0...2])
 
         for duration in -1...6 {
             let cheapestHours = prices.cheapestHours(for: duration)

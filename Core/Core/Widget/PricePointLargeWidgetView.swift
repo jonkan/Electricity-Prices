@@ -48,15 +48,15 @@ public struct PricePointLargeWidgetView: View {
     ScrollView {
         VStack {
             Group {
-                PricePointLargeWidgetView(entry: .mock)
+                PricePointLargeWidgetView(entry: .mocked)
                     .frame(height: 100)
-                PricePointLargeWidgetView(entry: .mock)
+                PricePointLargeWidgetView(entry: .mocked)
                     .frame(height: 120)
-                PricePointLargeWidgetView(entry: .mock)
+                PricePointLargeWidgetView(entry: .mocked)
                     .frame(height: 130)
-                PricePointLargeWidgetView(entry: .mock)
+                PricePointLargeWidgetView(entry: .mocked)
                     .frame(height: 140)
-                PricePointLargeWidgetView(entry: .mock)
+                PricePointLargeWidgetView(entry: .mocked)
                     .frame(height: 250)
             }
             .background {

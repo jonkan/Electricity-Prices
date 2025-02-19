@@ -29,7 +29,7 @@ public struct PricePointTimelineProvider: TimelineProvider {
     }
 
     public func placeholder(in context: Context) -> Entry {
-        return .mock
+        return .mocked
     }
 
     public func getSnapshot(in context: Context, completion: @escaping (Entry) -> Void) {
@@ -55,7 +55,7 @@ public struct PricePointTimelineProvider: TimelineProvider {
                 completion(entry)
             } catch {
                 LogError(error)
-                completion(.mock)
+                completion(.mocked)
             }
         }
     }
