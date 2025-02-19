@@ -62,7 +62,7 @@ struct CheapestHoursView: View {
             }
             Section {
                 VStack(alignment: .leading) {
-                    Text("Cheapest \(cheapestHours.duration) hours")
+                    Text("\(cheapestHours.duration) cheapest hours")
                         .monospacedDigit()
                     Slider(value: $cheapestHoursDuration, in: 1...12, step: 1)
                 }

@@ -20,7 +20,7 @@ struct CheapestHoursRow: View {
             GridItem(.flexible(), alignment: .trailing)
         ]
         LazyVGrid(columns: columns, alignment: .center) {
-            Text("Cheapest \(cheapestHours.duration) hours")
+            Text("\(cheapestHours.duration) cheapest hours")
                 .font(.subheadline)
             Text("Average price")
                 .font(.subheadline)
