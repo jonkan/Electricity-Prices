@@ -71,6 +71,7 @@ struct MainView: View {
                         Image(systemName: "gearshape")
                             .bold()
                             .foregroundColor(.primary)
+                            .badge(state.isBadgeVisible ? .dot : .hidden)
                     }
                     .accessibilityIdentifier("settings")
                 }

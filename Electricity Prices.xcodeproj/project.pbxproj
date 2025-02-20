@@ -52,6 +52,7 @@
 		26F28FDD2910778300D42DFB /* ShareLogsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FDB2910778300D42DFB /* ShareLogsState.swift */; };
 		26F28FDF2910782000D42DFB /* HostSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F28FDE2910781F00D42DFB /* HostSyncManager.swift */; };
 		26FAB1592BDAD3D600C08FBB /* LogFileURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FAB1582BDAD3D600C08FBB /* LogFileURL.swift */; };
+		EAD6BC222D6777560024D246 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6BC212D6777530024D246 /* Badge.swift */; };
 		EAF894792D636E1A0031018A /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = EAF894782D636E1A0031018A /* Core */; };
 		EAF8947B2D636E290031018A /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = EAF8947A2D636E290031018A /* Core */; };
 		EAF8947D2D636E2F0031018A /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = EAF8947C2D636E2F0031018A /* Core */; };
@@ -193,6 +194,7 @@
 		26F28FDB2910778300D42DFB /* ShareLogsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareLogsState.swift; sourceTree = "<group>"; };
 		26F28FDE2910781F00D42DFB /* HostSyncManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostSyncManager.swift; sourceTree = "<group>"; };
 		26FAB1582BDAD3D600C08FBB /* LogFileURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFileURL.swift; sourceTree = "<group>"; };
+		EAD6BC212D6777530024D246 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,14 +276,15 @@
 		2610875E2BD27717008ED50B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EAD6BC212D6777530024D246 /* Badge.swift */,
+				26CCD4192CDE21E100B070BE /* CheapestHoursRow.swift */,
+				26A2238E2CD52205005FA049 /* CheapestHoursView.swift */,
 				26AC446429112D5D00B86B1E /* CircularProgressView.swift */,
+				2696881828D477ED002142BF /* MainView.swift */,
+				26CCD4172CDE199800B070BE /* PriceRangeInsightsRow.swift */,
 				2696883028D47C4B002142BF /* PriceView.swift */,
 				261087632BD294E4008ED50B /* PurchaseView.swift */,
-				2696881828D477ED002142BF /* MainView.swift */,
 				265733302907291700CE9A4C /* StateInfoFooterView.swift */,
-				26A2238E2CD52205005FA049 /* CheapestHoursView.swift */,
-				26CCD4172CDE199800B070BE /* PriceRangeInsightsRow.swift */,
-				26CCD4192CDE21E100B070BE /* CheapestHoursRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -880,6 +883,7 @@
 				26DF95642ABD8207001636BA /* PriceAdjustmentSettingsView.swift in Sources */,
 				26CCD41A2CDE21E100B070BE /* CheapestHoursRow.swift in Sources */,
 				2696881728D477ED002142BF /* ElectricityPricesApp.swift in Sources */,
+				EAD6BC222D6777560024D246 /* Badge.swift in Sources */,
 				26CCD4182CDE199800B070BE /* PriceRangeInsightsRow.swift in Sources */,
 				26DF95682ABDC601001636BA /* TimeoutHandler.swift in Sources */,
 				2696883128D47C4B002142BF /* PriceView.swift in Sources */,

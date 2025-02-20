@@ -144,6 +144,14 @@ public class AppState: ObservableObject {
         }
     }
 
+    public var isBadgeVisible: Bool {
+        lastVisitedNewsDate < mostRecentNewsDate
+    }
+    @AppStorageCodable("last-visited-news", storage: .appGroup)
+    public var lastVisitedNewsDate: Date = .distantPast
+    private let mostRecentNewsDate: Date = ISO8601DateFormatter()
+        .date(from: "2025-02-20T12:00:00Z")!
+
     private var invalidateAndUpdatePricesSubject = PassthroughSubject<Void, Never>()
     private var invalidateAndUpdatePricesCancellable: AnyCancellable?
     private var reloadAllTimelinesSubject = PassthroughSubject<Void, Never>()

@@ -97,18 +97,20 @@ struct SettingsView: View {
                         }
                     }
                 }
-                if !store.hasPurchasedProVersion {
-                    Section {
+                whatsNewSection
+                Section {
+                    if !store.hasPurchasedProVersion {
                         Button {
                             isShowingPurchaseView = true
                         } label: {
                             Text("Unlock Pro")
                         }
-                    }
-                } else {
-                    Button("Rate This App") {
-                        let writeReviewURL = URL(string: "https://apps.apple.com/app/id1644399828?action=write-review")!
-                        openURL(writeReviewURL)
+                    } else {
+                        Button("Rate This App", systemImage: "star") {
+                            // swiftlint:disable:next line_length
+                            let writeReviewURL = URL(string: "https://apps.apple.com/app/id1644399828?action=write-review")!
+                            openURL(writeReviewURL)
+                        }
                     }
                 }
                 Section {
@@ -154,6 +156,27 @@ struct SettingsView: View {
             .onTapGesture {
                 isShowingPurchaseView = true
             }
+        }
+    }
+
+    private var whatsNewSection: some View {
+        Section {
+            Button(
+                String(
+                    localized: "View on Instagram",
+                    comment: "Prefer translations that imply ‘viewing’ rather than ‘watching’ or ‘looking at’."
+                ),
+                systemImage: "link"
+            ) {
+                let writeReviewURL = URL(string: "https://www.instagram.com/electricityprices/")!
+                openURL(writeReviewURL)
+                state.lastVisitedNewsDate = .now
+            }
+            .badge(state.isBadgeVisible ? 1 : 0)
+            .badgeProminence(.increased)
+        } header: {
+            // swiftlint:disable:next line_length
+            Text("What's new", comment: "Section title for release notes or updates. Prefer a translation that conveys ‘News’ or ‘Updates’ rather than a literal ‘What is new’ question.")
         }
     }
 
