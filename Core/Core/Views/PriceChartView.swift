@@ -106,6 +106,13 @@ public struct PriceChartView: View {
                 currentPriceRuleMark(displayedPrice.date)
                 currentPricePointMark(displayedPrice.date)
             } else {
+                // Add an extra line mark at the end to get the last line segment, e.g. 23:00-00:00.
+                if let last = prices.last {
+                    LineMark(
+                        x: .value("", last.date.addingTimeInterval(3600)),
+                        y: .value("", pricePresentation.adjustedPrice(last))
+                    )
+                }
                 // A bar the width of an hour
                 currentPriceBarMark(barWidth: barWidth)
                 // Show the point in the middle of the hour
