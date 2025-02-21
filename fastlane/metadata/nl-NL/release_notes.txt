@@ -1,2 +1,1 @@
-- De goedkoopste uren in de grafiek worden nu subtieler gemarkeerd met een onderstreping.
-- Bugfixes en verbeteringen.
+- Nieuwe staafdiagramstijlen die het mogelijk maken om de spotprijs van de aangepaste prijs te onderscheiden. Je vindt ze onder Prijsaanpassing.

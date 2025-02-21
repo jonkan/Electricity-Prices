@@ -1,2 +1,1 @@
-- De billigste timer i diagrammet markeres nu mere subtilt med en understregning.
-- Fejlrettelser og forbedringer.
+- Nye søjlediagrammer, der gør det muligt at skelne mellem spotprisen og den justerede pris. Du finder dem under Prisjustering.

@@ -1,2 +1,1 @@
-- Le ore più economiche nel grafico ora sono contrassegnate in modo più sottile con una sottolineatura.
-- Correzioni di bug e miglioramenti.
+- Nuove stili di grafico a barre che permettono di distinguere il prezzo spot dal prezzo aggiustato. Li trovi sotto Regolazione del Prezzo.

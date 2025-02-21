@@ -1,2 +1,1 @@
-- Die günstigsten Stunden im Diagramm werden jetzt subtiler mit einer Unterstreichung hervorgehoben.
-- Fehlerbehebungen und Verbesserungen.
+- Neue Balkendiagramm-Stile, die es ermöglichen, den Spotpreis vom bereinigten Preis zu unterscheiden. Sie finden sie unter Preisanpassung.

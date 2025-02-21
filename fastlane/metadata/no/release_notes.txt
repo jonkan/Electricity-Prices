@@ -1,2 +1,1 @@
-- De billigste timene i diagrammet markeres nå mer subtilt med en understreking.
-- Bugfiks og forbedringer.
+- Nye søylediagramstiler som gjør det mulig å skille spotprisen fra den justerte prisen. Du finner dem under Prisjustering.

@@ -1,2 +1,1 @@
-- Grafikde en ucuz saatler artık daha ince bir alt çizgi ile işaretleniyor.
-- Hata düzeltmeleri ve iyileştirmeler.
+- Spot fiyatını ayarlanmış fiyattan ayırmanıza olanak tanıyan yeni çubuk grafik stilleri. Bunları Fiyat Ayarlaması altında bulabilirsiniz.

@@ -1,2 +1,1 @@
-- Halvimmat tunnit kaaviossa korostetaan nyt hienovaraisemmin alleviivauksen avulla.
-- Virheenkorjauksia ja parannuksia.
+- Uudet pylväsgraafityylit, jotka mahdollistavat spot-hinnan erottamisen mukautetusta hinnasta. Löydät ne Hinnoittelusäätö.

@@ -1,2 +1,1 @@
-- Las horas más baratas en el diagrama ahora se marcan de manera más sutil con un subrayado.
-- Correcciones de errores y mejoras.
+- Nuevos estilos de gráficos de barras que permiten distinguir el precio spot del precio ajustado. Los encontrarás en Ajuste de Precio.

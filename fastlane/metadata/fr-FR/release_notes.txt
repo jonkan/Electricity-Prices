@@ -1,2 +1,1 @@
-- Les heures les moins chères dans le graphique sont désormais mises en évidence de manière plus subtile par un soulignement.
-- Corrections de bogues et améliorations.
+- Nouveaux styles de graphiques en barres qui permettent de distinguer le prix spot du prix ajusté. Vous les trouverez sous Ajustement de prix.
