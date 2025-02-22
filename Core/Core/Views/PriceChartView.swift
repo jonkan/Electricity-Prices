@@ -176,7 +176,7 @@ public struct PriceChartView: View {
                     stacking: .unstacked
                 )
                 .foregroundStyle(
-                    chartStyle == .bar(.dimmed)
+                    pricePresentation.adjustment.isEnabled && chartStyle == .bar(.dimmed)
                     ? barColor(for: p).dimmed()
                     : barColor(for: p)
                 )
