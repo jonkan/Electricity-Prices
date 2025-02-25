@@ -5,81 +5,98 @@
 //  Created by Jonas Bromö on 2022-10-25.
 //
 
-import XCTest
+import Foundation
+import Testing
 @testable import Core
 
-final class CurrencyFormattingTests: XCTestCase {
+struct CurrencyFormattingTests {
 
     // MARK: Normal (length), Automatic (unit/symbol)
 
+    @Test
     func testNormalAutomaticLarge() {
-        XCTAssertEqual(Currency.SEK.formatted(10.12, .normal, .automatic), "10,1 kr")
+        #expect(Currency.SEK.formatted(10.12, .normal, .automatic) == "10,1 kr")
     }
 
+    @Test
     func testNormalAutomaticMedium() {
-        XCTAssertEqual(Currency.SEK.formatted(5.12, .normal, .automatic), "5,12 kr")
+        #expect(Currency.SEK.formatted(5.12, .normal, .automatic) == "5,12 kr")
     }
 
+    @Test
     func testNormalAutomaticSmall() {
-        XCTAssertEqual(Currency.SEK.formatted(0.128, .normal, .automatic), "13 öre")
+        #expect(Currency.SEK.formatted(0.128, .normal, .automatic) == "13 öre")
     }
 
+    @Test
     func testNormalAutomaticVerySmall() {
-        XCTAssertEqual(Currency.SEK.formatted(0.00128, .normal, .automatic), "0,13 öre")
+        #expect(Currency.SEK.formatted(0.00128, .normal, .automatic) == "0,13 öre")
     }
 
     // MARK: Short (length), Automatic (unit/symbol)
 
+    @Test
     func testShortAutomaticLarge() {
-        XCTAssertEqual(Currency.SEK.formatted(10.12, .short, .automatic), "10")
+        #expect(Currency.SEK.formatted(10.12, .short, .automatic) == "10")
     }
 
+    @Test
     func testShortAutomaticMedium() {
-        XCTAssertEqual(Currency.SEK.formatted(5.12, .short, .automatic), "5,1")
+        #expect(Currency.SEK.formatted(5.12, .short, .automatic) == "5,1")
     }
 
+    @Test
     func testShortAutomaticSmall() {
-        XCTAssertEqual(Currency.SEK.formatted(0.128, .short, .automatic), "0,1")
+        #expect(Currency.SEK.formatted(0.128, .short, .automatic) == "0,1")
     }
 
+    @Test
     func testShortAutomaticVerySmall() {
-        XCTAssertEqual(Currency.SEK.formatted(0.00128, .short, .automatic), "0,0")
+        #expect(Currency.SEK.formatted(0.00128, .short, .automatic) == "0,0")
     }
 
     // MARK: Normal (length), Subdivided (unit/symbol)
 
+    @Test
     func testNormalSubdividedLarge() {
-        XCTAssertEqual(Currency.SEK.formatted(10.12, .normal, .subdivided), "1 012 öre")
+        #expect(Currency.SEK.formatted(10.12, .normal, .subdivided) == "1 012 öre")
     }
 
+    @Test
     func testNormalSubdividedMedium() {
-        XCTAssertEqual(Currency.SEK.formatted(5.12, .normal, .subdivided), "512 öre")
+        #expect(Currency.SEK.formatted(5.12, .normal, .subdivided) == "512 öre")
     }
 
+    @Test
     func testNormalSubdividedSmall() {
-        XCTAssertEqual(Currency.SEK.formatted(0.128, .normal, .subdivided), "12,8 öre")
+        #expect(Currency.SEK.formatted(0.128, .normal, .subdivided) == "12,8 öre")
     }
 
+    @Test
     func testNormalSubdividedVerySmall() {
-        XCTAssertEqual(Currency.SEK.formatted(0.00128, .normal, .subdivided), "0,128 öre")
+        #expect(Currency.SEK.formatted(0.00128, .normal, .subdivided) == "0,128 öre")
     }
 
     // MARK: Short (length), Subdivided (unit/symbol)
 
+    @Test
     func testShortSubdividedLarge() {
-        XCTAssertEqual(Currency.SEK.formatted(10.12, .short, .subdivided), "1012")
+        #expect(Currency.SEK.formatted(10.12, .short, .subdivided) == "1012")
     }
 
+    @Test
     func testShortSubdividedMedium() {
-        XCTAssertEqual(Currency.SEK.formatted(5.12, .short, .subdivided), "512")
+        #expect(Currency.SEK.formatted(5.12, .short, .subdivided) == "512")
     }
 
+    @Test
     func testShortSubdividedSmall() {
-        XCTAssertEqual(Currency.SEK.formatted(0.128, .short, .subdivided), "13")
+        #expect(Currency.SEK.formatted(0.128, .short, .subdivided) == "13")
     }
 
+    @Test
     func testShortSubdividedVerySmall() {
-        XCTAssertEqual(Currency.SEK.formatted(0.00128, .short, .subdivided), "0,1")
+        #expect(Currency.SEK.formatted(0.00128, .short, .subdivided) == "0,1")
     }
 
 }
