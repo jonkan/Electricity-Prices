@@ -79,4 +79,15 @@ struct EntsoeParsingTests {
         #expect(almostEqual(prices[15].price, 0.01342))
     }
 
+    @Test
+    func testFillMissingForPT15M() throws {
+        let dayAheadPrices = try loadDayAheadPrices("day-ahead-prices-6-NO1-PT15M.xml")
+        let prices = dayAheadPrices.timeSeries[0].period[0].fillMissingPrices()
+        #expect(prices.count == 96)
+        #expect(prices[92].priceAmount == 49.9)
+        #expect(prices[93].priceAmount == 49.9)
+        #expect(prices[94].priceAmount == 49.9)
+        #expect(prices[95].priceAmount == 49.9)
+    }
+
 }

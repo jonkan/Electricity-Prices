@@ -114,6 +114,25 @@ extension Array where Element == Point {
             points.append(point)
             previous = point
         }
+
+        if resolution == "PT60M" {
+            while let previous = points.last, points.count < 24 {
+                let fillPoint = EntsoeDayAheadPrices.Point(
+                    position: previous.position + 1,
+                    priceAmount: previous.priceAmount
+                )
+                points.append(fillPoint)
+            }
+        } else if resolution == "PT15M" {
+            while let previous = points.last, points.count < 96 {
+                let fillPoint = EntsoeDayAheadPrices.Point(
+                    position: previous.position + 1,
+                    priceAmount: previous.priceAmount
+                )
+                points.append(fillPoint)
+            }
+        }
+
         return points
     }
 
