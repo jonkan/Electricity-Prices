@@ -1,1 +1,1 @@
-- New bar chart styles that allow you to differentiate the spot price from the adjusted price. You can find them under Price Adjustment.
+- Bug fixes and improvements.

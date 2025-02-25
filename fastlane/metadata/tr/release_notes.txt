@@ -1,1 +1,1 @@
-- Spot fiyatını ayarlanmış fiyattan ayırmanıza olanak tanıyan yeni çubuk grafik stilleri. Bunları Fiyat Ayarlaması altında bulabilirsiniz.
+- Hata düzeltmeleri ve geliştirmeler.

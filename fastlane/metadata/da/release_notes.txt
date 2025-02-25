@@ -1,1 +1,1 @@
-- Nye søjlediagrammer, der gør det muligt at skelne mellem spotprisen og den justerede pris. Du finder dem under Prisjustering.
+- Fejlretninger og forbedringer.

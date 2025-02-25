@@ -1,1 +1,1 @@
-- Nye søylediagramstiler som gjør det mulig å skille spotprisen fra den justerte prisen. Du finner dem under Prisjustering.
+- Feilrettinger og forbedringer.

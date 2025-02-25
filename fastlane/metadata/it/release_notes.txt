@@ -1,1 +1,1 @@
-- Nuove stili di grafico a barre che permettono di distinguere il prezzo spot dal prezzo aggiustato. Li trovi sotto Regolazione del Prezzo.
+- Correzioni di bug e miglioramenti.

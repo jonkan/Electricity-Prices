@@ -1,1 +1,1 @@
-- Neue Balkendiagramm-Stile, die es ermöglichen, den Spotpreis vom bereinigten Preis zu unterscheiden. Sie finden sie unter Preisanpassung.
+- Fehlerbehebungen und Verbesserungen.

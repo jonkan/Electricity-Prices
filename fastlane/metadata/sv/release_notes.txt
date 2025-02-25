@@ -1,1 +1,1 @@
-- Nya stapeldiagramstilar som gör det möjligt att skilja spotpriset från det justerade priset. Du hittar dem under Prisjustering.
+- Buggfixar och förbättringar.

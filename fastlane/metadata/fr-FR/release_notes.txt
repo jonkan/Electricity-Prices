@@ -1,1 +1,1 @@
-- Nouveaux styles de graphiques en barres qui permettent de distinguer le prix spot du prix ajusté. Vous les trouverez sous Ajustement de prix.
+- Corrections de bugs et améliorations.

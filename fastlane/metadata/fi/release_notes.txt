@@ -1,1 +1,1 @@
-- Uudet pylväsgraafityylit, jotka mahdollistavat spot-hinnan erottamisen mukautetusta hinnasta. Löydät ne Hinnoittelusäätö.
+- Virheenkorjauksia ja parannuksia.

@@ -1,1 +1,1 @@
-- Nieuwe staafdiagramstijlen die het mogelijk maken om de spotprijs van de aangepaste prijs te onderscheiden. Je vindt ze onder Prijsaanpassing.
+- Bugfixes en verbeteringen.
