@@ -61,49 +61,87 @@ struct EntsoeDayAheadPrices: Codable {
         guard rate.from == .EUR else {
             throw NSError(0, "Unexpected exhange rate, prices must be converted from EUR")
         }
+
+        let periods = timeSeries.flatMap { $0.period }
+        let periodsByStartDate = Dictionary(grouping: periods, by: \.timeInterval.start)
+
         var pricePoints: [PricePoint] = []
-        for ts in timeSeries {
-            for period in ts.period {
-                guard period.resolution == "PT60M" else {
-                    continue
+        for (_, periods) in periodsByStartDate {
+            if let pt60mPeriod = periods.first(where: { $0.resolution == "PT60M" }) {
+                let periodPricePoints = pt60mPeriod.convertToPricePoints(resolution: 60, rate: rate)
+                pricePoints.append(contentsOf: periodPricePoints)
+
+            } else if let pt15mPeriod = periods.first(where: { $0.resolution == "PT15M" }) {
+                // Derive the hourly prices from the quarterly prices, if constant.
+                // Avoid calculating an average as that doesn't produce the correct prices,
+                // e.g. PT15M vs. PT60M in day-ahead-prices-7-DE-LU.xml.
+                let pt15mPricePoints = pt15mPeriod.convertToPricePoints(resolution: 15, rate: rate)
+                let groupedPerHour = Dictionary(grouping: pt15mPricePoints) { pricePoint in
+                    Calendar.current.startOfHour(for: pricePoint.date)
+                }
+                let isHourlyConstant = try groupedPerHour.values.allSatisfy { prices in
+                    if prices.count != 4 {
+                        throw NSError(0, "Unexpected PT15M series")
+                    }
+                    let sorted = prices.sorted(by: { $0.price < $1.price })
+                    return sorted.first!.price == sorted.last!.price
                 }
 
-                let periodPoints = period.point.fillMissingPrices()
-
-                for p in periodPoints {
-                    let start = Calendar.current.date(
-                        byAdding: .hour,
-                        value: p.position - 1,
-                        to: period.timeInterval.start
-                    )!
-                    let MWperkW = 0.001
-                    let price = p.priceAmount * rate.rate * MWperkW
-                    let pricePoint = PricePoint(
-                        date: start,
-                        price: price,
-                        currency: rate.to
-                    )
-                    pricePoints.append(pricePoint)
+                if isHourlyConstant {
+                    let pt60mPricePoints = groupedPerHour.map { date, prices in
+                        PricePoint(
+                            date: date,
+                            price: prices.first!.price,
+                            currency: rate.to
+                        )
+                    }
+                    pricePoints.append(contentsOf: pt60mPricePoints)
                 }
             }
         }
+
         return pricePoints.sorted(by: { $0.date < $1.date })
     }
 
 }
 
-private typealias Point = EntsoeDayAheadPrices.Point
+extension EntsoeDayAheadPrices.Period {
 
-extension Array where Element == Point {
+    func convertToPricePoints(
+        resolution minutesPerPoint: Int,
+        rate: ExchangeRate
+    ) -> [PricePoint] {
+        var pricePoints: [PricePoint] = []
+        let periodPoints = fillMissingPrices()
+
+        for p in periodPoints {
+            let start = Calendar.current.date(
+                byAdding: .minute,
+                value: (p.position - 1) * minutesPerPoint,
+                to: timeInterval.start
+            )!
+            let MWperkW = 0.001
+            let price = p.priceAmount * rate.rate * MWperkW
+            let pricePoint = PricePoint(
+                date: start,
+                price: price,
+                currency: rate.to
+            )
+            pricePoints.append(pricePoint)
+        }
+
+        return pricePoints
+    }
 
     /// Fill any blanks (missing prices) with the previous price, see CurveType A03 in the entsoe docs.
-    func fillMissingPrices() -> [Element] {
-        var points: [Point] = []
-        var previous: Point?
-        for point in self {
+    func fillMissingPrices() -> [EntsoeDayAheadPrices.Point] {
+        var points: [EntsoeDayAheadPrices.Point] = []
+        var previous: EntsoeDayAheadPrices.Point?
+
+        for point in self.point {
             if previous != nil {
                 while point.position - previous!.position > 1 {
-                    let fillPoint = Point(
+                    let fillPoint = EntsoeDayAheadPrices.Point(
                         position: previous!.position + 1,
                         priceAmount: previous!.priceAmount
                     )

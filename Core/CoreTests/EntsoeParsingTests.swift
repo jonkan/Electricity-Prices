@@ -90,4 +90,41 @@ struct EntsoeParsingTests {
         #expect(prices[95].priceAmount == 49.9)
     }
 
+    @Test("PT60M is missing and should use the PT15M as fallback")
+    func testMissingPT60MWithPT15MFallback() throws {
+        let dayAheadPrices = try loadDayAheadPrices("day-ahead-prices-6-NO1-PT15M.xml")
+        let prices = try dayAheadPrices.prices(using: .mockedEUR)
+        #expect(prices.count == 24)
+        #expect(prices[0].date.debugDescription == "2025-02-24 23:00:00 +0000")
+        #expect(almostEqual(prices[0].price, 0.03883))
+        #expect(prices[1].date.debugDescription == "2025-02-25 00:00:00 +0000")
+        #expect(almostEqual(prices[1].price, 0.04299))
+        #expect(prices[23].date.debugDescription == "2025-02-25 22:00:00 +0000")
+        #expect(almostEqual(prices[23].price, 0.0499))
+    }
+
+    @Test("Both PT60M and PT15M prices for the same time period")
+    func testBothPT60MAndPT15M() throws {
+        let dayAheadPrices = try loadDayAheadPrices("day-ahead-prices-7-DE-LU.xml")
+        let prices = try dayAheadPrices.prices(using: .mockedEUR)
+        #expect(prices.count == 24)
+        #expect(prices[0].date.debugDescription == "2025-02-24 23:00:00 +0000")
+        #expect(almostEqual(prices[0].price, 0.0906))
+        #expect(prices[1].date.debugDescription == "2025-02-25 00:00:00 +0000")
+        #expect(almostEqual(prices[1].price, 0.08991))
+        #expect(prices[23].date.debugDescription == "2025-02-25 22:00:00 +0000")
+        #expect(almostEqual(prices[23].price, 0.11513))
+    }
+
+    @Test("Both PT15M and PT60M prices for different time periods")
+    func testBothPT15MAndPT60MForDifferentDays() throws {
+        let dayAheadPrices = try loadDayAheadPrices("day-ahead-prices-8-NO2-PT15M-PT60M.xml")
+        let prices = try dayAheadPrices.prices(using: .mockedEUR)
+        #expect(prices.count == 48)
+        #expect(prices[0].date.debugDescription == "2025-02-24 23:00:00 +0000")
+        #expect(almostEqual(prices[0].price, 0.04992))
+        #expect(prices[47].date.debugDescription == "2025-02-26 22:00:00 +0000")
+        #expect(almostEqual(prices[47].price, 0.05168))
+    }
+
 }
