@@ -374,7 +374,7 @@ public class AppState: ObservableObject {
         }
         Log("Downloading exchange rate")
         do {
-            let res = try await ForexAPI.shared.download(from: .EUR, to: currency)
+            let res = try await ECBExchangeRatesAPI.shared.download(from: .EUR, to: currency)
             Log("Success downloading exchange rate")
             exchangeRates[res.to] = res
             return res

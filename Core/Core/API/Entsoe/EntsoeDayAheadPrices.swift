@@ -59,7 +59,7 @@ struct EntsoeDayAheadPrices: Codable {
 
     func prices(using rate: ExchangeRate) throws -> [PricePoint] {
         guard rate.from == .EUR else {
-            throw NSError(0, "Unexpected forex rate, prices must be converted from EUR")
+            throw NSError(0, "Unexpected exhange rate, prices must be converted from EUR")
         }
         var pricePoints: [PricePoint] = []
         for ts in timeSeries {

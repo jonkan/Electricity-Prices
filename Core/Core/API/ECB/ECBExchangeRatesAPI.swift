@@ -1,5 +1,5 @@
 //
-//  ForexAPI.swift
+//  ECBExchangeRatesAPI.swift
 //  EPWatch WatchKit Extension
 //
 //  Created by Jonas Bromö on 2022-09-07.
@@ -8,12 +8,12 @@
 import Foundation
 import Alamofire
 
-enum ForexError: Error {
+enum ECBExchangeRatesError: Error {
     case outdatedRate
 }
 
-class ForexAPI {
-    static let shared: ForexAPI = ForexAPI()
+class ECBExchangeRatesAPI {
+    static let shared: ECBExchangeRatesAPI = ECBExchangeRatesAPI()
 
     private init() {}
 
