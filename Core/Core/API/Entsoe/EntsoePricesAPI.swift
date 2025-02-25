@@ -1,5 +1,5 @@
 //
-//  PricesAPI.swift
+//  EntsoePricesAPI.swift
 //  EPWatch WatchKit Extension
 //
 //  Created by Jonas Bromö on 2022-09-07.
@@ -9,9 +9,9 @@ import Foundation
 import Alamofire
 import XMLCoder
 
-class PricesAPI {
+class EntsoePricesAPI {
 
-    static let shared: PricesAPI = PricesAPI()
+    static let shared: EntsoePricesAPI = EntsoePricesAPI()
 
     private init() {}
 
@@ -23,7 +23,7 @@ class PricesAPI {
         )!
     }
 
-    func downloadDayAheadPrices(for priceArea: PriceArea) async throws -> DayAheadPrices {
+    func downloadDayAheadPrices(for priceArea: PriceArea) async throws -> EntsoeDayAheadPrices {
         let cal = Calendar.current
         let startOfToday = cal.startOfDay(for: .now)
         let endOfToday = cal.endOfDay(for: .now)
@@ -44,7 +44,7 @@ class PricesAPI {
         for priceArea: PriceArea,
         from startDate: Date,
         to endDate: Date
-    ) async throws -> DayAheadPrices {
+    ) async throws -> EntsoeDayAheadPrices {
         Log("Downloading day ahead prices")
         let df = DateFormatter()
         df.timeZone = TimeZone(identifier: "UTC")
@@ -88,7 +88,7 @@ class PricesAPI {
         }
     }
 
-    func parseDayAheadPrices(fromXML data: Data) throws -> DayAheadPrices {
+    func parseDayAheadPrices(fromXML data: Data) throws -> EntsoeDayAheadPrices {
         let decoder = XMLDecoder()
         let df = DateFormatter()
         df.timeZone = TimeZone(identifier: "UTC")
@@ -96,14 +96,14 @@ class PricesAPI {
         df.dateFormat = "yyyy-MM-dd'T'HH:mmZ"
         decoder.dateDecodingStrategy = .formatted(df)
         decoder.keyDecodingStrategy = .convertFromCapitalized
-        let dayAheadPrices = try decoder.decode(DayAheadPrices.self, from: data)
+        let dayAheadPrices = try decoder.decode(EntsoeDayAheadPrices.self, from: data)
         return dayAheadPrices
     }
 
-    func parseErrorResponse(fromXML data: Data) throws -> DayAheadPricesErrorResponse {
+    func parseErrorResponse(fromXML data: Data) throws -> EntsoeDayAheadPricesErrorResponse {
         let decoder = XMLDecoder()
         decoder.keyDecodingStrategy = .convertFromCapitalized
-        let error = try decoder.decode(DayAheadPricesErrorResponse.self, from: data)
+        let error = try decoder.decode(EntsoeDayAheadPricesErrorResponse.self, from: data)
         return error
     }
 

@@ -314,7 +314,7 @@ public class AppState: ObservableObject {
             // If we have the current price but lack tomorrow's prices we make
             // an attempt at updating provided it should be available and we haven't
             // tried recently (within 5 min).
-            let tomorrowsPricesShouldBeAvailable = PricesAPI.shared.dateWhenTomorrowsPricesBecomeAvailable < .now
+            let tomorrowsPricesShouldBeAvailable = EntsoePricesAPI.shared.dateWhenTomorrowsPricesBecomeAvailable < .now
             let timeIntervalSinceLastFetchAttempt = Date.now.timeIntervalSince(
                 lastAttemptFetchingTomorrowsPrices ?? .distantPast
             )
@@ -352,14 +352,14 @@ public class AppState: ObservableObject {
         guard let priceArea = priceArea else {
             throw NSError(0, "No price area selected")
         }
-        async let dayAheadPrices = try PricesAPI.shared.downloadDayAheadPrices(for: priceArea)
+        async let dayAheadPrices = try EntsoePricesAPI.shared.downloadDayAheadPrices(for: priceArea)
         async let rate = try currentExchangeRate()
         let prices = try await dayAheadPrices.prices(using: rate)
         return prices
     }
 
     private func mockedPrices() async throws -> [PricePoint] {
-        let dayAheadPrices = DayAheadPrices.mocked1
+        let dayAheadPrices = EntsoeDayAheadPrices.mocked1
         assert(exchangeRate?.to == currency, "Missing preset exhange rate for currency \(currency.id)")
         let prices = try dayAheadPrices.prices(using: exchangeRate!).shiftDatesToNow()
         return prices

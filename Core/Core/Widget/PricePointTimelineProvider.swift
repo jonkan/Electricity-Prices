@@ -105,7 +105,7 @@ public struct PricePointTimelineProvider: TimelineProvider {
                     reloadPolicy = .atEnd
                     reloadDescription = "at end"
                     numberTriesFetchingPricesOfTomorrow = 0
-                } else if PricesAPI.shared.dateWhenTomorrowsPricesBecomeAvailable < .now {
+                } else if EntsoePricesAPI.shared.dateWhenTomorrowsPricesBecomeAvailable < .now {
                     // swiftlint:disable:next line_length
                     Log("Don't have prices for tomorrow, even though time is after dateWhenTomorrowsPricesBecomeAvailable")
                     let delay = retryDelay(for: numberTriesFetchingPricesOfTomorrow)
@@ -114,8 +114,8 @@ public struct PricePointTimelineProvider: TimelineProvider {
                     reloadDescription = "after \(nextReload)"
                     numberTriesFetchingPricesOfTomorrow += 1
                 } else {
-                    reloadPolicy = .after(PricesAPI.shared.dateWhenTomorrowsPricesBecomeAvailable)
-                    reloadDescription = "after \(PricesAPI.shared.dateWhenTomorrowsPricesBecomeAvailable)"
+                    reloadPolicy = .after(EntsoePricesAPI.shared.dateWhenTomorrowsPricesBecomeAvailable)
+                    reloadDescription = "after \(EntsoePricesAPI.shared.dateWhenTomorrowsPricesBecomeAvailable)"
                     numberTriesFetchingPricesOfTomorrow = 0
                     numberOfFailures = 0
                 }

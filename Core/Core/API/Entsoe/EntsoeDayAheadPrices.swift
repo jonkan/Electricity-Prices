@@ -1,5 +1,5 @@
 //
-//  DayAheadPrices.swift
+//  EntsoeDayAheadPrices.swift
 //  EPWatch WatchKit Extension
 //
 //  Created by Jonas Bromö on 2022-09-06.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DayAheadPrices: Codable {
+struct EntsoeDayAheadPrices: Codable {
     var timeSeries: [TimeSeries]
     var periodTimeInterval: TimeInterval
 
@@ -92,7 +92,7 @@ struct DayAheadPrices: Codable {
 
 }
 
-private typealias Point = DayAheadPrices.Point
+private typealias Point = EntsoeDayAheadPrices.Point
 
 extension Array where Element == Point {
 
@@ -137,12 +137,12 @@ enum DayAheadPricesError: Error {
 }
 
 // swiftlint:disable force_try
-extension DayAheadPrices {
-    static let mocked1: DayAheadPrices = {
+extension EntsoeDayAheadPrices {
+    static let mocked1: EntsoeDayAheadPrices = {
         let fileURL = Bundle.module
             .url(forResource: "mocked-day-ahead-prices-1", withExtension: "xml")!
         let xmlData = try! Data(contentsOf: fileURL)
-        let prices = try! PricesAPI.shared.parseDayAheadPrices(fromXML: xmlData)
+        let prices = try! EntsoePricesAPI.shared.parseDayAheadPrices(fromXML: xmlData)
         return prices
     }()
 }

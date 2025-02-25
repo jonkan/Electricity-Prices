@@ -1,5 +1,5 @@
 //
-//  DayAheadPricesErrorResponse.swift
+//  EntsoeDayAheadPricesErrorResponse.swift
 //  Core
 //
 //  Created by Jonas Bromö on 2022-10-25.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DayAheadPricesErrorResponse: Codable {
+struct EntsoeDayAheadPricesErrorResponse: Codable {
     let reason: Reason
 
     struct Reason: Codable {
@@ -17,7 +17,7 @@ struct DayAheadPricesErrorResponse: Codable {
 }
 
 extension UserPresentableError {
-    init(_ error: DayAheadPricesErrorResponse) {
+    init(_ error: EntsoeDayAheadPricesErrorResponse) {
         if error.reason.code == 999 {
             self = .noData
         } else {

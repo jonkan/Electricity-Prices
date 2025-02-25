@@ -19,10 +19,10 @@ struct EntsoeParsingTests {
         return df
     }()
 
-    func loadDayAheadPrices(_ filename: String) throws -> DayAheadPrices {
+    func loadDayAheadPrices(_ filename: String) throws -> EntsoeDayAheadPrices {
         let url = Bundle.module.url(forResource: filename, withExtension: nil)!
         let xmlData = try Data(contentsOf: url)
-        return try PricesAPI.shared.parseDayAheadPrices(fromXML: xmlData)
+        return try EntsoePricesAPI.shared.parseDayAheadPrices(fromXML: xmlData)
     }
 
     @Test
